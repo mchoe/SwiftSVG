@@ -410,78 +410,87 @@ private let characterDictionary: [Character: PathCharacter] = [
 //
 // MARK: Parse "d" path
 
+
+/////////////////////////////////////////////////////
+//
+// This String extension is provided as a convenience for the 
+// parseSVGPath function. You can use either the extension or the
+// global function. I just wanted to provide
+
+
 extension String {
+    func pathFromSVGString() -> UIBezierPath {
+        return parseSVGPath(self)
+    }
+}
+
+func parseSVGPath(pathString: String, forPath: UIBezierPath? = nil) -> UIBezierPath {
     
-    func parseSVGPath(forPath: UIBezierPath? = nil) -> UIBezierPath {
+    assert(pathString.hasPrefix("M") || pathString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
+    
+    let workingString = (pathString.hasSuffix("Z") == false && pathString.hasSuffix("z") == false ? pathString + "z" : pathString)
+    
+    var returnPath = UIBezierPath()
+    
+    if let suppliedPath = forPath {
+        returnPath = suppliedPath
+    }
+    
+    autoreleasepool { () -> () in
         
-        assert(self.hasPrefix("M") || self.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
+        var currentPathCommand: PathCommand = PathCommand(character: "M")
+        var currentNumberStack: NumberStack = NumberStack()
+        var previousParameters: PreviousCommand? = nil
         
-        let workingString = (self.hasSuffix("Z") == false && self.hasSuffix("z") == false ? self + "z" : self)
-        
-        var returnPath: UIBezierPath
-        
-        if let suppliedPath = forPath {
-            returnPath = suppliedPath
-        } else {
-            returnPath = UIBezierPath()
+        let pushCoordinateAndClear: () -> Void = {
+            if currentNumberStack.isEmpty == false {
+                if let newCoordinate = currentNumberStack.asCGFloat {
+                    if let returnParameters = currentPathCommand.pushCoordinateAndExecuteIfPossible(newCoordinate, previousCommand: previousParameters) {
+                        previousParameters = returnParameters
+                    }
+                }
+                currentNumberStack.clear()
+            }
         }
         
-        autoreleasepool { () -> () in
-            
-            var currentPathCommand: PathCommand = PathCommand(character: "M")
-            var currentNumberStack: NumberStack = NumberStack()
-            var previousParameters: PreviousCommand? = nil
-            
-            let pushCoordinateAndClear: () -> Void = {
-                if currentNumberStack.isEmpty == false {
-                    if let newCoordinate = currentNumberStack.asCGFloat {
-                        if let returnParameters = currentPathCommand.pushCoordinateAndExecuteIfPossible(newCoordinate, previousCommand: previousParameters) {
-                            previousParameters = returnParameters
-                        }
-                    }
-                    currentNumberStack.clear()
-                }
-            }
-            
-            for thisCharacter in workingString {
-                if var pathCharacter = characterDictionary[thisCharacter] {
+        for thisCharacter in workingString {
+            if var pathCharacter = characterDictionary[thisCharacter] {
+                
+                if pathCharacter is PathCommand {
                     
-                    if pathCharacter is PathCommand {
-                        
-                        pushCoordinateAndClear()
-                        
-                        currentPathCommand = pathCharacter as PathCommand
-                        currentPathCommand.path = returnPath
-                        
-                        if currentPathCommand.character == "Z" || currentPathCommand.character == "z" {
-                            currentPathCommand.execute(forPath: returnPath, previousCommand: previousParameters)
-                        }
-                        
-                    } else if pathCharacter is SeparatorCharacter {
-                        
-                        pushCoordinateAndClear()
-                        
-                    } else if pathCharacter is SignCharacter {
-                        
-                        pushCoordinateAndClear()
-                        currentNumberStack = NumberStack(startCharacter: thisCharacter)
-                        
-                    } else {
-                        
-                        if currentNumberStack.isEmpty == false {
-                            currentNumberStack.push(thisCharacter)
-                        } else {
-                            currentNumberStack = NumberStack(startCharacter: thisCharacter)
-                        }
-                        
+                    pushCoordinateAndClear()
+                    
+                    currentPathCommand = pathCharacter as PathCommand
+                    currentPathCommand.path = returnPath
+                    
+                    if currentPathCommand.character == "Z" || currentPathCommand.character == "z" {
+                        currentPathCommand.execute(forPath: returnPath, previousCommand: previousParameters)
                     }
+                    
+                } else if pathCharacter is SeparatorCharacter {
+                    
+                    pushCoordinateAndClear()
+                    
+                } else if pathCharacter is SignCharacter {
+                    
+                    pushCoordinateAndClear()
+                    currentNumberStack = NumberStack(startCharacter: thisCharacter)
                     
                 } else {
-                    assert(false, "Invalid character \"\(thisCharacter)\" found")
+                    
+                    if currentNumberStack.isEmpty == false {
+                        currentNumberStack.push(thisCharacter)
+                    } else {
+                        currentNumberStack = NumberStack(startCharacter: thisCharacter)
+                    }
+                    
                 }
+                
+            } else {
+                assert(false, "Invalid character \"\(thisCharacter)\" found")
             }
         }
-        return returnPath
     }
+    return returnPath
 }
 

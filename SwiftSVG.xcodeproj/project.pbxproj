@@ -14,6 +14,7 @@
 		9EA820701AAB15C800DEE6CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EA8206E1AAB15C800DEE6CA /* LaunchScreen.xib */; };
 		9EA8207C1AAB15C800DEE6CA /* SwiftSVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8207B1AAB15C800DEE6CA /* SwiftSVGTests.swift */; };
 		9EA820861AAB649700DEE6CA /* String+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820851AAB649700DEE6CA /* String+SVG.swift */; };
+		9EA820881AAB6AD700DEE6CA /* UIBezierPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		9EA8207A1AAB15C800DEE6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EA8207B1AAB15C800DEE6CA /* SwiftSVGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSVGTests.swift; sourceTree = "<group>"; };
 		9EA820851AAB649700DEE6CA /* String+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SVG.swift"; sourceTree = "<group>"; };
+		9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+SVG.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +81,9 @@
 		9EA820621AAB15C800DEE6CA /* SwiftSVG */ = {
 			isa = PBXGroup;
 			children = (
+				9EA820891AAB6AE100DEE6CA /* SVG */,
 				9EA820651AAB15C800DEE6CA /* AppDelegate.swift */,
 				9EA820671AAB15C800DEE6CA /* ViewController.swift */,
-				9EA820851AAB649700DEE6CA /* String+SVG.swift */,
 				9EA820691AAB15C800DEE6CA /* Main.storyboard */,
 				9EA8206C1AAB15C800DEE6CA /* Images.xcassets */,
 				9EA8206E1AAB15C800DEE6CA /* LaunchScreen.xib */,
@@ -113,6 +115,15 @@
 				9EA8207A1AAB15C800DEE6CA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9EA820891AAB6AE100DEE6CA /* SVG */ = {
+			isa = PBXGroup;
+			children = (
+				9EA820851AAB649700DEE6CA /* String+SVG.swift */,
+				9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */,
+			);
+			name = SVG;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA820881AAB6AD700DEE6CA /* UIBezierPath+SVG.swift in Sources */,
 				9EA820861AAB649700DEE6CA /* String+SVG.swift in Sources */,
 				9EA820681AAB15C800DEE6CA /* ViewController.swift in Sources */,
 				9EA820661AAB15C800DEE6CA /* AppDelegate.swift in Sources */,
