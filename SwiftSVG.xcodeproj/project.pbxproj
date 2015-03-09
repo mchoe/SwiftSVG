@@ -21,7 +21,6 @@
 		9EA8207C1AAB15C800DEE6CA /* SwiftSVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8207B1AAB15C800DEE6CA /* SwiftSVGTests.swift */; };
 		9EA820861AAB649700DEE6CA /* String+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820851AAB649700DEE6CA /* String+SVG.swift */; };
 		9EA820881AAB6AD700DEE6CA /* UIBezierPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */; };
-		9EA820E71AAE2A8E00DEE6CA /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820E61AAE2A8E00DEE6CA /* SVGParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +52,6 @@
 		9EA8207B1AAB15C800DEE6CA /* SwiftSVGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSVGTests.swift; sourceTree = "<group>"; };
 		9EA820851AAB649700DEE6CA /* String+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SVG.swift"; sourceTree = "<group>"; };
 		9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+SVG.swift"; sourceTree = "<group>"; };
-		9EA820E61AAE2A8E00DEE6CA /* SVGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +78,9 @@
 				9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */,
 				9E245B681AAE383200472F5A /* NSObject+Extensions.swift */,
 				9E245B691AAE383200472F5A /* String+Subscript.swift */,
-				9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */,
 				9E245B6B1AAE383200472F5A /* String+ToHex.swift */,
 				9E245BDA1AAE3FE000472F5A /* Stack.swift */,
+				9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */,
 			);
 			name = "From Sprout";
 			sourceTree = "<group>";
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				9EA820851AAB649700DEE6CA /* String+SVG.swift */,
-				9EA820E61AAE2A8E00DEE6CA /* SVGParser.swift */,
 				9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */,
 			);
 			name = SVG;
@@ -255,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EA820E71AAE2A8E00DEE6CA /* SVGParser.swift in Sources */,
 				9EA820881AAB6AD700DEE6CA /* UIBezierPath+SVG.swift in Sources */,
 				9E245B6E1AAE383200472F5A /* String+Subscript.swift in Sources */,
 				9E245B701AAE383200472F5A /* String+ToHex.swift in Sources */,

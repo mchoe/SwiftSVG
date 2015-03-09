@@ -7,7 +7,8 @@
 //  this library. As such, this file may not be maintained as well, so use it at
 //  your own risk.
 //
-//  If you're looking for a great start to your next Swift project, check out Sprout.
+//  SwiftSVG is one of the many great tools that are a part of Sprout. If you're
+//  looking for a great start to your next Swift project, check out Sprout.
 //  It contains classes and helper functions that will get you started off right.
 //  https://github.com/mchoe/Sprout
 //
