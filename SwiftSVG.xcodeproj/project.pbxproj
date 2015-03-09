@@ -13,6 +13,7 @@
 		9E245B6F1AAE383200472F5A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */; };
 		9E245B701AAE383200472F5A /* String+ToHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6B1AAE383200472F5A /* String+ToHex.swift */; };
 		9E245BDB1AAE3FE000472F5A /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDA1AAE3FE000472F5A /* Stack.swift */; };
+		9E245BDD1AAE42C100472F5A /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDC1AAE42C100472F5A /* SVGParser.swift */; };
 		9EA820661AAB15C800DEE6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820651AAB15C800DEE6CA /* AppDelegate.swift */; };
 		9EA820681AAB15C800DEE6CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820671AAB15C800DEE6CA /* ViewController.swift */; };
 		9EA8206B1AAB15C800DEE6CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA820691AAB15C800DEE6CA /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9E245B6B1AAE383200472F5A /* String+ToHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ToHex.swift"; sourceTree = "<group>"; };
 		9E245BDA1AAE3FE000472F5A /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		9E245BDC1AAE42C100472F5A /* SVGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParser.swift; sourceTree = "<group>"; };
 		9EA820601AAB15C800DEE6CA /* SwiftSVG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA820641AAB15C800DEE6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EA820651AAB15C800DEE6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				9EA820851AAB649700DEE6CA /* String+SVG.swift */,
+				9E245BDC1AAE42C100472F5A /* SVGParser.swift */,
 				9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */,
 			);
 			name = SVG;
@@ -257,6 +260,7 @@
 				9E245B701AAE383200472F5A /* String+ToHex.swift in Sources */,
 				9E245B6D1AAE383200472F5A /* NSObject+Extensions.swift in Sources */,
 				9E245BDB1AAE3FE000472F5A /* Stack.swift in Sources */,
+				9E245BDD1AAE42C100472F5A /* SVGParser.swift in Sources */,
 				9EA820861AAB649700DEE6CA /* String+SVG.swift in Sources */,
 				9E245B6C1AAE383200472F5A /* Dictionary+KeyForValue.swift in Sources */,
 				9EA820681AAB15C800DEE6CA /* ViewController.swift in Sources */,
