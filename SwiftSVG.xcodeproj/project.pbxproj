@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E245B6C1AAE383200472F5A /* Dictionary+KeyForValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */; };
+		9E245B6D1AAE383200472F5A /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B681AAE383200472F5A /* NSObject+Extensions.swift */; };
+		9E245B6E1AAE383200472F5A /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B691AAE383200472F5A /* String+Subscript.swift */; };
+		9E245B6F1AAE383200472F5A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */; };
+		9E245B701AAE383200472F5A /* String+ToHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6B1AAE383200472F5A /* String+ToHex.swift */; };
+		9E245BDB1AAE3FE000472F5A /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDA1AAE3FE000472F5A /* Stack.swift */; };
 		9EA820661AAB15C800DEE6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820651AAB15C800DEE6CA /* AppDelegate.swift */; };
 		9EA820681AAB15C800DEE6CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820671AAB15C800DEE6CA /* ViewController.swift */; };
 		9EA8206B1AAB15C800DEE6CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA820691AAB15C800DEE6CA /* Main.storyboard */; };
@@ -15,6 +21,7 @@
 		9EA8207C1AAB15C800DEE6CA /* SwiftSVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8207B1AAB15C800DEE6CA /* SwiftSVGTests.swift */; };
 		9EA820861AAB649700DEE6CA /* String+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820851AAB649700DEE6CA /* String+SVG.swift */; };
 		9EA820881AAB6AD700DEE6CA /* UIBezierPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */; };
+		9EA820E71AAE2A8E00DEE6CA /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820E61AAE2A8E00DEE6CA /* SVGParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+KeyForValue.swift"; sourceTree = "<group>"; };
+		9E245B681AAE383200472F5A /* NSObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
+		9E245B691AAE383200472F5A /* String+Subscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Subscript.swift"; sourceTree = "<group>"; };
+		9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		9E245B6B1AAE383200472F5A /* String+ToHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ToHex.swift"; sourceTree = "<group>"; };
+		9E245BDA1AAE3FE000472F5A /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		9EA820601AAB15C800DEE6CA /* SwiftSVG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA820641AAB15C800DEE6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EA820651AAB15C800DEE6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +53,7 @@
 		9EA8207B1AAB15C800DEE6CA /* SwiftSVGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSVGTests.swift; sourceTree = "<group>"; };
 		9EA820851AAB649700DEE6CA /* String+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SVG.swift"; sourceTree = "<group>"; };
 		9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+SVG.swift"; sourceTree = "<group>"; };
+		9EA820E61AAE2A8E00DEE6CA /* SVGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E245B661AAE380700472F5A /* From Sprout */ = {
+			isa = PBXGroup;
+			children = (
+				9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */,
+				9E245B681AAE383200472F5A /* NSObject+Extensions.swift */,
+				9E245B691AAE383200472F5A /* String+Subscript.swift */,
+				9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */,
+				9E245B6B1AAE383200472F5A /* String+ToHex.swift */,
+				9E245BDA1AAE3FE000472F5A /* Stack.swift */,
+			);
+			name = "From Sprout";
+			sourceTree = "<group>";
+		};
 		9EA820571AAB15C800DEE6CA = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +108,7 @@
 		9EA820621AAB15C800DEE6CA /* SwiftSVG */ = {
 			isa = PBXGroup;
 			children = (
+				9E245B661AAE380700472F5A /* From Sprout */,
 				9EA820891AAB6AE100DEE6CA /* SVG */,
 				9EA820651AAB15C800DEE6CA /* AppDelegate.swift */,
 				9EA820671AAB15C800DEE6CA /* ViewController.swift */,
@@ -121,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				9EA820851AAB649700DEE6CA /* String+SVG.swift */,
+				9EA820E61AAE2A8E00DEE6CA /* SVGParser.swift */,
 				9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */,
 			);
 			name = SVG;
@@ -226,9 +255,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA820E71AAE2A8E00DEE6CA /* SVGParser.swift in Sources */,
 				9EA820881AAB6AD700DEE6CA /* UIBezierPath+SVG.swift in Sources */,
+				9E245B6E1AAE383200472F5A /* String+Subscript.swift in Sources */,
+				9E245B701AAE383200472F5A /* String+ToHex.swift in Sources */,
+				9E245B6D1AAE383200472F5A /* NSObject+Extensions.swift in Sources */,
+				9E245BDB1AAE3FE000472F5A /* Stack.swift in Sources */,
 				9EA820861AAB649700DEE6CA /* String+SVG.swift in Sources */,
+				9E245B6C1AAE383200472F5A /* Dictionary+KeyForValue.swift in Sources */,
 				9EA820681AAB15C800DEE6CA /* ViewController.swift in Sources */,
+				9E245B6F1AAE383200472F5A /* UIColor+Extensions.swift in Sources */,
 				9EA820661AAB15C800DEE6CA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +457,7 @@
 				9EA820811AAB15C800DEE6CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9EA820821AAB15C800DEE6CA /* Build configuration list for PBXNativeTarget "SwiftSVGTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +466,7 @@
 				9EA820841AAB15C800DEE6CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
