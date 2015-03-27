@@ -65,7 +65,7 @@ class SVGParser : NSObject, NSXMLParserDelegate {
     private var elementStack = Stack<NSObject>()
     
     var containerLayer: CALayer?
-    var shouldParseSinglePathOnly: Bool = false
+    var shouldParseSinglePathOnly = false
     var paths = [UIBezierPath]()
     
     convenience init(SVGURL: NSURL, containerLayer: CALayer? = nil, shouldParseSinglePathOnly: Bool = false) {
@@ -93,7 +93,6 @@ class SVGParser : NSObject, NSXMLParserDelegate {
             
             let allPropertyNames = newInstance.propertyNames()
             for thisKeyName in allPropertyNames {
-                
                 if let attributeValue: AnyObject = attributeDict[thisKeyName] {
                     newInstance.setValue(attributeValue, forKey: thisKeyName)
                 }
@@ -116,7 +115,6 @@ class SVGParser : NSObject, NSXMLParserDelegate {
     }
     
     func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!) {
-        
         if let lastItem = self.elementStack.last {
             if let keyForValue = allKeysForValue(tagMapping, lastItem.classNameAsString())?.first {
                 if elementName == keyForValue {
