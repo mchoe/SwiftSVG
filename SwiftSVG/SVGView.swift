@@ -38,26 +38,27 @@ public class SVGView : UIView {
         didSet {
             if let thisName = SVGName {
                 
-                //var bundle: NSBundle
-                
                 #if !TARGET_INTERFACE_BUILDER
                     let bundle = NSBundle.mainBundle()
                 #else
                     let bundle = NSBundle(forClass: self.dynamicType)
                 #endif
                 
-                //let bundle = NSBundle.mainBundle()
-                //let bundle = NSBundle(forClass: self.dynamicType)
-                //let bundle = NSBundle(identifier: "com.straussmade.BreakfastGallery")!
-                println("SVG: \(NSBundle.mainBundle().bundleIdentifier)")
                 if let url = bundle.URLForResource(thisName, withExtension: "svg") {
                     self.shapeLayer = CAShapeLayer(SVGURL: url)
                     if self.shapeLayer.superlayer == nil {
                         self.layer.addSublayer(self.shapeLayer)
                     }
                 }
-                
             }
         }
     }
 }
+
+extension SVGView {
+    convenience init(SVGName: String) {
+        self.init()
+        self.SVGName = SVGName
+    }
+}
+
