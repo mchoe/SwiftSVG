@@ -11,25 +11,13 @@ import UIKit
 
 extension CAShapeLayer {
     
-    convenience init(pathString: String, fillColor: UIColor? = nil, strokeColor: UIColor? = nil, strokeWidth: CGFloat? = nil) {
+    convenience init(pathString: String) {
         self.init()
-        let svgPath = UIBezierPath(SVGPathString: pathString)
+        let svgPath = UIBezierPath(pathString: pathString)
         self.path = svgPath.CGPath
-        
-        if let fill = fillColor {
-            self.fillColor = fill.CGColor
-        }
-        
-        if let stroke = strokeColor {
-            self.strokeColor = stroke.CGColor
-        }
-        
-        if let lineWidth = strokeWidth {
-            self.lineWidth = lineWidth
-        }
     }
     
-    convenience init(SVGURL: NSURL, fillColor: UIColor? = nil, strokeColor: UIColor? = nil, strokeWidth: CGFloat? = nil) {
+    convenience init(SVGURL: NSURL) {
         self.init()
         let svgParser = SVGParser(SVGURL: SVGURL, containerLayer: self)
     }
