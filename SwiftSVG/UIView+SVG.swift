@@ -11,9 +11,15 @@ import UIKit
 
 extension UIView {
     
-    convenience init(SVGURL: NSURL, fillColor: UIColor? = nil, strokeColor: UIColor? = nil, strokeWidth: CGFloat? = nil) {
+    convenience init(pathString: String) {
         self.init()
-        let shapeLayer = CAShapeLayer(SVGURL: SVGURL, fillColor: fillColor, strokeColor: strokeColor, strokeWidth: strokeWidth)
+        let shapeLayer = CAShapeLayer(pathString: pathString)
+        self.layer.addSublayer(shapeLayer)
+    }
+    
+    convenience init(SVGURL: NSURL) {
+        self.init()
+        let shapeLayer = CAShapeLayer(SVGURL: SVGURL)
         self.layer.addSublayer(shapeLayer)
     }
 }
