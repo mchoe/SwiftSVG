@@ -1,5 +1,5 @@
 //
-//  SwiftSVG.swift
+//  SVGParser.swift
 //  SwiftSVG
 //
 //  Copyright (c) 2015 Michael Choe

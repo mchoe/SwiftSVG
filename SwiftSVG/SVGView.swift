@@ -1,7 +1,6 @@
 //
 //  SVGView.swift
-//  Breakfast
-//  Start you next Swift project off right with Breakfast
+//  SwiftSVG
 //
 //  Copyright (c) 2015 Michael Choe
 //  http://www.straussmade.com/
