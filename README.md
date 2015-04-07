@@ -68,8 +68,10 @@ Or, you can use the String extension `pathFromSVGString()`:
 let parsedPath: UIBezierPath = examplePathData.pathFromSVGString()
 ```
 
-#####Output#####
+#####Output:#####
 ![This is not a triangle](/images/triangle.png)
+
+***
 
 ####UIBezierPath+SVG####
 
@@ -89,8 +91,10 @@ let pathFromSVGFile = UIBezierPath.pathWithSVGURL(svgURL)
 shapelayer.path = pathFromSVGFile
 ```
 
-#####Output#####
+#####Output:#####
 ![This is not a chair](/images/chair.png)
+
+***
 
 ####CAShapeLayer+SVG####
 
@@ -106,13 +110,15 @@ let svgURL = NSBundle.mainBundle().URLForResource("pizza", withExtension: "svg")
 let svgShapeLayerFromFile = CAShapeLayer(SVGURL: svgURL)
 ```
 
-#####Output#####
+#####Output:#####
 ![This is not delicious pizza](/images/pizza.png)
 
 Fill colors are read automatically if provided as an attribute on the path element. The fill attribute must be supplied as a hex value:
 ```html
 <path fill="#FF0066" d="M150 0 L75 200 L225 200 Z">
 ```
+
+***
 
 ####UIView+SVG####
 
@@ -128,14 +134,18 @@ let svgURL = NSBundle.mainBundle().URLForResource("sockPuppet", withExtension: "
 let svgViewFromFile = UIView(SVGURL: svgURL)
 ```
 
-#####Output#####
+#####Output:#####
 ![This is not a sock puppet](/images/sockPuppet.png)
+
+***
 
 ####SVGView####
 
 Finally, SwiftSVG provides a `UIView` subclass that is `IBInspectable` and `IBDesignable`. Simply add a view to your storyboard and use the SVGView subclass as you class name. Then put the name of your SVG file in your bundle in the `IBInspectable` property "SVGName"
 
 ![Screenshot of SVGView in Interface Builder](/images/svgViewScreenshot.png)
+
+***
 
 Credits
 -------
