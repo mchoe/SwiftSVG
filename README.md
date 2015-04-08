@@ -36,9 +36,9 @@ Table of Contents
 Install
 -------
 
-SwiftSVG is meant to be dropped in to any project. Pick and choose the files you need, but you can install all the extensions via [CocoaPods](http://cocoapods.org/):
-
-	pod install 'SwiftSVG'
+SwiftSVG is meant to be dropped in to any project. Pick and choose the files you need, but you can install all the extensions via [Carthage](https://github.com/Carthage/Carthage):
+	
+	github 'mchoe/SwiftSVG'
 
 
 Usage
@@ -145,7 +145,7 @@ Finally, SwiftSVG provides a `UIView` subclass that is `IBInspectable` and `IBDe
 
 ![Screenshot of SVGView in Interface Builder](/images/svgViewScreenshot.png)
 
-***
+*** safar
 
 Credits
 -------

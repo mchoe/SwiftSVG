@@ -45,8 +45,8 @@ extension NSObject {
     // using Objective-C runtime functions for introspection:
     // https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtPropertyIntrospection.html
     //
-    func propertyNames() -> Array<String> {
-        var results: Array<String> = [];
+    func propertyNames() -> [String] {
+        var results = [String]();
         
         // retrieve the properties via the class_copyPropertyList function
         var count: UInt32 = 0;
