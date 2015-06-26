@@ -25,7 +25,11 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#elseif os(OSX)
+    import AppKit
+#endif
 
 
 @IBDesignable
@@ -46,7 +50,7 @@ public class SVGView : UIView {
                 if let url = bundle.URLForResource(thisName, withExtension: "svg") {
                     self.shapeLayer = CAShapeLayer(SVGURL: url)
                     if self.shapeLayer.superlayer == nil {
-                        self.layer.addSublayer(self.shapeLayer)
+                        self.nonOptionalLayer.addSublayer(self.shapeLayer)
                     }
                 }
             }

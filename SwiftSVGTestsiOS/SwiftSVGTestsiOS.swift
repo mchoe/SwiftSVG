@@ -1,15 +1,15 @@
 //
-//  SwiftSVGTests.swift
-//  SwiftSVGTests
+//  SwiftSVGTestsiOS.swift
+//  SwiftSVGTestsiOS
 //
-//  Created by collardgreens on 3/7/15.
+//  Created by Matthias Schlemm on 26/06/15.
 //  Copyright (c) 2015 Strauss LLC. All rights reserved.
 //
 
-import UIKit
+import Cocoa
 import XCTest
 
-class SwiftSVGTests: XCTestCase {
+class SwiftSVGTestsiOS: XCTestCase {
     
     override func setUp() {
         super.setUp()

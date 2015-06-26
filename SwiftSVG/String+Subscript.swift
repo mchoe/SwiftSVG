@@ -37,8 +37,11 @@
 //  THE SOFTWARE.
 
 import Foundation
+#if os(iOS)
 import UIKit
-
+#elseif os(OSX)
+import AppKit
+#endif
 extension String {
     
     subscript(index: Int) -> Character {

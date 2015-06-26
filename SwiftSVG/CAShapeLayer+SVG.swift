@@ -25,8 +25,12 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-
+#if os(iOS)
 import UIKit
+#elseif os(OSX)
+import AppKit
+import QuartzCore
+#endif
 
 extension CAShapeLayer {
     

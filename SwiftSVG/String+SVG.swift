@@ -26,7 +26,11 @@
 //  THE SOFTWARE.
 
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#elseif os(OSX)
+    import AppKit
+#endif
 
 /////////////////////////////////////////////////////
 //
@@ -40,7 +44,7 @@ struct NumberStack {
     var characterStack: String = ""
     var asCGFloat: CGFloat? {
         get {
-            if self.characterStack.utf16Count > 0 {
+            if count(self.characterStack.utf16) > 0 {
                 return CGFloat(strtod(self.characterStack, nil))
             }
             return nil
@@ -48,7 +52,7 @@ struct NumberStack {
     }
     var isEmpty: Bool {
         get {
-            if self.characterStack.utf16Count > 0 {
+            if count(self.characterStack.utf16) > 0 {
                 return false
             }
             return true
@@ -460,7 +464,7 @@ func parseSVGPath(pathString: String, forPath: UIBezierPath? = nil) -> UIBezierP
                     
                     pushCoordinateAndClear()
                     
-                    currentPathCommand = pathCharacter as PathCommand
+                    currentPathCommand = pathCharacter as! PathCommand
                     currentPathCommand.path = returnPath
                     
                     if currentPathCommand.character == "Z" || currentPathCommand.character == "z" {
