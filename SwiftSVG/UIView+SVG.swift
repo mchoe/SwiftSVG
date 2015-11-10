@@ -26,19 +26,23 @@
 //  THE SOFTWARE.
 
 import Foundation
-import UIKit
+#if os(iOS)
+    import UIKit
+#elseif os(OSX)
+    import AppKit
+#endif
 
 extension UIView {
     
     convenience init(pathString: String) {
         self.init()
         let shapeLayer = CAShapeLayer(pathString: pathString)
-        self.layer.addSublayer(shapeLayer)
+        self.nonOptionalLayer.addSublayer(shapeLayer)
     }
     
     convenience init(SVGURL: NSURL) {
         self.init()
         let shapeLayer = CAShapeLayer(SVGURL: SVGURL)
-        self.layer.addSublayer(shapeLayer)
+        self.nonOptionalLayer.addSublayer(shapeLayer)
     }
 }

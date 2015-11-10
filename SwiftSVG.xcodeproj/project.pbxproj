@@ -7,38 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E245B6C1AAE383200472F5A /* Dictionary+KeyForValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */; };
-		9E245B6D1AAE383200472F5A /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B681AAE383200472F5A /* NSObject+Extensions.swift */; };
-		9E245B6E1AAE383200472F5A /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B691AAE383200472F5A /* String+Subscript.swift */; };
-		9E245B6F1AAE383200472F5A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */; };
-		9E245B701AAE383200472F5A /* String+ToHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6B1AAE383200472F5A /* String+ToHex.swift */; };
-		9E245BDB1AAE3FE000472F5A /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDA1AAE3FE000472F5A /* Stack.swift */; };
-		9E245BDD1AAE42C100472F5A /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDC1AAE42C100472F5A /* SVGParser.swift */; };
-		9E245BDF1AAE470D00472F5A /* CAShapeLayer+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDE1AAE470D00472F5A /* CAShapeLayer+SVG.swift */; };
-		9E25E9041AB0D4C600E8D6CB /* UIView+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */; };
+		396A8E491B3D2036001986AF /* SwiftSVGMac.framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 396A8E481B3D2036001986AF /* SwiftSVGMac.framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		396A8E661B3D221E001986AF /* SwiftSVGTestsiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E651B3D221E001986AF /* SwiftSVGTestsiOS.swift */; };
+		396A8E671B3D221E001986AF /* SwiftSVGiOSFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B8D88C1B3C3283009DAF60 /* SwiftSVGiOSFramework.framework */; };
+		396A8E6D1B3D238B001986AF /* Dictionary+KeyForValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */; };
+		396A8E6E1B3D238B001986AF /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B681AAE383200472F5A /* NSObject+Extensions.swift */; };
+		396A8E6F1B3D238B001986AF /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B691AAE383200472F5A /* String+Subscript.swift */; };
+		396A8E701B3D238B001986AF /* String+ToHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6B1AAE383200472F5A /* String+ToHex.swift */; };
+		396A8E711B3D238B001986AF /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDA1AAE3FE000472F5A /* Stack.swift */; };
+		396A8E721B3D238B001986AF /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */; };
+		396A8E731B3D238B001986AF /* CAShapeLayer+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDE1AAE470D00472F5A /* CAShapeLayer+SVG.swift */; };
+		396A8E741B3D238B001986AF /* String+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820851AAB649700DEE6CA /* String+SVG.swift */; };
+		396A8E751B3D238B001986AF /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDC1AAE42C100472F5A /* SVGParser.swift */; };
+		396A8E761B3D238B001986AF /* SVGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB308781AC5BF350007DD82 /* SVGView.swift */; };
+		396A8E771B3D238B001986AF /* UIBezierPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */; };
+		396A8E781B3D238B001986AF /* UIView+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */; };
+		396A8E7A1B3D24C2001986AF /* MacCompability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E791B3D24C2001986AF /* MacCompability.swift */; };
+		396A8E7D1B3D25B7001986AF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396A8E7B1B3D25A9001986AF /* QuartzCore.framework */; };
+		396A8E881B3D36C7001986AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E871B3D36C7001986AF /* AppDelegate.swift */; };
+		396A8E8A1B3D36C7001986AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E891B3D36C7001986AF /* ViewController.swift */; };
+		396A8E8C1B3D36C7001986AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 396A8E8B1B3D36C7001986AF /* Images.xcassets */; };
+		396A8E8F1B3D36C7001986AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 396A8E8D1B3D36C7001986AF /* Main.storyboard */; };
+		396A8EA61B3D39C7001986AF /* MacCompability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E791B3D24C2001986AF /* MacCompability.swift */; };
+		396A8EA81B3D3AB4001986AF /* SwiftSVGMacFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396A8E441B3D2036001986AF /* SwiftSVGMacFramework.framework */; };
+		396A8EA91B3D3ABF001986AF /* SwiftSVGiOSFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B8D88C1B3C3283009DAF60 /* SwiftSVGiOSFramework.framework */; };
+		396A8EAA1B3D3D04001986AF /* hawaiiFlowers.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9EB308761AC5BF030007DD82 /* hawaiiFlowers.svg */; };
+		39B8D8911B3C3283009DAF60 /* SwiftSVGiOSFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 39B8D8901B3C3283009DAF60 /* SwiftSVGiOSFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39B8D8A51B3C32DD009DAF60 /* Dictionary+KeyForValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */; };
+		39B8D8A61B3C32DD009DAF60 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B681AAE383200472F5A /* NSObject+Extensions.swift */; };
+		39B8D8A71B3C32DD009DAF60 /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B691AAE383200472F5A /* String+Subscript.swift */; };
+		39B8D8A81B3C32DD009DAF60 /* String+ToHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6B1AAE383200472F5A /* String+ToHex.swift */; };
+		39B8D8A91B3C32DD009DAF60 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDA1AAE3FE000472F5A /* Stack.swift */; };
+		39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */; };
+		39B8D8AB1B3C32DD009DAF60 /* CAShapeLayer+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDE1AAE470D00472F5A /* CAShapeLayer+SVG.swift */; };
+		39B8D8AC1B3C32DD009DAF60 /* String+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820851AAB649700DEE6CA /* String+SVG.swift */; };
+		39B8D8AD1B3C32DD009DAF60 /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDC1AAE42C100472F5A /* SVGParser.swift */; };
+		39B8D8AE1B3C32DD009DAF60 /* SVGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB308781AC5BF350007DD82 /* SVGView.swift */; };
+		39B8D8AF1B3C32DD009DAF60 /* UIBezierPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */; };
+		39B8D8B01B3C32DD009DAF60 /* UIView+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */; };
 		9EA820661AAB15C800DEE6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820651AAB15C800DEE6CA /* AppDelegate.swift */; };
 		9EA820681AAB15C800DEE6CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820671AAB15C800DEE6CA /* ViewController.swift */; };
 		9EA8206B1AAB15C800DEE6CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA820691AAB15C800DEE6CA /* Main.storyboard */; };
 		9EA8206D1AAB15C800DEE6CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA8206C1AAB15C800DEE6CA /* Images.xcassets */; };
 		9EA820701AAB15C800DEE6CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EA8206E1AAB15C800DEE6CA /* LaunchScreen.xib */; };
-		9EA8207C1AAB15C800DEE6CA /* SwiftSVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8207B1AAB15C800DEE6CA /* SwiftSVGTests.swift */; };
-		9EA820861AAB649700DEE6CA /* String+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820851AAB649700DEE6CA /* String+SVG.swift */; };
-		9EA820881AAB6AD700DEE6CA /* UIBezierPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */; };
 		9EB308771AC5BF030007DD82 /* hawaiiFlowers.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9EB308761AC5BF030007DD82 /* hawaiiFlowers.svg */; };
-		9EB308791AC5BF350007DD82 /* SVGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB308781AC5BF350007DD82 /* SVGView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9EA820761AAB15C800DEE6CA /* PBXContainerItemProxy */ = {
+		396A8E681B3D221E001986AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9EA820581AAB15C800DEE6CA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9EA8205F1AAB15C800DEE6CA;
-			remoteInfo = SwiftSVG;
+			remoteGlobalIDString = 39B8D88B1B3C3283009DAF60;
+			remoteInfo = SwiftSVGiOSFramework;
+		};
+		396A8EA21B3D38D3001986AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9EA820581AAB15C800DEE6CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 396A8E431B3D2036001986AF;
+			remoteInfo = SwiftSVGMacFramework;
+		};
+		396A8EA41B3D38E4001986AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9EA820581AAB15C800DEE6CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39B8D88B1B3C3283009DAF60;
+			remoteInfo = SwiftSVGiOSFramework;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		396A8E441B3D2036001986AF /* SwiftSVGMacFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVGMacFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		396A8E471B3D2036001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		396A8E481B3D2036001986AF /* SwiftSVGMac.framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSVGMac.framework.h; sourceTree = "<group>"; };
+		396A8E611B3D221E001986AF /* SwiftSVGTestsiOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSVGTestsiOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		396A8E641B3D221E001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		396A8E651B3D221E001986AF /* SwiftSVGTestsiOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSVGTestsiOS.swift; sourceTree = "<group>"; };
+		396A8E791B3D24C2001986AF /* MacCompability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacCompability.swift; sourceTree = "<group>"; };
+		396A8E7B1B3D25A9001986AF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		396A8E831B3D36C7001986AF /* Demo Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		396A8E861B3D36C7001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		396A8E871B3D36C7001986AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		396A8E891B3D36C7001986AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		396A8E8B1B3D36C7001986AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		396A8E8E1B3D36C7001986AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		39B8D88C1B3C3283009DAF60 /* SwiftSVGiOSFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVGiOSFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39B8D88F1B3C3283009DAF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39B8D8901B3C3283009DAF60 /* SwiftSVGiOSFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSVGiOSFramework.h; sourceTree = "<group>"; };
 		9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+KeyForValue.swift"; sourceTree = "<group>"; };
 		9E245B681AAE383200472F5A /* NSObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		9E245B691AAE383200472F5A /* String+Subscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Subscript.swift"; sourceTree = "<group>"; };
@@ -50,14 +106,11 @@
 		9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SVG.swift"; sourceTree = "<group>"; };
 		9EA820601AAB15C800DEE6CA /* SwiftSVG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA820641AAB15C800DEE6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9EA820651AAB15C800DEE6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9EA820671AAB15C800DEE6CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9EA820651AAB15C800DEE6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = SwiftSVG/AppDelegate.swift; sourceTree = "<group>"; };
+		9EA820671AAB15C800DEE6CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = SwiftSVG/ViewController.swift; sourceTree = "<group>"; };
 		9EA8206A1AAB15C800DEE6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9EA8206C1AAB15C800DEE6CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9EA8206C1AAB15C800DEE6CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SwiftSVG/Images.xcassets; sourceTree = "<group>"; };
 		9EA8206F1AAB15C800DEE6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9EA820751AAB15C800DEE6CA /* SwiftSVGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSVGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EA8207A1AAB15C800DEE6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9EA8207B1AAB15C800DEE6CA /* SwiftSVGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSVGTests.swift; sourceTree = "<group>"; };
 		9EA820851AAB649700DEE6CA /* String+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SVG.swift"; sourceTree = "<group>"; };
 		9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+SVG.swift"; sourceTree = "<group>"; };
 		9EB308761AC5BF030007DD82 /* hawaiiFlowers.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hawaiiFlowers.svg; sourceTree = "<group>"; };
@@ -65,23 +118,135 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9EA8205D1AAB15C800DEE6CA /* Frameworks */ = {
+		396A8E401B3D2036001986AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				396A8E7D1B3D25B7001986AF /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		396A8E5E1B3D221E001986AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				396A8E671B3D221E001986AF /* SwiftSVGiOSFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		396A8E801B3D36C7001986AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				396A8EA81B3D3AB4001986AF /* SwiftSVGMacFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39B8D8881B3C3283009DAF60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EA820721AAB15C800DEE6CA /* Frameworks */ = {
+		9EA8205D1AAB15C800DEE6CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				396A8EA91B3D3ABF001986AF /* SwiftSVGiOSFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		396A8E451B3D2036001986AF /* SwiftSVGMacFramework */ = {
+			isa = PBXGroup;
+			children = (
+				396A8E7B1B3D25A9001986AF /* QuartzCore.framework */,
+				396A8E481B3D2036001986AF /* SwiftSVGMac.framework.h */,
+				396A8E461B3D2036001986AF /* Supporting Files */,
+				396A8E791B3D24C2001986AF /* MacCompability.swift */,
+			);
+			name = SwiftSVGMacFramework;
+			path = SwiftSVGMac.framework;
+			sourceTree = "<group>";
+		};
+		396A8E461B3D2036001986AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				396A8E471B3D2036001986AF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		396A8E621B3D221E001986AF /* SwiftSVGTestsiOS */ = {
+			isa = PBXGroup;
+			children = (
+				396A8E651B3D221E001986AF /* SwiftSVGTestsiOS.swift */,
+				396A8E631B3D221E001986AF /* Supporting Files */,
+			);
+			path = SwiftSVGTestsiOS;
+			sourceTree = "<group>";
+		};
+		396A8E631B3D221E001986AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				396A8E641B3D221E001986AF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		396A8E7E1B3D3663001986AF /* Demo iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9EA820651AAB15C800DEE6CA /* AppDelegate.swift */,
+				9EA820671AAB15C800DEE6CA /* ViewController.swift */,
+				9EA820691AAB15C800DEE6CA /* Main.storyboard */,
+				9EA8206C1AAB15C800DEE6CA /* Images.xcassets */,
+				9EA8206E1AAB15C800DEE6CA /* LaunchScreen.xib */,
+				9EA820631AAB15C800DEE6CA /* Supporting Files */,
+			);
+			name = "Demo iOS";
+			sourceTree = "<group>";
+		};
+		396A8E841B3D36C7001986AF /* Demo Mac */ = {
+			isa = PBXGroup;
+			children = (
+				396A8E871B3D36C7001986AF /* AppDelegate.swift */,
+				396A8E891B3D36C7001986AF /* ViewController.swift */,
+				396A8E8B1B3D36C7001986AF /* Images.xcassets */,
+				396A8E8D1B3D36C7001986AF /* Main.storyboard */,
+				396A8E851B3D36C7001986AF /* Supporting Files */,
+			);
+			path = "Demo Mac";
+			sourceTree = "<group>";
+		};
+		396A8E851B3D36C7001986AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				396A8E861B3D36C7001986AF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39B8D88D1B3C3283009DAF60 /* SwiftSVGiOSFramework */ = {
+			isa = PBXGroup;
+			children = (
+				39B8D8901B3C3283009DAF60 /* SwiftSVGiOSFramework.h */,
+				39B8D88E1B3C3283009DAF60 /* Supporting Files */,
+			);
+			path = SwiftSVGiOSFramework;
+			sourceTree = "<group>";
+		};
+		39B8D88E1B3C3283009DAF60 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39B8D88F1B3C3283009DAF60 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		9E245B661AAE380700472F5A /* From Breakfast */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +263,12 @@
 		9EA820571AAB15C800DEE6CA = {
 			isa = PBXGroup;
 			children = (
+				396A8E7E1B3D3663001986AF /* Demo iOS */,
 				9EA820621AAB15C800DEE6CA /* SwiftSVG */,
-				9EA820781AAB15C800DEE6CA /* SwiftSVGTests */,
+				39B8D88D1B3C3283009DAF60 /* SwiftSVGiOSFramework */,
+				396A8E451B3D2036001986AF /* SwiftSVGMacFramework */,
+				396A8E621B3D221E001986AF /* SwiftSVGTestsiOS */,
+				396A8E841B3D36C7001986AF /* Demo Mac */,
 				9EA820611AAB15C800DEE6CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,7 +277,10 @@
 			isa = PBXGroup;
 			children = (
 				9EA820601AAB15C800DEE6CA /* SwiftSVG.app */,
-				9EA820751AAB15C800DEE6CA /* SwiftSVGTests.xctest */,
+				39B8D88C1B3C3283009DAF60 /* SwiftSVGiOSFramework.framework */,
+				396A8E441B3D2036001986AF /* SwiftSVGMacFramework.framework */,
+				396A8E611B3D221E001986AF /* SwiftSVGTestsiOS.xctest */,
+				396A8E831B3D36C7001986AF /* Demo Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,12 +290,6 @@
 			children = (
 				9E245B661AAE380700472F5A /* From Breakfast */,
 				9EA820891AAB6AE100DEE6CA /* SVG */,
-				9EA820651AAB15C800DEE6CA /* AppDelegate.swift */,
-				9EA820671AAB15C800DEE6CA /* ViewController.swift */,
-				9EA820691AAB15C800DEE6CA /* Main.storyboard */,
-				9EA8206C1AAB15C800DEE6CA /* Images.xcassets */,
-				9EA8206E1AAB15C800DEE6CA /* LaunchScreen.xib */,
-				9EA820631AAB15C800DEE6CA /* Supporting Files */,
 			);
 			path = SwiftSVG;
 			sourceTree = "<group>";
@@ -135,23 +301,7 @@
 				9EA820641AAB15C800DEE6CA /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9EA820781AAB15C800DEE6CA /* SwiftSVGTests */ = {
-			isa = PBXGroup;
-			children = (
-				9EA8207B1AAB15C800DEE6CA /* SwiftSVGTests.swift */,
-				9EA820791AAB15C800DEE6CA /* Supporting Files */,
-			);
-			path = SwiftSVGTests;
-			sourceTree = "<group>";
-		};
-		9EA820791AAB15C800DEE6CA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9EA8207A1AAB15C800DEE6CA /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = SwiftSVG;
 			sourceTree = "<group>";
 		};
 		9EA820891AAB6AE100DEE6CA /* SVG */ = {
@@ -169,10 +319,101 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		396A8E411B3D2036001986AF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				396A8E491B3D2036001986AF /* SwiftSVGMac.framework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39B8D8891B3C3283009DAF60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39B8D8911B3C3283009DAF60 /* SwiftSVGiOSFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		9EA8205F1AAB15C800DEE6CA /* SwiftSVG */ = {
+		396A8E431B3D2036001986AF /* SwiftSVGMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9EA8207F1AAB15C800DEE6CA /* Build configuration list for PBXNativeTarget "SwiftSVG" */;
+			buildConfigurationList = 396A8E571B3D2036001986AF /* Build configuration list for PBXNativeTarget "SwiftSVGMac" */;
+			buildPhases = (
+				396A8E3F1B3D2036001986AF /* Sources */,
+				396A8E401B3D2036001986AF /* Frameworks */,
+				396A8E411B3D2036001986AF /* Headers */,
+				396A8E421B3D2036001986AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSVGMac;
+			productName = SwiftSVGMac.framework;
+			productReference = 396A8E441B3D2036001986AF /* SwiftSVGMacFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		396A8E601B3D221E001986AF /* SwiftSVGTestsiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 396A8E6A1B3D221E001986AF /* Build configuration list for PBXNativeTarget "SwiftSVGTestsiOS" */;
+			buildPhases = (
+				396A8E5D1B3D221E001986AF /* Sources */,
+				396A8E5E1B3D221E001986AF /* Frameworks */,
+				396A8E5F1B3D221E001986AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				396A8E691B3D221E001986AF /* PBXTargetDependency */,
+			);
+			name = SwiftSVGTestsiOS;
+			productName = SwiftSVGTestsiOS;
+			productReference = 396A8E611B3D221E001986AF /* SwiftSVGTestsiOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		396A8E821B3D36C7001986AF /* Demo Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 396A8E9C1B3D36C7001986AF /* Build configuration list for PBXNativeTarget "Demo Mac" */;
+			buildPhases = (
+				396A8E7F1B3D36C7001986AF /* Sources */,
+				396A8E801B3D36C7001986AF /* Frameworks */,
+				396A8E811B3D36C7001986AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				396A8EA31B3D38D3001986AF /* PBXTargetDependency */,
+			);
+			name = "Demo Mac";
+			productName = "Demo Mac";
+			productReference = 396A8E831B3D36C7001986AF /* Demo Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		39B8D88B1B3C3283009DAF60 /* SwiftSVGiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39B8D8A31B3C3284009DAF60 /* Build configuration list for PBXNativeTarget "SwiftSVGiOS" */;
+			buildPhases = (
+				39B8D8871B3C3283009DAF60 /* Sources */,
+				39B8D8881B3C3283009DAF60 /* Frameworks */,
+				39B8D8891B3C3283009DAF60 /* Headers */,
+				39B8D88A1B3C3283009DAF60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSVGiOS;
+			productName = SwiftSVGiOSFramework;
+			productReference = 39B8D88C1B3C3283009DAF60 /* SwiftSVGiOSFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9EA8205F1AAB15C800DEE6CA /* Demo iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EA8207F1AAB15C800DEE6CA /* Build configuration list for PBXNativeTarget "Demo iOS" */;
 			buildPhases = (
 				9EA8205C1AAB15C800DEE6CA /* Sources */,
 				9EA8205D1AAB15C800DEE6CA /* Frameworks */,
@@ -181,29 +422,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				396A8EA51B3D38E4001986AF /* PBXTargetDependency */,
 			);
-			name = SwiftSVG;
+			name = "Demo iOS";
 			productName = SwiftSVG;
 			productReference = 9EA820601AAB15C800DEE6CA /* SwiftSVG.app */;
 			productType = "com.apple.product-type.application";
-		};
-		9EA820741AAB15C800DEE6CA /* SwiftSVGTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9EA820821AAB15C800DEE6CA /* Build configuration list for PBXNativeTarget "SwiftSVGTests" */;
-			buildPhases = (
-				9EA820711AAB15C800DEE6CA /* Sources */,
-				9EA820721AAB15C800DEE6CA /* Frameworks */,
-				9EA820731AAB15C800DEE6CA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9EA820771AAB15C800DEE6CA /* PBXTargetDependency */,
-			);
-			name = SwiftSVGTests;
-			productName = SwiftSVGTests;
-			productReference = 9EA820751AAB15C800DEE6CA /* SwiftSVGTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -214,12 +438,20 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Strauss LLC";
 				TargetAttributes = {
+					396A8E431B3D2036001986AF = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					396A8E601B3D221E001986AF = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					396A8E821B3D36C7001986AF = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					39B8D88B1B3C3283009DAF60 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
 					9EA8205F1AAB15C800DEE6CA = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					9EA820741AAB15C800DEE6CA = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 9EA8205F1AAB15C800DEE6CA;
 					};
 				};
 			};
@@ -236,13 +468,47 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9EA8205F1AAB15C800DEE6CA /* SwiftSVG */,
-				9EA820741AAB15C800DEE6CA /* SwiftSVGTests */,
+				9EA8205F1AAB15C800DEE6CA /* Demo iOS */,
+				396A8E821B3D36C7001986AF /* Demo Mac */,
+				39B8D88B1B3C3283009DAF60 /* SwiftSVGiOS */,
+				396A8E431B3D2036001986AF /* SwiftSVGMac */,
+				396A8E601B3D221E001986AF /* SwiftSVGTestsiOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		396A8E421B3D2036001986AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		396A8E5F1B3D221E001986AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		396A8E811B3D36C7001986AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				396A8EAA1B3D3D04001986AF /* hawaiiFlowers.svg in Resources */,
+				396A8E8C1B3D36C7001986AF /* Images.xcassets in Resources */,
+				396A8E8F1B3D36C7001986AF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39B8D88A1B3C3283009DAF60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9EA8205E1AAB15C800DEE6CA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,62 +520,111 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EA820731AAB15C800DEE6CA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		396A8E3F1B3D2036001986AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				396A8E7A1B3D24C2001986AF /* MacCompability.swift in Sources */,
+				396A8E6D1B3D238B001986AF /* Dictionary+KeyForValue.swift in Sources */,
+				396A8E6E1B3D238B001986AF /* NSObject+Extensions.swift in Sources */,
+				396A8E6F1B3D238B001986AF /* String+Subscript.swift in Sources */,
+				396A8E701B3D238B001986AF /* String+ToHex.swift in Sources */,
+				396A8E711B3D238B001986AF /* Stack.swift in Sources */,
+				396A8E721B3D238B001986AF /* UIColor+Extensions.swift in Sources */,
+				396A8E731B3D238B001986AF /* CAShapeLayer+SVG.swift in Sources */,
+				396A8E741B3D238B001986AF /* String+SVG.swift in Sources */,
+				396A8E751B3D238B001986AF /* SVGParser.swift in Sources */,
+				396A8E761B3D238B001986AF /* SVGView.swift in Sources */,
+				396A8E771B3D238B001986AF /* UIBezierPath+SVG.swift in Sources */,
+				396A8E781B3D238B001986AF /* UIView+SVG.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		396A8E5D1B3D221E001986AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				396A8E661B3D221E001986AF /* SwiftSVGTestsiOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		396A8E7F1B3D36C7001986AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				396A8E8A1B3D36C7001986AF /* ViewController.swift in Sources */,
+				396A8E881B3D36C7001986AF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39B8D8871B3C3283009DAF60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				396A8EA61B3D39C7001986AF /* MacCompability.swift in Sources */,
+				39B8D8A51B3C32DD009DAF60 /* Dictionary+KeyForValue.swift in Sources */,
+				39B8D8A61B3C32DD009DAF60 /* NSObject+Extensions.swift in Sources */,
+				39B8D8A71B3C32DD009DAF60 /* String+Subscript.swift in Sources */,
+				39B8D8A81B3C32DD009DAF60 /* String+ToHex.swift in Sources */,
+				39B8D8A91B3C32DD009DAF60 /* Stack.swift in Sources */,
+				39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */,
+				39B8D8AB1B3C32DD009DAF60 /* CAShapeLayer+SVG.swift in Sources */,
+				39B8D8AC1B3C32DD009DAF60 /* String+SVG.swift in Sources */,
+				39B8D8AD1B3C32DD009DAF60 /* SVGParser.swift in Sources */,
+				39B8D8AE1B3C32DD009DAF60 /* SVGView.swift in Sources */,
+				39B8D8AF1B3C32DD009DAF60 /* UIBezierPath+SVG.swift in Sources */,
+				39B8D8B01B3C32DD009DAF60 /* UIView+SVG.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9EA8205C1AAB15C800DEE6CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EA820881AAB6AD700DEE6CA /* UIBezierPath+SVG.swift in Sources */,
-				9E245B6E1AAE383200472F5A /* String+Subscript.swift in Sources */,
-				9E245B701AAE383200472F5A /* String+ToHex.swift in Sources */,
-				9E245B6D1AAE383200472F5A /* NSObject+Extensions.swift in Sources */,
-				9E245BDB1AAE3FE000472F5A /* Stack.swift in Sources */,
-				9E245BDD1AAE42C100472F5A /* SVGParser.swift in Sources */,
-				9E245BDF1AAE470D00472F5A /* CAShapeLayer+SVG.swift in Sources */,
-				9EA820861AAB649700DEE6CA /* String+SVG.swift in Sources */,
-				9E25E9041AB0D4C600E8D6CB /* UIView+SVG.swift in Sources */,
-				9EB308791AC5BF350007DD82 /* SVGView.swift in Sources */,
-				9E245B6C1AAE383200472F5A /* Dictionary+KeyForValue.swift in Sources */,
 				9EA820681AAB15C800DEE6CA /* ViewController.swift in Sources */,
-				9E245B6F1AAE383200472F5A /* UIColor+Extensions.swift in Sources */,
 				9EA820661AAB15C800DEE6CA /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9EA820711AAB15C800DEE6CA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9EA8207C1AAB15C800DEE6CA /* SwiftSVGTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9EA820771AAB15C800DEE6CA /* PBXTargetDependency */ = {
+		396A8E691B3D221E001986AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9EA8205F1AAB15C800DEE6CA /* SwiftSVG */;
-			targetProxy = 9EA820761AAB15C800DEE6CA /* PBXContainerItemProxy */;
+			target = 39B8D88B1B3C3283009DAF60 /* SwiftSVGiOS */;
+			targetProxy = 396A8E681B3D221E001986AF /* PBXContainerItemProxy */;
+		};
+		396A8EA31B3D38D3001986AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 396A8E431B3D2036001986AF /* SwiftSVGMac */;
+			targetProxy = 396A8EA21B3D38D3001986AF /* PBXContainerItemProxy */;
+		};
+		396A8EA51B3D38E4001986AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39B8D88B1B3C3283009DAF60 /* SwiftSVGiOS */;
+			targetProxy = 396A8EA41B3D38E4001986AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		396A8E8D1B3D36C7001986AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				396A8E8E1B3D36C7001986AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		9EA820691AAB15C800DEE6CA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9EA8206A1AAB15C800DEE6CA /* Base */,
 			);
 			name = Main.storyboard;
+			path = SwiftSVG;
 			sourceTree = "<group>";
 		};
 		9EA8206E1AAB15C800DEE6CA /* LaunchScreen.xib */ = {
@@ -318,11 +633,192 @@
 				9EA8206F1AAB15C800DEE6CA /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = SwiftSVG;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		396A8E581B3D2036001986AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftSVGMac.framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		396A8E591B3D2036001986AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SwiftSVGMac.framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		396A8E6B1B3D221E001986AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftSVGTestsiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		396A8E6C1B3D221E001986AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SwiftSVGTestsiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		396A8E9D1B3D36C7001986AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Demo Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		396A8E9E1B3D36C7001986AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Demo Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		39B8D89F1B3C3284009DAF60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftSVGiOSFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		39B8D8A01B3C3284009DAF60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SwiftSVGiOSFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9EA8207D1AAB15C800DEE6CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -420,43 +916,42 @@
 			};
 			name = Release;
 		};
-		9EA820831AAB15C800DEE6CA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SwiftSVGTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftSVG.app/SwiftSVG";
-			};
-			name = Debug;
-		};
-		9EA820841AAB15C800DEE6CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SwiftSVGTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftSVG.app/SwiftSVG";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		396A8E571B3D2036001986AF /* Build configuration list for PBXNativeTarget "SwiftSVGMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				396A8E581B3D2036001986AF /* Debug */,
+				396A8E591B3D2036001986AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		396A8E6A1B3D221E001986AF /* Build configuration list for PBXNativeTarget "SwiftSVGTestsiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				396A8E6B1B3D221E001986AF /* Debug */,
+				396A8E6C1B3D221E001986AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		396A8E9C1B3D36C7001986AF /* Build configuration list for PBXNativeTarget "Demo Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				396A8E9D1B3D36C7001986AF /* Debug */,
+				396A8E9E1B3D36C7001986AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		39B8D8A31B3C3284009DAF60 /* Build configuration list for PBXNativeTarget "SwiftSVGiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39B8D89F1B3C3284009DAF60 /* Debug */,
+				39B8D8A01B3C3284009DAF60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9EA8205B1AAB15C800DEE6CA /* Build configuration list for PBXProject "SwiftSVG" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -466,20 +961,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9EA8207F1AAB15C800DEE6CA /* Build configuration list for PBXNativeTarget "SwiftSVG" */ = {
+		9EA8207F1AAB15C800DEE6CA /* Build configuration list for PBXNativeTarget "Demo iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9EA820801AAB15C800DEE6CA /* Debug */,
 				9EA820811AAB15C800DEE6CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9EA820821AAB15C800DEE6CA /* Build configuration list for PBXNativeTarget "SwiftSVGTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9EA820831AAB15C800DEE6CA /* Debug */,
-				9EA820841AAB15C800DEE6CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

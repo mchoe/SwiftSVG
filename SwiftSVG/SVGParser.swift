@@ -26,7 +26,11 @@
 //  THE SOFTWARE.
 
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#elseif os(OSX)
+    import AppKit
+#endif
 
 var tagMapping: [String: String] = [
     "path": "SVGPath",
@@ -84,11 +88,11 @@ class SVGParser : NSObject, NSXMLParserDelegate {
         }
     }
     
-    func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!, attributes attributeDict: [NSObject : AnyObject]!) {
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
         
         if let newElement = tagMapping[elementName] {
             
-            let className = NSClassFromString(newElement) as NSObject.Type
+            let className = NSClassFromString(newElement) as! NSObject.Type
             let newInstance = className()
             
             let allPropertyNames = newInstance.propertyNames()
@@ -99,7 +103,7 @@ class SVGParser : NSObject, NSXMLParserDelegate {
             }
             
             if newInstance is SVGPath {
-                let thisPath = newInstance as SVGPath
+                let thisPath = newInstance as! SVGPath
                 if self.containerLayer != nil {
                     self.containerLayer!.addSublayer(thisPath.shapeLayer)
                 }
@@ -114,7 +118,7 @@ class SVGParser : NSObject, NSXMLParserDelegate {
         }
     }
     
-    func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!) {
+    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if let lastItem = self.elementStack.last {
             if let keyForValue = allKeysForValue(tagMapping, lastItem.classNameAsString())?.first {
                 if elementName == keyForValue {
