@@ -32,20 +32,20 @@
     import AppKit
 #endif
 
-var tagMapping: [String: String] = [
+private var tagMapping: [String: String] = [
     "path": "SVGPath",
     "svg": "SVGElement"
 ]
 
-@objc(SVGGroup) class SVGGroup: NSObject { }
+@objc(SVGGroup) private class SVGGroup: NSObject { }
 
-@objc(SVGPath) class SVGPath: NSObject {
+@objc(SVGPath) public class SVGPath: NSObject {
     
     var path: UIBezierPath = UIBezierPath()
     var shapeLayer: CAShapeLayer = CAShapeLayer()
     
     var d: String? {
-        didSet{
+        didSet {
             if let pathStringToParse = d {
                 self.path = pathStringToParse.pathFromSVGString()
                 self.shapeLayer.path = self.path.CGPath
@@ -62,15 +62,15 @@ var tagMapping: [String: String] = [
     }
 }
 
-@objc(SVGElement) class SVGElement: NSObject { }
+@objc(SVGElement) private class SVGElement: NSObject { }
 
-class SVGParser : NSObject, NSXMLParserDelegate {
+public class SVGParser : NSObject, NSXMLParserDelegate {
     
     private var elementStack = Stack<NSObject>()
     
-    var containerLayer: CALayer?
-    var shouldParseSinglePathOnly = false
-    var paths = [UIBezierPath]()
+    public var containerLayer: CALayer?
+    public var shouldParseSinglePathOnly = false
+    internal var paths = [UIBezierPath]()
     
     convenience init(SVGURL: NSURL, containerLayer: CALayer? = nil, shouldParseSinglePathOnly: Bool = false) {
         
@@ -88,12 +88,12 @@ class SVGParser : NSObject, NSXMLParserDelegate {
         }
     }
     
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
+    public func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         
         if let newElement = tagMapping[elementName] {
             
             let className = NSClassFromString(newElement) as! NSObject.Type
-            let newInstance = className()
+            let newInstance = className.init()
             
             let allPropertyNames = newInstance.propertyNames()
             for thisKeyName in allPropertyNames {
@@ -118,9 +118,10 @@ class SVGParser : NSObject, NSXMLParserDelegate {
         }
     }
     
-    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    
+    public func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if let lastItem = self.elementStack.last {
-            if let keyForValue = allKeysForValue(tagMapping, lastItem.classNameAsString())?.first {
+            if let keyForValue = allKeysForValue(tagMapping,valueToMatch: lastItem.classNameAsString())?.first {
                 if elementName == keyForValue {
                     self.elementStack.pop()
                 }

@@ -50,18 +50,18 @@ extension NSObject {
         
         // retrieve the properties via the class_copyPropertyList function
         var count: UInt32 = 0;
-        var myClass: AnyClass = self.classForCoder;
-        var properties = class_copyPropertyList(myClass, &count);
+        let myClass: AnyClass = self.classForCoder;
+        let properties = class_copyPropertyList(myClass, &count);
         
         // iterate each objc_property_t struct
         for var i: UInt32 = 0; i < count; i++ {
-            var property = properties[Int(i)];
+            let property = properties[Int(i)];
             
             // retrieve the property name by calling property_getName function
-            var cname = property_getName(property);
+            let cname = property_getName(property);
             
             // convert the c string into a Swift string
-            var name = String.fromCString(cname);
+            let name = String.fromCString(cname);
             results.append(name!);
         }
         

@@ -58,10 +58,10 @@ extension NSBezierPath {
     
     var CGPath:CGPathRef? {
         var immutablePath:CGPathRef? = nil
-        var numElements = self.elementCount
+        let numElements = self.elementCount
         if numElements > 0 {
-            var path = CGPathCreateMutable()
-            var points = NSPointArray.alloc(3)
+            let path = CGPathCreateMutable()
+            let points = NSPointArray.alloc(3)
             var didClosePath = true
             
             for var i = 0; i < numElements; i++ {

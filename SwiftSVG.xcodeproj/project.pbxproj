@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		396A8E491B3D2036001986AF /* SwiftSVGMac.framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 396A8E481B3D2036001986AF /* SwiftSVGMac.framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		396A8E661B3D221E001986AF /* SwiftSVGTestsiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E651B3D221E001986AF /* SwiftSVGTestsiOS.swift */; };
-		396A8E671B3D221E001986AF /* SwiftSVGiOSFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B8D88C1B3C3283009DAF60 /* SwiftSVGiOSFramework.framework */; };
+		396A8E671B3D221E001986AF /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B8D88C1B3C3283009DAF60 /* SwiftSVGiOS.framework */; };
 		396A8E6D1B3D238B001986AF /* Dictionary+KeyForValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */; };
 		396A8E6E1B3D238B001986AF /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B681AAE383200472F5A /* NSObject+Extensions.swift */; };
 		396A8E6F1B3D238B001986AF /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B691AAE383200472F5A /* String+Subscript.swift */; };
@@ -29,8 +29,8 @@
 		396A8E8C1B3D36C7001986AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 396A8E8B1B3D36C7001986AF /* Images.xcassets */; };
 		396A8E8F1B3D36C7001986AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 396A8E8D1B3D36C7001986AF /* Main.storyboard */; };
 		396A8EA61B3D39C7001986AF /* MacCompability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E791B3D24C2001986AF /* MacCompability.swift */; };
-		396A8EA81B3D3AB4001986AF /* SwiftSVGMacFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396A8E441B3D2036001986AF /* SwiftSVGMacFramework.framework */; };
-		396A8EA91B3D3ABF001986AF /* SwiftSVGiOSFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B8D88C1B3C3283009DAF60 /* SwiftSVGiOSFramework.framework */; };
+		396A8EA81B3D3AB4001986AF /* SwiftSVGMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396A8E441B3D2036001986AF /* SwiftSVGMac.framework */; };
+		396A8EA91B3D3ABF001986AF /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B8D88C1B3C3283009DAF60 /* SwiftSVGiOS.framework */; };
 		396A8EAA1B3D3D04001986AF /* hawaiiFlowers.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9EB308761AC5BF030007DD82 /* hawaiiFlowers.svg */; };
 		39B8D8911B3C3283009DAF60 /* SwiftSVGiOSFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 39B8D8901B3C3283009DAF60 /* SwiftSVGiOSFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39B8D8A51B3C32DD009DAF60 /* Dictionary+KeyForValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */; };
@@ -78,7 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		396A8E441B3D2036001986AF /* SwiftSVGMacFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVGMacFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		396A8E441B3D2036001986AF /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		396A8E471B3D2036001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		396A8E481B3D2036001986AF /* SwiftSVGMac.framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSVGMac.framework.h; sourceTree = "<group>"; };
 		396A8E611B3D221E001986AF /* SwiftSVGTestsiOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSVGTestsiOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +92,7 @@
 		396A8E891B3D36C7001986AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		396A8E8B1B3D36C7001986AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		396A8E8E1B3D36C7001986AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		39B8D88C1B3C3283009DAF60 /* SwiftSVGiOSFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVGiOSFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39B8D88C1B3C3283009DAF60 /* SwiftSVGiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVGiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B8D88F1B3C3283009DAF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39B8D8901B3C3283009DAF60 /* SwiftSVGiOSFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSVGiOSFramework.h; sourceTree = "<group>"; };
 		9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+KeyForValue.swift"; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		9E245BDC1AAE42C100472F5A /* SVGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParser.swift; sourceTree = "<group>"; };
 		9E245BDE1AAE470D00472F5A /* CAShapeLayer+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+SVG.swift"; sourceTree = "<group>"; };
 		9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SVG.swift"; sourceTree = "<group>"; };
-		9EA820601AAB15C800DEE6CA /* SwiftSVG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EA820601AAB15C800DEE6CA /* SwiftSVG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SwiftSVG.app; path = "Demo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA820641AAB15C800DEE6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EA820651AAB15C800DEE6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = SwiftSVG/AppDelegate.swift; sourceTree = "<group>"; };
 		9EA820671AAB15C800DEE6CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = SwiftSVG/ViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				396A8E671B3D221E001986AF /* SwiftSVGiOSFramework.framework in Frameworks */,
+				396A8E671B3D221E001986AF /* SwiftSVGiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				396A8EA81B3D3AB4001986AF /* SwiftSVGMacFramework.framework in Frameworks */,
+				396A8EA81B3D3AB4001986AF /* SwiftSVGMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				396A8EA91B3D3ABF001986AF /* SwiftSVGiOSFramework.framework in Frameworks */,
+				396A8EA91B3D3ABF001986AF /* SwiftSVGiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,11 +264,11 @@
 			isa = PBXGroup;
 			children = (
 				396A8E7E1B3D3663001986AF /* Demo iOS */,
+				396A8E841B3D36C7001986AF /* Demo Mac */,
 				9EA820621AAB15C800DEE6CA /* SwiftSVG */,
 				39B8D88D1B3C3283009DAF60 /* SwiftSVGiOSFramework */,
 				396A8E451B3D2036001986AF /* SwiftSVGMacFramework */,
 				396A8E621B3D221E001986AF /* SwiftSVGTestsiOS */,
-				396A8E841B3D36C7001986AF /* Demo Mac */,
 				9EA820611AAB15C800DEE6CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -277,8 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				9EA820601AAB15C800DEE6CA /* SwiftSVG.app */,
-				39B8D88C1B3C3283009DAF60 /* SwiftSVGiOSFramework.framework */,
-				396A8E441B3D2036001986AF /* SwiftSVGMacFramework.framework */,
+				39B8D88C1B3C3283009DAF60 /* SwiftSVGiOS.framework */,
+				396A8E441B3D2036001986AF /* SwiftSVGMac.framework */,
 				396A8E611B3D221E001986AF /* SwiftSVGTestsiOS.xctest */,
 				396A8E831B3D36C7001986AF /* Demo Mac.app */,
 			);
@@ -354,7 +354,7 @@
 			);
 			name = SwiftSVGMac;
 			productName = SwiftSVGMac.framework;
-			productReference = 396A8E441B3D2036001986AF /* SwiftSVGMacFramework.framework */;
+			productReference = 396A8E441B3D2036001986AF /* SwiftSVGMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		396A8E601B3D221E001986AF /* SwiftSVGTestsiOS */ = {
@@ -408,7 +408,7 @@
 			);
 			name = SwiftSVGiOS;
 			productName = SwiftSVGiOSFramework;
-			productReference = 39B8D88C1B3C3283009DAF60 /* SwiftSVGiOSFramework.framework */;
+			productReference = 39B8D88C1B3C3283009DAF60 /* SwiftSVGiOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9EA8205F1AAB15C800DEE6CA /* Demo iOS */ = {
@@ -435,6 +435,7 @@
 		9EA820581AAB15C800DEE6CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Strauss LLC";
 				TargetAttributes = {
@@ -926,6 +927,7 @@
 				396A8E591B3D2036001986AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		396A8E6A1B3D221E001986AF /* Build configuration list for PBXNativeTarget "SwiftSVGTestsiOS" */ = {
 			isa = XCConfigurationList;
@@ -934,6 +936,7 @@
 				396A8E6C1B3D221E001986AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		396A8E9C1B3D36C7001986AF /* Build configuration list for PBXNativeTarget "Demo Mac" */ = {
 			isa = XCConfigurationList;
@@ -942,6 +945,7 @@
 				396A8E9E1B3D36C7001986AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39B8D8A31B3C3284009DAF60 /* Build configuration list for PBXNativeTarget "SwiftSVGiOS" */ = {
 			isa = XCConfigurationList;
