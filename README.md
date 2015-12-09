@@ -38,7 +38,7 @@ Install
 
 SwiftSVG is meant to be dropped in to any project. Pick and choose the files you need, but you can install all the extensions via [Carthage](https://github.com/Carthage/Carthage):
 	
-	github 'mchoe/SwiftSVG'
+	github "mchoe/SwiftSVG" ~> 1.0
 
 
 Usage
