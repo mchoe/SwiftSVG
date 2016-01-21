@@ -42,6 +42,6 @@ extension CAShapeLayer {
     
     convenience init(SVGURL: NSURL) {
         self.init()
-        let svgParser = SVGParser(SVGURL: SVGURL, containerLayer: self)
+        _ = SVGParser(SVGURL: SVGURL, containerLayer: self)
     }
 }

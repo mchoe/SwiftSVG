@@ -23,12 +23,10 @@
 		396A8E771B3D238B001986AF /* UIBezierPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */; };
 		396A8E781B3D238B001986AF /* UIView+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */; };
 		396A8E7A1B3D24C2001986AF /* MacCompability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E791B3D24C2001986AF /* MacCompability.swift */; };
-		396A8E7D1B3D25B7001986AF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396A8E7B1B3D25A9001986AF /* QuartzCore.framework */; };
 		396A8E881B3D36C7001986AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E871B3D36C7001986AF /* AppDelegate.swift */; };
 		396A8E8A1B3D36C7001986AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E891B3D36C7001986AF /* ViewController.swift */; };
 		396A8E8C1B3D36C7001986AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 396A8E8B1B3D36C7001986AF /* Images.xcassets */; };
 		396A8E8F1B3D36C7001986AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 396A8E8D1B3D36C7001986AF /* Main.storyboard */; };
-		396A8EA61B3D39C7001986AF /* MacCompability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E791B3D24C2001986AF /* MacCompability.swift */; };
 		396A8EA81B3D3AB4001986AF /* SwiftSVGMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396A8E441B3D2036001986AF /* SwiftSVGMac.framework */; };
 		396A8EA91B3D3ABF001986AF /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B8D88C1B3C3283009DAF60 /* SwiftSVGiOS.framework */; };
 		396A8EAA1B3D3D04001986AF /* hawaiiFlowers.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9EB308761AC5BF030007DD82 /* hawaiiFlowers.svg */; };
@@ -45,6 +43,7 @@
 		39B8D8AE1B3C32DD009DAF60 /* SVGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB308781AC5BF350007DD82 /* SVGView.swift */; };
 		39B8D8AF1B3C32DD009DAF60 /* UIBezierPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */; };
 		39B8D8B01B3C32DD009DAF60 /* UIView+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */; };
+		8A2A8A1B1C3DD4AB0047F86A /* MacCompability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E791B3D24C2001986AF /* MacCompability.swift */; };
 		9EA820661AAB15C800DEE6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820651AAB15C800DEE6CA /* AppDelegate.swift */; };
 		9EA820681AAB15C800DEE6CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820671AAB15C800DEE6CA /* ViewController.swift */; };
 		9EA8206B1AAB15C800DEE6CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA820691AAB15C800DEE6CA /* Main.storyboard */; };
@@ -84,8 +83,7 @@
 		396A8E611B3D221E001986AF /* SwiftSVGTestsiOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSVGTestsiOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		396A8E641B3D221E001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		396A8E651B3D221E001986AF /* SwiftSVGTestsiOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSVGTestsiOS.swift; sourceTree = "<group>"; };
-		396A8E791B3D24C2001986AF /* MacCompability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacCompability.swift; sourceTree = "<group>"; };
-		396A8E7B1B3D25A9001986AF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		396A8E791B3D24C2001986AF /* MacCompability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MacCompability.swift; path = SwiftSVGMac.framework/MacCompability.swift; sourceTree = SOURCE_ROOT; };
 		396A8E831B3D36C7001986AF /* Demo Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		396A8E861B3D36C7001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		396A8E871B3D36C7001986AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				396A8E7D1B3D25B7001986AF /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,10 +160,8 @@
 		396A8E451B3D2036001986AF /* SwiftSVGMacFramework */ = {
 			isa = PBXGroup;
 			children = (
-				396A8E7B1B3D25A9001986AF /* QuartzCore.framework */,
 				396A8E481B3D2036001986AF /* SwiftSVGMac.framework.h */,
 				396A8E461B3D2036001986AF /* Supporting Files */,
-				396A8E791B3D24C2001986AF /* MacCompability.swift */,
 			);
 			name = SwiftSVGMacFramework;
 			path = SwiftSVGMac.framework;
@@ -288,6 +283,7 @@
 		9EA820621AAB15C800DEE6CA /* SwiftSVG */ = {
 			isa = PBXGroup;
 			children = (
+				396A8E791B3D24C2001986AF /* MacCompability.swift */,
 				9E245B661AAE380700472F5A /* From Breakfast */,
 				9EA820891AAB6AE100DEE6CA /* SVG */,
 			);
@@ -565,7 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				396A8EA61B3D39C7001986AF /* MacCompability.swift in Sources */,
+				8A2A8A1B1C3DD4AB0047F86A /* MacCompability.swift in Sources */,
 				39B8D8A51B3C32DD009DAF60 /* Dictionary+KeyForValue.swift in Sources */,
 				39B8D8A61B3C32DD009DAF60 /* NSObject+Extensions.swift in Sources */,
 				39B8D8A71B3C32DD009DAF60 /* String+Subscript.swift in Sources */,
@@ -660,7 +656,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sixpolys.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -686,7 +682,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sixpolys.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -793,7 +789,7 @@
 				);
 				INFOPLIST_FILE = SwiftSVGiOSFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.straussmade.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -817,7 +813,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = SwiftSVGiOSFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.straussmade.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

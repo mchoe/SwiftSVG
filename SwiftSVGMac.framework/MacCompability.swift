@@ -37,7 +37,7 @@ extension UIView {
 #if os(OSX)
 extension NSBezierPath {
     var addLineToPoint:((NSPoint)->Void) {
-            return lineToPoint
+        return lineToPoint
     }
     
     var addCurveToPoint:((NSPoint, controlPoint1:NSPoint, controlPoint2:NSPoint)->Void) {
