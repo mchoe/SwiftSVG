@@ -6,8 +6,6 @@ SwiftSVG
 
 A simple single pass SVG parser written in Swift.
 
-Boom. SVG.
-
 SwiftSVG is part of a larger library I created called [Breakfast](https://github.com/mchoe/Breakfast). I created a separate project because I would like to support as much as the SVG specification as possible. As such, I wanted a place to track issues related specifically to that goal and any changes here will eventually be integrated into Breakfast.
 
 I also wanted to make it possible to use SwiftSVG without installing the full Breakfast Framework, so feel free to use only SwiftSVG in your next project. It was meant to be as lightweight and modular as possible.
