@@ -4,7 +4,7 @@
 SwiftSVG
 ========
 
-A simple SVG parser written in Swift. Quickly goes through SVG path data and outputs
+A simple single pass SVG parser written in Swift.
 
 Boom. SVG.
 
