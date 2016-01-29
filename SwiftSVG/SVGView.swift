@@ -59,7 +59,7 @@ public class SVGView : UIView {
 }
 
 extension SVGView {
-    convenience init(SVGName: String) {
+    public convenience init(SVGName: String) {
         self.init()
         self.SVGName = SVGName
     }

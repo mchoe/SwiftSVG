@@ -34,13 +34,13 @@ import QuartzCore
 
 extension CAShapeLayer {
     
-    convenience init(pathString: String) {
+    public convenience init(pathString: String) {
         self.init()
         let svgPath = UIBezierPath(pathString: pathString)
         self.path = svgPath.CGPath
     }
     
-    convenience init(SVGURL: NSURL) {
+    public convenience init(SVGURL: NSURL) {
         self.init()
         _ = SVGParser(SVGURL: SVGURL, containerLayer: self)
     }
