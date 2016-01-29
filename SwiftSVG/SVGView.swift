@@ -37,7 +37,7 @@ public class SVGView : UIView {
     
     var shapeLayer = CAShapeLayer()
     
-    @IBInspectable var SVGName: String? {
+    @IBInspectable public var SVGName: String? {
         didSet {
             if let thisName = SVGName {
                 
@@ -47,21 +47,33 @@ public class SVGView : UIView {
                     let bundle = NSBundle(forClass: self.dynamicType)
                 #endif
                 
-                if let url = bundle.URLForResource(thisName, withExtension: "svg") {
-                    self.shapeLayer = CAShapeLayer(SVGURL: url)
-                    if self.shapeLayer.superlayer == nil {
-                        self.nonOptionalLayer.addSublayer(self.shapeLayer)
-                    }
-                }
+                SVGURL = bundle.URLForResource(thisName, withExtension: "svg")
             }
         }
     }
+    
+    public var SVGURL: NSURL? {
+        didSet {
+            guard let url = SVGURL else {
+                shapeLayer.removeFromSuperlayer()
+                return
+            }
+            
+            shapeLayer = CAShapeLayer(SVGURL: url)
+            self.nonOptionalLayer.addSublayer(self.shapeLayer)
+        }
+    }
+    
 }
 
 extension SVGView {
-    convenience init(SVGName: String) {
+    public convenience init(SVGName: String) {
         self.init()
         self.SVGName = SVGName
     }
+    
+    public convenience init(SVGURL: NSURL) {
+        self.init()
+        self.SVGURL = SVGURL
+    }
 }
-
