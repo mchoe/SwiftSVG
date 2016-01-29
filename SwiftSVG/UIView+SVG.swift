@@ -34,13 +34,13 @@ import Foundation
 
 extension UIView {
     
-    convenience init(pathString: String) {
+    public convenience init(pathString: String) {
         self.init()
         let shapeLayer = CAShapeLayer(pathString: pathString)
         self.nonOptionalLayer.addSublayer(shapeLayer)
     }
     
-    convenience init(SVGURL: NSURL) {
+    public convenience init(SVGURL: NSURL) {
         self.init()
         let shapeLayer = CAShapeLayer(SVGURL: SVGURL)
         self.nonOptionalLayer.addSublayer(shapeLayer)

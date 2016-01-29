@@ -13,8 +13,8 @@ import UIKit
 #elseif os(OSX)
 import AppKit
 public typealias UIView = NSView
-typealias UIBezierPath = NSBezierPath
-typealias UIColor = NSColor
+public typealias UIBezierPath = NSBezierPath
+public typealias UIColor = NSColor
 #endif
 
 extension UIView {
