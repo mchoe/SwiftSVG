@@ -27,6 +27,9 @@ extension UIView {
             } else {
                 self.layer = CALayer()
                 self.layer?.frame = self.bounds
+                let flip = CATransform3DMakeScale(1.0, -1.0, 1.0)
+                let translate = CATransform3DMakeTranslation(0.0, self.bounds.size.height, 1.0)
+                self.layer?.sublayerTransform = CATransform3DConcat(flip, translate)
                 self.wantsLayer = true
                 return self.layer!
             }
