@@ -54,7 +54,7 @@ extension NSObject {
         let properties = class_copyPropertyList(myClass, &count);
         
         // iterate each objc_property_t struct
-        for var i: UInt32 = 0; i < count; i++ {
+        for i in 0..<count {
             let property = properties[Int(i)];
             
             // retrieve the property name by calling property_getName function
