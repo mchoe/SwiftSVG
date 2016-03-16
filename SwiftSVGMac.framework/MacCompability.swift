@@ -22,13 +22,13 @@ extension UIView {
         #if os(iOS)
         return self.layer
         #elseif os(OSX)
-            if let l = layer {
+            if let l = self.layer {
                 return l
             } else {
-                layer = CALayer()
-                layer?.frame = self.bounds
-                wantsLayer = true
-                return layer!
+                self.layer = CALayer()
+                self.layer?.frame = self.bounds
+                self.wantsLayer = true
+                return self.layer!
             }
         #endif
     }
