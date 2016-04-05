@@ -38,6 +38,10 @@ SwiftSVG is meant to be dropped in to any project. Pick and choose the files you
 	
 	github "mchoe/SwiftSVG" ~> 1.0
 
+Cocoapods:
+
+	pod 'SwiftSVG'
+
 
 Usage
 -----
