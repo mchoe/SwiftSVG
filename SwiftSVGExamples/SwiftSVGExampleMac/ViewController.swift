@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  Demo Mac
+//  SwiftSVGExampleMac
 //
-//  Created by Matthias Schlemm on 26/06/15.
-//  Copyright (c) 2015 Strauss LLC. All rights reserved.
+//  Created by Michael Choe on 4/5/16.
+//  Copyright © 2016 Michael Choe. All rights reserved.
 //
 
 import Cocoa
