@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "absolute:/Users/michaelchoe/Google Drive/OWN/iOS/SwiftSVG/SwiftSVG.xcodeproj">
+      location = "group:SwiftSVG.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:SwiftSVGExamples/SwiftSVGExamples.xcodeproj">
