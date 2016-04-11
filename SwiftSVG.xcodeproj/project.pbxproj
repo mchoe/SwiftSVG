@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		396A8E491B3D2036001986AF /* SwiftSVGMac.framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 396A8E481B3D2036001986AF /* SwiftSVGMac.framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		396A8E491B3D2036001986AF /* SwiftSVGMacFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 396A8E481B3D2036001986AF /* SwiftSVGMacFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		396A8E661B3D221E001986AF /* SwiftSVGTestsiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E651B3D221E001986AF /* SwiftSVGTestsiOS.swift */; };
 		396A8E671B3D221E001986AF /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B8D88C1B3C3283009DAF60 /* SwiftSVGiOS.framework */; };
 		396A8E6D1B3D238B001986AF /* Dictionary+KeyForValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */; };
@@ -51,8 +51,8 @@
 
 /* Begin PBXFileReference section */
 		396A8E441B3D2036001986AF /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		396A8E471B3D2036001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		396A8E481B3D2036001986AF /* SwiftSVGMac.framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSVGMac.framework.h; sourceTree = "<group>"; };
+		396A8E471B3D2036001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../SwiftSVGMacFramework/Info.plist; sourceTree = "<group>"; };
+		396A8E481B3D2036001986AF /* SwiftSVGMacFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwiftSVGMacFramework.h; path = ../SwiftSVGMacFramework/SwiftSVGMacFramework.h; sourceTree = "<group>"; };
 		396A8E611B3D221E001986AF /* SwiftSVGTestsiOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSVGTestsiOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		396A8E641B3D221E001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		396A8E651B3D221E001986AF /* SwiftSVGTestsiOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSVGTestsiOS.swift; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		396A8E451B3D2036001986AF /* SwiftSVGMacFramework */ = {
 			isa = PBXGroup;
 			children = (
-				396A8E481B3D2036001986AF /* SwiftSVGMac.framework.h */,
+				396A8E481B3D2036001986AF /* SwiftSVGMacFramework.h */,
 				396A8E461B3D2036001986AF /* Supporting Files */,
 			);
 			name = SwiftSVGMacFramework;
@@ -216,7 +216,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				396A8E491B3D2036001986AF /* SwiftSVGMac.framework.h in Headers */,
+				396A8E491B3D2036001986AF /* SwiftSVGMacFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +426,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = SwiftSVGMac.framework/Info.plist;
+				INFOPLIST_FILE = SwiftSVGMacFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -452,7 +452,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SwiftSVGMac.framework/Info.plist;
+				INFOPLIST_FILE = SwiftSVGMacFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
