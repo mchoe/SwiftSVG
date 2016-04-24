@@ -42,6 +42,10 @@ extension UIBezierPath {
     public class func pathWithSVGURL(SVGURL: NSURL) -> UIBezierPath? {
         let parser = SVGParser(SVGURL: SVGURL, containerLayer: nil, shouldParseSinglePathOnly: true)
         return parser.paths.first
-    }
-    
+	}
+
+	public class func pathsWithSVGURL(SVGURL: NSURL) -> [UIBezierPath] {
+		let parser = SVGParser(SVGURL: SVGURL, containerLayer: nil, shouldParseSinglePathOnly: true)
+		return parser.paths
+	}
 }
