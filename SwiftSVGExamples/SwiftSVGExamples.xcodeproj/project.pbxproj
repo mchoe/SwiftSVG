@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3041F3161D6AAAE600C17491 /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3041F3151D6AAAE600C17491 /* SwiftSVGiOS.framework */; };
+		3041F3251D6ABAB100C17491 /* steward.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3041F3241D6ABAB100C17491 /* steward.svg */; };
+		3041F3271D6AC28700C17491 /* steward.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3041F3261D6AC28700C17491 /* steward.svg */; };
 		8AC4DBC01CB37DB800137DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */; };
 		8AC4DBC21CB37DB800137DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBC11CB37DB800137DC9 /* ViewController.swift */; };
 		8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBC31CB37DB800137DC9 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		3041F3151D6AAAE600C17491 /* SwiftSVGiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVGiOS.framework; path = "../../DerivedData/SwiftSVG/Build/Products/Debug-iphonesimulator/SwiftSVGiOS.framework"; sourceTree = "<group>"; };
+		3041F3241D6ABAB100C17491 /* steward.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = steward.svg; sourceTree = "<group>"; };
+		3041F3261D6AC28700C17491 /* steward.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = steward.svg; path = ../../../Steward/MagnusUIKit/assets/steward.svg; sourceTree = "<group>"; };
 		8AC4DBBD1CB37DB800137DC9 /* SwiftSVGExampleiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVGExampleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AC4DBC11CB37DB800137DC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,9 +87,11 @@
 		8AC4DBBE1CB37DB800137DC9 /* SwiftSVGExampleiOS */ = {
 			isa = PBXGroup;
 			children = (
+				3041F3261D6AC28700C17491 /* steward.svg */,
 				3041F3151D6AAAE600C17491 /* SwiftSVGiOS.framework */,
 				8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */,
 				8AC4DBC11CB37DB800137DC9 /* ViewController.swift */,
+				3041F3241D6ABAB100C17491 /* steward.svg */,
 				8AC4DBC31CB37DB800137DC9 /* Main.storyboard */,
 				8AC4DBC61CB37DB800137DC9 /* Assets.xcassets */,
 				8AC4DBC81CB37DB800137DC9 /* LaunchScreen.storyboard */,
@@ -197,7 +203,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AC4DBE81CB37E2800137DC9 /* hawaiiFlowers.svg in Resources */,
+				3041F3251D6ABAB100C17491 /* steward.svg in Resources */,
 				8AC4DBCA1CB37DB800137DC9 /* LaunchScreen.storyboard in Resources */,
+				3041F3271D6AC28700C17491 /* steward.svg in Resources */,
 				8AC4DBC71CB37DB800137DC9 /* Assets.xcassets in Resources */,
 				8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */,
 			);

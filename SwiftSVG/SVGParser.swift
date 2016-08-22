@@ -87,7 +87,7 @@ open class SVGParser : NSObject, XMLParserDelegate {
             assert(false, "Couldn't initialize parser. Check your resource and make sure the supplied URL is correct")
         }
     }
-    
+  
     open func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         
         if let newElement = tagMapping[elementName] {

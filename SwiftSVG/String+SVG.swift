@@ -424,6 +424,7 @@ private let characterDictionary: [Character: PathCharacter] = [
     "Z": ClosePath(character: "Z", pathType: PathType.absolute),
     "z": ClosePath(character: "z", pathType: PathType.relative),
     "-": SignCharacter(character: "-"),
+    "+": SignCharacter(character: "+"),
     ".": NumberCharacter(character: "."),
     "0": NumberCharacter(character: "0"),
     "1": NumberCharacter(character: "1"),
@@ -435,6 +436,7 @@ private let characterDictionary: [Character: PathCharacter] = [
     "7": NumberCharacter(character: "7"),
     "8": NumberCharacter(character: "8"),
     "9": NumberCharacter(character: "9"),
+    "e": NumberCharacter(character: "e"),
     " ": SeparatorCharacter(character: " "),
     ",": SeparatorCharacter(character: ",")
 ]
@@ -506,20 +508,19 @@ func parseSVGPath(_ pathString: String, forPath: UIBezierPath? = nil) -> UIBezie
                     pushCoordinateAndClear()
                     
                 } else if pathCharacter is SignCharacter {
-                    
+                  if let c = currentNumberStack.characterStack.characters.last, c == "e" {
+                    currentNumberStack.push(thisCharacter)
+                  } else {
                     pushCoordinateAndClear()
                     currentNumberStack = NumberStack(startCharacter: thisCharacter)
-                    
+                  }
                 } else {
-                    
-                    if currentNumberStack.isEmpty == false {
-                        currentNumberStack.push(thisCharacter)
-                    } else {
-                        currentNumberStack = NumberStack(startCharacter: thisCharacter)
-                    }
-                    
+                  if currentNumberStack.isEmpty == false {
+                    currentNumberStack.push(thisCharacter)
+                  } else {
+                    currentNumberStack = NumberStack(startCharacter: thisCharacter)
+                  }
                 }
-                
             } else {
                 assert(false, "Invalid character \"\(thisCharacter)\" found")
             }
