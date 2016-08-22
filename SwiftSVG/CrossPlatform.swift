@@ -57,57 +57,59 @@ extension UIView {
 }
 
 #if os(OSX)
-    extension NSBezierPath {
+    public extension NSBezierPath {
         var addLineToPoint:((NSPoint)->Void) {
-            return lineToPoint
+            return line
         }
         
-        var addCurveToPoint:((NSPoint, controlPoint1:NSPoint, controlPoint2:NSPoint)->Void) {
-            return curveToPoint
+        var addCurveToPoint:(((NSPoint, _ controlPoint1:NSPoint, _ controlPoint2:NSPoint)->Void)) {
+            return curve
         }
         
         func addQuadCurveToPoint(endPoint: NSPoint, controlPoint: NSPoint) {
-            self.addCurveToPoint(endPoint,
-                                 controlPoint1: CGPointMake(
-                                    (controlPoint.x - currentPoint.x) * (2.0 / 3.0) +  currentPoint.x,
-                                    (controlPoint.y - currentPoint.y) * (2.0 / 3.0) + currentPoint.y
+            self.addCurveToPoint(endPoint, CGPoint(
+                    x: (controlPoint.x - currentPoint.x) * (2.0 / 3.0) +  currentPoint.x,
+                    y: (controlPoint.y - currentPoint.y) * (2.0 / 3.0) + currentPoint.y
                 ),
-                                 controlPoint2: CGPointMake(
-                                    (controlPoint.x - endPoint.x) * (2.0 / 3.0) +  endPoint.x,
-                                    (controlPoint.y - endPoint.y) * (2.0 / 3.0) +  endPoint.y
-                ))
+                CGPoint(
+                    x: (controlPoint.x - endPoint.x) * (2.0 / 3.0) +  endPoint.x,
+                    y: (controlPoint.y - endPoint.y) * (2.0 / 3.0) +  endPoint.y
+                )
+            )
         }
         
-        var CGPath:CGPathRef? {
-            var immutablePath:CGPathRef? = nil
+        var cgPath:CGPath? {
+            var immutablePath:CGPath? = nil
             let numElements = self.elementCount
             if numElements > 0 {
-                let path = CGPathCreateMutable()
-                let points = NSPointArray.alloc(3)
+                let path = CGMutablePath()
+                let points = NSPointArray.allocate(capacity: 3)
                 var didClosePath = true
                 
                 for i in 0..<numElements {
-                    switch(self.elementAtIndex(i, associatedPoints: points)) {
-                    case .MoveToBezierPathElement:
-                        CGPathMoveToPoint(path, nil, points[0].x, points[0].y)
-                    case .LineToBezierPathElement:
-                        CGPathAddLineToPoint(path, nil, points[0].x, points[0].y);
-                        didClosePath = false;
-                    case .CurveToBezierPathElement:
-                        CGPathAddCurveToPoint(path, nil, points[0].x, points[0].y,
-                                              points[1].x, points[1].y,
-                                              points[2].x, points[2].y);
-                        didClosePath = false;
-                    case .ClosePathBezierPathElement:
-                        CGPathCloseSubpath(path);
+                    switch(self.element(at: i, associatedPoints: points)) {
+                    case .moveToBezierPathElement:
+                      path.move(to: CGPoint(x: points[0].x, y: points[0].y))
+                    case .lineToBezierPathElement:
+                      path.addLine(to: CGPoint(x: points[0].x, y: points[0].y));
+                      didClosePath = false;
+                    case .curveToBezierPathElement:
+                      path.addCurve(
+                          to: CGPoint(x: points[0].x, y: points[0].y),
+                          control1: CGPoint(x: points[1].x, y: points[1].y),
+                          control2: CGPoint(x: points[2].x, y: points[2].y)
+                      );
+                      didClosePath = false;
+                    case .closePathBezierPathElement:
+                        path.closeSubpath();
                         didClosePath = true;
                     }
                 }
                 if !didClosePath {
-                    CGPathCloseSubpath(path)
+                    path.closeSubpath()
                 }
-                immutablePath = CGPathCreateCopy(path)
-                points.dealloc(3)
+                immutablePath = path.copy()
+                points.deallocate(capacity: 3)
             }
             return immutablePath
         }

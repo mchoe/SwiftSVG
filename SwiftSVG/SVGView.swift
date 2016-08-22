@@ -33,7 +33,7 @@
 
 
 @IBDesignable
-public class SVGView : UIView {
+open class SVGView : UIView {
     
     var shapeLayer = CAShapeLayer()
     
@@ -42,13 +42,13 @@ public class SVGView : UIView {
             if let thisName = SVGName {
                 
                 #if !TARGET_INTERFACE_BUILDER
-                    let bundle = NSBundle.mainBundle()
+                    let bundle = Bundle.main
                 #else
-                    let bundle = NSBundle(forClass: self.dynamicType)
+                    let bundle = NSBundle(forClass: type(of: self))
                 #endif
                 
-                if let url = bundle.URLForResource(thisName, withExtension: "svg") {
-                    self.shapeLayer = CAShapeLayer(SVGURL: url)
+                if let url = bundle.url(forResource: thisName, withExtension: "svg") {
+                    self.shapeLayer = CAShapeLayer(SVGURL: (url as NSURL) as URL)
                     if self.shapeLayer.superlayer == nil {
                         self.nonOptionalLayer.addSublayer(self.shapeLayer)
                     }

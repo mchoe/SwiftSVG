@@ -36,11 +36,11 @@ extension UIBezierPath {
     
     public convenience init(pathString: String) {
         self.init()
-        parseSVGPath(pathString, forPath: self)
+        _ = parseSVGPath(pathString, forPath: self)
     }
     
-    public class func pathWithSVGURL(SVGURL: NSURL) -> UIBezierPath? {
-        let parser = SVGParser(SVGURL: SVGURL, containerLayer: nil, shouldParseSinglePathOnly: true)
+    public class func pathWithSVGURL(_ SVGURL: URL) -> UIBezierPath? {
+        let parser = SVGParser(SVGURL: (SVGURL as NSURL) as URL, containerLayer: nil, shouldParseSinglePathOnly: true)
         return parser.paths.first
     }
     

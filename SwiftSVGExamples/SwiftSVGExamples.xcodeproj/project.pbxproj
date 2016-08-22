@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3041F3161D6AAAE600C17491 /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3041F3151D6AAAE600C17491 /* SwiftSVGiOS.framework */; };
 		8AC4DBC01CB37DB800137DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */; };
 		8AC4DBC21CB37DB800137DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBC11CB37DB800137DC9 /* ViewController.swift */; };
 		8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBC31CB37DB800137DC9 /* Main.storyboard */; };
@@ -16,13 +17,13 @@
 		8AC4DBD81CB37DC600137DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBD71CB37DC600137DC9 /* ViewController.swift */; };
 		8AC4DBDA1CB37DC600137DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBD91CB37DC600137DC9 /* Assets.xcassets */; };
 		8AC4DBDD1CB37DC600137DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBDB1CB37DC600137DC9 /* Main.storyboard */; };
-		8AC4DBE31CB37DD300137DC9 /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC4DBE21CB37DD300137DC9 /* SwiftSVGiOS.framework */; };
 		8AC4DBE51CB37DDB00137DC9 /* SwiftSVGMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC4DBE41CB37DDB00137DC9 /* SwiftSVGMac.framework */; };
 		8AC4DBE81CB37E2800137DC9 /* hawaiiFlowers.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBE71CB37E2800137DC9 /* hawaiiFlowers.svg */; };
 		8AC4DBEC1CB37F7700137DC9 /* hawaiiFlowers.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBE71CB37E2800137DC9 /* hawaiiFlowers.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3041F3151D6AAAE600C17491 /* SwiftSVGiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVGiOS.framework; path = "../../DerivedData/SwiftSVG/Build/Products/Debug-iphonesimulator/SwiftSVGiOS.framework"; sourceTree = "<group>"; };
 		8AC4DBBD1CB37DB800137DC9 /* SwiftSVGExampleiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVGExampleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AC4DBC11CB37DB800137DC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		8AC4DBD91CB37DC600137DC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AC4DBDC1CB37DC600137DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AC4DBDE1CB37DC600137DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AC4DBE21CB37DD300137DC9 /* SwiftSVGiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVGiOS.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/SwiftSVG-cgczvhmtorpewxddumflefxcjvmz/Build/Products/Debug-iphonesimulator/SwiftSVGiOS.framework"; sourceTree = "<group>"; };
 		8AC4DBE41CB37DDB00137DC9 /* SwiftSVGMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVGMac.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/SwiftSVG-cgczvhmtorpewxddumflefxcjvmz/Build/Products/Debug/SwiftSVGMac.framework"; sourceTree = "<group>"; };
 		8AC4DBE71CB37E2800137DC9 /* hawaiiFlowers.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hawaiiFlowers.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AC4DBE31CB37DD300137DC9 /* SwiftSVGiOS.framework in Frameworks */,
+				3041F3161D6AAAE600C17491 /* SwiftSVGiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 		8AC4DBBE1CB37DB800137DC9 /* SwiftSVGExampleiOS */ = {
 			isa = PBXGroup;
 			children = (
-				8AC4DBE21CB37DD300137DC9 /* SwiftSVGiOS.framework */,
+				3041F3151D6AAAE600C17491 /* SwiftSVGiOS.framework */,
 				8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */,
 				8AC4DBC11CB37DB800137DC9 /* ViewController.swift */,
 				8AC4DBC31CB37DB800137DC9 /* Main.storyboard */,
@@ -159,14 +159,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Michael Choe";
 				TargetAttributes = {
 					8AC4DBBC1CB37DB800137DC9 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					8AC4DBD21CB37DC600137DC9 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -276,8 +278,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -322,8 +326,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -342,6 +348,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -350,22 +357,26 @@
 		8AC4DBCC1CB37DB800137DC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftSVGExampleiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGExampleiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		8AC4DBCD1CB37DB800137DC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftSVGExampleiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGExampleiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -381,6 +392,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGExampleMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -396,6 +408,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGExampleMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -418,6 +431,7 @@
 				8AC4DBCD1CB37DB800137DC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AC4DBDF1CB37DC600137DC9 /* Build configuration list for PBXNativeTarget "SwiftSVGExampleMac" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +440,7 @@
 				8AC4DBE11CB37DC600137DC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
