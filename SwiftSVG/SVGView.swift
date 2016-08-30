@@ -42,12 +42,12 @@ public class SVGView : UIView {
             if let thisName = SVGName {
                 
                 #if !TARGET_INTERFACE_BUILDER
-                    let bundle = NSBundle.mainBundle()
+                    let bundle = Bundle.main
                 #else
                     let bundle = NSBundle(forClass: self.dynamicType)
                 #endif
                 
-                if let url = bundle.URLForResource(thisName, withExtension: "svg") {
+                if let url = bundle.url(forResource: thisName, withExtension: "svg") {
                     self.shapeLayer = CAShapeLayer(SVGURL: url)
                     if self.shapeLayer.superlayer == nil {
                         self.nonOptionalLayer.addSublayer(self.shapeLayer)
