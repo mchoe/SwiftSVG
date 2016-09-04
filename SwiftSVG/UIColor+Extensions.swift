@@ -56,9 +56,12 @@ public extension UIColor {
         var hexBlue = "00"
         
         if workingString.characters.count == 6 {
-            hexRed = workingString[0...1]
-            hexGreen = workingString[2...3]
-            hexBlue = workingString[4...5]
+			var range = workingString.startIndex ..< workingString.index(workingString.startIndex, offsetBy: 2)
+			hexRed = workingString.substring(with: range)
+			range = workingString.index(workingString.startIndex, offsetBy: 2) ..< workingString.index(workingString.startIndex, offsetBy: 4)
+			hexGreen = workingString.substring(with: range)
+			range = workingString.index(workingString.startIndex, offsetBy: 4) ..< workingString.index(workingString.startIndex, offsetBy: 6)
+			hexBlue = workingString.substring(with: range)
         } else if workingString.characters.count == 3 {
             let redValue = workingString[0]
             let greenValue = workingString[1]
