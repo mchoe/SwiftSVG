@@ -38,7 +38,7 @@
 
 import Foundation
 
-public func allKeysForValue<K, V: Equatable>(dict: [K: V], valueToMatch: V) -> [K]? {
+public func allKeysForValue<K, V: Equatable>(_ dict: [K: V], valueToMatch: V) -> [K]? {
     
     let possibleValues = dict.filter ({ (key, value) -> Bool in
         return value == valueToMatch

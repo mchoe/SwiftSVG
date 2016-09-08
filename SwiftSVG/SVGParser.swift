@@ -39,7 +39,7 @@ private var tagMapping: [String: String] = [
 
 @objc(SVGGroup) private class SVGGroup: NSObject { }
 
-@objc(SVGPath) public class SVGPath: NSObject {
+@objc(SVGPath) open class SVGPath: NSObject {
     
     var path: UIBezierPath = UIBezierPath()
     var shapeLayer: CAShapeLayer = CAShapeLayer()
@@ -48,7 +48,7 @@ private var tagMapping: [String: String] = [
         didSet {
             if let pathStringToParse = d {
                 self.path = pathStringToParse.pathFromSVGString()
-                self.shapeLayer.path = self.path.CGPath
+                self.shapeLayer.path = self.path.cgPath
             }
         }
     }
@@ -56,7 +56,7 @@ private var tagMapping: [String: String] = [
     var fill: String? {
         didSet {
             if let hexFill = fill {
-                self.shapeLayer.fillColor = UIColor(hexString: hexFill).CGColor
+                self.shapeLayer.fillColor = UIColor(hexString: hexFill).cgColor
             }
         }
     }
@@ -64,15 +64,15 @@ private var tagMapping: [String: String] = [
 
 @objc(SVGElement) private class SVGElement: NSObject { }
 
-public class SVGParser : NSObject, NSXMLParserDelegate {
+open class SVGParser : NSObject, XMLParserDelegate {
     
-    private var elementStack = Stack<NSObject>()
+    fileprivate var elementStack = Stack<NSObject>()
     
-    public var containerLayer: CALayer?
-    public var shouldParseSinglePathOnly = false
+    open var containerLayer: CALayer?
+    open var shouldParseSinglePathOnly = false
     internal var paths = [UIBezierPath]()
     
-    convenience init(SVGURL: NSURL, containerLayer: CALayer? = nil, shouldParseSinglePathOnly: Bool = false) {
+    convenience init(SVGURL: URL, containerLayer: CALayer? = nil, shouldParseSinglePathOnly: Bool = false) {
         
         self.init()
         
@@ -80,7 +80,7 @@ public class SVGParser : NSObject, NSXMLParserDelegate {
             self.containerLayer = layer
         }
         
-        if let xmlParser = NSXMLParser(contentsOfURL: SVGURL) {
+        if let xmlParser = XMLParser(contentsOf: SVGURL) {
             xmlParser.delegate = self
             xmlParser.parse()
         } else {
@@ -88,7 +88,7 @@ public class SVGParser : NSObject, NSXMLParserDelegate {
         }
     }
     
-    public func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+    open func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         
         if let newElement = tagMapping[elementName] {
             
@@ -97,7 +97,7 @@ public class SVGParser : NSObject, NSXMLParserDelegate {
             
             let allPropertyNames = newInstance.propertyNames()
             for thisKeyName in allPropertyNames {
-                if let attributeValue: AnyObject = attributeDict[thisKeyName] {
+                if let attributeValue: AnyObject = attributeDict[thisKeyName] as AnyObject? {
                     newInstance.setValue(attributeValue, forKey: thisKeyName)
                 }
             }
@@ -119,7 +119,7 @@ public class SVGParser : NSObject, NSXMLParserDelegate {
     }
     
     
-    public func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    open func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if let lastItem = self.elementStack.last {
             if let keyForValue = allKeysForValue(tagMapping,valueToMatch: lastItem.classNameAsString())?.first {
                 if elementName == keyForValue {

@@ -42,20 +42,18 @@ import UIKit
 #elseif os(OSX)
 import AppKit
 #endif
-public extension String {
-    
-    subscript(index: Int) -> Character {
-        get {
-            let index = self.startIndex.advancedBy(index)
-            return self[index]
-        }
+extension String {
+    subscript(i: Int) -> String {
+        guard i >= 0 && i < characters.count else { return "" }
+        return String(self[index(startIndex, offsetBy: i)])
     }
-    
-    subscript(integerRange: Range<Int>) -> String {
-        let start = self.startIndex.advancedBy(integerRange.startIndex)
-        let end = self.startIndex.advancedBy(integerRange.endIndex)
-        let range = start..<end
-        return self[range]
+    subscript(range: Range<Int>) -> String {
+        let lowerIndex = index(startIndex, offsetBy: max(0,range.lowerBound), limitedBy: endIndex) ?? endIndex
+        return substring(with: lowerIndex..<(index(lowerIndex, offsetBy: range.upperBound - range.lowerBound, limitedBy: endIndex) ?? endIndex))
+    }
+    subscript(range: ClosedRange<Int>) -> String {
+        let lowerIndex = index(startIndex, offsetBy: max(0,range.lowerBound), limitedBy: endIndex) ?? endIndex
+        return substring(with: lowerIndex..<(index(lowerIndex, offsetBy: range.upperBound - range.lowerBound + 1, limitedBy: endIndex) ?? endIndex))
     }
 }
 

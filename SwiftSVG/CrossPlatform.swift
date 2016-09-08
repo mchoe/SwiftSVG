@@ -62,7 +62,7 @@ extension UIView {
             return lineToPoint
         }
         
-        var addCurveToPoint:((NSPoint, controlPoint1:NSPoint, controlPoint2:NSPoint)->Void) {
+        var addCurveToPoint:((NSPoint, _ controlPoint1:NSPoint, _ controlPoint2:NSPoint)->Void) {
             return curveToPoint
         }
         
