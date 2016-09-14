@@ -50,12 +50,17 @@ public extension UIColor {
         if workingString.hasPrefix("#") {
             workingString = String(workingString.characters.dropFirst())
         }
-        
+        var hexAlpha = "FF"
         var hexRed = "00"
         var hexGreen = "00"
         var hexBlue = "00"
         
-        if workingString.characters.count == 6 {
+        if workingString.characters.count == 8 {
+            hexAlpha = workingString[0...1]
+            hexRed = workingString[2...3]
+            hexGreen = workingString[4...5]
+            hexBlue = workingString[6...7]
+        } else if workingString.characters.count == 6 {
             hexRed = workingString[0...1]
             hexGreen = workingString[2...3]
             hexBlue = workingString[4...5]
@@ -71,8 +76,9 @@ public extension UIColor {
         let red = CGFloat(hexRed.hexToInteger())
         let green = CGFloat(hexGreen.hexToInteger())
         let blue = CGFloat(hexBlue.hexToInteger())
+        let alpha = CGFloat(hexAlpha.hexToInteger())
         
-        self.init(red: CGFloat(red / 255.0), green: CGFloat(green / 255.0), blue: CGFloat(blue / 255.0), alpha: 1.0)
+        self.init(red: CGFloat(red / 255.0), green: CGFloat(green / 255.0), blue: CGFloat(blue / 255.0), alpha: CGFloat(alpha))
     }
 }
 
