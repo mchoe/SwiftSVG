@@ -38,25 +38,25 @@
 
 import Foundation
 #if os(iOS)
-import UIKit
+	import UIKit
 #elseif os(OSX)
-import AppKit
+	import AppKit
 #endif
 public extension String {
-    
-    subscript(index: Int) -> Character {
-        get {
-            let index = self.startIndex.advancedBy(index)
-            return self[index]
-        }
-    }
-    
-    subscript(integerRange: Range<Int>) -> String {
-        let start = self.startIndex.advancedBy(integerRange.startIndex)
-        let end = self.startIndex.advancedBy(integerRange.endIndex)
-        let range = start..<end
-        return self[range]
-    }
+	
+	subscript(index: Int) -> Character {
+		get {
+			let index = self.index(self.startIndex, offsetBy: index)
+			return self[index]
+		}
+	}
+	
+	subscript(integerRange: Range<Int>) -> String {
+		let start = self.index(self.startIndex, offsetBy: integerRange.lowerBound)
+		let end = self.index(self.startIndex, offsetBy: integerRange.upperBound)
+		let range = start..<end
+		return self[range]
+	}
 }
 
 
