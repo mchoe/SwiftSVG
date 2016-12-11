@@ -27,21 +27,21 @@
 
 
 #if os(iOS)
-    import UIKit
+	import UIKit
 #elseif os(OSX)
-    import AppKit
+	import AppKit
 #endif
 
 extension UIBezierPath {
-    
-    public convenience init(pathString: String) {
-        self.init()
-        parseSVGPath(pathString, forPath: self)
-    }
-    
-    public class func pathWithSVGURL(SVGURL: NSURL) -> UIBezierPath? {
-        let parser = SVGParser(SVGURL: SVGURL, containerLayer: nil, shouldParseSinglePathOnly: true)
-        return parser.paths.first
-    }
-    
+	
+	public convenience init(pathString: String) {
+		self.init()
+		parseSVGPath(pathString: pathString, forPath: self)
+	}
+	
+	public class func pathWithSVGURL(SVGURL: NSURL) -> UIBezierPath? {
+		let parser = SVGParser(SVGURL: SVGURL, containerLayer: nil, shouldParseSinglePathOnly: true)
+		return parser.paths.first
+	}
+	
 }

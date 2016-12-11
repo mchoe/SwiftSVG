@@ -37,43 +37,54 @@
 //  THE SOFTWARE.
 
 #if os(iOS)
-    import UIKit
+	import UIKit
 #elseif os(OSX)
-    import AppKit
+	import AppKit
 #endif
 
+extension String {
+	
+	subscript (r: CountableClosedRange<Int>) -> String {
+		get {
+			let startIndex =  self.index(self.startIndex, offsetBy: r.lowerBound)
+			let endIndex = self.index(startIndex, offsetBy: r.upperBound - r.lowerBound)
+			return self[startIndex...endIndex]
+		}
+	}
+}
+
 public extension UIColor {
-    
-    convenience init(hexString: String) {
-        
-        var workingString = hexString
-        if workingString.hasPrefix("#") {
-            workingString = String(workingString.characters.dropFirst())
-        }
-        
-        var hexRed = "00"
-        var hexGreen = "00"
-        var hexBlue = "00"
-        
-        if workingString.characters.count == 6 {
-            hexRed = workingString[0...1]
-            hexGreen = workingString[2...3]
-            hexBlue = workingString[4...5]
-        } else if workingString.characters.count == 3 {
-            let redValue = workingString[0]
-            let greenValue = workingString[1]
-            let blueValue = workingString[2]
-            hexRed = "\(redValue)\(redValue)"
-            hexGreen = "\(greenValue)\(greenValue)"
-            hexBlue = "\(blueValue)\(blueValue)"
-        }
-        
-        let red = CGFloat(hexRed.hexToInteger())
-        let green = CGFloat(hexGreen.hexToInteger())
-        let blue = CGFloat(hexBlue.hexToInteger())
-        
-        self.init(red: CGFloat(red / 255.0), green: CGFloat(green / 255.0), blue: CGFloat(blue / 255.0), alpha: 1.0)
-    }
+	
+	convenience init(hexString: String) {
+		
+		var workingString = hexString
+		if workingString.hasPrefix("#") {
+			workingString = String(workingString.characters.dropFirst())
+		}
+		
+		var hexRed = "00"
+		var hexGreen = "00"
+		var hexBlue = "00"
+		
+		if workingString.characters.count == 6 {
+			hexRed = workingString[0...1]
+			hexGreen = workingString[2...3]
+			hexBlue = workingString[4...5]
+		} else if workingString.characters.count == 3 {
+			let redValue = workingString[0]
+			let greenValue = workingString[1]
+			let blueValue = workingString[2]
+			hexRed = "\(redValue)\(redValue)"
+			hexGreen = "\(greenValue)\(greenValue)"
+			hexBlue = "\(blueValue)\(blueValue)"
+		}
+		
+		let red = CGFloat(hexRed.hexToInteger())
+		let green = CGFloat(hexGreen.hexToInteger())
+		let blue = CGFloat(hexBlue.hexToInteger())
+		
+		self.init(red: CGFloat(red / 255.0), green: CGFloat(green / 255.0), blue: CGFloat(blue / 255.0), alpha: 1.0)
+	}
 }
 
 
