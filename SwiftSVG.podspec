@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.social_media_url = "http://twitter.com/_mchoe"
   s.osx.deployment_target = "10.10"
   s.ios.deployment_target = '8.0'
-  s.source       = { :git => "https://github.com/mchoe/SwiftSVG.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/enpit/SwiftSVG.git", :tag => "v#{s.version}" }
   s.source_files  = "SwiftSVG", "SwiftSVG/**/*.{h,swift}"
 
 end
