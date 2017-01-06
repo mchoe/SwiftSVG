@@ -46,16 +46,26 @@ public extension String {
     
     subscript(index: Int) -> Character {
         get {
-            let index = self.startIndex.advancedBy(index)
+            let index = self.characters.index(self.startIndex, offsetBy: index)
             return self[index]
         }
     }
     
     subscript(integerRange: Range<Int>) -> String {
-        let start = self.startIndex.advancedBy(integerRange.startIndex)
-        let end = self.startIndex.advancedBy(integerRange.endIndex)
-        let range = start..<end
-        return self[range]
+        get {
+            let start = self.characters.index(self.startIndex, offsetBy: integerRange.lowerBound)
+            let end = self.characters.index(self.startIndex, offsetBy: integerRange.upperBound)
+            let range = start..<end
+            return self[range]
+        }
+    }
+    
+    subscript (r: CountableClosedRange<Int>) -> String {
+        get {
+            let startIndex =  self.index(self.startIndex, offsetBy: r.lowerBound)
+            let endIndex = self.index(startIndex, offsetBy: r.upperBound - r.lowerBound)
+            return self[startIndex...endIndex]
+        }
     }
 }
 

@@ -41,7 +41,7 @@ import Foundation
 struct Stack<T> {
     var items = [T]()
     
-    mutating func push(itemToPush: T) {
+    mutating func push(_ itemToPush: T) {
         self.items.append(itemToPush)
     }
     

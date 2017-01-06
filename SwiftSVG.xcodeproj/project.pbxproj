@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17D570711E1F429D007CED68 /* NSBezierPath+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */; };
 		396A8E491B3D2036001986AF /* SwiftSVGMacFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 396A8E481B3D2036001986AF /* SwiftSVGMacFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		396A8E661B3D221E001986AF /* SwiftSVGTestsiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E651B3D221E001986AF /* SwiftSVGTestsiOS.swift */; };
 		396A8E671B3D221E001986AF /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B8D88C1B3C3283009DAF60 /* SwiftSVGiOS.framework */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBezierPath+CrossPlatform.swift"; sourceTree = "<group>"; };
 		396A8E441B3D2036001986AF /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		396A8E471B3D2036001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../SwiftSVGMacFramework/Info.plist; sourceTree = "<group>"; };
 		396A8E481B3D2036001986AF /* SwiftSVGMacFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwiftSVGMacFramework.h; path = ../SwiftSVGMacFramework/SwiftSVGMacFramework.h; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				9E245B661AAE380700472F5A /* From Breakfast */,
 				9EA820891AAB6AE100DEE6CA /* SVG */,
 				8AC4DBE91CB37EA700137DC9 /* CrossPlatform.swift */,
+				17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */,
 			);
 			path = SwiftSVG;
 			sourceTree = "<group>";
@@ -297,12 +300,14 @@
 				TargetAttributes = {
 					396A8E431B3D2036001986AF = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0810;
 					};
 					396A8E601B3D221E001986AF = {
 						CreatedOnToolsVersion = 6.3.2;
 					};
 					39B8D88B1B3C3283009DAF60 = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -365,6 +370,7 @@
 				396A8E731B3D238B001986AF /* CAShapeLayer+SVG.swift in Sources */,
 				396A8E741B3D238B001986AF /* String+SVG.swift in Sources */,
 				396A8E751B3D238B001986AF /* SVGParser.swift in Sources */,
+				17D570711E1F429D007CED68 /* NSBezierPath+CrossPlatform.swift in Sources */,
 				396A8E761B3D238B001986AF /* SVGView.swift in Sources */,
 				396A8E771B3D238B001986AF /* UIBezierPath+SVG.swift in Sources */,
 				396A8E781B3D238B001986AF /* UIView+SVG.swift in Sources */,
@@ -434,6 +440,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0.1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -460,6 +467,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0.1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -529,6 +537,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.straussmade.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -553,6 +562,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.straussmade.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
