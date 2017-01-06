@@ -40,7 +40,7 @@ extension UIView {
         self.nonOptionalLayer.addSublayer(shapeLayer)
     }
     
-    public convenience init(SVGURL: NSURL) {
+    public convenience init(SVGURL: URL) {
         self.init()
         let shapeLayer = CAShapeLayer(SVGURL: SVGURL)
         self.nonOptionalLayer.addSublayer(shapeLayer)
