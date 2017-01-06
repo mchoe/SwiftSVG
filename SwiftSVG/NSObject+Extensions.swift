@@ -55,14 +55,14 @@ extension NSObject {
         
         // iterate each objc_property_t struct
         for i in 0..<count {
-            let property = properties[Int(i)];
+            let property = properties?[Int(i)];
             
             // retrieve the property name by calling property_getName function
             let cname = property_getName(property);
             
             // convert the c string into a Swift string
-            let name = String.fromCString(cname);
-            results.append(name!);
+            let name = String(cString: cname!);
+            results.append(name);
         }
         
         // release objc_property_t structs

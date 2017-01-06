@@ -33,21 +33,21 @@
 
 
 @IBDesignable
-public class SVGView : UIView {
+open class SVGView : UIView {
     
     var shapeLayer = CAShapeLayer()
     
-    @IBInspectable var SVGName: String? {
+    @IBInspectable public var SVGName: String? {
         didSet {
             if let thisName = SVGName {
                 
                 #if !TARGET_INTERFACE_BUILDER
-                    let bundle = NSBundle.mainBundle()
+                    let bundle = Bundle.main
                 #else
-                    let bundle = NSBundle(forClass: self.dynamicType)
+                    let bundle = Bundle(for: type(of: self))
                 #endif
                 
-                if let url = bundle.URLForResource(thisName, withExtension: "svg") {
+                if let url = bundle.url(forResource: thisName, withExtension: "svg") {
                     self.shapeLayer = CAShapeLayer(SVGURL: url)
                     if self.shapeLayer.superlayer == nil {
                         self.nonOptionalLayer.addSublayer(self.shapeLayer)

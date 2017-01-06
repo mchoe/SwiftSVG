@@ -37,10 +37,10 @@ extension CAShapeLayer {
     public convenience init(pathString: String) {
         self.init()
         let svgPath = UIBezierPath(pathString: pathString)
-        self.path = svgPath.CGPath
+        self.path = svgPath.cgPath
     }
     
-    public convenience init(SVGURL: NSURL) {
+    public convenience init(SVGURL: URL) {
         self.init()
         _ = SVGParser(SVGURL: SVGURL, containerLayer: self)
     }
