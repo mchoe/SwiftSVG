@@ -71,20 +71,28 @@ open class SVGParser : NSObject, XMLParserDelegate {
     open var containerLayer: CALayer?
     open var shouldParseSinglePathOnly = false
     open fileprivate(set) var paths = [UIBezierPath]()
-    
+	
+	convenience init(parser: XMLParser, containerLayer: CALayer? = nil, shouldParseSinglePathOnly: Bool = false) {
+		self.init()
+		
+		if let layer = containerLayer {
+			self.containerLayer = layer
+		}
+		
+		parser.delegate = self
+		parser.parse()
+	}
+	
+	convenience init(data: Data, containerLayer: CALayer? = nil, shouldParseSinglePathOnly: Bool = false)
+	{
+		self.init(parser: XMLParser(data: data), containerLayer: containerLayer, shouldParseSinglePathOnly: shouldParseSinglePathOnly)
+	}
+	
     convenience init(SVGURL: URL, containerLayer: CALayer? = nil, shouldParseSinglePathOnly: Bool = false) {
-        
-        self.init()
-        
-        if let layer = containerLayer {
-            self.containerLayer = layer
-        }
-        
         if let xmlParser = XMLParser(contentsOf: SVGURL) {
-            xmlParser.delegate = self
-            xmlParser.parse()
+			self.init(parser: xmlParser, containerLayer: containerLayer, shouldParseSinglePathOnly: shouldParseSinglePathOnly)
         } else {
-            assert(false, "Couldn't initialize parser. Check your resource and make sure the supplied URL is correct")
+            fatalError("Couldn't initialize parser. Check your resource and make sure the supplied URL is correct")
         }
     }
     
