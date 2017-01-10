@@ -123,7 +123,7 @@ open class SVGParser : NSObject, XMLParserDelegate {
         if let lastItem = self.elementStack.last {
             if let keyForValue = allKeysForValue(tagMapping,valueToMatch: lastItem.classNameAsString())?.first {
                 if elementName == keyForValue {
-                    self.elementStack.pop()
+                    _ = self.elementStack.pop()
                 }
             }
         }
