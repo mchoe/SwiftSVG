@@ -83,8 +83,7 @@ open class SVGParser : NSObject, XMLParserDelegate {
 		parser.parse()
 	}
 	
-	convenience init(data: Data, containerLayer: CALayer? = nil, shouldParseSinglePathOnly: Bool = false)
-	{
+	convenience init(data: Data, containerLayer: CALayer? = nil, shouldParseSinglePathOnly: Bool = false) {
 		self.init(parser: XMLParser(data: data), containerLayer: containerLayer, shouldParseSinglePathOnly: shouldParseSinglePathOnly)
 	}
 	
