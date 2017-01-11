@@ -45,4 +45,10 @@ extension UIView {
         let shapeLayer = CAShapeLayer(SVGURL: SVGURL)
         self.nonOptionalLayer.addSublayer(shapeLayer)
     }
+	
+	public convenience init(SVGData: Data) {
+		self.init()
+		let shapeLayer = CAShapeLayer(SVGData: SVGData)
+		self.nonOptionalLayer.addSublayer(shapeLayer)
+	}
 }
