@@ -43,7 +43,8 @@ private var tagMapping: [String: String] = [
     
     var path: UIBezierPath = UIBezierPath()
     var shapeLayer: CAShapeLayer = CAShapeLayer()
-    
+    var name: String = ""
+
     var d: String? {
         didSet {
             if let pathStringToParse = d {
@@ -60,6 +61,14 @@ private var tagMapping: [String: String] = [
             }
         }
     }
+    
+    var id: String? {
+        didSet {
+            if let nameString = id {
+                self.name = nameString
+            }
+        }
+    }
 }
 
 @objc(SVGElement) private class SVGElement: NSObject { }
@@ -71,6 +80,7 @@ open class SVGParser : NSObject, XMLParserDelegate {
     open var containerLayer: CALayer?
     open var shouldParseSinglePathOnly = false
     open fileprivate(set) var paths = [UIBezierPath]()
+    open fileprivate(set) var pathsByName: [String:UIBezierPath] = [:]
 	
 	convenience init(parser: XMLParser, containerLayer: CALayer? = nil, shouldParseSinglePathOnly: Bool = false) {
 		self.init()
@@ -115,6 +125,7 @@ open class SVGParser : NSObject, XMLParserDelegate {
                     self.containerLayer!.addSublayer(thisPath.shapeLayer)
                 }
                 self.paths.append(thisPath.path)
+                self.pathsByName[thisPath.name] = thisPath.path
                 
                 if self.shouldParseSinglePathOnly == true {
                     parser.abortParsing()
