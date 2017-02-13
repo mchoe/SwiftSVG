@@ -6,6 +6,7 @@
 //  Copyright © 2017 Strauss LLC. All rights reserved.
 //
 
+#if os(OSX)
 import AppKit
 
 public extension NSBezierPath {
@@ -51,3 +52,4 @@ public extension NSBezierPath {
     }
     
 }
+#endif
