@@ -34,7 +34,8 @@
 
 private var tagMapping: [String: String] = [
     "path": "SVGPath",
-    "svg": "SVGElement"
+    "svg": "SVGElement",
+    "polygon": "SVGPolygon"
 ]
 
 @objc(SVGGroup) private class SVGGroup: NSObject { }
@@ -54,6 +55,26 @@ private var tagMapping: [String: String] = [
     }
     
     var fill: String? {
+        didSet {
+            if let hexFill = fill {
+                self.shapeLayer.fillColor = UIColor(hexString: hexFill).cgColor
+            }
+        }
+    }
+}
+
+@objc(SVGPolygon) open class SVGPolygon: SVGPath {
+    
+    var points: String? {
+        didSet {
+            if let polygonStringToParse = points {
+                self.path = polygonStringToParse.pathFromSVGPolygon()
+                self.shapeLayer.path = self.path.cgPath
+            }
+        }
+    }
+    
+    override var fill: String? {
         didSet {
             if let hexFill = fill {
                 self.shapeLayer.fillColor = UIColor(hexString: hexFill).cgColor
