@@ -1,38 +1,16 @@
 //
-//  String+SVG.swift
+//  SVGPath.swift
 //  SwiftSVG
 //
-//  Copyright (c) 2015 Michael Choe
-//  http://www.straussmade.com/
-//  http://www.twitter.com/_mchoe
-//  http://www.github.com/mchoe
+//  Created by Michael Choe on 3/5/17.
+//  Copyright © 2017 Strauss LLC. All rights reserved.
 //
-//  Permission is hereby granted, free of charge, to any person obtaining a copy
-//  of this software and associated documentation files (the "Software"), to deal
-//  in the Software without restriction, including without limitation the rights
-//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//  copies of the Software, and to permit persons to whom the Software is
-//  furnished to do so, subject to the following conditions:
-//
-//  The above copyright notice and this permission notice shall be included in
-//  all copies or substantial portions of the Software.
-//
-//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-//  THE SOFTWARE.
-
 
 #if os(iOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
 #endif
-
-/*
 
 /////////////////////////////////////////////////////
 //
@@ -411,94 +389,80 @@ private let characterDictionary: [Character: PathCharacter] = [
     ",": SeparatorCharacter(character: ",")
 ]
 
-
-/////////////////////////////////////////////////////
-//
-// MARK: Parse "d" path
-
-
-/////////////////////////////////////////////////////
-//
-// This String extension is provided as a convenience for the
-// parseSVGPath function. You can use either the extension or the
-// global function. I just wanted to provide
-
-
-public extension String {
-    internal func pathFromSVGString() -> UIBezierPath {
-        return parseSVGPath(self)
-    }
-}
-
-func parseSVGPath(_ pathString: String, forPath: UIBezierPath? = nil) -> UIBezierPath {
+struct SVGPath: SVGElement {
     
-    assert(pathString.hasPrefix("M") || pathString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
+    var supportedAttributes = [String : (String) -> ()]()
+    var svgLayer = CALayer()
     
-    let workingString = (pathString.hasSuffix("Z") == false && pathString.hasSuffix("z") == false ? pathString + "z" : pathString)
-    
-    var returnPath = UIBezierPath()
-    
-    if let suppliedPath = forPath {
-        returnPath = suppliedPath
-    }
-    
-    autoreleasepool { () -> () in
+    internal func parseD(pathString: String) {
         
-        var currentPathCommand: PathCommand = PathCommand(character: "M")
-        var currentNumberStack: NumberStack = NumberStack()
-        var previousParameters: PreviousCommand? = nil
+        assert(pathString.hasPrefix("M") || pathString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
         
-        let pushCoordinateAndClear: () -> Void = {
-            if currentNumberStack.isEmpty == false {
-                if let newCoordinate = currentNumberStack.asCGFloat {
-                    if let returnParameters = currentPathCommand.pushCoordinateAndExecuteIfPossible(newCoordinate, previousCommand: previousParameters) {
-                        previousParameters = returnParameters
+        let workingString = (pathString.hasSuffix("Z") == false && pathString.hasSuffix("z") == false ? pathString + "z" : pathString)
+        
+        let returnPath = UIBezierPath()
+        
+        autoreleasepool { () -> () in
+            
+            var currentPathCommand: PathCommand = PathCommand(character: "M")
+            var currentNumberStack: NumberStack = NumberStack()
+            var previousParameters: PreviousCommand? = nil
+            
+            let pushCoordinateAndClear: () -> Void = {
+                if currentNumberStack.isEmpty == false {
+                    if let newCoordinate = currentNumberStack.asCGFloat {
+                        if let returnParameters = currentPathCommand.pushCoordinateAndExecuteIfPossible(newCoordinate, previousCommand: previousParameters) {
+                            previousParameters = returnParameters
+                        }
                     }
+                    currentNumberStack.clear()
                 }
-                currentNumberStack.clear()
             }
-        }
-        
-        for thisCharacter in workingString.characters {
-            if let pathCharacter = characterDictionary[thisCharacter] {
-                
-                if pathCharacter is PathCommand {
+            
+            for thisCharacter in workingString.characters {
+                if let pathCharacter = characterDictionary[thisCharacter] {
                     
-                    pushCoordinateAndClear()
-                    
-                    currentPathCommand = pathCharacter as! PathCommand
-                    currentPathCommand.path = returnPath
-                    
-                    if currentPathCommand.character == "Z" || currentPathCommand.character == "z" {
-                        currentPathCommand.execute(forPath: returnPath, previousCommand: previousParameters)
+                    if pathCharacter is PathCommand {
+                        
+                        pushCoordinateAndClear()
+                        
+                        currentPathCommand = pathCharacter as! PathCommand
+                        currentPathCommand.path = returnPath
+                        
+                        if currentPathCommand.character == "Z" || currentPathCommand.character == "z" {
+                            currentPathCommand.execute(forPath: returnPath, previousCommand: previousParameters)
+                        }
+                        
+                    } else if pathCharacter is SeparatorCharacter {
+                        
+                        pushCoordinateAndClear()
+                        
+                    } else if pathCharacter is SignCharacter {
+                        
+                        pushCoordinateAndClear()
+                        currentNumberStack = NumberStack(startCharacter: thisCharacter)
+                        
+                    } else {
+                        
+                        if currentNumberStack.isEmpty == false {
+                            currentNumberStack.push(thisCharacter)
+                        } else {
+                            currentNumberStack = NumberStack(startCharacter: thisCharacter)
+                        }
+                        
                     }
-                    
-                } else if pathCharacter is SeparatorCharacter {
-                    
-                    pushCoordinateAndClear()
-                    
-                } else if pathCharacter is SignCharacter {
-                    
-                    pushCoordinateAndClear()
-                    currentNumberStack = NumberStack(startCharacter: thisCharacter)
                     
                 } else {
-                    
-                    if currentNumberStack.isEmpty == false {
-                        currentNumberStack.push(thisCharacter)
-                    } else {
-                        currentNumberStack = NumberStack(startCharacter: thisCharacter)
-                    }
-                    
+                    assert(false, "Invalid character \"\(thisCharacter)\" found")
                 }
-                
-            } else {
-                assert(false, "Invalid character \"\(thisCharacter)\" found")
             }
         }
+        let layer = CAShapeLayer()
+        layer.path = returnPath.cgPath
+        self.svgLayer.addSublayer(layer)
     }
-    return returnPath
+    
+    internal func fillHex(attributeString: String) {
+        (self.svgLayer.sublayers![0] as! CAShapeLayer).fillColor = UIColor(hexString: attributeString).cgColor
+    }
 }
- 
- */
-

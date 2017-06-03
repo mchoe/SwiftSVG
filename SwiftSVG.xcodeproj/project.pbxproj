@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170A7B1E1E710FBE008009D4 /* SVGLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170A7B1D1E710FBE008009D4 /* SVGLayer.swift */; };
+		170A7B1F1E710FBE008009D4 /* SVGLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170A7B1D1E710FBE008009D4 /* SVGLayer.swift */; };
+		175093BF1E6C666600EF1853 /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093BE1E6C666600EF1853 /* SVGParser.swift */; };
+		175093C11E6C669F00EF1853 /* SVGParserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C01E6C669F00EF1853 /* SVGParserConfiguration.swift */; };
+		175093C31E6C6C2100EF1853 /* SVGElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C21E6C6C2100EF1853 /* SVGElement.swift */; };
+		175093C61E6C720C00EF1853 /* SVGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C51E6C720C00EF1853 /* SVGPath.swift */; };
+		175093C71E6C720C00EF1853 /* SVGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C51E6C720C00EF1853 /* SVGPath.swift */; };
+		175093C91E6C720F00EF1853 /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093BE1E6C666600EF1853 /* SVGParser.swift */; };
+		175093CA1E6C721000EF1853 /* SVGParserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C01E6C669F00EF1853 /* SVGParserConfiguration.swift */; };
+		175093CC1E6C773600EF1853 /* SVGRootElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093CB1E6C773600EF1853 /* SVGRootElement.swift */; };
+		175093CD1E6C773600EF1853 /* SVGRootElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093CB1E6C773600EF1853 /* SVGRootElement.swift */; };
+		176BC9681EE3626100F7B54C /* SVGElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C21E6C6C2100EF1853 /* SVGElement.swift */; };
+		176BC9691EE3626400F7B54C /* SVGElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C21E6C6C2100EF1853 /* SVGElement.swift */; };
+		176BC96A1EE3626800F7B54C /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093BE1E6C666600EF1853 /* SVGParser.swift */; };
+		176BC96B1EE3626B00F7B54C /* SVGParserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C01E6C669F00EF1853 /* SVGParserConfiguration.swift */; };
+		176BC96C1EE3626E00F7B54C /* SVGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C51E6C720C00EF1853 /* SVGPath.swift */; };
+		176BC96D1EE3627100F7B54C /* SVGRootElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093CB1E6C773600EF1853 /* SVGRootElement.swift */; };
 		17D570711E1F429D007CED68 /* NSBezierPath+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */; };
 		396A8E491B3D2036001986AF /* SwiftSVGMacFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 396A8E481B3D2036001986AF /* SwiftSVGMacFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		396A8E661B3D221E001986AF /* SwiftSVGTestsiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A8E651B3D221E001986AF /* SwiftSVGTestsiOS.swift */; };
@@ -19,7 +36,7 @@
 		396A8E721B3D238B001986AF /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */; };
 		396A8E731B3D238B001986AF /* CAShapeLayer+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDE1AAE470D00472F5A /* CAShapeLayer+SVG.swift */; };
 		396A8E741B3D238B001986AF /* String+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820851AAB649700DEE6CA /* String+SVG.swift */; };
-		396A8E751B3D238B001986AF /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDC1AAE42C100472F5A /* SVGParser.swift */; };
+		396A8E751B3D238B001986AF /* SVGParserOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDC1AAE42C100472F5A /* SVGParserOLD.swift */; };
 		396A8E761B3D238B001986AF /* SVGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB308781AC5BF350007DD82 /* SVGView.swift */; };
 		396A8E771B3D238B001986AF /* UIBezierPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */; };
 		396A8E781B3D238B001986AF /* UIView+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */; };
@@ -32,7 +49,7 @@
 		39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */; };
 		39B8D8AB1B3C32DD009DAF60 /* CAShapeLayer+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDE1AAE470D00472F5A /* CAShapeLayer+SVG.swift */; };
 		39B8D8AC1B3C32DD009DAF60 /* String+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820851AAB649700DEE6CA /* String+SVG.swift */; };
-		39B8D8AD1B3C32DD009DAF60 /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDC1AAE42C100472F5A /* SVGParser.swift */; };
+		39B8D8AD1B3C32DD009DAF60 /* SVGParserOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDC1AAE42C100472F5A /* SVGParserOLD.swift */; };
 		39B8D8AE1B3C32DD009DAF60 /* SVGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB308781AC5BF350007DD82 /* SVGView.swift */; };
 		39B8D8AF1B3C32DD009DAF60 /* UIBezierPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */; };
 		39B8D8B01B3C32DD009DAF60 /* UIView+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */; };
@@ -51,6 +68,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		170A7B1D1E710FBE008009D4 /* SVGLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGLayer.swift; sourceTree = "<group>"; };
+		175093BE1E6C666600EF1853 /* SVGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParser.swift; sourceTree = "<group>"; };
+		175093C01E6C669F00EF1853 /* SVGParserConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParserConfiguration.swift; sourceTree = "<group>"; };
+		175093C21E6C6C2100EF1853 /* SVGElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGElement.swift; sourceTree = "<group>"; };
+		175093C51E6C720C00EF1853 /* SVGPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGPath.swift; sourceTree = "<group>"; };
+		175093CB1E6C773600EF1853 /* SVGRootElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGRootElement.swift; sourceTree = "<group>"; };
 		17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBezierPath+CrossPlatform.swift"; sourceTree = "<group>"; };
 		396A8E441B3D2036001986AF /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		396A8E471B3D2036001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../SwiftSVGMacFramework/Info.plist; sourceTree = "<group>"; };
@@ -68,7 +91,7 @@
 		9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9E245B6B1AAE383200472F5A /* String+ToHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ToHex.swift"; sourceTree = "<group>"; };
 		9E245BDA1AAE3FE000472F5A /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		9E245BDC1AAE42C100472F5A /* SVGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParser.swift; sourceTree = "<group>"; };
+		9E245BDC1AAE42C100472F5A /* SVGParserOLD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParserOLD.swift; sourceTree = "<group>"; };
 		9E245BDE1AAE470D00472F5A /* CAShapeLayer+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+SVG.swift"; sourceTree = "<group>"; };
 		9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SVG.swift"; sourceTree = "<group>"; };
 		9EA820851AAB649700DEE6CA /* String+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SVG.swift"; sourceTree = "<group>"; };
@@ -102,6 +125,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		175093C41E6C711A00EF1853 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				175093C21E6C6C2100EF1853 /* SVGElement.swift */,
+				175093BE1E6C666600EF1853 /* SVGParser.swift */,
+				175093C01E6C669F00EF1853 /* SVGParserConfiguration.swift */,
+				175093C51E6C720C00EF1853 /* SVGPath.swift */,
+				175093CB1E6C773600EF1853 /* SVGRootElement.swift */,
+			);
+			name = Plugin;
+			sourceTree = "<group>";
+		};
 		396A8E451B3D2036001986AF /* SwiftSVGMacFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,9 +237,11 @@
 		9EA820891AAB6AE100DEE6CA /* SVG */ = {
 			isa = PBXGroup;
 			children = (
+				175093C41E6C711A00EF1853 /* Plugin */,
 				9E245BDE1AAE470D00472F5A /* CAShapeLayer+SVG.swift */,
 				9EA820851AAB649700DEE6CA /* String+SVG.swift */,
-				9E245BDC1AAE42C100472F5A /* SVGParser.swift */,
+				9E245BDC1AAE42C100472F5A /* SVGParserOLD.swift */,
+				170A7B1D1E710FBE008009D4 /* SVGLayer.swift */,
 				9EB308781AC5BF350007DD82 /* SVGView.swift */,
 				9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */,
 				9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */,
@@ -366,13 +403,18 @@
 				396A8E6F1B3D238B001986AF /* String+Subscript.swift in Sources */,
 				396A8E701B3D238B001986AF /* String+ToHex.swift in Sources */,
 				8AC4DBEB1CB37EBD00137DC9 /* CrossPlatform.swift in Sources */,
+				176BC96B1EE3626B00F7B54C /* SVGParserConfiguration.swift in Sources */,
 				396A8E711B3D238B001986AF /* Stack.swift in Sources */,
 				396A8E721B3D238B001986AF /* UIColor+Extensions.swift in Sources */,
+				176BC96A1EE3626800F7B54C /* SVGParser.swift in Sources */,
 				396A8E731B3D238B001986AF /* CAShapeLayer+SVG.swift in Sources */,
 				396A8E741B3D238B001986AF /* String+SVG.swift in Sources */,
-				396A8E751B3D238B001986AF /* SVGParser.swift in Sources */,
+				176BC96C1EE3626E00F7B54C /* SVGPath.swift in Sources */,
+				396A8E751B3D238B001986AF /* SVGParserOLD.swift in Sources */,
+				176BC96D1EE3627100F7B54C /* SVGRootElement.swift in Sources */,
 				17D570711E1F429D007CED68 /* NSBezierPath+CrossPlatform.swift in Sources */,
 				396A8E761B3D238B001986AF /* SVGView.swift in Sources */,
+				176BC9681EE3626100F7B54C /* SVGElement.swift in Sources */,
 				396A8E771B3D238B001986AF /* UIBezierPath+SVG.swift in Sources */,
 				396A8E781B3D238B001986AF /* UIView+SVG.swift in Sources */,
 			);
@@ -382,7 +424,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170A7B1F1E710FBE008009D4 /* SVGLayer.swift in Sources */,
+				176BC9691EE3626400F7B54C /* SVGElement.swift in Sources */,
 				396A8E661B3D221E001986AF /* SwiftSVGTestsiOS.swift in Sources */,
+				175093CA1E6C721000EF1853 /* SVGParserConfiguration.swift in Sources */,
+				175093C71E6C720C00EF1853 /* SVGPath.swift in Sources */,
+				175093C91E6C720F00EF1853 /* SVGParser.swift in Sources */,
+				175093CD1E6C773600EF1853 /* SVGRootElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,13 +443,19 @@
 				39B8D8A71B3C32DD009DAF60 /* String+Subscript.swift in Sources */,
 				39B8D8A81B3C32DD009DAF60 /* String+ToHex.swift in Sources */,
 				39B8D8A91B3C32DD009DAF60 /* Stack.swift in Sources */,
+				175093CC1E6C773600EF1853 /* SVGRootElement.swift in Sources */,
+				175093C31E6C6C2100EF1853 /* SVGElement.swift in Sources */,
 				39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */,
 				8AC4DBEA1CB37EA700137DC9 /* CrossPlatform.swift in Sources */,
+				175093C11E6C669F00EF1853 /* SVGParserConfiguration.swift in Sources */,
 				39B8D8AB1B3C32DD009DAF60 /* CAShapeLayer+SVG.swift in Sources */,
+				175093BF1E6C666600EF1853 /* SVGParser.swift in Sources */,
 				39B8D8AC1B3C32DD009DAF60 /* String+SVG.swift in Sources */,
-				39B8D8AD1B3C32DD009DAF60 /* SVGParser.swift in Sources */,
+				39B8D8AD1B3C32DD009DAF60 /* SVGParserOLD.swift in Sources */,
+				170A7B1E1E710FBE008009D4 /* SVGLayer.swift in Sources */,
 				39B8D8AE1B3C32DD009DAF60 /* SVGView.swift in Sources */,
 				39B8D8AF1B3C32DD009DAF60 /* UIBezierPath+SVG.swift in Sources */,
+				175093C61E6C720C00EF1853 /* SVGPath.swift in Sources */,
 				39B8D8B01B3C32DD009DAF60 /* UIView+SVG.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

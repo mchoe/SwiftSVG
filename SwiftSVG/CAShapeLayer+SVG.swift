@@ -47,6 +47,6 @@ extension CAShapeLayer {
 	
 	public convenience init(SVGData: Data) {
 		self.init()
-		_ = SVGParser(data: SVGData, containerLayer: self)
+		//_ = SVGParser(data: SVGData, containerLayer: self)
 	}
 }
