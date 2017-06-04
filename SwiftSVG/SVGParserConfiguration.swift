@@ -60,6 +60,17 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
                 return returnElement
             },
+            "line": {
+                let returnElement = SVGLine()
+                returnElement.supportedAttributes = [
+                    "x1": returnElement.x1,
+                    "x2": returnElement.x2,
+                    "y1": returnElement.y1,
+                    "y2": returnElement.y2,
+                ]
+                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                return returnElement
+            },
             "path": {
                 var returnElement = SVGPath()
                 returnElement.supportedAttributes = [
