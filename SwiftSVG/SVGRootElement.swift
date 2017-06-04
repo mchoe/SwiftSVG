@@ -23,13 +23,13 @@ struct SVGRootElement: SVGContainerElement {
     
     internal func parseWidth(lengthString: String) {
         if let width = Double(lengthString: lengthString) {
-            self.containerLayer.frame = CGRect(x: self.containerLayer.frame.origin.x, y: self.containerLayer.frame.origin.y, width: CGFloat(width), height: self.containerLayer.frame.size.height)
+            self.containerLayer.frame.size.width = CGFloat(width)
         }
     }
     
     internal func parseHeight(lengthString: String) {
         if let height = Double(lengthString: lengthString) {
-            self.containerLayer.frame = CGRect(x: self.containerLayer.frame.origin.x, y: self.containerLayer.frame.origin.y, width: self.containerLayer.frame.size.width, height: CGFloat(height))
+            self.containerLayer.frame.size.height = CGFloat(height)
         }
     }
 }

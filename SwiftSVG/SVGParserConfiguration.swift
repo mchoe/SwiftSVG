@@ -40,8 +40,17 @@ struct SVGParserConfiguration {
         
         let configuration: [String : () -> SVGElement] = [
             "circle": {
-                
-            }
+                let returnElement = SVGCircle()
+                returnElement.supportedAttributes = [
+                    "cx": returnElement.parseRadiusCenterX,
+                    "cy": returnElement.parseRadiusCenterY,
+                    "fill": returnElement.fillHex,
+                    "r": returnElement.parseRadius,
+                    "stroke": returnElement.strokeColor,
+                    "stroke-width": returnElement.strokeWidth
+                ]
+                return returnElement
+            },
             "path": {
                 var returnElement = SVGPath()
                 returnElement.supportedAttributes = [

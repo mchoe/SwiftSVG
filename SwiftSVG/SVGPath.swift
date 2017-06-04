@@ -467,7 +467,5 @@ struct SVGPath: SVGShapeElement {
         self.svgLayer.path = returnPath.cgPath
     }
     
-    internal func fillHex(attributeString: String) {
-        self.svgLayer.fillColor = UIColor(hexString: attributeString).cgColor
-    }
+    
 }

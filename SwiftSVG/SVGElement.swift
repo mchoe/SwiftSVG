@@ -36,6 +36,4 @@ protocol SVGContainerElement: SVGElement {
     var containerLayer: CALayer { get set }
 }
 
-protocol SVGShapeElement: SVGElement {
-    var svgLayer: CAShapeLayer { get set }
-}
+

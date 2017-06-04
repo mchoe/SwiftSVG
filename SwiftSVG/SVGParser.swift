@@ -28,7 +28,7 @@ open class SVGParser: NSObject, XMLParserDelegate {
     open var containerLayer: CALayer?
     open fileprivate(set) var paths = [UIBezierPath]()
     
-    init(parser: XMLParser, configuration: SVGParserConfiguration = SVGParserConfiguration.barebonesConfiguration, containerLayer: CALayer? = nil) {
+    init(parser: XMLParser, configuration: SVGParserConfiguration = SVGParserConfiguration.allFeaturesConfiguration, containerLayer: CALayer? = nil) {
         self.configuration = configuration
         super.init()
         
@@ -68,7 +68,7 @@ open class SVGParser: NSObject, XMLParserDelegate {
         
         newInstance.didProcessElement(in: self.containerLayer)
         
-        
+        print("Processed: \(elementName)")
         
         
         /*
