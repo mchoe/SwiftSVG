@@ -37,6 +37,8 @@
 		176BC9BC1EE4AE2700F7B54C /* Dictionary+Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9BB1EE4AE2700F7B54C /* Dictionary+Merge.swift */; };
 		176BC9BD1EE4AE2700F7B54C /* Dictionary+Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9BB1EE4AE2700F7B54C /* Dictionary+Merge.swift */; };
 		176BC9C11EE4BDA500F7B54C /* UIView+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */; };
+		176BC9C41EE4C04100F7B54C /* SVGEllipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9C31EE4C04100F7B54C /* SVGEllipse.swift */; };
+		176BC9C51EE4C04100F7B54C /* SVGEllipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9C31EE4C04100F7B54C /* SVGEllipse.swift */; };
 		17D570711E1F429D007CED68 /* NSBezierPath+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */; };
 		396A8E491B3D2036001986AF /* SwiftSVGMacFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 396A8E481B3D2036001986AF /* SwiftSVGMacFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		396A8E6D1B3D238B001986AF /* Dictionary+KeyForValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B671AAE383200472F5A /* Dictionary+KeyForValue.swift */; };
@@ -95,6 +97,7 @@
 		176BC9B21EE4946B00F7B54C /* SVGShapeElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGShapeElement.swift; sourceTree = "<group>"; };
 		176BC9B51EE498C700F7B54C /* SVGRectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGRectangle.swift; sourceTree = "<group>"; };
 		176BC9BB1EE4AE2700F7B54C /* Dictionary+Merge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Merge.swift"; sourceTree = "<group>"; };
+		176BC9C31EE4C04100F7B54C /* SVGEllipse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGEllipse.swift; sourceTree = "<group>"; };
 		17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBezierPath+CrossPlatform.swift"; sourceTree = "<group>"; };
 		396A8E441B3D2036001986AF /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		396A8E471B3D2036001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../SwiftSVGMacFramework/Info.plist; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 			children = (
 				176BC9AC1EE48CE800F7B54C /* SVGCircle.swift */,
 				175093C21E6C6C2100EF1853 /* SVGElement.swift */,
+				176BC9C31EE4C04100F7B54C /* SVGEllipse.swift */,
 				175093C51E6C720C00EF1853 /* SVGPath.swift */,
 				176BC9B51EE498C700F7B54C /* SVGRectangle.swift */,
 				175093CB1E6C773600EF1853 /* SVGRootElement.swift */,
@@ -467,6 +471,7 @@
 				396A8E6D1B3D238B001986AF /* Dictionary+KeyForValue.swift in Sources */,
 				396A8E6E1B3D238B001986AF /* NSObject+Extensions.swift in Sources */,
 				176BC9B71EE498C700F7B54C /* SVGRectangle.swift in Sources */,
+				176BC9C51EE4C04100F7B54C /* SVGEllipse.swift in Sources */,
 				396A8E6F1B3D238B001986AF /* String+Subscript.swift in Sources */,
 				396A8E701B3D238B001986AF /* Scalar+FromHex.swift in Sources */,
 				176BC9A51EE484B400F7B54C /* FloatingPoint+ParseLengthString.swift in Sources */,
@@ -504,6 +509,7 @@
 				176BC9BC1EE4AE2700F7B54C /* Dictionary+Merge.swift in Sources */,
 				176BC9B61EE498C700F7B54C /* SVGRectangle.swift in Sources */,
 				176BC9A41EE484B400F7B54C /* FloatingPoint+ParseLengthString.swift in Sources */,
+				176BC9C41EE4C04100F7B54C /* SVGEllipse.swift in Sources */,
 				175093C31E6C6C2100EF1853 /* SVGElement.swift in Sources */,
 				176BC9AD1EE48CE800F7B54C /* SVGCircle.swift in Sources */,
 				39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */,

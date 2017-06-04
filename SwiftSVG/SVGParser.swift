@@ -68,8 +68,6 @@ open class SVGParser: NSObject, XMLParserDelegate {
         
         newInstance.didProcessElement(in: self.containerLayer)
         
-        print("Processed: \(elementName)")
-        
         
         /*
         let className = NSClassFromString(newElement) as! NSObject.Type

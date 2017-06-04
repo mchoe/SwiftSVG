@@ -49,6 +49,17 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
                 return returnElement
             },
+            "ellipse": {
+                let returnElement = SVGEllipse()
+                returnElement.supportedAttributes = [
+                    "cx": returnElement.parseRadiusCenterX,
+                    "cy": returnElement.parseRadiusCenterY,
+                    "rx": returnElement.xRadius,
+                    "ry": returnElement.yRadius,
+                ]
+                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                return returnElement
+            },
             "path": {
                 var returnElement = SVGPath()
                 returnElement.supportedAttributes = [
