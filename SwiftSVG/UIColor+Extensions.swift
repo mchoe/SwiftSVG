@@ -68,9 +68,9 @@ public extension UIColor {
             hexBlue = "\(blueValue)\(blueValue)"
         }
         
-        let red = CGFloat(hexRed.hexToInteger())
-        let green = CGFloat(hexGreen.hexToInteger())
-        let blue = CGFloat(hexBlue.hexToInteger())
+        let red = CGFloat(hexString: hexRed)
+        let green = CGFloat(hexString: hexGreen)
+        let blue = CGFloat(hexString: hexBlue)
         
         self.init(red: CGFloat(red / 255.0), green: CGFloat(green / 255.0), blue: CGFloat(blue / 255.0), alpha: 1.0)
     }

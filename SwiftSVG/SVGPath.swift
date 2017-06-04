@@ -389,10 +389,17 @@ private let characterDictionary: [Character: PathCharacter] = [
     ",": SeparatorCharacter(character: ",")
 ]
 
-struct SVGPath: SVGElement {
+struct SVGPath: SVGShapeElement {
     
     var supportedAttributes = [String : (String) -> ()]()
-    var svgLayer = CALayer()
+    var svgLayer = CAShapeLayer()
+    
+    func didProcessElement(in parentLayer: CALayer?) {
+        guard let parentLayer = parentLayer else {
+            return
+        }
+        parentLayer.addSublayer(self.svgLayer)
+    }
     
     internal func parseD(pathString: String) {
         
@@ -457,12 +464,10 @@ struct SVGPath: SVGElement {
                 }
             }
         }
-        let layer = CAShapeLayer()
-        layer.path = returnPath.cgPath
-        self.svgLayer.addSublayer(layer)
+        self.svgLayer.path = returnPath.cgPath
     }
     
     internal func fillHex(attributeString: String) {
-        (self.svgLayer.sublayers![0] as! CAShapeLayer).fillColor = UIColor(hexString: attributeString).cgColor
+        self.svgLayer.fillColor = UIColor(hexString: attributeString).cgColor
     }
 }

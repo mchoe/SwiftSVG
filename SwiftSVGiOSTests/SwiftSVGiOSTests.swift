@@ -1,15 +1,14 @@
 //
-//  SwiftSVGTestsiOS.swift
-//  SwiftSVGTestsiOS
+//  SwiftSVGiOSTests.swift
+//  SwiftSVGiOSTests
 //
-//  Created by Matthias Schlemm on 26/06/15.
-//  Copyright (c) 2015 Strauss LLC. All rights reserved.
+//  Created by Michael Choe on 6/4/17.
+//  Copyright © 2017 Strauss LLC. All rights reserved.
 //
 
-import Cocoa
 import XCTest
 
-class SwiftSVGTestsiOS: XCTestCase {
+class SwiftSVGiOSTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -23,12 +22,12 @@ class SwiftSVGTestsiOS: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measure() {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

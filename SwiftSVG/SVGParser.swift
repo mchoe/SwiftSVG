@@ -66,7 +66,9 @@ open class SVGParser: NSObject, XMLParserDelegate {
             }
         }
         
-        self.containerLayer?.addSublayer(newInstance.svgLayer)
+        newInstance.didProcessElement(in: self.containerLayer)
+        
+        
         
         
         /*

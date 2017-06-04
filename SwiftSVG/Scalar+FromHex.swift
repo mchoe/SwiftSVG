@@ -1,5 +1,5 @@
 //
-//  String+ToHex.swift
+//  Scalar+FromHex.swift
 //  Breakfast
 //
 //  This file is from a dynamic framework I created called Breakfast. I included the
@@ -16,7 +16,7 @@
 //  Copyright (c) 2015 Michael Choe
 //  http://www.straussmade.com/
 //  http://www.twitter.com/_mchoe
-//  http://www.github.com/mchoe
+//  http://www.github.com/mchoe 
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -36,10 +36,17 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+import CoreGraphics
 
-extension String {
-    func hexToInteger() -> Int {
-        return strtol(self, nil, 16)
+extension Int {
+    init(hexString: String) {
+        self.init(strtol(hexString, nil, 16))
     }
 }
+
+extension CGFloat {
+    init(hexString: String) {
+        self.init(Int(hexString: hexString))
+    }
+}
+

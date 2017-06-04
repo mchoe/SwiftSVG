@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17D5707B1E1F4EB9007CED68 /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707A1E1F4EB9007CED68 /* SwiftSVGiOS.framework */; };
-		17D5707C1E1F4EB9007CED68 /* SwiftSVGiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707A1E1F4EB9007CED68 /* SwiftSVGiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		176BC9811EE36BC700F7B54C /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176BC9801EE36BC700F7B54C /* SwiftSVGiOS.framework */; };
+		176BC9B01EE48D3C00F7B54C /* circles.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9AF1EE48D3C00F7B54C /* circles.svg */; };
 		17D5707F1E1F4EC3007CED68 /* SwiftSVGMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */; };
 		17D570801E1F4EC3007CED68 /* SwiftSVGMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8AC4DBC01CB37DB800137DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */; };
@@ -31,7 +31,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				17D5707C1E1F4EB9007CED68 /* SwiftSVGiOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +49,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		17D5707A1E1F4EB9007CED68 /* SwiftSVGiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		176BC9801EE36BC700F7B54C /* SwiftSVGiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVGiOS.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/SwiftSVG-cttiidwkfbxdynddtanvdrugfivm/Build/Products/Debug-iphonesimulator/SwiftSVGiOS.framework"; sourceTree = "<group>"; };
+		176BC9AF1EE48D3C00F7B54C /* circles.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = circles.svg; sourceTree = "<group>"; };
 		17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC4DBBD1CB37DB800137DC9 /* SwiftSVGExampleiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVGExampleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17D5707B1E1F4EB9007CED68 /* SwiftSVGiOS.framework in Frameworks */,
+				176BC9811EE36BC700F7B54C /* SwiftSVGiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		176BC97F1EE36BC700F7B54C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				176BC9801EE36BC700F7B54C /* SwiftSVGiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8AC4DB9B1CB37D9600137DC9 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +103,7 @@
 				8AC4DBBE1CB37DB800137DC9 /* SwiftSVGExampleiOS */,
 				8AC4DBD41CB37DC600137DC9 /* SwiftSVGExampleMac */,
 				8AC4DBA51CB37D9600137DC9 /* Products */,
+				176BC97F1EE36BC700F7B54C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,7 +119,6 @@
 		8AC4DBBE1CB37DB800137DC9 /* SwiftSVGExampleiOS */ = {
 			isa = PBXGroup;
 			children = (
-				17D5707A1E1F4EB9007CED68 /* SwiftSVGiOS.framework */,
 				8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */,
 				8AC4DBC11CB37DB800137DC9 /* ViewController.swift */,
 				8AC4DBC31CB37DB800137DC9 /* Main.storyboard */,
@@ -137,6 +145,7 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				176BC9AF1EE48D3C00F7B54C /* circles.svg */,
 				8AC4DBE71CB37E2800137DC9 /* hawaiiFlowers.svg */,
 			);
 			name = Resources;
@@ -226,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AC4DBE81CB37E2800137DC9 /* hawaiiFlowers.svg in Resources */,
+				176BC9B01EE48D3C00F7B54C /* circles.svg in Resources */,
 				8AC4DBCA1CB37DB800137DC9 /* LaunchScreen.storyboard in Resources */,
 				8AC4DBC71CB37DB800137DC9 /* Assets.xcassets in Resources */,
 				8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */,
