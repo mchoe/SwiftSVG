@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eva-b1-UxK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,27 +21,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNH-7z-0P5" customClass="SVGView" customModule="SwiftSVGiOS">
-                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="Ek9-MG-xzd"/>
-                                    <constraint firstAttribute="height" constant="250" id="Ywl-af-GY1"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="SVGName" value="circles"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b9E-rq-EXh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllFilesCell" textLabel="CTZ-xS-hGz" rowHeight="84" style="IBUITableViewCellStyleDefault" id="DdP-r4-qLz">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DdP-r4-qLz" id="lo2-IE-KCb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CTZ-xS-hGz">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="83.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3O2-vV-U8I"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5uv-oc-n5q"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WNH-7z-0P5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DM5-Yq-BSc"/>
-                            <constraint firstItem="WNH-7z-0P5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qyS-GP-wTI"/>
+                            <constraint firstItem="b9E-rq-EXh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="G89-MG-BDw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b9E-rq-EXh" secondAttribute="bottom" id="stb-8c-chW"/>
+                            <constraint firstItem="b9E-rq-EXh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ucf-dY-AkO"/>
+                            <constraint firstAttribute="trailing" secondItem="b9E-rq-EXh" secondAttribute="trailing" id="yvg-PN-VUv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dct-vz-EfL"/>
+                    <connections>
+                        <segue destination="nw3-Vo-jTo" kind="show" identifier="listToDetailSegue" id="1bK-g7-kH5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+        </scene>
+        <!--ViewSVG View Controller-->
+        <scene sceneID="2LU-Mh-8bs">
+            <objects>
+                <viewController id="nw3-Vo-jTo" customClass="ViewSVGViewController" customModule="SwiftSVGExampleiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Roz-LR-5Tj"/>
+                        <viewControllerLayoutGuide type="bottom" id="VPT-nd-Og5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x3T-Iq-IZh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0W8-7F-UVX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VPT-nd-Og5" firstAttribute="top" secondItem="0W8-7F-UVX" secondAttribute="bottom" id="KHT-0D-vwr"/>
+                            <constraint firstItem="0W8-7F-UVX" firstAttribute="top" secondItem="Roz-LR-5Tj" secondAttribute="bottom" id="WuS-yI-iUc"/>
+                            <constraint firstAttribute="trailing" secondItem="0W8-7F-UVX" secondAttribute="trailing" id="qog-Za-p3u"/>
+                            <constraint firstItem="0W8-7F-UVX" firstAttribute="leading" secondItem="x3T-Iq-IZh" secondAttribute="leading" id="yWH-JH-uBc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="canvasView" destination="0W8-7F-UVX" id="ZyH-6a-HbQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8vo-vA-Wyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1829.5999999999999" y="37.331334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rkb-qP-sQB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eva-b1-UxK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1c3-td-zn6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FLe-w2-jLD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X3t-UR-zId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>

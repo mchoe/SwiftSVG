@@ -36,7 +36,7 @@ struct SVGParserConfiguration {
         return SVGParserConfiguration(tags: configuration)
     }
     
-    public static var allFeaturesConfiguration: SVGParserConfiguration {
+    public static var allFeaturesConfiguration: SVGParserConfiguration = {
         
         let configuration: [String : () -> SVGElement] = [
             "circle": {
@@ -44,19 +44,30 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes = [
                     "cx": returnElement.parseRadiusCenterX,
                     "cy": returnElement.parseRadiusCenterY,
-                    "fill": returnElement.fillHex,
                     "r": returnElement.parseRadius,
-                    "stroke": returnElement.strokeColor,
-                    "stroke-width": returnElement.strokeWidth
                 ]
+                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
                 return returnElement
             },
             "path": {
                 var returnElement = SVGPath()
                 returnElement.supportedAttributes = [
                     "d": returnElement.parseD,
-                    "fill": returnElement.fillHex
                 ]
+                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                return returnElement
+            },
+            "rect": {
+                let returnElement = SVGRectangle()
+                returnElement.supportedAttributes = [
+                    "height": returnElement.rectangleHeight,
+                    "rx": returnElement.xCornerRadius,
+                    "ry": returnElement.yCornerRadius,
+                    "width": returnElement.rectangleWidth,
+                    "x": returnElement.parseX,
+                    "y": returnElement.parseY,
+                ]
+                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
                 return returnElement
             },
             "svg": {
@@ -70,6 +81,7 @@ struct SVGParserConfiguration {
             
         ]
         return SVGParserConfiguration(tags: configuration)
-    }
+    }()
+    
 }
 

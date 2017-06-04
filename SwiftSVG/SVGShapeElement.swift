@@ -16,14 +16,31 @@ protocol SVGShapeElement: SVGElement {
     var svgLayer: CAShapeLayer { get set }
 }
 
+enum LineJoinType {
+    case miter, round, bevel
+}
+
 extension SVGShapeElement {
     
-    internal func fillHex(attributeString: String) {
-        self.svgLayer.fillColor = UIColor(hexString: attributeString).cgColor
+    var fillAndStrokeAttributes: [String : (String) -> ()] {
+        return [
+            "fill": self.fillHex,
+            "stroke": self.strokeColor,
+            "stroke-linejoin": self.strokeLineJoin,
+            "stroke-width": self.strokeWidth
+        ]
+    }
+    
+    internal func fillHex(hexString: String) {
+        self.svgLayer.fillColor = UIColor(hexString: hexString).cgColor
     }
     
     internal func strokeColor(strokeColor: String) {
         self.svgLayer.strokeColor = UIColor(hexString: strokeColor).cgColor
+    }
+    
+    internal func strokeLineJoin(lineJoin: String) {
+        assert(false, "Need Implementation")
     }
     
     internal func strokeWidth(strokeWidth: String) {
@@ -34,3 +51,4 @@ extension SVGShapeElement {
     }
     
 }
+
