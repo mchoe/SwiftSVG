@@ -1,5 +1,5 @@
 //
-//  SVGPolyline.swift
+//  SVGPolygon.swift
 //  SwiftSVG
 //
 //  Created by Michael Choe on 6/5/17.
@@ -12,14 +12,13 @@
     import AppKit
 #endif
 
-struct SVGPolyline: SVGShapeElement {
+struct SVGPolygon: SVGShapeElement {
     
     var svgLayer = CAShapeLayer()
     var supportedAttributes: [String : (String) -> ()] = [:]
     
     internal func points(points: String) {
         let polylinePath = UIBezierPath()
-        
         for (index, thisPoint) in CoordinateSequence(coordinateString: points).enumerated() {
             if index == 0 {
                 polylinePath.move(to: thisPoint)
@@ -27,6 +26,7 @@ struct SVGPolyline: SVGShapeElement {
                 polylinePath.addLine(to: thisPoint)
             }
         }
+        polylinePath.close()
         self.svgLayer.path = polylinePath.cgPath
     }
     

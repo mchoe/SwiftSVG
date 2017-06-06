@@ -66,35 +66,18 @@ open class SVGParser: NSObject, XMLParserDelegate {
             }
         }
         
-        if let containerInstance = newInstance as? SVGContainerElement {
-            self.containerStack.push(containerInstance)
+        if let shape = newInstance as? SVGShapeElement {
+            self.containerLayer?.addSublayer(shape.svgLayer)
         }
         
-        newInstance.didProcessElement(in: self.containerStack.last)
+        //if let containerInstance = newInstance as? SVGContainerElement {
+            
+        //}
+        
+        //self.containerStack.push(newInstance)
+        //newInstance.didProcessElement(in: self.containerStack.last)
         
         
-        
-        /*
-        let className = NSClassFromString(newElement) as! NSObject.Type
-        let newInstance = className.init()
-        
-        let allPropertyNames = newInstance.propertyNames()
-        for thisKeyName in allPropertyNames {
-            if let attributeValue: AnyObject = attributeDict[thisKeyName] as AnyObject? {
-                newInstance.setValue(attributeValue, forKey: thisKeyName)
-            }
-        }
-        
-        if newInstance is SVGPathOLD {
-            let thisPath = newInstance as! SVGPathOLD
-            if self.containerLayer != nil {
-                self.containerLayer!.addSublayer(thisPath.shapeLayer)
-            }
-            self.paths.append(thisPath.path)
-        }
-        
-        self.elementStack.push(newInstance)
-        */
     }
     
     
@@ -104,21 +87,16 @@ open class SVGParser: NSObject, XMLParserDelegate {
             return
         }
         
-        print("Last Item: \(lastItem)")
-        
         if elementName == String(describing: type(of: lastItem)) {
+            print("Last Item: \(lastItem)")
             _ = self.containerStack.pop()
+            self.containerLayer?.addSublayer(lastItem.containerLayer)
         }
+    }
+    
+    public func parserDidEndDocument(_ parser: XMLParser) {
+        //print("Sublayers: \(self.containerLayer?.sublayers)")
         
-        /*
-        if let lastItem = self.elementStack.last {
-            if let keyForValue = allKeysForValue(tagMapping,valueToMatch: lastItem.classNameAsString())?.first {
-                if elementName == keyForValue {
-                    _ = self.elementStack.pop()
-                }
-            }
-        }
-        */
     }
     
     

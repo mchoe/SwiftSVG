@@ -83,6 +83,22 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
                 return returnElement
             },
+            "polygon": {
+                var returnElement = SVGPolygon()
+                returnElement.supportedAttributes = [
+                    "points": returnElement.points
+                ]
+                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                return returnElement
+            },
+            "polyline": {
+                var returnElement = SVGPolyline()
+                returnElement.supportedAttributes = [
+                    "points": returnElement.points
+                ]
+                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                return returnElement
+            },
             "rect": {
                 let returnElement = SVGRectangle()
                 returnElement.supportedAttributes = [
