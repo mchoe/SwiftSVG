@@ -42,9 +42,9 @@ struct SVGParserConfiguration {
             "circle": {
                 let returnElement = SVGCircle()
                 returnElement.supportedAttributes = [
-                    "cx": returnElement.parseRadiusCenterX,
-                    "cy": returnElement.parseRadiusCenterY,
-                    "r": returnElement.parseRadius,
+                    "cx": returnElement.xCenter,
+                    "cy": returnElement.yCenter,
+                    "r": returnElement.radius,
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
                 return returnElement
@@ -52,12 +52,16 @@ struct SVGParserConfiguration {
             "ellipse": {
                 let returnElement = SVGEllipse()
                 returnElement.supportedAttributes = [
-                    "cx": returnElement.parseRadiusCenterX,
-                    "cy": returnElement.parseRadiusCenterY,
+                    "cx": returnElement.xCenter,
+                    "cy": returnElement.yCenter,
                     "rx": returnElement.xRadius,
                     "ry": returnElement.yRadius,
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                return returnElement
+            },
+            "g": {
+                let returnElement = SVGGroup()
                 return returnElement
             },
             "line": {

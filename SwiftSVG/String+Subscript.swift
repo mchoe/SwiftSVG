@@ -42,6 +42,7 @@ import UIKit
 #elseif os(OSX)
 import AppKit
 #endif
+
 public extension String {
     
     subscript(index: Int) -> Character {

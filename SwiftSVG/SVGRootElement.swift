@@ -17,10 +17,6 @@ struct SVGRootElement: SVGContainerElement {
     var containerLayer = CALayer()
     var supportedAttributes = [String : (String) -> ()]()
     
-    func didProcessElement(in parentLayer: CALayer?) {
-        print("Did process SVG Element: \(self.containerLayer.frame)")
-    }
-    
     internal func parseWidth(lengthString: String) {
         if let width = Double(lengthString: lengthString) {
             self.containerLayer.frame.size.width = CGFloat(width)
@@ -31,6 +27,10 @@ struct SVGRootElement: SVGContainerElement {
         if let height = Double(lengthString: lengthString) {
             self.containerLayer.frame.size.height = CGFloat(height)
         }
+    }
+    
+    func didProcessElement(in container: SVGContainerElement?) {
+        print("Did process SVG Element: \(self.containerLayer.frame)")
     }
 }
 

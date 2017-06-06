@@ -29,7 +29,7 @@
 protocol SVGElement {
     var supportedAttributes: [String : (String) -> ()] { get set }
     
-    func didProcessElement(in parentLayer: CALayer?)
+    func didProcessElement(in container: SVGContainerElement?)
 }
 
 protocol SVGContainerElement: SVGElement {

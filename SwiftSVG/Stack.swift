@@ -59,7 +59,7 @@ extension Stack {
     
     var isEmpty: Bool {
         get {
-            if self.items.count > 0 {
+            if self.items.count == 0 {
                 return true
             }
             return false

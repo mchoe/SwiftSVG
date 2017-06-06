@@ -22,7 +22,7 @@ extension URL: SVGParsable { }
 
 open class SVGParser: NSObject, XMLParserDelegate {
     
-    //fileprivate var elementStack = Stack<SVGElement>()
+    fileprivate var containerStack = Stack<SVGContainerElement>()
     
     private let configuration: SVGParserConfiguration
     open var containerLayer: CALayer?
@@ -66,7 +66,12 @@ open class SVGParser: NSObject, XMLParserDelegate {
             }
         }
         
-        newInstance.didProcessElement(in: self.containerLayer)
+        if let containerInstance = newInstance as? SVGContainerElement {
+            self.containerStack.push(containerInstance)
+        }
+        
+        newInstance.didProcessElement(in: self.containerStack.last)
+        
         
         
         /*
@@ -92,15 +97,18 @@ open class SVGParser: NSObject, XMLParserDelegate {
         */
     }
     
-    /*
+    
     open func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
-        guard let lastItem = self.elementStack.last else {
+        guard let lastItem = self.containerStack.last else {
             return
         }
         
         print("Last Item: \(lastItem)")
         
+        if elementName == String(describing: type(of: lastItem)) {
+            _ = self.containerStack.pop()
+        }
         
         /*
         if let lastItem = self.elementStack.last {
@@ -112,7 +120,7 @@ open class SVGParser: NSObject, XMLParserDelegate {
         }
         */
     }
-    */
+    
     
 }
 

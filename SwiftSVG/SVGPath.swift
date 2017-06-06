@@ -394,13 +394,6 @@ struct SVGPath: SVGShapeElement {
     var supportedAttributes = [String : (String) -> ()]()
     var svgLayer = CAShapeLayer()
     
-    func didProcessElement(in parentLayer: CALayer?) {
-        guard let parentLayer = parentLayer else {
-            return
-        }
-        parentLayer.addSublayer(self.svgLayer)
-    }
-    
     internal func parseD(pathString: String) {
         
         assert(pathString.hasPrefix("M") || pathString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
@@ -465,6 +458,13 @@ struct SVGPath: SVGShapeElement {
             }
         }
         self.svgLayer.path = returnPath.cgPath
+    }
+    
+    func didProcessElement(in container: SVGContainerElement?) {
+        guard let container = container else {
+            return
+        }
+        container.containerLayer.addSublayer(self.svgLayer)
     }
     
     

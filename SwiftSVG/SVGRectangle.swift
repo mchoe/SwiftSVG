@@ -62,12 +62,12 @@ class SVGRectangle: SVGShapeElement {
         self.yCornerRadius = CGFloat(yCornerRadius)
     }
     
-    func didProcessElement(in parentLayer: CALayer?) {
-        guard let parentLayer = parentLayer else {
+    func didProcessElement(in container: SVGContainerElement?) {
+        guard let container = container else {
             return
         }
         let rectanglePath = UIBezierPath(roundedRect: self.rectangleRect, byRoundingCorners: UIRectCorner.allCorners, cornerRadii: CGSize(width: self.xCornerRadius, height: self.yCornerRadius))
         self.svgLayer.path = rectanglePath.cgPath
-        parentLayer.addSublayer(self.svgLayer)
+        container.containerLayer.addSublayer(self.svgLayer)
     }
 }

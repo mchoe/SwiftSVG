@@ -17,6 +17,8 @@
 		176BC9C81EE4C1AB00F7B54C /* ellipses.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9C61EE4C1AB00F7B54C /* ellipses.svg */; };
 		176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9CC1EE4C44E00F7B54C /* lines.svg */; };
 		176BC9CE1EE4C44E00F7B54C /* lines.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9CC1EE4C44E00F7B54C /* lines.svg */; };
+		176BC9D71EE5162400F7B54C /* gump-bench.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9D61EE5162400F7B54C /* gump-bench.svg */; };
+		176BC9D81EE5162400F7B54C /* gump-bench.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9D61EE5162400F7B54C /* gump-bench.svg */; };
 		17D5707F1E1F4EC3007CED68 /* SwiftSVGMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */; };
 		17D570801E1F4EC3007CED68 /* SwiftSVGMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8AC4DBC01CB37DB800137DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */; };
@@ -63,6 +65,7 @@
 		176BC9BE1EE4BC6400F7B54C /* ViewSVGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSVGViewController.swift; sourceTree = "<group>"; };
 		176BC9C61EE4C1AB00F7B54C /* ellipses.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ellipses.svg; sourceTree = "<group>"; };
 		176BC9CC1EE4C44E00F7B54C /* lines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lines.svg; sourceTree = "<group>"; };
+		176BC9D61EE5162400F7B54C /* gump-bench.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gump-bench.svg"; sourceTree = "<group>"; };
 		17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC4DBBD1CB37DB800137DC9 /* SwiftSVGExampleiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVGExampleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 			children = (
 				176BC9AF1EE48D3C00F7B54C /* circles.svg */,
 				176BC9C61EE4C1AB00F7B54C /* ellipses.svg */,
+				176BC9D61EE5162400F7B54C /* gump-bench.svg */,
 				8AC4DBE71CB37E2800137DC9 /* hawaiiFlowers.svg */,
 				176BC9CC1EE4C44E00F7B54C /* lines.svg */,
 				176BC9B81EE49C7200F7B54C /* rectangles.svg */,
@@ -257,6 +261,7 @@
 				176BC9C71EE4C1AB00F7B54C /* ellipses.svg in Resources */,
 				8AC4DBCA1CB37DB800137DC9 /* LaunchScreen.storyboard in Resources */,
 				8AC4DBC71CB37DB800137DC9 /* Assets.xcassets in Resources */,
+				176BC9D71EE5162400F7B54C /* gump-bench.svg in Resources */,
 				8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +276,7 @@
 				8AC4DBDA1CB37DC600137DC9 /* Assets.xcassets in Resources */,
 				8AC4DBDD1CB37DC600137DC9 /* Main.storyboard in Resources */,
 				8AC4DBEC1CB37F7700137DC9 /* hawaiiFlowers.svg in Resources */,
+				176BC9D81EE5162400F7B54C /* gump-bench.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

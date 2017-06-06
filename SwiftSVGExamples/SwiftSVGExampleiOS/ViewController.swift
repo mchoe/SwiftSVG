@@ -28,7 +28,6 @@ class ViewController: UIViewController {
                     }
                     return false
                 })
-                print("All Resources: \(allResources)")
             } catch {
                 print("Error getting resources")
             }

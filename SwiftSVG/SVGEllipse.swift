@@ -34,28 +34,28 @@ class SVGEllipse: SVGShapeElement {
         self.yRadius = CGFloat(r)
     }
     
-    internal func parseRadiusCenterX(x: String) {
+    internal func xCenter(x: String) {
         guard let x = Double(lengthString: x) else {
             return
         }
         self.ellipseCenter.x = CGFloat(x)
     }
     
-    internal func parseRadiusCenterY(y: String) {
+    internal func yCenter(y: String) {
         guard let y = Double(lengthString: y) else {
             return
         }
         self.ellipseCenter.y = CGFloat(y)
     }
     
-    func didProcessElement(in parentLayer: CALayer?) {
-        guard let parentLayer = parentLayer else {
+    func didProcessElement(in container: SVGContainerElement?) {
+        guard let container = container else {
             return
         }
         let ellipseRect = CGRect(x: self.ellipseCenter.x - self.xRadius, y: self.ellipseCenter.y - self.yRadius, width: 2 * self.xRadius, height: 2 * yRadius)
         let circlePath = UIBezierPath(ovalIn: ellipseRect)
         self.svgLayer.path = circlePath.cgPath
-        parentLayer.addSublayer(self.svgLayer)
+        container.containerLayer.addSublayer(self.svgLayer)
     }
     
 }

@@ -48,15 +48,15 @@ class SVGLine: SVGShapeElement {
         self.end.y = CGFloat(y2)
     }
     
-    func didProcessElement(in parentLayer: CALayer?) {
-        guard let parentLayer = parentLayer else {
+    func didProcessElement(in container: SVGContainerElement?) {
+        guard let container = container else {
             return
         }
         let linePath = UIBezierPath()
         linePath.move(to: self.start)
         linePath.addLine(to: self.end)
         self.svgLayer.path = linePath.cgPath
-        parentLayer.addSublayer(self.svgLayer)
+        container.containerLayer.addSublayer(self.svgLayer)
     }
     
 }

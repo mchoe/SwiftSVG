@@ -26,17 +26,16 @@ extension SVGShapeElement {
         return [
             "fill": self.fillHex,
             "stroke": self.strokeColor,
-            "stroke-linejoin": self.strokeLineJoin,
             "stroke-width": self.strokeWidth
         ]
     }
     
-    internal func fillHex(hexString: String) {
-        self.svgLayer.fillColor = UIColor(hexString: hexString).cgColor
+    internal func fillHex(fillColor: String) {
+        self.svgLayer.fillColor = UIColor(svgString: fillColor).cgColor
     }
     
     internal func strokeColor(strokeColor: String) {
-        self.svgLayer.strokeColor = UIColor(hexString: strokeColor).cgColor
+        self.svgLayer.strokeColor = UIColor(svgString: strokeColor).cgColor
     }
     
     internal func strokeLineJoin(lineJoin: String) {
