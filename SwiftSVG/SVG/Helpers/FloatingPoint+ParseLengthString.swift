@@ -10,7 +10,7 @@ import Foundation
 
 // TODO
 // NOTE: The better protocol here would be BinaryFloatingPoint, but for some
-// reason, the compiler is unable to find the overload when trying to use it
+// reason, the compiler is unable to find the overload when trying to use it,
 // so I have to extend FloatingPoint instead and then typecast it at run time
 //
 // - Michael Choe 06.04.17

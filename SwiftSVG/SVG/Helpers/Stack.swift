@@ -36,21 +36,36 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+import QuartzCore
 
-struct Stack<T> {
+protocol StackType {
+    associatedtype StackItem
+    var items: [StackItem] { get set }
+    init()
+    mutating func pop() -> StackItem
+    mutating func push(_ itemToPush: StackItem)
+}
+
+struct Stack<T>: StackType {
     var items = [T]()
     
-    mutating func push(_ itemToPush: T) {
-        self.items.append(itemToPush)
+    init() { }
+    
+    mutating func pop() -> StackItem {
+        return self.items.removeLast()
     }
     
-    mutating func pop() -> T {
-        return self.items.removeLast()
+    mutating func push(_ itemToPush: StackItem) {
+        self.items.append(itemToPush)
     }
 }
 
-extension Stack {
+extension StackType {
+    
+    mutating func clear() {
+        self.items.removeAll()
+    }
+    
     var count: Int {
         get {
             return self.items.count
@@ -66,7 +81,7 @@ extension Stack {
         }
     }
     
-    var last: T? {
+    var last: StackItem? {
         get {
             if self.isEmpty == false {
                 return self.items.last
@@ -74,4 +89,24 @@ extension Stack {
             return nil
         }
     }
+    
 }
+
+extension StackType where StackItem == Character {
+    
+    init(startCharacter: Character) {
+        self.init()
+        self.push(startCharacter)
+    }
+    
+    var asCGFloat: CGFloat? {
+        get {
+            if self.items.count > 0 {
+                return CGFloat(String(self.items))
+            }
+            return nil
+        }
+    }
+}
+
+

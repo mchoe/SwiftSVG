@@ -14,45 +14,13 @@
 
 /////////////////////////////////////////////////////
 //
-// MARK: Type Definitions
+// MARK: - Type Definitions
 
 private enum PathType {
     case absolute, relative
 }
 
-private struct NumberStack {
-    var characterStack: String = ""
-    var asCGFloat: CGFloat? {
-        get {
-            if self.characterStack.characters.count > 0 {
-                return CGFloat(strtod(self.characterStack, nil))
-            }
-            return nil
-        }
-    }
-    var isEmpty: Bool {
-        get {
-            if self.characterStack.characters.count > 0 {
-                return false
-            }
-            return true
-        }
-    }
-    
-    init() { }
-    
-    init(startCharacter: Character) {
-        self.characterStack = String(startCharacter)
-    }
-    
-    mutating func push(_ character: Character) {
-        self.characterStack += String(character)
-    }
-    
-    mutating func clear() {
-        self.characterStack = String()
-    }
-}
+
 
 private struct PreviousCommand {
     var commandLetter: String?
@@ -61,7 +29,7 @@ private struct PreviousCommand {
 
 /////////////////////////////////////////////////////
 //
-// MARK: Protocols
+// MARK: - Protocols
 
 private protocol Commandable {
     var numberOfRequiredParameters: Int { get }
@@ -70,7 +38,7 @@ private protocol Commandable {
 
 /////////////////////////////////////////////////////
 //
-// MARK: Base Classes
+// MARK: - Base Classes
 
 private class PathCharacter {
     var character: Character?
@@ -151,7 +119,7 @@ private class PathCommand : PathCharacter, Commandable {
 
 /////////////////////////////////////////////////////
 //
-// MARK: Command Implementations
+// MARK: - Command Implementations
 
 private class MoveTo : PathCommand {
     
@@ -352,7 +320,7 @@ private class SmoothQuadraticCurveTo : PathCommand {
 
 /////////////////////////////////////////////////////
 //
-// MARK: Character Dictionary
+// MARK: - Character Dictionary
 
 private let characterDictionary: [Character: PathCharacter] = [
     "M": MoveTo(character: "M", pathType: PathType.absolute),
@@ -405,7 +373,7 @@ struct SVGPath: SVGShapeElement {
         autoreleasepool { () -> () in
             
             var currentPathCommand: PathCommand = PathCommand(character: "M")
-            var currentNumberStack: NumberStack = NumberStack()
+            var currentNumberStack = Stack<Character>()
             var previousParameters: PreviousCommand? = nil
             
             let pushCoordinateAndClear: () -> Void = {
@@ -440,14 +408,14 @@ struct SVGPath: SVGShapeElement {
                     } else if pathCharacter is SignCharacter {
                         
                         pushCoordinateAndClear()
-                        currentNumberStack = NumberStack(startCharacter: thisCharacter)
+                        currentNumberStack = Stack(startCharacter: thisCharacter)
                         
                     } else {
                         
                         if currentNumberStack.isEmpty == false {
                             currentNumberStack.push(thisCharacter)
                         } else {
-                            currentNumberStack = NumberStack(startCharacter: thisCharacter)
+                            currentNumberStack = Stack(startCharacter: thisCharacter)
                         }
                         
                     }
