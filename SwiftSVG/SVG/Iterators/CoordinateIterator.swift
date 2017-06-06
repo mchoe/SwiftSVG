@@ -12,7 +12,7 @@ import Foundation
 struct CoordinateIterator : IteratorProtocol {
     typealias Element = CGPoint
     var coordinateString: String
-    var separator: Character = " "
+    let separator: Character = " "
     var stringIndex: Int = 0
     
     init(coordinateString: String) {

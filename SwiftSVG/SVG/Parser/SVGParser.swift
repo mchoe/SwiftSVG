@@ -22,7 +22,7 @@ extension URL: SVGParsable { }
 
 open class SVGParser: NSObject, XMLParserDelegate {
     
-    fileprivate var containerStack = Stack<SVGContainerElement>()
+    fileprivate var elementStack = Stack<SVGElement>()
     
     private let configuration: SVGParserConfiguration
     open var containerLayer: CALayer?
@@ -58,45 +58,38 @@ open class SVGParser: NSObject, XMLParserDelegate {
             return
         }
         
-        let newInstance = elementType()
+        let svgElement = elementType()
         
-        for (attributeName, attributeClosure) in newInstance.supportedAttributes {
+        for (attributeName, attributeClosure) in svgElement.supportedAttributes {
             if let attributeValue = attributeDict[attributeName] {
                 attributeClosure(attributeValue)
             }
         }
         
-        if let shape = newInstance as? SVGShapeElement {
-            self.containerLayer?.addSublayer(shape.svgLayer)
-        }
-        
-        //if let containerInstance = newInstance as? SVGContainerElement {
-            
-        //}
-        
-        //self.containerStack.push(newInstance)
-        //newInstance.didProcessElement(in: self.containerStack.last)
-        
-        
+        self.elementStack.push(svgElement)
     }
     
     
     open func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
-        guard let lastItem = self.containerStack.last else {
+        guard let lastItem = self.elementStack.last else {
             return
         }
         
-        if elementName == String(describing: type(of: lastItem)) {
-            print("Last Item: \(lastItem)")
-            _ = self.containerStack.pop()
-            self.containerLayer?.addSublayer(lastItem.containerLayer)
+        if let shapeElement = lastItem as? SVGShapeElement {
+            
+            _ = self.elementStack.pop()
+            guard let containerElement = self.elementStack.last as? SVGContainerElement else {
+                return
+            }
+            shapeElement.didProcessElement(in: containerElement)
+            
+        } else if let containerElement = lastItem as? SVGContainerElement {
+            
+            self.containerLayer?.addSublayer(containerElement.containerLayer)
+            _ = self.elementStack.pop()
+            
         }
-    }
-    
-    public func parserDidEndDocument(_ parser: XMLParser) {
-        //print("Sublayers: \(self.containerLayer?.sublayers)")
-        
     }
     
     
