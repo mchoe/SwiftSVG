@@ -31,11 +31,17 @@ extension SVGShapeElement {
     }
     
     internal func fillHex(fillColor: String) {
-        self.svgLayer.fillColor = UIColor(svgString: fillColor).cgColor
+        guard let fillColor = UIColor(svgString: fillColor) else {
+            return
+        }
+        self.svgLayer.fillColor = fillColor.cgColor
     }
     
     internal func strokeColor(strokeColor: String) {
-        self.svgLayer.strokeColor = UIColor(svgString: strokeColor).cgColor
+        guard let strokeColor = UIColor(svgString: strokeColor) else {
+            return
+        }
+        self.svgLayer.strokeColor = strokeColor.cgColor
     }
     
     internal func strokeLineJoin(lineJoin: String) {

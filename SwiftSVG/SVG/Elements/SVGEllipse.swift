@@ -52,7 +52,7 @@ class SVGEllipse: SVGShapeElement {
         guard let container = container else {
             return
         }
-        let ellipseRect = CGRect(x: self.ellipseCenter.x - self.xRadius, y: self.ellipseCenter.y - self.yRadius, width: 2 * self.xRadius, height: 2 * yRadius)
+        let ellipseRect = CGRect(x: self.ellipseCenter.x - self.xRadius, y: self.ellipseCenter.y - self.yRadius, width: 2 * self.xRadius, height: 2 * self.yRadius)
         let circlePath = UIBezierPath(ovalIn: ellipseRect)
         self.svgLayer.path = circlePath.cgPath
         container.containerLayer.addSublayer(self.svgLayer)

@@ -9,7 +9,7 @@
 import CoreGraphics
 import Foundation
 
-struct CoordinateIterator : IteratorProtocol {
+struct CoordinateLexer: IteratorProtocol, Sequence {
     typealias Element = CGPoint
     var coordinateString: String
     let separator: Character = " "
@@ -20,6 +20,10 @@ struct CoordinateIterator : IteratorProtocol {
         if self.coordinateString[self.stringIndex] == " " || self.coordinateString[self.coordinateString.characters.count - 1] == " " {
             self.coordinateString = self.coordinateString.trimWhitespace()
         }
+    }
+    
+    func makeIterator() -> CoordinateLexer {
+        return CoordinateLexer(coordinateString: self.coordinateString)
     }
     
     mutating func next() -> Element? {
@@ -64,10 +68,5 @@ struct CoordinateIterator : IteratorProtocol {
     }
 }
 
-struct CoordinateSequence: Sequence {
-    var coordinateString: String
-    
-    func makeIterator() -> CoordinateIterator {
-        return CoordinateIterator(coordinateString: self.coordinateString)
-    }
-}
+
+

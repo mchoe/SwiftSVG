@@ -10,11 +10,13 @@ import Foundation
 
 struct SVGParserConfiguration {
     
-    let tags: [String : () -> SVGElement]
+    typealias ElementGenerator = () -> SVGElement
     
-    public static var barebonesConfiguration: SVGParserConfiguration {
+    let tags: [String : ElementGenerator]
+    
+    public static var barebones: SVGParserConfiguration {
         
-        let configuration: [String : () -> SVGElement] = [
+        let configuration: [String : ElementGenerator] = [
             "path": {
                 var returnElement = SVGPath()
                 returnElement.supportedAttributes = [
@@ -36,9 +38,9 @@ struct SVGParserConfiguration {
         return SVGParserConfiguration(tags: configuration)
     }
     
-    public static var allFeaturesConfiguration: SVGParserConfiguration = {
+    public static var allFeatures: SVGParserConfiguration = {
         
-        let configuration: [String : () -> SVGElement] = [
+        let configuration: [String : ElementGenerator] = [
             "circle": {
                 let returnElement = SVGCircle()
                 returnElement.supportedAttributes = [

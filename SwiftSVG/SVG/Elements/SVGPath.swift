@@ -20,8 +20,6 @@ private enum PathType {
     case absolute, relative
 }
 
-
-
 private struct PreviousCommand {
     var commandLetter: String?
     var parameters: [CGFloat]?
@@ -377,8 +375,8 @@ struct SVGPath: SVGShapeElement {
             var previousParameters: PreviousCommand? = nil
             
             let pushCoordinateAndClear: () -> Void = {
-                if currentNumberStack.isEmpty == false {
-                    if let newCoordinate = currentNumberStack.asCGFloat {
+                if !currentNumberStack.isEmpty {
+                    if let newCoordinate = CGFloat(currentNumberStack) {
                         if let returnParameters = currentPathCommand.pushCoordinateAndExecuteIfPossible(newCoordinate, previousCommand: previousParameters) {
                             previousParameters = returnParameters
                         }

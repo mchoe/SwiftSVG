@@ -42,9 +42,14 @@
     import AppKit
 #endif
 
+
+let namedColors: [String : CGColor] = [
+    "none": UIColor.clear.cgColor
+]
+
 public extension UIColor {
     
-    convenience init(svgString: String) {
+    convenience init?(svgString: String) {
         if svgString.hasPrefix("#") {
             self.init(hexString: svgString)
             return
@@ -54,7 +59,8 @@ public extension UIColor {
             self.init(rgbString: svgString)
             return
         }
-        self.init()
+        
+        self.init(named: svgString)
     }
     
     convenience init(hexString: String) {
@@ -91,9 +97,16 @@ public extension UIColor {
     convenience init(rgbString: String) {
         let valuesString = rgbString.characters.dropFirst(4).dropLast()
         let colorsArray = valuesString.split(separator: ",").map { (numberString) -> CGFloat in
-            return CGFloat(Double(String(numberString).trimmingCharacters(in: CharacterSet.whitespaces))!)
+            return CGFloat(String(numberString).trimmingCharacters(in: CharacterSet.whitespaces))!
         }
         self.init(red: colorsArray[0] / 255.0, green: colorsArray[1] / 255.0, blue: colorsArray[2] / 255.0, alpha: (colorsArray.count > 3 ? colorsArray[3] / 1.0 : 1.0))
+    }
+    
+    convenience init?(named: String) {
+        guard let namedColor = namedColors[named] else {
+            return nil
+        }
+        self.init(cgColor: namedColor)
     }
     
     

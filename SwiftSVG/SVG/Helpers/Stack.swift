@@ -48,19 +48,18 @@ protocol StackType {
 
 struct Stack<T>: StackType {
     var items = [T]()
-    
     init() { }
+}
+
+extension StackType {
     
-    mutating func pop() -> StackItem {
+    @discardableResult mutating func pop() -> StackItem {
         return self.items.removeLast()
     }
     
     mutating func push(_ itemToPush: StackItem) {
         self.items.append(itemToPush)
     }
-}
-
-extension StackType {
     
     mutating func clear() {
         self.items.removeAll()
@@ -107,6 +106,18 @@ extension StackType where StackItem == Character {
             return nil
         }
     }
+}
+
+extension CGFloat {
+    
+    init?(_ stack: Stack<Character>) {
+        if stack.items.count > 0 {
+            self.init(String(stack.items))
+            return
+        }
+        return nil
+    }
+    
 }
 
 

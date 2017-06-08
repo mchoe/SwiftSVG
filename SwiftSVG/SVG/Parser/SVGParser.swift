@@ -28,7 +28,7 @@ open class SVGParser: NSObject, XMLParserDelegate {
     open var containerLayer: CALayer?
     open fileprivate(set) var paths = [UIBezierPath]()
     
-    init(parser: XMLParser, configuration: SVGParserConfiguration = SVGParserConfiguration.allFeaturesConfiguration, containerLayer: CALayer? = nil) {
+    init(parser: XMLParser, configuration: SVGParserConfiguration = SVGParserConfiguration.allFeatures, containerLayer: CALayer? = nil) {
         self.configuration = configuration
         super.init()
         
@@ -78,7 +78,7 @@ open class SVGParser: NSObject, XMLParserDelegate {
         
         if let shapeElement = lastItem as? SVGShapeElement {
             
-            _ = self.elementStack.pop()
+            self.elementStack.pop()
             guard let containerElement = self.elementStack.last as? SVGContainerElement else {
                 return
             }
@@ -87,7 +87,7 @@ open class SVGParser: NSObject, XMLParserDelegate {
         } else if let containerElement = lastItem as? SVGContainerElement {
             
             self.containerLayer?.addSublayer(containerElement.containerLayer)
-            _ = self.elementStack.pop()
+            self.elementStack.pop()
             
         }
     }

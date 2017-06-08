@@ -19,7 +19,7 @@ struct SVGPolygon: SVGShapeElement {
     
     internal func points(points: String) {
         let polylinePath = UIBezierPath()
-        for (index, thisPoint) in CoordinateSequence(coordinateString: points).enumerated() {
+        for (index, thisPoint) in CoordinateLexer(coordinateString: points).enumerated() {
             if index == 0 {
                 polylinePath.move(to: thisPoint)
             } else {
