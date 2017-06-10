@@ -12,19 +12,12 @@ import Foundation
 struct CoordinateLexer: IteratorProtocol, Sequence {
     typealias Element = CGPoint
     var coordinateString: String
-    var workingString: String.UnicodeScalarView
-    //let separator: Character = " "
+    var workingString: ContiguousArray<CChar>
     var stringIndex: Int = 0
-    
-    var scalarIndex: String.UnicodeScalarView.Index
     
     init(coordinateString: String) {
         self.coordinateString = coordinateString
-        self.workingString = self.coordinateString.unicodeScalars
-        self.scalarIndex = self.workingString.startIndex
-        if self.coordinateString[self.stringIndex] == " " || self.coordinateString[self.coordinateString.characters.count - 1] == " " {
-            self.coordinateString = self.coordinateString.trimWhitespace()
-        }
+        self.workingString = self.coordinateString.utf8CString
     }
     
     func makeIterator() -> CoordinateLexer {
@@ -39,38 +32,30 @@ struct CoordinateLexer: IteratorProtocol, Sequence {
             return nil
         }
         
-        //var xNumberArray = [Character]()
-        //var yNumberArray = [Character]()
-        var xNumber = String.UnicodeScalarView()
-        var yNumber = String.UnicodeScalarView()
+        var xNumber = [CChar]()
+        var yNumber = [CChar]()
         var didParseX = false
         
-        //var thisCharacter = self.coordinateString[self.stringIndex]
-        var thisCharacter = self.workingString[self.scalarIndex]
-        //while thisCharacter != self.separator {
-        while thisCharacter != " " {
-            if thisCharacter == "," {
+        var thisCharacter = self.workingString[self.stringIndex]
+        while thisCharacter != 32 { // SPACE separator
+            if thisCharacter == 44 { // comma
                 didParseX = true
             } else {
                 if !didParseX {
-                    //xNumberArray.append(thisCharacter)
                     xNumber.append(thisCharacter)
                 } else {
-                    //yNumberArray.append(thisCharacter)
                     yNumber.append(thisCharacter)
                 }
             }
-            //self.stringIndex += 1
-            self.scalarIndex = self.workingString.index(after: self.scalarIndex)
+            self.stringIndex += 1
             if self.stringIndex < characterCount {
-                //thisCharacter = self.coordinateString[self.stringIndex]
-                thisCharacter = self.workingString[self.scalarIndex]
+                thisCharacter = self.workingString[self.stringIndex]
             } else {
                 break
             }
         }
         
-        if let xAsDouble = Double(String(xNumber)), let yAsDouble = Double(String(yNumber)) {
+        if let xAsDouble = Double(byteArray: xNumber), let yAsDouble = Double(byteArray: yNumber) {
             guard self.stringIndex <= characterCount else {
                 return nil
             }

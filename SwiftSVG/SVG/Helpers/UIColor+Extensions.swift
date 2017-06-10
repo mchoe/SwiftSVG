@@ -81,7 +81,10 @@ public extension UIColor {
                     hexArray.append(thisScalar)
                 } else {
                     hexArray.append(thisScalar)
-                    colorArray.append(CGFloat(byteArray: hexArray))
+                    guard let colorFloat = CGFloat(byteArray: hexArray, base:16) else {
+                        continue
+                    }
+                    colorArray.append(colorFloat)
                 }
             }
         } else if utf8View.count == 3 {
@@ -89,7 +92,10 @@ public extension UIColor {
                 hexArray.removeAll()
                 hexArray.append(thisScalar)
                 hexArray.append(thisScalar)
-                colorArray.append(CGFloat(byteArray: hexArray))
+                guard let colorFloat = CGFloat(byteArray: hexArray, base:16) else {
+                    continue
+                }
+                colorArray.append(colorFloat)
             }
         } else {
             return nil

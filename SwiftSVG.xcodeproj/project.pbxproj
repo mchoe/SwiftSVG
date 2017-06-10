@@ -12,6 +12,7 @@
 		175093C31E6C6C2100EF1853 /* SVGElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C21E6C6C2100EF1853 /* SVGElement.swift */; };
 		175093C61E6C720C00EF1853 /* SVGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C51E6C720C00EF1853 /* SVGPath.swift */; };
 		175093CC1E6C773600EF1853 /* SVGRootElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093CB1E6C773600EF1853 /* SVGRootElement.swift */; };
+		176A89081EEC781E00764E8E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A89071EEC781E00764E8E /* Globals.swift */; };
 		176BC9681EE3626100F7B54C /* SVGElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C21E6C6C2100EF1853 /* SVGElement.swift */; };
 		176BC96A1EE3626800F7B54C /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093BE1E6C666600EF1853 /* SVGParser.swift */; };
 		176BC96B1EE3626B00F7B54C /* SVGParserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C01E6C669F00EF1853 /* SVGParserConfiguration.swift */; };
@@ -120,6 +121,7 @@
 		175093C21E6C6C2100EF1853 /* SVGElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGElement.swift; sourceTree = "<group>"; };
 		175093C51E6C720C00EF1853 /* SVGPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGPath.swift; sourceTree = "<group>"; };
 		175093CB1E6C773600EF1853 /* SVGRootElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGRootElement.swift; sourceTree = "<group>"; };
+		176A89071EEC781E00764E8E /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		176BC9901EE474D100F7B54C /* SwiftSVGiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSVGiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		176BC9921EE474D200F7B54C /* SwiftSVGiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSVGiOSTests.swift; sourceTree = "<group>"; };
 		176BC9941EE474D200F7B54C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				9E245B6B1AAE383200472F5A /* Scalar+FromHex.swift */,
 				176BC9F31EE62B6100F7B54C /* String+Trim.swift */,
 				9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */,
+				176A89071EEC781E00764E8E /* Globals.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176A89081EEC781E00764E8E /* Globals.swift in Sources */,
 				176BC9F41EE62B6100F7B54C /* String+Trim.swift in Sources */,
 				39B8D8A71B3C32DD009DAF60 /* String+Subscript.swift in Sources */,
 				17CCE7381EE666D6007FA5AD /* CGFloat+Extensions.swift in Sources */,

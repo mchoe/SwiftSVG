@@ -17,4 +17,42 @@ extension CGFloat {
         self.init(asDouble)
     }
     
+    init?(byteArray: [CChar], base: Int32 = 10) {
+        guard byteArray.last == 0 else {
+            var nullTerminated = byteArray
+            nullTerminated.append(0)
+            self.init(strtol(nullTerminated, nil, base))
+            return
+        }
+        self.init(strtol(byteArray, nil, base))
+    }
+    
+}
+
+extension Float {
+    
+    init?(byteArray: [CChar]) {
+        guard byteArray.last == 0 else {
+            var nullTerminated = byteArray
+            nullTerminated.append(0)
+            self = strtof(nullTerminated, nil)
+            return
+        }
+        self = strtof(byteArray, nil)
+    }
+    
+}
+
+extension Double {
+    
+    init?(byteArray: [CChar]) {
+        guard byteArray.last == 0 else {
+            var nullTerminated = byteArray
+            nullTerminated.append(0)
+            self = strtod(nullTerminated, nil)
+            return
+        }
+        self = strtod(byteArray, nil)
+    }
+    
 }

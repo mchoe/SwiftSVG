@@ -58,15 +58,3 @@ extension Int {
     */
 }
 
-extension CGFloat {
-    init(byteArray: [CChar]) {
-        if byteArray.last != 0 {
-            var nullTerminated = byteArray
-            nullTerminated.append(0)
-            self.init(strtol(nullTerminated, nil, 16))
-            return
-        }
-        self.init(strtol(byteArray, nil, 16))
-    }
-}
-

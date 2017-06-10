@@ -320,6 +320,7 @@ private class SmoothQuadraticCurveTo : PathCommand {
 //
 // MARK: - Character Dictionary
 
+/*
 private let characterDictionary: [UnicodeScalar: PathCharacter] = [
     "M": MoveTo(character: "M", pathType: PathType.absolute),
     "m": MoveTo(character: "m", pathType: PathType.relative),
@@ -354,6 +355,42 @@ private let characterDictionary: [UnicodeScalar: PathCharacter] = [
     " ": SeparatorCharacter(character: " "),
     ",": SeparatorCharacter(character: ",")
 ]
+ */
+
+private let characterDictionary: [CChar: PathCharacter] = [
+    77: MoveTo(character: "M", pathType: PathType.absolute),
+    109: MoveTo(character: "m", pathType: PathType.relative),
+    67: CurveTo(character: "C", pathType: PathType.absolute),
+    99: CurveTo(character: "c", pathType: PathType.relative),
+    83: SmoothCurveTo(character: "S", pathType: PathType.absolute),
+    115: SmoothCurveTo(character: "s", pathType: PathType.relative),
+    76: LineTo(character: "L", pathType: PathType.absolute),
+    108: LineTo(character: "l", pathType: PathType.relative),
+    72: HorizontalLineTo(character: "H", pathType: PathType.absolute),
+    104: HorizontalLineTo(character: "h", pathType: PathType.relative),
+    86: VerticalLineTo(character: "V", pathType: PathType.absolute),
+    118: VerticalLineTo(character: "v", pathType: PathType.relative),
+    81: QuadraticCurveTo(character: "Q", pathType: PathType.absolute),
+    113: QuadraticCurveTo(character: "q", pathType: PathType.relative),
+    84: SmoothQuadraticCurveTo(character: "T", pathType: PathType.absolute),
+    116: SmoothQuadraticCurveTo(character: "t", pathType: PathType.relative),
+    90: ClosePath(character: "Z", pathType: PathType.absolute),
+    122: ClosePath(character: "z", pathType: PathType.relative),
+    45: SignCharacter(character: "-"),
+    46: NumberCharacter(character: "."),
+    48: NumberCharacter(character: "0"),
+    49: NumberCharacter(character: "1"),
+    50: NumberCharacter(character: "2"),
+    51: NumberCharacter(character: "3"),
+    52: NumberCharacter(character: "4"),
+    53: NumberCharacter(character: "5"),
+    54: NumberCharacter(character: "6"),
+    55: NumberCharacter(character: "7"),
+    56: NumberCharacter(character: "8"),
+    57: NumberCharacter(character: "9"),
+    32: SeparatorCharacter(character: " "),
+    44: SeparatorCharacter(character: ",")
+]
 
 struct SVGPath: SVGShapeElement {
     
@@ -372,22 +409,22 @@ struct SVGPath: SVGShapeElement {
             
             var currentPathCommand: PathCommand = PathCommand(character: "M")
             //var currentNumberStack = Stack<UnicodeScalar>()
-            var currentNumberStack = String.UnicodeScalarView()
+            var currentNumberStack = Stack<CChar>()
             var previousParameters: PreviousCommand? = nil
             
             let pushCoordinateAndClear: () -> Void = {
                 if !currentNumberStack.isEmpty {
-                    if let newCoordinate = CGFloat(String(describing: currentNumberStack)) {
+                    if let newCoordinate = CGFloat(byteArray: currentNumberStack.items) {
                         if let returnParameters = currentPathCommand.pushCoordinateAndExecuteIfPossible(newCoordinate, previousCommand: previousParameters) {
                             previousParameters = returnParameters
                         }
                     }
-                    //currentNumberStack.clear()
-                    currentNumberStack.removeAll()
+                    currentNumberStack.clear()
+                    //currentNumberStack.removeAll()
                 }
             }
             
-            for thisCharacter in workingString.unicodeScalars {
+            for thisCharacter in workingString.utf8CString.dropLast() {
                 if let pathCharacter = characterDictionary[thisCharacter] {
                     
                     if pathCharacter is PathCommand {
@@ -409,22 +446,22 @@ struct SVGPath: SVGShapeElement {
                         
                         pushCoordinateAndClear()
                         //currentNumberStack = Stack(startCharacter: thisCharacter)
-                        //currentNumberStack.clear()
-                        //currentNumberStack.push(thisCharacter)
-                        currentNumberStack = String.UnicodeScalarView()
-                        currentNumberStack.append(thisCharacter)
+                        currentNumberStack.clear()
+                        currentNumberStack.push(thisCharacter)
+                        //currentNumberStack = String.UnicodeScalarView()
+                        //currentNumberStack.append(thisCharacter)
                         
                     } else {
                         
                         if currentNumberStack.isEmpty == false {
-                            //currentNumberStack.push(thisCharacter)
-                            currentNumberStack.append(thisCharacter)
+                            currentNumberStack.push(thisCharacter)
+                            //currentNumberStack.append(thisCharacter)
                         } else {
                             //currentNumberStack = Stack(startCharacter: thisCharacter)
-                            //currentNumberStack.clear()
-                            //currentNumberStack.push(thisCharacter)
-                            currentNumberStack = String.UnicodeScalarView()
-                            currentNumberStack.append(thisCharacter)
+                            currentNumberStack.clear()
+                            currentNumberStack.push(thisCharacter)
+                            //currentNumberStack = String.UnicodeScalarView()
+                            //currentNumberStack.append(thisCharacter)
                         }
                         
                     }
