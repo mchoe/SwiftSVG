@@ -63,35 +63,38 @@ public extension UIColor {
         self.init(named: svgString)
     }
     
-    convenience init(hexString: String) {
+    convenience init?(hexString: String) {
         
         var workingString = hexString
         if workingString.hasPrefix("#") {
             workingString = String(workingString.characters.dropFirst())
         }
         
-        var hexRed = "00"
-        var hexGreen = "00"
-        var hexBlue = "00"
+        var hexArray = [CChar]()
+        var colorArray = [CGFloat]()
+        let utf8View = workingString.utf8CString.dropLast()
         
-        if workingString.characters.count == 6 {
-            hexRed = workingString[0...1]
-            hexGreen = workingString[2...3]
-            hexBlue = workingString[4...5]
-        } else if workingString.characters.count == 3 {
-            let redValue = workingString[0]
-            let greenValue = workingString[1]
-            let blueValue = workingString[2]
-            hexRed = "\(redValue)\(redValue)"
-            hexGreen = "\(greenValue)\(greenValue)"
-            hexBlue = "\(blueValue)\(blueValue)"
+        if utf8View.count == 6 {
+            for (index, thisScalar) in utf8View.enumerated() {
+                if index % 2 == 0 {
+                    hexArray.removeAll()
+                    hexArray.append(thisScalar)
+                } else {
+                    hexArray.append(thisScalar)
+                    colorArray.append(CGFloat(byteArray: hexArray))
+                }
+            }
+        } else if utf8View.count == 3 {
+            for thisScalar in utf8View {
+                hexArray.removeAll()
+                hexArray.append(thisScalar)
+                hexArray.append(thisScalar)
+                colorArray.append(CGFloat(byteArray: hexArray))
+            }
+        } else {
+            return nil
         }
-        
-        let red = CGFloat(hexString: hexRed)
-        let green = CGFloat(hexString: hexGreen)
-        let blue = CGFloat(hexString: hexBlue)
-        
-        self.init(red: CGFloat(red / 255.0), green: CGFloat(green / 255.0), blue: CGFloat(blue / 255.0), alpha: 1.0)
+        self.init(red: colorArray[0] / 255.0, green: colorArray[1] / 255.0, blue: colorArray[2] / 255.0, alpha: 1.0)
     }
     
     convenience init(rgbString: String) {

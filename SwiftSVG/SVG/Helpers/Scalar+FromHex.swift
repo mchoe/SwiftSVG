@@ -38,15 +38,35 @@
 
 import CoreGraphics
 
+
+
 extension Int {
     init(hexString: String) {
         self.init(strtol(hexString, nil, 16))
     }
+    
+    /*
+    init(byteArray: [CChar]) {
+        var count: Int8 = 0
+        var result: Int8 = 0
+        for thisDigit in byteArray.reversed() {
+            result += thisDigit * Int8(pow(16, Double(count)))
+            count += 1
+        }
+        self.init(result)
+    }
+    */
 }
 
 extension CGFloat {
-    init(hexString: String) {
-        self.init(Int(hexString: hexString))
+    init(byteArray: [CChar]) {
+        if byteArray.last != 0 {
+            var nullTerminated = byteArray
+            nullTerminated.append(0)
+            self.init(strtol(nullTerminated, nil, 16))
+            return
+        }
+        self.init(strtol(byteArray, nil, 16))
     }
 }
 

@@ -13,7 +13,7 @@ class IteratorTests: XCTestCase {
     func testWhitespace() {
         var testString = " 0,40 40,40 40,80 80,80 80,120 120,120 120,160"
         var coordinateArray = [CGPoint]()
-        var coordinateSequence = CoordinateSequence(coordinateString: testString)
+        var coordinateSequence = CoordinateLexer(coordinateString: testString)
         for thisPoint in coordinateSequence {
             coordinateArray.append(thisPoint)
         }
@@ -22,7 +22,7 @@ class IteratorTests: XCTestCase {
         
         coordinateArray.removeAll()
         testString = "0,40 40,40 40,80 80,80 80,120 120,120 120,160      "
-        coordinateSequence = CoordinateSequence(coordinateString: testString)
+        coordinateSequence = CoordinateLexer(coordinateString: testString)
         for thisPoint in coordinateSequence {
             coordinateArray.append(thisPoint)
         }

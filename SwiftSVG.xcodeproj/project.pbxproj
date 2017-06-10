@@ -64,11 +64,11 @@
 		176BC9ED1EE5A1CD00F7B54C /* SVGGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9EC1EE5A1CD00F7B54C /* SVGGroup.swift */; };
 		176BC9EE1EE5A1CD00F7B54C /* SVGGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9EC1EE5A1CD00F7B54C /* SVGGroup.swift */; };
 		176BC9EF1EE5A1CD00F7B54C /* SVGGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9EC1EE5A1CD00F7B54C /* SVGGroup.swift */; };
-		176BC9F21EE62AF300F7B54C /* CoordinateTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9F11EE62AF300F7B54C /* CoordinateTokenizer.swift */; };
+		176BC9F21EE62AF300F7B54C /* CoordinateLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9F11EE62AF300F7B54C /* CoordinateLexer.swift */; };
 		176BC9F41EE62B6100F7B54C /* String+Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9F31EE62B6100F7B54C /* String+Trim.swift */; };
 		176BC9F71EE6310300F7B54C /* IteratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9F61EE6310300F7B54C /* IteratorTests.swift */; };
-		176BC9F81EE6313800F7B54C /* CoordinateTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9F11EE62AF300F7B54C /* CoordinateTokenizer.swift */; };
-		176BC9F91EE6313900F7B54C /* CoordinateTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9F11EE62AF300F7B54C /* CoordinateTokenizer.swift */; };
+		176BC9F81EE6313800F7B54C /* CoordinateLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9F11EE62AF300F7B54C /* CoordinateLexer.swift */; };
+		176BC9F91EE6313900F7B54C /* CoordinateLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9F11EE62AF300F7B54C /* CoordinateLexer.swift */; };
 		176BC9FA1EE631FC00F7B54C /* String+Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9F31EE62B6100F7B54C /* String+Trim.swift */; };
 		176BC9FB1EE631FD00F7B54C /* String+Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9F31EE62B6100F7B54C /* String+Trim.swift */; };
 		176BC9FD1EE63EEE00F7B54C /* SVGPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9FC1EE63EEE00F7B54C /* SVGPolygon.swift */; };
@@ -136,7 +136,7 @@
 		176BC9CF1EE513F400F7B54C /* SVGPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGPolyline.swift; sourceTree = "<group>"; };
 		176BC9D91EE5193D00F7B54C /* UIColorExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionsTests.swift; sourceTree = "<group>"; };
 		176BC9EC1EE5A1CD00F7B54C /* SVGGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGGroup.swift; sourceTree = "<group>"; };
-		176BC9F11EE62AF300F7B54C /* CoordinateTokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateTokenizer.swift; sourceTree = "<group>"; };
+		176BC9F11EE62AF300F7B54C /* CoordinateLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateLexer.swift; sourceTree = "<group>"; };
 		176BC9F31EE62B6100F7B54C /* String+Trim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Trim.swift"; sourceTree = "<group>"; };
 		176BC9F61EE6310300F7B54C /* IteratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IteratorTests.swift; sourceTree = "<group>"; };
 		176BC9FC1EE63EEE00F7B54C /* SVGPolygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGPolygon.swift; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 		17CCE7331EE64D9E007FA5AD /* Iterators */ = {
 			isa = PBXGroup;
 			children = (
-				176BC9F11EE62AF300F7B54C /* CoordinateTokenizer.swift */,
+				176BC9F11EE62AF300F7B54C /* CoordinateLexer.swift */,
 			);
 			path = Iterators;
 			sourceTree = "<group>";
@@ -543,7 +543,7 @@
 				17CCE73C1EE66CBE007FA5AD /* CGFloat+Extensions.swift in Sources */,
 				176BC9E41EE51AF600F7B54C /* SVGEllipse.swift in Sources */,
 				176BC9DB1EE5198800F7B54C /* UIColor+Extensions.swift in Sources */,
-				176BC9F91EE6313900F7B54C /* CoordinateTokenizer.swift in Sources */,
+				176BC9F91EE6313900F7B54C /* CoordinateLexer.swift in Sources */,
 				176BC9931EE474D200F7B54C /* SwiftSVGiOSTests.swift in Sources */,
 				17CCE73A1EE66C17007FA5AD /* CGFloatExtensionsTests.swift in Sources */,
 				176BC9E81EE51AF600F7B54C /* SVGShapeElement.swift in Sources */,
@@ -576,7 +576,7 @@
 				176BC96A1EE3626800F7B54C /* SVGParser.swift in Sources */,
 				396A8E731B3D238B001986AF /* CAShapeLayer+SVG.swift in Sources */,
 				396A8E741B3D238B001986AF /* String+SVG.swift in Sources */,
-				176BC9F81EE6313800F7B54C /* CoordinateTokenizer.swift in Sources */,
+				176BC9F81EE6313800F7B54C /* CoordinateLexer.swift in Sources */,
 				176BC96C1EE3626E00F7B54C /* SVGPath.swift in Sources */,
 				176BC96D1EE3627100F7B54C /* SVGRootElement.swift in Sources */,
 				176BC9BD1EE4AE2700F7B54C /* Dictionary+Merge.swift in Sources */,
@@ -607,7 +607,7 @@
 				175093C31E6C6C2100EF1853 /* SVGElement.swift in Sources */,
 				176BC9AD1EE48CE800F7B54C /* SVGCircle.swift in Sources */,
 				39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */,
-				176BC9F21EE62AF300F7B54C /* CoordinateTokenizer.swift in Sources */,
+				176BC9F21EE62AF300F7B54C /* CoordinateLexer.swift in Sources */,
 				8AC4DBEA1CB37EA700137DC9 /* CrossPlatform.swift in Sources */,
 				176BC9D01EE513F400F7B54C /* SVGPolyline.swift in Sources */,
 				175093C11E6C669F00EF1853 /* SVGParserConfiguration.swift in Sources */,

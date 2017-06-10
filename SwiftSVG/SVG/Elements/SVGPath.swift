@@ -320,7 +320,7 @@ private class SmoothQuadraticCurveTo : PathCommand {
 //
 // MARK: - Character Dictionary
 
-private let characterDictionary: [Character: PathCharacter] = [
+private let characterDictionary: [UnicodeScalar: PathCharacter] = [
     "M": MoveTo(character: "M", pathType: PathType.absolute),
     "m": MoveTo(character: "m", pathType: PathType.relative),
     "C": CurveTo(character: "C", pathType: PathType.absolute),
@@ -371,21 +371,23 @@ struct SVGPath: SVGShapeElement {
         autoreleasepool { () -> () in
             
             var currentPathCommand: PathCommand = PathCommand(character: "M")
-            var currentNumberStack = Stack<Character>()
+            //var currentNumberStack = Stack<UnicodeScalar>()
+            var currentNumberStack = String.UnicodeScalarView()
             var previousParameters: PreviousCommand? = nil
             
             let pushCoordinateAndClear: () -> Void = {
                 if !currentNumberStack.isEmpty {
-                    if let newCoordinate = CGFloat(currentNumberStack) {
+                    if let newCoordinate = CGFloat(String(describing: currentNumberStack)) {
                         if let returnParameters = currentPathCommand.pushCoordinateAndExecuteIfPossible(newCoordinate, previousCommand: previousParameters) {
                             previousParameters = returnParameters
                         }
                     }
-                    currentNumberStack.clear()
+                    //currentNumberStack.clear()
+                    currentNumberStack.removeAll()
                 }
             }
             
-            for thisCharacter in workingString.characters {
+            for thisCharacter in workingString.unicodeScalars {
                 if let pathCharacter = characterDictionary[thisCharacter] {
                     
                     if pathCharacter is PathCommand {
@@ -406,14 +408,23 @@ struct SVGPath: SVGShapeElement {
                     } else if pathCharacter is SignCharacter {
                         
                         pushCoordinateAndClear()
-                        currentNumberStack = Stack(startCharacter: thisCharacter)
+                        //currentNumberStack = Stack(startCharacter: thisCharacter)
+                        //currentNumberStack.clear()
+                        //currentNumberStack.push(thisCharacter)
+                        currentNumberStack = String.UnicodeScalarView()
+                        currentNumberStack.append(thisCharacter)
                         
                     } else {
                         
                         if currentNumberStack.isEmpty == false {
-                            currentNumberStack.push(thisCharacter)
+                            //currentNumberStack.push(thisCharacter)
+                            currentNumberStack.append(thisCharacter)
                         } else {
-                            currentNumberStack = Stack(startCharacter: thisCharacter)
+                            //currentNumberStack = Stack(startCharacter: thisCharacter)
+                            //currentNumberStack.clear()
+                            //currentNumberStack.push(thisCharacter)
+                            currentNumberStack = String.UnicodeScalarView()
+                            currentNumberStack.append(thisCharacter)
                         }
                         
                     }
