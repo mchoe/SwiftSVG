@@ -14,7 +14,7 @@ struct SVGParserConfiguration {
     
     let tags: [String : ElementGenerator]
     
-    public static var barebones: SVGParserConfiguration {
+    public static var barebonesx: SVGParserConfiguration {
         
         let configuration: [String : ElementGenerator] = [
             "path": {

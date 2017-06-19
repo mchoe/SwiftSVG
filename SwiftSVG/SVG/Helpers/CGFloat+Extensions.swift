@@ -45,6 +45,7 @@ extension Float {
 
 extension Double {
     
+    /*
     init?(byteArray: [CChar]) {
         guard byteArray.last == 0 else {
             var nullTerminated = byteArray
@@ -54,5 +55,11 @@ extension Double {
         }
         self = strtod(byteArray, nil)
     }
+    */
     
+    init?(byteArray: [CChar]) {
+        var nullTerminated = byteArray
+        nullTerminated.append(0)
+        self = strtod(nullTerminated, nil)
+    }
 }

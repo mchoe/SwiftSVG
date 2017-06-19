@@ -43,6 +43,7 @@ import UIKit
 import AppKit
 #endif
 
+/*
 public extension String {
     
     subscript(index: Int) -> Character {
@@ -69,7 +70,7 @@ public extension String {
         }
     }
 }
-
+*/
 
 
 

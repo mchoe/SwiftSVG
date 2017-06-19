@@ -1,3 +1,16 @@
-<svg>
-	<polygon points="50,5 100,5 125,30 125,80 100,105 50,105 25,80 25,30" fill="#ED6E46" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="419px" height="554px" viewBox="0 0 419 554" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" fill-rule="nonzero">
+            <g id="Group" transform="translate(28.000000, 35.000000)">
+                <polygon id="Star" stroke="#446920" stroke-width="7" fill="#AD1D1D" points="75.608993 119.25 28.8800655 143.816851 37.8044966 91.7834255 0 54.9331489 52.2445292 47.3415745 75.608993 0 98.973457 47.3415745 151.217986 54.9331489 113.41349 91.7834255 122.337921 143.816851"></polygon>
+                <polygon id="Polygon" stroke="#F300C4" stroke-width="12" fill="#17379A" points="231.616217 102 336.232434 178.008131 296.272595 300.991869 166.959839 300.991869 127 178.008131"></polygon>
+                <polygon id="Polygon-2" stroke="#2C2A2A" stroke-width="7" fill="#D05C5C" points="89.035578 301 136.646183 316.469623 166.071156 356.969623 166.071156 407.030377 136.646183 447.530377 89.035578 463 41.424973 447.530377 12 407.030377 12 356.969623 41.424973 316.469623"></polygon>
+            </g>
+        </g>
+    </g>
 </svg>

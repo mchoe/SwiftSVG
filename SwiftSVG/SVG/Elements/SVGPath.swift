@@ -12,6 +12,67 @@
     import AppKit
 #endif
 
+
+
+struct SVGPath: SVGShapeElement {
+    
+    var supportedAttributes = [String : (String) -> ()]()
+    var svgLayer = CAShapeLayer()
+    
+    internal func parseD(pathString: String) {
+        
+        assert(pathString.hasPrefix("M") || pathString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
+        
+        let workingString = (pathString.hasSuffix("Z") == false && pathString.hasSuffix("z") == false ? pathString + "z" : pathString)
+        
+        let returnPath = UIBezierPath()
+        
+        returnPath.move(to: CGPoint.zero)
+        
+        var previousCommand: PreviousCommand? = nil
+        for thisPathCommand in PathDLexer(pathString: workingString) {
+            //print(thisPathCommand)
+            thisPathCommand.execute(on: returnPath, previousCommand: previousCommand)
+            previousCommand = thisPathCommand
+        }
+        
+        returnPath.close()
+        
+        self.svgLayer.path = returnPath.cgPath
+        
+        /*
+        autoreleasepool { () -> () in
+            
+            
+            
+        }
+        */
+        
+            
+    }
+    
+    func didProcessElement(in container: SVGContainerElement?) {
+        guard let container = container else {
+            return
+        }
+        container.containerLayer.addSublayer(self.svgLayer)
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 /////////////////////////////////////////////////////
 //
 // MARK: - Type Definitions
@@ -424,7 +485,7 @@ struct SVGPath: SVGShapeElement {
                 }
             }
             
-            for thisCharacter in workingString.utf8CString.dropLast() {
+            for thisCharacter in workingString.utf8CString {
                 if let pathCharacter = characterDictionary[thisCharacter] {
                     
                     if pathCharacter is PathCommand {
@@ -466,7 +527,7 @@ struct SVGPath: SVGShapeElement {
                         
                     }
                     
-                } else {
+                } else if thisCharacter != 0 {
                     assert(false, "Invalid character \"\(thisCharacter)\" found")
                 }
             }
@@ -483,3 +544,4 @@ struct SVGPath: SVGShapeElement {
     
     
 }
+ */

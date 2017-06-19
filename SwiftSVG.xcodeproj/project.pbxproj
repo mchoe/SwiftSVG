@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		174FF06D1EF10691003F3DBE /* PathDLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FF06C1EF10691003F3DBE /* PathDLexer.swift */; };
 		175093BF1E6C666600EF1853 /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093BE1E6C666600EF1853 /* SVGParser.swift */; };
 		175093C11E6C669F00EF1853 /* SVGParserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C01E6C669F00EF1853 /* SVGParserConfiguration.swift */; };
 		175093C31E6C6C2100EF1853 /* SVGElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C21E6C6C2100EF1853 /* SVGElement.swift */; };
@@ -116,6 +117,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		174FF06C1EF10691003F3DBE /* PathDLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathDLexer.swift; sourceTree = "<group>"; };
 		175093BE1E6C666600EF1853 /* SVGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParser.swift; sourceTree = "<group>"; };
 		175093C01E6C669F00EF1853 /* SVGParserConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParserConfiguration.swift; sourceTree = "<group>"; };
 		175093C21E6C6C2100EF1853 /* SVGElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGElement.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				176BC9F11EE62AF300F7B54C /* CoordinateLexer.swift */,
+				174FF06C1EF10691003F3DBE /* PathDLexer.swift */,
 			);
 			path = Iterators;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				39B8D8AE1B3C32DD009DAF60 /* SVGView.swift in Sources */,
 				39B8D8AF1B3C32DD009DAF60 /* UIBezierPath+SVG.swift in Sources */,
 				175093C61E6C720C00EF1853 /* SVGPath.swift in Sources */,
+				174FF06D1EF10691003F3DBE /* PathDLexer.swift in Sources */,
 				176BC9CA1EE4C26C00F7B54C /* SVGLine.swift in Sources */,
 				39B8D8B01B3C32DD009DAF60 /* UIView+SVG.swift in Sources */,
 				176BC9FD1EE63EEE00F7B54C /* SVGPolygon.swift in Sources */,

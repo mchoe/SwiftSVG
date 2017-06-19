@@ -91,6 +91,7 @@ extension StackType {
     
 }
 
+/*
 extension StackType where StackItem == Character {
     
     init(startCharacter: Character) {
@@ -107,6 +108,7 @@ extension StackType where StackItem == Character {
         }
     }
 }
+ 
 
 extension CGFloat {
     
@@ -119,5 +121,5 @@ extension CGFloat {
     }
     
 }
-
+*/
 
