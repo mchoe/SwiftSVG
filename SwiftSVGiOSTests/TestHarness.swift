@@ -26,7 +26,8 @@ extension CGPath {
                 arrayPoints.append(element.points[0])
                 arrayPoints.append(element.points[1])
                 arrayPoints.append(element.points[2])
-            default: break
+            case .closeSubpath:
+                arrayPoints.append(element.points[0])
             }
         }
         return arrayPoints
@@ -49,7 +50,6 @@ extension CGPath {
                 arrayPoints.append((element.points[2], .addCurveToPoint))
             case .closeSubpath:
                 arrayPoints.append((element.points[0], .closeSubpath))
-            default: break
             }
         }
         return arrayPoints
@@ -75,4 +75,7 @@ extension PathCommand {
     }
     
 }
+
+
+
 

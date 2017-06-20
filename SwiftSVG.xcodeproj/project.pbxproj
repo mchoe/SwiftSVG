@@ -90,6 +90,8 @@
 		381E99B61EF8CCCC00839918 /* PathDLexerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B51EF8CCCC00839918 /* PathDLexerTests.swift */; };
 		381E99B81EF8D26E00839918 /* CurveToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B71EF8D26E00839918 /* CurveToTests.swift */; };
 		381E99BB1EF9856B00839918 /* ClosePathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99BA1EF9856B00839918 /* ClosePathTests.swift */; };
+		381E99BD1EF9D05800839918 /* HorizontalLineToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99BC1EF9D05800839918 /* HorizontalLineToTests.swift */; };
+		381E99BF1EF9D21500839918 /* VerticalLineToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99BE1EF9D21500839918 /* VerticalLineToTests.swift */; };
 		396A8E491B3D2036001986AF /* SwiftSVGMacFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 396A8E481B3D2036001986AF /* SwiftSVGMacFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		396A8E6F1B3D238B001986AF /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B691AAE383200472F5A /* String+Subscript.swift */; };
 		396A8E701B3D238B001986AF /* Scalar+FromHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6B1AAE383200472F5A /* Scalar+FromHex.swift */; };
@@ -161,6 +163,8 @@
 		381E99B51EF8CCCC00839918 /* PathDLexerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathDLexerTests.swift; sourceTree = "<group>"; };
 		381E99B71EF8D26E00839918 /* CurveToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveToTests.swift; sourceTree = "<group>"; };
 		381E99BA1EF9856B00839918 /* ClosePathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosePathTests.swift; sourceTree = "<group>"; };
+		381E99BC1EF9D05800839918 /* HorizontalLineToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalLineToTests.swift; sourceTree = "<group>"; };
+		381E99BE1EF9D21500839918 /* VerticalLineToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalLineToTests.swift; sourceTree = "<group>"; };
 		396A8E441B3D2036001986AF /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		396A8E471B3D2036001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../SwiftSVGMacFramework/Info.plist; sourceTree = "<group>"; };
 		396A8E481B3D2036001986AF /* SwiftSVGMacFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwiftSVGMacFramework.h; path = ../SwiftSVGMacFramework/SwiftSVGMacFramework.h; sourceTree = "<group>"; };
@@ -327,9 +331,11 @@
 			isa = PBXGroup;
 			children = (
 				381E99B71EF8D26E00839918 /* CurveToTests.swift */,
+				381E99BC1EF9D05800839918 /* HorizontalLineToTests.swift */,
 				381E99A91EF801BB00839918 /* LineToTests.swift */,
 				381E99AE1EF8A55000839918 /* MoveToTests.swift */,
 				381E99BA1EF9856B00839918 /* ClosePathTests.swift */,
+				381E99BE1EF9D21500839918 /* VerticalLineToTests.swift */,
 			);
 			name = "Path Command Tests";
 			sourceTree = "<group>";
@@ -564,6 +570,7 @@
 				176BC9DD1EE51AB800F7B54C /* UIBezierPath+SVG.swift in Sources */,
 				381E99AF1EF8A55000839918 /* MoveToTests.swift in Sources */,
 				176BC9AA1EE486BC00F7B54C /* SVGRootElement.swift in Sources */,
+				381E99BF1EF9D21500839918 /* VerticalLineToTests.swift in Sources */,
 				176BC9DE1EE51ABC00F7B54C /* SVGView.swift in Sources */,
 				176BC9EB1EE51B1700F7B54C /* SVGParserConfiguration.swift in Sources */,
 				381E99AA1EF801BB00839918 /* LineToTests.swift in Sources */,
@@ -572,6 +579,7 @@
 				176BC9E91EE51B0700F7B54C /* CrossPlatform.swift in Sources */,
 				176BC9A81EE4868A00F7B54C /* SVGRootElementTests.swift in Sources */,
 				17CCE73D1EE66CD6007FA5AD /* String+SVG.swift in Sources */,
+				381E99BD1EF9D05800839918 /* HorizontalLineToTests.swift in Sources */,
 				176BC9E11EE51AE500F7B54C /* Dictionary+Merge.swift in Sources */,
 				176BC9AB1EE4872400F7B54C /* SVGElement.swift in Sources */,
 				176BC9E61EE51AF600F7B54C /* SVGPath.swift in Sources */,
