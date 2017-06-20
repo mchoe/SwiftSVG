@@ -6,7 +6,7 @@
 //  Copyright © 2017 Strauss LLC. All rights reserved.
 //
 
-import CoreGraphics
+import UIKit
 
 
 extension CGPath {
@@ -43,3 +43,14 @@ extension CGPath {
         self.apply(info: unsafeBody, function: unsafeBitCast(callback, to: CGPathApplierFunction.self))
     }
 }
+
+extension PathCommand {
+    
+    init(parameters: [Double], pathType: PathType, path: UIBezierPath, previousCommand: PreviousCommand? = nil) {
+        self.init(pathType: pathType)
+        self.coordinateBuffer = parameters
+        self.execute(on: path, previousCommand: previousCommand)
+    }
+    
+}
+

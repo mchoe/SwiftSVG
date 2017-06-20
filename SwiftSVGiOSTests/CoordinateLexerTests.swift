@@ -1,5 +1,5 @@
 //
-//  IteratorTests.swift
+//  CoordinateLexerTests.swift
 //  SwiftSVG
 //
 //  Created by Michael Choe on 6/5/17.

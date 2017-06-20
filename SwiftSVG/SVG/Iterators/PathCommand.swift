@@ -45,14 +45,6 @@ extension PathCommand {
         return false
     }
     
-    init(parameters: [Double], pathType: PathType, path: UIBezierPath) {
-        self.init(pathType: pathType)
-        self.coordinateBuffer = parameters
-        self.execute(on: path, previousCommand: nil)
-    }
-    
-    
-    
     mutating func clearBuffer() {
         self.coordinateBuffer.removeAll()
     }
