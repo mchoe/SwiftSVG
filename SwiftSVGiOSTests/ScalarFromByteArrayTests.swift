@@ -23,5 +23,15 @@ class ScalarFromByteArrayTests: XCTestCase {
         asDouble = Double(byteArray: testArray)!
         XCTAssert(asDouble == -6.38, "Expected -6.38, got \(asDouble)")
     }
+    
+    func testInvalidByteArray() {
+        var testArray: [CChar] = [65, 48]       // "A0"
+        var asDouble = Double(byteArray: testArray)
+        XCTAssertNil(asDouble, "Expected nil, got \(asDouble)")
+        
+        testArray = []
+        asDouble = Double(byteArray: testArray)
+        XCTAssertNil(asDouble, "Expected nil, got \(asDouble)")
+    }
 
 }

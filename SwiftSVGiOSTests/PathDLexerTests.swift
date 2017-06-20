@@ -10,26 +10,52 @@ import XCTest
 
 class PathDLexerTests: XCTestCase {
 
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testBasicMoveTo() {
+        let testString = "M80,45z"
+        let testPath = UIBezierPath()
+        for thisCommand in PathDLexer(pathString: testString) {
+            thisCommand.execute(on: testPath, previousCommand: nil)
+            XCTAssert(thisCommand is MoveTo, "Expected MoveTo, got \(type(of: thisCommand))")
+        }
+        XCTAssert(testPath.currentPoint.x == 80 && testPath.currentPoint.y == 45, "Expected {80, 45}, got \(testPath.currentPoint)")
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testNegativeMoveTo() {
+        let testString = "M80-45z"
+        let testPath = UIBezierPath()
+        for thisCommand in PathDLexer(pathString: testString) {
+            thisCommand.execute(on: testPath, previousCommand: nil)
+            XCTAssert(thisCommand is MoveTo, "Expected MoveTo, got \(type(of: thisCommand))")
         }
+        XCTAssert(testPath.currentPoint.x == 80 && testPath.currentPoint.y == -45, "Expected {80, -45}, got \(testPath.currentPoint)")
+    }
+    
+    func testSpaceAsSeparator() {
+        let testString = "M80 -45z"
+        let testPath = UIBezierPath()
+        for thisCommand in PathDLexer(pathString: testString) {
+            thisCommand.execute(on: testPath, previousCommand: nil)
+            XCTAssert(thisCommand is MoveTo, "Expected MoveTo, got \(type(of: thisCommand))")
+        }
+        XCTAssert(testPath.currentPoint.x == 80 && testPath.currentPoint.y == -45, "Expected {80, -45}, got \(testPath.currentPoint)")
+    }
+    
+    func testMoreSpacesAsSeparator() {
+        let testString = "M 47 -127 z"
+        let testPath = UIBezierPath()
+        for thisCommand in PathDLexer(pathString: testString) {
+            thisCommand.execute(on: testPath, previousCommand: nil)
+            XCTAssert(thisCommand is MoveTo, "Expected MoveTo, got \(type(of: thisCommand))")
+        }
+        XCTAssert(testPath.currentPoint.x == 47 && testPath.currentPoint.y == -127, "Expected {47, -127}, got \(testPath.currentPoint)")
     }
 
 }
+
+
+
+
+
+
+
+

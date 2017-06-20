@@ -49,6 +49,10 @@ extension PathCommand {
         self.coordinateBuffer.removeAll()
     }
     
+    mutating func pushCoordinate(_ coordinate: Double) {
+        self.coordinateBuffer.append(coordinate)
+    }
+    
     func pointForPathType(_ point: CGPoint, relativeTo: CGPoint) -> CGPoint {
         switch self.pathType {
         case .absolute:
@@ -62,16 +66,9 @@ extension PathCommand {
 
 
 
-
-
-
-
-
-
-
-
-
-
+/////////////////////////////////////////////////////
+//
+// MARK: - Implementations
 
 
 struct MoveTo: PathCommand {

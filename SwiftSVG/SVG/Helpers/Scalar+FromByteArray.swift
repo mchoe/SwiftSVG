@@ -39,8 +39,25 @@ extension Float {
 extension Double {
     
     init?(byteArray: [CChar]) {
+        
+        if byteArray.count == 0 {
+            return nil
+        }
+        
+        //var nullTerminated = byteArray
+        //nullTerminated.append(0)
+        //self = strtod(nullTerminated, nil)
+        
+        
         var nullTerminated = byteArray
         nullTerminated.append(0)
-        self = strtod(nullTerminated, nil)
+        var error: UnsafeMutablePointer<Int8>? = nil
+        let result = strtod(nullTerminated, &error)
+        if error != nil && error?.pointee != 0 {
+            return nil
+        }
+        self = result
+        
+        
     }
 }

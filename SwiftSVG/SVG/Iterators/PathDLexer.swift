@@ -68,14 +68,13 @@ struct PathDLexer: IteratorProtocol, Sequence {
         return self.workingString[self.iteratorIndex]
     }
     
-    var currentCommand: PathCommand = MoveTo(pathType: PathType.absolute)
+    var currentCommand: PathCommand = MoveTo(pathType: .absolute)
     
     var iteratorIndex: Int = 0
     let pathString: String
     let workingString: ContiguousArray<CChar>
     
-    var xArray = [CChar]()
-    var yArray = [CChar]()
+    var numberArray = [CChar]()
     
     init(pathString: String) {
         self.pathString = pathString
@@ -88,18 +87,16 @@ struct PathDLexer: IteratorProtocol, Sequence {
     
     mutating func next() -> Element? {
         
-        self.xArray.removeAll()
-        self.yArray.removeAll()
-        
-        var finishedParsingX = false
+        self.numberArray.removeAll()
         self.currentCommand.clearBuffer()
         
         while self.iteratorIndex < self.workingString.count - 1 {
             
             if let command = characterDictionary[self.currentCharacter] {
-                
-                if let validCoordinate = Double(byteArray: (!finishedParsingX ? self.xArray : self.yArray)) {
-                    self.currentCommand.coordinateBuffer.append(validCoordinate)
+             
+                if let validCoordinate = Double(byteArray: self.numberArray) {
+                    self.currentCommand.pushCoordinate(validCoordinate)
+                    self.numberArray.removeAll()
                 }
                 
                 self.iteratorIndex += 1
@@ -115,25 +112,28 @@ struct PathDLexer: IteratorProtocol, Sequence {
             }
             
             switch self.currentCharacter {
-            case DCharacter.comma.rawValue, DCharacter.sign.rawValue, DCharacter.space.rawValue:
-                finishedParsingX = !finishedParsingX
-                if let validCoordinate = Double(byteArray: (finishedParsingX ? self.xArray : self.yArray)) {
-                    self.currentCommand.coordinateBuffer.append(validCoordinate)
+            case DCharacter.comma.rawValue, DCharacter.space.rawValue:
+                if let validCoordinate = Double(byteArray: self.numberArray) {
+                    self.currentCommand.pushCoordinate(validCoordinate)
+                    self.numberArray.removeAll()
                 }
+                
+                self.iteratorIndex += 1
                 
                 if self.currentCommand.canPushCommand {
                     return self.currentCommand
                 }
-                self.iteratorIndex += 1
+                
+            case DCharacter.sign.rawValue:
+                if let validCoordinate = Double(byteArray: self.numberArray) {
+                    self.currentCommand.pushCoordinate(validCoordinate)
+                    self.numberArray.removeAll()
+                }
             default:
                 break
             }
             
-            if !finishedParsingX {
-                self.xArray.append(self.currentCharacter)
-            } else {
-                self.yArray.append(self.currentCharacter)
-            }
+            self.numberArray.append(self.currentCharacter)
             self.iteratorIndex += 1
             
         }
