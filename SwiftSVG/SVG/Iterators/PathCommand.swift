@@ -36,6 +36,9 @@ protocol PreviousCommand {
 extension PathCommand {
     
     var canPushCommand: Bool {
+        if self.numberOfRequiredParameters == 0 {
+            return true
+        }
         if self.coordinateBuffer.count == 0 {
             return false
         }
@@ -107,11 +110,8 @@ struct CurveTo: PathCommand {
 
 struct ClosePath: PathCommand {
     
-    var canPushCommand: Bool {
-        return true
-    }
     var coordinateBuffer = [Double]()
-    let numberOfRequiredParameters = 1
+    let numberOfRequiredParameters = 0
     var pathType: PathType = .absolute
     
     init(pathType: PathType) {
@@ -195,36 +195,34 @@ struct SmoothCurveTo: PathCommand {
         let controlEnd = self.pointForPathType(CGPoint(x: self.coordinateBuffer[0], y: self.coordinateBuffer[1]), relativeTo: path.currentPoint)
         
         let currentPoint = path.currentPoint
+        let currentPointX = Double(currentPoint.x)
+        let currentPointY = Double(currentPoint.y)
         
-        var controlStartX = currentPoint.x
-        var controlStartY = currentPoint.y
+        var controlStartX = currentPointX
+        var controlStartY = currentPointY
         
         if let previousCurveTo = previousCommand as? CurveTo {
-            
-            if previousCurveTo.pathType == .absolute {
-                controlStartX = (2.0 * currentPoint.x) - CGFloat(coordinateBuffer[2])
-                controlStartY = (2.0 * currentPoint.y) - CGFloat(coordinateBuffer[3])
-            } else {
-                let oldCurrentPoint = CGPoint(x: currentPoint.x - CGFloat(coordinateBuffer[4]), y: currentPoint.y - CGFloat(coordinateBuffer[5]))
-                controlStartX = (2.0 * currentPoint.x) - (CGFloat(coordinateBuffer[2]) + oldCurrentPoint.x)
-                controlStartY = (2.0 * currentPoint.y) - (CGFloat(coordinateBuffer[3]) + oldCurrentPoint.y)
+            switch previousCurveTo.pathType {
+            case .absolute:
+                controlStartX = (2.0 * currentPointX) - coordinateBuffer[2]
+                controlStartY = (2.0 * currentPointY) - coordinateBuffer[3]
+            case .relative:
+                let oldCurrentPoint = (currentPointX - coordinateBuffer[4], currentPointY - coordinateBuffer[5])
+                controlStartX = (2.0 * currentPointX) - (coordinateBuffer[2] + oldCurrentPoint.0)
+                controlStartY = (2.0 * currentPointY) - (coordinateBuffer[3] + oldCurrentPoint.1)
             }
-            
         } else if let previousSmoothCurveTo = previousCommand as? SmoothCurveTo {
-            
-            if previousSmoothCurveTo.pathType == .absolute {
-                controlStartX = (2.0 * currentPoint.x) - CGFloat(coordinateBuffer[0])
-                controlStartY = (2.0 * currentPoint.y) - CGFloat(coordinateBuffer[1])
-            } else {
-                let oldCurrentPoint = CGPoint(x: currentPoint.x - CGFloat(coordinateBuffer[2]), y: currentPoint.y - CGFloat(coordinateBuffer[3]))
-                controlStartX = (2.0 * currentPoint.x) - (CGFloat(coordinateBuffer[0]) + oldCurrentPoint.x)
-                controlStartY = (2.0 * currentPoint.y) - (CGFloat(coordinateBuffer[1]) + oldCurrentPoint.y)
+            switch previousSmoothCurveTo.pathType {
+            case .absolute:
+                controlStartX = (2.0 * currentPointX) - coordinateBuffer[0]
+                controlStartY = (2.0 * currentPointY) - coordinateBuffer[1]
+            case .relative:
+                let oldCurrentPoint = (currentPointX - coordinateBuffer[2], currentPointY - coordinateBuffer[3])
+                controlStartX = (2.0 * currentPointX) - (coordinateBuffer[0] + oldCurrentPoint.0)
+                controlStartY = (2.0 * currentPointY) - (coordinateBuffer[1] + oldCurrentPoint.1)
             }
-            
         }
-        
         path.addCurve(to: point, controlPoint1: CGPoint(x: controlStartX, y: controlStartY), controlPoint2: controlEnd)
-        
     }
 }
 
@@ -274,8 +272,6 @@ struct SmoothQuadraticCurveTo: PathCommand {
             let oldCurrentPoint = CGPoint(x: currentPoint.x - CGFloat(coordinateBuffer[2]), y: currentPoint.y - CGFloat(coordinateBuffer[3]))
             controlPoint = CGPoint(x: (2.0 * currentPoint.x) - (CGFloat(coordinateBuffer[0]) + oldCurrentPoint.x), y: (2.0 * currentPoint.y) - (CGFloat(coordinateBuffer[1]) + oldCurrentPoint.y))
         }
-        
         path.addQuadCurve(to: point, controlPoint: controlPoint)
-        
     }
 }

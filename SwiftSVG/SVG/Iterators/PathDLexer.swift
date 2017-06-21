@@ -90,7 +90,7 @@ struct PathDLexer: IteratorProtocol, Sequence {
         self.numberArray.removeAll()
         self.currentCommand.clearBuffer()
         
-        while self.iteratorIndex < self.workingString.count - 1 {
+        while self.iteratorIndex < self.workingString.count {
             
             if let command = characterDictionary[self.currentCharacter] {
              
@@ -138,6 +138,11 @@ struct PathDLexer: IteratorProtocol, Sequence {
             
         }
         
+        if self.currentCommand is ClosePath {
+            self.iteratorIndex += 1
+            self.currentCommand = MoveTo(pathType: .absolute)
+            return ClosePath(pathType: .absolute)
+        }
         return nil
     }
 }

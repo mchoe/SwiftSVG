@@ -15,8 +15,8 @@ class PathDLexerTests: XCTestCase {
         let testPath = UIBezierPath()
         for thisCommand in PathDLexer(pathString: testString) {
             thisCommand.execute(on: testPath, previousCommand: nil)
-            XCTAssert(thisCommand is MoveTo, "Expected MoveTo, got \(type(of: thisCommand))")
         }
+        XCTAssert(testPath.cgPath.pointsAndTypes[0].1 == .moveToPoint, "Expected MoveTo, got \(type(of: testPath.cgPath.pointsAndTypes[0].1))")
         XCTAssert(testPath.currentPoint.x == 80 && testPath.currentPoint.y == 45, "Expected {80, 45}, got \(testPath.currentPoint)")
     }
     
@@ -25,8 +25,8 @@ class PathDLexerTests: XCTestCase {
         let testPath = UIBezierPath()
         for thisCommand in PathDLexer(pathString: testString) {
             thisCommand.execute(on: testPath, previousCommand: nil)
-            XCTAssert(thisCommand is MoveTo, "Expected MoveTo, got \(type(of: thisCommand))")
         }
+        XCTAssert(testPath.cgPath.pointsAndTypes[0].1 == .moveToPoint, "Expected MoveTo, got \(type(of: testPath.cgPath.pointsAndTypes[0].1))")
         XCTAssert(testPath.currentPoint.x == 80 && testPath.currentPoint.y == -45, "Expected {80, -45}, got \(testPath.currentPoint)")
     }
     
@@ -35,8 +35,8 @@ class PathDLexerTests: XCTestCase {
         let testPath = UIBezierPath()
         for thisCommand in PathDLexer(pathString: testString) {
             thisCommand.execute(on: testPath, previousCommand: nil)
-            XCTAssert(thisCommand is MoveTo, "Expected MoveTo, got \(type(of: thisCommand))")
         }
+        XCTAssert(testPath.cgPath.pointsAndTypes[0].1 == .moveToPoint, "Expected MoveTo, got \(type(of: testPath.cgPath.pointsAndTypes[0].1))")
         XCTAssert(testPath.currentPoint.x == 80 && testPath.currentPoint.y == -45, "Expected {80, -45}, got \(testPath.currentPoint)")
     }
     
@@ -45,9 +45,18 @@ class PathDLexerTests: XCTestCase {
         let testPath = UIBezierPath()
         for thisCommand in PathDLexer(pathString: testString) {
             thisCommand.execute(on: testPath, previousCommand: nil)
-            XCTAssert(thisCommand is MoveTo, "Expected MoveTo, got \(type(of: thisCommand))")
         }
+        XCTAssert(testPath.cgPath.pointsAndTypes[0].1 == .moveToPoint, "Expected MoveTo, got \(type(of: testPath.cgPath.pointsAndTypes[0].1))")
         XCTAssert(testPath.currentPoint.x == 47 && testPath.currentPoint.y == -127, "Expected {47, -127}, got \(testPath.currentPoint)")
+    }
+    
+    func testMultipleClosePaths() {
+        let testString = "M30-40L20,50z M10,20L80,90z"
+        let testPath = UIBezierPath()
+        for thisCommand in PathDLexer(pathString: testString) {
+            thisCommand.execute(on: testPath, previousCommand: nil)
+        }
+        XCTAssert(testPath.cgPath.pointsAndTypes.last!.1 == .closeSubpath, "Expected .closeSubpath, got \(String(describing: testPath.cgPath.pointsAndTypes.last!.1))")
     }
 
 }

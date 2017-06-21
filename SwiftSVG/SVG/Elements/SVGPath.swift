@@ -31,12 +31,12 @@ struct SVGPath: SVGShapeElement {
         
         var previousCommand: PreviousCommand? = nil
         for thisPathCommand in PathDLexer(pathString: workingString) {
-            //print(thisPathCommand)
+            print(type(of: thisPathCommand))
             thisPathCommand.execute(on: returnPath, previousCommand: previousCommand)
             previousCommand = thisPathCommand
         }
         
-        returnPath.close()
+        //returnPath.close()
         
         self.svgLayer.path = returnPath.cgPath
         
