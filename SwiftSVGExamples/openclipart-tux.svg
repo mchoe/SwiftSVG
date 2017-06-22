@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg5845" viewBox="0 0 157.16 201" version="1.1">
+  <g id="layer1" transform="translate(-764.28 -326.15)">
+    <path id="path5345" d="m878.37 396.2c-8.5139 5.5867-9.5012 23.06-2.2137 39.177 12.957 28.761 35.51 52.833 41.916 48.63 6.4058-4.2034 4.1697-34.851-11.18-68.799-7.2875-16.117-20.009-24.595-28.522-19.008z"/>
+    <path id="rect5342" d="m807.34 396.2c8.5139 5.5867 9.5012 23.06 2.2137 39.177-12.957 28.761-35.51 52.833-41.916 48.63-6.4058-4.2034-4.1697-34.851 11.18-68.799 7.2875-16.117 20.009-24.595 28.522-19.008z"/>
+    <path id="rect5259" d="m842.49 326.15c-26.503 0-43.955 20.116-44.875 45.438 0 0-0.0303-0.0104-0.0312 0-1.3736 15.903-7.7903 26.783-10.406 42.062-13.557 79.186-0.1875 79.073 10.812 102 29.333-5.3662 58.667-6.1266 88 0 0 0 37.198-27.469 11-101.5-5.7857-10.923-6.4927-28.358-9.625-42.562-5.2203-23.673-18.372-45.438-44.875-45.438z"/>
+    <path id="rect5265" d="m890.61 451.64c0 30.47-10.927 39-24.5 39h-46c-13.573 0-24.5-8.53-24.5-39s10.927-55 24.5-55h46c13.573 0 24.5 24.53 24.5 55z" fill="#fff"/>
+    <g id="g5267" transform="matrix(.99309 0 0 .95723 458.16 1158.4)" fill="#fff">
+      <rect id="rect5269" rx="10" ry="18" height="36" width="20" y="-841.64" x="392"/>
+      <rect id="rect5271" rx="10" ry="18" height="36" width="20" y="-841.64" x="362"/>
+    </g>
+    <path id="path5273" fill="#ecb63a" d="m875.26 386.7c0 8.723-14.673 19.623-32.772 19.623-18.1 0-32.772-10.9-32.772-19.623 0-8.7229 14.673-11.965 32.772-11.965 18.1 0 32.772 3.2424 32.772 11.965z"/>
+    <path id="path5275" fill="#876108" d="m815.74 387.29c3.5583 6.1603 13.97 12.15 26.255 12.15 12.284 0 22.697-5.99 26.255-12.15-5.3045 4.8654-15.073 8.9303-26.255 8.9303s-20.95-4.0649-26.255-8.9303z"/>
+    <rect id="rect5277" rx="6.6206" ry="7.6578" height="15.316" width="13.241" y="363.25" x="850.77"/>
+    <rect id="rect5279" rx="6.6206" ry="7.6578" height="15.316" width="13.241" y="363.25" x="820.97"/>
+    <g id="g5416" transform="translate(272.99 1153.8)">
+      <path id="path5347" fill="#ecb63a" d="m574.39-641.24c0-7.865-14.723-17.693-32.886-17.693-18.162 0-32.886 9.8281-32.886 17.693s14.723 10.788 32.886 10.788c18.162 0 32.886-2.9235 32.886-10.788z"/>
+      <path id="path5352" fill="#926a0d" d="m569.27-644.62c-1.1416 2.9443-4.5466 6.1732-8.9783 7.1076-3.5502 0.7485-6.9044-0.17246-9.0983-1.7342-1.9547 1.773-4.931 3.1273-8.2581 3.1273-3.0204 0-5.7424-1.1138-7.682-2.644-2.0884 1.8756-5.5924 3.135-9.3864 2.5871-4.5417-0.65587-8.1424-3.7249-9.3624-6.6242-0.22081 0.36638-0.38332 0.77713-0.43211 1.2509-0.34341 3.3352 3.951 8.1685 9.7945 9.0124 3.794 0.5479 7.2981-0.71155 9.3864-2.5872 1.9395 1.5302 4.6615 2.644 7.682 2.644 3.3272 0 6.3034-1.3543 8.2581-3.1273 2.194 1.5618 5.5482 2.4828 9.0983 1.7342 5.7956-1.222 9.8597-6.3584 9.3624-9.6663-0.0604-0.40239-0.20095-0.76671-0.38409-1.0804z"/>
+      <path id="path5408" fill="#ecb63a" d="m632.39-641.24c0-7.865-14.723-17.693-32.886-17.693-18.162 0-32.886 9.8281-32.886 17.693s14.723 10.788 32.886 10.788c18.162 0 32.886-2.9235 32.886-10.788z"/>
+      <path id="path5410" d="m627.27-644.62c-1.1416 2.9443-4.5466 6.1732-8.9783 7.1076-3.5502 0.7485-6.9044-0.17246-9.0983-1.7342-1.9547 1.773-4.931 3.1273-8.2581 3.1273-3.0204 0-5.7424-1.1138-7.682-2.644-2.0884 1.8756-5.5924 3.135-9.3864 2.5871-4.5417-0.65587-8.1424-3.7249-9.3624-6.6242-0.22081 0.36638-0.38332 0.77713-0.43211 1.2509-0.34341 3.3352 3.951 8.1685 9.7945 9.0124 3.794 0.5479 7.2981-0.71155 9.3864-2.5872 1.9395 1.5302 4.6615 2.644 7.682 2.644 3.3272 0 6.3034-1.3543 8.2581-3.1273 2.194 1.5618 5.5482 2.4828 9.0983 1.7342 5.7956-1.222 9.8597-6.3584 9.3624-9.6663-0.0604-0.40239-0.20095-0.76671-0.38409-1.0804z" fill="#926a0d"/>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Tux the Penguin</dc:title>
+        <dc:date>2011-01-06T20:30:29</dc:date>
+        <dc:description>A little stylized drawing of Tux the Linux penguin.</dc:description>
+        <dc:source>http://openclipart.org/detail/103855/tux-the-penguin-by-mairin</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>mairin</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>OS</rdf:li>
+            <rdf:li>animal</rdf:li>
+            <rdf:li>cartoon</rdf:li>
+            <rdf:li>character</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>cute</rdf:li>
+            <rdf:li>free</rdf:li>
+            <rdf:li>linux</rdf:li>
+            <rdf:li>penguin</rdf:li>
+            <rdf:li>tux</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

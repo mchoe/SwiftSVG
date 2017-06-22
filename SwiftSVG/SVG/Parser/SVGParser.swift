@@ -22,6 +22,10 @@ extension URL: SVGParsable { }
 
 open class SVGParser: NSObject, XMLParserDelegate {
     
+    enum SVGParserError {
+        case invalidSVG
+    }
+    
     fileprivate var elementStack = Stack<SVGElement>()
     
     private let configuration: SVGParserConfiguration
@@ -57,18 +61,18 @@ open class SVGParser: NSObject, XMLParserDelegate {
         guard let elementType = self.configuration.tags[elementName] else {
             return
         }
-        
         let svgElement = elementType()
-        
         for (attributeName, attributeClosure) in svgElement.supportedAttributes {
             if let attributeValue = attributeDict[attributeName] {
                 attributeClosure(attributeValue)
             }
         }
-        
         self.elementStack.push(svgElement)
     }
     
+    public func parserDidEndDocument(_ parser: XMLParser) {
+        print("Did End: \(self.containerLayer?.sublayers)")
+    }
     
     open func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
@@ -77,7 +81,6 @@ open class SVGParser: NSObject, XMLParserDelegate {
         }
         
         if let shapeElement = lastItem as? SVGShapeElement {
-            
             self.elementStack.pop()
             guard let containerElement = self.elementStack.last as? SVGContainerElement else {
                 return
@@ -88,7 +91,21 @@ open class SVGParser: NSObject, XMLParserDelegate {
             
             self.containerLayer?.addSublayer(containerElement.containerLayer)
             self.elementStack.pop()
-            
+        }
+    }
+    
+    public func parser(_ parser: XMLParser, validationErrorOccurred validationError: Error) {
+        print("Validation Error occured")
+    }
+    
+    public func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
+        print("Parse Error: \(parseError)")
+        let code = (parseError as NSError).code
+        switch code {
+        case 76:
+            print("Invalid XML: \(SVGParserError.invalidSVG)")
+        default:
+            break
         }
     }
     

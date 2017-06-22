@@ -20,35 +20,22 @@ struct SVGPath: SVGShapeElement {
     var svgLayer = CAShapeLayer()
     
     internal func parseD(pathString: String) {
-        
-        assert(pathString.hasPrefix("M") || pathString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
-        
-        let workingString = (pathString.hasSuffix("Z") == false && pathString.hasSuffix("z") == false ? pathString + "z" : pathString)
-        
-        let returnPath = UIBezierPath()
-        
-        returnPath.move(to: CGPoint.zero)
-        
-        var previousCommand: PreviousCommand? = nil
-        for thisPathCommand in PathDLexer(pathString: workingString) {
-            print(type(of: thisPathCommand))
-            thisPathCommand.execute(on: returnPath, previousCommand: previousCommand)
-            previousCommand = thisPathCommand
-        }
-        
-        //returnPath.close()
-        
-        self.svgLayer.path = returnPath.cgPath
-        
-        /*
+        var workingString = pathString.trimWhitespace()
+        assert(workingString.hasPrefix("M") || workingString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
+        //assert(workingString.hasSuffix("Z") || workingString.hasSuffix("z"), "Path d attribute must begin with MoveTo Command (\"M\")")
         autoreleasepool { () -> () in
-            
-            
-            
+            //workingString = (pathString.hasSuffix("Z") == false && pathString.hasSuffix("z") == false ? pathString + "z" : pathString)
+            let returnPath = UIBezierPath()
+            returnPath.move(to: CGPoint.zero)
+            var previousCommand: PreviousCommand? = nil
+            for thisPathCommand in PathDLexer(pathString: workingString) {
+                thisPathCommand.execute(on: returnPath, previousCommand: previousCommand)
+                previousCommand = thisPathCommand
+                print(thisPathCommand)
+            }
+            print(returnPath)
+            self.svgLayer.path = returnPath.cgPath
         }
-        */
-        
-            
     }
     
     func didProcessElement(in container: SVGContainerElement?) {
@@ -57,8 +44,6 @@ struct SVGPath: SVGShapeElement {
         }
         container.containerLayer.addSublayer(self.svgLayer)
     }
-    
-    
 }
 
 

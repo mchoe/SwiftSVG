@@ -13,14 +13,18 @@ struct CoordinateLexer: IteratorProtocol, Sequence {
     
     typealias Element = CGPoint
     
+    var currentCharacter: CChar {
+        return self.workingString[self.interatorIndex]
+    }
     var coordinateString: String
     var workingString: ContiguousArray<CChar>
-    var stringIndex: Int = 0
-    var xNumber = [CChar]()
-    var yNumber = [CChar]()
+    var interatorIndex: Int = 0
+    var numberArray = [CChar]()
+    //var yNumber = [CChar]()
     
     init(coordinateString: String) {
         self.coordinateString = coordinateString.trimWhitespace()
+        //print("Trimmed: \(self.coordinateString)")
         self.workingString = self.coordinateString.utf8CString
     }
     
@@ -30,6 +34,45 @@ struct CoordinateLexer: IteratorProtocol, Sequence {
     
     mutating func next() -> Element? {
         
+        var didParseX = false
+        var returnPoint = CGPoint.zero
+        
+        while self.interatorIndex < self.workingString.count - 1 {
+            
+            switch self.currentCharacter {
+            case DCharacter.comma.rawValue, DCharacter.space.rawValue:
+                //print("Is comma: \(self.currentCharacter == DCharacter.comma.rawValue)")
+                self.interatorIndex += 1
+                if !didParseX {
+                    if let asDouble = Double(byteArray: self.numberArray) {
+                        returnPoint.x = CGFloat(asDouble)
+                        self.numberArray.removeAll()
+                        didParseX = true
+                    }
+                } else {
+                    if let asDouble = Double(byteArray: self.numberArray) {
+                        returnPoint.y = CGFloat(asDouble)
+                        self.numberArray.removeAll()
+                        didParseX = false
+                        return returnPoint
+                    }
+                }
+                
+            default:
+                self.numberArray.append(self.currentCharacter)
+                self.interatorIndex += 1
+            }
+        }
+        if didParseX {
+            if let asDouble = Double(byteArray: self.numberArray) {
+                returnPoint.y = CGFloat(asDouble)
+                self.numberArray.removeAll()
+                return returnPoint
+            }
+        }
+        return nil
+        
+        /*
         let characterCount = self.workingString.count - 1
         
         guard self.stringIndex + 1 < characterCount else {
@@ -44,7 +87,16 @@ struct CoordinateLexer: IteratorProtocol, Sequence {
         var thisCharacter = self.workingString[self.stringIndex]
         while self.stringIndex < characterCount { // SPACE or COMMA separator
             
-            if (thisCharacter == 32 || thisCharacter == 44) {
+            switch thisCharacter {
+            case DCharacter.space.rawValue:
+                
+            case DCharacter.comma.rawValue:
+                
+            default:
+                <#code#>
+            }
+            
+            if (thisCharacter ==  || thisCharacter == DCharacter.comma.rawValue) {
                 if numberParsed == 0 {
                     numberParsed += 1
                     self.stringIndex += 1
@@ -72,6 +124,7 @@ struct CoordinateLexer: IteratorProtocol, Sequence {
             return CGPoint(x: xAsDouble, y: yAsDouble)
         }
         return nil
+        */
     }
 }
 

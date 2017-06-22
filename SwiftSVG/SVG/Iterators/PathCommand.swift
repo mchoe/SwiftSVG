@@ -85,26 +85,30 @@ struct MoveTo: PathCommand {
     }
     
     func execute(on path: UIBezierPath, previousCommand: PreviousCommand? = nil) {
-        let point = self.pointForPathType(CGPoint(x: self.coordinateBuffer[0], y: self.coordinateBuffer[1]), relativeTo: path.currentPoint)
+        let relativePoint: CGPoint
+        if let previousCommand = previousCommand {
+            
+            // Sequential MoveTo commands should be treated as LineTos
+            //
+            // From Docs (https://www.w3.org/TR/SVG2/paths.html#PathDataMovetoCommands):
+            // Start a new sub-path at the given (x,y) coordinates. M (uppercase) indicates that absolute coordinates will follow; m (lowercase) indicates that relative coordinates will follow. If a moveto is followed by multiple pairs of coordinates, the subsequent pairs are treated as implicit lineto commands. Hence, implicit lineto commands will be relative if the moveto is relative, and absolute if the moveto is absolute.
+            
+            if previousCommand is MoveTo {
+                var implicitLineTo = LineTo(pathType: self.pathType)
+                implicitLineTo.coordinateBuffer = [self.coordinateBuffer[0], self.coordinateBuffer[1]]
+                implicitLineTo.execute(on: path)
+                return
+            }
+            
+            // Not a sequential MoveTo
+            
+            relativePoint = CGPoint(x: previousCommand.coordinateBuffer[coordinateBuffer.count - 2], y: previousCommand.coordinateBuffer[coordinateBuffer.count - 2])
+        } else {
+            relativePoint = path.currentPoint
+        }
+        let point = self.pointForPathType(CGPoint(x: self.coordinateBuffer[0], y: self.coordinateBuffer[1]), relativeTo: relativePoint)
+        print("\(self.pathType): \(point)")
         path.move(to: point)
-    }
-}
-
-struct CurveTo: PathCommand {
-    
-    var coordinateBuffer = [Double]()
-    let numberOfRequiredParameters = 6
-    let pathType: PathType
-    
-    init(pathType: PathType) {
-        self.pathType = pathType
-    }
-    
-    func execute(on path: UIBezierPath, previousCommand: PreviousCommand? = nil) {
-        let startControl = self.pointForPathType(CGPoint(x: self.coordinateBuffer[0], y: self.coordinateBuffer[1]), relativeTo: path.currentPoint)
-        let endControl = self.pointForPathType(CGPoint(x: self.coordinateBuffer[2], y: self.coordinateBuffer[3]), relativeTo: path.currentPoint)
-        let point = self.pointForPathType(CGPoint(x: self.coordinateBuffer[4], y: self.coordinateBuffer[5]), relativeTo: path.currentPoint)
-        path.addCurve(to: point, controlPoint1: startControl, controlPoint2: endControl)
     }
 }
 
@@ -171,6 +175,24 @@ struct VerticalLineTo: PathCommand {
         let y = self.coordinateBuffer[0]
         let point = (self.pathType == .absolute ? CGPoint(x: path.currentPoint.x, y: CGFloat(y)) : CGPoint(x: path.currentPoint.x, y: path.currentPoint.y + CGFloat(y)))
         path.addLine(to: point)
+    }
+}
+
+struct CurveTo: PathCommand {
+    
+    var coordinateBuffer = [Double]()
+    let numberOfRequiredParameters = 6
+    let pathType: PathType
+    
+    init(pathType: PathType) {
+        self.pathType = pathType
+    }
+    
+    func execute(on path: UIBezierPath, previousCommand: PreviousCommand? = nil) {
+        let startControl = self.pointForPathType(CGPoint(x: self.coordinateBuffer[0], y: self.coordinateBuffer[1]), relativeTo: path.currentPoint)
+        let endControl = self.pointForPathType(CGPoint(x: self.coordinateBuffer[2], y: self.coordinateBuffer[3]), relativeTo: path.currentPoint)
+        let point = self.pointForPathType(CGPoint(x: self.coordinateBuffer[4], y: self.coordinateBuffer[5]), relativeTo: path.currentPoint)
+        path.addCurve(to: point, controlPoint1: startControl, controlPoint2: endControl)
     }
 }
 

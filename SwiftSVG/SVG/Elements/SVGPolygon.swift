@@ -25,8 +25,10 @@ struct SVGPolygon: SVGShapeElement {
             } else {
                 polylinePath.addLine(to: thisPoint)
             }
+            print("Point [\(index)]: \(thisPoint)")
         }
         polylinePath.close()
+        print("Path: \(polylinePath)")
         self.svgLayer.path = polylinePath.cgPath
     }
     
@@ -35,5 +37,6 @@ struct SVGPolygon: SVGShapeElement {
             return
         }
         container.containerLayer.addSublayer(self.svgLayer)
+        //print("Layer: \(self.svgLayer.frame)")
     }
 }

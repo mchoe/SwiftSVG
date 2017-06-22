@@ -68,7 +68,7 @@ struct PathDLexer: IteratorProtocol, Sequence {
         return self.workingString[self.iteratorIndex]
     }
     
-    var currentCommand: PathCommand = MoveTo(pathType: .absolute)
+    var currentCommand: PathCommand? = nil
     
     var iteratorIndex: Int = 0
     let pathString: String
@@ -88,61 +88,51 @@ struct PathDLexer: IteratorProtocol, Sequence {
     mutating func next() -> Element? {
         
         self.numberArray.removeAll()
-        self.currentCommand.clearBuffer()
+        self.currentCommand?.clearBuffer()
         
-        while self.iteratorIndex < self.workingString.count {
+        while self.iteratorIndex < self.workingString.count - 1 {
             
             if let command = characterDictionary[self.currentCharacter] {
-             
-                if let validCoordinate = Double(byteArray: self.numberArray) {
-                    self.currentCommand.pushCoordinate(validCoordinate)
-                    self.numberArray.removeAll()
-                }
-                
+                self.pushCoordinateIfPossible(self.numberArray)
                 self.iteratorIndex += 1
                 
-                if self.currentCommand.canPushCommand {
+                if self.currentCommand != nil && self.currentCommand!.canPushCommand {
                     let returnCommand = self.currentCommand
                     self.currentCommand = command
                     return returnCommand
                 } else {
                     self.currentCommand = command
                 }
-                
             }
             
             switch self.currentCharacter {
             case DCharacter.comma.rawValue, DCharacter.space.rawValue:
-                if let validCoordinate = Double(byteArray: self.numberArray) {
-                    self.currentCommand.pushCoordinate(validCoordinate)
-                    self.numberArray.removeAll()
-                }
-                
+                self.pushCoordinateIfPossible(self.numberArray)
                 self.iteratorIndex += 1
-                
-                if self.currentCommand.canPushCommand {
+                if self.currentCommand != nil && self.currentCommand!.canPushCommand {
                     return self.currentCommand
                 }
-                
             case DCharacter.sign.rawValue:
-                if let validCoordinate = Double(byteArray: self.numberArray) {
-                    self.currentCommand.pushCoordinate(validCoordinate)
-                    self.numberArray.removeAll()
-                }
+                self.pushCoordinateIfPossible(self.numberArray)
             default:
                 break
             }
             
             self.numberArray.append(self.currentCharacter)
             self.iteratorIndex += 1
-            
         }
-        
         if self.currentCommand is ClosePath {
-            self.iteratorIndex += 1
-            self.currentCommand = MoveTo(pathType: .absolute)
-            return ClosePath(pathType: .absolute)
+            let returnCommand = self.currentCommand
+            self.currentCommand = nil
+            return returnCommand
         }
         return nil
+    }
+    
+    mutating func pushCoordinateIfPossible(_ byteArray: [CChar]) {
+        if let validCoordinate = Double(byteArray: byteArray) {
+            self.currentCommand?.pushCoordinate(validCoordinate)
+            self.numberArray.removeAll()
+        }
     }
 }

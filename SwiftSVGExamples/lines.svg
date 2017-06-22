@@ -1,3 +1,4 @@
 <svg>
-	<line x1="5" y1="5" x2="100" y2="100" stroke="#765373" stroke-width="8"/>
+	<!--<line x1="5" y1="5" x2="100" y2="100" stroke="#765373" stroke-width="8"/>-->
+	<path d="M200,10v300h-100z" fill="#ee66aa" />
 </svg>

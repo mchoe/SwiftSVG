@@ -25,9 +25,17 @@ extension SVGShapeElement {
     var fillAndStrokeAttributes: [String : (String) -> ()] {
         return [
             "fill": self.fillHex,
+            "opacity": self.opacity,
             "stroke": self.strokeColor,
             "stroke-width": self.strokeWidth
         ]
+    }
+    
+    internal func opacity(opacity: String) {
+        guard let opacity = CGFloat(opacity) else {
+            return
+        }
+        self.svgLayer.opacity = Float(opacity)
     }
     
     internal func fillHex(fillColor: String) {
@@ -45,7 +53,7 @@ extension SVGShapeElement {
     }
     
     internal func strokeLineJoin(lineJoin: String) {
-        assert(false, "Need Implementation")
+        assert(false, "Needs Implementation")
     }
     
     internal func strokeWidth(strokeWidth: String) {

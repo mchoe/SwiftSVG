@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		174FF06F1EF10BDA003F3DBE /* pizza.svg in Resources */ = {isa = PBXBuildFile; fileRef = 174FF06E1EF10BDA003F3DBE /* pizza.svg */; };
-		176A88CF1EE9C31500764E8E /* christmas.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176A88CE1EE9C31500764E8E /* christmas.svg */; };
 		176BC9811EE36BC700F7B54C /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176BC9801EE36BC700F7B54C /* SwiftSVGiOS.framework */; };
 		176BC9B01EE48D3C00F7B54C /* circles.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9AF1EE48D3C00F7B54C /* circles.svg */; };
 		176BC9B91EE49C7200F7B54C /* rectangles.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9B81EE49C7200F7B54C /* rectangles.svg */; };
@@ -22,6 +21,10 @@
 		176BC9FF1EE63FAB00F7B54C /* polylines.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9FE1EE63FAB00F7B54C /* polylines.svg */; };
 		17D5707F1E1F4EC3007CED68 /* SwiftSVGMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */; };
 		17D570801E1F4EC3007CED68 /* SwiftSVGMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		381945471EFA1BD900E61DCE /* fistBump.svg in Resources */ = {isa = PBXBuildFile; fileRef = 381945461EFA1BD900E61DCE /* fistBump.svg */; };
+		381945511EFA43FA00E61DCE /* tiger.svg in Resources */ = {isa = PBXBuildFile; fileRef = 381945501EFA43FA00E61DCE /* tiger.svg */; };
+		3819455D1EFB168C00E61DCE /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3819455C1EFB168C00E61DCE /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg */; };
+		381945611EFB1B0400E61DCE /* openclipart-tux.svg in Resources */ = {isa = PBXBuildFile; fileRef = 381945601EFB1B0400E61DCE /* openclipart-tux.svg */; };
 		381E99C31EFA0DC400839918 /* polygons.svg in Resources */ = {isa = PBXBuildFile; fileRef = 381E99C21EFA0DC400839918 /* polygons.svg */; };
 		38A1CE101EF77A0F00D2E54E /* triangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38A1CE0F1EF77A0F00D2E54E /* triangle.svg */; };
 		8AC4DBC01CB37DB800137DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */; };
@@ -63,7 +66,6 @@
 
 /* Begin PBXFileReference section */
 		174FF06E1EF10BDA003F3DBE /* pizza.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pizza.svg; sourceTree = "<group>"; };
-		176A88CE1EE9C31500764E8E /* christmas.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = christmas.svg; sourceTree = "<group>"; };
 		176BC9801EE36BC700F7B54C /* SwiftSVGiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVGiOS.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/SwiftSVG-cttiidwkfbxdynddtanvdrugfivm/Build/Products/Debug-iphonesimulator/SwiftSVGiOS.framework"; sourceTree = "<group>"; };
 		176BC9AF1EE48D3C00F7B54C /* circles.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = circles.svg; sourceTree = "<group>"; };
 		176BC9B81EE49C7200F7B54C /* rectangles.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rectangles.svg; sourceTree = "<group>"; };
@@ -72,6 +74,10 @@
 		176BC9CC1EE4C44E00F7B54C /* lines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lines.svg; sourceTree = "<group>"; };
 		176BC9FE1EE63FAB00F7B54C /* polylines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polylines.svg; sourceTree = "<group>"; };
 		17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		381945461EFA1BD900E61DCE /* fistBump.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fistBump.svg; sourceTree = "<group>"; };
+		381945501EFA43FA00E61DCE /* tiger.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = tiger.svg; sourceTree = "<group>"; };
+		3819455C1EFB168C00E61DCE /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-Anonymous_Architetto_--_Coccinella_04.svg"; sourceTree = "<group>"; };
+		381945601EFB1B0400E61DCE /* openclipart-tux.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-tux.svg"; sourceTree = "<group>"; };
 		381E99C21EFA0DC400839918 /* polygons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polygons.svg; sourceTree = "<group>"; };
 		38A1CE0F1EF77A0F00D2E54E /* triangle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = triangle.svg; sourceTree = "<group>"; };
 		8AC4DBBD1CB37DB800137DC9 /* SwiftSVGExampleiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVGExampleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,14 +174,17 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				176A88CE1EE9C31500764E8E /* christmas.svg */,
+				381945601EFB1B0400E61DCE /* openclipart-tux.svg */,
+				3819455C1EFB168C00E61DCE /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg */,
 				176BC9AF1EE48D3C00F7B54C /* circles.svg */,
 				176BC9C61EE4C1AB00F7B54C /* ellipses.svg */,
+				381945461EFA1BD900E61DCE /* fistBump.svg */,
 				174FF06E1EF10BDA003F3DBE /* pizza.svg */,
 				176BC9FE1EE63FAB00F7B54C /* polylines.svg */,
 				381E99C21EFA0DC400839918 /* polygons.svg */,
 				8AC4DBE71CB37E2800137DC9 /* hawaiiFlowers.svg */,
 				176BC9CC1EE4C44E00F7B54C /* lines.svg */,
+				381945501EFA43FA00E61DCE /* tiger.svg */,
 				176BC9B81EE49C7200F7B54C /* rectangles.svg */,
 				38A1CE0F1EF77A0F00D2E54E /* triangle.svg */,
 			);
@@ -267,16 +276,19 @@
 			files = (
 				381E99C31EFA0DC400839918 /* polygons.svg in Resources */,
 				8AC4DBE81CB37E2800137DC9 /* hawaiiFlowers.svg in Resources */,
+				381945511EFA43FA00E61DCE /* tiger.svg in Resources */,
 				38A1CE101EF77A0F00D2E54E /* triangle.svg in Resources */,
 				176BC9B01EE48D3C00F7B54C /* circles.svg in Resources */,
 				176BC9FF1EE63FAB00F7B54C /* polylines.svg in Resources */,
 				176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */,
-				176A88CF1EE9C31500764E8E /* christmas.svg in Resources */,
 				174FF06F1EF10BDA003F3DBE /* pizza.svg in Resources */,
+				3819455D1EFB168C00E61DCE /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg in Resources */,
 				176BC9B91EE49C7200F7B54C /* rectangles.svg in Resources */,
 				176BC9C71EE4C1AB00F7B54C /* ellipses.svg in Resources */,
+				381945611EFB1B0400E61DCE /* openclipart-tux.svg in Resources */,
 				8AC4DBCA1CB37DB800137DC9 /* LaunchScreen.storyboard in Resources */,
 				8AC4DBC71CB37DB800137DC9 /* Assets.xcassets in Resources */,
+				381945471EFA1BD900E61DCE /* fistBump.svg in Resources */,
 				8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
