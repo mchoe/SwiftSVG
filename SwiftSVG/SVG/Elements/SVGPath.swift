@@ -16,7 +16,7 @@
 
 struct SVGPath: SVGShapeElement {
     
-    var supportedAttributes = [String : (String) -> ()]()
+    var supportedAttributes = [String : ((String) -> ())?]()
     var svgLayer = CAShapeLayer()
     
     internal func parseD(pathString: String) {

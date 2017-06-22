@@ -14,8 +14,9 @@
 
 struct SVGRootElement: SVGContainerElement {
     
+    var attributesToApply = [String : String]()
     var containerLayer = CALayer()
-    var supportedAttributes = [String : (String) -> ()]()
+    var supportedAttributes = [String : ((String) -> ())?]()
     
     internal func parseWidth(lengthString: String) {
         if let width = Double(lengthString: lengthString) {

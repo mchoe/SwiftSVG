@@ -16,7 +16,7 @@ class SVGRectangle: SVGShapeElement {
     
     var rectangleRect = CGRect()
     var svgLayer = CAShapeLayer()
-    var supportedAttributes: [String : (String) -> ()] = [:]
+    var supportedAttributes: [String : ((String) -> ())?] = [:]
     var xCornerRadius = CGFloat(0.0)
     var yCornerRadius = CGFloat(0.0)
     

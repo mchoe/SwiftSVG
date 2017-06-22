@@ -14,11 +14,28 @@
 
 struct SVGGroup: SVGContainerElement {
     
+    var attributesToApply = [String : String]()
     var containerLayer = CALayer()
-    var supportedAttributes = [String : (String) -> ()]()
+    var supportedAttributes = [String : ((String) -> ())?]()
     
     func didProcessElement(in container: SVGContainerElement?) {
-        print("Did process SVG Element: \(self.containerLayer.frame)")
+        
+        guard let containerSublayers = self.containerLayer.sublayers else {
+            return
+        }
+        
+        print("Should apply attributes: \(self.attributesToApply)")
+        
+        
+        for thisSublayer in containerSublayers {
+            guard let thisShapeLayer = thisSublayer as? CAShapeLayer else {
+                continue
+            }
+            
+        }
     }
     
 }
+
+extension SVGGroup: Fillable { }
+extension SVGGroup: Strokable { }

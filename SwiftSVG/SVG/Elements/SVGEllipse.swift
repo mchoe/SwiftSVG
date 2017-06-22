@@ -18,7 +18,7 @@ class SVGEllipse: SVGShapeElement {
     var xRadius: CGFloat = 0
     var yRadius: CGFloat = 0
     var svgLayer = CAShapeLayer()
-    var supportedAttributes: [String : (String) -> ()] = [:]
+    var supportedAttributes: [String : ((String) -> ())?] = [:]
     
     internal func xRadius(r: String) {
         guard let r = Double(lengthString: r) else {

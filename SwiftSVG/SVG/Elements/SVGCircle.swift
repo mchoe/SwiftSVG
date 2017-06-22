@@ -18,7 +18,7 @@ class SVGCircle: SVGShapeElement {
     var circleCenter = CGPoint.zero
     var circleRadius: CGFloat = 0
     var svgLayer = CAShapeLayer()
-    var supportedAttributes: [String : (String) -> ()] = [:]
+    var supportedAttributes: [String : ((String) -> ())?] = [:]
     
     internal func radius(r: String) {
         guard let r = Double(lengthString: r) else {

@@ -48,7 +48,8 @@ struct SVGParserConfiguration {
                     "cy": returnElement.yCenter,
                     "r": returnElement.radius,
                 ]
-                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.fillAttributes)
+                returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 return returnElement
             },
             "ellipse": {
@@ -59,11 +60,15 @@ struct SVGParserConfiguration {
                     "rx": returnElement.xRadius,
                     "ry": returnElement.yRadius,
                 ]
-                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.fillAttributes)
+                returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 return returnElement
             },
             "g": {
-                let returnElement = SVGGroup()
+                var returnElement = SVGGroup()
+                returnElement.supportedAttributes = [
+                    "fill": nil
+                ]
                 return returnElement
             },
             "line": {
@@ -74,7 +79,8 @@ struct SVGParserConfiguration {
                     "y1": returnElement.y1,
                     "y2": returnElement.y2,
                 ]
-                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.fillAttributes)
+                returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 return returnElement
             },
             "path": {
@@ -82,7 +88,8 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes = [
                     "d": returnElement.parseD,
                 ]
-                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.fillAttributes)
+                returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 return returnElement
             },
             "polygon": {
@@ -90,7 +97,8 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes = [
                     "points": returnElement.points
                 ]
-                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.fillAttributes)
+                returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 return returnElement
             },
             "polyline": {
@@ -98,7 +106,8 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes = [
                     "points": returnElement.points
                 ]
-                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.fillAttributes)
+                returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 return returnElement
             },
             "rect": {
@@ -111,7 +120,8 @@ struct SVGParserConfiguration {
                     "x": returnElement.parseX,
                     "y": returnElement.parseY,
                 ]
-                returnElement.supportedAttributes.add(returnElement.fillAndStrokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.fillAttributes)
+                returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 return returnElement
             },
             "svg": {

@@ -15,7 +15,7 @@
 struct SVGPolygon: SVGShapeElement {
     
     var svgLayer = CAShapeLayer()
-    var supportedAttributes: [String : (String) -> ()] = [:]
+    var supportedAttributes: [String : ((String) -> ())?] = [:]
     
     internal func points(points: String) {
         let polylinePath = UIBezierPath()

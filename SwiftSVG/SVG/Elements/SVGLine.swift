@@ -18,7 +18,7 @@ class SVGLine: SVGShapeElement {
     var start = CGPoint.zero
     
     var svgLayer = CAShapeLayer()
-    var supportedAttributes: [String : (String) -> ()] = [:]
+    var supportedAttributes: [String : ((String) -> ())?] = [:]
     
     internal func x1(x1: String) {
         guard let x1 = Double(x1) else {

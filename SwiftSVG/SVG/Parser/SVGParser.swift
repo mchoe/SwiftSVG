@@ -64,14 +64,17 @@ open class SVGParser: NSObject, XMLParserDelegate {
         let svgElement = elementType()
         for (attributeName, attributeClosure) in svgElement.supportedAttributes {
             if let attributeValue = attributeDict[attributeName] {
-                attributeClosure(attributeValue)
+                if var containerElement = svgElement as? SVGContainerElement {
+                    containerElement.attributesToApply[attributeName] = attributeValue
+                    self.elementStack.push(containerElement)
+                    continue
+                } else {
+                    attributeClosure?(attributeValue)
+                }
+                
             }
         }
         self.elementStack.push(svgElement)
-    }
-    
-    public func parserDidEndDocument(_ parser: XMLParser) {
-        //print("Did End: \(self.containerLayer?.sublayers)")
     }
     
     open func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
@@ -85,10 +88,12 @@ open class SVGParser: NSObject, XMLParserDelegate {
             guard let containerElement = self.elementStack.last as? SVGContainerElement else {
                 return
             }
+            print("Adding to SVG Container: \(containerElement)")
             shapeElement.didProcessElement(in: containerElement)
             
         } else if let containerElement = lastItem as? SVGContainerElement {
-            
+            print("Popping off container (\(type(of: containerElement))), subviews: \(containerElement.containerLayer.sublayers)")
+            containerElement.didProcessElement(in: nil)
             self.containerLayer?.addSublayer(containerElement.containerLayer)
             self.elementStack.pop()
         }
