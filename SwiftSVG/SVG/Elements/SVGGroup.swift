@@ -12,6 +12,12 @@
     import AppKit
 #endif
 
+let groupAttributes: [String : (SVGGroup) -> (String, CAShapeLayer) -> ()] = [
+    "fill": SVGGroup.fillGroup,
+    "fill-rule": SVGGroup.fillRuleGroup,
+    "opacity": SVGGroup.opacityGroup
+]
+
 struct SVGGroup: SVGContainerElement {
     
     var attributesToApply = [String : String]()
@@ -24,18 +30,42 @@ struct SVGGroup: SVGContainerElement {
             return
         }
         
-        print("Should apply attributes: \(self.attributesToApply)")
-        
-        
         for thisSublayer in containerSublayers {
-            guard let thisShapeLayer = thisSublayer as? CAShapeLayer else {
+            guard let thisShapeSublayer = thisSublayer as? CAShapeLayer else {
                 continue
             }
-            
+            for (attribute, value) in self.attributesToApply {
+                self.applyAttribute(attribute, value: value, on: thisShapeSublayer)
+            }
+        }
+        
+    }
+    
+    func applyAttribute(_ attribute: String, value: String, on layer: CAShapeLayer) {
+        if let thisMethod = groupAttributes[attribute] {
+            thisMethod(self)(value, layer)
         }
     }
     
+    func fillGroup(_ fillColor: String, on layer: CAShapeLayer) {
+        guard let fillColor = UIColor(svgString: fillColor) else {
+            return
+        }
+        layer.fillColor = fillColor.cgColor
+    }
+    
+    func fillRuleGroup(_ fillRule: String, on layer: CAShapeLayer) {
+        guard fillRule == "evenodd" else {
+            return
+        }
+        layer.fillRule = kCAFillRuleEvenOdd
+    }
+    
+    func opacityGroup(_ opacity: String, on layer: CAShapeLayer) {
+        guard let opacity = CGFloat(opacity) else {
+            return
+        }
+        layer.opacity = Float(opacity)
+    }
+    
 }
-
-extension SVGGroup: Fillable { }
-extension SVGGroup: Strokable { }

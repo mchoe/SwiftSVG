@@ -21,7 +21,7 @@ struct SVGParserConfiguration {
                 var returnElement = SVGPath()
                 returnElement.supportedAttributes = [
                     "d": returnElement.parseD,
-                    "fill": returnElement.fillHex
+                    "fill": returnElement.fill
                 ]
                 return returnElement
             },
@@ -67,7 +67,9 @@ struct SVGParserConfiguration {
             "g": {
                 var returnElement = SVGGroup()
                 returnElement.supportedAttributes = [
-                    "fill": nil
+                    "fill": nil,
+                    "fill-rule": nil,
+                    "opacity": nil,
                 ]
                 return returnElement
             },

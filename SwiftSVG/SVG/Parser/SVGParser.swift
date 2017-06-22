@@ -62,11 +62,13 @@ open class SVGParser: NSObject, XMLParserDelegate {
             return
         }
         let svgElement = elementType()
+        
+        var groupAttributes = [String : String]()
+        
         for (attributeName, attributeClosure) in svgElement.supportedAttributes {
             if let attributeValue = attributeDict[attributeName] {
-                if var containerElement = svgElement as? SVGContainerElement {
-                    containerElement.attributesToApply[attributeName] = attributeValue
-                    self.elementStack.push(containerElement)
+                if svgElement is SVGContainerElement {
+                    groupAttributes[attributeName] = attributeValue
                     continue
                 } else {
                     attributeClosure?(attributeValue)
@@ -74,7 +76,15 @@ open class SVGParser: NSObject, XMLParserDelegate {
                 
             }
         }
+        if var containerElement = svgElement as? SVGContainerElement {
+            if groupAttributes.count > 0 {
+                containerElement.attributesToApply = groupAttributes
+                self.elementStack.push(containerElement)
+                return
+            }
+        }
         self.elementStack.push(svgElement)
+        
     }
     
     open func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
@@ -88,11 +98,9 @@ open class SVGParser: NSObject, XMLParserDelegate {
             guard let containerElement = self.elementStack.last as? SVGContainerElement else {
                 return
             }
-            print("Adding to SVG Container: \(containerElement)")
             shapeElement.didProcessElement(in: containerElement)
             
         } else if let containerElement = lastItem as? SVGContainerElement {
-            print("Popping off container (\(type(of: containerElement))), subviews: \(containerElement.containerLayer.sublayers)")
             containerElement.didProcessElement(in: nil)
             self.containerLayer?.addSublayer(containerElement.containerLayer)
             self.elementStack.pop()

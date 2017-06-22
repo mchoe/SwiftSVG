@@ -80,6 +80,7 @@
 		17CCE73E1EE66CE8007FA5AD /* SVGPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9FC1EE63EEE00F7B54C /* SVGPolygon.swift */; };
 		17CCE73F1EE66CE9007FA5AD /* SVGPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9FC1EE63EEE00F7B54C /* SVGPolygon.swift */; };
 		17D570711E1F429D007CED68 /* NSBezierPath+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */; };
+		3813ED521EFC3AC20054ECBD /* ElementAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813ED511EFC3AC20054ECBD /* ElementAttributes.swift */; };
 		381E99AA1EF801BB00839918 /* LineToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99A91EF801BB00839918 /* LineToTests.swift */; };
 		381E99AB1EF801DA00839918 /* PathDLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FF06C1EF10691003F3DBE /* PathDLexer.swift */; };
 		381E99AD1EF8946E00839918 /* ScalarFromByteArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99AC1EF8946E00839918 /* ScalarFromByteArrayTests.swift */; };
@@ -156,6 +157,7 @@
 		17CCE7371EE666D6007FA5AD /* Scalar+FromByteArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scalar+FromByteArray.swift"; sourceTree = "<group>"; };
 		17CCE7391EE66C17007FA5AD /* CGFloatExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensionsTests.swift; sourceTree = "<group>"; };
 		17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBezierPath+CrossPlatform.swift"; sourceTree = "<group>"; };
+		3813ED511EFC3AC20054ECBD /* ElementAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementAttributes.swift; sourceTree = "<group>"; };
 		381E99A91EF801BB00839918 /* LineToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineToTests.swift; sourceTree = "<group>"; };
 		381E99AC1EF8946E00839918 /* ScalarFromByteArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalarFromByteArrayTests.swift; sourceTree = "<group>"; };
 		381E99AE1EF8A55000839918 /* MoveToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveToTests.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		17CCE7311EE64D84007FA5AD /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				3813ED511EFC3AC20054ECBD /* ElementAttributes.swift */,
 				176BC9AC1EE48CE800F7B54C /* SVGCircle.swift */,
 				175093C21E6C6C2100EF1853 /* SVGElement.swift */,
 				176BC9C31EE4C04100F7B54C /* SVGEllipse.swift */,
@@ -654,6 +657,7 @@
 				39B8D8A81B3C32DD009DAF60 /* Scalar+FromHex.swift in Sources */,
 				39B8D8A91B3C32DD009DAF60 /* Stack.swift in Sources */,
 				175093CC1E6C773600EF1853 /* SVGRootElement.swift in Sources */,
+				3813ED521EFC3AC20054ECBD /* ElementAttributes.swift in Sources */,
 				176BC9BC1EE4AE2700F7B54C /* Dictionary+Merge.swift in Sources */,
 				176BC9B61EE498C700F7B54C /* SVGRectangle.swift in Sources */,
 				176BC9A41EE484B400F7B54C /* FloatingPoint+ParseLengthString.swift in Sources */,
