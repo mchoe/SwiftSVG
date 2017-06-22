@@ -114,6 +114,9 @@ struct PathDLexer: IteratorProtocol, Sequence {
                 }
             case DCharacter.sign.rawValue:
                 self.pushCoordinateIfPossible(self.numberArray)
+                if self.currentCommand != nil && self.currentCommand!.canPushCommand {
+                    return self.currentCommand
+                }
             default:
                 break
             }

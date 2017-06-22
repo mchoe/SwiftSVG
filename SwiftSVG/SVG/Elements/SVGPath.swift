@@ -20,11 +20,9 @@ struct SVGPath: SVGShapeElement {
     var svgLayer = CAShapeLayer()
     
     internal func parseD(pathString: String) {
-        var workingString = pathString.trimWhitespace()
+        let workingString = pathString.trimWhitespace()
         assert(workingString.hasPrefix("M") || workingString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
-        //assert(workingString.hasSuffix("Z") || workingString.hasSuffix("z"), "Path d attribute must begin with MoveTo Command (\"M\")")
         autoreleasepool { () -> () in
-            //workingString = (pathString.hasSuffix("Z") == false && pathString.hasSuffix("z") == false ? pathString + "z" : pathString)
             let returnPath = UIBezierPath()
             returnPath.move(to: CGPoint.zero)
             var previousCommand: PreviousCommand? = nil
@@ -34,6 +32,7 @@ struct SVGPath: SVGShapeElement {
                 print(thisPathCommand)
             }
             print(returnPath)
+            
             self.svgLayer.path = returnPath.cgPath
         }
     }
