@@ -71,7 +71,7 @@ open class SVGParser: NSObject, XMLParserDelegate {
     }
     
     public func parserDidEndDocument(_ parser: XMLParser) {
-        print("Did End: \(self.containerLayer?.sublayers)")
+        //print("Did End: \(self.containerLayer?.sublayers)")
     }
     
     open func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {

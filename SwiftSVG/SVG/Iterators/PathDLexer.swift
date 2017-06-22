@@ -124,7 +124,8 @@ struct PathDLexer: IteratorProtocol, Sequence {
             self.numberArray.append(self.currentCharacter)
             self.iteratorIndex += 1
         }
-        if self.currentCommand is ClosePath {
+        if self.currentCommand != nil {
+            self.pushCoordinateIfPossible(self.numberArray)
             let returnCommand = self.currentCommand
             self.currentCommand = nil
             return returnCommand
