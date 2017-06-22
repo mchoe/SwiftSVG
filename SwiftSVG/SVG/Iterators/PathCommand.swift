@@ -288,3 +288,18 @@ struct SmoothQuadraticCurveTo: PathCommand {
         path.addQuadCurve(to: point, controlPoint: controlPoint)
     }
 }
+
+struct EllipticalArc: PathCommand {
+    
+    var coordinateBuffer = [Double]()
+    let numberOfRequiredParameters = 2
+    let pathType: PathType
+    
+    init(pathType: PathType) {
+        self.pathType = pathType
+    }
+    
+    func execute(on path: UIBezierPath, previousCommand: PreviousCommand? = nil) {
+        assert(false, "Needs Implementation")
+    }
+}

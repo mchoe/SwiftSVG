@@ -32,5 +32,9 @@ struct SVGRootElement: SVGContainerElement {
     func didProcessElement(in container: SVGContainerElement?) {
         print("Did process SVG Element: \(self.containerLayer.frame)")
     }
+    
+    func viewBox(coordinates: String) {
+        assert(false, "Needs Implementation")
+    }
 }
 

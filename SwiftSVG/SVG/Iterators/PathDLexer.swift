@@ -15,6 +15,8 @@
 
 
 enum DCharacter: CChar {
+    case A = 65
+    case a = 97
     case C = 67
     case c = 99
     case H = 72
@@ -87,7 +89,6 @@ struct PathDLexer: IteratorProtocol, Sequence {
     
     mutating func next() -> Element? {
         
-        self.numberArray.removeAll()
         self.currentCommand?.clearBuffer()
         
         while self.iteratorIndex < self.workingString.count - 1 {
@@ -102,6 +103,7 @@ struct PathDLexer: IteratorProtocol, Sequence {
                     return returnCommand
                 } else {
                     self.currentCommand = command
+                    self.numberArray.removeAll()
                 }
             }
             
@@ -110,17 +112,20 @@ struct PathDLexer: IteratorProtocol, Sequence {
                 self.pushCoordinateIfPossible(self.numberArray)
                 self.iteratorIndex += 1
                 if self.currentCommand != nil && self.currentCommand!.canPushCommand {
+                    self.numberArray.removeAll()
                     return self.currentCommand
                 }
             case DCharacter.sign.rawValue:
                 self.pushCoordinateIfPossible(self.numberArray)
                 if self.currentCommand != nil && self.currentCommand!.canPushCommand {
+                    self.numberArray.removeAll()
+                    self.numberArray.append(self.currentCharacter)
+                    self.iteratorIndex += 1
                     return self.currentCommand
                 }
             default:
                 break
             }
-            
             self.numberArray.append(self.currentCharacter)
             self.iteratorIndex += 1
         }
@@ -134,6 +139,9 @@ struct PathDLexer: IteratorProtocol, Sequence {
     }
     
     mutating func pushCoordinateIfPossible(_ byteArray: [CChar]) {
+        if byteArray.count == 0 {
+            return
+        }
         if let validCoordinate = Double(byteArray: byteArray) {
             self.currentCommand?.pushCoordinate(validCoordinate)
             self.numberArray.removeAll()

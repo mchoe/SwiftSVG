@@ -118,7 +118,7 @@ struct SVGParserConfiguration {
                 var returnElement = SVGRootElement()
                 returnElement.supportedAttributes = [
                     "width": returnElement.parseWidth,
-                    "height": returnElement.parseHeight
+                    "height": returnElement.parseHeight,
                 ]
                 return returnElement
             }
