@@ -16,8 +16,12 @@ protocol SVGShapeElement: SVGElement {
     var svgLayer: CAShapeLayer { get set }
 }
 
-enum LineJoinType {
+enum LineJoin: String {
     case miter, round, bevel
+}
+
+enum LineCap: String {
+    case butt, round, square
 }
 
 extension SVGShapeElement {
@@ -25,8 +29,12 @@ extension SVGShapeElement {
     var fillAndStrokeAttributes: [String : (String) -> ()] {
         return [
             "fill": self.fillHex,
+            "fill-rule": self.fillRule,
             "opacity": self.opacity,
             "stroke": self.strokeColor,
+            "stroke-linecap": self.strokeLineCap,
+            "stroke-linejoin": self.strokeLineJoin,
+            "stroke-miterlimit": self.strokeMiterLimit,
             "stroke-width": self.strokeWidth
         ]
     }
@@ -45,6 +53,22 @@ extension SVGShapeElement {
         self.svgLayer.fillColor = fillColor.cgColor
     }
     
+    internal func fillRule(fillRule: String) {
+        guard fillRule == "evenodd" else {
+            return
+        }
+        self.svgLayer.fillRule = kCAFillRuleEvenOdd
+    }
+    
+    internal func strokeLineCap(lineCap: String) {
+        switch lineCap {
+        case kCALineCapButt, kCALineCapRound, kCALineCapSquare:
+            self.svgLayer.lineCap = lineCap
+        default:
+            return
+        }
+    }
+    
     internal func strokeColor(strokeColor: String) {
         guard let strokeColor = UIColor(svgString: strokeColor) else {
             return
@@ -53,14 +77,26 @@ extension SVGShapeElement {
     }
     
     internal func strokeLineJoin(lineJoin: String) {
-        assert(false, "Needs Implementation")
+        switch lineJoin {
+        case kCALineJoinBevel, kCALineJoinMiter, kCALineJoinRound:
+            self.svgLayer.lineJoin = lineJoin
+        default:
+            return
+        }
+    }
+    
+    internal func strokeMiterLimit(miterLimit: String) {
+        guard let miterLimit = CGFloat(miterLimit) else {
+            return
+        }
+        self.svgLayer.miterLimit = miterLimit
     }
     
     internal func strokeWidth(strokeWidth: String) {
-        guard let strokeWidth = Double(lengthString: strokeWidth) else {
+        guard let strokeWidth = CGFloat(strokeWidth) else {
             return
         }
-        self.svgLayer.lineWidth = CGFloat(strokeWidth)
+        self.svgLayer.lineWidth = strokeWidth
     }
     
 }
