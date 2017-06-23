@@ -31,7 +31,7 @@ struct SVGRootElement: SVGContainerElement {
     }
     
     func didProcessElement(in container: SVGContainerElement?) {
-        print("Did process SVG Element: \(self.containerLayer.frame)")
+        return
     }
     
     func viewBox(coordinates: String) {

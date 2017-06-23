@@ -73,7 +73,6 @@ open class SVGParser: NSObject, XMLParserDelegate {
                 } else {
                     attributeClosure?(attributeValue)
                 }
-                
             }
         }
         if var containerElement = svgElement as? SVGContainerElement {
