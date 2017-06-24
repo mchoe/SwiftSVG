@@ -19,6 +19,7 @@
 		176BC9FF1EE63FAB00F7B54C /* polylines.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9FE1EE63FAB00F7B54C /* polylines.svg */; };
 		17D5707F1E1F4EC3007CED68 /* SwiftSVGMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */; };
 		17D570801E1F4EC3007CED68 /* SwiftSVGMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		380FECF61EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */; };
 		3813ED481EFC265F0054ECBD /* openclipart-butterfly_side2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */; };
 		3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */; };
 		3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */; };
@@ -81,6 +82,7 @@
 		176BC9CC1EE4C44E00F7B54C /* lines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lines.svg; sourceTree = "<group>"; };
 		176BC9FE1EE63FAB00F7B54C /* polylines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polylines.svg; sourceTree = "<group>"; };
 		17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-motivo_geometrico_archit_01.svg"; sourceTree = "<group>"; };
 		3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-butterfly_side2.svg"; sourceTree = "<group>"; };
 		3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-zanzara_architetto_fran_03r.svg"; sourceTree = "<group>"; };
 		3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-tux.svg"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				3876E95A1EFCB2E000F8C04E /* openclipart-003.svg */,
 				3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */,
 				3876E95C1EFCB2E000F8C04E /* pizza.svg */,
+				380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */,
 				3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */,
 				3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */,
 				38A18ED11EFB8A38007987FF /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg */,
@@ -302,6 +305,7 @@
 				8AC4DBE81CB37E2800137DC9 /* hawaiiFlowers.svg in Resources */,
 				3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */,
 				381945511EFA43FA00E61DCE /* tiger.svg in Resources */,
+				380FECF61EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg in Resources */,
 				38A1CE101EF77A0F00D2E54E /* triangle.svg in Resources */,
 				176BC9B01EE48D3C00F7B54C /* circles.svg in Resources */,
 				176BC9FF1EE63FAB00F7B54C /* polylines.svg in Resources */,

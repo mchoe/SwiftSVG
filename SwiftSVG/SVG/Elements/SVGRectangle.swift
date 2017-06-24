@@ -14,6 +14,9 @@
 
 class SVGRectangle: SVGShapeElement {
     
+    var elementName: String {
+        return "rect"
+    }
     var rectangleRect = CGRect()
     var svgLayer = CAShapeLayer()
     var supportedAttributes: [String : ((String) -> ())?] = [:]

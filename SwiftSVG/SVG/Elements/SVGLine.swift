@@ -14,6 +14,9 @@
 
 class SVGLine: SVGShapeElement {
     
+    var elementName: String {
+        return "line"
+    }
     var end = CGPoint.zero
     var start = CGPoint.zero
     

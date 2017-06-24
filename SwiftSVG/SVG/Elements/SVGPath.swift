@@ -16,6 +16,9 @@
 
 struct SVGPath: SVGShapeElement {
     
+    var elementName: String {
+        return "path"
+    }
     var supportedAttributes = [String : ((String) -> ())?]()
     var svgLayer = CAShapeLayer()
     

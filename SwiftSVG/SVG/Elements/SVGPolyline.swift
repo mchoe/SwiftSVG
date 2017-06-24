@@ -14,8 +14,11 @@
 
 struct SVGPolyline: SVGShapeElement {
     
-    var svgLayer = CAShapeLayer()
+    var elementName: String {
+        return "polyline"
+    }
     var supportedAttributes: [String : ((String) -> ())?] = [:]
+    var svgLayer = CAShapeLayer()
     
     internal func points(points: String) {
         let polylinePath = UIBezierPath()

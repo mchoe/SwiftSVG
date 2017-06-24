@@ -14,7 +14,11 @@
 
 struct SVGRootElement: SVGContainerElement {
     
+    
     var attributesToApply = [String : String]()
+    var elementName: String {
+        return "svg"
+    }
     var containerLayer = CALayer()
     var supportedAttributes = [String : ((String) -> ())?]()
     

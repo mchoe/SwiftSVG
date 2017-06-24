@@ -22,6 +22,9 @@ class SVGGroup: SVGContainerElement {
     
     var attributesToApply = [String : String]()
     var containerLayer = CALayer()
+    var elementName: String {
+        return "g"
+    }
     var supportedAttributes = [String : ((String) -> ())?]()
     
     func didProcessElement(in container: SVGContainerElement?) {
@@ -38,6 +41,7 @@ class SVGGroup: SVGContainerElement {
                 self.applyAttribute(attribute, value: value, on: thisShapeSublayer)
             }
         }
+        container?.containerLayer.addSublayer(self.containerLayer)
     }
     
     func applyAttribute(_ attribute: String, value: String, on layer: CAShapeLayer) {
@@ -65,10 +69,6 @@ class SVGGroup: SVGContainerElement {
             return
         }
         layer.opacity = Float(opacity)
-    }
-    
-    func transformGroup(_ transform: String, on layer: CAShapeLayer) {
-        
     }
     
 }

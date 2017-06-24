@@ -42,7 +42,7 @@ protocol StackType {
     associatedtype StackItem
     var items: [StackItem] { get set }
     init()
-    mutating func pop() -> StackItem
+    mutating func pop() -> StackItem?
     mutating func push(_ itemToPush: StackItem)
 }
 
@@ -53,7 +53,10 @@ struct Stack<T>: StackType {
 
 extension StackType {
     
-    @discardableResult mutating func pop() -> StackItem {
+    @discardableResult mutating func pop() -> StackItem? {
+        guard self.items.count > 0 else {
+            return nil
+        }
         return self.items.removeLast()
     }
     

@@ -110,8 +110,4 @@ extension Transformable {
             print("Couldn't parse")
         }
     }
-    
-    func translate(to point: CGPoint) {
-    
-    }
 }

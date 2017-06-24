@@ -27,6 +27,7 @@
 
 
 protocol SVGElement {
+    var elementName: String { get }
     var supportedAttributes: [String : ((String) -> ())?] { get set }
     
     func didProcessElement(in container: SVGContainerElement?)

@@ -69,27 +69,31 @@ open class SVGParser: NSObject, XMLParserDelegate {
             }
         }
         self.elementStack.push(svgElement)
-        
     }
     
     open func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
-        guard let lastItem = self.elementStack.last else {
+        guard elementName == self.elementStack.last?.elementName else {
             return
         }
         
-        if let shapeElement = lastItem as? SVGShapeElement {
-            self.elementStack.pop()
-            guard let containerElement = self.elementStack.last as? SVGContainerElement else {
-                return
-            }
-            shapeElement.didProcessElement(in: containerElement)
-            
-        } else if let containerElement = lastItem as? SVGContainerElement {
-            containerElement.didProcessElement(in: nil)
-            self.containerLayer?.addSublayer(containerElement.containerLayer)
-            self.elementStack.pop()
+        guard let lastElement = self.elementStack.pop() else {
+            return
         }
+        
+        if let rootItem = lastElement as? SVGRootElement {
+            self.containerLayer?.addSublayer(rootItem.containerLayer)
+            return
+        }
+        
+        guard let containerElement = self.elementStack.last as? SVGContainerElement else {
+            return
+        }
+        lastElement.didProcessElement(in: containerElement)
+    }
+    
+    public func parserDidEndDocument(_ parser: XMLParser) {
+        //print("Did End: \(self.elementStack)")
     }
     
     public func parser(_ parser: XMLParser, validationErrorOccurred validationError: Error) {
