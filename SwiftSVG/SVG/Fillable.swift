@@ -49,3 +49,29 @@ extension Fillable where Self : SVGShapeElement {
     
 }
 
+extension Fillable where Self : SVGGroup {
+    
+    /*
+    var fillAttributes: [String : (String) -> ()] {
+        return [
+            "fill": self.fill,
+            "fill-rule": self.fillRule,
+            "opacity": self.opacity,
+        ]
+    }
+    */
+    
+    func fill(fillColor: String) {
+        self.attributesToApply["fill"] = fillColor
+    }
+    
+    func fillRule(fillRule: String) {
+        self.attributesToApply["fill-rule"] = fillRule
+    }
+    
+    func opacity(opacity: String) {
+        self.attributesToApply["opacity"] = opacity
+    }
+    
+}
+

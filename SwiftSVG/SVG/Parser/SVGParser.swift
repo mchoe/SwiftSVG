@@ -63,23 +63,9 @@ open class SVGParser: NSObject, XMLParserDelegate {
         }
         let svgElement = elementType()
         
-        var groupAttributes = [String : String]()
-        
         for (attributeName, attributeClosure) in svgElement.supportedAttributes {
             if let attributeValue = attributeDict[attributeName] {
-                if svgElement is SVGContainerElement {
-                    groupAttributes[attributeName] = attributeValue
-                    continue
-                } else {
-                    attributeClosure?(attributeValue)
-                }
-            }
-        }
-        if var containerElement = svgElement as? SVGContainerElement {
-            if groupAttributes.count > 0 {
-                containerElement.attributesToApply = groupAttributes
-                self.elementStack.push(containerElement)
-                return
+                attributeClosure?(attributeValue)
             }
         }
         self.elementStack.push(svgElement)

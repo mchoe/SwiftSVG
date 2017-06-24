@@ -66,11 +66,31 @@ struct SVGParserConfiguration {
             },
             "g": {
                 var returnElement = SVGGroup()
+                
+                // Ideally, the attributes would just use the same methods as the other fill
+                // attributes of the other elements, just adding the attributes that need to
+                // be applied after all the sublayers have been processed. Unfortunately, you
+                // cannot do a partial application of mutating methods.
+                //
+                // https://stackoverflow.com/questions/37488316/partial-application-of-mutating-method-is-not-allowed
+                
+                
                 returnElement.supportedAttributes = [
+                    
+                    "fill": returnElement.fill,
+                    "fill-rule": returnElement.fillRule,
+                    "opacity": returnElement.opacity,
+                    
+                    /*
                     "fill": nil,
                     "fill-rule": nil,
                     "opacity": nil,
+                    "transform": nil
+                    */
                 ]
+ 
+                //returnElement.supportedAttributes.add(returnElement.fillAttributes)
+                returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
             "line": {

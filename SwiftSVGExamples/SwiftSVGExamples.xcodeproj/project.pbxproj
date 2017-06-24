@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		176BC9811EE36BC700F7B54C /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176BC9801EE36BC700F7B54C /* SwiftSVGiOS.framework */; };
 		176BC9B01EE48D3C00F7B54C /* circles.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9AF1EE48D3C00F7B54C /* circles.svg */; };
 		176BC9B91EE49C7200F7B54C /* rectangles.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9B81EE49C7200F7B54C /* rectangles.svg */; };
 		176BC9BA1EE49C7200F7B54C /* rectangles.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9B81EE49C7200F7B54C /* rectangles.svg */; };
@@ -23,15 +22,18 @@
 		3813ED481EFC265F0054ECBD /* openclipart-butterfly_side2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */; };
 		3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */; };
 		3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */; };
-		3813ED501EFC2FE50054ECBD /* container.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4F1EFC2FE50054ECBD /* container.svg */; };
 		3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED551EFC6F1B0054ECBD /* fistBump.svg */; };
 		381945511EFA43FA00E61DCE /* tiger.svg in Resources */ = {isa = PBXBuildFile; fileRef = 381945501EFA43FA00E61DCE /* tiger.svg */; };
 		381E99C31EFA0DC400839918 /* polygons.svg in Resources */ = {isa = PBXBuildFile; fileRef = 381E99C21EFA0DC400839918 /* polygons.svg */; };
 		3876E95D1EFCB2E000F8C04E /* openclipart-003.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95A1EFCB2E000F8C04E /* openclipart-003.svg */; };
 		3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */; };
 		3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95C1EFCB2E000F8C04E /* pizza.svg */; };
+		3876E9651EFCC16500F8C04E /* container.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E9641EFCC16500F8C04E /* container.svg */; };
 		38A18ED21EFB8A38007987FF /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38A18ED11EFB8A38007987FF /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg */; };
 		38A1CE101EF77A0F00D2E54E /* triangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38A1CE0F1EF77A0F00D2E54E /* triangle.svg */; };
+		38DCC2EA1EFCC59C006C0050 /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */; };
+		38DCC2EB1EFCC59C006C0050 /* SwiftSVGiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38DCC2EF1EFCC90C006C0050 /* path6658.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38DCC2EE1EFCC90C006C0050 /* path6658.svg */; };
 		8AC4DBC01CB37DB800137DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */; };
 		8AC4DBC21CB37DB800137DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBC11CB37DB800137DC9 /* ViewController.swift */; };
 		8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBC31CB37DB800137DC9 /* Main.storyboard */; };
@@ -52,6 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				38DCC2EB1EFCC59C006C0050 /* SwiftSVGiOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,15 +84,17 @@
 		3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-butterfly_side2.svg"; sourceTree = "<group>"; };
 		3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-zanzara_architetto_fran_03r.svg"; sourceTree = "<group>"; };
 		3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-tux.svg"; sourceTree = "<group>"; };
-		3813ED4F1EFC2FE50054ECBD /* container.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = container.svg; sourceTree = "<group>"; };
 		3813ED551EFC6F1B0054ECBD /* fistBump.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fistBump.svg; sourceTree = "<group>"; };
 		381945501EFA43FA00E61DCE /* tiger.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = tiger.svg; sourceTree = "<group>"; };
 		381E99C21EFA0DC400839918 /* polygons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polygons.svg; sourceTree = "<group>"; };
 		3876E95A1EFCB2E000F8C04E /* openclipart-003.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-003.svg"; sourceTree = "<group>"; };
 		3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1346768588.svg"; sourceTree = "<group>"; };
 		3876E95C1EFCB2E000F8C04E /* pizza.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pizza.svg; sourceTree = "<group>"; };
+		3876E9641EFCC16500F8C04E /* container.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = container.svg; sourceTree = "<group>"; };
 		38A18ED11EFB8A38007987FF /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-Anonymous_Architetto_--_Coccinella_04.svg"; sourceTree = "<group>"; };
 		38A1CE0F1EF77A0F00D2E54E /* triangle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = triangle.svg; sourceTree = "<group>"; };
+		38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38DCC2EE1EFCC90C006C0050 /* path6658.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = path6658.svg; sourceTree = "<group>"; };
 		8AC4DBBD1CB37DB800137DC9 /* SwiftSVGExampleiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVGExampleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AC4DBC11CB37DB800137DC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				176BC9811EE36BC700F7B54C /* SwiftSVGiOS.framework in Frameworks */,
+				38DCC2EA1EFCC59C006C0050 /* SwiftSVGiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +142,7 @@
 		8AC4DB9B1CB37D9600137DC9 = {
 			isa = PBXGroup;
 			children = (
+				38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */,
 				8AC4DBE61CB37E1C00137DC9 /* Resources */,
 				8AC4DBBE1CB37DB800137DC9 /* SwiftSVGExampleiOS */,
 				8AC4DBD41CB37DC600137DC9 /* SwiftSVGExampleMac */,
@@ -184,7 +190,8 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3813ED4F1EFC2FE50054ECBD /* container.svg */,
+				3876E9641EFCC16500F8C04E /* container.svg */,
+				38DCC2EE1EFCC90C006C0050 /* path6658.svg */,
 				3876E95A1EFCB2E000F8C04E /* openclipart-003.svg */,
 				3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */,
 				3876E95C1EFCB2E000F8C04E /* pizza.svg */,
@@ -257,6 +264,7 @@
 				TargetAttributes = {
 					8AC4DBBC1CB37DB800137DC9 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = L2JNG48FS5;
 						LastSwiftMigration = 0810;
 					};
 					8AC4DBD21CB37DC600137DC9 = {
@@ -289,14 +297,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3813ED501EFC2FE50054ECBD /* container.svg in Resources */,
 				381E99C31EFA0DC400839918 /* polygons.svg in Resources */,
+				3876E9651EFCC16500F8C04E /* container.svg in Resources */,
 				8AC4DBE81CB37E2800137DC9 /* hawaiiFlowers.svg in Resources */,
 				3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */,
 				381945511EFA43FA00E61DCE /* tiger.svg in Resources */,
 				38A1CE101EF77A0F00D2E54E /* triangle.svg in Resources */,
 				176BC9B01EE48D3C00F7B54C /* circles.svg in Resources */,
 				176BC9FF1EE63FAB00F7B54C /* polylines.svg in Resources */,
+				38DCC2EF1EFCC90C006C0050 /* path6658.svg in Resources */,
 				3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */,
 				3876E95D1EFCB2E000F8C04E /* openclipart-003.svg in Resources */,
 				176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */,
@@ -473,6 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L2JNG48FS5;
 				INFOPLIST_FILE = SwiftSVGExampleiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGExampleiOS;
@@ -485,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L2JNG48FS5;
 				INFOPLIST_FILE = SwiftSVGExampleiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGExampleiOS;

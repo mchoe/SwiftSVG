@@ -18,7 +18,7 @@ let groupAttributes: [String : (SVGGroup) -> (String, CAShapeLayer) -> ()] = [
     "opacity": SVGGroup.opacityGroup
 ]
 
-struct SVGGroup: SVGContainerElement {
+class SVGGroup: SVGContainerElement {
     
     var attributesToApply = [String : String]()
     var containerLayer = CALayer()
@@ -38,7 +38,6 @@ struct SVGGroup: SVGContainerElement {
                 self.applyAttribute(attribute, value: value, on: thisShapeSublayer)
             }
         }
-        
     }
     
     func applyAttribute(_ attribute: String, value: String, on layer: CAShapeLayer) {
@@ -66,6 +65,10 @@ struct SVGGroup: SVGContainerElement {
             return
         }
         layer.opacity = Float(opacity)
+    }
+    
+    func transformGroup(_ transform: String, on layer: CAShapeLayer) {
+        
     }
     
 }

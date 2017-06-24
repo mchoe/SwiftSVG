@@ -32,7 +32,7 @@ protocol SVGElement {
     func didProcessElement(in container: SVGContainerElement?)
 }
 
-protocol SVGContainerElement: SVGElement {
+protocol SVGContainerElement: SVGElement, Fillable, Transformable {
     var containerLayer: CALayer { get set }
     var attributesToApply: [String : String] { get set }
 }
