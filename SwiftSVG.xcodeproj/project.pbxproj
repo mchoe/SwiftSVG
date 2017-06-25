@@ -80,6 +80,7 @@
 		17CCE73E1EE66CE8007FA5AD /* SVGPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9FC1EE63EEE00F7B54C /* SVGPolygon.swift */; };
 		17CCE73F1EE66CE9007FA5AD /* SVGPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9FC1EE63EEE00F7B54C /* SVGPolygon.swift */; };
 		17D570711E1F429D007CED68 /* NSBezierPath+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */; };
+		380FECF81F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */; };
 		3813ED591EFC703E0054ECBD /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813ED581EFC703E0054ECBD /* Transform.swift */; };
 		3813ED5B1EFC747C0054ECBD /* Array+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813ED5A1EFC747C0054ECBD /* Array+Transform.swift */; };
 		381E99AA1EF801BB00839918 /* LineToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99A91EF801BB00839918 /* LineToTests.swift */; };
@@ -160,6 +161,7 @@
 		17CCE7371EE666D6007FA5AD /* Scalar+FromByteArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scalar+FromByteArray.swift"; sourceTree = "<group>"; };
 		17CCE7391EE66C17007FA5AD /* CGFloatExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensionsTests.swift; sourceTree = "<group>"; };
 		17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBezierPath+CrossPlatform.swift"; sourceTree = "<group>"; };
+		380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+DegreesRadians.swift"; sourceTree = "<group>"; };
 		3813ED581EFC703E0054ECBD /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		3813ED5A1EFC747C0054ECBD /* Array+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Transform.swift"; sourceTree = "<group>"; };
 		381E99A91EF801BB00839918 /* LineToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineToTests.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				9E245B6B1AAE383200472F5A /* Scalar+FromHex.swift */,
 				176BC9F31EE62B6100F7B54C /* String+Trim.swift */,
 				9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */,
+				380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				175093BF1E6C666600EF1853 /* SVGParser.swift in Sources */,
 				39B8D8AC1B3C32DD009DAF60 /* String+SVG.swift in Sources */,
 				381E99B11EF8AFE500839918 /* PathCommand.swift in Sources */,
+				380FECF81F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift in Sources */,
 				176BC9B31EE4946B00F7B54C /* SVGShapeElement.swift in Sources */,
 				176BC9ED1EE5A1CD00F7B54C /* SVGGroup.swift in Sources */,
 				39B8D8AE1B3C32DD009DAF60 /* SVGView.swift in Sources */,

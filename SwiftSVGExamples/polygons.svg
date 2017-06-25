@@ -4,7 +4,7 @@
     <title>polygons</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(20, 30)">
         <g id="polygons" fill-rule="nonzero">
             <polygon id="Star" fill="#AD1D1D" points="75.608993 119.25 28.8800655 143.816851 37.8044966 91.7834255 0 54.9331489 52.2445292 47.3415745 75.608993 0 98.973457 47.3415745 151.217986 54.9331489 113.41349 91.7834255 122.337921 143.816851"></polygon>
             <polygon id="Polygon" stroke="#F300C4" stroke-width="12" fill="#17379A" points="231.616217 102 336.232434 178.008131 296.272595 300.991869 166.959839 300.991869 127 178.008131"></polygon>

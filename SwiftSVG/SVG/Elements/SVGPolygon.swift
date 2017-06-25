@@ -15,7 +15,7 @@
 struct SVGPolygon: SVGShapeElement {
     
     var elementName: String {
-        return "circle"
+        return "polygon"
     }
     var supportedAttributes: [String : ((String) -> ())?] = [:]
     var svgLayer = CAShapeLayer()

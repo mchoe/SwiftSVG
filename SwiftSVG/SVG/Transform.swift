@@ -14,48 +14,70 @@
 
 
 enum Transform {
-    case translate(CATransform3D)
+    case matrix(CGAffineTransform)
+    case rotate(CGAffineTransform)
+    case scale(CGAffineTransform)
+    case translate(CGAffineTransform)
 }
 
-extension Transform: RawRepresentable {
+extension Transform {
     
-    typealias RawValue = String
-    
-    init?(rawValue: Transform.RawValue) {
-        switch rawValue {
-        case "translate":
-            self = Transform.translate(CATransform3DIdentity)
-        default:
+    init?(rawValue: String, coordinatesString: String, matrix: CATransform3D = CATransform3DIdentity) {
+        
+        let coordinatesArray = coordinatesString.components(separatedBy: CharacterSet(charactersIn: ", "))
+        
+        guard coordinatesArray.count > 0 else {
             return nil
         }
-    }
-    
-    init?(rawValue: Transform.RawValue, coordinatesString: String, matrix: CATransform3D = CATransform3DIdentity) {
         
-        let coordinates = coordinatesString.components(separatedBy: ",").flatMap { (thisCoordinate) -> CGFloat? in
+        let coordinates = coordinatesArray.flatMap { (thisCoordinate) -> CGFloat? in
             return CGFloat(thisCoordinate.trimWhitespace())
         }
         
-        switch rawValue {
-        case "translate":
-            guard coordinates.count > 0 else {
-                return nil
-            }
-            if coordinates.count == 1 {
-                self = Transform.translate(CATransform3DTranslate(matrix, coordinates[0], 0.0, 0.0))
-                
-                return
-            }
-            self = Transform.translate(CATransform3DTranslate(matrix, coordinates[0], coordinates[1], 0.0))
-        default:
+        guard coordinates.count > 0 else {
             return nil
         }
-    }
-    
-    var rawValue: Transform.RawValue {
-        switch self {
-        case .translate:
-            return "translate"
+        
+        switch rawValue {
+        case "matrix":
+            guard coordinates.count >= 6 else {
+                return nil
+            }
+            self = .matrix(CGAffineTransform(
+                a: coordinates[0], b: coordinates[1],
+                c: coordinates[2], d: coordinates[3],
+                tx: coordinates[4], ty: coordinates[5]))
+            
+        case "rotate":
+            if coordinates.count == 1 {
+                let degrees = CGFloat(coordinates[0])
+                self = .rotate(CGAffineTransform(rotationAngle: degrees.degreesToRadians))
+            } else if coordinates.count == 3 {
+                let degrees = CGFloat(coordinates[0])
+                let translate = CGAffineTransform(translationX: coordinates[0], y: coordinates[1])
+                let rotate = CGAffineTransform(rotationAngle: degrees.degreesToRadians)
+                let translateReverse = CGAffineTransform(translationX: -coordinates[0], y: -coordinates[1])
+                self = .rotate(translate.concatenating(rotate).concatenating(translateReverse))
+            } else {
+                return nil
+            }
+            
+        case "scale":
+            if coordinates.count == 1 {
+                self = .scale(CGAffineTransform(scaleX: coordinates[0], y: coordinates[0]))
+                return
+            }
+            self = .scale(CGAffineTransform(scaleX: coordinates[0], y: coordinates[1]))
+            
+        case "translate":
+            if coordinates.count == 1 {
+                self = .translate(CGAffineTransform(translationX: coordinates[0], y: 0.0))
+                return
+            }
+            self = .translate(CGAffineTransform(translationX: coordinates[0], y: coordinates[1]))
+        
+        default:
+            return nil
         }
     }
 }
@@ -99,10 +121,14 @@ extension Transformable {
             
             for thisTransform in transforms {
                 switch thisTransform {
-                case .translate(let catransform):
-                    self.layerToTransform.transform = catransform
-                default:
-                    break
+                case .matrix(let transform):
+                    self.layerToTransform.setAffineTransform(transform)
+                case .rotate(let transform):
+                    self.layerToTransform.setAffineTransform(transform)
+                case .scale(let transform):
+                    self.layerToTransform.setAffineTransform(transform)
+                case .translate(let transform):
+                    self.layerToTransform.setAffineTransform(transform)
                 }
             }
             
