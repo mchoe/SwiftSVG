@@ -14,10 +14,10 @@ struct SVGParserConfiguration {
     
     let tags: [String : ElementGenerator]
     
-    public static var barebonesx: SVGParserConfiguration {
+    public static var barebones: SVGParserConfiguration {
         
         let configuration: [String : ElementGenerator] = [
-            "path": {
+            SVGPath.elementName: {
                 var returnElement = SVGPath()
                 returnElement.supportedAttributes = [
                     "d": returnElement.parseD,
@@ -25,7 +25,7 @@ struct SVGParserConfiguration {
                 ]
                 return returnElement
             },
-            "svg": {
+            SVGRootElement.elementName: {
                 var returnElement = SVGRootElement()
                 returnElement.supportedAttributes = [
                     "width": returnElement.parseWidth,
@@ -41,7 +41,7 @@ struct SVGParserConfiguration {
     public static var allFeatures: SVGParserConfiguration = {
         
         let configuration: [String : ElementGenerator] = [
-            "circle": {
+            SVGCircle.elementName: {
                 let returnElement = SVGCircle()
                 returnElement.supportedAttributes = [
                     "cx": returnElement.xCenter,
@@ -54,7 +54,7 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
-            "ellipse": {
+            SVGEllipse.elementName: {
                 let returnElement = SVGEllipse()
                 returnElement.supportedAttributes = [
                     "cx": returnElement.xCenter,
@@ -68,7 +68,7 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
-            "g": {
+            SVGGroup.elementName: {
                 var returnElement = SVGGroup()
                 
                 // Ideally, the attributes would just use the same methods as the other fill
@@ -84,11 +84,13 @@ struct SVGParserConfiguration {
                     "fill-rule": returnElement.fillRule,
                     "opacity": returnElement.opacity,
                 ]
+                returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.styleAttributes)
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
-            "line": {
+            SVGLine.elementName: {
                 let returnElement = SVGLine()
                 returnElement.supportedAttributes = [
                     "x1": returnElement.x1,
@@ -102,7 +104,7 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
-            "path": {
+            SVGPath.elementName: {
                 var returnElement = SVGPath()
                 returnElement.supportedAttributes = [
                     "d": returnElement.parseD,
@@ -114,7 +116,7 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
-            "polygon": {
+            SVGPolygon.elementName: {
                 var returnElement = SVGPolygon()
                 returnElement.supportedAttributes = [
                     "points": returnElement.points
@@ -125,7 +127,7 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
-            "polyline": {
+            SVGPolyline.elementName: {
                 var returnElement = SVGPolyline()
                 returnElement.supportedAttributes = [
                     "points": returnElement.points
@@ -136,7 +138,7 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
-            "rect": {
+            SVGRectangle.elementName: {
                 let returnElement = SVGRectangle()
                 returnElement.supportedAttributes = [
                     "height": returnElement.rectangleHeight,
@@ -152,7 +154,7 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
-            "svg": {
+            SVGRootElement.elementName: {
                 var returnElement = SVGRootElement()
                 returnElement.supportedAttributes = [
                     "width": returnElement.parseWidth,

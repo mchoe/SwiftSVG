@@ -73,7 +73,11 @@ open class SVGParser: NSObject, XMLParserDelegate {
     
     open func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
-        guard elementName == self.elementStack.last?.elementName else {
+        guard let last = self.elementStack.last else {
+            return
+        }
+        
+        guard elementName == type(of: last).elementName else {
             return
         }
         

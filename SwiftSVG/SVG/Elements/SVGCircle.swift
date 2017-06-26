@@ -15,11 +15,12 @@
 
 class SVGCircle: SVGShapeElement {
     
-    var circleCenter = CGPoint.zero
-    var circleRadius: CGFloat = 0
-    var elementName: String {
+    static var elementName: String {
         return "circle"
     }
+    
+    var circleCenter = CGPoint.zero
+    var circleRadius: CGFloat = 0
     var svgLayer = CAShapeLayer()
     var supportedAttributes: [String : ((String) -> ())?] = [:]
     

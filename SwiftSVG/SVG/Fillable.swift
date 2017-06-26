@@ -51,7 +51,6 @@ extension Fillable where Self : SVGShapeElement {
 
 extension Fillable where Self : SVGGroup {
     
-    /*
     var fillAttributes: [String : (String) -> ()] {
         return [
             "fill": self.fill,
@@ -59,7 +58,6 @@ extension Fillable where Self : SVGGroup {
             "opacity": self.opacity,
         ]
     }
-    */
     
     func fill(fillColor: String) {
         self.attributesToApply["fill"] = fillColor

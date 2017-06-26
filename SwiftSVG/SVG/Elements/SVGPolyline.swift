@@ -14,9 +14,10 @@
 
 struct SVGPolyline: SVGShapeElement {
     
-    var elementName: String {
+    static var elementName: String {
         return "polyline"
     }
+    
     var supportedAttributes: [String : ((String) -> ())?] = [:]
     var svgLayer = CAShapeLayer()
     

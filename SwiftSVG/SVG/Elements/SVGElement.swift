@@ -27,13 +27,13 @@
 
 
 protocol SVGElement {
-    var elementName: String { get }
+    static var elementName: String { get }
     var supportedAttributes: [String : ((String) -> ())?] { get set }
     
     func didProcessElement(in container: SVGContainerElement?)
 }
 
-protocol SVGContainerElement: SVGElement, Fillable, Transformable, Stylable {
+protocol SVGContainerElement: SVGElement, Fillable, Strokable, Transformable, Stylable {
     var containerLayer: CALayer { get set }
     var attributesToApply: [String : String] { get set }
 }

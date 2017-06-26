@@ -14,9 +14,10 @@
 
 class SVGEllipse: SVGShapeElement {
     
-    var elementName: String {
+    static var elementName: String {
         return "ellipse"
     }
+    
     var ellipseCenter = CGPoint.zero
     var xRadius: CGFloat = 0
     var yRadius: CGFloat = 0

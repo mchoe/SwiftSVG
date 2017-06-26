@@ -15,16 +15,22 @@
 let groupAttributes: [String : (SVGGroup) -> (String, CAShapeLayer) -> ()] = [
     "fill": SVGGroup.fillGroup,
     "fill-rule": SVGGroup.fillRuleGroup,
-    "opacity": SVGGroup.opacityGroup
+    "opacity": SVGGroup.opacityGroup,
+    "stroke": SVGGroup.strokeColorGroup,
+    "stroke-linecap": SVGGroup.strokeLineCapGroup,
+    "stroke-linejoin": SVGGroup.strokeLineJoinGroup,
+    "stroke-miterlimit": SVGGroup.strokeMiterLimitGroup,
+    "stroke-width": SVGGroup.strokeWidthGroup
 ]
 
 class SVGGroup: SVGContainerElement {
     
-    var attributesToApply = [String : String]()
-    var containerLayer = CALayer()
-    var elementName: String {
+    static var elementName: String {
         return "g"
     }
+    
+    var attributesToApply = [String : String]()
+    var containerLayer = CALayer()
     var supportedAttributes = [String : ((String) -> ())?]()
     
     func didProcessElement(in container: SVGContainerElement?) {
@@ -50,6 +56,10 @@ class SVGGroup: SVGContainerElement {
         }
     }
     
+}
+
+extension SVGGroup {
+    
     func fillGroup(_ fillColor: String, on layer: CAShapeLayer) {
         guard let fillColor = UIColor(svgString: fillColor) else {
             return
@@ -69,6 +79,49 @@ class SVGGroup: SVGContainerElement {
             return
         }
         layer.opacity = Float(opacity)
+    }
+    
+}
+
+extension SVGGroup {
+    
+    internal func strokeLineCapGroup(lineCap: String, on layer: CAShapeLayer) {
+        switch lineCap {
+        case kCALineCapButt, kCALineCapRound, kCALineCapSquare:
+            layer.lineCap = lineCap
+        default:
+            return
+        }
+    }
+    
+    internal func strokeColorGroup(strokeColor: String, on layer: CAShapeLayer) {
+        guard let strokeColor = UIColor(svgString: strokeColor) else {
+            return
+        }
+        layer.strokeColor = strokeColor.cgColor
+    }
+    
+    internal func strokeLineJoinGroup(lineJoin: String, on layer: CAShapeLayer) {
+        switch lineJoin {
+        case kCALineJoinBevel, kCALineJoinMiter, kCALineJoinRound:
+            layer.lineJoin = lineJoin
+        default:
+            return
+        }
+    }
+    
+    internal func strokeMiterLimitGroup(miterLimit: String, on layer: CAShapeLayer) {
+        guard let miterLimit = CGFloat(miterLimit) else {
+            return
+        }
+        layer.miterLimit = miterLimit
+    }
+    
+    internal func strokeWidthGroup(strokeWidth: String, on layer: CAShapeLayer) {
+        guard let strokeWidth = CGFloat(strokeWidth) else {
+            return
+        }
+        layer.lineWidth = strokeWidth
     }
     
 }

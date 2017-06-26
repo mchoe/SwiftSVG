@@ -75,3 +75,38 @@ extension Strokable where Self : SVGShapeElement {
     }
     
 }
+
+
+extension Strokable where Self : SVGGroup {
+    
+    var strokeAttributes: [String : (String) -> ()] {
+        return [
+            "stroke": self.strokeColor,
+            "stroke-linecap": self.strokeLineCap,
+            "stroke-linejoin": self.strokeLineJoin,
+            "stroke-miterlimit": self.strokeMiterLimit,
+            "stroke-width": self.strokeWidth
+        ]
+    }
+    
+    internal func strokeLineCap(lineCap: String) {
+        self.attributesToApply["stroke-linecap"] = lineCap
+    }
+    
+    internal func strokeColor(strokeColor: String) {
+        self.attributesToApply["stroke"] = strokeColor
+    }
+    
+    internal func strokeLineJoin(lineJoin: String) {
+        self.attributesToApply["stroke-linejoin"] = lineJoin
+    }
+    
+    internal func strokeMiterLimit(miterLimit: String) {
+        self.attributesToApply["stroke-miterlimit"] = miterLimit
+    }
+    
+    internal func strokeWidth(strokeWidth: String) {
+        self.attributesToApply["stroke-width"] = strokeWidth
+    }
+    
+}
