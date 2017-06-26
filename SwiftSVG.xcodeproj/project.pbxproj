@@ -293,7 +293,8 @@
 				175093CB1E6C773600EF1853 /* SVGRootElement.swift */,
 				176BC9B21EE4946B00F7B54C /* SVGShapeElement.swift */,
 			);
-			path = Elements;
+			name = Elements;
+			path = SVG/Elements;
 			sourceTree = "<group>";
 		};
 		17CCE7321EE64D91007FA5AD /* Helpers */ = {
@@ -309,7 +310,8 @@
 				9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */,
 				380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */,
 			);
-			path = Helpers;
+			name = Helpers;
+			path = SVG/Helpers;
 			sourceTree = "<group>";
 		};
 		17CCE7331EE64D9E007FA5AD /* Iterators */ = {
@@ -319,7 +321,8 @@
 				174FF06C1EF10691003F3DBE /* PathDLexer.swift */,
 				381E99B01EF8AFE500839918 /* PathCommand.swift */,
 			);
-			path = Iterators;
+			name = Iterators;
+			path = SVG/Iterators;
 			sourceTree = "<group>";
 		};
 		17CCE7341EE64DAD007FA5AD /* Parser */ = {
@@ -328,7 +331,8 @@
 				175093BE1E6C666600EF1853 /* SVGParser.swift */,
 				175093C01E6C669F00EF1853 /* SVGParserConfiguration.swift */,
 			);
-			path = Parser;
+			name = Parser;
+			path = SVG/Parser;
 			sourceTree = "<group>";
 		};
 		17CCE7351EE64DD5007FA5AD /* SVG Extensions */ = {
@@ -340,20 +344,8 @@
 				9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */,
 				9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */,
 			);
-			path = "SVG Extensions";
-			sourceTree = "<group>";
-		};
-		17CCE7361EE64E31007FA5AD /* SVG */ = {
-			isa = PBXGroup;
-			children = (
-				3813ED571EFC6FCF0054ECBD /* Attributes */,
-				17CCE7311EE64D84007FA5AD /* Elements */,
-				17CCE7321EE64D91007FA5AD /* Helpers */,
-				17CCE7331EE64D9E007FA5AD /* Iterators */,
-				17CCE7341EE64DAD007FA5AD /* Parser */,
-				17CCE7351EE64DD5007FA5AD /* SVG Extensions */,
-			);
-			path = SVG;
+			name = "SVG Extensions";
+			path = "SVG/SVG Extensions";
 			sourceTree = "<group>";
 		};
 		380FED341F00FF3A00EDB255 /* Resources */ = {
@@ -373,6 +365,7 @@
 				380FED0F1F002C0E00EDB255 /* Stylable.swift */,
 			);
 			name = Attributes;
+			path = SVG;
 			sourceTree = "<group>";
 		};
 		381E99B91EF8D27C00839918 /* Path Command Tests */ = {
@@ -449,7 +442,12 @@
 		9EA820621AAB15C800DEE6CA /* SwiftSVG */ = {
 			isa = PBXGroup;
 			children = (
-				17CCE7361EE64E31007FA5AD /* SVG */,
+				3813ED571EFC6FCF0054ECBD /* Attributes */,
+				17CCE7311EE64D84007FA5AD /* Elements */,
+				17CCE7321EE64D91007FA5AD /* Helpers */,
+				17CCE7331EE64D9E007FA5AD /* Iterators */,
+				17CCE7341EE64DAD007FA5AD /* Parser */,
+				17CCE7351EE64DD5007FA5AD /* SVG Extensions */,
 				8AC4DBE91CB37EA700137DC9 /* CrossPlatform.swift */,
 				17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */,
 			);
