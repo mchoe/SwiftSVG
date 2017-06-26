@@ -18,6 +18,8 @@ class ViewSVGViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         if let url = self.svgURL {
             let svgView = UIView(SVGURL: url)
             self.canvasView.addSubview(svgView)

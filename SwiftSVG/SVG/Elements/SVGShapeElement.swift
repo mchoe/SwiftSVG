@@ -12,7 +12,7 @@
     import AppKit
 #endif
 
-protocol SVGShapeElement: SVGElement, Fillable, Strokable {
+protocol SVGShapeElement: SVGElement, Fillable, Strokable, Transformable {
     var svgLayer: CAShapeLayer { get set }
 }
 

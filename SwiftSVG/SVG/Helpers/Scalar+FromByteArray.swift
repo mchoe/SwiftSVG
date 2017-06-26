@@ -44,11 +44,6 @@ extension Double {
             return nil
         }
         
-        //var nullTerminated = byteArray
-        //nullTerminated.append(0)
-        //self = strtod(nullTerminated, nil)
-        
-        
         var nullTerminated = byteArray
         nullTerminated.append(0)
         var error: UnsafeMutablePointer<Int8>? = nil

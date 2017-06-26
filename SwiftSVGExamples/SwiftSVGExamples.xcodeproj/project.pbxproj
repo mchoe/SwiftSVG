@@ -29,6 +29,12 @@
 		380FED081F00171B00EDB255 /* openclipart-angry-coder.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */; };
 		380FED091F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Bicicletta.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED001F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Bicicletta.svg */; };
 		380FED0A1F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED011F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg */; };
+		380FED141F0030EA00EDB255 /* flamingos.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED131F0030EA00EDB255 /* flamingos.svg */; };
+		380FED1E1F0034E400EDB255 /* titaniccaptain.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED1D1F0034E400EDB255 /* titaniccaptain.svg */; };
+		380FED221F0036F400EDB255 /* rabbitcowboy.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED211F0036F400EDB255 /* rabbitcowboy.svg */; };
+		380FED2A1F0057C100EDB255 /* decorativeblob.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED291F0057C100EDB255 /* decorativeblob.svg */; };
+		380FED2C1F0057CC00EDB255 /* CigCardKosciusko.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED2B1F0057CC00EDB255 /* CigCardKosciusko.svg */; };
+		380FED421F0101BD00EDB255 /* CigCardWashington.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED411F0101BD00EDB255 /* CigCardWashington.svg */; };
 		3813ED481EFC265F0054ECBD /* openclipart-butterfly_side2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */; };
 		3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */; };
 		3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */; };
@@ -101,6 +107,12 @@
 		380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-angry-coder.svg"; sourceTree = "<group>"; };
 		380FED001F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Bicicletta.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-Anonymous_Architetto_--_Bicicletta.svg"; sourceTree = "<group>"; };
 		380FED011F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-Anonymous_Architetto_--_Camello.svg"; sourceTree = "<group>"; };
+		380FED131F0030EA00EDB255 /* flamingos.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = flamingos.svg; sourceTree = "<group>"; };
+		380FED1D1F0034E400EDB255 /* titaniccaptain.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = titaniccaptain.svg; sourceTree = "<group>"; };
+		380FED211F0036F400EDB255 /* rabbitcowboy.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rabbitcowboy.svg; sourceTree = "<group>"; };
+		380FED291F0057C100EDB255 /* decorativeblob.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = decorativeblob.svg; sourceTree = "<group>"; };
+		380FED2B1F0057CC00EDB255 /* CigCardKosciusko.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CigCardKosciusko.svg; sourceTree = "<group>"; };
+		380FED411F0101BD00EDB255 /* CigCardWashington.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CigCardWashington.svg; sourceTree = "<group>"; };
 		3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-butterfly_side2.svg"; sourceTree = "<group>"; };
 		3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-zanzara_architetto_fran_03r.svg"; sourceTree = "<group>"; };
 		3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-tux.svg"; sourceTree = "<group>"; };
@@ -210,6 +222,12 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				380FED291F0057C100EDB255 /* decorativeblob.svg */,
+				380FED2B1F0057CC00EDB255 /* CigCardKosciusko.svg */,
+				380FED411F0101BD00EDB255 /* CigCardWashington.svg */,
+				380FED211F0036F400EDB255 /* rabbitcowboy.svg */,
+				380FED1D1F0034E400EDB255 /* titaniccaptain.svg */,
+				380FED131F0030EA00EDB255 /* flamingos.svg */,
 				3876E9641EFCC16500F8C04E /* container.svg */,
 				380FECF91F00171B00EDB255 /* openclipart-004.svg */,
 				380FECFA1F00171B00EDB255 /* openclipart-123.svg */,
@@ -329,8 +347,11 @@
 			files = (
 				381E99C31EFA0DC400839918 /* polygons.svg in Resources */,
 				3876E9651EFCC16500F8C04E /* container.svg in Resources */,
+				380FED1E1F0034E400EDB255 /* titaniccaptain.svg in Resources */,
 				8AC4DBE81CB37E2800137DC9 /* hawaiiFlowers.svg in Resources */,
+				380FED421F0101BD00EDB255 /* CigCardWashington.svg in Resources */,
 				380FED021F00171B00EDB255 /* openclipart-004.svg in Resources */,
+				380FED221F0036F400EDB255 /* rabbitcowboy.svg in Resources */,
 				3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */,
 				381945511EFA43FA00E61DCE /* tiger.svg in Resources */,
 				380FECF61EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg in Resources */,
@@ -342,8 +363,11 @@
 				38DCC2EF1EFCC90C006C0050 /* path6658.svg in Resources */,
 				380FED071F00171B00EDB255 /* openclipart-1400625045.svg in Resources */,
 				3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */,
+				380FED2C1F0057CC00EDB255 /* CigCardKosciusko.svg in Resources */,
 				380FED0A1F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg in Resources */,
+				380FED141F0030EA00EDB255 /* flamingos.svg in Resources */,
 				380FED061F00171B00EDB255 /* openclipart-1332611679.svg in Resources */,
+				380FED2A1F0057C100EDB255 /* decorativeblob.svg in Resources */,
 				3876E95D1EFCB2E000F8C04E /* openclipart-003.svg in Resources */,
 				176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */,
 				3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */,

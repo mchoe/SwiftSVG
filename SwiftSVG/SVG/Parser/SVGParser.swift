@@ -82,14 +82,19 @@ open class SVGParser: NSObject, XMLParserDelegate {
         }
         
         if let rootItem = lastElement as? SVGRootElement {
-            self.containerLayer?.addSublayer(rootItem.containerLayer)
-            return
+            DispatchQueue.main.async {
+                self.containerLayer?.addSublayer(rootItem.containerLayer)
+                return
+            }
         }
         
         guard let containerElement = self.elementStack.last as? SVGContainerElement else {
             return
         }
-        lastElement.didProcessElement(in: containerElement)
+        DispatchQueue.main.async {
+            lastElement.didProcessElement(in: containerElement)
+        }
+        
     }
     
     public func parserDidEndDocument(_ parser: XMLParser) {

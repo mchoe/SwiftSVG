@@ -33,5 +33,11 @@ class ScalarFromByteArrayTests: XCTestCase {
         asDouble = Double(byteArray: testArray)
         XCTAssertNil(asDouble, "Expected nil, got \(asDouble)")
     }
+    
+    func testENumber() {
+        var testArray: [CChar] = [49, 101, 51] // "1e3
+        var asDouble = Double(byteArray: testArray)
+        XCTAssert(false, "Double: \(asDouble)")
+    }
 
 }

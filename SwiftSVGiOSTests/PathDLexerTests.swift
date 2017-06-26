@@ -56,7 +56,7 @@ class PathDLexerTests: XCTestCase {
         for thisCommand in PathDLexer(pathString: testString) {
             thisCommand.execute(on: testPath, previousCommand: nil)
         }
-        XCTAssert(testPath.cgPath.pointsAndTypes[2].1 == .closeSubpath, "Expected .closeSubpath, got \(String(describing: testPath.cgPath.pointsAndTypes.[2].1))")
+        XCTAssert(testPath.cgPath.pointsAndTypes[2].1 == .closeSubpath, "Expected .closeSubpath, got \(String(describing: testPath.cgPath.pointsAndTypes[2].1))")
         XCTAssert(testPath.cgPath.pointsAndTypes.last!.1 == .closeSubpath, "Expected .closeSubpath, got \(String(describing: testPath.cgPath.pointsAndTypes.last!.1))")
     }
     

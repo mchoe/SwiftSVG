@@ -22,20 +22,38 @@ struct SVGPath: SVGShapeElement {
     var supportedAttributes = [String : ((String) -> ())?]()
     var svgLayer = CAShapeLayer()
     
-    internal func parseD(pathString: String) {
+    internal func parseD(_ pathString: String) {
         let workingString = pathString.trimWhitespace()
         assert(workingString.hasPrefix("M") || workingString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
         autoreleasepool { () -> () in
             let returnPath = UIBezierPath()
             returnPath.move(to: CGPoint.zero)
             var previousCommand: PreviousCommand? = nil
-            for thisPathCommand in PathDLexer(pathString: workingString) {
-                thisPathCommand.execute(on: returnPath, previousCommand: previousCommand)
-                previousCommand = thisPathCommand
-                //print("\(thisPathCommand)")
+            let concurrentQueue = DispatchQueue(label: "concurrentPathQueue", attributes: .concurrent)
+            concurrentQueue.async {
+                for thisPathCommand in PathDLexer(pathString: workingString) {
+                    thisPathCommand.execute(on: returnPath, previousCommand: previousCommand)
+                    previousCommand = thisPathCommand
+                    //print("\(thisPathCommand)")
+                }
+                DispatchQueue.main.async {
+                    self.svgLayer.path = returnPath.cgPath
+                }
             }
-            self.svgLayer.path = returnPath.cgPath
+            
             //print("\(returnPath)")
+        }
+    }
+    
+    func clipRule(_ clipRule: String) {
+        if clipRule == "evenodd" {
+            guard let thisPath = self.svgLayer.path else {
+                print("Not available")
+                return
+            }
+            let bezierPath = UIBezierPath(cgPath: thisPath)
+            bezierPath.usesEvenOddFillRule = true
+            self.svgLayer.path = bezierPath.cgPath
         }
     }
     

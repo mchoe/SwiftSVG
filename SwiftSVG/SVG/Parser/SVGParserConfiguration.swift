@@ -50,6 +50,7 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
             "ellipse": {
@@ -62,6 +63,7 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
             "g": {
@@ -76,20 +78,13 @@ struct SVGParserConfiguration {
                 
                 
                 returnElement.supportedAttributes = [
-                    
                     "fill": returnElement.fill,
                     "fill-rule": returnElement.fillRule,
                     "opacity": returnElement.opacity,
-                    
-                    /*
-                    "fill": nil,
-                    "fill-rule": nil,
-                    "opacity": nil,
-                    "transform": nil
-                    */
                 ]
  
                 //returnElement.supportedAttributes.add(returnElement.fillAttributes)
+                returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
@@ -103,15 +98,18 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
             "path": {
                 var returnElement = SVGPath()
                 returnElement.supportedAttributes = [
                     "d": returnElement.parseD,
+                    "clip-rule": returnElement.clipRule
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
             "polygon": {
@@ -121,6 +119,7 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
             "polyline": {
@@ -130,6 +129,7 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
             "rect": {
@@ -144,6 +144,7 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
             "svg": {
