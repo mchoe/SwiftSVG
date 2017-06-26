@@ -50,6 +50,7 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.styleAttributes)
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
@@ -63,6 +64,7 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.styleAttributes)
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
@@ -82,9 +84,7 @@ struct SVGParserConfiguration {
                     "fill-rule": returnElement.fillRule,
                     "opacity": returnElement.opacity,
                 ]
- 
-                //returnElement.supportedAttributes.add(returnElement.fillAttributes)
-                returnElement.supportedAttributes.add(returnElement.transformAttributes)
+                returnElement.supportedAttributes.add(returnElement.styleAttributes)
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
@@ -98,6 +98,7 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.styleAttributes)
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
@@ -109,6 +110,7 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.styleAttributes)
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
@@ -119,6 +121,7 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.styleAttributes)
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
@@ -129,6 +132,7 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.styleAttributes)
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },
@@ -144,6 +148,7 @@ struct SVGParserConfiguration {
                 ]
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
+                returnElement.supportedAttributes.add(returnElement.styleAttributes)
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement
             },

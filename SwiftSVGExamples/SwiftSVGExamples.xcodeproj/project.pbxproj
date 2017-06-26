@@ -45,7 +45,6 @@
 		3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */; };
 		3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95C1EFCB2E000F8C04E /* pizza.svg */; };
 		3876E9651EFCC16500F8C04E /* container.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E9641EFCC16500F8C04E /* container.svg */; };
-		38A18ED21EFB8A38007987FF /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38A18ED11EFB8A38007987FF /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg */; };
 		38A1CE101EF77A0F00D2E54E /* triangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38A1CE0F1EF77A0F00D2E54E /* triangle.svg */; };
 		38DCC2EA1EFCC59C006C0050 /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */; };
 		38DCC2EB1EFCC59C006C0050 /* SwiftSVGiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -123,7 +122,6 @@
 		3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1346768588.svg"; sourceTree = "<group>"; };
 		3876E95C1EFCB2E000F8C04E /* pizza.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pizza.svg; sourceTree = "<group>"; };
 		3876E9641EFCC16500F8C04E /* container.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = container.svg; sourceTree = "<group>"; };
-		38A18ED11EFB8A38007987FF /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-Anonymous_Architetto_--_Coccinella_04.svg"; sourceTree = "<group>"; };
 		38A1CE0F1EF77A0F00D2E54E /* triangle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = triangle.svg; sourceTree = "<group>"; };
 		38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DCC2EE1EFCC90C006C0050 /* path6658.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = path6658.svg; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 				380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */,
 				3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */,
 				3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */,
-				38A18ED11EFB8A38007987FF /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg */,
 				3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */,
 				176BC9AF1EE48D3C00F7B54C /* circles.svg */,
 				176BC9C61EE4C1AB00F7B54C /* ellipses.svg */,
@@ -371,7 +368,6 @@
 				3876E95D1EFCB2E000F8C04E /* openclipart-003.svg in Resources */,
 				176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */,
 				3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */,
-				38A18ED21EFB8A38007987FF /* openclipart-Anonymous_Architetto_--_Coccinella_04.svg in Resources */,
 				3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */,
 				176BC9B91EE49C7200F7B54C /* rectangles.svg in Resources */,
 				3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */,
