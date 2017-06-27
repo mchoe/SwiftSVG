@@ -39,7 +39,16 @@ struct SVGRootElement: SVGContainerElement {
     }
     
     func viewBox(coordinates: String) {
-        assert(false, "Needs Implementation")
+        let points = coordinates
+            .components(separatedBy: CharacterSet(charactersIn: ", "))
+            .flatMap { (thisString) -> Double? in
+               return Double(thisString.trimWhitespace())
+            }
+        guard points.count == 4 else {
+            return
+        }
+        self.containerLayer.frame = CGRect(x: points[0], y: points[1], width: points[2], height: points[3])
+        self.containerLayer.masksToBounds = true
     }
 }
 

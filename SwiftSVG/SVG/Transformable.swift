@@ -123,7 +123,7 @@ extension Transformable {
     }
     
     func transform(_ transformString: String) {
-        print("Should parse string and set new matrix: \(transformString)")
+        
         do {
             let regex = try NSRegularExpression(pattern: TransformableConstants.attributesRegex, options: .caseInsensitive)
             let matches = regex.matches(in: transformString, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, transformString.utf8.count))
@@ -142,7 +142,7 @@ extension Transformable {
             self.layerToTransform.setAffineTransform(combinedTransforms)
             
         } catch {
-            print("Couldn't parse")
+            print("Couldn't parse transform string: \(transformString)")
         }
     }
 }

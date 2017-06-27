@@ -53,7 +53,9 @@ extension Fillable where Self : SVGGroup {
     
     var fillAttributes: [String : (String) -> ()] {
         return [
+            "color": self.fill,
             "fill": self.fill,
+            "fill-opacity": self.opacity,
             "fill-rule": self.fillRule,
             "opacity": self.opacity,
         ]

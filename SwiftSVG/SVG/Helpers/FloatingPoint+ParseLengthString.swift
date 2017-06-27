@@ -15,12 +15,12 @@ import Foundation
 //
 // - Michael Choe 06.04.17
 
-extension FloatingPoint {
+extension BinaryFloatingPoint {
     
     init?(lengthString: String) {
         
-        let simpleNumberClosure: (String) -> Int? = { (string) -> Int? in
-            return Int(string)
+        let simpleNumberClosure: (String) -> Double? = { (string) -> Double? in
+            return Double(string)
         }
         
         if let thisNumber = simpleNumberClosure(lengthString) {
@@ -28,7 +28,7 @@ extension FloatingPoint {
             return
         }
         
-        let numberFromSupportedSuffix: (String, String) -> Int? = { (string, suffix) -> Int? in
+        let numberFromSupportedSuffix: (String, String) -> Double? = { (string, suffix) -> Double? in
             if string.hasSuffix(suffix) {
                 let index = string.index(string.endIndex, offsetBy: -(suffix.characters.count))
                 return simpleNumberClosure(string.substring(to: index))
@@ -38,6 +38,11 @@ extension FloatingPoint {
         
         if let withPxAnnotation = numberFromSupportedSuffix(lengthString, "px") {
             self.init(withPxAnnotation)
+            return
+        }
+        
+        if let withMmAnnotation = numberFromSupportedSuffix(lengthString, "mm") {
+            self.init(withMmAnnotation)
             return
         }
         

@@ -44,17 +44,5 @@ extension Int {
     init(hexString: String) {
         self.init(strtol(hexString, nil, 16))
     }
-    
-    /*
-    init(byteArray: [CChar]) {
-        var count: Int8 = 0
-        var result: Int8 = 0
-        for thisDigit in byteArray.reversed() {
-            result += thisDigit * Int8(pow(16, Double(count)))
-            count += 1
-        }
-        self.init(result)
-    }
-    */
 }
 

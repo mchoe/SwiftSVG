@@ -38,14 +38,12 @@ extension Stylable where Self : SVGElement {
                     print("Couldn't set: \(styleName)")
                     return
                 }
-                
-                print("Setting Style: \(styleName) - \(valueString)")
                 thisClosure?(valueString)
                 
             })
             
         } catch {
-            print("Couldn't parse")
+            print("Couldn't parse style string: \(styleString)")
         }
     }
 }

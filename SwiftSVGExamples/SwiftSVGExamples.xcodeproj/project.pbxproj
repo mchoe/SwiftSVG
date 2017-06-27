@@ -32,6 +32,7 @@
 		380FED2A1F0057C100EDB255 /* decorativeblob.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED291F0057C100EDB255 /* decorativeblob.svg */; };
 		380FED2C1F0057CC00EDB255 /* CigCardKosciusko.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED2B1F0057CC00EDB255 /* CigCardKosciusko.svg */; };
 		380FED421F0101BD00EDB255 /* CigCardWashington.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED411F0101BD00EDB255 /* CigCardWashington.svg */; };
+		380FED441F01E51500EDB255 /* Abstract-Tree-Vector-Art.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED431F01E51500EDB255 /* Abstract-Tree-Vector-Art.svg */; };
 		3813ED481EFC265F0054ECBD /* openclipart-butterfly_side2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */; };
 		3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */; };
 		3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */; };
@@ -106,6 +107,7 @@
 		380FED291F0057C100EDB255 /* decorativeblob.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = decorativeblob.svg; sourceTree = "<group>"; };
 		380FED2B1F0057CC00EDB255 /* CigCardKosciusko.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CigCardKosciusko.svg; sourceTree = "<group>"; };
 		380FED411F0101BD00EDB255 /* CigCardWashington.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CigCardWashington.svg; sourceTree = "<group>"; };
+		380FED431F01E51500EDB255 /* Abstract-Tree-Vector-Art.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Abstract-Tree-Vector-Art.svg"; sourceTree = "<group>"; };
 		3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-butterfly_side2.svg"; sourceTree = "<group>"; };
 		3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-zanzara_architetto_fran_03r.svg"; sourceTree = "<group>"; };
 		3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-tux.svg"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				380FED291F0057C100EDB255 /* decorativeblob.svg */,
+				380FED431F01E51500EDB255 /* Abstract-Tree-Vector-Art.svg */,
 				380FED2B1F0057CC00EDB255 /* CigCardKosciusko.svg */,
 				380FED411F0101BD00EDB255 /* CigCardWashington.svg */,
 				380FED211F0036F400EDB255 /* rabbitcowboy.svg */,
@@ -357,6 +360,7 @@
 				3876E95D1EFCB2E000F8C04E /* openclipart-003.svg in Resources */,
 				176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */,
 				3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */,
+				380FED441F01E51500EDB255 /* Abstract-Tree-Vector-Art.svg in Resources */,
 				3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */,
 				176BC9B91EE49C7200F7B54C /* rectangles.svg in Resources */,
 				3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */,

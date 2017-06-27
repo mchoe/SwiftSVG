@@ -159,6 +159,7 @@ struct SVGParserConfiguration {
                 returnElement.supportedAttributes = [
                     "width": returnElement.parseWidth,
                     "height": returnElement.parseHeight,
+                    "viewBox": returnElement.viewBox
                 ]
                 return returnElement
             }
