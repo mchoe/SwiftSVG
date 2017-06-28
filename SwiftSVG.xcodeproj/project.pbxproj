@@ -93,6 +93,7 @@
 		380FED3E1F0100A900EDB255 /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813ED581EFC703E0054ECBD /* Transformable.swift */; };
 		380FED3F1F0100C100EDB255 /* FloatingPoint+DegreesRadians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */; };
 		380FED401F0100C200EDB255 /* FloatingPoint+DegreesRadians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */; };
+		380FED541F0458AF00EDB255 /* SVGCircleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FED531F0458AF00EDB255 /* SVGCircleTests.swift */; };
 		3813ED591EFC703E0054ECBD /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813ED581EFC703E0054ECBD /* Transformable.swift */; };
 		381E99AA1EF801BB00839918 /* LineToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99A91EF801BB00839918 /* LineToTests.swift */; };
 		381E99AB1EF801DA00839918 /* PathDLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FF06C1EF10691003F3DBE /* PathDLexer.swift */; };
@@ -174,6 +175,7 @@
 		380FED0F1F002C0E00EDB255 /* Stylable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
 		380FED321F00FEF000EDB255 /* PerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		380FED351F00FF5000EDB255 /* CigCardKosciusko.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = CigCardKosciusko.svg; path = SwiftSVGExamples/CigCardKosciusko.svg; sourceTree = "<group>"; };
+		380FED531F0458AF00EDB255 /* SVGCircleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGCircleTests.swift; sourceTree = "<group>"; };
 		3813ED581EFC703E0054ECBD /* Transformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformable.swift; sourceTree = "<group>"; };
 		381E99A91EF801BB00839918 /* LineToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineToTests.swift; sourceTree = "<group>"; };
 		381E99AC1EF8946E00839918 /* ScalarFromByteArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalarFromByteArrayTests.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 		176BC9A91EE4869500F7B54C /* Element Tests */ = {
 			isa = PBXGroup;
 			children = (
+				380FED531F0458AF00EDB255 /* SVGCircleTests.swift */,
 				176BC9A71EE4868A00F7B54C /* SVGRootElementTests.swift */,
 			);
 			name = "Element Tests";
@@ -624,6 +627,7 @@
 				176BC9D21EE513F400F7B54C /* SVGPolyline.swift in Sources */,
 				176BC9E91EE51B0700F7B54C /* CrossPlatform.swift in Sources */,
 				176BC9A81EE4868A00F7B54C /* SVGRootElementTests.swift in Sources */,
+				380FED541F0458AF00EDB255 /* SVGCircleTests.swift in Sources */,
 				177D98F51F01852E00A668B6 /* Stylable.swift in Sources */,
 				381E99BD1EF9D05800839918 /* HorizontalLineToTests.swift in Sources */,
 				176BC9E11EE51AE500F7B54C /* Dictionary+Merge.swift in Sources */,
