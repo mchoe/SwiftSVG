@@ -190,7 +190,7 @@ struct CurveTo: PathCommand {
 struct SmoothCurveTo: PathCommand {
     
     var coordinateBuffer = [Double]()
-    let numberOfRequiredParameters = 6
+    let numberOfRequiredParameters = 4
     let pathType: PathType
     
     init(pathType: PathType) {
@@ -199,43 +199,48 @@ struct SmoothCurveTo: PathCommand {
     
     func execute(on path: UIBezierPath, previousCommand: PreviousCommand? = nil) {
         
-        guard let previousCommand = previousCommand else {
-            assert(false, "Must supply previous parameters for SmoothCurveTo")
-            return
-        }
-        
         let point = self.pointForPathType(CGPoint(x: self.coordinateBuffer[2], y: self.coordinateBuffer[3]), relativeTo: path.currentPoint)
         let controlEnd = self.pointForPathType(CGPoint(x: self.coordinateBuffer[0], y: self.coordinateBuffer[1]), relativeTo: path.currentPoint)
         
-        let currentPoint = path.currentPoint
-        let currentPointX = Double(currentPoint.x)
-        let currentPointY = Double(currentPoint.y)
-        
-        var controlStartX = currentPointX
-        var controlStartY = currentPointY
-        
-        if let previousCurveTo = previousCommand as? CurveTo {
+        let controlStart: CGPoint
+        if let previousCurveTo = previousCommand as? CurveTo  {
             switch previousCurveTo.pathType {
             case .absolute:
-                controlStartX = (2.0 * currentPointX) - coordinateBuffer[2]
-                controlStartY = (2.0 * currentPointY) - coordinateBuffer[3]
+                controlStart = CGPoint(
+                    x: Double(2.0 * path.currentPoint.x) - previousCurveTo.coordinateBuffer[2],
+                    y: Double(2.0 * path.currentPoint.y) - previousCurveTo.coordinateBuffer[3]
+                )
             case .relative:
-                let oldCurrentPoint = (currentPointX - coordinateBuffer[4], currentPointY - coordinateBuffer[5])
-                controlStartX = (2.0 * currentPointX) - (coordinateBuffer[2] + oldCurrentPoint.0)
-                controlStartY = (2.0 * currentPointY) - (coordinateBuffer[3] + oldCurrentPoint.1)
+                let oldCurrentPoint = (
+                    Double(path.currentPoint.x) - previousCurveTo.coordinateBuffer[4],
+                    Double(path.currentPoint.y) - previousCurveTo.coordinateBuffer[5]
+                )
+                controlStart = CGPoint(
+                    x: Double(2.0 * path.currentPoint.x) - (previousCurveTo.coordinateBuffer[2] + oldCurrentPoint.0),
+                    y: Double(2.0 * path.currentPoint.y) - (previousCurveTo.coordinateBuffer[3] + oldCurrentPoint.1)
+                )
             }
-        } else if let previousSmoothCurveTo = previousCommand as? SmoothCurveTo {
+        } else if let previousSmoothCurveTo = previousCommand as? SmoothCurveTo{
             switch previousSmoothCurveTo.pathType {
             case .absolute:
-                controlStartX = (2.0 * currentPointX) - coordinateBuffer[0]
-                controlStartY = (2.0 * currentPointY) - coordinateBuffer[1]
+                controlStart = CGPoint(
+                    x: Double(2.0 * path.currentPoint.x) - previousSmoothCurveTo.coordinateBuffer[0],
+                    y: Double(2.0 * path.currentPoint.y) - previousSmoothCurveTo.coordinateBuffer[1]
+                )
             case .relative:
-                let oldCurrentPoint = (currentPointX - coordinateBuffer[2], currentPointY - coordinateBuffer[3])
-                controlStartX = (2.0 * currentPointX) - (coordinateBuffer[0] + oldCurrentPoint.0)
-                controlStartY = (2.0 * currentPointY) - (coordinateBuffer[1] + oldCurrentPoint.1)
+                let oldCurrentPoint = (
+                    Double(path.currentPoint.x) - previousSmoothCurveTo.coordinateBuffer[2],
+                    Double(path.currentPoint.y) - previousSmoothCurveTo.coordinateBuffer[3]
+                )
+                controlStart = CGPoint(
+                    x: Double(2.0 * path.currentPoint.x) - (previousSmoothCurveTo.coordinateBuffer[0] + oldCurrentPoint.0),
+                    y: Double(2.0 * path.currentPoint.y) - (previousSmoothCurveTo.coordinateBuffer[1] + oldCurrentPoint.1)
+                )
             }
+        } else {
+            controlStart = path.currentPoint
         }
-        path.addCurve(to: point, controlPoint1: CGPoint(x: controlStartX, y: controlStartY), controlPoint2: controlEnd)
+        path.addCurve(to: point, controlPoint1: controlStart, controlPoint2: controlEnd)
     }
 }
 
@@ -261,6 +266,7 @@ struct SmoothQuadraticCurveTo: PathCommand {
     var coordinateBuffer = [Double]()
     let numberOfRequiredParameters = 2
     let pathType: PathType
+    var previousControlPoint: CGPoint? = nil
     
     init(pathType: PathType) {
         self.pathType = pathType
@@ -268,6 +274,33 @@ struct SmoothQuadraticCurveTo: PathCommand {
     
     func execute(on path: UIBezierPath, previousCommand: PreviousCommand? = nil) {
         
+        
+        let point = self.pointForPathType(CGPoint(x: self.coordinateBuffer[0], y: self.coordinateBuffer[1]), relativeTo: path.currentPoint)
+        
+        var controlPoint: CGPoint
+        if let previousQuadraticCurveTo = previousCommand as? QuadraticCurveTo  {
+            switch previousQuadraticCurveTo.pathType {
+            case .absolute:
+                controlPoint = CGPoint(
+                    x: Double(2.0 * path.currentPoint.x) - previousQuadraticCurveTo.coordinateBuffer[0],
+                    y: Double(2.0 * path.currentPoint.y) - previousQuadraticCurveTo.coordinateBuffer[1]
+                )
+            case .relative:
+                let oldCurrentPoint = (
+                    Double(path.currentPoint.x) - previousQuadraticCurveTo.coordinateBuffer[2],
+                    Double(path.currentPoint.y) - previousQuadraticCurveTo.coordinateBuffer[3]
+                )
+                controlPoint = CGPoint(
+                    x: Double(2.0 * path.currentPoint.x) - previousQuadraticCurveTo.coordinateBuffer[0] + oldCurrentPoint.0,
+                    y: Double(2.0 * path.currentPoint.y) - previousQuadraticCurveTo.coordinateBuffer[1] + oldCurrentPoint.1
+                )
+            }
+        } else {
+            controlPoint = path.currentPoint
+        }
+        path.addQuadCurve(to: point, controlPoint: controlPoint)
+        
+        /*
         guard let previousCommand = previousCommand as? QuadraticCurveTo else {
             assert(false, "Must supply previous parameters for SmoothQuadraticCurveTo")
             return
@@ -286,6 +319,7 @@ struct SmoothQuadraticCurveTo: PathCommand {
             controlPoint = CGPoint(x: (2.0 * currentPoint.x) - (CGFloat(coordinateBuffer[0]) + oldCurrentPoint.x), y: (2.0 * currentPoint.y) - (CGFloat(coordinateBuffer[1]) + oldCurrentPoint.y))
         }
         path.addQuadCurve(to: point, controlPoint: controlPoint)
+        */
     }
 }
 
