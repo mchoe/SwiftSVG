@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2" height="297mm" width="210mm">
-  <g id="layer1">
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2">
+  <g id="layer1" transform="scale(0.5)">
     <g id="g5098" stroke="#000" transform="translate(-38.386 -161.62)">
       <path id="path2162" stroke-width="1px" fill-rule="evenodd" d="m577.14 439.51s-70-61.43-232.85-64.29c-162.86-2.86-250 48.57-250 48.57-0.004 0 55.71 118.57 225.71 117.14 172.95-1.45 257.14-95.71 257.14-101.42z"/>
       <path id="path3146" stroke-width="1px" fill-rule="evenodd" d="m341.43 532.36s5.71 5.72-1.43 60c-7.14 54.29-17.14 234.29 8.57 287.15 25.72 52.85 105.71 168.99 192 170.89 132.86 2.8 160.28-84.8 159.43-150.89-1.43-110-64.29-197.15-145.71-160-81.43 37.14-61.43 82.85-34.29 91.42 27.14 8.58 27.14-41.42 27.14-41.42s5.72-11.43 10-5.72c4.29 5.72 15.72 82.86-45.71 62.86s-55.72-108.57 51.43-131.43c107.14-22.86 160.31 100.65 161.43 184.29 1.42 107.09-44.29 151.39-44.29 151.39l-398.86 1.5-11.43-191.47-8.57 21.43 3.72 170.04-18.57 1.4s-13.72-255.72 24.85-334.29c38.57-78.58 54.57-185.72 54.57-185.72l15.72-1.43z"/>

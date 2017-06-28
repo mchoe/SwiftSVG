@@ -70,7 +70,23 @@ class SVGRectangle: SVGShapeElement {
         guard let container = container else {
             return
         }
-        let rectanglePath = UIBezierPath(roundedRect: self.rectangleRect, byRoundingCorners: UIRectCorner.allCorners, cornerRadii: CGSize(width: self.xCornerRadius, height: self.yCornerRadius))
+        
+        // TODO: There seems to be a bug with UIBezierPath(roundedRect:byRoundingCorners:cornerRadii:)
+        // where it will draw an unclosed path if the corner radius is zero, so to get around this
+        // you have to check which initializer to use.
+        //
+        // Also at some point, will have to convert this to use 2 layers because this implementation
+        // only rounds the outer border and leaves the inner corners pointed.
+        //
+        // -Michael Choe 06.28.17
+        
+        
+        let rectanglePath: UIBezierPath
+        if (self.xCornerRadius > 0 || self.yCornerRadius > 0) {
+            rectanglePath = UIBezierPath(roundedRect: self.rectangleRect, byRoundingCorners: UIRectCorner.allCorners, cornerRadii: CGSize(width: self.xCornerRadius, height: self.yCornerRadius))
+        } else {
+            rectanglePath = UIBezierPath(rect: self.rectangleRect)
+        }
         self.svgLayer.path = rectanglePath.cgPath
         container.containerLayer.addSublayer(self.svgLayer)
     }

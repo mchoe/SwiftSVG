@@ -299,27 +299,6 @@ struct SmoothQuadraticCurveTo: PathCommand {
             controlPoint = path.currentPoint
         }
         path.addQuadCurve(to: point, controlPoint: controlPoint)
-        
-        /*
-        guard let previousCommand = previousCommand as? QuadraticCurveTo else {
-            assert(false, "Must supply previous parameters for SmoothQuadraticCurveTo")
-            return
-        }
-        
-        let point = self.pointForPathType(CGPoint(x: self.coordinateBuffer[0], y: self.coordinateBuffer[1]), relativeTo: path.currentPoint)
-        var controlPoint = path.currentPoint
-        
-        let currentPoint = path.currentPoint
-        
-        switch previousCommand.pathType {
-        case .absolute:
-            controlPoint = CGPoint(x: (2.0 * currentPoint.x) - CGFloat(coordinateBuffer[0]), y: (2.0 * currentPoint.y) - CGFloat(coordinateBuffer[1]))
-        case .relative:
-            let oldCurrentPoint = CGPoint(x: currentPoint.x - CGFloat(coordinateBuffer[2]), y: currentPoint.y - CGFloat(coordinateBuffer[3]))
-            controlPoint = CGPoint(x: (2.0 * currentPoint.x) - (CGFloat(coordinateBuffer[0]) + oldCurrentPoint.x), y: (2.0 * currentPoint.y) - (CGFloat(coordinateBuffer[1]) + oldCurrentPoint.y))
-        }
-        path.addQuadCurve(to: point, controlPoint: controlPoint)
-        */
     }
 }
 
