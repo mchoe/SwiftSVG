@@ -124,8 +124,6 @@ extension Transformable {
     
     func transform(_ transformString: String) {
         
-        print("Transform: \(transformString)")
-        
         do {
             let regex = try NSRegularExpression(pattern: TransformableConstants.attributesRegex, options: .caseInsensitive)
             let matches = regex.matches(in: transformString, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, transformString.utf8.count))
@@ -139,10 +137,8 @@ extension Transformable {
                 return Transform(rawValue: transformName, coordinatesString: coordinateString)
             })
             .reduce(CGAffineTransform.identity, { (accumulate, next) -> CGAffineTransform in
-                print("Next: \(next)")
                 return accumulate.concatenating(next.affineTransform)
             })
-            print("All Transforms: \(combinedTransforms)")
             self.layerToTransform.setAffineTransform(combinedTransforms)
             
         } catch {

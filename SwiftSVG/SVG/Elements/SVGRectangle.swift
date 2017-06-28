@@ -80,7 +80,6 @@ class SVGRectangle: SVGShapeElement {
         //
         // -Michael Choe 06.28.17
         
-        
         let rectanglePath: UIBezierPath
         if (self.xCornerRadius > 0 || self.yCornerRadius > 0) {
             rectanglePath = UIBezierPath(roundedRect: self.rectangleRect, byRoundingCorners: UIRectCorner.allCorners, cornerRadii: CGSize(width: self.xCornerRadius, height: self.yCornerRadius))

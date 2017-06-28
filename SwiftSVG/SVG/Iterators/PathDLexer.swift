@@ -12,8 +12,6 @@
     import AppKit
 #endif
 
-
-
 enum DCharacter: CChar {
     case A = 65
     case a = 97
@@ -110,11 +108,14 @@ struct PathDLexer: IteratorProtocol, Sequence {
             switch self.currentCharacter {
             case DCharacter.comma.rawValue, DCharacter.space.rawValue:
                 self.pushCoordinateIfPossible(self.numberArray)
-                self.iteratorIndex += 1
+                while (self.currentCharacter == DCharacter.space.rawValue || self.currentCharacter == DCharacter.comma.rawValue) && self.iteratorIndex < self.workingString.count {
+                    self.iteratorIndex += 1
+                }
                 if self.currentCommand != nil && self.currentCommand!.canPushCommand {
                     self.numberArray.removeAll()
                     return self.currentCommand
                 }
+                
             case DCharacter.sign.rawValue:
                 self.pushCoordinateIfPossible(self.numberArray)
                 if self.currentCommand != nil && self.currentCommand!.canPushCommand {
@@ -126,6 +127,7 @@ struct PathDLexer: IteratorProtocol, Sequence {
             default:
                 break
             }
+            
             self.numberArray.append(self.currentCharacter)
             self.iteratorIndex += 1
         }
