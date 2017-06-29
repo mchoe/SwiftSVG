@@ -12,52 +12,58 @@
     import AppKit
 #endif
 
-enum DCharacter: CChar {
-    case A = 65
-    case a = 97
-    case C = 67
-    case c = 99
-    case H = 72
-    case h = 104
-    case L = 76
-    case l = 108
-    case M = 77
-    case m = 109
-    case Q = 81
-    case q = 113
-    case S = 83
-    case s = 115
-    case T = 84
-    case t = 116
-    case V = 86
-    case v = 118
-    case Z = 90
-    case z = 122
-    case comma = 44
-    case sign = 45
-    case space = 32
+struct PathDConstants {
+    
+    enum DCharacter: CChar {
+        case A = 65
+        case a = 97
+        case C = 67
+        case c = 99
+        case H = 72
+        case h = 104
+        case L = 76
+        case l = 108
+        case M = 77
+        case m = 109
+        case Q = 81
+        case q = 113
+        case S = 83
+        case s = 115
+        case T = 84
+        case t = 116
+        case V = 86
+        case v = 118
+        case Z = 90
+        case z = 122
+        case comma = 44
+        case sign = 45
+        case space = 32
+    }
+    
+    static let characterDictionary: [CChar : PathCommand] = [
+        DCharacter.M.rawValue: MoveTo(pathType: .absolute),
+        DCharacter.m.rawValue: MoveTo(pathType: .relative),
+        DCharacter.C.rawValue: CurveTo(pathType: .absolute),
+        DCharacter.c.rawValue: CurveTo(pathType: .relative),
+        DCharacter.Z.rawValue: ClosePath(pathType: .absolute),
+        DCharacter.z.rawValue: ClosePath(pathType: .absolute),
+        DCharacter.S.rawValue: SmoothCurveTo(pathType: .absolute),
+        DCharacter.s.rawValue: SmoothCurveTo(pathType: .relative),
+        DCharacter.L.rawValue: LineTo(pathType: .absolute),
+        DCharacter.l.rawValue: LineTo(pathType: .relative),
+        DCharacter.H.rawValue: HorizontalLineTo(pathType: .absolute),
+        DCharacter.h.rawValue: HorizontalLineTo(pathType: .relative),
+        DCharacter.V.rawValue: VerticalLineTo(pathType: .absolute),
+        DCharacter.v.rawValue: VerticalLineTo(pathType: .relative),
+        DCharacter.Q.rawValue: QuadraticCurveTo(pathType: .absolute),
+        DCharacter.q.rawValue: QuadraticCurveTo(pathType: .relative),
+        DCharacter.T.rawValue: SmoothQuadraticCurveTo(pathType: .absolute),
+        DCharacter.t.rawValue: SmoothQuadraticCurveTo(pathType: .relative),
+    ]
+    
 }
 
-let characterDictionary: [CChar : PathCommand] = [
-    DCharacter.M.rawValue: MoveTo(pathType: .absolute),
-    DCharacter.m.rawValue: MoveTo(pathType: .relative),
-    DCharacter.C.rawValue: CurveTo(pathType: .absolute),
-    DCharacter.c.rawValue: CurveTo(pathType: .relative),
-    DCharacter.Z.rawValue: ClosePath(pathType: .absolute),
-    DCharacter.z.rawValue: ClosePath(pathType: .absolute),
-    DCharacter.S.rawValue: SmoothCurveTo(pathType: .absolute),
-    DCharacter.s.rawValue: SmoothCurveTo(pathType: .relative),
-    DCharacter.L.rawValue: LineTo(pathType: .absolute),
-    DCharacter.l.rawValue: LineTo(pathType: .relative),
-    DCharacter.H.rawValue: HorizontalLineTo(pathType: .absolute),
-    DCharacter.h.rawValue: HorizontalLineTo(pathType: .relative),
-    DCharacter.V.rawValue: VerticalLineTo(pathType: .absolute),
-    DCharacter.v.rawValue: VerticalLineTo(pathType: .relative),
-    DCharacter.Q.rawValue: QuadraticCurveTo(pathType: .absolute),
-    DCharacter.q.rawValue: QuadraticCurveTo(pathType: .relative),
-    DCharacter.T.rawValue: SmoothQuadraticCurveTo(pathType: .absolute),
-    DCharacter.t.rawValue: SmoothQuadraticCurveTo(pathType: .relative),
-]
+
 
 
 struct PathDLexer: IteratorProtocol, Sequence {
@@ -91,7 +97,7 @@ struct PathDLexer: IteratorProtocol, Sequence {
         
         while self.iteratorIndex < self.workingString.count - 1 {
             
-            if let command = characterDictionary[self.currentCharacter] {
+            if let command = PathDConstants.characterDictionary[self.currentCharacter] {
                 self.pushCoordinateIfPossible(self.numberArray)
                 self.iteratorIndex += 1
                 
@@ -106,9 +112,9 @@ struct PathDLexer: IteratorProtocol, Sequence {
             }
             
             switch self.currentCharacter {
-            case DCharacter.comma.rawValue, DCharacter.space.rawValue:
+            case PathDConstants.DCharacter.comma.rawValue, PathDConstants.DCharacter.space.rawValue:
                 self.pushCoordinateIfPossible(self.numberArray)
-                while (self.currentCharacter == DCharacter.space.rawValue || self.currentCharacter == DCharacter.comma.rawValue) && self.iteratorIndex < self.workingString.count {
+                while (self.currentCharacter == PathDConstants.DCharacter.space.rawValue || self.currentCharacter == PathDConstants.DCharacter.comma.rawValue) && self.iteratorIndex < self.workingString.count {
                     self.iteratorIndex += 1
                 }
                 if self.currentCommand != nil && self.currentCommand!.canPushCommand {
@@ -116,7 +122,7 @@ struct PathDLexer: IteratorProtocol, Sequence {
                     return self.currentCommand
                 }
                 
-            case DCharacter.sign.rawValue:
+            case PathDConstants.DCharacter.sign.rawValue:
                 self.pushCoordinateIfPossible(self.numberArray)
                 if self.currentCommand != nil && self.currentCommand!.canPushCommand {
                     self.numberArray.removeAll()

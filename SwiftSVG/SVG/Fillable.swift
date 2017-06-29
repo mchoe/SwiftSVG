@@ -20,7 +20,9 @@ extension Fillable where Self : SVGShapeElement {
     
     var fillAttributes: [String : (String) -> ()] {
         return [
+            "color": self.fill,
             "fill": self.fill,
+            "fill-opacity": self.opacity,
             "fill-rule": self.fillRule,
             "opacity": self.opacity,
         ]

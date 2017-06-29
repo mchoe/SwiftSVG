@@ -38,7 +38,7 @@ struct CoordinateLexer: IteratorProtocol, Sequence {
         while self.interatorIndex < self.workingString.count - 1 {
             
             switch self.currentCharacter {
-            case DCharacter.comma.rawValue, DCharacter.space.rawValue:
+            case PathDConstants.DCharacter.comma.rawValue, PathDConstants.DCharacter.space.rawValue:
                 self.interatorIndex += 1
                 if !didParseX {
                     if let asDouble = Double(byteArray: self.numberArray) {

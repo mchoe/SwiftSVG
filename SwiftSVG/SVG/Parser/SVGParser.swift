@@ -32,6 +32,9 @@ open class SVGParser: NSObject, XMLParserDelegate {
     open var containerLayer: CALayer?
     open fileprivate(set) var paths = [UIBezierPath]()
     
+    var boundingBox: CGRect = CGRect.zero
+    
+    
     init(parser: XMLParser, configuration: SVGParserConfiguration = SVGParserConfiguration.allFeatures, containerLayer: CALayer? = nil) {
         self.configuration = configuration
         super.init()
@@ -98,11 +101,60 @@ open class SVGParser: NSObject, XMLParserDelegate {
         DispatchQueue.main.async {
             lastElement.didProcessElement(in: containerElement)
         }
+        DispatchQueue.main.async {
+            if let lastShapeElement = lastElement as? SVGShapeElement {
+                guard let thisBoundingBox = lastShapeElement.boundingBox else {
+                    return
+                }
+                self.boundingBox = self.boundingBox.union(thisBoundingBox)
+                print("Layer Bounding Box: \(thisBoundingBox)")
+            }
+        }
+        
         
     }
     
     public func parserDidEndDocument(_ parser: XMLParser) {
-        //print("Did End: \(self.elementStack)")
+        
+        DispatchQueue.main.async {
+            
+            let boundingBoxLayer = CAShapeLayer()
+            boundingBoxLayer.path = UIBezierPath(rect: self.boundingBox).cgPath
+            boundingBoxLayer.fillColor = UIColor(red: 0.8, green: 0.0, blue: 0.0, alpha: 0.5).cgColor
+            
+            self.containerLayer?.addSublayer(boundingBoxLayer)
+            
+            print("Bounding Box: \(self.boundingBox)")
+            
+            /*
+            guard let sublayers = self.containerLayer?.sublayers else {
+                return
+            }
+            
+            var boundingBox: CGRect?
+            for thisSublayer in sublayers {
+                guard boundingBox != nil else {
+                    boundingBox = thisSublayer.frame
+                    continue
+                }
+                boundingBox = boundingBox?.union(thisSublayer.frame)
+            }
+            
+            guard let thisBoundingBox = boundingBox else {
+                return
+            }
+            
+            let boundingBoxLayer = CAShapeLayer()
+            boundingBoxLayer.path = UIBezierPath(rect: thisBoundingBox).cgPath
+            boundingBoxLayer.fillColor = UIColor(red: 0.8, green: 0.0, blue: 0.0, alpha: 0.5).cgColor
+            
+            self.containerLayer?.addSublayer(boundingBoxLayer)
+            
+            print("Bounding Box: \(boundingBoxLayer.path)")
+            */
+        }
+        
+        
     }
     
     public func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {

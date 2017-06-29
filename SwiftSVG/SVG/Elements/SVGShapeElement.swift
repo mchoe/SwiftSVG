@@ -17,3 +17,9 @@ protocol SVGShapeElement: SVGElement, Fillable, Strokable, Transformable, Stylab
     var svgLayer: CAShapeLayer { get set }
 }
 
+extension SVGShapeElement {
+    var boundingBox: CGRect? {
+        return self.svgLayer.path?.boundingBox
+    }
+}
+
