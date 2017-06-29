@@ -27,17 +27,23 @@ class ScalarFromByteArrayTests: XCTestCase {
     func testInvalidByteArray() {
         var testArray: [CChar] = [65, 48]       // "A0"
         var asDouble = Double(byteArray: testArray)
-        XCTAssertNil(asDouble, "Expected nil, got \(asDouble)")
+        XCTAssertNil(asDouble, "Expected nil, got \(String(describing: asDouble))")
         
         testArray = []
         asDouble = Double(byteArray: testArray)
-        XCTAssertNil(asDouble, "Expected nil, got \(asDouble)")
+        XCTAssertNil(asDouble, "Expected nil, got \(String(describing: asDouble))")
     }
     
     func testENumber() {
-        var testArray: [CChar] = [49, 101, 51] // "1e3
-        var asDouble = Double(byteArray: testArray)
-        XCTAssert(asDouble == 1000, "Double: \(asDouble)")
+        let testArray: [CChar] = [49, 101, 51] // "1e3
+        let asDouble = Double(byteArray: testArray)
+        XCTAssert(asDouble == 1000, "Double: \(asDouble!)")
+    }
+    
+    func testZeroCountArray() {
+        let testArray = [CChar]()
+        let asDouble = Double(byteArray: testArray)
+        XCTAssertNil(asDouble, "Expected nil, got \(String(describing: asDouble))")
     }
 
 }

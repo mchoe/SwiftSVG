@@ -49,11 +49,11 @@ struct Transform {
         case "rotate":
             if coordinates.count == 1 {
                 let degrees = CGFloat(coordinates[0])
-                self.affineTransform = CGAffineTransform(rotationAngle: degrees.degreesToRadians)
+                self.affineTransform = CGAffineTransform(rotationAngle: degrees.toRadians)
             } else if coordinates.count == 3 {
                 let degrees = CGFloat(coordinates[0])
                 let translate = CGAffineTransform(translationX: coordinates[0], y: coordinates[1])
-                let rotate = CGAffineTransform(rotationAngle: degrees.degreesToRadians)
+                let rotate = CGAffineTransform(rotationAngle: degrees.toRadians)
                 let translateReverse = CGAffineTransform(translationX: -coordinates[0], y: -coordinates[1])
                 self.affineTransform = translate.concatenating(rotate).concatenating(translateReverse)
             } else {

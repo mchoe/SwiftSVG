@@ -21,7 +21,6 @@
 		17D570801E1F4EC3007CED68 /* SwiftSVGMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		380FECF61EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */; };
 		380FED021F00171B00EDB255 /* openclipart-004.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECF91F00171B00EDB255 /* openclipart-004.svg */; };
-		380FED031F00171B00EDB255 /* openclipart-123.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECFA1F00171B00EDB255 /* openclipart-123.svg */; };
 		380FED041F00171B00EDB255 /* openclipart-1290111299.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */; };
 		380FED061F00171B00EDB255 /* openclipart-1332611679.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */; };
 		380FED081F00171B00EDB255 /* openclipart-angry-coder.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */; };
@@ -37,21 +36,17 @@
 		380FED4E1F036E1F00EDB255 /* DrawingBoard.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */; };
 		380FED4F1F036E1F00EDB255 /* Skinny-Tree-Silhouette-2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED4C1F036E1F00EDB255 /* Skinny-Tree-Silhouette-2.svg */; };
 		380FED501F036E1F00EDB255 /* EPA-makefood.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED4D1F036E1F00EDB255 /* EPA-makefood.svg */; };
-		380FED521F03763400EDB255 /* christmas.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED511F03763400EDB255 /* christmas.svg */; };
-		3813ED481EFC265F0054ECBD /* openclipart-butterfly_side2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */; };
 		3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */; };
 		3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */; };
 		3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED551EFC6F1B0054ECBD /* fistBump.svg */; };
 		381945511EFA43FA00E61DCE /* tiger.svg in Resources */ = {isa = PBXBuildFile; fileRef = 381945501EFA43FA00E61DCE /* tiger.svg */; };
 		381E99C31EFA0DC400839918 /* polygons.svg in Resources */ = {isa = PBXBuildFile; fileRef = 381E99C21EFA0DC400839918 /* polygons.svg */; };
-		3876E95D1EFCB2E000F8C04E /* openclipart-003.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95A1EFCB2E000F8C04E /* openclipart-003.svg */; };
 		3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */; };
 		3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95C1EFCB2E000F8C04E /* pizza.svg */; };
 		3876E9651EFCC16500F8C04E /* container.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E9641EFCC16500F8C04E /* container.svg */; };
 		38A1CE101EF77A0F00D2E54E /* triangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38A1CE0F1EF77A0F00D2E54E /* triangle.svg */; };
 		38DCC2EA1EFCC59C006C0050 /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */; };
 		38DCC2EB1EFCC59C006C0050 /* SwiftSVGiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		38DCC2EF1EFCC90C006C0050 /* path6658.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38DCC2EE1EFCC90C006C0050 /* path6658.svg */; };
 		8AC4DBC01CB37DB800137DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */; };
 		8AC4DBC21CB37DB800137DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBC11CB37DB800137DC9 /* ViewController.swift */; };
 		8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBC31CB37DB800137DC9 /* Main.storyboard */; };
@@ -99,7 +94,6 @@
 		17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-motivo_geometrico_archit_01.svg"; sourceTree = "<group>"; };
 		380FECF91F00171B00EDB255 /* openclipart-004.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-004.svg"; sourceTree = "<group>"; };
-		380FECFA1F00171B00EDB255 /* openclipart-123.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-123.svg"; sourceTree = "<group>"; };
 		380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1290111299.svg"; sourceTree = "<group>"; };
 		380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1332611679.svg"; sourceTree = "<group>"; };
 		380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-angry-coder.svg"; sourceTree = "<group>"; };
@@ -115,20 +109,16 @@
 		380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DrawingBoard.svg; sourceTree = "<group>"; };
 		380FED4C1F036E1F00EDB255 /* Skinny-Tree-Silhouette-2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Skinny-Tree-Silhouette-2.svg"; sourceTree = "<group>"; };
 		380FED4D1F036E1F00EDB255 /* EPA-makefood.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "EPA-makefood.svg"; sourceTree = "<group>"; };
-		380FED511F03763400EDB255 /* christmas.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = christmas.svg; sourceTree = "<group>"; };
-		3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-butterfly_side2.svg"; sourceTree = "<group>"; };
 		3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-zanzara_architetto_fran_03r.svg"; sourceTree = "<group>"; };
 		3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-tux.svg"; sourceTree = "<group>"; };
 		3813ED551EFC6F1B0054ECBD /* fistBump.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fistBump.svg; sourceTree = "<group>"; };
 		381945501EFA43FA00E61DCE /* tiger.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = tiger.svg; sourceTree = "<group>"; };
 		381E99C21EFA0DC400839918 /* polygons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polygons.svg; sourceTree = "<group>"; };
-		3876E95A1EFCB2E000F8C04E /* openclipart-003.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-003.svg"; sourceTree = "<group>"; };
 		3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1346768588.svg"; sourceTree = "<group>"; };
 		3876E95C1EFCB2E000F8C04E /* pizza.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pizza.svg; sourceTree = "<group>"; };
 		3876E9641EFCC16500F8C04E /* container.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = container.svg; sourceTree = "<group>"; };
 		38A1CE0F1EF77A0F00D2E54E /* triangle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = triangle.svg; sourceTree = "<group>"; };
 		38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38DCC2EE1EFCC90C006C0050 /* path6658.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = path6658.svg; sourceTree = "<group>"; };
 		8AC4DBBD1CB37DB800137DC9 /* SwiftSVGExampleiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVGExampleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AC4DBC11CB37DB800137DC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -223,7 +213,6 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				380FED511F03763400EDB255 /* christmas.svg */,
 				380FED291F0057C100EDB255 /* decorativeblob.svg */,
 				380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */,
 				380FED4C1F036E1F00EDB255 /* Skinny-Tree-Silhouette-2.svg */,
@@ -236,18 +225,14 @@
 				380FED1D1F0034E400EDB255 /* titaniccaptain.svg */,
 				3876E9641EFCC16500F8C04E /* container.svg */,
 				380FECF91F00171B00EDB255 /* openclipart-004.svg */,
-				380FECFA1F00171B00EDB255 /* openclipart-123.svg */,
 				380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */,
 				380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */,
 				380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */,
 				380FED001F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Bicicletta.svg */,
 				380FED011F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg */,
-				38DCC2EE1EFCC90C006C0050 /* path6658.svg */,
-				3876E95A1EFCB2E000F8C04E /* openclipart-003.svg */,
 				3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */,
 				3876E95C1EFCB2E000F8C04E /* pizza.svg */,
 				380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */,
-				3813ED471EFC265F0054ECBD /* openclipart-butterfly_side2.svg */,
 				3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */,
 				3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */,
 				176BC9AF1EE48D3C00F7B54C /* circles.svg */,
@@ -352,7 +337,6 @@
 				380FED1E1F0034E400EDB255 /* titaniccaptain.svg in Resources */,
 				380FED421F0101BD00EDB255 /* CigCardWashington.svg in Resources */,
 				380FED021F00171B00EDB255 /* openclipart-004.svg in Resources */,
-				380FED521F03763400EDB255 /* christmas.svg in Resources */,
 				380FED221F0036F400EDB255 /* rabbitcowboy.svg in Resources */,
 				3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */,
 				380FED501F036E1F00EDB255 /* EPA-makefood.svg in Resources */,
@@ -363,13 +347,11 @@
 				380FED091F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Bicicletta.svg in Resources */,
 				176BC9B01EE48D3C00F7B54C /* circles.svg in Resources */,
 				176BC9FF1EE63FAB00F7B54C /* polylines.svg in Resources */,
-				38DCC2EF1EFCC90C006C0050 /* path6658.svg in Resources */,
 				3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */,
 				380FED2C1F0057CC00EDB255 /* CigCardKosciusko.svg in Resources */,
 				380FED0A1F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg in Resources */,
 				380FED061F00171B00EDB255 /* openclipart-1332611679.svg in Resources */,
 				380FED2A1F0057C100EDB255 /* decorativeblob.svg in Resources */,
-				3876E95D1EFCB2E000F8C04E /* openclipart-003.svg in Resources */,
 				176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */,
 				3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */,
 				380FED441F01E51500EDB255 /* Abstract-Tree-Vector-Art.svg in Resources */,
@@ -382,10 +364,8 @@
 				8AC4DBCA1CB37DB800137DC9 /* LaunchScreen.storyboard in Resources */,
 				380FED081F00171B00EDB255 /* openclipart-angry-coder.svg in Resources */,
 				8AC4DBC71CB37DB800137DC9 /* Assets.xcassets in Resources */,
-				3813ED481EFC265F0054ECBD /* openclipart-butterfly_side2.svg in Resources */,
 				8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */,
 				380FED4F1F036E1F00EDB255 /* Skinny-Tree-Silhouette-2.svg in Resources */,
-				380FED031F00171B00EDB255 /* openclipart-123.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

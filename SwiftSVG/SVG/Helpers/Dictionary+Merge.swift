@@ -10,10 +10,9 @@ import Foundation
 
 extension Dictionary {
     
-    public mutating func add(_ dictionary: [Key:Value]) {
+    public mutating func add(_ dictionary: [Key : Value]) {
         for (key, value) in dictionary {
             self[key] = value
         }
     }
-    
 }

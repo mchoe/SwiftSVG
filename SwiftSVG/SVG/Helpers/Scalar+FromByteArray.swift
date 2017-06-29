@@ -29,9 +29,19 @@ extension CGFloat {
 extension Float {
     
     init?(byteArray: [CChar]) {
+        
+        if byteArray.count == 0 {
+            return nil
+        }
+        
         var nullTerminated = byteArray
         nullTerminated.append(0)
-        self = strtof(nullTerminated, nil)
+        var error: UnsafeMutablePointer<Int8>? = nil
+        let result = strtof(nullTerminated, &error)
+        if error != nil && error?.pointee != 0 {
+            return nil
+        }
+        self = result
     }
     
 }

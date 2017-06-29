@@ -88,8 +88,8 @@ open class SVGParser: NSObject, XMLParserDelegate {
         if let rootItem = lastElement as? SVGRootElement {
             DispatchQueue.main.async {
                 self.containerLayer?.addSublayer(rootItem.containerLayer)
-                return
             }
+            return
         }
         
         guard let containerElement = self.elementStack.last as? SVGContainerElement else {
@@ -103,10 +103,6 @@ open class SVGParser: NSObject, XMLParserDelegate {
     
     public func parserDidEndDocument(_ parser: XMLParser) {
         //print("Did End: \(self.elementStack)")
-    }
-    
-    public func parser(_ parser: XMLParser, validationErrorOccurred validationError: Error) {
-        print("Validation Error occured")
     }
     
     public func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
