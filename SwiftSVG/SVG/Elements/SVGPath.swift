@@ -34,7 +34,9 @@ struct SVGPath: SVGShapeElement {
                 thisPathCommand.execute(on: returnPath, previousCommand: previousCommand)
                 previousCommand = thisPathCommand
             }
-            self.svgLayer.path = returnPath.cgPath
+            DispatchQueue.main.async {
+                self.svgLayer.path = returnPath.cgPath
+            }
         }
     }
     

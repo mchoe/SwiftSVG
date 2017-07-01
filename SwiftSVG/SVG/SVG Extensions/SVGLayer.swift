@@ -29,37 +29,40 @@ open class SVGLayer: CALayer, SVGLayerType {
 
 extension SVGLayerType where Self: CALayer {
     
-    func sizeToFit() {
+    func sizeToFit(size: CGRect) {
         
-        let boundingBoxLayer = CAShapeLayer()
-        boundingBoxLayer.path = UIBezierPath(rect: self.boundingBox).cgPath
-        boundingBoxLayer.fillColor = UIColor(red: 0.8, green: 0.0, blue: 0.0, alpha: 0.35).cgColor
-        
-        //self.containerLayer?.addSublayer(boundingBoxLayer)
-        
-        print("Bounding Box: \(self.boundingBox)")
-        
-        
-        
-        let containingSize = UIScreen.main.applicationFrame.size
-        let boundingBoxAspectRatio = self.boundingBox.width / self.boundingBox.height
-        let viewAspectRatio = containingSize.width / containingSize.height
-        
-        let scaleFactor: CGFloat
-        if (boundingBoxAspectRatio > viewAspectRatio) {
-            // Width is limiting factor
-            scaleFactor = containingSize.width/boundingBox.width
-        } else {
-            // Height is limiting factor
-            scaleFactor = containingSize.height/boundingBox.height
+        DispatchQueue.main.safeAsync {
+            
+            let boundingBoxLayer = CAShapeLayer()
+            boundingBoxLayer.path = UIBezierPath(rect: self.boundingBox).cgPath
+            boundingBoxLayer.fillColor = UIColor(red: 0.8, green: 0.0, blue: 0.0, alpha: 0.35).cgColor
+            
+            //self.containerLayer?.addSublayer(boundingBoxLayer)
+            
+            print("Bounding Box: \(self.boundingBox)")
+            
+            let containingSize = size
+            let boundingBoxAspectRatio = self.boundingBox.width / self.boundingBox.height
+            let viewAspectRatio = containingSize.width / containingSize.height
+            
+            let scaleFactor: CGFloat
+            if (boundingBoxAspectRatio > viewAspectRatio) {
+                // Width is limiting factor
+                scaleFactor = containingSize.width / self.boundingBox.width
+            } else {
+                // Height is limiting factor
+                scaleFactor = containingSize.height / self.boundingBox.height
+            }
+            
+            let scaleTransform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
+            let translate = CGAffineTransform(translationX: -self.boundingBox.origin.x, y: -self.boundingBox.origin.y)
+            let concat = translate.concatenating(scaleTransform)
+            
+            self.setAffineTransform(scaleTransform)
+            
         }
         
-        let scaleTransform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
-        let translate = CGAffineTransform(translationX: -self.boundingBox.origin.x, y: -self.boundingBox.origin.y)
-        let concat = translate.concatenating(scaleTransform)
         
-        
-        self.setAffineTransform(scaleTransform)
         
     }
     

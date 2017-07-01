@@ -89,21 +89,30 @@ open class SVGParser: NSObject, XMLParserDelegate {
         }
         
         if let rootItem = lastElement as? SVGRootElement {
-            self.containerLayer?.addSublayer(rootItem.containerLayer)
+            DispatchQueue.main.async {
+                self.containerLayer?.addSublayer(rootItem.containerLayer)
+            }
             return
         }
         
         guard let containerElement = self.elementStack.last as? SVGContainerElement else {
             return
         }
-        lastElement.didProcessElement(in: containerElement)
-        
-        if let lastShapeElement = lastElement as? SVGShapeElement {
-            guard let thisBoundingBox = lastShapeElement.boundingBox else {
-                return
+        DispatchQueue.main.safeAsync {
+            lastElement.didProcessElement(in: containerElement)
+            
+            if let lastShapeElement = lastElement as? SVGShapeElement {
+                
+                guard let containerLayer = self.containerLayer else {
+                    return
+                }
+                
+                guard let thisBoundingBox = lastShapeElement.boundingBox else {
+                    return
+                }
+                containerLayer.boundingBox = containerLayer.boundingBox.union(thisBoundingBox)
+                //print("Layer Bounding Box: \(thisBoundingBox)")
             }
-            self.containerLayer!.boundingBox = self.containerLayer!.boundingBox.union(thisBoundingBox)
-            //print("Layer Bounding Box: \(thisBoundingBox)")
         }
         
         
@@ -111,12 +120,51 @@ open class SVGParser: NSObject, XMLParserDelegate {
     
     public func parserDidEndDocument(_ parser: XMLParser) {
         
-        self.containerLayer?.sizeToFit()
-        
-        
         DispatchQueue.main.async {
             
+            //self.containerLayer?.sizeToFit()
             
+            //print("Should size: \(self.boundingBox)")
+            
+            
+            /*
+            let boundingBoxLayer = CAShapeLayer()
+            boundingBoxLayer.path = UIBezierPath(rect: self.boundingBox).cgPath
+            boundingBoxLayer.fillColor = UIColor(red: 0.8, green: 0.0, blue: 0.0, alpha: 0.35).cgColor
+            
+            //self.containerLayer?.addSublayer(boundingBoxLayer)
+            
+            print("Bounding Box: \(self.boundingBox)")
+            
+            let containingSize = UIScreen.main.applicationFrame.size
+            let boundingBoxAspectRatio = self.boundingBox.width / self.boundingBox.height
+            let viewAspectRatio = containingSize.width / containingSize.height
+            
+            let scaleFactor: CGFloat
+            if (boundingBoxAspectRatio > viewAspectRatio) {
+                // Width is limiting factor
+                scaleFactor = containingSize.width / self.boundingBox.width
+            } else {
+                // Height is limiting factor
+                scaleFactor = containingSize.height / self.boundingBox.height
+            }
+            
+            let scaleTransform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
+            let translate = CGAffineTransform(translationX: -self.boundingBox.origin.x, y: -self.boundingBox.origin.y)
+            let concat = translate.concatenating(scaleTransform)
+            
+            self.containerLayer?.setAffineTransform(scaleTransform)
+            */
+            
+            /*
+            let boundingBoxLayer = CAShapeLayer()
+            boundingBoxLayer.path = UIBezierPath(rect: self.boundingBox).cgPath
+            boundingBoxLayer.fillColor = UIColor(red: 0.8, green: 0.0, blue: 0.0, alpha: 0.5).cgColor
+            
+            self.containerLayer?.addSublayer(boundingBoxLayer)
+            
+            print("Bounding Box: \(self.boundingBox)")
+            */
             
             /*
             guard let sublayers = self.containerLayer?.sublayers else {
