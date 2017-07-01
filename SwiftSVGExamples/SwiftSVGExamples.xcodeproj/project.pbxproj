@@ -28,18 +28,26 @@
 		380FED0A1F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED011F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg */; };
 		380FED1E1F0034E400EDB255 /* titaniccaptain.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED1D1F0034E400EDB255 /* titaniccaptain.svg */; };
 		380FED221F0036F400EDB255 /* rabbitcowboy.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED211F0036F400EDB255 /* rabbitcowboy.svg */; };
-		380FED2A1F0057C100EDB255 /* decorativeblob.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED291F0057C100EDB255 /* decorativeblob.svg */; };
 		380FED2C1F0057CC00EDB255 /* CigCardKosciusko.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED2B1F0057CC00EDB255 /* CigCardKosciusko.svg */; };
 		380FED421F0101BD00EDB255 /* CigCardWashington.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED411F0101BD00EDB255 /* CigCardWashington.svg */; };
-		380FED441F01E51500EDB255 /* Abstract-Tree-Vector-Art.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED431F01E51500EDB255 /* Abstract-Tree-Vector-Art.svg */; };
 		380FED4A1F02064900EDB255 /* hawaiiFlowers.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED491F02064900EDB255 /* hawaiiFlowers.svg */; };
 		380FED4E1F036E1F00EDB255 /* DrawingBoard.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */; };
 		380FED4F1F036E1F00EDB255 /* Skinny-Tree-Silhouette-2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED4C1F036E1F00EDB255 /* Skinny-Tree-Silhouette-2.svg */; };
 		380FED501F036E1F00EDB255 /* EPA-makefood.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED4D1F036E1F00EDB255 /* EPA-makefood.svg */; };
+		380FED5B1F06907600EDB255 /* johnny-automatic-open-mouth.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED5A1F06907600EDB255 /* johnny-automatic-open-mouth.svg */; };
+		380FED5D1F0691DB00EDB255 /* Carl-Georg-Adolph-Hasenpflug-Medieval-Town-Grayscale.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED5C1F0691DB00EDB255 /* Carl-Georg-Adolph-Hasenpflug-Medieval-Town-Grayscale.svg */; };
+		380FED611F0692E500EDB255 /* Fyodor-Dostoevsky.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED5E1F0692E500EDB255 /* Fyodor-Dostoevsky.svg */; };
+		380FED621F0692E500EDB255 /* CigCardBullfightersSword.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED5F1F0692E500EDB255 /* CigCardBullfightersSword.svg */; };
+		380FED631F0692E500EDB255 /* MedievalBanners.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED601F0692E500EDB255 /* MedievalBanners.svg */; };
+		380FED651F06946500EDB255 /* Dulcimer.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED641F06946500EDB255 /* Dulcimer.svg */; };
+		380FED671F06951100EDB255 /* tiger.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED661F06951100EDB255 /* tiger.svg */; };
+		380FED691F0697A800EDB255 /* Camel2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED681F0697A800EDB255 /* Camel2.svg */; };
+		380FED6B1F06984900EDB255 /* decorativeblob.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED6A1F06984900EDB255 /* decorativeblob.svg */; };
+		380FED6D1F06992800EDB255 /* Abstract-Tree-Vector-Art.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED6C1F06992800EDB255 /* Abstract-Tree-Vector-Art.svg */; };
+		380FED6F1F069AFB00EDB255 /* fossasia2016-2016021130.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED6E1F069AFB00EDB255 /* fossasia2016-2016021130.svg */; };
 		3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */; };
 		3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */; };
 		3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED551EFC6F1B0054ECBD /* fistBump.svg */; };
-		381945511EFA43FA00E61DCE /* tiger.svg in Resources */ = {isa = PBXBuildFile; fileRef = 381945501EFA43FA00E61DCE /* tiger.svg */; };
 		381E99C31EFA0DC400839918 /* polygons.svg in Resources */ = {isa = PBXBuildFile; fileRef = 381E99C21EFA0DC400839918 /* polygons.svg */; };
 		3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */; };
 		3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95C1EFCB2E000F8C04E /* pizza.svg */; };
@@ -101,18 +109,26 @@
 		380FED011F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-Anonymous_Architetto_--_Camello.svg"; sourceTree = "<group>"; };
 		380FED1D1F0034E400EDB255 /* titaniccaptain.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = titaniccaptain.svg; sourceTree = "<group>"; };
 		380FED211F0036F400EDB255 /* rabbitcowboy.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rabbitcowboy.svg; sourceTree = "<group>"; };
-		380FED291F0057C100EDB255 /* decorativeblob.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = decorativeblob.svg; sourceTree = "<group>"; };
 		380FED2B1F0057CC00EDB255 /* CigCardKosciusko.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CigCardKosciusko.svg; sourceTree = "<group>"; };
 		380FED411F0101BD00EDB255 /* CigCardWashington.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CigCardWashington.svg; sourceTree = "<group>"; };
-		380FED431F01E51500EDB255 /* Abstract-Tree-Vector-Art.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Abstract-Tree-Vector-Art.svg"; sourceTree = "<group>"; };
 		380FED491F02064900EDB255 /* hawaiiFlowers.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hawaiiFlowers.svg; sourceTree = "<group>"; };
 		380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DrawingBoard.svg; sourceTree = "<group>"; };
 		380FED4C1F036E1F00EDB255 /* Skinny-Tree-Silhouette-2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Skinny-Tree-Silhouette-2.svg"; sourceTree = "<group>"; };
 		380FED4D1F036E1F00EDB255 /* EPA-makefood.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "EPA-makefood.svg"; sourceTree = "<group>"; };
+		380FED5A1F06907600EDB255 /* johnny-automatic-open-mouth.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "johnny-automatic-open-mouth.svg"; sourceTree = "<group>"; };
+		380FED5C1F0691DB00EDB255 /* Carl-Georg-Adolph-Hasenpflug-Medieval-Town-Grayscale.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Carl-Georg-Adolph-Hasenpflug-Medieval-Town-Grayscale.svg"; sourceTree = "<group>"; };
+		380FED5E1F0692E500EDB255 /* Fyodor-Dostoevsky.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Fyodor-Dostoevsky.svg"; sourceTree = "<group>"; };
+		380FED5F1F0692E500EDB255 /* CigCardBullfightersSword.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CigCardBullfightersSword.svg; sourceTree = "<group>"; };
+		380FED601F0692E500EDB255 /* MedievalBanners.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MedievalBanners.svg; sourceTree = "<group>"; };
+		380FED641F06946500EDB255 /* Dulcimer.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Dulcimer.svg; sourceTree = "<group>"; };
+		380FED661F06951100EDB255 /* tiger.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = tiger.svg; sourceTree = "<group>"; };
+		380FED681F0697A800EDB255 /* Camel2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Camel2.svg; sourceTree = "<group>"; };
+		380FED6A1F06984900EDB255 /* decorativeblob.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = decorativeblob.svg; sourceTree = "<group>"; };
+		380FED6C1F06992800EDB255 /* Abstract-Tree-Vector-Art.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Abstract-Tree-Vector-Art.svg"; sourceTree = "<group>"; };
+		380FED6E1F069AFB00EDB255 /* fossasia2016-2016021130.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "fossasia2016-2016021130.svg"; sourceTree = "<group>"; };
 		3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-zanzara_architetto_fran_03r.svg"; sourceTree = "<group>"; };
 		3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-tux.svg"; sourceTree = "<group>"; };
 		3813ED551EFC6F1B0054ECBD /* fistBump.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fistBump.svg; sourceTree = "<group>"; };
-		381945501EFA43FA00E61DCE /* tiger.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = tiger.svg; sourceTree = "<group>"; };
 		381E99C21EFA0DC400839918 /* polygons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polygons.svg; sourceTree = "<group>"; };
 		3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1346768588.svg"; sourceTree = "<group>"; };
 		3876E95C1EFCB2E000F8C04E /* pizza.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pizza.svg; sourceTree = "<group>"; };
@@ -213,12 +229,20 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				380FED291F0057C100EDB255 /* decorativeblob.svg */,
+				380FED6E1F069AFB00EDB255 /* fossasia2016-2016021130.svg */,
+				380FED6C1F06992800EDB255 /* Abstract-Tree-Vector-Art.svg */,
+				380FED6A1F06984900EDB255 /* decorativeblob.svg */,
+				380FED681F0697A800EDB255 /* Camel2.svg */,
+				380FED641F06946500EDB255 /* Dulcimer.svg */,
+				380FED5E1F0692E500EDB255 /* Fyodor-Dostoevsky.svg */,
+				380FED5F1F0692E500EDB255 /* CigCardBullfightersSword.svg */,
+				380FED601F0692E500EDB255 /* MedievalBanners.svg */,
+				380FED5C1F0691DB00EDB255 /* Carl-Georg-Adolph-Hasenpflug-Medieval-Town-Grayscale.svg */,
+				380FED5A1F06907600EDB255 /* johnny-automatic-open-mouth.svg */,
 				380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */,
 				380FED4C1F036E1F00EDB255 /* Skinny-Tree-Silhouette-2.svg */,
 				380FED4D1F036E1F00EDB255 /* EPA-makefood.svg */,
 				380FED491F02064900EDB255 /* hawaiiFlowers.svg */,
-				380FED431F01E51500EDB255 /* Abstract-Tree-Vector-Art.svg */,
 				380FED2B1F0057CC00EDB255 /* CigCardKosciusko.svg */,
 				380FED411F0101BD00EDB255 /* CigCardWashington.svg */,
 				380FED211F0036F400EDB255 /* rabbitcowboy.svg */,
@@ -241,9 +265,9 @@
 				176BC9FE1EE63FAB00F7B54C /* polylines.svg */,
 				381E99C21EFA0DC400839918 /* polygons.svg */,
 				176BC9CC1EE4C44E00F7B54C /* lines.svg */,
-				381945501EFA43FA00E61DCE /* tiger.svg */,
 				176BC9B81EE49C7200F7B54C /* rectangles.svg */,
 				38A1CE0F1EF77A0F00D2E54E /* triangle.svg */,
+				380FED661F06951100EDB255 /* tiger.svg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -333,28 +357,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				381E99C31EFA0DC400839918 /* polygons.svg in Resources */,
+				380FED5D1F0691DB00EDB255 /* Carl-Georg-Adolph-Hasenpflug-Medieval-Town-Grayscale.svg in Resources */,
+				380FED671F06951100EDB255 /* tiger.svg in Resources */,
 				3876E9651EFCC16500F8C04E /* container.svg in Resources */,
 				380FED1E1F0034E400EDB255 /* titaniccaptain.svg in Resources */,
 				380FED421F0101BD00EDB255 /* CigCardWashington.svg in Resources */,
 				380FED021F00171B00EDB255 /* openclipart-004.svg in Resources */,
 				380FED221F0036F400EDB255 /* rabbitcowboy.svg in Resources */,
+				380FED651F06946500EDB255 /* Dulcimer.svg in Resources */,
+				380FED621F0692E500EDB255 /* CigCardBullfightersSword.svg in Resources */,
 				3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */,
 				380FED501F036E1F00EDB255 /* EPA-makefood.svg in Resources */,
-				381945511EFA43FA00E61DCE /* tiger.svg in Resources */,
+				380FED6F1F069AFB00EDB255 /* fossasia2016-2016021130.svg in Resources */,
+				380FED5B1F06907600EDB255 /* johnny-automatic-open-mouth.svg in Resources */,
 				380FECF61EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg in Resources */,
 				380FED041F00171B00EDB255 /* openclipart-1290111299.svg in Resources */,
+				380FED6B1F06984900EDB255 /* decorativeblob.svg in Resources */,
 				38A1CE101EF77A0F00D2E54E /* triangle.svg in Resources */,
 				380FED091F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Bicicletta.svg in Resources */,
 				176BC9B01EE48D3C00F7B54C /* circles.svg in Resources */,
 				176BC9FF1EE63FAB00F7B54C /* polylines.svg in Resources */,
+				380FED6D1F06992800EDB255 /* Abstract-Tree-Vector-Art.svg in Resources */,
 				3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */,
 				380FED2C1F0057CC00EDB255 /* CigCardKosciusko.svg in Resources */,
 				380FED0A1F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg in Resources */,
 				380FED061F00171B00EDB255 /* openclipart-1332611679.svg in Resources */,
-				380FED2A1F0057C100EDB255 /* decorativeblob.svg in Resources */,
 				176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */,
+				380FED631F0692E500EDB255 /* MedievalBanners.svg in Resources */,
 				3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */,
-				380FED441F01E51500EDB255 /* Abstract-Tree-Vector-Art.svg in Resources */,
+				380FED691F0697A800EDB255 /* Camel2.svg in Resources */,
 				380FED4A1F02064900EDB255 /* hawaiiFlowers.svg in Resources */,
 				3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */,
 				380FED4E1F036E1F00EDB255 /* DrawingBoard.svg in Resources */,
@@ -362,6 +393,7 @@
 				3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */,
 				176BC9C71EE4C1AB00F7B54C /* ellipses.svg in Resources */,
 				8AC4DBCA1CB37DB800137DC9 /* LaunchScreen.storyboard in Resources */,
+				380FED611F0692E500EDB255 /* Fyodor-Dostoevsky.svg in Resources */,
 				380FED081F00171B00EDB255 /* openclipart-angry-coder.svg in Resources */,
 				8AC4DBC71CB37DB800137DC9 /* Assets.xcassets in Resources */,
 				8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */,

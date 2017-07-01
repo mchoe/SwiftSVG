@@ -34,34 +34,27 @@ import Foundation
 
 extension UIView {
     
+    /*
     public convenience init(pathString: String) {
         self.init()
-        DispatchQueue.global().async {
-            let shapeLayer = CAShapeLayer(pathString: pathString)
-            DispatchQueue.main.async {
-                self.nonOptionalLayer.addSublayer(shapeLayer)
-            }
-        }
+        let shapeLayer = CAShapeLayer(pathString: pathString)
+        self.nonOptionalLayer.addSublayer(shapeLayer)
         
     }
+ */
     
     public convenience init(SVGURL: URL) {
         self.init()
-        DispatchQueue.global().async {
-            let shapeLayer = CAShapeLayer(SVGURL: SVGURL)
-            DispatchQueue.main.async {
-                self.nonOptionalLayer.addSublayer(shapeLayer)
-            }
-        }
+        //let shapeLayer = CAShapeLayer(SVGURL: SVGURL)
+        let svgLayer = SVGLayer(SVGURL: SVGURL)
+        self.nonOptionalLayer.addSublayer(svgLayer)
     }
 	
+    /*
 	public convenience init(SVGData: Data) {
 		self.init()
-        DispatchQueue.global().async {
-            let shapeLayer = CAShapeLayer(SVGData: SVGData)
-            DispatchQueue.main.async {
-                self.nonOptionalLayer.addSublayer(shapeLayer)
-            }
-        }
+        let shapeLayer = CAShapeLayer(SVGData: SVGData)
+        self.nonOptionalLayer.addSublayer(shapeLayer)
 	}
+    */
 }

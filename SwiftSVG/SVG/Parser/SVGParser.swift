@@ -29,13 +29,13 @@ open class SVGParser: NSObject, XMLParserDelegate {
     fileprivate var elementStack = Stack<SVGElement>()
     
     private let configuration: SVGParserConfiguration
-    open var containerLayer: CALayer?
+    open var containerLayer: SVGLayer?
     open fileprivate(set) var paths = [UIBezierPath]()
     
-    var boundingBox: CGRect = CGRect.zero
+    //var boundingBox: CGRect = CGRect.zero
     
     
-    init(parser: XMLParser, configuration: SVGParserConfiguration = SVGParserConfiguration.allFeatures, containerLayer: CALayer? = nil) {
+    init(parser: XMLParser, configuration: SVGParserConfiguration = SVGParserConfiguration.allFeatures, containerLayer: SVGLayer? = nil) {
         self.configuration = configuration
         super.init()
         
@@ -47,11 +47,11 @@ open class SVGParser: NSObject, XMLParserDelegate {
         parser.parse()
     }
     
-    convenience init(data: Data, containerLayer: CALayer? = nil) {
+    convenience init(data: Data, containerLayer: SVGLayer? = nil) {
         self.init(parser: XMLParser(data: data), containerLayer: containerLayer)
     }
     
-    convenience init(SVGURL: URL, containerLayer: CALayer? = nil) {
+    convenience init(SVGURL: URL, containerLayer: SVGLayer? = nil) {
         if let xmlParser = XMLParser(contentsOf: SVGURL) {
             self.init(parser: xmlParser, containerLayer: containerLayer)
         } else {
@@ -89,26 +89,21 @@ open class SVGParser: NSObject, XMLParserDelegate {
         }
         
         if let rootItem = lastElement as? SVGRootElement {
-            DispatchQueue.main.async {
-                self.containerLayer?.addSublayer(rootItem.containerLayer)
-            }
+            self.containerLayer?.addSublayer(rootItem.containerLayer)
             return
         }
         
         guard let containerElement = self.elementStack.last as? SVGContainerElement else {
             return
         }
-        DispatchQueue.main.async {
-            lastElement.didProcessElement(in: containerElement)
-        }
-        DispatchQueue.main.async {
-            if let lastShapeElement = lastElement as? SVGShapeElement {
-                guard let thisBoundingBox = lastShapeElement.boundingBox else {
-                    return
-                }
-                self.boundingBox = self.boundingBox.union(thisBoundingBox)
-                print("Layer Bounding Box: \(thisBoundingBox)")
+        lastElement.didProcessElement(in: containerElement)
+        
+        if let lastShapeElement = lastElement as? SVGShapeElement {
+            guard let thisBoundingBox = lastShapeElement.boundingBox else {
+                return
             }
+            self.containerLayer!.boundingBox = self.containerLayer!.boundingBox.union(thisBoundingBox)
+            //print("Layer Bounding Box: \(thisBoundingBox)")
         }
         
         
@@ -116,15 +111,12 @@ open class SVGParser: NSObject, XMLParserDelegate {
     
     public func parserDidEndDocument(_ parser: XMLParser) {
         
+        self.containerLayer?.sizeToFit()
+        
+        
         DispatchQueue.main.async {
             
-            let boundingBoxLayer = CAShapeLayer()
-            boundingBoxLayer.path = UIBezierPath(rect: self.boundingBox).cgPath
-            boundingBoxLayer.fillColor = UIColor(red: 0.8, green: 0.0, blue: 0.0, alpha: 0.5).cgColor
             
-            self.containerLayer?.addSublayer(boundingBoxLayer)
-            
-            print("Bounding Box: \(self.boundingBox)")
             
             /*
             guard let sublayers = self.containerLayer?.sublayers else {

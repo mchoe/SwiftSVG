@@ -18,7 +18,7 @@ class ViewSVGViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.automaticallyAdjustsScrollViewInsets = false
         
         if let url = self.svgURL {
             let svgView = UIView(SVGURL: url)
@@ -44,3 +44,13 @@ class ViewSVGViewController: UIViewController {
     */
 
 }
+
+extension ViewSVGViewController: UIScrollViewDelegate {
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.canvasView
+    }
+    
+}
+
+

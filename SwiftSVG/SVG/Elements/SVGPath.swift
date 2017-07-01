@@ -30,16 +30,11 @@ struct SVGPath: SVGShapeElement {
             let returnPath = UIBezierPath()
             returnPath.move(to: CGPoint.zero)
             var previousCommand: PreviousCommand? = nil
-            let concurrentQueue = DispatchQueue(label: "concurrentPathQueue", attributes: .concurrent)
-            concurrentQueue.async {
-                for thisPathCommand in PathDLexer(pathString: workingString) {
-                    thisPathCommand.execute(on: returnPath, previousCommand: previousCommand)
-                    previousCommand = thisPathCommand
-                }
-                DispatchQueue.main.async {
-                    self.svgLayer.path = returnPath.cgPath
-                }
+            for thisPathCommand in PathDLexer(pathString: workingString) {
+                thisPathCommand.execute(on: returnPath, previousCommand: previousCommand)
+                previousCommand = thisPathCommand
             }
+            self.svgLayer.path = returnPath.cgPath
         }
     }
     

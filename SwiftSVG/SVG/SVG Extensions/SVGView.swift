@@ -47,12 +47,14 @@ open class SVGView : UIView {
                     let bundle = Bundle(for: type(of: self))
                 #endif
                 
+                /*
                 if let url = bundle.url(forResource: thisName, withExtension: "svg") {
                     self.shapeLayer = CAShapeLayer(SVGURL: url)
                     if self.shapeLayer.superlayer == nil {
                         self.nonOptionalLayer.addSublayer(self.shapeLayer)
                     }
                 }
+                */
             }
         }
     }

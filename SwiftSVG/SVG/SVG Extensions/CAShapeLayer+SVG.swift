@@ -32,6 +32,8 @@ import AppKit
 import QuartzCore
 #endif
 
+
+/*
 extension CAShapeLayer {
     
     public convenience init(pathString: String) {
@@ -50,3 +52,4 @@ extension CAShapeLayer {
 		//_ = SVGParser(data: SVGData, containerLayer: self)
 	}
 }
+ */

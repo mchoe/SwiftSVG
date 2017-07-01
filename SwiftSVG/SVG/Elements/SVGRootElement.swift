@@ -48,7 +48,7 @@ struct SVGRootElement: SVGContainerElement {
             return
         }
         self.containerLayer.frame = CGRect(x: points[0], y: points[1], width: points[2], height: points[3])
-        self.containerLayer.masksToBounds = true
+        //self.containerLayer.masksToBounds = true
     }
 }
 
