@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SVGParserConfiguration {
+public struct SVGParserConfiguration {
     
     typealias ElementGenerator = () -> SVGElement
     
@@ -38,8 +38,7 @@ struct SVGParserConfiguration {
         return SVGParserConfiguration(tags: configuration)
     }
     
-    public static var allFeatures: SVGParserConfiguration = {
-        
+    static func allFeaturesConfiguration(for parser: CanManageAsychronousCallbacks) -> SVGParserConfiguration {
         let configuration: [String : ElementGenerator] = [
             SVGCircle.elementName: {
                 let returnElement = SVGCircle()
@@ -69,7 +68,7 @@ struct SVGParserConfiguration {
                 return returnElement
             },
             SVGGroup.elementName: {
-                var returnElement = SVGGroup()
+                let returnElement = SVGGroup()
                 
                 // Ideally, the attributes would just use the same methods as the other fill
                 // attributes of the other elements, just adding the attributes that need to
@@ -106,6 +105,7 @@ struct SVGParserConfiguration {
             },
             SVGPath.elementName: {
                 var returnElement = SVGPath()
+                returnElement.asyncParseManager = parser
                 returnElement.supportedAttributes = [
                     "d": returnElement.parseD,
                     "clip-rule": returnElement.clipRule
@@ -166,7 +166,7 @@ struct SVGParserConfiguration {
             
         ]
         return SVGParserConfiguration(tags: configuration)
-    }()
+    }
     
 }
 

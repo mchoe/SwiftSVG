@@ -44,7 +44,6 @@
 		380FED691F0697A800EDB255 /* Camel2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED681F0697A800EDB255 /* Camel2.svg */; };
 		380FED6B1F06984900EDB255 /* decorativeblob.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED6A1F06984900EDB255 /* decorativeblob.svg */; };
 		380FED6D1F06992800EDB255 /* Abstract-Tree-Vector-Art.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED6C1F06992800EDB255 /* Abstract-Tree-Vector-Art.svg */; };
-		380FED6F1F069AFB00EDB255 /* fossasia2016-2016021130.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED6E1F069AFB00EDB255 /* fossasia2016-2016021130.svg */; };
 		3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */; };
 		3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */; };
 		3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED551EFC6F1B0054ECBD /* fistBump.svg */; };
@@ -125,7 +124,6 @@
 		380FED681F0697A800EDB255 /* Camel2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Camel2.svg; sourceTree = "<group>"; };
 		380FED6A1F06984900EDB255 /* decorativeblob.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = decorativeblob.svg; sourceTree = "<group>"; };
 		380FED6C1F06992800EDB255 /* Abstract-Tree-Vector-Art.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Abstract-Tree-Vector-Art.svg"; sourceTree = "<group>"; };
-		380FED6E1F069AFB00EDB255 /* fossasia2016-2016021130.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "fossasia2016-2016021130.svg"; sourceTree = "<group>"; };
 		3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-zanzara_architetto_fran_03r.svg"; sourceTree = "<group>"; };
 		3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-tux.svg"; sourceTree = "<group>"; };
 		3813ED551EFC6F1B0054ECBD /* fistBump.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fistBump.svg; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				380FED6E1F069AFB00EDB255 /* fossasia2016-2016021130.svg */,
 				380FED6C1F06992800EDB255 /* Abstract-Tree-Vector-Art.svg */,
 				380FED6A1F06984900EDB255 /* decorativeblob.svg */,
 				380FED681F0697A800EDB255 /* Camel2.svg */,
@@ -368,7 +365,6 @@
 				380FED621F0692E500EDB255 /* CigCardBullfightersSword.svg in Resources */,
 				3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */,
 				380FED501F036E1F00EDB255 /* EPA-makefood.svg in Resources */,
-				380FED6F1F069AFB00EDB255 /* fossasia2016-2016021130.svg in Resources */,
 				380FED5B1F06907600EDB255 /* johnny-automatic-open-mouth.svg in Resources */,
 				380FECF61EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg in Resources */,
 				380FED041F00171B00EDB255 /* openclipart-1290111299.svg in Resources */,

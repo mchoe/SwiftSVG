@@ -32,10 +32,13 @@
 #endif
 
 
+
+
+
 @IBDesignable
 open class SVGView : UIView {
     
-    var shapeLayer = CAShapeLayer()
+    var svgLayer = SVGLayer()
     
     @IBInspectable public var SVGName: String? {
         didSet {
@@ -61,9 +64,26 @@ open class SVGView : UIView {
 }
 
 extension SVGView {
+    
     public convenience init(SVGName: String) {
         self.init()
         self.SVGName = SVGName
     }
+}
+
+extension SVGView {
+    
+    override open func layoutSubviews() {
+        super.layoutSubviews()
+        //print("Laying out subviews")
+        
+        if let superviewSize = self.superview?.bounds {
+            //print("layoutSubviews: \(superviewSize)")
+            
+            //self.svgLayer.resizeToFit(size: superviewSize)
+            //parserToUse.containerLayer.sizeToFit(size: superviewSize)
+        }
+    }
+    
 }
 

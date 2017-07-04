@@ -47,21 +47,27 @@ extension UIView {
     }
     */
     
-    public convenience init(SVGURL: URL) {
+    public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         self.init()
+        
         DispatchQueue.global().async {
-            let shapeLayer = SVGLayer(SVGURL: SVGURL)
-            DispatchQueue.main.safeAsync {
-                if let superviewSize = self.superview?.bounds {
-                    shapeLayer.sizeToFit(size: superviewSize)
-                    print("Self size: \(superviewSize)")
+            
+            let parserToUse: SVGParser
+            if let parser = parser {
+                parserToUse = parser
+            } else {
+                let newCompletion: ((SVGLayer) -> Void)? = { (svgLayer) in
+                    if let superviewSize = self.superview?.bounds {
+                        svgLayer.resizeToFit(size: superviewSize)
+                    }
+                    DispatchQueue.main.safeAsync {
+                        self.nonOptionalLayer.addSublayer(svgLayer)
+                    }
+                    completion?(svgLayer)
                 }
-                
-                //print("Bounding: \(shapeLayer.boundingBox)")
-                
-                self.nonOptionalLayer.addSublayer(shapeLayer)
-                print("Added")
+                parserToUse = NSXMLSVGParser(SVGURL: SVGURL, completion: newCompletion)
             }
+            parserToUse.startParsing()
         }
     }
 	

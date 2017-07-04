@@ -14,11 +14,13 @@
 
 
 
-struct SVGPath: SVGShapeElement {
+struct SVGPath: SVGShapeElement, ParsesAsynchronously {
     
     static var elementName: String {
         return "path"
     }
+    
+    var asyncParseManager: CanManageAsychronousCallbacks? = nil
     
     var supportedAttributes = [String : ((String) -> ())?]()
     var svgLayer = CAShapeLayer()
@@ -27,15 +29,26 @@ struct SVGPath: SVGShapeElement {
         let workingString = pathString.trimWhitespace()
         assert(workingString.hasPrefix("M") || workingString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
         autoreleasepool { () -> () in
+            
+            let concurrent = DispatchQueue(label: "concurrent", attributes: .concurrent)
+            let dispatchGroup = DispatchGroup()
+            
             let returnPath = UIBezierPath()
             returnPath.move(to: CGPoint.zero)
-            var previousCommand: PreviousCommand? = nil
-            for thisPathCommand in PathDLexer(pathString: workingString) {
-                thisPathCommand.execute(on: returnPath, previousCommand: previousCommand)
-                previousCommand = thisPathCommand
+            
+            concurrent.async(group: dispatchGroup) {
+                
+                var previousCommand: PreviousCommand? = nil
+                for thisPathCommand in PathDLexer(pathString: workingString) {
+                    thisPathCommand.execute(on: returnPath, previousCommand: previousCommand)
+                    previousCommand = thisPathCommand
+                }
+                
             }
-            DispatchQueue.main.async {
+            
+            dispatchGroup.notify(queue: DispatchQueue.main) {
                 self.svgLayer.path = returnPath.cgPath
+                self.asyncParseManager?.finishedProcessing(self.svgLayer.path?.boundingBox)
             }
         }
     }

@@ -12,34 +12,27 @@
     import AppKit
 #endif
 
-protocol SVGLayerType {
+public protocol SVGLayerType {
     var boundingBox: CGRect { get }
 }
 
 open class SVGLayer: CALayer, SVGLayerType {
     
-    var boundingBox = CGRect.zero
+    public var boundingBox = CGRect.zero
     
-    public convenience init(SVGURL: URL) {
+    /*
+    public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         self.init()
-        _ = SVGParser(SVGURL: SVGURL, containerLayer: self)
+        _ = SVGParser(SVGURL: SVGURL, containerLayer: self, completion: completion)
     }
-    
+    */
 }
 
 extension SVGLayerType where Self: CALayer {
     
-    func sizeToFit(size: CGRect) {
+    public func resizeToFit(size: CGRect) {
         
         DispatchQueue.main.safeAsync {
-            
-            let boundingBoxLayer = CAShapeLayer()
-            boundingBoxLayer.path = UIBezierPath(rect: self.boundingBox).cgPath
-            boundingBoxLayer.fillColor = UIColor(red: 0.8, green: 0.0, blue: 0.0, alpha: 0.35).cgColor
-            
-            //self.containerLayer?.addSublayer(boundingBoxLayer)
-            
-            print("Bounding Box: \(self.boundingBox)")
             
             let containingSize = size
             let boundingBoxAspectRatio = self.boundingBox.width / self.boundingBox.height
@@ -61,9 +54,6 @@ extension SVGLayerType where Self: CALayer {
             self.setAffineTransform(scaleTransform)
             
         }
-        
-        
-        
     }
     
 }

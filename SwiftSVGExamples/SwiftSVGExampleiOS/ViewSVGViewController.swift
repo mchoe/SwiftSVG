@@ -21,7 +21,7 @@ class ViewSVGViewController: UIViewController {
         self.automaticallyAdjustsScrollViewInsets = false
         
         if let url = self.svgURL {
-            let svgView = UIView(SVGURL: url)
+            let svgView = SVGView(SVGURL: url)
             self.canvasView.addSubview(svgView)
         }
         
