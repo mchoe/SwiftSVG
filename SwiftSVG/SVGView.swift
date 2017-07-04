@@ -63,5 +63,17 @@ extension SVGView {
         self.init()
         self.SVGName = SVGName
     }
+    
+    /// Just a method that allow the user to load a SVG from a Data
+    ///
+    /// - Parameter svgPath: A valid SVG wrapped into a Data
+    public func loadFromSVGData(_ svgPath: Data) {
+        self.shapeLayer = CAShapeLayer(SVGData: svgPath)
+        if self.shapeLayer.superlayer == nil {
+            self.nonOptionalLayer.addSublayer(self.shapeLayer)
+        }
+        
+    }
+
 }
 
