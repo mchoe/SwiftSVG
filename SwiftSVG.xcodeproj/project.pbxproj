@@ -81,7 +81,6 @@
 		380FECF81F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */; };
 		380FED101F002C0E00EDB255 /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FED0F1F002C0E00EDB255 /* Stylable.swift */; };
 		380FED331F00FEF000EDB255 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FED321F00FEF000EDB255 /* PerformanceTests.swift */; };
-		380FED371F00FF5000EDB255 /* CigCardKosciusko.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED351F00FF5000EDB255 /* CigCardKosciusko.svg */; };
 		380FED391F0100A800EDB255 /* Fillable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3876E9601EFCBABB00F8C04E /* Fillable.swift */; };
 		380FED3A1F0100A800EDB255 /* Strokable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3876E9621EFCBAC500F8C04E /* Strokable.swift */; };
 		380FED3B1F0100A800EDB255 /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813ED581EFC703E0054ECBD /* Transformable.swift */; };
@@ -184,7 +183,6 @@
 		380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+DegreesRadians.swift"; sourceTree = "<group>"; };
 		380FED0F1F002C0E00EDB255 /* Stylable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
 		380FED321F00FEF000EDB255 /* PerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
-		380FED351F00FF5000EDB255 /* CigCardKosciusko.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = CigCardKosciusko.svg; path = SwiftSVGExamples/CigCardKosciusko.svg; sourceTree = "<group>"; };
 		380FED531F0458AF00EDB255 /* SVGCircleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGCircleTests.swift; sourceTree = "<group>"; };
 		380FED551F0491E200EDB255 /* SVGContainerElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGContainerElement.swift; sourceTree = "<group>"; };
 		380FED721F0756A000EDB255 /* SVGLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGLayer.swift; sourceTree = "<group>"; };
@@ -362,7 +360,6 @@
 		380FED341F00FF3A00EDB255 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				380FED351F00FF5000EDB255 /* CigCardKosciusko.svg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -602,7 +599,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				380FED371F00FF5000EDB255 /* CigCardKosciusko.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

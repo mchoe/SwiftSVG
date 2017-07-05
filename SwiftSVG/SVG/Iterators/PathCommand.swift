@@ -91,7 +91,7 @@ struct MoveTo: PathCommand {
         // From Docs (https://www.w3.org/TR/SVG2/paths.html#PathDataMovetoCommands):
         // Start a new sub-path at the given (x,y) coordinates. M (uppercase) indicates that absolute coordinates will follow; m (lowercase) indicates that relative coordinates will follow. If a moveto is followed by multiple pairs of coordinates, the subsequent pairs are treated as implicit lineto commands. Hence, implicit lineto commands will be relative if the moveto is relative, and absolute if the moveto is absolute.
         
-        if previousCommand is MoveTo {
+        if let previousCommand = previousCommand as? MoveTo {
             var implicitLineTo = LineTo(pathType: self.pathType)
             implicitLineTo.coordinateBuffer = [self.coordinateBuffer[0], self.coordinateBuffer[1]]
             implicitLineTo.execute(on: path)

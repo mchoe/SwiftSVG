@@ -28,7 +28,6 @@
 		380FED0A1F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED011F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg */; };
 		380FED1E1F0034E400EDB255 /* titaniccaptain.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED1D1F0034E400EDB255 /* titaniccaptain.svg */; };
 		380FED221F0036F400EDB255 /* rabbitcowboy.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED211F0036F400EDB255 /* rabbitcowboy.svg */; };
-		380FED2C1F0057CC00EDB255 /* CigCardKosciusko.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED2B1F0057CC00EDB255 /* CigCardKosciusko.svg */; };
 		380FED421F0101BD00EDB255 /* CigCardWashington.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED411F0101BD00EDB255 /* CigCardWashington.svg */; };
 		380FED4A1F02064900EDB255 /* hawaiiFlowers.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED491F02064900EDB255 /* hawaiiFlowers.svg */; };
 		380FED4E1F036E1F00EDB255 /* DrawingBoard.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */; };
@@ -48,6 +47,8 @@
 		3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */; };
 		3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED551EFC6F1B0054ECBD /* fistBump.svg */; };
 		381E99C31EFA0DC400839918 /* polygons.svg in Resources */ = {isa = PBXBuildFile; fileRef = 381E99C21EFA0DC400839918 /* polygons.svg */; };
+		3870903A1F0C312E00F72660 /* weight 2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 387090391F0C312E00F72660 /* weight 2.svg */; };
+		3870903C1F0C32AE00F72660 /* error.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3870903B1F0C32AE00F72660 /* error.svg */; };
 		3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */; };
 		3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95C1EFCB2E000F8C04E /* pizza.svg */; };
 		3876E9651EFCC16500F8C04E /* container.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E9641EFCC16500F8C04E /* container.svg */; };
@@ -108,7 +109,6 @@
 		380FED011F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-Anonymous_Architetto_--_Camello.svg"; sourceTree = "<group>"; };
 		380FED1D1F0034E400EDB255 /* titaniccaptain.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = titaniccaptain.svg; sourceTree = "<group>"; };
 		380FED211F0036F400EDB255 /* rabbitcowboy.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rabbitcowboy.svg; sourceTree = "<group>"; };
-		380FED2B1F0057CC00EDB255 /* CigCardKosciusko.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CigCardKosciusko.svg; sourceTree = "<group>"; };
 		380FED411F0101BD00EDB255 /* CigCardWashington.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CigCardWashington.svg; sourceTree = "<group>"; };
 		380FED491F02064900EDB255 /* hawaiiFlowers.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hawaiiFlowers.svg; sourceTree = "<group>"; };
 		380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DrawingBoard.svg; sourceTree = "<group>"; };
@@ -128,6 +128,8 @@
 		3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-tux.svg"; sourceTree = "<group>"; };
 		3813ED551EFC6F1B0054ECBD /* fistBump.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fistBump.svg; sourceTree = "<group>"; };
 		381E99C21EFA0DC400839918 /* polygons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polygons.svg; sourceTree = "<group>"; };
+		387090391F0C312E00F72660 /* weight 2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "weight 2.svg"; sourceTree = "<group>"; };
+		3870903B1F0C32AE00F72660 /* error.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = error.svg; sourceTree = "<group>"; };
 		3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1346768588.svg"; sourceTree = "<group>"; };
 		3876E95C1EFCB2E000F8C04E /* pizza.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pizza.svg; sourceTree = "<group>"; };
 		3876E9641EFCC16500F8C04E /* container.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = container.svg; sourceTree = "<group>"; };
@@ -227,6 +229,8 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				387090391F0C312E00F72660 /* weight 2.svg */,
+				3870903B1F0C32AE00F72660 /* error.svg */,
 				380FED6C1F06992800EDB255 /* Abstract-Tree-Vector-Art.svg */,
 				380FED6A1F06984900EDB255 /* decorativeblob.svg */,
 				380FED681F0697A800EDB255 /* Camel2.svg */,
@@ -240,7 +244,6 @@
 				380FED4C1F036E1F00EDB255 /* Skinny-Tree-Silhouette-2.svg */,
 				380FED4D1F036E1F00EDB255 /* EPA-makefood.svg */,
 				380FED491F02064900EDB255 /* hawaiiFlowers.svg */,
-				380FED2B1F0057CC00EDB255 /* CigCardKosciusko.svg */,
 				380FED411F0101BD00EDB255 /* CigCardWashington.svg */,
 				380FED211F0036F400EDB255 /* rabbitcowboy.svg */,
 				380FED1D1F0034E400EDB255 /* titaniccaptain.svg */,
@@ -367,6 +370,7 @@
 				380FED501F036E1F00EDB255 /* EPA-makefood.svg in Resources */,
 				380FED5B1F06907600EDB255 /* johnny-automatic-open-mouth.svg in Resources */,
 				380FECF61EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg in Resources */,
+				3870903C1F0C32AE00F72660 /* error.svg in Resources */,
 				380FED041F00171B00EDB255 /* openclipart-1290111299.svg in Resources */,
 				380FED6B1F06984900EDB255 /* decorativeblob.svg in Resources */,
 				38A1CE101EF77A0F00D2E54E /* triangle.svg in Resources */,
@@ -375,8 +379,8 @@
 				176BC9FF1EE63FAB00F7B54C /* polylines.svg in Resources */,
 				380FED6D1F06992800EDB255 /* Abstract-Tree-Vector-Art.svg in Resources */,
 				3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */,
-				380FED2C1F0057CC00EDB255 /* CigCardKosciusko.svg in Resources */,
 				380FED0A1F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg in Resources */,
+				3870903A1F0C312E00F72660 /* weight 2.svg in Resources */,
 				380FED061F00171B00EDB255 /* openclipart-1332611679.svg in Resources */,
 				176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */,
 				380FED631F0692E500EDB255 /* MedievalBanners.svg in Resources */,
