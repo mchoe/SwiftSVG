@@ -2,10 +2,11 @@
 //  CAShapeLayer+SVG.swift
 //  SwiftSVG
 //
-//  Copyright (c) 2015 Michael Choe
+//
+//  Copyright (c) 2017 Michael Choe
+//  http://www.github.com/mchoe
 //  http://www.straussmade.com/
 //  http://www.twitter.com/_mchoe
-//  http://www.github.com/mchoe
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -25,6 +26,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+
+
 #if os(iOS)
 import UIKit
 #elseif os(OSX)
@@ -33,9 +36,10 @@ import QuartzCore
 #endif
 
 
-/*
+
 extension CAShapeLayer {
     
+    @available(*, deprecated)
     public convenience init(pathString: String) {
         self.init()
         let svgPath = UIBezierPath(pathString: pathString)
@@ -44,7 +48,7 @@ extension CAShapeLayer {
     
     public convenience init(SVGURL: URL) {
         self.init()
-        _ = SVGParser(SVGURL: SVGURL, containerLayer: self)
+        //_ = SVGParser(SVGURL: SVGURL, containerLayer: self)
     }
 	
 	public convenience init(SVGData: Data) {
@@ -52,4 +56,4 @@ extension CAShapeLayer {
 		//_ = SVGParser(data: SVGData, containerLayer: self)
 	}
 }
- */
+

@@ -2,10 +2,11 @@
 //  UIView+SVG.swift
 //  SwiftSVG
 //
-//  Copyright (c) 2015 Michael Choe
+//
+//  Copyright (c) 2017 Michael Choe
+//  http://www.github.com/mchoe
 //  http://www.straussmade.com/
 //  http://www.twitter.com/_mchoe
-//  http://www.github.com/mchoe
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -25,6 +26,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+
+
 import Foundation
 #if os(iOS)
     import UIKit
@@ -34,18 +37,11 @@ import Foundation
 
 extension UIView {
     
-    /*
+    @available(*, deprecated)
     public convenience init(pathString: String) {
         self.init()
-        DispatchQueue.global().async {
-            let shapeLayer = CAShapeLayer(pathString: pathString)
-            DispatchQueue.main.async {
-                self.nonOptionalLayer.addSublayer(shapeLayer)
-            }
-        }
-        
+        assert(false, "This method is deprecated. Use the URL or Data initializers instead.")
     }
-    */
     
     public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         self.init()

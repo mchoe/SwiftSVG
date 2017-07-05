@@ -2,9 +2,31 @@
 //  NSXMLSVGParser.swift
 //  SwiftSVG
 //
-//  Created by tarragon on 7/1/17.
-//  Copyright © 2017 Strauss LLC. All rights reserved.
 //
+//  Copyright (c) 2017 Michael Choe
+//  http://www.github.com/mchoe
+//  http://www.straussmade.com/
+//  http://www.twitter.com/_mchoe
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+
+
 
 #if os(iOS)
     import UIKit
@@ -19,6 +41,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     
     enum SVGParserError {
         case invalidSVG
+        case invalidURL
     }
     
     fileprivate var asyncParseCount: Int = 0
@@ -33,17 +56,27 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     //open fileprivate(set) var paths = [UIBezierPath]()
     //let xmlParser: XMLParser
     
-    let concurrentQueue = DispatchQueue(label: "com.straussmade.swiftsvg", attributes: .concurrent)
-    let dispatchGroup = DispatchGroup()
+    let asyncCountQueue = DispatchQueue(label: "com.straussmade.swiftsvg.asyncCountQueue.serial", qos: .userInteractive)
     
-    let parseSerial = DispatchQueue(label: "com.straussmade.swiftsvg.parse.serial", qos: .userInteractive)
+    private init() {
+        super.init(data: Data())
+    }
     
-    
-    
-    public required init(SVGURL: URL, configuration: SVGParserConfiguration? = nil, completion: ((SVGLayer) -> Void)? = nil) {
+    public required convenience init(SVGURL: URL, configuration: SVGParserConfiguration? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         
-        let urlData = try! Data(contentsOf: SVGURL)
-        super.init(data: urlData)
+        do {
+            
+            let urlData = try Data(contentsOf: SVGURL)
+            self.init(SVGData: urlData, configuration: configuration, completion: completion)
+            
+        } catch {
+            self.init()
+            print("Couldn't get data from URL")
+        }
+    }
+    
+    init(SVGData: Data, configuration: SVGParserConfiguration? = nil, completion: ((SVGLayer) -> Void)? = nil) {
+        super.init(data: SVGData)
         self.delegate = self
         
         if let configuration = configuration {
@@ -55,47 +88,8 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         self.completionBlock = completion
     }
     
-    
-    
-    /*
-    init(parser: XMLParser, configuration: SVGParserConfiguration = SVGParserConfiguration.allFeatures, containerLayer: SVGLayer, completion: ((SVGLayer) -> Void)? = nil) {
-        
-        self.configuration = configuration
-        self.containerLayer = containerLayer
-        self.completionBlock = completion
-        super.init()
-        
-        parser.delegate = self
-        parser.parse()
-    }
-    */
-    
-    /*
-     convenience init(data: Data, containerLayer: SVGLayer? = nil) {
-     
-     self.init(parser: XMLParser(data: data), containerLayer: containerLayer)
-     }
-     */
-    
-    /*
-    convenience init(SVGURL: URL, containerLayer: SVGLayer? = nil, completion: ((SVGLayer) -> Void)? = nil) {
-        if let xmlParser = XMLParser(contentsOf: SVGURL) {
-            let container: SVGLayer
-            if let containerLayer = containerLayer {
-                container = containerLayer
-            } else {
-                container = SVGLayer(SVGURL: SVGURL)
-            }
-            self.init(parser: xmlParser, containerLayer: container, completion: completion)
-            
-        } else {
-            fatalError("Couldn't initialize parser. Check your resource and make sure the supplied URL is correct")
-        }
-    }
-    */
-    
     public func startParsing() {
-        self.parseSerial.sync {
+        self.asyncCountQueue.sync {
             self.didDispatchAllElements = false
         }
         self.parse()
@@ -111,7 +105,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         let svgElement = elementType()
         
         if svgElement is ParsesAsynchronously {
-            self.parseSerial.sync {
+            self.asyncCountQueue.sync {
                 self.asyncParseCount += 1
             }
         }
@@ -159,7 +153,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     
     public func parserDidEndDocument(_ parser: XMLParser) {
         
-        self.parseSerial.sync {
+        self.asyncCountQueue.sync {
             self.didDispatchAllElements = true
         }
         
@@ -200,7 +194,7 @@ extension NSXMLSVGParser: CanManageAsychronousCallbacks {
     
     func finishedProcessing(_ boundingBox: CGRect?) {
         
-        self.parseSerial.sync {
+        self.asyncCountQueue.sync {
             self.asyncParseCount -= 1
         }
         

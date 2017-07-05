@@ -20,7 +20,6 @@
 		17D5707F1E1F4EC3007CED68 /* SwiftSVGMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */; };
 		17D570801E1F4EC3007CED68 /* SwiftSVGMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		380FECF61EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */; };
-		380FED021F00171B00EDB255 /* openclipart-004.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECF91F00171B00EDB255 /* openclipart-004.svg */; };
 		380FED041F00171B00EDB255 /* openclipart-1290111299.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */; };
 		380FED061F00171B00EDB255 /* openclipart-1332611679.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */; };
 		380FED081F00171B00EDB255 /* openclipart-angry-coder.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */; };
@@ -101,7 +100,6 @@
 		176BC9FE1EE63FAB00F7B54C /* polylines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polylines.svg; sourceTree = "<group>"; };
 		17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-motivo_geometrico_archit_01.svg"; sourceTree = "<group>"; };
-		380FECF91F00171B00EDB255 /* openclipart-004.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-004.svg"; sourceTree = "<group>"; };
 		380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1290111299.svg"; sourceTree = "<group>"; };
 		380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1332611679.svg"; sourceTree = "<group>"; };
 		380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-angry-coder.svg"; sourceTree = "<group>"; };
@@ -248,7 +246,6 @@
 				380FED211F0036F400EDB255 /* rabbitcowboy.svg */,
 				380FED1D1F0034E400EDB255 /* titaniccaptain.svg */,
 				3876E9641EFCC16500F8C04E /* container.svg */,
-				380FECF91F00171B00EDB255 /* openclipart-004.svg */,
 				380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */,
 				380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */,
 				380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */,
@@ -362,7 +359,6 @@
 				3876E9651EFCC16500F8C04E /* container.svg in Resources */,
 				380FED1E1F0034E400EDB255 /* titaniccaptain.svg in Resources */,
 				380FED421F0101BD00EDB255 /* CigCardWashington.svg in Resources */,
-				380FED021F00171B00EDB255 /* openclipart-004.svg in Resources */,
 				380FED221F0036F400EDB255 /* rabbitcowboy.svg in Resources */,
 				380FED651F06946500EDB255 /* Dulcimer.svg in Resources */,
 				380FED621F0692E500EDB255 /* CigCardBullfightersSword.svg in Resources */,

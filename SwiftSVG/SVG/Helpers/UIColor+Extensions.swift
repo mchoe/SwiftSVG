@@ -1,22 +1,12 @@
 //
 //  UIColor+Extensions.swift
-//  Breakfast
-//
-//  This file is from a dynamic framework I created called Breakfast. I included the
-//  files here so you didn't have to install another Cocoapod to use and test out
-//  this library. As such, this file may not be maintained as well, so use it at
-//  your own risk.
-//
-//  SwiftSVG is one of the many great tools that are a part of Breakfast. If you're
-//  looking for a great start to your next Swift project, check out Breakfast.
-//  It contains classes and helper functions that will get you started off right.
-//  https://github.com/mchoe/Breakfast
+//  SwiftSVG
 //
 //
-//  Copyright (c) 2015 Michael Choe
+//  Copyright (c) 2017 Michael Choe
+//  http://www.github.com/mchoe
 //  http://www.straussmade.com/
 //  http://www.twitter.com/_mchoe
-//  http://www.github.com/mchoe
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -35,6 +25,8 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
+
+
 
 #if os(iOS)
     import UIKit

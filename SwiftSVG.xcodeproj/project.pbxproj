@@ -123,6 +123,7 @@
 		387090381F0C15B400F72660 /* CanNotifyWhenComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387090351F0C134400F72660 /* CanNotifyWhenComplete.swift */; };
 		3876E9611EFCBABB00F8C04E /* Fillable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3876E9601EFCBABB00F8C04E /* Fillable.swift */; };
 		3876E9631EFCBAC500F8C04E /* Strokable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3876E9621EFCBAC500F8C04E /* Strokable.swift */; };
+		387B0C571F0D38470085E51A /* Ukulele.svg in Resources */ = {isa = PBXBuildFile; fileRef = 387B0C561F0D38470085E51A /* Ukulele.svg */; };
 		396A8E491B3D2036001986AF /* SwiftSVGMacFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 396A8E481B3D2036001986AF /* SwiftSVGMacFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		396A8E6F1B3D238B001986AF /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B691AAE383200472F5A /* String+Subscript.swift */; };
 		396A8E711B3D238B001986AF /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDA1AAE3FE000472F5A /* Stack.swift */; };
@@ -203,6 +204,7 @@
 		387090351F0C134400F72660 /* CanNotifyWhenComplete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanNotifyWhenComplete.swift; sourceTree = "<group>"; };
 		3876E9601EFCBABB00F8C04E /* Fillable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fillable.swift; sourceTree = "<group>"; };
 		3876E9621EFCBAC500F8C04E /* Strokable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strokable.swift; sourceTree = "<group>"; };
+		387B0C561F0D38470085E51A /* Ukulele.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Ukulele.svg; sourceTree = "<group>"; };
 		396A8E441B3D2036001986AF /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		396A8E471B3D2036001986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../SwiftSVGMacFramework/Info.plist; sourceTree = "<group>"; };
 		396A8E481B3D2036001986AF /* SwiftSVGMacFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwiftSVGMacFramework.h; path = ../SwiftSVGMacFramework/SwiftSVGMacFramework.h; sourceTree = "<group>"; };
@@ -252,8 +254,8 @@
 				176BC9A11EE47F8F00F7B54C /* Helper Tests */,
 				176BC9F51EE630E800F7B54C /* Iterator Tests */,
 				381E99B91EF8D27C00839918 /* Path Command Tests */,
+				387B0C551F0D37290085E51A /* Performance Tests */,
 				381E99B31EF8C72900839918 /* TestHarness.swift */,
-				380FED321F00FEF000EDB255 /* PerformanceTests.swift */,
 				176BC9941EE474D200F7B54C /* Info.plist */,
 			);
 			path = SwiftSVGiOSTests;
@@ -360,6 +362,7 @@
 		380FED341F00FF3A00EDB255 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				387B0C561F0D38470085E51A /* Ukulele.svg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -399,6 +402,14 @@
 				381E99BE1EF9D21500839918 /* VerticalLineToTests.swift */,
 			);
 			name = "Path Command Tests";
+			sourceTree = "<group>";
+		};
+		387B0C551F0D37290085E51A /* Performance Tests */ = {
+			isa = PBXGroup;
+			children = (
+				380FED321F00FEF000EDB255 /* PerformanceTests.swift */,
+			);
+			name = "Performance Tests";
 			sourceTree = "<group>";
 		};
 		396A8E451B3D2036001986AF /* SwiftSVGMacFramework */ = {
@@ -599,6 +610,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387B0C571F0D38470085E51A /* Ukulele.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
