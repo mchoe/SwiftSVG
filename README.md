@@ -1,6 +1,19 @@
 
 ![SwiftSVG Logo](/images/SwiftSVG-Logo.png)
 
+# ⚡⚡⚡ ANNOUNCEMENT ⚡⚡⚡
+```
+A new version of SwiftSVG is coming soon! 2.0 will bring wider support for more elements
+types and attributes, a brand new architecture for greater extensibility, and a faster,
+more stable parser.
+
+If you want to try it out, check out the feature/2.0.0 branch or install through Cocoapods: 
+
+pod 'SwiftSVG', :git => 'git@github.com:mchoe/SwiftSVG.git', :branch => 'feature/2.0.0'
+
+Stay tuned for more information and thanks for your support! 
+```
+
 SwiftSVG
 ========
 
@@ -48,7 +61,7 @@ Usage
 
 SwiftSVG provides multiple interfaces to parse single path strings and SVG files using NSXMLParser. 
 
-####String+SVG####
+### String+SVG
 
 The simplest way is to parse raw path data using `parseSVGPath()`
 
@@ -70,12 +83,12 @@ Or, you can use the String extension `pathFromSVGString()`:
 let parsedPath: UIBezierPath = examplePathData.pathFromSVGString()
 ```
 
-#####Output:#####
+#### Output:
 ![This is not a triangle](/images/triangle.png)
 
 ***
 
-####UIBezierPath+SVG####
+### UIBezierPath+SVG
 
 SwiftSVG also provides a convenience initializer for UIBezierPath that allows you to either create a `UIBezierPath` from a path string or from an SVG file:
 
@@ -93,12 +106,12 @@ let pathFromSVGFile = UIBezierPath.pathWithSVGURL(svgURL)
 shapelayer.path = pathFromSVGFile
 ```
 
-#####Output:#####
+#### Output:
 ![Put it here!](/images/fistBump.png)
 
 ***
 
-####CAShapeLayer+SVG####
+### CAShapeLayer+SVG
 
 You can create a `CAShapeLayer` from a path string or SVG file:
 
@@ -112,7 +125,7 @@ let svgURL = NSBundle.mainBundle().URLForResource("pizza", withExtension: "svg")
 let svgShapeLayerFromFile = CAShapeLayer(SVGURL: svgURL)
 ```
 
-#####Output:#####
+#### Output:
 ![This is not delicious pizza](/images/pizza.png)
 
 Fill colors are read automatically if provided as an attribute on the path element. The fill attribute must be supplied as a hex value:
@@ -122,7 +135,7 @@ Fill colors are read automatically if provided as an attribute on the path eleme
 
 ***
 
-####UIView+SVG####
+### UIView+SVG
 
 A UIView convenince initializer is provided as well. Same thing goes as with CAShapeLayer, you can supply a path string or an SVG file:
 
@@ -136,12 +149,12 @@ let svgURL = NSBundle.mainBundle().URLForResource("sockPuppet", withExtension: "
 let svgViewFromFile = UIView(SVGURL: svgURL)
 ```
 
-#####Output:#####
+#### Output:
 ![This is not a sock puppet](/images/sockPuppet.png)
 
 ***
 
-####SVGView####
+### SVGView
 
 Finally, SwiftSVG provides a `UIView` subclass that is `IBInspectable` and `IBDesignable`. Simply add a view to your storyboard and use the SVGView subclass as you class name. Then put the name of your SVG file in your bundle in the `IBInspectable` property "SVGName"
 
