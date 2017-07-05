@@ -38,6 +38,7 @@
 		39B8D8B01B3C32DD009DAF60 /* UIView+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */; };
 		8AC4DBEA1CB37EA700137DC9 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBE91CB37EA700137DC9 /* CrossPlatform.swift */; };
 		8AC4DBEB1CB37EBD00137DC9 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBE91CB37EA700137DC9 /* CrossPlatform.swift */; };
+		AC0FA9781E4C2CF800B62B9E /* URL+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0FA9771E4C2CF800B62B9E /* URL+SVG.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		9EA820851AAB649700DEE6CA /* String+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SVG.swift"; sourceTree = "<group>"; };
 		9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+SVG.swift"; sourceTree = "<group>"; };
 		9EB308781AC5BF350007DD82 /* SVGView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGView.swift; sourceTree = "<group>"; };
+		AC0FA9771E4C2CF800B62B9E /* URL+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+SVG.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				9EB308781AC5BF350007DD82 /* SVGView.swift */,
 				9EA820871AAB6AD700DEE6CA /* UIBezierPath+SVG.swift */,
 				9E25E9031AB0D4C600E8D6CB /* UIView+SVG.swift */,
+				AC0FA9771E4C2CF800B62B9E /* URL+SVG.swift */,
 			);
 			name = SVG;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				39B8D8A61B3C32DD009DAF60 /* NSObject+Extensions.swift in Sources */,
 				39B8D8A71B3C32DD009DAF60 /* String+Subscript.swift in Sources */,
 				39B8D8A81B3C32DD009DAF60 /* String+ToHex.swift in Sources */,
+				AC0FA9781E4C2CF800B62B9E /* URL+SVG.swift in Sources */,
 				39B8D8A91B3C32DD009DAF60 /* Stack.swift in Sources */,
 				39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */,
 				8AC4DBEA1CB37EA700137DC9 /* CrossPlatform.swift in Sources */,
