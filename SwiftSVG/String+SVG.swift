@@ -426,6 +426,24 @@ public extension String {
     internal func pathFromSVGString() -> UIBezierPath {
         return parseSVGPath(self)
     }
+    internal func pathFromSVGPolygon() -> UIBezierPath {
+        return parseSVGPolygon(self)
+    }
+}
+
+func parseSVGPolygon(_ polygonString: String, forPath: UIBezierPath? = nil) -> UIBezierPath {
+    
+    var items = polygonString.components(separatedBy: CharacterSet(charactersIn: ", "))
+    
+    guard items.count > 2 else { return UIBezierPath() }
+    
+    let x = items[0]
+    let y = items[1]
+    
+    items.removeSubrange(0...1)
+    let pathAttributes = String(format: "M%@,%@L%@Z", x, y, items.joined(separator: " "))
+    
+    return parseSVGPath(pathAttributes)
 }
 
 func parseSVGPath(_ pathString: String, forPath: UIBezierPath? = nil) -> UIBezierPath {
