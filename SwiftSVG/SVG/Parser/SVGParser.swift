@@ -36,10 +36,11 @@
 
 
 
-public protocol SVGParsable { }
-
-extension Data: SVGParsable { }
-extension URL: SVGParsable { }
+struct SVGParseOptions: OptionSet {
+    let rawValue: Int
+    
+    static let shouldParseAsynchronously = SVGParseOptions(rawValue: 1 << 0)
+}
 
 
 public protocol SVGParser {
@@ -47,8 +48,10 @@ public protocol SVGParser {
     var configuration: SVGParserConfiguration? { get }
     var containerLayer: SVGLayer { get }
     
-    init(SVGURL: URL, configuration: SVGParserConfiguration?, completion: ((SVGLayer) -> Void)?)
+    init(SVGData: Data, configuration: SVGParserConfiguration?, completion: ((SVGLayer) -> Void)?)
     func startParsing()
 }
+
+
 
 

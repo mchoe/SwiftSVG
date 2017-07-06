@@ -1,5 +1,5 @@
 //
-//  CanNotifyWhenComplete.swift
+//  ParsesAsynchronously.swift
 //  SwiftSVG
 //
 //
@@ -36,7 +36,7 @@
 
 
 protocol CanManageAsychronousCallbacks {
-    func finishedProcessing(_ boundingBox: CGRect?)
+    func finishedProcessing(_ shapeLayer: CAShapeLayer)
 }
 
 protocol ParsesAsynchronously {

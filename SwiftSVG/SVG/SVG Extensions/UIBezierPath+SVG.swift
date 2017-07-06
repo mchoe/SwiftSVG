@@ -37,13 +37,17 @@
 extension UIBezierPath {
     
     public convenience init(pathString: String) {
-        self.init()
-        //_ = parseSVGPath(pathString, forPath: self)
+        let singlePath = SVGPath(singlePathString: pathString)
+        guard let cgPath = singlePath.svgLayer.path else {
+            self.init()
+            return
+        }
+        self.init(cgPath: cgPath)
     }
     
+    @available(*, deprecated, message: "This method is deprecated. If you want to parse a single path, instantiate a new instance of SVGPath using the SVGPath(singlePathString:) initializer and pass the first path string.")
     public class func pathWithSVGURL(_ SVGURL: URL) -> UIBezierPath? {
-        //let parser = SVGParser(SVGURL: SVGURL, containerLayer: nil, shouldParseSinglePathOnly: true)
-        //return parser.paths.first
+        assert(false, "This method is deprecated")
         return nil
     }
     

@@ -67,7 +67,7 @@ extension UIView {
         }
     }
 	
-    /*
+    
 	public convenience init(SVGData: Data) {
 		self.init()
         DispatchQueue.global().async {
@@ -77,5 +77,5 @@ extension UIView {
             }
         }
 	}
-    */
+    
 }

@@ -43,32 +43,50 @@ struct SVGPath: SVGShapeElement, ParsesAsynchronously {
     }
     
     var asyncParseManager: CanManageAsychronousCallbacks? = nil
-    
+    var shouldParseAsynchronously = true
     var supportedAttributes = [String : ((String) -> ())?]()
     var svgLayer = CAShapeLayer()
+    
+    init() { }
+    
+    init(singlePathString: String) {
+        self.shouldParseAsynchronously = false
+        self.parseD(singlePathString)
+    }
     
     internal func parseD(_ pathString: String) {
         let workingString = pathString.trimWhitespace()
         assert(workingString.hasPrefix("M") || workingString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
         autoreleasepool { () -> () in
             
-            let concurrent = DispatchQueue(label: "concurrent", attributes: .concurrent)
-            let dispatchGroup = DispatchGroup()
+            let pathDPath = UIBezierPath()
+            pathDPath.move(to: CGPoint.zero)
             
-            let returnPath = UIBezierPath()
-            returnPath.move(to: CGPoint.zero)
-            
-            concurrent.async(group: dispatchGroup) {
+            if self.shouldParseAsynchronously {
+                
+                let concurrent = DispatchQueue(label: "concurrent", attributes: .concurrent)
+                let dispatchGroup = DispatchGroup()
+                
+                concurrent.async(group: dispatchGroup) {
+                    var previousCommand: PreviousCommand? = nil
+                    for thisPathCommand in PathDLexer(pathString: workingString) {
+                        thisPathCommand.execute(on: pathDPath, previousCommand: previousCommand)
+                        previousCommand = thisPathCommand
+                    }
+                }
+                
+                dispatchGroup.notify(queue: DispatchQueue.main) {
+                    self.svgLayer.path = pathDPath.cgPath
+                    self.asyncParseManager?.finishedProcessing(self.svgLayer)
+                }
+                
+            } else {
                 var previousCommand: PreviousCommand? = nil
                 for thisPathCommand in PathDLexer(pathString: workingString) {
-                    thisPathCommand.execute(on: returnPath, previousCommand: previousCommand)
+                    thisPathCommand.execute(on: pathDPath, previousCommand: previousCommand)
                     previousCommand = thisPathCommand
                 }
-            }
-            
-            dispatchGroup.notify(queue: DispatchQueue.main) {
-                self.svgLayer.path = returnPath.cgPath
-                self.asyncParseManager?.finishedProcessing(self.svgLayer.path?.boundingBox)
+                self.svgLayer.path = pathDPath.cgPath
             }
         }
     }

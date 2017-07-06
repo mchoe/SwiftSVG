@@ -62,7 +62,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         super.init(data: Data())
     }
     
-    public required convenience init(SVGURL: URL, configuration: SVGParserConfiguration? = nil, completion: ((SVGLayer) -> Void)? = nil) {
+    public convenience init(SVGURL: URL, configuration: SVGParserConfiguration? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         
         do {
             
@@ -75,7 +75,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         }
     }
     
-    init(SVGData: Data, configuration: SVGParserConfiguration? = nil, completion: ((SVGLayer) -> Void)? = nil) {
+    public required init(SVGData: Data, configuration: SVGParserConfiguration? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         super.init(data: SVGData)
         self.delegate = self
         
@@ -192,13 +192,13 @@ extension NSXMLSVGParser {
 
 extension NSXMLSVGParser: CanManageAsychronousCallbacks {
     
-    func finishedProcessing(_ boundingBox: CGRect?) {
+    func finishedProcessing(_ shapeLayer: CAShapeLayer) {
         
         self.asyncCountQueue.sync {
             self.asyncParseCount -= 1
         }
         
-        self.resizeContainerBoundingBox(boundingBox)
+        self.resizeContainerBoundingBox(shapeLayer.path?.boundingBox)
         
         guard self.asyncParseCount <= 0 && self.didDispatchAllElements else {
             return

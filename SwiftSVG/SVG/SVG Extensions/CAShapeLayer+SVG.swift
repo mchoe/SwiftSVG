@@ -32,7 +32,6 @@
 import UIKit
 #elseif os(OSX)
 import AppKit
-import QuartzCore
 #endif
 
 
@@ -46,7 +45,7 @@ extension CAShapeLayer {
         self.path = svgPath.cgPath
     }
     
-    public convenience init(SVGURL: URL) {
+    public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         self.init()
         //_ = SVGParser(SVGURL: SVGURL, containerLayer: self)
     }
