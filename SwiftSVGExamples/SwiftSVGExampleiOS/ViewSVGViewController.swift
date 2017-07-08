@@ -9,7 +9,7 @@
 import SwiftSVGiOS
 import UIKit
 
-class ViewSVGViewController: UIViewController {
+class SingleSVGViewController: UIViewController {
 
     @IBOutlet weak var canvasView: UIView!
     
@@ -29,16 +29,23 @@ class ViewSVGViewController: UIViewController {
         
         self.automaticallyAdjustsScrollViewInsets = false
         
-        if let url = self.svgURL {
-            let svgView = SVGView(SVGURL: url)
-            self.canvasView.addSubview(svgView)
+        guard let url = self.svgURL else {
+            return
         }
+        
+        let svgData = try! Data(contentsOf: url)
+        let svgView = SVGView(SVGData: svgData)
+        //let svgView = SVGView(SVGURL: url)
+        self.canvasView.addSubview(svgView)
+        
+        //let svgLayer = CALayer(SVGURL: url)
+        //self.view.layer.addSublayer(svgLayer)
         
     }
 
 }
 
-extension ViewSVGViewController: UIScrollViewDelegate {
+extension SingleSVGViewController: UIScrollViewDelegate {
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.canvasView

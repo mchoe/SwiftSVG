@@ -50,7 +50,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     fileprivate var elementStack = Stack<SVGElement>()
     
     public var completionBlock: ((SVGLayer) -> Void)?
-    public var configuration: SVGParserConfiguration? = nil
+    public var supportedElements: SVGParserSupportedElements? = nil
     open var containerLayer = SVGLayer()
     
     //open fileprivate(set) var paths = [UIBezierPath]()
@@ -62,27 +62,25 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         super.init(data: Data())
     }
     
-    public convenience init(SVGURL: URL, configuration: SVGParserConfiguration? = nil, completion: ((SVGLayer) -> Void)? = nil) {
+    public convenience init(SVGURL: URL, supportedElements: SVGParserSupportedElements? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         
         do {
-            
             let urlData = try Data(contentsOf: SVGURL)
-            self.init(SVGData: urlData, configuration: configuration, completion: completion)
-            
+            self.init(SVGData: urlData, supportedElements: supportedElements, completion: completion)
         } catch {
             self.init()
             print("Couldn't get data from URL")
         }
     }
     
-    public required init(SVGData: Data, configuration: SVGParserConfiguration? = nil, completion: ((SVGLayer) -> Void)? = nil) {
+    public required init(SVGData: Data, supportedElements: SVGParserSupportedElements? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         super.init(data: SVGData)
         self.delegate = self
         
-        if let configuration = configuration {
-            self.configuration = configuration
+        if let supportedElements = supportedElements {
+            self.supportedElements = supportedElements
         } else {
-            self.configuration = SVGParserConfiguration.allFeaturesConfiguration(for: self)
+            self.supportedElements = SVGParserSupportedElements.allSupportedElements(for: self)
         }
         
         self.completionBlock = completion
@@ -98,7 +96,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     
     open func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         
-        guard let elementType = self.configuration?.tags[elementName] else {
+        guard let elementType = self.supportedElements?.tags[elementName] else {
             return
         }
         

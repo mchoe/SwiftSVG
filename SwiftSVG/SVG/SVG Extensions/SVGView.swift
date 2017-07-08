@@ -72,6 +72,7 @@ extension SVGView {
         self.init()
         self.SVGName = SVGName
     }
+    
 }
 
 extension SVGView {

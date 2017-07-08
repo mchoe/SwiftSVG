@@ -37,44 +37,42 @@ import Foundation
 
 extension UIView {
     
-    @available(*, deprecated)
     public convenience init(pathString: String) {
         self.init()
-        assert(false, "This method is deprecated. Use the URL or Data initializers instead.")
+        let svgLayer = SVGLayer()
+        let pathPath = UIBezierPath(pathString: pathString)
+        svgLayer.path = pathPath.cgPath
+        self.layer.addSublayer(svgLayer)
     }
     
     public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         self.init()
         
-        DispatchQueue.global().async {
+        _ = CALayer(SVGURL: SVGURL, parser: parser) { (svgLayer) in
             
-            let parserToUse: SVGParser
-            if let parser = parser {
-                parserToUse = parser
-            } else {
-                let newCompletion: ((SVGLayer) -> Void)? = { (svgLayer) in
-                    if let superviewSize = self.superview?.bounds {
-                        svgLayer.resizeToFit(size: superviewSize)
-                    }
-                    DispatchQueue.main.safeAsync {
-                        self.nonOptionalLayer.addSublayer(svgLayer)
-                    }
-                    completion?(svgLayer)
-                }
-                parserToUse = NSXMLSVGParser(SVGURL: SVGURL, completion: newCompletion)
+            if let superviewSize = self.superview?.bounds {
+                svgLayer.resizeToFit(size: superviewSize)
             }
-            parserToUse.startParsing()
+            DispatchQueue.main.safeAsync {
+                self.nonOptionalLayer.addSublayer(svgLayer)
+            }
+            completion?(svgLayer)
         }
     }
 	
     
-	public convenience init(SVGData: Data) {
+	public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
 		self.init()
-        DispatchQueue.global().async {
-            let shapeLayer = CAShapeLayer(SVGData: SVGData)
-            DispatchQueue.main.async {
-                self.nonOptionalLayer.addSublayer(shapeLayer)
+        
+        _ = CALayer(SVGData: SVGData, parser: parser) { (svgLayer) in
+            
+            if let superviewSize = self.superview?.bounds {
+                svgLayer.resizeToFit(size: superviewSize)
             }
+            DispatchQueue.main.safeAsync {
+                self.nonOptionalLayer.addSublayer(svgLayer)
+            }
+            completion?(svgLayer)
         }
 	}
     

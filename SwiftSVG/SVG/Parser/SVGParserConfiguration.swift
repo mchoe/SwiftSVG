@@ -30,15 +30,15 @@
 
 import Foundation
 
-public struct SVGParserConfiguration {
+public struct SVGParserSupportedElements {
     
     typealias ElementGenerator = () -> SVGElement
     
     let tags: [String : ElementGenerator]
     
-    public static var barebones: SVGParserConfiguration {
+    public static var barebones: SVGParserSupportedElements {
         
-        let configuration: [String : ElementGenerator] = [
+        let supportedElements: [String : ElementGenerator] = [
             SVGPath.elementName: {
                 var returnElement = SVGPath()
                 returnElement.supportedAttributes = [
@@ -57,11 +57,11 @@ public struct SVGParserConfiguration {
             }
             
         ]
-        return SVGParserConfiguration(tags: configuration)
+        return SVGParserSupportedElements(tags: supportedElements)
     }
     
-    static func allFeaturesConfiguration(for parser: CanManageAsychronousCallbacks) -> SVGParserConfiguration {
-        let configuration: [String : ElementGenerator] = [
+    static func allSupportedElements(for parser: CanManageAsychronousCallbacks) -> SVGParserSupportedElements {
+        let supportedElements: [String : ElementGenerator] = [
             SVGCircle.elementName: {
                 let returnElement = SVGCircle()
                 returnElement.supportedAttributes = [
@@ -187,7 +187,7 @@ public struct SVGParserConfiguration {
             }
             
         ]
-        return SVGParserConfiguration(tags: configuration)
+        return SVGParserSupportedElements(tags: supportedElements)
     }
     
 }

@@ -34,7 +34,7 @@
     import AppKit
 #endif
 
-struct PathDConstants {
+internal struct PathDConstants {
     
     enum DCharacter: CChar {
         case A = 65
@@ -86,9 +86,7 @@ struct PathDConstants {
 }
 
 
-
-
-struct PathDLexer: IteratorProtocol, Sequence {
+internal struct PathDLexer: IteratorProtocol, Sequence {
     
     typealias Element = PathCommand
     

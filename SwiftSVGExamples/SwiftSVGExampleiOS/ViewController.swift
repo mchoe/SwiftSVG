@@ -8,38 +8,55 @@
 
 import UIKit
 
+struct TableItem {
+    let items: [URL]
+    let isDirectory: Bool
+    let title: String
+    
+    init(_ items: [URL], title: String, isDirectory: Bool = false) {
+        self.isDirectory = isDirectory
+        self.items = items
+        self.title = title
+    }
+}
+
 class ViewController: UIViewController {
     
     var selectedIndexPath = IndexPath(row: 0, section: 0)
-    var tableData = [URL]()
+    lazy var tableData: [TableItem] = {
+        guard let resourceURL = Bundle.main.resourceURL else {
+            return [TableItem]()
+        }
+        
+        let allResources = try! FileManager.default.contentsOfDirectory(at: resourceURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+        let returnTableData = allResources
+        .filter({ (thisURL) -> Bool in
+            if thisURL.pathExtension == "svg" {
+                return true
+            }
+            return false
+        })
+        .map({ (thisURL) -> TableItem in
+            return TableItem([thisURL], title: thisURL.lastPathComponent)
+        })
+        
+        //let githubExamples = TableItem(<#T##items: [URL]##[URL]#>, title: <#T##String?#>, isDirectory: <#T##Bool#>)
+        //self.tableData.insert(<#T##newElement: TableItem##TableItem#>, at: <#T##Int#>)
+        
+        return returnTableData
+    }()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = "All Files"
-        
-        if let resourceURL = Bundle.main.resourceURL {
-            do {
-                let allResources = try FileManager.default.contentsOfDirectory(at: resourceURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
-                self.tableData = allResources.filter({ (thisURL) -> Bool in
-                    if thisURL.pathExtension == "svg" {
-                        return true
-                    }
-                    return false
-                })
-            } catch {
-                print("Error getting resources")
-            }
-            
-        }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "listToDetailSegue" {
-            let viewSVGVC = segue.destination as! ViewSVGViewController
-            viewSVGVC.svgURL = self.tableData[self.selectedIndexPath.row]
+            let viewSVGVC = segue.destination as! SingleSVGViewController
+            let selectedItem = self.tableData[self.selectedIndexPath.row]
+            viewSVGVC.svgURL = selectedItem.items.first!
         }
     }
 }
@@ -52,8 +69,8 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let returnCell = tableView.dequeueReusableCell(withIdentifier: "AllFilesCell")!
-        let thisURL = self.tableData[indexPath.row]
-        returnCell.textLabel?.text = thisURL.lastPathComponent
+        let thisItem = self.tableData[indexPath.row]
+        returnCell.textLabel?.text = thisItem.title
         return returnCell
     }
     

@@ -31,7 +31,7 @@
 import CoreGraphics
 import Foundation
 
-struct CoordinateLexer: IteratorProtocol, Sequence {
+internal struct CoordinateLexer: IteratorProtocol, Sequence {
     
     typealias Element = CGPoint
     

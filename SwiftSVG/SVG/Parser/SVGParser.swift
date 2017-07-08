@@ -45,10 +45,10 @@ struct SVGParseOptions: OptionSet {
 
 public protocol SVGParser {
     var completionBlock: ((SVGLayer) -> Void)? { get }
-    var configuration: SVGParserConfiguration? { get }
+    var supportedElements: SVGParserSupportedElements? { get }
     var containerLayer: SVGLayer { get }
     
-    init(SVGData: Data, configuration: SVGParserConfiguration?, completion: ((SVGLayer) -> Void)?)
+    init(SVGData: Data, supportedElements: SVGParserSupportedElements?, completion: ((SVGLayer) -> Void)?)
     func startParsing()
 }
 

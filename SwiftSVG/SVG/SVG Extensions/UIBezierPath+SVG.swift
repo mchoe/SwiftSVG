@@ -45,7 +45,7 @@ extension UIBezierPath {
         self.init(cgPath: cgPath)
     }
     
-    @available(*, deprecated, message: "This method is deprecated. If you want to parse a single path, instantiate a new instance of SVGPath using the SVGPath(singlePathString:) initializer and pass the first path string.")
+    @available(*, deprecated, message: "This method is deprecated. If you want to parse a single path, instantiate a new instance of SVGPath using the SVGPath(singlePathString:) initializer and pass the path string.")
     public class func pathWithSVGURL(_ SVGURL: URL) -> UIBezierPath? {
         assert(false, "This method is deprecated")
         return nil

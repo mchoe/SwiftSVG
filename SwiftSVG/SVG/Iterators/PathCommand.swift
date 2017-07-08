@@ -35,11 +35,11 @@
 #endif
 
 
-enum PathType {
+internal enum PathType {
     case absolute, relative
 }
 
-protocol PathCommand: PreviousCommand {
+internal protocol PathCommand: PreviousCommand {
     
     var coordinateBuffer: [Double] { get set }
     var numberOfRequiredParameters: Int { get }
@@ -50,12 +50,12 @@ protocol PathCommand: PreviousCommand {
     
 }
 
-protocol PreviousCommand {
+internal protocol PreviousCommand {
     var coordinateBuffer: [Double] { get }
     var pathType: PathType { get }
 }
 
-extension PathCommand {
+internal extension PathCommand {
     
     var canPushCommand: Bool {
         if self.numberOfRequiredParameters == 0 {
@@ -96,7 +96,7 @@ extension PathCommand {
 // MARK: - Implementations
 
 
-struct MoveTo: PathCommand {
+internal struct MoveTo: PathCommand {
     
     var coordinateBuffer = [Double]()
     let numberOfRequiredParameters = 2
@@ -125,7 +125,7 @@ struct MoveTo: PathCommand {
     }
 }
 
-struct ClosePath: PathCommand {
+internal struct ClosePath: PathCommand {
     
     var coordinateBuffer = [Double]()
     let numberOfRequiredParameters = 0
@@ -141,7 +141,7 @@ struct ClosePath: PathCommand {
     
 }
 
-struct LineTo: PathCommand {
+internal struct LineTo: PathCommand {
     
     var coordinateBuffer = [Double]()
     let numberOfRequiredParameters = 2
@@ -157,7 +157,7 @@ struct LineTo: PathCommand {
     }
 }
 
-struct HorizontalLineTo: PathCommand {
+internal struct HorizontalLineTo: PathCommand {
     
     var coordinateBuffer = [Double]()
     let numberOfRequiredParameters = 1
@@ -174,7 +174,7 @@ struct HorizontalLineTo: PathCommand {
     }
 }
 
-struct VerticalLineTo: PathCommand {
+internal struct VerticalLineTo: PathCommand {
     
     var coordinateBuffer = [Double]()
     let numberOfRequiredParameters = 1
@@ -191,7 +191,7 @@ struct VerticalLineTo: PathCommand {
     }
 }
 
-struct CurveTo: PathCommand {
+internal struct CurveTo: PathCommand {
     
     var coordinateBuffer = [Double]()
     let numberOfRequiredParameters = 6
@@ -209,7 +209,7 @@ struct CurveTo: PathCommand {
     }
 }
 
-struct SmoothCurveTo: PathCommand {
+internal struct SmoothCurveTo: PathCommand {
     
     var coordinateBuffer = [Double]()
     let numberOfRequiredParameters = 4
@@ -266,7 +266,7 @@ struct SmoothCurveTo: PathCommand {
     }
 }
 
-struct QuadraticCurveTo: PathCommand {
+internal struct QuadraticCurveTo: PathCommand {
     
     var coordinateBuffer = [Double]()
     let numberOfRequiredParameters = 4
@@ -283,7 +283,7 @@ struct QuadraticCurveTo: PathCommand {
     }
 }
 
-struct SmoothQuadraticCurveTo: PathCommand {
+internal struct SmoothQuadraticCurveTo: PathCommand {
     
     var coordinateBuffer = [Double]()
     let numberOfRequiredParameters = 2
@@ -324,7 +324,7 @@ struct SmoothQuadraticCurveTo: PathCommand {
     }
 }
 
-struct EllipticalArc: PathCommand {
+internal struct EllipticalArc: PathCommand {
     
     var coordinateBuffer = [Double]()
     let numberOfRequiredParameters = 2

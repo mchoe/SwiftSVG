@@ -38,21 +38,11 @@ import AppKit
 
 extension CAShapeLayer {
     
-    @available(*, deprecated)
     public convenience init(pathString: String) {
         self.init()
-        let svgPath = UIBezierPath(pathString: pathString)
-        self.path = svgPath.cgPath
+        let singlePath = SVGPath(singlePathString: pathString)
+        self.path = singlePath.svgLayer.path
     }
     
-    public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
-        self.init()
-        //_ = SVGParser(SVGURL: SVGURL, containerLayer: self)
-    }
-	
-	public convenience init(SVGData: Data) {
-		self.init()
-		//_ = SVGParser(data: SVGData, containerLayer: self)
-	}
 }
 

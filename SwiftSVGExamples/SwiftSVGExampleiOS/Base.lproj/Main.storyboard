@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="38.23088455772114"/>
         </scene>
-        <!--ViewSVG View Controller-->
+        <!--SingleSVG View Controller-->
         <scene sceneID="2LU-Mh-8bs">
             <objects>
-                <viewController id="nw3-Vo-jTo" customClass="ViewSVGViewController" customModule="SwiftSVGExampleiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nw3-Vo-jTo" customClass="SingleSVGViewController" customModule="SwiftSVGExampleiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Roz-LR-5Tj"/>
                         <viewControllerLayoutGuide type="bottom" id="VPT-nd-Og5"/>
