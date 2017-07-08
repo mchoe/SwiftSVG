@@ -8,19 +8,21 @@
 
 import UIKit
 
-struct TableItem {
-    let items: [URL]
-    let isDirectory: Bool
-    let title: String
-    
-    init(_ items: [URL], title: String, isDirectory: Bool = false) {
-        self.isDirectory = isDirectory
-        self.items = items
-        self.title = title
-    }
-}
+
 
 class ViewController: UIViewController {
+    
+    struct TableItem {
+        let items: [URL]
+        let isDirectory: Bool
+        let title: String
+        
+        init(_ items: [URL], title: String, isDirectory: Bool = false) {
+            self.isDirectory = isDirectory
+            self.items = items
+            self.title = title
+        }
+    }
     
     var selectedIndexPath = IndexPath(row: 0, section: 0)
     lazy var tableData: [TableItem] = {

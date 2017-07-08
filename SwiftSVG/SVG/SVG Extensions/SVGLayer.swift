@@ -45,7 +45,7 @@ open class SVGLayer: CAShapeLayer, SVGLayerType {
 
 extension SVGLayerType where Self: CALayer {
     
-    public func resizeToFit(size: CGRect) {
+    public func resizeToFit(_ size: CGRect) {
         
         let containingSize = size
         let boundingBoxAspectRatio = self.boundingBox.width / self.boundingBox.height

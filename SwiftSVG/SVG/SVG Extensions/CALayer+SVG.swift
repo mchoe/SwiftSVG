@@ -18,7 +18,9 @@ extension CALayer {
     public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         self.init()
         
-        DispatchQueue.global().async {
+        let dispatchQueue = DispatchQueue(label: "com.straussmade.swiftsvg")
+        
+        dispatchQueue.async {
             
             let parserToUse: SVGParser
             if let parser = parser {
@@ -38,7 +40,9 @@ extension CALayer {
     public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         self.init()
         
-        DispatchQueue.global().async {
+        let dispatchQueue = DispatchQueue(label: "com.straussmade.swiftsvg")
+        
+        dispatchQueue.async {
             
             let parserToUse: SVGParser
             if let parser = parser {

@@ -41,8 +41,6 @@
 @IBDesignable
 open class SVGView : UIView {
     
-    var svgLayer = SVGLayer()
-    
     @IBInspectable public var SVGName: String? {
         didSet {
             if let thisName = SVGName {
@@ -53,14 +51,11 @@ open class SVGView : UIView {
                     let bundle = Bundle(for: type(of: self))
                 #endif
                 
-                /*
                 if let url = bundle.url(forResource: thisName, withExtension: "svg") {
-                    self.shapeLayer = CAShapeLayer(SVGURL: url)
-                    if self.shapeLayer.superlayer == nil {
-                        self.nonOptionalLayer.addSublayer(self.shapeLayer)
-                    }
+                    let svgLayer = CALayer(SVGURL: url)
+                    self.nonOptionalLayer.addSublayer(svgLayer)
                 }
-                */
+                
             }
         }
     }

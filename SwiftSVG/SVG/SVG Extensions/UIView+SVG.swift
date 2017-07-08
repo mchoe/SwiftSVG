@@ -45,16 +45,28 @@ extension UIView {
         self.layer.addSublayer(svgLayer)
     }
     
+    public convenience init?(svgNamed: String) {
+        guard let svgURL = Bundle.main.url(forResource: svgNamed, withExtension: "svg") else {
+            return nil
+        }
+        do {
+            let data = try Data(contentsOf: svgURL)
+            self.init(SVGData: data)
+        } catch {
+            return nil
+        }
+    }
+    
     public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
         self.init()
         
-        _ = CALayer(SVGURL: SVGURL, parser: parser) { (svgLayer) in
+        _ = CALayer(SVGURL: SVGURL, parser: parser) { [weak self] (svgLayer) in
             
-            if let superviewSize = self.superview?.bounds {
-                svgLayer.resizeToFit(size: superviewSize)
+            if let superviewSize = self?.superview?.bounds {
+                svgLayer.resizeToFit(superviewSize)
             }
             DispatchQueue.main.safeAsync {
-                self.nonOptionalLayer.addSublayer(svgLayer)
+                self?.nonOptionalLayer.addSublayer(svgLayer)
             }
             completion?(svgLayer)
         }
@@ -64,13 +76,13 @@ extension UIView {
 	public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
 		self.init()
         
-        _ = CALayer(SVGData: SVGData, parser: parser) { (svgLayer) in
+        _ = CALayer(SVGData: SVGData, parser: parser) { [weak self] (svgLayer) in
             
-            if let superviewSize = self.superview?.bounds {
-                svgLayer.resizeToFit(size: superviewSize)
+            if let superviewSize = self?.superview?.bounds {
+                svgLayer.resizeToFit(superviewSize)
             }
             DispatchQueue.main.safeAsync {
-                self.nonOptionalLayer.addSublayer(svgLayer)
+                self?.nonOptionalLayer.addSublayer(svgLayer)
             }
             completion?(svgLayer)
         }
