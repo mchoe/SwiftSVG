@@ -28,7 +28,7 @@
 
 
 
-#if os(iOS)
+#if os(iOS) || os(tvOS) || os(watchOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -71,7 +71,12 @@ class SVGCircle: SVGShapeElement {
         guard let container = container else {
             return
         }
+        #if os(iOS) || os(tvOS) || os(watchOS)
         let circlePath = UIBezierPath(arcCenter: self.circleCenter, radius: self.circleRadius, startAngle: 0, endAngle:CGFloat.pi * 2, clockwise: true)
+        #elseif os(OSX)
+        let circleRect = CGRect(x: self.circleCenter.x - self.circleRadius, y: self.circleCenter.y - self.circleRadius, width: self.circleRadius * 2, height: self.circleRadius * 2)
+        let circlePath = NSBezierPath(ovalIn: circleRect)
+        #endif
         self.svgLayer.path = circlePath.cgPath
         container.containerLayer.addSublayer(self.svgLayer)
     }

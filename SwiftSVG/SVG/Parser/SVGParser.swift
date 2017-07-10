@@ -28,7 +28,7 @@
 
 
 
-#if os(iOS)
+#if os(iOS) || os(tvOS) || os(watchOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -44,11 +44,11 @@ struct SVGParseOptions: OptionSet {
 
 
 public protocol SVGParser {
-    var completionBlock: ((SVGLayer) -> Void)? { get }
+    var completionBlock: ((SVGLayer) -> ())? { get }
     var supportedElements: SVGParserSupportedElements? { get }
     var containerLayer: SVGLayer { get }
     
-    init(SVGData: Data, supportedElements: SVGParserSupportedElements?, completion: ((SVGLayer) -> Void)?)
+    init(SVGData: Data, supportedElements: SVGParserSupportedElements?, completion: ((SVGLayer) -> ())?)
     func startParsing()
 }
 

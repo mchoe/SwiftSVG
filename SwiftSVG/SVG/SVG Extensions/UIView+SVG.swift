@@ -29,10 +29,10 @@
 
 
 import Foundation
-#if os(iOS)
-    import UIKit
+#if os(iOS) || os(tvOS) || os(watchOS)
+import UIKit
 #elseif os(OSX)
-    import AppKit
+import AppKit
 #endif
 
 extension UIView {
@@ -42,11 +42,15 @@ extension UIView {
         let svgLayer = SVGLayer()
         let pathPath = UIBezierPath(pathString: pathString)
         svgLayer.path = pathPath.cgPath
+        #if os(iOS) || os(tvOS) || os(watchOS)
         self.layer.addSublayer(svgLayer)
+        #elseif os(OSX)
+        self.nonOptionalLayer.addSublayer(svgLayer)
+        #endif
     }
     
-    public convenience init?(svgNamed: String) {
-        guard let svgURL = Bundle.main.url(forResource: svgNamed, withExtension: "svg") else {
+    public convenience init?(SVGNamed: String) {
+        guard let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") else {
             return nil
         }
         do {
@@ -57,10 +61,10 @@ extension UIView {
         }
     }
     
-    public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
+    public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
         self.init()
         
-        _ = CALayer(SVGURL: SVGURL, parser: parser) { [weak self] (svgLayer) in
+        CALayer(SVGURL: SVGURL, parser: parser) { [weak self] (svgLayer) in
             
             if let superviewSize = self?.superview?.bounds {
                 svgLayer.resizeToFit(superviewSize)
@@ -73,10 +77,10 @@ extension UIView {
     }
 	
     
-	public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> Void)? = nil) {
+	public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
 		self.init()
         
-        _ = CALayer(SVGData: SVGData, parser: parser) { [weak self] (svgLayer) in
+        CALayer(SVGData: SVGData, parser: parser) { [weak self] (svgLayer) in
             
             if let superviewSize = self?.superview?.bounds {
                 svgLayer.resizeToFit(superviewSize)

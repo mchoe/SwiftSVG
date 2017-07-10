@@ -28,7 +28,7 @@
 
 
 
-#if os(iOS)
+#if os(iOS) || os(tvOS) || os(watchOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -45,7 +45,8 @@ open class SVGLayer: CAShapeLayer, SVGLayerType {
 
 extension SVGLayerType where Self: CALayer {
     
-    public func resizeToFit(_ size: CGRect) {
+    @discardableResult
+    public func resizeToFit(_ size: CGRect) -> Self {
         
         let containingSize = size
         let boundingBoxAspectRatio = self.boundingBox.width / self.boundingBox.height
@@ -65,8 +66,69 @@ extension SVGLayerType where Self: CALayer {
         DispatchQueue.main.safeAsync {
             self.setAffineTransform(scaleTransform)
         }
+        return self
     }
-    
 }
 
+extension CALayer {
+    
+    open func applyOnSublayers<T: CALayer>(ofType: T.Type, closure: (T) -> ()) {
+        let allShapelayers: [T] = self.sublayers(in: self)
+        _ = allShapelayers.map { (thisShapeLayer) -> T in
+            closure(thisShapeLayer)
+            return thisShapeLayer
+        }
+    }
+    
+    open func sublayers<T: CALayer, U>(in layer: T) -> [U] {
+        
+        var sublayers = [U]()
+        
+        guard let allSublayers = layer.sublayers else {
+            return sublayers
+        }
+        
+        for thisSublayer in allSublayers {
+            sublayers += self.sublayers(in: thisSublayer)
+            if let thisSublayer = thisSublayer as? U {
+                sublayers.append(thisSublayer)
+            }
+        }
+        return sublayers
+    }
+}
+
+// MARK: - Fill Overrides
+
+extension SVGLayer {
+    
+    override open var fillColor: CGColor? {
+        didSet {
+            self.applyOnSublayers(ofType: CAShapeLayer.self) { (thisShapeLayer) in
+                thisShapeLayer.fillColor = fillColor
+            }
+        }
+    }
+}
+
+// MARK: - Storke Overrides
+
+extension SVGLayer {
+    
+    override open var lineWidth: CGFloat {
+        didSet {
+            self.applyOnSublayers(ofType: CAShapeLayer.self) { (thisShapeLayer) in
+                thisShapeLayer.lineWidth = lineWidth
+            }
+        }
+    }
+    
+    override open var strokeColor: CGColor? {
+        didSet {
+            self.applyOnSublayers(ofType: CAShapeLayer.self) { (thisShapeLayer) in
+                thisShapeLayer.strokeColor = fillColor
+            }
+        }
+    }
+}
 

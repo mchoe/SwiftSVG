@@ -28,10 +28,10 @@
 
 
 
-#if os(iOS)
-    import UIKit
+#if os(iOS) || os(tvOS) || os(watchOS)
+import UIKit
 #elseif os(OSX)
-    import AppKit
+import AppKit
 #endif
 
 

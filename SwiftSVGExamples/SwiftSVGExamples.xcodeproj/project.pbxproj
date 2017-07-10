@@ -11,7 +11,6 @@
 		176BC9B91EE49C7200F7B54C /* rectangles.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9B81EE49C7200F7B54C /* rectangles.svg */; };
 		176BC9BA1EE49C7200F7B54C /* rectangles.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9B81EE49C7200F7B54C /* rectangles.svg */; };
 		176BC9BF1EE4BC6400F7B54C /* SingleSVGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9BE1EE4BC6400F7B54C /* SingleSVGViewController.swift */; };
-		176BC9C01EE4BC6400F7B54C /* SingleSVGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9BE1EE4BC6400F7B54C /* SingleSVGViewController.swift */; };
 		176BC9C71EE4C1AB00F7B54C /* ellipses.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9C61EE4C1AB00F7B54C /* ellipses.svg */; };
 		176BC9C81EE4C1AB00F7B54C /* ellipses.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9C61EE4C1AB00F7B54C /* ellipses.svg */; };
 		176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9CC1EE4C44E00F7B54C /* lines.svg */; };
@@ -43,13 +42,21 @@
 		3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */; };
 		3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95C1EFCB2E000F8C04E /* pizza.svg */; };
 		3876E9651EFCC16500F8C04E /* container.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E9641EFCC16500F8C04E /* container.svg */; };
-		387B0C5D1F107CDA0085E51A /* SVGViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C5C1F107CDA0085E51A /* SVGViewExampleViewController.swift */; };
 		387B0C5F1F107E5B0085E51A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C5E1F107E5B0085E51A /* StartViewController.swift */; };
 		387B0C611F1083D70085E51A /* StartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C601F1083D70085E51A /* StartCell.swift */; };
 		387B0C631F108ECD0085E51A /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C621F108ECD0085E51A /* GithubViewController.swift */; };
 		387B0C651F108FBB0085E51A /* GithubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C641F108FBB0085E51A /* GithubCell.swift */; };
 		387B0C671F109FA30085E51A /* VariousViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C661F109FA30085E51A /* VariousViewController.swift */; };
 		387B0C691F10A1900085E51A /* VariousCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C681F10A1900085E51A /* VariousCell.swift */; };
+		387B0C6B1F1155680085E51A /* sockPuppet.svg in Resources */ = {isa = PBXBuildFile; fileRef = 387B0C6A1F1155680085E51A /* sockPuppet.svg */; };
+		3882153B1F12C41800C192A3 /* hawaiiFlowers.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED491F02064900EDB255 /* hawaiiFlowers.svg */; };
+		3882153D1F12DEB000C192A3 /* George_Kerr_Anderson_Patent_1885_1.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3882153C1F12DEB000C192A3 /* George_Kerr_Anderson_Patent_1885_1.svg */; };
+		388215791F1309A800C192A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388215781F1309A800C192A3 /* AppDelegate.swift */; };
+		3882157B1F1309A800C192A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882157A1F1309A800C192A3 /* ViewController.swift */; };
+		3882157E1F1309A800C192A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3882157C1F1309A800C192A3 /* Main.storyboard */; };
+		388215801F1309A800C192A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3882157F1F1309A800C192A3 /* Assets.xcassets */; };
+		388215861F130B2100C192A3 /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388215851F130B2100C192A3 /* SwiftSVGiOS.framework */; };
+		388215871F130B2100C192A3 /* SwiftSVGiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 388215851F130B2100C192A3 /* SwiftSVGiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38A1CE101EF77A0F00D2E54E /* triangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38A1CE0F1EF77A0F00D2E54E /* triangle.svg */; };
 		38DCC2EA1EFCC59C006C0050 /* SwiftSVGiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */; };
 		38DCC2EB1EFCC59C006C0050 /* SwiftSVGiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -83,6 +90,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				17D570801E1F4EC3007CED68 /* SwiftSVGMac.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		388215881F130B2100C192A3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				388215871F130B2100C192A3 /* SwiftSVGiOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,13 +140,21 @@
 		3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1346768588.svg"; sourceTree = "<group>"; };
 		3876E95C1EFCB2E000F8C04E /* pizza.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pizza.svg; sourceTree = "<group>"; };
 		3876E9641EFCC16500F8C04E /* container.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = container.svg; sourceTree = "<group>"; };
-		387B0C5C1F107CDA0085E51A /* SVGViewExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGViewExampleViewController.swift; sourceTree = "<group>"; };
 		387B0C5E1F107E5B0085E51A /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		387B0C601F1083D70085E51A /* StartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCell.swift; sourceTree = "<group>"; };
 		387B0C621F108ECD0085E51A /* GithubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
 		387B0C641F108FBB0085E51A /* GithubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubCell.swift; sourceTree = "<group>"; };
 		387B0C661F109FA30085E51A /* VariousViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariousViewController.swift; sourceTree = "<group>"; };
 		387B0C681F10A1900085E51A /* VariousCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariousCell.swift; sourceTree = "<group>"; };
+		387B0C6A1F1155680085E51A /* sockPuppet.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sockPuppet.svg; sourceTree = "<group>"; };
+		3882153C1F12DEB000C192A3 /* George_Kerr_Anderson_Patent_1885_1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = George_Kerr_Anderson_Patent_1885_1.svg; sourceTree = "<group>"; };
+		388215761F1309A800C192A3 /* SwiftSVGExampleTVOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVGExampleTVOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		388215781F1309A800C192A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3882157A1F1309A800C192A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3882157D1F1309A800C192A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3882157F1F1309A800C192A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		388215811F1309A800C192A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		388215851F130B2100C192A3 /* SwiftSVGiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A1CE0F1EF77A0F00D2E54E /* triangle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = triangle.svg; sourceTree = "<group>"; };
 		38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC4DBBD1CB37DB800137DC9 /* SwiftSVGExampleiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVGExampleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +173,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		388215731F1309A800C192A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				388215861F130B2100C192A3 /* SwiftSVGiOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AC4DBBA1CB37DB800137DC9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,13 +208,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		388215771F1309A800C192A3 /* SwiftSVGExampleTVOS */ = {
+			isa = PBXGroup;
+			children = (
+				388215781F1309A800C192A3 /* AppDelegate.swift */,
+				3882157A1F1309A800C192A3 /* ViewController.swift */,
+				3882157C1F1309A800C192A3 /* Main.storyboard */,
+				3882157F1F1309A800C192A3 /* Assets.xcassets */,
+				388215811F1309A800C192A3 /* Info.plist */,
+			);
+			path = SwiftSVGExampleTVOS;
+			sourceTree = "<group>";
+		};
 		8AC4DB9B1CB37D9600137DC9 = {
 			isa = PBXGroup;
 			children = (
+				388215851F130B2100C192A3 /* SwiftSVGiOS.framework */,
 				38DCC2E91EFCC59C006C0050 /* SwiftSVGiOS.framework */,
 				8AC4DBE61CB37E1C00137DC9 /* Resources */,
 				8AC4DBBE1CB37DB800137DC9 /* SwiftSVGExampleiOS */,
 				8AC4DBD41CB37DC600137DC9 /* SwiftSVGExampleMac */,
+				388215771F1309A800C192A3 /* SwiftSVGExampleTVOS */,
 				8AC4DBA51CB37D9600137DC9 /* Products */,
 				176BC97F1EE36BC700F7B54C /* Frameworks */,
 			);
@@ -191,6 +239,7 @@
 			children = (
 				8AC4DBBD1CB37DB800137DC9 /* SwiftSVGExampleiOS.app */,
 				8AC4DBD31CB37DC600137DC9 /* SwiftSVGExampleMac.app */,
+				388215761F1309A800C192A3 /* SwiftSVGExampleTVOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,7 +252,6 @@
 				176BC9BE1EE4BC6400F7B54C /* SingleSVGViewController.swift */,
 				387B0C5E1F107E5B0085E51A /* StartViewController.swift */,
 				387B0C601F1083D70085E51A /* StartCell.swift */,
-				387B0C5C1F107CDA0085E51A /* SVGViewExampleViewController.swift */,
 				387B0C621F108ECD0085E51A /* GithubViewController.swift */,
 				8AC4DBC31CB37DB800137DC9 /* Main.storyboard */,
 				8AC4DBC61CB37DB800137DC9 /* Assets.xcassets */,
@@ -232,6 +280,7 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3882153C1F12DEB000C192A3 /* George_Kerr_Anderson_Patent_1885_1.svg */,
 				3870903B1F0C32AE00F72660 /* error.svg */,
 				380FED6A1F06984900EDB255 /* decorativeblob.svg */,
 				380FED681F0697A800EDB255 /* Camel2.svg */,
@@ -253,6 +302,7 @@
 				380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */,
 				3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */,
 				3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */,
+				387B0C6A1F1155680085E51A /* sockPuppet.svg */,
 				176BC9AF1EE48D3C00F7B54C /* circles.svg */,
 				176BC9C61EE4C1AB00F7B54C /* ellipses.svg */,
 				3813ED551EFC6F1B0054ECBD /* fistBump.svg */,
@@ -269,6 +319,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		388215751F1309A800C192A3 /* SwiftSVGExampleTVOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 388215821F1309A800C192A3 /* Build configuration list for PBXNativeTarget "SwiftSVGExampleTVOS" */;
+			buildPhases = (
+				388215721F1309A800C192A3 /* Sources */,
+				388215731F1309A800C192A3 /* Frameworks */,
+				388215741F1309A800C192A3 /* Resources */,
+				388215881F130B2100C192A3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSVGExampleTVOS;
+			productName = SwiftSVGExampleTVOS;
+			productReference = 388215761F1309A800C192A3 /* SwiftSVGExampleTVOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8AC4DBBC1CB37DB800137DC9 /* SwiftSVGExampleiOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AC4DBCE1CB37DB800137DC9 /* Build configuration list for PBXNativeTarget "SwiftSVGExampleiOS" */;
@@ -311,14 +379,18 @@
 		8AC4DB9C1CB37D9600137DC9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Michael Choe";
 				TargetAttributes = {
+					388215751F1309A800C192A3 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Manual;
+					};
 					8AC4DBBC1CB37DB800137DC9 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = L2JNG48FS5;
 						LastSwiftMigration = 0810;
+						ProvisioningStyle = Manual;
 					};
 					8AC4DBD21CB37DC600137DC9 = {
 						CreatedOnToolsVersion = 7.3;
@@ -341,11 +413,21 @@
 			targets = (
 				8AC4DBBC1CB37DB800137DC9 /* SwiftSVGExampleiOS */,
 				8AC4DBD21CB37DC600137DC9 /* SwiftSVGExampleMac */,
+				388215751F1309A800C192A3 /* SwiftSVGExampleTVOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		388215741F1309A800C192A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				388215801F1309A800C192A3 /* Assets.xcassets in Resources */,
+				3882157E1F1309A800C192A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AC4DBBB1CB37DB800137DC9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +438,7 @@
 				380FED221F0036F400EDB255 /* rabbitcowboy.svg in Resources */,
 				380FED651F06946500EDB255 /* Dulcimer.svg in Resources */,
 				3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */,
+				3882153D1F12DEB000C192A3 /* George_Kerr_Anderson_Patent_1885_1.svg in Resources */,
 				380FED5B1F06907600EDB255 /* johnny-automatic-open-mouth.svg in Resources */,
 				380FECF61EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg in Resources */,
 				3870903C1F0C32AE00F72660 /* error.svg in Resources */,
@@ -380,6 +463,7 @@
 				176BC9C71EE4C1AB00F7B54C /* ellipses.svg in Resources */,
 				8AC4DBCA1CB37DB800137DC9 /* LaunchScreen.storyboard in Resources */,
 				380FED611F0692E500EDB255 /* Fyodor-Dostoevsky.svg in Resources */,
+				387B0C6B1F1155680085E51A /* sockPuppet.svg in Resources */,
 				380FED081F00171B00EDB255 /* openclipart-angry-coder.svg in Resources */,
 				8AC4DBC71CB37DB800137DC9 /* Assets.xcassets in Resources */,
 				8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */,
@@ -392,6 +476,7 @@
 			files = (
 				176BC9BA1EE49C7200F7B54C /* rectangles.svg in Resources */,
 				176BC9C81EE4C1AB00F7B54C /* ellipses.svg in Resources */,
+				3882153B1F12C41800C192A3 /* hawaiiFlowers.svg in Resources */,
 				176BC9CE1EE4C44E00F7B54C /* lines.svg in Resources */,
 				8AC4DBDA1CB37DC600137DC9 /* Assets.xcassets in Resources */,
 				8AC4DBDD1CB37DC600137DC9 /* Main.storyboard in Resources */,
@@ -401,6 +486,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		388215721F1309A800C192A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3882157B1F1309A800C192A3 /* ViewController.swift in Sources */,
+				388215791F1309A800C192A3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AC4DBB91CB37DB800137DC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,7 +508,6 @@
 				387B0C611F1083D70085E51A /* StartCell.swift in Sources */,
 				387B0C691F10A1900085E51A /* VariousCell.swift in Sources */,
 				387B0C651F108FBB0085E51A /* GithubCell.swift in Sources */,
-				387B0C5D1F107CDA0085E51A /* SVGViewExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +515,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				176BC9C01EE4BC6400F7B54C /* SingleSVGViewController.swift in Sources */,
 				8AC4DBD81CB37DC600137DC9 /* ViewController.swift in Sources */,
 				8AC4DBD61CB37DC600137DC9 /* AppDelegate.swift in Sources */,
 			);
@@ -431,6 +523,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3882157C1F1309A800C192A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3882157D1F1309A800C192A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		8AC4DBC31CB37DB800137DC9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -458,6 +558,47 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		388215831F1309A800C192A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SwiftSVGExampleTVOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGExampleTVOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		388215841F1309A800C192A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SwiftSVGExampleTVOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGExampleTVOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
 		8AC4DBB41CB37D9600137DC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -552,11 +693,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L2JNG48FS5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftSVGExampleiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGExampleiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
@@ -565,11 +707,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L2JNG48FS5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftSVGExampleiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGExampleiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
@@ -609,6 +752,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		388215821F1309A800C192A3 /* Build configuration list for PBXNativeTarget "SwiftSVGExampleTVOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				388215831F1309A800C192A3 /* Debug */,
+				388215841F1309A800C192A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		8AC4DB9F1CB37D9600137DC9 /* Build configuration list for PBXProject "SwiftSVGExamples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

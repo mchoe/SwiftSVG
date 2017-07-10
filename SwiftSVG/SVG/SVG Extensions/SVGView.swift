@@ -28,7 +28,7 @@
 
 
 
-#if os(iOS)
+#if os(iOS) || os(tvOS) || os(watchOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -41,24 +41,33 @@
 @IBDesignable
 open class SVGView : UIView {
     
-    @IBInspectable public var SVGName: String? {
+    @IBInspectable open var SVGName: String? {
         didSet {
-            if let thisName = SVGName {
-                
-                #if !TARGET_INTERFACE_BUILDER
-                    let bundle = Bundle.main
-                #else
-                    let bundle = Bundle(for: type(of: self))
-                #endif
-                
-                if let url = bundle.url(forResource: thisName, withExtension: "svg") {
-                    let svgLayer = CALayer(SVGURL: url)
-                    self.nonOptionalLayer.addSublayer(svgLayer)
-                }
-                
+            guard let thisName = self.SVGName else {
+                return
+            }
+            
+            #if !TARGET_INTERFACE_BUILDER
+                let bundle = Bundle.main
+            #else
+                let bundle = Bundle(for: type(of: self))
+            #endif
+            
+            if let url = bundle.url(forResource: thisName, withExtension: "svg") {
+                let svgLayer = CALayer(SVGURL: url)
+                self.nonOptionalLayer.addSublayer(svgLayer)
             }
         }
     }
+    
+    /*
+    open override func prepareForInterfaceBuilder() {
+        
+        /*
+     
+        */
+    }
+    */
 }
 
 extension SVGView {
@@ -72,6 +81,7 @@ extension SVGView {
 
 extension SVGView {
     
+    /*
     override open func layoutSubviews() {
         super.layoutSubviews()
         //print("Laying out subviews")
@@ -83,6 +93,7 @@ extension SVGView {
             //parserToUse.containerLayer.sizeToFit(size: superviewSize)
         }
     }
+    */
     
 }
 

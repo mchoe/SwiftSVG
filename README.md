@@ -34,19 +34,68 @@ Table of Contents
 Install
 -------
 
-SwiftSVG is meant to be dropped in to any project. Pick and choose the files you need, but you can install all the extensions via [Carthage](https://github.com/Carthage/Carthage):
+Install via Cocoapods:
 	
-	github "mchoe/SwiftSVG" ~> 1.0
+	pod 'SwiftSVG', '~> 2.0'
 
-or Cocoapods:
+Carthage:
 
-	pod 'SwiftSVG'
+	github "mchoe/SwiftSVG" ~> 2.0
+
+**For projects currently using 1.0**: SwiftSVG 2.x is a major rewrite of the library. For most use cases, you should be able to upgrade to 2.0 with little to no changes to your code. However, there are breaking changes 
 
 
 Usage
 -----
 
 SwiftSVG provides multiple interfaces to parse single path strings and SVG files using NSXMLParser. 
+
+### UIView+SVG
+
+The easiest way to create an SVG file is to use the UIView extension:
+```swift
+let fistBump = UIView(SVGNamed: "fistbump")     // In the main bundle
+self.addSubview(fistBump)
+```
+#### Output:
+![Put it here!](/images/fistBump.png)
+
+SwiftSVG also provides the following convenience initializers:
+```swift
+func UIView(SVGNamed: String)
+func UIView(SVGURL: URL)
+func UIView(SVGData: Data)
+```
+
+All of these initializers will parse a file located in the main bundle, a bundle of your own choosing, or on the web. It will parse the file asynchronously and optionally takes a completion block, passing a `SVGLayer` that's sized to aspect fit the UIView's superview. Whether you pass a completion block or not, SwiftSVG will resize the layer and add it to the view's sublayers.
+
+
+
+
+You can optionally pass an `SVGParser` object if you want to reuse the same parser for various SVG files or want to roll your own using a third-party XML parser. By default, SwiftSVG uses a subclass of Foundation's `XMLParser` using all the supported elements and attributes called `NSXMLSVGParser`. You can also optionally setup your own `NSXMLSVGParser` passing a `SVGParserSupportedElements` struct that will parse only the elements and attributes of your choosing. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ####String+SVG####
 

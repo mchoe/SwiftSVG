@@ -28,7 +28,7 @@
 
 
 
-#if os(iOS)
+#if os(iOS) || os(tvOS) || os(watchOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -49,7 +49,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     
     fileprivate var elementStack = Stack<SVGElement>()
     
-    public var completionBlock: ((SVGLayer) -> Void)?
+    public var completionBlock: ((SVGLayer) -> ())?
     public var supportedElements: SVGParserSupportedElements? = nil
     open var containerLayer = SVGLayer()
     
@@ -62,7 +62,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         super.init(data: Data())
     }
     
-    public convenience init(SVGURL: URL, supportedElements: SVGParserSupportedElements? = nil, completion: ((SVGLayer) -> Void)? = nil) {
+    public convenience init(SVGURL: URL, supportedElements: SVGParserSupportedElements? = nil, completion: ((SVGLayer) -> ())? = nil) {
         
         do {
             let urlData = try Data(contentsOf: SVGURL)
@@ -73,7 +73,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         }
     }
     
-    public required init(SVGData: Data, supportedElements: SVGParserSupportedElements? = nil, completion: ((SVGLayer) -> Void)? = nil) {
+    public required init(SVGData: Data, supportedElements: SVGParserSupportedElements? = nil, completion: ((SVGLayer) -> ())? = nil) {
         super.init(data: SVGData)
         self.delegate = self
         
@@ -154,14 +154,9 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         self.asyncCountQueue.sync {
             self.didDispatchAllElements = true
         }
-        
-        guard self.asyncParseCount <= 0 else {
-            return
+        if self.asyncParseCount <= 0 {
+            self.completionBlock?(self.containerLayer)
         }
-        
-        print("Finished Dispatching: \(self.didDispatchAllElements) - \(self.asyncParseCount)")
-        self.completionBlock?(self.containerLayer)
-        
     }
     
     public func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
@@ -201,7 +196,6 @@ extension NSXMLSVGParser: CanManageAsychronousCallbacks {
         guard self.asyncParseCount <= 0 && self.didDispatchAllElements else {
             return
         }
-        print("Finished Parsing Document [\(self.didDispatchAllElements)]: \(self.containerLayer.boundingBox)")
         self.completionBlock?(self.containerLayer)
     }
     

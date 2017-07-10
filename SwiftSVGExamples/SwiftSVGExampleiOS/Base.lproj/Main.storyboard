@@ -295,7 +295,7 @@
             </objects>
             <point key="canvasLocation" x="-500" y="38"/>
         </scene>
-        <!--Start View Controller-->
+        <!--SwiftSVG-->
         <scene sceneID="186-3l-bI6">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="WQx-bl-ivi" customClass="StartViewController" customModule="SwiftSVGExampleiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -361,7 +361,7 @@
                             <constraint firstItem="F6v-C1-dbz" firstAttribute="top" secondItem="Sew-yb-l70" secondAttribute="bottom" id="gwH-x3-Yq3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ko9-El-4os"/>
+                    <navigationItem key="navigationItem" title="SwiftSVG" id="ko9-El-4os"/>
                     <connections>
                         <outlet property="tableView" destination="F6v-C1-dbz" id="IX9-pR-Ulv"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="startToListSegue" id="eY9-ZP-9Qx"/>

@@ -28,7 +28,7 @@
 
 
 
-#if os(iOS)
+#if os(iOS) || os(tvOS) || os(watchOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -62,30 +62,27 @@ struct SVGPath: SVGShapeElement, ParsesAsynchronously {
             let pathDPath = UIBezierPath()
             pathDPath.move(to: CGPoint.zero)
             
+            let parsePathClosure = {
+                var previousCommand: PreviousCommand? = nil
+                for thisPathCommand in PathDLexer(pathString: workingString) {
+                    thisPathCommand.execute(on: pathDPath, previousCommand: previousCommand)
+                    previousCommand = thisPathCommand
+                }
+            }
+            
             if self.shouldParseAsynchronously {
                 
                 let concurrent = DispatchQueue(label: "concurrent", attributes: .concurrent)
                 let dispatchGroup = DispatchGroup()
                 
-                concurrent.async(group: dispatchGroup) {
-                    var previousCommand: PreviousCommand? = nil
-                    for thisPathCommand in PathDLexer(pathString: workingString) {
-                        thisPathCommand.execute(on: pathDPath, previousCommand: previousCommand)
-                        previousCommand = thisPathCommand
-                    }
-                }
-                
+                concurrent.async(group: dispatchGroup, execute: parsePathClosure)
                 dispatchGroup.notify(queue: DispatchQueue.main) {
                     self.svgLayer.path = pathDPath.cgPath
                     self.asyncParseManager?.finishedProcessing(self.svgLayer)
                 }
                 
             } else {
-                var previousCommand: PreviousCommand? = nil
-                for thisPathCommand in PathDLexer(pathString: workingString) {
-                    thisPathCommand.execute(on: pathDPath, previousCommand: previousCommand)
-                    previousCommand = thisPathCommand
-                }
+                parsePathClosure()
                 self.svgLayer.path = pathDPath.cgPath
             }
         }
@@ -97,9 +94,11 @@ struct SVGPath: SVGShapeElement, ParsesAsynchronously {
                 print("Need to implement path evenodd")
                 return
             }
+            #if os(iOS) || os(tvOS) || os(watchOS)
             let bezierPath = UIBezierPath(cgPath: thisPath)
             bezierPath.usesEvenOddFillRule = true
             self.svgLayer.path = bezierPath.cgPath
+            #endif
         }
     }
     

@@ -28,7 +28,7 @@
 
 
 
-#if os(iOS)
+#if os(iOS) || os(tvOS) || os(watchOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -36,14 +36,20 @@
 
 extension UIBezierPath {
     
+    
     public convenience init(pathString: String) {
         let singlePath = SVGPath(singlePathString: pathString)
         guard let cgPath = singlePath.svgLayer.path else {
             self.init()
             return
         }
+        #if os(iOS) || os(tvOS) || os(watchOS)
         self.init(cgPath: cgPath)
+        #elseif os(OSX)
+        self.init()
+        #endif
     }
+    
     
     @available(*, deprecated, message: "This method is deprecated. If you want to parse a single path, instantiate a new instance of SVGPath using the SVGPath(singlePathString:) initializer and pass the path string.")
     public class func pathWithSVGURL(_ SVGURL: URL) -> UIBezierPath? {

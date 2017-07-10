@@ -2,9 +2,30 @@
 //  GithubViewController.swift
 //  SwiftSVGExamples
 //
-//  Created by tarragon on 7/7/17.
-//  Copyright © 2017 Michael Choe. All rights reserved.
+//  Copyright (c) 2017 Michael Choe
+//  http://www.github.com/mchoe
+//  http://www.straussmade.com/
+//  http://www.twitter.com/_mchoe
 //
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+
+
 
 import SwiftSVGiOS
 import UIKit
@@ -19,6 +40,9 @@ class GithubViewController: UIViewController {
     lazy var collectionViewData: [CellItem] = {
         let returnData = [
             CellItem(render: { (cellSize) -> UIView in
+                
+                // Parsing a single path string syncronously
+                
                 let examplePathData: String = "M75 0 l75 200 L0 200 Z"
                 let parsedPath: UIBezierPath = UIBezierPath(pathString: examplePathData)
                 
@@ -38,13 +62,19 @@ class GithubViewController: UIViewController {
                 return returnView
             }),
             CellItem(render: { (cellSize) -> UIView in
+                
+                // Example passing SVG Data
+                
                 let svgURL = Bundle.main.url(forResource: "pizza", withExtension: "svg")
                 let data = try! Data(contentsOf: svgURL!)
                 let svgView = UIView(SVGData: data)
                 return svgView
             }),
             CellItem(render: { (cellSize) -> UIView in
-                let svgView = UIView(svgNamed: "johnny-automatic-open-mouth")
+                
+                // Simplest example of an SVG stored in the main bundle
+                
+                let svgView = UIView(SVGNamed: "sockPuppet")
                 return svgView!
             })
         ]
