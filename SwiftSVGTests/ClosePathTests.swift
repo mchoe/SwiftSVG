@@ -30,7 +30,7 @@
 
 import XCTest
 
-class ClostPathTests: XCTestCase {
+class ClosePathTests: XCTestCase {
 
     func testClosePath() {
         let testPath = UIBezierPath()

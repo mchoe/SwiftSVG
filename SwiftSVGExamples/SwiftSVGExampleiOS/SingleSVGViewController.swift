@@ -27,7 +27,7 @@
 
 
 
-import SwiftSVGiOS
+import SwiftSVG
 import UIKit
 
 

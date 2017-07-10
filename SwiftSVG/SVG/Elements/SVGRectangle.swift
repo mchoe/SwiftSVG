@@ -28,7 +28,7 @@
 
 
 
-#if os(iOS) || os(tvOS) || os(watchOS)
+#if os(iOS) || os(tvOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -104,7 +104,7 @@ class SVGRectangle: SVGShapeElement {
         
         let rectanglePath: UIBezierPath
         if (self.xCornerRadius > 0 || self.yCornerRadius > 0) {
-            #if os(iOS) || os(tvOS) || os(watchOS)
+            #if os(iOS) || os(tvOS)
             rectanglePath = UIBezierPath(roundedRect: self.rectangleRect, byRoundingCorners: UIRectCorner.allCorners, cornerRadii: CGSize(width: self.xCornerRadius, height: self.yCornerRadius))
             #elseif os(OSX)
             // TODO:

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Michael Choe. All rights reserved.
 //
 
-import SwiftSVGiOS
+import SwiftSVG
 import UIKit
 
 class ViewController: UIViewController {
@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let thisSVGView = UIView()
+        let thisSVGView = UIView(SVGNamed: "hawaiiFlowers")
         self.svgView.addSubview(thisSVGView)
     }
 }

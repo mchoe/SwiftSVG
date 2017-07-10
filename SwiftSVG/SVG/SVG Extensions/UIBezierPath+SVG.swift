@@ -28,7 +28,7 @@
 
 
 
-#if os(iOS) || os(tvOS) || os(watchOS)
+#if os(iOS) || os(tvOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -43,7 +43,7 @@ extension UIBezierPath {
             self.init()
             return
         }
-        #if os(iOS) || os(tvOS) || os(watchOS)
+        #if os(iOS) || os(tvOS)
         self.init(cgPath: cgPath)
         #elseif os(OSX)
         self.init()

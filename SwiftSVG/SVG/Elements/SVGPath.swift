@@ -28,7 +28,7 @@
 
 
 
-#if os(iOS) || os(tvOS) || os(watchOS)
+#if os(iOS) || os(tvOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -94,7 +94,7 @@ struct SVGPath: SVGShapeElement, ParsesAsynchronously {
                 print("Need to implement path evenodd")
                 return
             }
-            #if os(iOS) || os(tvOS) || os(watchOS)
+            #if os(iOS) || os(tvOS)
             let bezierPath = UIBezierPath(cgPath: thisPath)
             bezierPath.usesEvenOddFillRule = true
             self.svgLayer.path = bezierPath.cgPath

@@ -29,7 +29,7 @@
 
 
 import Foundation
-#if os(iOS) || os(tvOS) || os(watchOS)
+#if os(iOS) || os(tvOS)
 import UIKit
 #elseif os(OSX)
 import AppKit
@@ -42,22 +42,23 @@ extension UIView {
         let svgLayer = SVGLayer()
         let pathPath = UIBezierPath(pathString: pathString)
         svgLayer.path = pathPath.cgPath
-        #if os(iOS) || os(tvOS) || os(watchOS)
+        #if os(iOS) || os(tvOS)
         self.layer.addSublayer(svgLayer)
         #elseif os(OSX)
         self.nonOptionalLayer.addSublayer(svgLayer)
         #endif
     }
     
-    public convenience init?(SVGNamed: String) {
+    public convenience init(SVGNamed: String) {
         guard let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") else {
-            return nil
+            self.init()
+            return
         }
         do {
             let data = try Data(contentsOf: svgURL)
             self.init(SVGData: data)
         } catch {
-            return nil
+            self.init()
         }
     }
     
