@@ -34,7 +34,7 @@ private struct StylableConstants {
     static let attributesRegex = "(((\\w+)-?(\\w*)?):?([ #\\w]*\\.?\\w+))"
 }
 
-protocol Stylable { }
+public protocol Stylable { }
 
 extension Stylable where Self : SVGElement {
     

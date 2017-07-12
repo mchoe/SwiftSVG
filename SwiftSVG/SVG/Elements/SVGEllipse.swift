@@ -34,6 +34,10 @@
     import AppKit
 #endif
 
+/**
+ Concrete implementation that creates a `CAShapeLayer` from a `<ellipse>` element and its attributes
+ */
+
 class SVGEllipse: SVGShapeElement {
     
     static var elementName: String {
@@ -74,14 +78,16 @@ class SVGEllipse: SVGShapeElement {
         self.ellipseCenter.y = CGFloat(y)
     }
     
-    func didProcessElement(in container: SVGContainerElement?) {
+    @discardableResult
+    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
         guard let container = container else {
-            return
+            return nil
         }
         let ellipseRect = CGRect(x: self.ellipseCenter.x - self.xRadius, y: self.ellipseCenter.y - self.yRadius, width: 2 * self.xRadius, height: 2 * self.yRadius)
         let circlePath = UIBezierPath(ovalIn: ellipseRect)
         self.svgLayer.path = circlePath.cgPath
         container.containerLayer.addSublayer(self.svgLayer)
+        return nil
     }
     
 }

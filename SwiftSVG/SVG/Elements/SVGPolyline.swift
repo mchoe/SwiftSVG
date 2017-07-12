@@ -34,6 +34,10 @@
     import AppKit
 #endif
 
+/**
+ Concrete implementation that creates a `CAShapeLayer` from a `<polyline>` element and its attributes
+ */
+
 struct SVGPolyline: SVGShapeElement {
     
     static var elementName: String {
@@ -55,10 +59,12 @@ struct SVGPolyline: SVGShapeElement {
         self.svgLayer.path = polylinePath.cgPath
     }
     
-    func didProcessElement(in container: SVGContainerElement?) {
+    @discardableResult
+    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
         guard let container = container else {
-            return
+            return nil
         }
         container.containerLayer.addSublayer(self.svgLayer)
+        return self.svgLayer.path
     }
 }

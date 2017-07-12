@@ -120,7 +120,7 @@ private struct TransformableConstants {
     static let attributesRegex = "(\\w+)\\(((\\-?\\d+\\.?\\d*e?\\-?\\d*\\s*,?\\s*)+)\\)"
 }
 
-protocol Transformable {
+public protocol Transformable {
     var layerToTransform: CALayer { get }
 }
 

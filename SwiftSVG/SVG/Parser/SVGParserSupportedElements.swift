@@ -30,6 +30,10 @@
 
 import Foundation
 
+/**
+ A struct that lists all the supported elements and attributes for a parser
+ */
+
 public struct SVGParserSupportedElements {
     
     typealias ElementGenerator = () -> SVGElement

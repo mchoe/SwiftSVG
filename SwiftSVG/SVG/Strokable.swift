@@ -35,7 +35,7 @@
 #endif
 
 
-protocol Strokable { }
+public protocol Strokable { }
 
 enum LineJoin: String {
     case miter, round, bevel

@@ -45,20 +45,26 @@ let groupAttributes: [String : (SVGGroup) -> (String, CAShapeLayer) -> ()] = [
     "stroke-width": SVGGroup.strokeWidthGroup
 ]
 
+/**
+ Concrete implementation that creates a container from a `<g>` element and applies its attribites to all sublayers
+ */
+
 class SVGGroup: SVGContainerElement {
     
     static var elementName: String {
         return "g"
     }
     
+    /// Store all attributes and values to be applied after all known sublayers have been added to this container
     var attributesToApply = [String : String]()
     var containerLayer = CALayer()
     var supportedAttributes = [String : ((String) -> ())?]()
     
-    func didProcessElement(in container: SVGContainerElement?) {
+    @discardableResult
+    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
         
         guard let containerSublayers = self.containerLayer.sublayers else {
-            return
+            return nil
         }
         
         for thisSublayer in containerSublayers {
@@ -70,6 +76,7 @@ class SVGGroup: SVGContainerElement {
             }
         }
         container?.containerLayer.addSublayer(self.containerLayer)
+        return nil
     }
     
     func applyAttribute(_ attribute: String, value: String, on layer: CAShapeLayer) {

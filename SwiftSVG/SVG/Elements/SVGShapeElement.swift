@@ -34,12 +34,19 @@
     import AppKit
 #endif
 
+/**
+ A protocol that describes an instance that stores the path as a `CAShapeLayer`
+ */
 
-protocol SVGShapeElement: SVGElement, Fillable, Strokable, Transformable, Stylable {
+public protocol SVGShapeElement: SVGElement, Fillable, Strokable, Transformable, Stylable {
+    
+    /// The `CAShapeLayer` that can draw the path data.
     var svgLayer: CAShapeLayer { get set }
 }
 
 extension SVGShapeElement {
+    
+    /// The minimum rect that encompasses all of the subpaths
     var boundingBox: CGRect? {
         return self.svgLayer.path?.boundingBox
     }

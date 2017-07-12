@@ -34,6 +34,11 @@
     import AppKit
 #endif
 
+
+/**
+ Concrete implementation that creates a `CAShapeLayer` from a `<line>` element and its attributes
+ */
+
 class SVGLine: SVGShapeElement {
     
     static var elementName: String {
@@ -74,15 +79,17 @@ class SVGLine: SVGShapeElement {
         self.end.y = CGFloat(y2)
     }
     
-    func didProcessElement(in container: SVGContainerElement?) {
+    @discardableResult
+    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
         guard let container = container else {
-            return
+            return nil
         }
         let linePath = UIBezierPath()
         linePath.move(to: self.start)
         linePath.addLine(to: self.end)
         self.svgLayer.path = linePath.cgPath
         container.containerLayer.addSublayer(self.svgLayer)
+        return linePath.cgPath
     }
     
 }

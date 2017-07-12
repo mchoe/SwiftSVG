@@ -34,6 +34,10 @@
     import AppKit
 #endif
 
+/**
+ Concrete implementation that creates a `CAShapeLayer` from a `<rect>` element and its attributes
+ */
+
 class SVGRectangle: SVGShapeElement {
     
     static var elementName: String {
@@ -88,9 +92,10 @@ class SVGRectangle: SVGShapeElement {
         self.yCornerRadius = CGFloat(yCornerRadius)
     }
     
-    func didProcessElement(in container: SVGContainerElement?) {
+    @discardableResult
+    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
         guard let container = container else {
-            return
+            return nil
         }
         
         // TODO: There seems to be a bug with UIBezierPath(roundedRect:byRoundingCorners:cornerRadii:)
@@ -117,5 +122,6 @@ class SVGRectangle: SVGShapeElement {
         }
         self.svgLayer.path = rectanglePath.cgPath
         container.containerLayer.addSublayer(self.svgLayer)
+        return rectanglePath.cgPath
     }
 }

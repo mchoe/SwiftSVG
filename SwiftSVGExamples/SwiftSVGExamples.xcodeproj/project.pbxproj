@@ -125,7 +125,6 @@
 		176BC9C61EE4C1AB00F7B54C /* ellipses.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ellipses.svg; sourceTree = "<group>"; };
 		176BC9CC1EE4C44E00F7B54C /* lines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lines.svg; sourceTree = "<group>"; };
 		176BC9FE1EE63FAB00F7B54C /* polylines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polylines.svg; sourceTree = "<group>"; };
-		17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVGMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-motivo_geometrico_archit_01.svg"; sourceTree = "<group>"; };
 		380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1290111299.svg"; sourceTree = "<group>"; };
 		380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1332611679.svg"; sourceTree = "<group>"; };
@@ -274,7 +273,6 @@
 		8AC4DBD41CB37DC600137DC9 /* SwiftSVGExampleMac */ = {
 			isa = PBXGroup;
 			children = (
-				17D5707E1E1F4EC3007CED68 /* SwiftSVGMac.framework */,
 				8AC4DBD51CB37DC600137DC9 /* AppDelegate.swift */,
 				8AC4DBD71CB37DC600137DC9 /* ViewController.swift */,
 				8AC4DBD91CB37DC600137DC9 /* Assets.xcassets */,

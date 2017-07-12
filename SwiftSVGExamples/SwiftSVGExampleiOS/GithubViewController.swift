@@ -75,7 +75,7 @@ class GithubViewController: UIViewController {
                 // Simplest example of an SVG stored in the main bundle
                 
                 let svgView = UIView(SVGNamed: "sockPuppet")
-                return svgView!
+                return svgView
             })
         ]
         return returnData

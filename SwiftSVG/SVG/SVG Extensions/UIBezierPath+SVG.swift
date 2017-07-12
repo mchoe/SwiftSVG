@@ -34,9 +34,14 @@
     import AppKit
 #endif
 
+/**
+ Convenience initializer that can parse a single path string and returns a `UIBezierPath`
+ */
+
 extension UIBezierPath {
     
     
+    /// Parses a single path string. Parses synchronously
     public convenience init(pathString: String) {
         let singlePath = SVGPath(singlePathString: pathString)
         guard let cgPath = singlePath.svgLayer.path else {

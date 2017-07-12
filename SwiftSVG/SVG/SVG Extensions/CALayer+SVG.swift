@@ -35,33 +35,35 @@
 #endif
 
 
+
+
+/**
+ A set of convenience initializers that create new `CALayer` instances from SVG data.
+ 
+ If you choose to use these initializers, it is assumed that you would like to exercise a higher level of control. As such, you must provide a completion block and then add the passed `SVGLayer` to the layer of your choosing. Use the UIView extensions if you prefer the easier to use one-liner initializers.
+ */
+
 extension CALayer {
     
+    /**
+     Convenience initializer that creates a new `CALayer` from a local or remote URL. You must provide a completion block and add the passed `SVGLayer to a sublayer`.
+     */
+    
     @discardableResult
-    public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
-        self.init()
-        
-        let dispatchQueue = DispatchQueue(label: "com.straussmade.swiftsvg", attributes: .concurrent)
-        
-        dispatchQueue.async {
-            
-            let parserToUse: SVGParser
-            if let parser = parser {
-                parserToUse = parser
-            } else {
-                parserToUse = NSXMLSVGParser(SVGURL: SVGURL) { (svgLayer) in
-                    DispatchQueue.main.safeAsync {
-                        self.addSublayer(svgLayer)
-                    }
-                    completion?(svgLayer)
-                }
-            }
-            parserToUse.startParsing()
+    public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: @escaping (SVGLayer) -> ()) {
+        do {
+            let svgData = try Data(contentsOf: SVGURL)
+            self.init(SVGData: svgData, parser: parser, completion: completion)
+        } catch {
+            self.init()
         }
     }
     
+    /**
+     Convenience initializer that creates a new `CALayer` from SVG data. You must provide a completion block and add the passed `SVGLayer to a sublayer`.
+     */
     @discardableResult
-    public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
+    public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: @escaping (SVGLayer) -> ()) {
         self.init()
         
         let dispatchQueue = DispatchQueue(label: "com.straussmade.swiftsvg", attributes: .concurrent)
@@ -76,7 +78,7 @@ extension CALayer {
                     DispatchQueue.main.safeAsync {
                         self.addSublayer(svgLayer)
                     }
-                    completion?(svgLayer)
+                    completion(svgLayer)
                 }
             }
             parserToUse.startParsing()

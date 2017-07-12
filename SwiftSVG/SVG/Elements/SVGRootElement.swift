@@ -34,6 +34,10 @@
     import AppKit
 #endif
 
+/**
+ Concrete implementation that creates a container from a `<svg>` element and its attributes. This will almost always be the root container element that will container all other `SVGElement` layers
+ */
+
 struct SVGRootElement: SVGContainerElement {
     
     static var elementName: String {
@@ -56,8 +60,9 @@ struct SVGRootElement: SVGContainerElement {
         }
     }
     
-    func didProcessElement(in container: SVGContainerElement?) {
-        return
+    @discardableResult
+    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
+        return nil
     }
     
     func viewBox(coordinates: String) {
@@ -70,7 +75,6 @@ struct SVGRootElement: SVGContainerElement {
             return
         }
         self.containerLayer.frame = CGRect(x: points[0], y: points[1], width: points[2], height: points[3])
-        //self.containerLayer.masksToBounds = true
     }
 }
 

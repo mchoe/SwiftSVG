@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NSXMLSVGParser Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/NSXMLSVGParser" class="dashAnchor"></a>
+
+    <a title="NSXMLSVGParser Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          SwiftSVG Docs
+        </a>
+         (47% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/mchoe/swiftsvg">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">SwiftSVG Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      NSXMLSVGParser Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NSXMLSVGParser.html">NSXMLSVGParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SVGCircle.html">SVGCircle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SVGEllipse.html">SVGEllipse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SVGGroup.html">SVGGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SVGLayer.html">SVGLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SVGLine.html">SVGLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SVGRectangle.html">SVGRectangle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/s:C8SwiftSVG7SVGView">SVGView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/CALayer.html">CALayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/CAShapeLayer.html">CAShapeLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIBezierPath.html">UIBezierPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SVGContainerElement.html">SVGContainerElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SVGElement.html">SVGElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SVGParser.html">SVGParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SVGShapeElement.html">SVGShapeElement</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs.html#/s:V8SwiftSVG26SVGParserSupportedElements">SVGParserSupportedElements</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SVGPath.html">SVGPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SVGPolygon.html">SVGPolygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SVGPolyline.html">SVGPolyline</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SVGRootElement.html">SVGRootElement</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>NSXMLSVGParser</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">NSXMLSVGParser</span><span class="p">:</span> <span class="kt">XMLParser</span><span class="p">,</span> <span class="kt">XMLParserDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Concrete implementation of <code><a href="../Protocols/SVGParser.html">SVGParser</a></code> that uses Foundation&rsquo;s <code>XMLParser</code> to parse a given SVG file.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8SwiftSVG14NSXMLSVGParser14containerLayerCS_8SVGLayer"></a>
+                    <a name="//apple_ref/swift/Property/containerLayer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8SwiftSVG14NSXMLSVGParser14containerLayerCS_8SVGLayer">containerLayer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Classes/SVGLayer.html">SVGLayer</a></code> that will contain all of the SVG&rsquo;s sublayers</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">containerLayer</span> <span class="o">=</span> <span class="kt"><a href="../Classes/SVGLayer.html">SVGLayer</a></span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8SwiftSVG14NSXMLSVGParser8svgPathsGSaCSo6CGPath_"></a>
+                    <a name="//apple_ref/swift/Property/svgPaths" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8SwiftSVG14NSXMLSVGParser8svgPathsGSaCSo6CGPath_">svgPaths</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>All subpaths parsed by this parser</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">svgPaths</span> <span class="o">=</span> <span class="p">[</span><span class="kt">CGPath</span><span class="p">]()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8SwiftSVG14NSXMLSVGParsercFT6SVGURLV10Foundation3URL17supportedElementsGSqVS_26SVGParserSupportedElements_10completionGSqFCS_8SVGLayerT___S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(SVGURL:supportedElements:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8SwiftSVG14NSXMLSVGParsercFT6SVGURLV10Foundation3URL17supportedElementsGSqVS_26SVGParserSupportedElements_10completionGSqFCS_8SVGLayerT___S0_">init(SVGURL:supportedElements:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience initializer that can initalize an <code>NSXMLSVGParser</code> using a local or remote <code>URL</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="kt">SVGURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">supportedElements</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:V8SwiftSVG26SVGParserSupportedElements">SVGParserSupportedElements</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/SVGLayer.html">SVGLayer</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>SVGURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL of the SVG.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>supportedElements</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional <code>SVGParserSupportedElements</code> struct that restrict the elements and attributes that this parser can parse.If no value is provided, all supported attributes will be used.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional completion block that will be executed after all elements and attribites have been parsed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8SwiftSVG14NSXMLSVGParsercFT7SVGDataV10Foundation4Data17supportedElementsGSqVS_26SVGParserSupportedElements_10completionGSqFCS_8SVGLayerT___S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(SVGData:supportedElements:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8SwiftSVG14NSXMLSVGParsercFT7SVGDataV10Foundation4Data17supportedElementsGSqVS_26SVGParserSupportedElements_10completionGSqFCS_8SVGLayerT___S0_">init(SVGData:supportedElements:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializer that can initalize an <code>NSXMLSVGParser</code> using SVG <code>Data</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="kt">SVGData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">supportedElements</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:V8SwiftSVG26SVGParserSupportedElements">SVGParserSupportedElements</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/SVGLayer.html">SVGLayer</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>SVGURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL of the SVG.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>supportedElements</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional <code>SVGParserSupportedElements</code> struct that restrict the elements and attributes that this parser can parse. If no value is provided, all supported attributes will be used.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional completion block that will be executed after all elements and attribites have been parsed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP8SwiftSVG9SVGParser12startParsingFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/startParsing()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP8SwiftSVG9SVGParser12startParsingFT_T_">startParsing()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startParsing</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8SwiftSVG14NSXMLSVGParser6parserFTCSo9XMLParser15didStartElementSS12namespaceURIGSqSS_13qualifiedNameGSqSS_10attributesGVs10DictionarySSSS__T_"></a>
+                    <a name="//apple_ref/swift/Method/parser(_:didStartElement:namespaceURI:qualifiedName:attributes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8SwiftSVG14NSXMLSVGParser6parserFTCSo9XMLParser15didStartElementSS12namespaceURIGSqSS_13qualifiedNameGSqSS_10attributesGVs10DictionarySSSS__T_">parser(_:didStartElement:namespaceURI:qualifiedName:attributes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>XMLParserDelegate</code> method called when the parser has started parsing an SVG element. This implementation will loop through all supported attributes and dispatch the attribiute value to the given curried function.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">parser</span><span class="p">(</span><span class="n">_</span> <span class="nv">parser</span><span class="p">:</span> <span class="kt">XMLParser</span><span class="p">,</span> <span class="n">didStartElement</span> <span class="nv">elementName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">namespaceURI</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">qualifiedName</span> <span class="nv">qName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">attributes</span> <span class="nv">attributeDict</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8SwiftSVG14NSXMLSVGParser6parserFTCSo9XMLParser13didEndElementSS12namespaceURIGSqSS_13qualifiedNameGSqSS__T_"></a>
+                    <a name="//apple_ref/swift/Method/parser(_:didEndElement:namespaceURI:qualifiedName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8SwiftSVG14NSXMLSVGParser6parserFTCSo9XMLParser13didEndElementSS12namespaceURIGSqSS_13qualifiedNameGSqSS__T_">parser(_:didEndElement:namespaceURI:qualifiedName:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>XMLParserDelegate</code> method called when the parser has ended parsing an SVG element. This methods pops the last element parsed off the stack and checks if there is an enclosing container layer. Every valid SVG file is guaranteed to have at least one container layer (at a minimum, a <code><a href="../Structs/SVGRootElement.html">SVGRootElement</a></code> instance).</p>
+
+<p>If the parser has finished parsing a <code><a href="../Protocols/SVGShapeElement.html">SVGShapeElement</a></code>, it will resize the parser&rsquo;s <code><a href="../Classes/NSXMLSVGParser.html#/s:vC8SwiftSVG14NSXMLSVGParser14containerLayerCS_8SVGLayer">containerLayer</a></code> bounding box to fit all subpaths</p>
+
+<p>If the parser has finished parsing a <code>&lt;svg&gt;</code> element, that <code><a href="../Structs/SVGRootElement.html">SVGRootElement</a></code>&lsquo;s container layer is added to this parser&rsquo;s <code><a href="../Classes/NSXMLSVGParser.html#/s:vC8SwiftSVG14NSXMLSVGParser14containerLayerCS_8SVGLayer">containerLayer</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">parser</span><span class="p">(</span><span class="n">_</span> <span class="nv">parser</span><span class="p">:</span> <span class="kt">XMLParser</span><span class="p">,</span> <span class="n">didEndElement</span> <span class="nv">elementName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">namespaceURI</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">qualifiedName</span> <span class="nv">qName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8SwiftSVG14NSXMLSVGParser20parserDidEndDocumentFCSo9XMLParserT_"></a>
+                    <a name="//apple_ref/swift/Method/parserDidEndDocument(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8SwiftSVG14NSXMLSVGParser20parserDidEndDocumentFCSo9XMLParserT_">parserDidEndDocument(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>XMLParserDelegate</code> method called when the parser has finished parsing the SVG document. All supported elements and attributes are guaranteed to be dispatched at this point, but no guarantee that all elements have finished parsing.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code>finishedProcessing(shapeLayer:)</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">parserDidEndDocument</span><span class="p">(</span><span class="n">_</span> <span class="nv">parser</span><span class="p">:</span> <span class="kt">XMLParser</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2017 Michael Choe under <a class="link" href="https://github.com/mchoe/SwiftSVG/blob/master/LICENSE" target="_blank" rel="external">MIT</a>.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

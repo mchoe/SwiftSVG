@@ -42,13 +42,31 @@ struct SVGParseOptions: OptionSet {
     static let shouldParseAsynchronously = SVGParseOptions(rawValue: 1 << 0)
 }
 
+/**
+ A protocol describing an XML parser capable of parsing SVG docs
+ */
 
 public protocol SVGParser {
+    
+    /**
+     Initializer to create a new `SVGParser` instance
+     - parameters:
+        - SVGData: SVG file as Data
+        - supportedElements: The elements and corresponding attribiutes the parser can parse
+        - completion: A closure to execute after the parser has completed parsing and processing the SVG
+     */
+    init(SVGData: Data, supportedElements: SVGParserSupportedElements?, completion: ((SVGLayer) -> ())?)
+    
+    /// A closure that is executed after all elements have been processed. Should be guaranteed to be executed after all elements have been processed, even if parsing asynchronously.
     var completionBlock: ((SVGLayer) -> ())? { get }
+    
+    /// A struct listing all the elements and its attribites that should be parsed
     var supportedElements: SVGParserSupportedElements? { get }
+    
+    /// A `CALayer` that will house the finished sublayers opf the SVG doc.
     var containerLayer: SVGLayer { get }
     
-    init(SVGData: Data, supportedElements: SVGParserSupportedElements?, completion: ((SVGLayer) -> ())?)
+    /// Starts parsing the SVG
     func startParsing()
 }
 

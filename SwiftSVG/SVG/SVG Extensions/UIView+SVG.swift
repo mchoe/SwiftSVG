@@ -35,8 +35,18 @@ import UIKit
 import AppKit
 #endif
 
+/**
+ A set of convenience initializers that create new `UIView` instances from SVG data
+ */
+
 extension UIView {
     
+    /**
+     Convenience initializer that instantiates a new `UIView` instance with a single path `d` string. The path will be parsed synchronously.
+     ```
+     let view = UIView(pathString: "M20 30 L30 10 l10 10")
+     ```
+     */
     public convenience init(pathString: String) {
         self.init()
         let svgLayer = SVGLayer()
@@ -49,35 +59,53 @@ extension UIView {
         #endif
     }
     
-    public convenience init(SVGNamed: String) {
+    /**
+     Convenience initializer that instantiates a new `UIView` for the given SVG file in the main bundle
+     ```
+     let view = UIView(SVGNamed: "hawaiiFlowers")
+     ```
+     */
+    public convenience init(SVGNamed: String, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
         guard let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") else {
             self.init()
             return
         }
         do {
             let data = try Data(contentsOf: svgURL)
-            self.init(SVGData: data)
+            self.init(SVGData: data, parser: parser, completion: completion)
         } catch {
             self.init()
         }
     }
     
+    /**
+     Convenience initializer that instantiates a new `UIView` instance for the given SVG file at the given URL
+     
+     Upon completion, it will resize the layer to aspect fit this view's superview
+     ```
+     let view = UIView(SVGURL: "hawaiiFlowers", parser: aParser) { (svgLayer) in
+        // Do something with the passed svgLayer
+     }
+     ```
+     */
     public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
-        self.init()
-        
-        CALayer(SVGURL: SVGURL, parser: parser) { [weak self] (svgLayer) in
-            
-            if let superviewSize = self?.superview?.bounds {
-                svgLayer.resizeToFit(superviewSize)
-            }
-            DispatchQueue.main.safeAsync {
-                self?.nonOptionalLayer.addSublayer(svgLayer)
-            }
-            completion?(svgLayer)
+        do {
+            let svgData = try Data(contentsOf: SVGURL)
+            self.init(SVGData: svgData, parser: parser, completion: completion)
+        } catch {
+            self.init()
+            print("No data at URL: \(SVGURL)")
         }
     }
 	
-    
+    /**
+     Convenience initializer that instantiates a new `UIView` instance with the given SVG data
+     
+     Upon completion, it will resize the layer to aspect fit this view's superview
+     ```
+     let view = UIView(SVGData: svgData)
+     ```
+     */
 	public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
 		self.init()
         

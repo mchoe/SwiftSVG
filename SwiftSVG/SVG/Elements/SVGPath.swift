@@ -34,26 +34,42 @@
     import AppKit
 #endif
 
-
+/**
+ Concrete implementation that creates a `CAShapeLayer` from a `<path>` element and its attributes
+ */
 
 struct SVGPath: SVGShapeElement, ParsesAsynchronously {
     
+    /// :nodoc:
     static var elementName: String {
         return "path"
     }
     
     var asyncParseManager: CanManageAsychronousCallbacks? = nil
     var shouldParseAsynchronously = true
+    
+    /// :nodoc:
     var supportedAttributes = [String : ((String) -> ())?]()
+    
+    /// :nodoc:
     var svgLayer = CAShapeLayer()
     
     init() { }
     
+    
+    /**
+     Initializer to to set the `svgLayer`'s cgPath. The path string does not have to be a single path for the whole element, but can include multiple subpaths in the `d` attribute. For instance, the following is a valid path string to pass:
+     ```
+     <path d="M30 20 L25 15 l10 50z M40 60 l80 10 l 35 55z">
+     ```
+     - parameter singlePathString: The `d` attribute value of a `<path>` element
+     */
     init(singlePathString: String) {
         self.shouldParseAsynchronously = false
         self.parseD(singlePathString)
     }
     
+    /// Function that takes a `d` path string attribute and sets the `svgLayer`'s `cgPath`
     internal func parseD(_ pathString: String) {
         let workingString = pathString.trimWhitespace()
         assert(workingString.hasPrefix("M") || workingString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
@@ -102,10 +118,13 @@ struct SVGPath: SVGShapeElement, ParsesAsynchronously {
         }
     }
     
-    func didProcessElement(in container: SVGContainerElement?) {
+    /// :nodoc:
+    @discardableResult
+    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
         guard let container = container else {
-            return
+            return nil
         }
         container.containerLayer.addSublayer(self.svgLayer)
+        return self.svgLayer.path
     }
 }

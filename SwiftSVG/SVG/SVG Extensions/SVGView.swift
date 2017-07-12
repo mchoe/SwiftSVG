@@ -36,9 +36,19 @@
 
 
 
+// TODO: Removing IBDesignable support for now seeing there
+// is a bug with using IBDesignables from a framework
+//
+// References:
+// https://openradar.appspot.com/23114017
+// https://github.com/Carthage/Carthage/issues/335
+// https://stackoverflow.com/questions/29933691/ibdesignable-from-external-framework
 
+//@IBDesignable
 
-@IBDesignable
+/**
+ A `UIView` subclass that can be used in Interface Builder where you can set the @IBInspectable propert `SVGName` in the side panel. Use the UIView extensions if you want to creates SVG views programmatically.
+ */
 open class SVGView : UIView {
     
     @IBInspectable open var SVGName: String? {
@@ -54,20 +64,12 @@ open class SVGView : UIView {
             #endif
             
             if let url = bundle.url(forResource: thisName, withExtension: "svg") {
-                let svgLayer = CALayer(SVGURL: url)
-                self.nonOptionalLayer.addSublayer(svgLayer)
+                CALayer(SVGURL: url) { [weak self] (svgLayer) in
+                    self?.nonOptionalLayer.addSublayer(svgLayer)
+                }
             }
         }
     }
-    
-    /*
-    open override func prepareForInterfaceBuilder() {
-        
-        /*
-     
-        */
-    }
-    */
 }
 
 extension SVGView {
@@ -76,24 +78,6 @@ extension SVGView {
         self.init()
         self.SVGName = SVGName
     }
-    
-}
-
-extension SVGView {
-    
-    /*
-    override open func layoutSubviews() {
-        super.layoutSubviews()
-        //print("Laying out subviews")
-        
-        if let superviewSize = self.superview?.bounds {
-            //print("layoutSubviews: \(superviewSize)")
-            
-            //self.svgLayer.resizeToFit(size: superviewSize)
-            //parserToUse.containerLayer.sizeToFit(size: superviewSize)
-        }
-    }
-    */
     
 }
 

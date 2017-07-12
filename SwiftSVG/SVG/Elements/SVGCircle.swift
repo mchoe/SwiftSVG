@@ -35,6 +35,10 @@
 #endif
 
 
+/**
+ Concrete implementation that creates a `CAShapeLayer` from a `<circle>` element and its attributes
+ */
+
 class SVGCircle: SVGShapeElement {
     
     static var elementName: String {
@@ -67,9 +71,10 @@ class SVGCircle: SVGShapeElement {
         self.circleCenter.y = CGFloat(y)
     }
     
-    func didProcessElement(in container: SVGContainerElement?) {
+    @discardableResult
+    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
         guard let container = container else {
-            return
+            return nil
         }
         #if os(iOS) || os(tvOS)
         let circlePath = UIBezierPath(arcCenter: self.circleCenter, radius: self.circleRadius, startAngle: 0, endAngle:CGFloat.pi * 2, clockwise: true)
@@ -79,5 +84,6 @@ class SVGCircle: SVGShapeElement {
         #endif
         self.svgLayer.path = circlePath.cgPath
         container.containerLayer.addSublayer(self.svgLayer)
+        return circlePath.cgPath
     }
 }

@@ -39,11 +39,21 @@ public protocol SVGLayerType {
     var boundingBox: CGRect { get }
 }
 
+/**
+ A `CAShapeLayer` subclass that allows you to easily work with sublayers and get sizing information
+ */
+
 open class SVGLayer: CAShapeLayer, SVGLayerType {
+    
+    /// The minimum CGRect that fits all subpaths
     public var boundingBox = CGRect.zero
 }
 
 extension SVGLayerType where Self: CALayer {
+    
+    /**
+     Scales a layer to aspect fit the given size.
+     */
     
     @discardableResult
     public func resizeToFit(_ size: CGRect) -> Self {
@@ -102,6 +112,7 @@ extension CALayer {
 
 extension SVGLayer {
     
+    /// Applies the given fill color to all sublayers
     override open var fillColor: CGColor? {
         didSet {
             self.applyOnSublayers(ofType: CAShapeLayer.self) { (thisShapeLayer) in
@@ -115,6 +126,7 @@ extension SVGLayer {
 
 extension SVGLayer {
     
+    /// Applies the given line width to all `CAShapeLayer`s
     override open var lineWidth: CGFloat {
         didSet {
             self.applyOnSublayers(ofType: CAShapeLayer.self) { (thisShapeLayer) in
@@ -123,6 +135,7 @@ extension SVGLayer {
         }
     }
     
+    /// Applies the given stroke color to all `CAShapeLayer`s
     override open var strokeColor: CGColor? {
         didSet {
             self.applyOnSublayers(ofType: CAShapeLayer.self) { (thisShapeLayer) in

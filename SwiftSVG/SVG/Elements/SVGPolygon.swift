@@ -34,6 +34,10 @@
     import AppKit
 #endif
 
+/**
+ Concrete implementation that creates a `CAShapeLayer` from a `<polygon>` element and its attributes
+ */
+
 struct SVGPolygon: SVGShapeElement {
     
     static var elementName: String {
@@ -56,10 +60,12 @@ struct SVGPolygon: SVGShapeElement {
         self.svgLayer.path = polylinePath.cgPath
     }
     
-    func didProcessElement(in container: SVGContainerElement?) {
+    @discardableResult
+    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
         guard let container = container else {
-            return
+            return nil
         }
         container.containerLayer.addSublayer(self.svgLayer)
+        return self.svgLayer.path
     }
 }

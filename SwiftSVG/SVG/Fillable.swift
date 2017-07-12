@@ -36,7 +36,7 @@
 
 
 
-protocol Fillable { }
+public protocol Fillable { }
 
 extension Fillable where Self : SVGShapeElement {
     
