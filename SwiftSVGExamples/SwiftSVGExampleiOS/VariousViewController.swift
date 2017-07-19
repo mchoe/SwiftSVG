@@ -34,13 +34,13 @@ class VariousViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     struct TableItem {
-        let items: [URL]
+        let url: URL
         let isDirectory: Bool
         let title: String
         
-        init(_ items: [URL], title: String, isDirectory: Bool = false) {
+        init(_ url: URL, title: String, isDirectory: Bool = false) {
             self.isDirectory = isDirectory
-            self.items = items
+            self.url = url
             self.title = title
         }
     }
@@ -49,37 +49,30 @@ class VariousViewController: UIViewController {
         guard let resourceURL = Bundle.main.resourceURL else {
             return [TableItem]()
         }
-        
         let allResources = try! FileManager.default.contentsOfDirectory(at: resourceURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
-        let returnTableData = allResources
+        
+        return allResources
             .filter({ (thisURL) -> Bool in
                 if thisURL.pathExtension == "svg" {
                     return true
                 }
                 return false
             })
-            .map({ (thisURL) -> TableItem in
-                return TableItem([thisURL], title: thisURL.lastPathComponent)
+            .sorted(by: {
+                $0.lastPathComponent.lowercased() < $1.lastPathComponent.lowercased()
             })
-        
-        return returnTableData
+            .map({ (thisURL) -> TableItem in
+                return TableItem(thisURL, title: thisURL.lastPathComponent)
+            })
     }()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         guard let selectedIndexPath = self.collectionView.indexPathsForSelectedItems?.first else {
             return
         }
-        
         let singleVC = segue.destination as? SingleSVGViewController
         let thisItem = self.collectionViewData[selectedIndexPath.item]
-        singleVC?.svgURL = thisItem.items.first!
+        singleVC?.svgURL = thisItem.url
     }
 
 }
@@ -95,7 +88,9 @@ extension VariousViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         let thisItem = self.collectionViewData[indexPath.row]
-        let thisView = UIView(SVGURL: thisItem.items.first!)
+        let thisView = UIView(SVGURL: thisItem.url) { (svgLayer) in
+            svgLayer.resizeToFit(returnCell.bounds)
+        }
         returnCell.svgView.addSubview(thisView)
         return returnCell
     }
@@ -110,7 +105,9 @@ extension VariousViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         self.performSegue(withIdentifier: "variousToDetailSegue", sender: self)
+        collectionView.deselectItem(at: indexPath, animated: false)
     }
     
 }

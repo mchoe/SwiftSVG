@@ -51,43 +51,41 @@ class SVGEllipse: SVGShapeElement {
     var supportedAttributes: [String : ((String) -> ())?] = [:]
     
     internal func xRadius(r: String) {
-        guard let r = Double(lengthString: r) else {
+        guard let r = CGFloat(lengthString: r) else {
             return
         }
-        self.xRadius = CGFloat(r)
+        self.xRadius = r
     }
     
     internal func yRadius(r: String) {
-        guard let r = Double(lengthString: r) else {
+        guard let r = CGFloat(lengthString: r) else {
             return
         }
-        self.yRadius = CGFloat(r)
+        self.yRadius = r
     }
     
     internal func xCenter(x: String) {
-        guard let x = Double(lengthString: x) else {
+        guard let x = CGFloat(lengthString: x) else {
             return
         }
-        self.ellipseCenter.x = CGFloat(x)
+        self.ellipseCenter.x = x
     }
     
     internal func yCenter(y: String) {
-        guard let y = Double(lengthString: y) else {
+        guard let y = CGFloat(lengthString: y) else {
             return
         }
-        self.ellipseCenter.y = CGFloat(y)
+        self.ellipseCenter.y = y
     }
     
-    @discardableResult
-    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
+    func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
-            return nil
+            return
         }
         let ellipseRect = CGRect(x: self.ellipseCenter.x - self.xRadius, y: self.ellipseCenter.y - self.yRadius, width: 2 * self.xRadius, height: 2 * self.yRadius)
         let circlePath = UIBezierPath(ovalIn: ellipseRect)
         self.svgLayer.path = circlePath.cgPath
         container.containerLayer.addSublayer(self.svgLayer)
-        return nil
     }
     
 }

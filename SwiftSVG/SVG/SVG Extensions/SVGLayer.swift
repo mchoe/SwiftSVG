@@ -49,6 +49,15 @@ open class SVGLayer: CAShapeLayer, SVGLayerType {
     public var boundingBox = CGRect.zero
 }
 
+extension SVGLayer {
+    var svgLayerCopy: SVGLayer {
+        let tmp = NSKeyedArchiver.archivedData(withRootObject: self)
+        let copiedLayer = NSKeyedUnarchiver.unarchiveObject(with: tmp) as! SVGLayer
+        copiedLayer.boundingBox = self.boundingBox
+        return copiedLayer
+    }
+}
+
 extension SVGLayerType where Self: CALayer {
     
     /**
@@ -56,21 +65,19 @@ extension SVGLayerType where Self: CALayer {
      */
     
     @discardableResult
-    public func resizeToFit(_ size: CGRect) -> Self {
+    public func resizeToFit(_ rect: CGRect) -> Self {
         
-        let containingSize = size
         let boundingBoxAspectRatio = self.boundingBox.width / self.boundingBox.height
-        let viewAspectRatio = containingSize.width / containingSize.height
+        let viewAspectRatio = rect.width / rect.height
         
         let scaleFactor: CGFloat
         if (boundingBoxAspectRatio > viewAspectRatio) {
             // Width is limiting factor
-            scaleFactor = containingSize.width / self.boundingBox.width
+            scaleFactor = rect.width / self.boundingBox.width
         } else {
             // Height is limiting factor
-            scaleFactor = containingSize.height / self.boundingBox.height
+            scaleFactor = rect.height / self.boundingBox.height
         }
-        
         let scaleTransform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
         
         DispatchQueue.main.safeAsync {

@@ -55,20 +55,11 @@ class SingleSVGViewController: UIViewController {
             return
         }
         
-        let svgData = try! Data(contentsOf: url)
-        let svgView = SVGView(SVGData: svgData) { (svgLayer) in
-            //svgLayer.fillColor = UIColor(red:0.37, green:0.10, blue:0.55, alpha:1.00).cgColor
-            //svgLayer.strokeColor = UIColor(red:0.37, green:0.10, blue:0.55, alpha:1.00).cgColor
-            //svgLayer.lineWidth = 1.0
-            print("Finished: \(svgLayer.frame)")
+        let svgView = UIView(SVGURL: url) { (svgLayer) in
+            svgLayer.resizeToFit(self.canvasView.bounds)
         }
-        //let svgView = SVGView(SVGURL: url)
+        svgView.backgroundColor = UIColor.blue
         self.canvasView.addSubview(svgView)
-        
-        
-        
-        //let svgLayer = CALayer(SVGURL: url)
-        //self.view.layer.addSublayer(svgLayer)
         
     }
 

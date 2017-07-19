@@ -49,20 +49,19 @@ struct SVGRootElement: SVGContainerElement {
     var supportedAttributes = [String : ((String) -> ())?]()
     
     internal func parseWidth(lengthString: String) {
-        if let width = Double(lengthString: lengthString) {
-            self.containerLayer.frame.size.width = CGFloat(width)
+        if let width = CGFloat(lengthString: lengthString) {
+            self.containerLayer.frame.size.width = width
         }
     }
     
     internal func parseHeight(lengthString: String) {
-        if let height = Double(lengthString: lengthString) {
-            self.containerLayer.frame.size.height = CGFloat(height)
+        if let height = CGFloat(lengthString: lengthString) {
+            self.containerLayer.frame.size.height = height
         }
     }
     
-    @discardableResult
-    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
-        return nil
+    func didProcessElement(in container: SVGContainerElement?) {
+        return
     }
     
     func viewBox(coordinates: String) {

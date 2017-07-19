@@ -88,6 +88,8 @@
 		381E99BD1EF9D05800839918 /* HorizontalLineToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99BC1EF9D05800839918 /* HorizontalLineToTests.swift */; };
 		381E99BF1EF9D21500839918 /* VerticalLineToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99BE1EF9D21500839918 /* VerticalLineToTests.swift */; };
 		381E99C11EF9D2DC00839918 /* SmoothCurveToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99C01EF9D2DC00839918 /* SmoothCurveToTests.swift */; };
+		38311C4D1F1738AB00E876EC /* SVGCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38311C4C1F1738AB00E876EC /* SVGCache.swift */; };
+		38311C4E1F174CB800E876EC /* SVGCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38311C4C1F1738AB00E876EC /* SVGCache.swift */; };
 		387090361F0C134400F72660 /* ParsesAsynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387090351F0C134400F72660 /* ParsesAsynchronously.swift */; };
 		387090381F0C15B400F72660 /* ParsesAsynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387090351F0C134400F72660 /* ParsesAsynchronously.swift */; };
 		3876E9611EFCBABB00F8C04E /* Fillable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3876E9601EFCBABB00F8C04E /* Fillable.swift */; };
@@ -165,6 +167,7 @@
 		381E99BC1EF9D05800839918 /* HorizontalLineToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalLineToTests.swift; sourceTree = "<group>"; };
 		381E99BE1EF9D21500839918 /* VerticalLineToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalLineToTests.swift; sourceTree = "<group>"; };
 		381E99C01EF9D2DC00839918 /* SmoothCurveToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmoothCurveToTests.swift; sourceTree = "<group>"; };
+		38311C4C1F1738AB00E876EC /* SVGCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGCache.swift; path = SVG/Cache/SVGCache.swift; sourceTree = "<group>"; };
 		387090351F0C134400F72660 /* ParsesAsynchronously.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParsesAsynchronously.swift; path = ../Elements/ParsesAsynchronously.swift; sourceTree = "<group>"; };
 		3876E9601EFCBABB00F8C04E /* Fillable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fillable.swift; sourceTree = "<group>"; };
 		3876E9621EFCBAC500F8C04E /* Strokable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strokable.swift; sourceTree = "<group>"; };
@@ -349,6 +352,14 @@
 			name = "Path Command Tests";
 			sourceTree = "<group>";
 		};
+		38311C4B1F17387300E876EC /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				38311C4C1F1738AB00E876EC /* SVGCache.swift */,
+			);
+			name = Cache;
+			sourceTree = "<group>";
+		};
 		387B0C551F0D37290085E51A /* Performance Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +413,7 @@
 			children = (
 				3813ED571EFC6FCF0054ECBD /* Attributes */,
 				388215981F1339C300C192A3 /* Base Elements */,
+				38311C4B1F17387300E876EC /* Cache */,
 				17CCE7311EE64D84007FA5AD /* Elements */,
 				17CCE7321EE64D91007FA5AD /* Helpers */,
 				17CCE7331EE64D9E007FA5AD /* Iterators */,
@@ -574,6 +586,7 @@
 				387090381F0C15B400F72660 /* ParsesAsynchronously.swift in Sources */,
 				176BC9E81EE51AF600F7B54C /* SVGShapeElement.swift in Sources */,
 				176BC9E01EE51ADA00F7B54C /* Stack.swift in Sources */,
+				38311C4E1F174CB800E876EC /* SVGCache.swift in Sources */,
 				381E99AB1EF801DA00839918 /* PathDLexer.swift in Sources */,
 				176BC9A61EE484BE00F7B54C /* FloatingPoint+ParseLengthString.swift in Sources */,
 				381E99B61EF8CCCC00839918 /* PathDLexerTests.swift in Sources */,
@@ -606,6 +619,7 @@
 				380FED7F1F084FF100EDB255 /* NSXMLSVGParser.swift in Sources */,
 				3882158D1F131CC800C192A3 /* NSBezierPath+CrossPlatform.swift in Sources */,
 				380FED561F0491E200EDB255 /* SVGContainerElement.swift in Sources */,
+				38311C4D1F1738AB00E876EC /* SVGCache.swift in Sources */,
 				176BC9AD1EE48CE800F7B54C /* SVGCircle.swift in Sources */,
 				39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */,
 				3876E9611EFCBABB00F8C04E /* Fillable.swift in Sources */,

@@ -89,6 +89,7 @@ extension UIView {
      ```
      */
     public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
+        
         do {
             let svgData = try Data(contentsOf: SVGURL)
             self.init(SVGData: svgData, parser: parser, completion: completion)
@@ -110,10 +111,6 @@ extension UIView {
 		self.init()
         
         CALayer(SVGData: SVGData, parser: parser) { [weak self] (svgLayer) in
-            
-            if let superviewSize = self?.superview?.bounds {
-                svgLayer.resizeToFit(superviewSize)
-            }
             DispatchQueue.main.safeAsync {
                 self?.nonOptionalLayer.addSublayer(svgLayer)
             }

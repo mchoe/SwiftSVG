@@ -92,10 +92,9 @@ class SVGRectangle: SVGShapeElement {
         self.yCornerRadius = CGFloat(yCornerRadius)
     }
     
-    @discardableResult
-    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
+    func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
-            return nil
+            return
         }
         
         // TODO: There seems to be a bug with UIBezierPath(roundedRect:byRoundingCorners:cornerRadii:)
@@ -122,6 +121,5 @@ class SVGRectangle: SVGShapeElement {
         }
         self.svgLayer.path = rectanglePath.cgPath
         container.containerLayer.addSublayer(self.svgLayer)
-        return rectanglePath.cgPath
     }
 }

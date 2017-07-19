@@ -53,12 +53,15 @@ class GithubViewController: UIViewController {
                 return returnView
             }),
             CellItem(render: { (cellSize) -> UIView in
+                
                 let svgURL = Bundle.main.url(forResource: "fistBump", withExtension: "svg")
                 let returnView = UIView()
-                let renderedLayer = SVGView(SVGURL: svgURL!) { (svgLayer) in
+                let renderedLayer = CALayer(SVGURL: svgURL!) { (svgLayer) in
                     svgLayer.resizeToFit(CGRect(x: 0, y: 0, width: cellSize.width, height: cellSize.height))
                     returnView.layer.addSublayer(svgLayer)
+                    //print("Parsed fist bump: \(returnView.layer.sublayers)")
                 }
+                //print("Dispatched: \(returnView.layer.sublayers)")
                 return returnView
             }),
             CellItem(render: { (cellSize) -> UIView in
@@ -67,7 +70,9 @@ class GithubViewController: UIViewController {
                 
                 let svgURL = Bundle.main.url(forResource: "pizza", withExtension: "svg")
                 let data = try! Data(contentsOf: svgURL!)
-                let svgView = UIView(SVGData: data)
+                let svgView = UIView(SVGData: data) { (svgLayer) in
+                    svgLayer.resizeToFit(CGRect(x: 0, y: 0, width: cellSize.width, height: cellSize.height))
+                }
                 return svgView
             }),
             CellItem(render: { (cellSize) -> UIView in
@@ -98,9 +103,7 @@ extension GithubViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let returnCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GithubCell", for: indexPath) as? GithubCell
         let thisItem = self.collectionViewData[indexPath.row]
-        let halfWidth = collectionView.bounds.size.width / 2
-        let cellSize = CGSize(width: halfWidth, height: halfWidth)
-        returnCell?.svgView.addSubview(thisItem.render(cellSize))
+        returnCell?.svgView.addSubview(thisItem.render(returnCell!.bounds.size))
         return returnCell!
     }
     

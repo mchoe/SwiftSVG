@@ -66,6 +66,15 @@ extension CALayer {
     public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: @escaping (SVGLayer) -> ()) {
         self.init()
         
+        let cacheKey = "\(SVGData.hashValue)-\(SVGData.count)"
+        
+        if let cached = SVGCache.shared[cacheKey] {
+            //print("Returning cached: \(cacheKey) - \(cached.boundingBox)")
+            self.addSublayer(cached)
+            completion(cached)
+            return
+        }
+        
         let dispatchQueue = DispatchQueue(label: "com.straussmade.swiftsvg", attributes: .concurrent)
         
         dispatchQueue.async {
@@ -75,6 +84,11 @@ extension CALayer {
                 parserToUse = parser
             } else {
                 parserToUse = NSXMLSVGParser(SVGData: SVGData) { (svgLayer) in
+                    
+                    //print("Caching: \(cacheKey)")
+                    let layerCopy = svgLayer.svgLayerCopy
+                    SVGCache.shared[cacheKey] = layerCopy
+                    
                     DispatchQueue.main.safeAsync {
                         self.addSublayer(svgLayer)
                     }

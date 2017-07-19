@@ -66,8 +66,7 @@ public protocol SVGElement {
     /// - Returns: An optional `CGPath` you can optionally perform additional operations on or store for later use
     /// - Note: If using the default `NSXMLSVGParser` and the element parses asynchronously, there is no guarantee that the instance will be finished processing all the attribites when this is called.
     
-    @discardableResult
-    func didProcessElement(in container: SVGContainerElement?) -> CGPath?
+    func didProcessElement(in container: SVGContainerElement?)
 }
 
 

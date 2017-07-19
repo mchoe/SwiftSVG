@@ -119,12 +119,10 @@ struct SVGPath: SVGShapeElement, ParsesAsynchronously {
     }
     
     /// :nodoc:
-    @discardableResult
-    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
+    func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
-            return nil
+            return
         }
         container.containerLayer.addSublayer(self.svgLayer)
-        return self.svgLayer.path
     }
 }

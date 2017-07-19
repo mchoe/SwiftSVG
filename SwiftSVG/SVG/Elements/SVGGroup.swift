@@ -60,11 +60,10 @@ class SVGGroup: SVGContainerElement {
     var containerLayer = CALayer()
     var supportedAttributes = [String : ((String) -> ())?]()
     
-    @discardableResult
-    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
+    func didProcessElement(in container: SVGContainerElement?) {
         
         guard let containerSublayers = self.containerLayer.sublayers else {
-            return nil
+            return
         }
         
         for thisSublayer in containerSublayers {
@@ -76,7 +75,6 @@ class SVGGroup: SVGContainerElement {
             }
         }
         container?.containerLayer.addSublayer(self.containerLayer)
-        return nil
     }
     
     func applyAttribute(_ attribute: String, value: String, on layer: CAShapeLayer) {

@@ -216,6 +216,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		38311C4F1F1BE35000E876EC /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				387B0C621F108ECD0085E51A /* GithubViewController.swift */,
+				387B0C641F108FBB0085E51A /* GithubCell.swift */,
+			);
+			name = Github;
+			sourceTree = "<group>";
+		};
+		38311C501F1BE36500E876EC /* Root VC */ = {
+			isa = PBXGroup;
+			children = (
+				387B0C5E1F107E5B0085E51A /* StartViewController.swift */,
+				387B0C601F1083D70085E51A /* StartCell.swift */,
+			);
+			name = "Root VC";
+			sourceTree = "<group>";
+		};
+		38311C511F1BE37900E876EC /* Various Renderings */ = {
+			isa = PBXGroup;
+			children = (
+				176BC9BE1EE4BC6400F7B54C /* SingleSVGViewController.swift */,
+				387B0C661F109FA30085E51A /* VariousViewController.swift */,
+				387B0C681F10A1900085E51A /* VariousCell.swift */,
+			);
+			name = "Various Renderings";
+			sourceTree = "<group>";
+		};
 		388215771F1309A800C192A3 /* SwiftSVGExampleTVOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,19 +281,15 @@
 		8AC4DBBE1CB37DB800137DC9 /* SwiftSVGExampleiOS */ = {
 			isa = PBXGroup;
 			children = (
+				38311C4F1F1BE35000E876EC /* Github */,
+				38311C501F1BE36500E876EC /* Root VC */,
+				38311C511F1BE37900E876EC /* Various Renderings */,
 				8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */,
 				8AC4DBC11CB37DB800137DC9 /* ViewController.swift */,
-				176BC9BE1EE4BC6400F7B54C /* SingleSVGViewController.swift */,
-				387B0C5E1F107E5B0085E51A /* StartViewController.swift */,
-				387B0C601F1083D70085E51A /* StartCell.swift */,
-				387B0C621F108ECD0085E51A /* GithubViewController.swift */,
 				8AC4DBC31CB37DB800137DC9 /* Main.storyboard */,
 				8AC4DBC61CB37DB800137DC9 /* Assets.xcassets */,
 				8AC4DBC81CB37DB800137DC9 /* LaunchScreen.storyboard */,
 				8AC4DBCB1CB37DB800137DC9 /* Info.plist */,
-				387B0C641F108FBB0085E51A /* GithubCell.swift */,
-				387B0C661F109FA30085E51A /* VariousViewController.swift */,
-				387B0C681F10A1900085E51A /* VariousCell.swift */,
 			);
 			path = SwiftSVGExampleiOS;
 			sourceTree = "<group>";

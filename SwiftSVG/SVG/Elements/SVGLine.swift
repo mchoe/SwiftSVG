@@ -79,17 +79,15 @@ class SVGLine: SVGShapeElement {
         self.end.y = CGFloat(y2)
     }
     
-    @discardableResult
-    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
+    func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
-            return nil
+            return
         }
         let linePath = UIBezierPath()
         linePath.move(to: self.start)
         linePath.addLine(to: self.end)
         self.svgLayer.path = linePath.cgPath
         container.containerLayer.addSublayer(self.svgLayer)
-        return linePath.cgPath
     }
     
 }

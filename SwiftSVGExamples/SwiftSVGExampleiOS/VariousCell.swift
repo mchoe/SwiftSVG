@@ -40,4 +40,6 @@ class VariousCell: UICollectionViewCell {
         }
     }
     
+    
+    
 }

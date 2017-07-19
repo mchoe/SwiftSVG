@@ -60,10 +60,10 @@ public protocol SVGParser {
     /// A closure that is executed after all elements have been processed. Should be guaranteed to be executed after all elements have been processed, even if parsing asynchronously.
     var completionBlock: ((SVGLayer) -> ())? { get }
     
-    /// A struct listing all the elements and its attribites that should be parsed
+    /// A struct listing all the elements and its attributes that should be parsed
     var supportedElements: SVGParserSupportedElements? { get }
     
-    /// A `CALayer` that will house the finished sublayers opf the SVG doc.
+    /// A `CALayer` that will house the finished sublayers of the SVG doc.
     var containerLayer: SVGLayer { get }
     
     /// Starts parsing the SVG

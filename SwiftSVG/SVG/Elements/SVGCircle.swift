@@ -51,30 +51,29 @@ class SVGCircle: SVGShapeElement {
     var supportedAttributes: [String : ((String) -> ())?] = [:]
     
     internal func radius(r: String) {
-        guard let r = Double(lengthString: r) else {
+        guard let r = CGFloat(lengthString: r) else {
             return
         }
-        self.circleRadius = CGFloat(r)
+        self.circleRadius = r
     }
     
     internal func xCenter(x: String) {
-        guard let x = Double(lengthString: x) else {
+        guard let x = CGFloat(lengthString: x) else {
             return
         }
-        self.circleCenter.x = CGFloat(x)
+        self.circleCenter.x = x
     }
     
     internal func yCenter(y: String) {
-        guard let y = Double(lengthString: y) else {
+        guard let y = CGFloat(lengthString: y) else {
             return
         }
-        self.circleCenter.y = CGFloat(y)
+        self.circleCenter.y = y
     }
     
-    @discardableResult
-    func didProcessElement(in container: SVGContainerElement?) -> CGPath? {
+    func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
-            return nil
+            return
         }
         #if os(iOS) || os(tvOS)
         let circlePath = UIBezierPath(arcCenter: self.circleCenter, radius: self.circleRadius, startAngle: 0, endAngle:CGFloat.pi * 2, clockwise: true)
@@ -84,6 +83,5 @@ class SVGCircle: SVGShapeElement {
         #endif
         self.svgLayer.path = circlePath.cgPath
         container.containerLayer.addSublayer(self.svgLayer)
-        return circlePath.cgPath
     }
 }

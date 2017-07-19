@@ -64,9 +64,6 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     /// The `SVGLayer` that will contain all of the SVG's sublayers
     open var containerLayer = SVGLayer()
     
-    /// All subpaths parsed by this parser
-    open var svgPaths = [CGPath]()
-    
     let asyncCountQueue = DispatchQueue(label: "com.straussmade.swiftsvg.asyncCountQueue.serial", qos: .userInteractive)
     
     private init() {
@@ -172,10 +169,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
             return
         }
         
-        let processedElement = lastElement.didProcessElement(in: containerElement)
-        if processedElement != nil {
-            self.svgPaths.append(processedElement!)
-        }
+        lastElement.didProcessElement(in: containerElement)
         
         if let lastShapeElement = lastElement as? SVGShapeElement {
             self.resizeContainerBoundingBox(lastShapeElement.boundingBox)
@@ -193,7 +187,9 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
             self.didDispatchAllElements = true
         }
         if self.asyncParseCount <= 0 {
-            self.completionBlock?(self.containerLayer)
+            DispatchQueue.main.safeAsync {
+                self.completionBlock?(self.containerLayer)
+            }
         }
     }
     
@@ -222,7 +218,7 @@ extension NSXMLSVGParser {
 }
 
 /**
- `NSXMLSVGParser` conforms to the protocol `CanManageAsychronousCallbacks` that uses a simple reference count to see if there are any pending asynchronous tasks that have been dispatched and is still being processed. Once the element has finished processing, the asynchronous elements calls the delegate callback `func finishedProcessing(shapeLayer:)`.
+ `NSXMLSVGParser` conforms to the protocol `CanManageAsychronousCallbacks` that uses a simple reference count to see if there are any pending asynchronous tasks that have been dispatched and are still being processed. Once the element has finished processing, the asynchronous elements calls the delegate callback `func finishedProcessing(shapeLayer:)` and the delegate will decrement the count.
  */
 
 extension NSXMLSVGParser: CanManageAsychronousCallbacks {
@@ -238,7 +234,9 @@ extension NSXMLSVGParser: CanManageAsychronousCallbacks {
         guard self.asyncParseCount <= 0 && self.didDispatchAllElements else {
             return
         }
-        self.completionBlock?(self.containerLayer)
+        DispatchQueue.main.safeAsync {
+            self.completionBlock?(self.containerLayer)
+        }
     }
     
 }
