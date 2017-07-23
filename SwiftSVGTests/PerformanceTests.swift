@@ -36,7 +36,7 @@ class PerformanceTests: XCTestCase {
         
         self.measureMetrics([XCTPerformanceMetric_WallClockTime], automaticallyStartMeasuring: true) {
             
-            guard let resourceURL = Bundle(for: type(of: self)).url(forResource: "Ukulele", withExtension: "svg") else {
+            guard let resourceURL = Bundle(for: type(of: self)).url(forResource: "ukulele", withExtension: "svg") else {
                 XCTAssert(false, "Couldn't find resource")
                 return
             }

@@ -40,9 +40,8 @@
 
 struct SVGPolygon: SVGShapeElement {
     
-    static var elementName: String {
-        return "polygon"
-    }
+    /// :nodoc:
+    static let elementName = "polygon"
     
     var supportedAttributes: [String : ((String) -> ())?] = [:]
     var svgLayer = CAShapeLayer()

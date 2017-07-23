@@ -48,7 +48,6 @@ extension CALayer {
     /**
      Convenience initializer that creates a new `CALayer` from a local or remote URL. You must provide a completion block and add the passed `SVGLayer to a sublayer`.
      */
-    
     @discardableResult
     public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: @escaping (SVGLayer) -> ()) {
         do {
@@ -68,9 +67,10 @@ extension CALayer {
         
         let cacheKey = "\(SVGData.hashValue)-\(SVGData.count)"
         
-        if let cached = SVGCache.shared[cacheKey] {
-            //print("Returning cached: \(cacheKey) - \(cached.boundingBox)")
-            self.addSublayer(cached)
+        if let cached = SVGCache.default[cacheKey] {
+            DispatchQueue.main.safeAsync {
+                self.addSublayer(cached)
+            }
             completion(cached)
             return
         }
@@ -85,9 +85,10 @@ extension CALayer {
             } else {
                 parserToUse = NSXMLSVGParser(SVGData: SVGData) { (svgLayer) in
                     
-                    //print("Caching: \(cacheKey)")
-                    let layerCopy = svgLayer.svgLayerCopy
-                    SVGCache.shared[cacheKey] = layerCopy
+                    DispatchQueue.global(qos: .userInitiated).async {
+                        let layerCopy = svgLayer.svgLayerCopy
+                        SVGCache.default[cacheKey] = layerCopy
+                    }
                     
                     DispatchQueue.main.safeAsync {
                         self.addSublayer(svgLayer)

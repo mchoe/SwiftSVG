@@ -33,13 +33,20 @@ import Foundation
 /**
  A struct that lists all the supported elements and attributes for a parser
  */
-
 public struct SVGParserSupportedElements {
     
     typealias ElementGenerator = () -> SVGElement
     
+    /**
+     A dictionary of all the supported elements and attributes for a given parser.
+     - Parameter Key: A string that matches the SVG attribute
+     - Parameter Value: A curried function to use to handle the particular attribute
+     */
     let tags: [String : ElementGenerator]
     
+    /**
+     A configuration that will only parse `<path>` elements and the `d` and `fill attributes`. Use this configuration if you know you will only be parsing `<path>` elements with fill colors
+     */
     public static var barebones: SVGParserSupportedElements {
         
         let supportedElements: [String : ElementGenerator] = [
@@ -52,19 +59,17 @@ public struct SVGParserSupportedElements {
                 return returnElement
             },
             SVGRootElement.elementName: {
-                var returnElement = SVGRootElement()
-                returnElement.supportedAttributes = [
-                    "width": returnElement.parseWidth,
-                    "height": returnElement.parseHeight
-                ]
-                return returnElement
+                return SVGRootElement()
             }
             
         ]
         return SVGParserSupportedElements(tags: supportedElements)
     }
     
-    static func allSupportedElements(for parser: CanManageAsychronousCallbacks) -> SVGParserSupportedElements {
+    /**
+     A configuration that is the full set of elements and attributes that SwiftSVG supports. This is the default configuration for the NSXMLSVGParser.
+     */
+    static func allSupportedElements(for parser: CanManageAsychronousParsing) -> SVGParserSupportedElements {
         let supportedElements: [String : ElementGenerator] = [
             SVGCircle.elementName: {
                 let returnElement = SVGCircle()
@@ -107,7 +112,7 @@ public struct SVGParserSupportedElements {
                 returnElement.supportedAttributes = [
                     "fill": returnElement.fill,
                     "fill-rule": returnElement.fillRule,
-                    "opacity": returnElement.opacity,
+                    "opacity": returnElement.fillOpacity,
                 ]
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)

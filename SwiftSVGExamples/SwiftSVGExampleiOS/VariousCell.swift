@@ -31,7 +31,6 @@ import UIKit
 
 class VariousCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var svgView: UIView!
     
     override func prepareForReuse() {
@@ -39,7 +38,5 @@ class VariousCell: UICollectionViewCell {
             thisSublayer.removeFromSuperlayer()
         }
     }
-    
-    
     
 }

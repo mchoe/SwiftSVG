@@ -84,9 +84,7 @@ extension VariousViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let returnCell = collectionView.dequeueReusableCell(withReuseIdentifier: "VariousCell", for: indexPath) as? VariousCell else {
-            return UICollectionViewCell()
-        }
+        let returnCell = collectionView.dequeueReusableCell(withReuseIdentifier: "VariousCell", for: indexPath) as! VariousCell
         let thisItem = self.collectionViewData[indexPath.row]
         let thisView = UIView(SVGURL: thisItem.url) { (svgLayer) in
             svgLayer.resizeToFit(returnCell.bounds)
@@ -99,15 +97,18 @@ extension VariousViewController: UICollectionViewDataSource {
 
 extension VariousViewController: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let halfWidth = collectionView.bounds.size.width / 2
-        return CGSize(width: halfWidth, height: halfWidth)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         self.performSegue(withIdentifier: "variousToDetailSegue", sender: self)
         collectionView.deselectItem(at: indexPath, animated: false)
+    }
+    
+}
+
+extension VariousViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellDimension = collectionView.bounds.size.width * 0.45
+        return CGSize(width: cellDimension, height: cellDimension)
     }
     
 }

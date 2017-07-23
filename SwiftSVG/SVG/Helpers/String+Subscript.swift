@@ -38,6 +38,7 @@ import AppKit
 
 public extension String {
     
+    /// :nodoc: Will change with Swift 4
     subscript(index: Int) -> Character {
         get {
             let index = self.characters.index(self.startIndex, offsetBy: index)
@@ -45,6 +46,7 @@ public extension String {
         }
     }
     
+    /// :nodoc: Will change with Swift 4
     subscript(integerRange: Range<Int>) -> String {
         get {
             let start = self.characters.index(self.startIndex, offsetBy: integerRange.lowerBound)
@@ -54,6 +56,7 @@ public extension String {
         }
     }
     
+    /// :nodoc: Will change with Swift 4
     subscript (r: CountableClosedRange<Int>) -> String {
         get {
             let startIndex =  self.index(self.startIndex, offsetBy: r.lowerBound)

@@ -39,11 +39,10 @@
  Concrete implementation that creates a `CAShapeLayer` from a `<line>` element and its attributes
  */
 
-class SVGLine: SVGShapeElement {
+final class SVGLine: SVGShapeElement {
     
-    static var elementName: String {
-        return "line"
-    }
+    /// :nodoc:
+    static let elementName = "line"
     
     var end = CGPoint.zero
     var start = CGPoint.zero

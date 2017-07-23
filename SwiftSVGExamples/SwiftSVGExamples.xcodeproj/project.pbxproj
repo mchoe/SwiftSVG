@@ -39,7 +39,7 @@
 		3870903C1F0C32AE00F72660 /* error.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3870903B1F0C32AE00F72660 /* error.svg */; };
 		3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */; };
 		3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95C1EFCB2E000F8C04E /* pizza.svg */; };
-		3876E9651EFCC16500F8C04E /* container.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E9641EFCC16500F8C04E /* container.svg */; };
+		3876E9651EFCC16500F8C04E /* berlin.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E9641EFCC16500F8C04E /* berlin.svg */; };
 		387B0C5F1F107E5B0085E51A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C5E1F107E5B0085E51A /* StartViewController.swift */; };
 		387B0C611F1083D70085E51A /* StartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C601F1083D70085E51A /* StartCell.swift */; };
 		387B0C631F108ECD0085E51A /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C621F108ECD0085E51A /* GithubViewController.swift */; };
@@ -148,7 +148,7 @@
 		3870903B1F0C32AE00F72660 /* error.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = error.svg; sourceTree = "<group>"; };
 		3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1346768588.svg"; sourceTree = "<group>"; };
 		3876E95C1EFCB2E000F8C04E /* pizza.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pizza.svg; sourceTree = "<group>"; };
-		3876E9641EFCC16500F8C04E /* container.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = container.svg; sourceTree = "<group>"; };
+		3876E9641EFCC16500F8C04E /* berlin.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = berlin.svg; sourceTree = "<group>"; };
 		387B0C5E1F107E5B0085E51A /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		387B0C601F1083D70085E51A /* StartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCell.swift; sourceTree = "<group>"; };
 		387B0C621F108ECD0085E51A /* GithubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
@@ -320,7 +320,7 @@
 				380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */,
 				380FED491F02064900EDB255 /* hawaiiFlowers.svg */,
 				380FED211F0036F400EDB255 /* rabbitcowboy.svg */,
-				3876E9641EFCC16500F8C04E /* container.svg */,
+				3876E9641EFCC16500F8C04E /* berlin.svg */,
 				380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */,
 				380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */,
 				380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */,
@@ -466,7 +466,7 @@
 			files = (
 				381E99C31EFA0DC400839918 /* polygons.svg in Resources */,
 				380FED671F06951100EDB255 /* tiger.svg in Resources */,
-				3876E9651EFCC16500F8C04E /* container.svg in Resources */,
+				3876E9651EFCC16500F8C04E /* berlin.svg in Resources */,
 				380FED221F0036F400EDB255 /* rabbitcowboy.svg in Resources */,
 				380FED651F06946500EDB255 /* Dulcimer.svg in Resources */,
 				3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */,

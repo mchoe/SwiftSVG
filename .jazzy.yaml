@@ -7,3 +7,4 @@ min_acl: internal
 skip_undocumented: yes
 exclude:
   - "SwiftSVG/NSBezierPath+CrossPlatform.swift"
+  - "CrossPlatform.swift"

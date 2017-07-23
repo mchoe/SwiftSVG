@@ -34,6 +34,7 @@
     import AppKit
 #endif
 
+
 /**
  A protocol that describes an instance that stores the path as a `CAShapeLayer`
  */

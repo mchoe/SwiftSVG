@@ -32,6 +32,10 @@ import Foundation
 
 
 extension DispatchQueue {
+    
+    /**
+     An extension that will immediately execute the given block if already on the main thread 
+     */
     func safeAsync(_ block: @escaping () -> ()) {
         if self === DispatchQueue.main && Thread.isMainThread {
             block()

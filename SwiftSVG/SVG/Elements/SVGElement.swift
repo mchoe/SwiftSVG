@@ -34,7 +34,6 @@
     import AppKit
 #endif
 
-// TODO:
 // NOTE: For the supported attributes, I wanted to use a little currying
 // magic so that it could potentially take any method on any arbitrary 
 // type. The type signature would look like this `[String : (Self) -> (String) -> ()]`
@@ -44,6 +43,9 @@
 // I think if and when Swift adopts language level type erasure, then
 // this will be possible. I'm flagging this here to keep that in mind because
 // I think that will yield a cleaner design and implementation.
+//
+// For now, I'm still using currying, but you have to provide an instance to the partially
+// applied function.
 //
 // -Michael Choe 06.03.17
 
@@ -56,16 +58,20 @@
 
 public protocol SVGElement {
     
-    /// The element name as defined in the SVG specification
+    /**
+     The element name as defined in the SVG specification
+     - SeeAlso: Official [SVG Element Names](https://www.w3.org/TR/SVG/eltindex.html)
+     */
     static var elementName: String { get }
     
     /// Dictionary of attributes of a given element that are supported by the `SVGParser`. Keys are the name of an element's attribute such as `d`, `fill`, and `rx`. Values are a closure that is used to process the given attribute.
     var supportedAttributes: [String : ((String) -> ())?] { get set }
     
-    /// An action to perform once the parser has dispatched all attributes to a given `SVGElement` instance
-    /// - Returns: An optional `CGPath` you can optionally perform additional operations on or store for later use
-    /// - Note: If using the default `NSXMLSVGParser` and the element parses asynchronously, there is no guarantee that the instance will be finished processing all the attribites when this is called.
     
+    /**
+     An action to perform once the parser has dispatched all attributes to a given `SVGElement` instance
+     - Note: If using the default `NSXMLSVGParser` and the element parses asynchronously, there is no guarantee that the instance will be finished processing all the attribites when this is called.
+     */
     func didProcessElement(in container: SVGContainerElement?)
 }
 

@@ -47,21 +47,21 @@ class UIColorExtensionsTests: XCTestCase {
         var colorArray = self.colorArray(testColor!)
         XCTAssertTrue(colorArray[0] == 1, "Expected 1, got \(colorArray[0])")
         XCTAssertTrue(colorArray[1] == 1, "Expected 1, got \(colorArray[1])")
-        XCTAssertTrue(colorArray[2] == 0, "Expected 1, got \(colorArray[2])")
+        XCTAssertTrue(colorArray[2] == 0, "Expected 0, got \(colorArray[2])")
         
         testString = "#FffF00"
         testColor = UIColor(hexString: testString)
         colorArray = self.colorArray(testColor!)
         XCTAssertTrue(colorArray[0] == 1, "Expected 1, got \(colorArray[0])")
         XCTAssertTrue(colorArray[1] == 1, "Expected 1, got \(colorArray[1])")
-        XCTAssertTrue(colorArray[2] == 0, "Expected 1, got \(colorArray[2])")
+        XCTAssertTrue(colorArray[2] == 0, "Expected 0, got \(colorArray[2])")
         
         testString = "00fF00"
         testColor = UIColor(hexString: testString)
         colorArray = self.colorArray(testColor!)
-        XCTAssertTrue(colorArray[0] == 0, "Expected 1, got \(colorArray[0])")
+        XCTAssertTrue(colorArray[0] == 0, "Expected 0, got \(colorArray[0])")
         XCTAssertTrue(colorArray[1] == 1, "Expected 1, got \(colorArray[1])")
-        XCTAssertTrue(colorArray[2] == 0, "Expected 1, got \(colorArray[2])")
+        XCTAssertTrue(colorArray[2] == 0, "Expected 0, got \(colorArray[2])")
     }
     
     func testRGBString() {
@@ -70,7 +70,19 @@ class UIColorExtensionsTests: XCTestCase {
         let colorArray = self.colorArray(testColor)
         XCTAssertTrue(colorArray[0] == 1, "Expected 1, got \(colorArray[0])")
         XCTAssertTrue(colorArray[1] == 1, "Expected 1, got \(colorArray[1])")
-        XCTAssertTrue(colorArray[2] == 0, "Expected 1, got \(colorArray[2])")
+        XCTAssertTrue(colorArray[2] == 0, "Expected 0, got \(colorArray[2])")
+    }
+    
+    func testNamedColor() {
+        let testString = "cyan"
+        guard let testColor = UIColor(named: testString) else {
+            XCTAssert(false, "Named color does not exist")
+            return
+        }
+        var colorArray = self.colorArray(testColor)
+        XCTAssertTrue(colorArray[0] == 0, "Expected 0, got \(colorArray[0])")
+        XCTAssertTrue(colorArray[1] == 1, "Expected 1, got \(colorArray[1])")
+        XCTAssertTrue(colorArray[2] == 1, "Expected 1, got \(colorArray[2])")
     }
     
 }

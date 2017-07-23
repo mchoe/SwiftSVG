@@ -34,6 +34,10 @@
     import AppKit
 #endif
 
+
+/**
+ A struct that maps `<path>` d commands to `SVGElement`s
+ */
 internal struct PathDConstants {
     
     enum DCharacter: CChar {
@@ -85,24 +89,27 @@ internal struct PathDConstants {
     
 }
 
-
+/**
+ A struct that conforms to the `Sequence` protocol that takes a `<path>` `d` string and returns `SVGElement` instances
+ */
 internal struct PathDLexer: IteratorProtocol, Sequence {
     
     typealias Element = PathCommand
     
-    var currentCharacter: CChar {
+    private var currentCharacter: CChar {
         return self.workingString[self.iteratorIndex]
     }
     
-    var currentCommand: PathCommand? = nil
+    private var currentCommand: PathCommand? = nil
+    private var iteratorIndex: Int = 0
+    private var numberArray = [CChar]()
+    private let pathString: String
+    private let workingString: ContiguousArray<CChar>
     
-    var iteratorIndex: Int = 0
-    let pathString: String
-    let workingString: ContiguousArray<CChar>
-    
-    var numberArray = [CChar]()
-    
-    init(pathString: String) {
+    /**
+     Initializer for creating a new `PathDLexer` from a path d string
+     */
+    internal init(pathString: String) {
         self.pathString = pathString
         self.workingString = self.pathString.utf8CString
     }

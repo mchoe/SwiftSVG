@@ -32,10 +32,16 @@ import Foundation
 
 extension FloatingPoint {
     
+    /**
+     Converts a `FloatingPoint` type to radians
+     */
     var toRadians: Self {
         return self * .pi / 180
     }
     
+    /**
+     Converts a `FloatingPoint` type to degrees
+     */
     var toDegrees: Self {
         return self * 180 / .pi
     }

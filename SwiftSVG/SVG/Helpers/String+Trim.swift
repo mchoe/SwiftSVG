@@ -31,6 +31,10 @@
 import Foundation
 
 extension String {
+    
+    /**
+     Function that trims the whitespace from the beginning and end of a String
+    */
     func trimWhitespace() -> String {
         return self.trimmingCharacters(in: CharacterSet.whitespaces)
     }

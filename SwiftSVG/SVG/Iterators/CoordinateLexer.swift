@@ -31,6 +31,9 @@
 import CoreGraphics
 import Foundation
 
+/**
+ A struct that conforms to the `Sequence` protocol that takes a coordinate string and continuously returns`CGPoint`s
+ */
 internal struct CoordinateLexer: IteratorProtocol, Sequence {
     
     typealias Element = CGPoint

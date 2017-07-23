@@ -34,34 +34,18 @@
     import AppKit
 #endif
 
-
+/**
+ A protocol that describes an instance that can store bounding box information
+ */
 public protocol SVGLayerType {
     var boundingBox: CGRect { get }
-}
-
-/**
- A `CAShapeLayer` subclass that allows you to easily work with sublayers and get sizing information
- */
-
-open class SVGLayer: CAShapeLayer, SVGLayerType {
-    
-    /// The minimum CGRect that fits all subpaths
-    public var boundingBox = CGRect.zero
-}
-
-extension SVGLayer {
-    var svgLayerCopy: SVGLayer {
-        let tmp = NSKeyedArchiver.archivedData(withRootObject: self)
-        let copiedLayer = NSKeyedUnarchiver.unarchiveObject(with: tmp) as! SVGLayer
-        copiedLayer.boundingBox = self.boundingBox
-        return copiedLayer
-    }
 }
 
 extension SVGLayerType where Self: CALayer {
     
     /**
      Scales a layer to aspect fit the given size.
+     - TODO: Should eventually support different content modes
      */
     
     @discardableResult
@@ -87,31 +71,26 @@ extension SVGLayerType where Self: CALayer {
     }
 }
 
-extension CALayer {
+/**
+ A `CAShapeLayer` subclass that allows you to easily work with sublayers and get sizing information
+ */
+
+open class SVGLayer: CAShapeLayer, SVGLayerType {
     
-    open func applyOnSublayers<T: CALayer>(ofType: T.Type, closure: (T) -> ()) {
-        let allShapelayers: [T] = self.sublayers(in: self)
-        _ = allShapelayers.map { (thisShapeLayer) -> T in
-            closure(thisShapeLayer)
-            return thisShapeLayer
-        }
-    }
+    /// The minimum CGRect that fits all subpaths
+    public var boundingBox = CGRect.zero
+}
+
+extension SVGLayer {
     
-    open func sublayers<T: CALayer, U>(in layer: T) -> [U] {
-        
-        var sublayers = [U]()
-        
-        guard let allSublayers = layer.sublayers else {
-            return sublayers
-        }
-        
-        for thisSublayer in allSublayers {
-            sublayers += self.sublayers(in: thisSublayer)
-            if let thisSublayer = thisSublayer as? U {
-                sublayers.append(thisSublayer)
-            }
-        }
-        return sublayers
+    /**
+     Returns a copy of the given SVGLayer
+     */
+    var svgLayerCopy: SVGLayer {
+        let tmp = NSKeyedArchiver.archivedData(withRootObject: self)
+        let copiedLayer = NSKeyedUnarchiver.unarchiveObject(with: tmp) as! SVGLayer
+        copiedLayer.boundingBox = self.boundingBox
+        return copiedLayer
     }
 }
 
@@ -129,7 +108,7 @@ extension SVGLayer {
     }
 }
 
-// MARK: - Storke Overrides
+// MARK: - Stroke Overrides
 
 extension SVGLayer {
     

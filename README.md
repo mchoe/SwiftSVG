@@ -1,14 +1,26 @@
 
-![SwiftSVG Logo](/images/SwiftSVG-Logo.png)
+![SwiftSVG Logo](https://raw.githubusercontent.com/mchoe/SwiftSVG/master/images/SwiftSVG-Logo.png)
 
 SwiftSVG
 ========
 
 A simple single pass SVG parser written in Swift.
 
-SwiftSVG is part of a larger library I created called [Breakfast](https://github.com/mchoe/Breakfast). I created a separate project because I would like to support as much as the SVG specification as possible. As such, I wanted a place to track issues related specifically to that goal and any changes here will eventually be integrated into Breakfast.
-
 I also wanted to make it possible to use SwiftSVG without installing the full Breakfast Framework, so feel free to use only SwiftSVG in your next project. It was meant to be as lightweight and modular as possible.
+
+
+Development Priorities
+======================
+
+Developer Joy really encapsulates a few different concepts:
+	1. Clarity and an ability to easily reason about the code
+	2. Code length and DRY principles
+	3. Maintainability and tech debt
+	4. API Stability
+	4. Stability and Predicatability
+
+To me, code at its best seamlessly marries performance with Developer Joy where both goals are equally being advanced. The reality however, means that compromises may have to made to maximize another goal.
+
 
 Features
 ========
@@ -42,13 +54,15 @@ Carthage:
 
 	github "mchoe/SwiftSVG" ~> 2.0
 
+Then import the framework into your project:
+
+	import SwiftSVG
+
 **For projects currently using 1.0**: SwiftSVG 2.x is a major rewrite of the library. For most use cases, you should be able to upgrade to 2.0 with little to no changes to your code. However, there are breaking changes 
 
 
 Usage
 -----
-
-SwiftSVG provides multiple interfaces to parse single path strings and SVG files using NSXMLParser. 
 
 ### UIView+SVG
 
@@ -58,7 +72,7 @@ let fistBump = UIView(SVGNamed: "fistbump")     // In the main bundle
 self.addSubview(fistBump)
 ```
 #### Output:
-![Put it here!](/images/fistBump.png)
+![Put it here!](https://raw.githubusercontent.com/mchoe/SwiftSVG/master/images/fistBump.png)
 
 SwiftSVG also provides the following convenience initializers:
 ```swift
@@ -69,7 +83,10 @@ func UIView(SVGData: Data)
 
 All of these initializers will parse a file located in the main bundle, a bundle of your own choosing, or on the web. It will parse the file asynchronously and optionally takes a completion block, passing a `SVGLayer` that's sized to aspect fit the UIView's superview. Whether you pass a completion block or not, SwiftSVG will resize the layer and add it to the view's sublayers.
 
-You can optionally pass an `SVGParser` object if you want to reuse the same parser for various SVG files or want to roll your own using a third-party XML parser. By default, SwiftSVG uses a subclass of Foundation's `XMLParser` using all the supported elements and attributes called `NSXMLSVGParser`. You can also optionally setup your own `NSXMLSVGParser` passing a `SVGParserSupportedElements` struct that will parse only the elements and attributes of your choosing. 
+You can optionally pass an `SVGParser` object if you want to reuse the same parser for various SVG files or want to roll your own using a third-party XML parser. By default, SwiftSVG uses a subclass of Foundation's `XMLParser` using all the supported elements and attributes called `NSXMLSVGParser`. You can also optionally setup your own `NSXMLSVGParser` passing a `SVGParserSupportedElements` struct that will parse only the elements and attributes of your choosing.
+
+
+
 
 Credits
 -------

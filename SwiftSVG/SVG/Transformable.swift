@@ -120,6 +120,10 @@ private struct TransformableConstants {
     static let attributesRegex = "(\\w+)\\(((\\-?\\d+\\.?\\d*e?\\-?\\d*\\s*,?\\s*)+)\\)"
 }
 
+/**
+ A protocol that describes an instance that can be transformed via an SVG element's `transform` attribute. Currently, `matrix`, `rotate`, `scale`, `skewX`, and `skewY` are supported. A default implementation is supplied for `SVGContainerElement`s that sets the `affineTransform` of the container layer itself, not on all of its subelements.
+ */
+
 public protocol Transformable {
     var layerToTransform: CALayer { get }
 }
@@ -148,7 +152,7 @@ extension Transformable {
         
         do {
             let regex = try NSRegularExpression(pattern: TransformableConstants.attributesRegex, options: .caseInsensitive)
-            let matches = regex.matches(in: transformString, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, transformString.utf8.count))
+            let matches = regex.matches(in: transformString, options: [], range: NSMakeRange(0, transformString.utf8.count))
             
             let combinedTransforms = matches
             .flatMap({ (thisMatch) -> Transform? in
@@ -165,6 +169,7 @@ extension Transformable {
             
         } catch {
             print("Couldn't parse transform string: \(transformString)")
+            return
         }
     }
 }

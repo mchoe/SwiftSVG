@@ -59,9 +59,7 @@ class GithubViewController: UIViewController {
                 let renderedLayer = CALayer(SVGURL: svgURL!) { (svgLayer) in
                     svgLayer.resizeToFit(CGRect(x: 0, y: 0, width: cellSize.width, height: cellSize.height))
                     returnView.layer.addSublayer(svgLayer)
-                    //print("Parsed fist bump: \(returnView.layer.sublayers)")
                 }
-                //print("Dispatched: \(returnView.layer.sublayers)")
                 return returnView
             }),
             CellItem(render: { (cellSize) -> UIView in
@@ -86,12 +84,6 @@ class GithubViewController: UIViewController {
         return returnData
     }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
 }
 
 extension GithubViewController: UICollectionViewDataSource {
@@ -109,11 +101,11 @@ extension GithubViewController: UICollectionViewDataSource {
     
 }
 
-extension GithubViewController: UICollectionViewDelegate {
+extension GithubViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let halfWidth = collectionView.bounds.size.width / 2
-        return CGSize(width: halfWidth, height: halfWidth)
+        let cellDimension = collectionView.bounds.size.width * 0.45
+        return CGSize(width: cellDimension, height: cellDimension)
     }
     
 }

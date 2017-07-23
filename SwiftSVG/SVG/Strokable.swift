@@ -35,19 +35,36 @@
 #endif
 
 
+/**
+ A protocol that described an instance that can be stroked. Two default implementations are provided for this protocol:
+    1. `SVGShapeElement` - Will set the underlying `SVGLayer`'s stroke color, width, line cap, line join, and miter limit. Note that `SVGLayer is a subclass of `CAShapeLayer`, so this default implementation wil;l set the `CAShapeLayer`'s line properties and not the `CALayer`'s border attributes.
+    2. `SVGGroup` - The default implementation just saves the attributes and values to be applied after all the subelements have been processed.
+ */
+
 public protocol Strokable { }
 
+/**
+ Line join type that corresponds to the SVG line join string
+ */
 enum LineJoin: String {
     case miter, round, bevel
 }
 
+/**
+ Line cap type that corresponds to the SVG line cap string
+ */
 enum LineCap: String {
     case butt, round, square
 }
 
 extension Strokable where Self : SVGShapeElement {
     
-    var strokeAttributes: [String : (String) -> ()] {
+    /**
+     The curried functions to be used for the `SVGShapeElement`'s default implementation. This dictionary is meant to be used in the `SVGParserSupportedElements` instance
+     - parameter Key: The SVG string value of the attribute
+     - parameter Value: A curried function to use to implement the SVG attribute
+     */
+    internal var strokeAttributes: [String : (String) -> ()] {
         return [
             "stroke": self.strokeColor,
             "stroke-linecap": self.strokeLineCap,
@@ -57,6 +74,10 @@ extension Strokable where Self : SVGShapeElement {
         ]
     }
     
+    /**
+     Sets the stroke line cap of the underlying `SVGLayer`
+     - SeeAlso: CAShapeLayer's [`lineCap`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1521905-linecap) for supported values.
+     */
     internal func strokeLineCap(lineCap: String) {
         switch lineCap {
         case kCALineCapButt, kCALineCapRound, kCALineCapSquare:
@@ -66,6 +87,10 @@ extension Strokable where Self : SVGShapeElement {
         }
     }
     
+    /**
+     Sets the stroke color of the underlying `SVGLayer`
+     - SeeAlso: CAShapeLayer's [`strokeColor`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1521897-strokecolor)
+     */
     internal func strokeColor(strokeColor: String) {
         guard let strokeColor = UIColor(svgString: strokeColor) else {
             return
@@ -73,6 +98,10 @@ extension Strokable where Self : SVGShapeElement {
         self.svgLayer.strokeColor = strokeColor.cgColor
     }
     
+    /**
+     Sets the stroke line join of the underlying `SVGLayer`
+     - SeeAlso: CAShapeLayer's [`lineJoin`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1522147-linejoin)
+     */
     internal func strokeLineJoin(lineJoin: String) {
         switch lineJoin {
         case kCALineJoinBevel, kCALineJoinMiter, kCALineJoinRound:
@@ -82,6 +111,10 @@ extension Strokable where Self : SVGShapeElement {
         }
     }
     
+    /**
+     Sets the stroke miter limit of the underlying `SVGLayer`
+     - SeeAlso: CAShapeLayer's [`miterLimit`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1521870-miterlimit)
+     */
     internal func strokeMiterLimit(miterLimit: String) {
         guard let miterLimit = CGFloat(miterLimit) else {
             return
@@ -89,6 +122,10 @@ extension Strokable where Self : SVGShapeElement {
         self.svgLayer.miterLimit = miterLimit
     }
     
+    /**
+     Sets the stroke width of the underlying `SVGLayer`
+     - SeeAlso: CAShapeLayer's [`strokeWidth`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1521890-linewidth)
+     */
     internal func strokeWidth(strokeWidth: String) {
         guard let strokeWidth = CGFloat(strokeWidth) else {
             return

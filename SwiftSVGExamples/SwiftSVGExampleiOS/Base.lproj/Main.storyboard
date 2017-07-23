@@ -78,10 +78,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDR-SV-oh3">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SDR-SV-oh3">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m8l-rY-afy">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="m8l-rY-afy">
                                     <size key="itemSize" width="152" height="163"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -97,7 +97,7 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aw2-mZ-dZq">
                                                     <rect key="frame" x="0.0" y="0.0" width="152" height="163"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
                                         </view>
@@ -244,13 +244,15 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0W8-7F-UVX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="0W8-7F-UVX" secondAttribute="bottom" id="ANV-DL-1Rq"/>
                                     <constraint firstItem="0W8-7F-UVX" firstAttribute="leading" secondItem="dnX-tb-g3r" secondAttribute="leading" id="LFb-MU-pua"/>
+                                    <constraint firstItem="0W8-7F-UVX" firstAttribute="height" secondItem="dnX-tb-g3r" secondAttribute="height" id="LJI-Ie-sBn"/>
                                     <constraint firstAttribute="trailing" secondItem="0W8-7F-UVX" secondAttribute="trailing" id="NeS-5X-sfg"/>
                                     <constraint firstItem="0W8-7F-UVX" firstAttribute="top" secondItem="dnX-tb-g3r" secondAttribute="top" id="ZqK-Sw-hgA"/>
                                 </constraints>
@@ -261,7 +263,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0W8-7F-UVX" firstAttribute="height" secondItem="x3T-Iq-IZh" secondAttribute="height" id="8u0-4a-CCT"/>
                             <constraint firstItem="0W8-7F-UVX" firstAttribute="width" secondItem="x3T-Iq-IZh" secondAttribute="width" id="BFM-wL-8l3"/>
                             <constraint firstItem="VPT-nd-Og5" firstAttribute="top" secondItem="dnX-tb-g3r" secondAttribute="bottom" id="CeG-Qa-37v"/>
                             <constraint firstAttribute="trailing" secondItem="dnX-tb-g3r" secondAttribute="trailing" id="Npm-xw-Qv7"/>

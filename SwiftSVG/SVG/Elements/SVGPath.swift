@@ -41,11 +41,9 @@
 struct SVGPath: SVGShapeElement, ParsesAsynchronously {
     
     /// :nodoc:
-    static var elementName: String {
-        return "path"
-    }
+    static let elementName = "path"
     
-    var asyncParseManager: CanManageAsychronousCallbacks? = nil
+    var asyncParseManager: CanManageAsychronousParsing? = nil
     var shouldParseAsynchronously = true
     
     /// :nodoc:

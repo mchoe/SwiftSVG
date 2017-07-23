@@ -38,11 +38,10 @@
  Concrete implementation that creates a `CAShapeLayer` from a `<rect>` element and its attributes
  */
 
-class SVGRectangle: SVGShapeElement {
+final class SVGRectangle: SVGShapeElement {
     
-    static var elementName: String {
-        return "rect"
-    }
+    /// :nodoc:
+    static let elementName = "rect"
     
     var rectangleRect = CGRect()
     var svgLayer = CAShapeLayer()

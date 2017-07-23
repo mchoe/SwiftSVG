@@ -40,9 +40,8 @@
 
 struct SVGPolyline: SVGShapeElement {
     
-    static var elementName: String {
-        return "polyline"
-    }
+    /// :nodoc:
+    static let elementName = "polyline"
     
     var supportedAttributes: [String : ((String) -> ())?] = [:]
     var svgLayer = CAShapeLayer()

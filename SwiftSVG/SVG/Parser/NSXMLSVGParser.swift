@@ -218,10 +218,10 @@ extension NSXMLSVGParser {
 }
 
 /**
- `NSXMLSVGParser` conforms to the protocol `CanManageAsychronousCallbacks` that uses a simple reference count to see if there are any pending asynchronous tasks that have been dispatched and are still being processed. Once the element has finished processing, the asynchronous elements calls the delegate callback `func finishedProcessing(shapeLayer:)` and the delegate will decrement the count.
+ `NSXMLSVGParser` conforms to the protocol `CanManageAsychronousParsing` that uses a simple reference count to see if there are any pending asynchronous tasks that have been dispatched and are still being processed. Once the element has finished processing, the asynchronous elements calls the delegate callback `func finishedProcessing(shapeLayer:)` and the delegate will decrement the count.
  */
 
-extension NSXMLSVGParser: CanManageAsychronousCallbacks {
+extension NSXMLSVGParser: CanManageAsychronousParsing {
     
     func finishedProcessing(_ shapeLayer: CAShapeLayer) {
         

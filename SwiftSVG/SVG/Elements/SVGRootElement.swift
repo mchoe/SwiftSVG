@@ -40,9 +40,8 @@
 
 struct SVGRootElement: SVGContainerElement {
     
-    static var elementName: String {
-        return "svg"
-    }
+    /// :nodoc:
+    static let elementName = "svg"
     
     var attributesToApply = [String : String]()
     var containerLayer = CALayer()

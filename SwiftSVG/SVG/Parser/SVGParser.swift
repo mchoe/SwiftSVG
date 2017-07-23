@@ -43,7 +43,7 @@ struct SVGParseOptions: OptionSet {
 }
 
 /**
- A protocol describing an XML parser capable of parsing SVG docs
+ A protocol describing an XML parser capable of parsing SVG data
  */
 
 public protocol SVGParser {

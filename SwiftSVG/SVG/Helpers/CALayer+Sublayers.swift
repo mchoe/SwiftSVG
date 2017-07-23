@@ -1,5 +1,5 @@
 //
-//  SVGView.swift
+//  CALayer+Sublayers.swift
 //  SwiftSVG
 //
 //
@@ -35,49 +35,32 @@
 #endif
 
 
-
-// TODO: Removing IBDesignable support for now seeing there
-// is a bug with using IBDesignables from a framework
-//
-// References:
-// https://openradar.appspot.com/23114017
-// https://github.com/Carthage/Carthage/issues/335
-// https://stackoverflow.com/questions/29933691/ibdesignable-from-external-framework
-
-//@IBDesignable
-
-/**
- A `UIView` subclass that can be used in Interface Builder where you can set the @IBInspectable propert `SVGName` in the side panel. Use the UIView extensions if you want to creates SVG views programmatically.
- */
-open class SVGView : UIView {
+extension CALayer {
     
-    @IBInspectable open var SVGName: String? {
-        didSet {
-            guard let thisName = self.SVGName else {
-                return
-            }
-            
-            #if !TARGET_INTERFACE_BUILDER
-                let bundle = Bundle.main
-            #else
-                let bundle = Bundle(for: type(of: self))
-            #endif
-            
-            if let url = bundle.url(forResource: thisName, withExtension: "svg") {
-                CALayer(SVGURL: url) { [weak self] (svgLayer) in
-                    self?.nonOptionalLayer.addSublayer(svgLayer)
-                }
+    /**
+     Helper function that applies the given closure on all sublayers of a given type
+     */
+    open func applyOnSublayers<T: CALayer>(ofType: T.Type, closure: (T) -> ()) {
+        _ = self.sublayers(in: self).map(closure)
+    }
+    
+    /**
+     Helper function that returns an array of all sublayers of a given type
+     */
+    public func sublayers<T: CALayer, U>(in layer: T) -> [U] {
+        
+        var sublayers = [U]()
+        
+        guard let allSublayers = layer.sublayers else {
+            return sublayers
+        }
+        
+        for thisSublayer in allSublayers {
+            sublayers += self.sublayers(in: thisSublayer)
+            if let thisSublayer = thisSublayer as? U {
+                sublayers.append(thisSublayer)
             }
         }
+        return sublayers
     }
 }
-
-extension SVGView {
-    
-    public convenience init(SVGName: String) {
-        self.init()
-        self.SVGName = SVGName
-    }
-    
-}
-

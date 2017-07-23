@@ -39,17 +39,21 @@ internal enum PathType {
     case absolute, relative
 }
 
+/**
+ A protocol that describes an instance that can process an individual SVG Element
+ */
 internal protocol PathCommand: PreviousCommand {
-    
     var coordinateBuffer: [Double] { get set }
     var numberOfRequiredParameters: Int { get }
     var pathType: PathType { get }
     
     init(pathType: PathType)
     func execute(on path: UIBezierPath, previousCommand: PreviousCommand?)
-    
 }
 
+/**
+ A protocol that describes an instance that represents an SVGElement right before the current one
+ */
 internal protocol PreviousCommand {
     var coordinateBuffer: [Double] { get }
     var pathType: PathType { get }
@@ -57,6 +61,9 @@ internal protocol PreviousCommand {
 
 internal extension PathCommand {
     
+    /**
+     Default implementation for any `PathCommand` indiciating where there are enough coordinates sgtored to be able to process the `SVGElement`
+     */
     var canPushCommand: Bool {
         if self.numberOfRequiredParameters == 0 {
             return true
@@ -70,14 +77,23 @@ internal extension PathCommand {
         return false
     }
     
+    /**
+     Function that clears the current number buffer
+     */
     mutating func clearBuffer() {
         self.coordinateBuffer.removeAll()
     }
     
+    /**
+     Adds a new coordinate to the buffer
+     */
     mutating func pushCoordinate(_ coordinate: Double) {
         self.coordinateBuffer.append(coordinate)
     }
     
+    /**
+     Based on the `PathType` of this PathCommand, this function returns the relative or absolute point
+     */
     func pointForPathType(_ point: CGPoint, relativeTo: CGPoint) -> CGPoint {
         switch self.pathType {
         case .absolute:
@@ -95,7 +111,9 @@ internal extension PathCommand {
 //
 // MARK: - Implementations
 
-
+/**
+ The `PathCommand` that corresponds to the SVG `M` or `m` command
+ */
 internal struct MoveTo: PathCommand {
     
     var coordinateBuffer = [Double]()
@@ -125,6 +143,9 @@ internal struct MoveTo: PathCommand {
     }
 }
 
+/**
+ The `PathCommand` that corresponds to the SVG `Z` or `z` command
+ */
 internal struct ClosePath: PathCommand {
     
     var coordinateBuffer = [Double]()
@@ -141,6 +162,9 @@ internal struct ClosePath: PathCommand {
     
 }
 
+/**
+ The `PathCommand` that corresponds to the SVG `L` or `l` command
+ */
 internal struct LineTo: PathCommand {
     
     var coordinateBuffer = [Double]()
@@ -157,6 +181,9 @@ internal struct LineTo: PathCommand {
     }
 }
 
+/**
+ The `PathCommand` that corresponds to the SVG `H` or `h` command
+ */
 internal struct HorizontalLineTo: PathCommand {
     
     var coordinateBuffer = [Double]()
@@ -174,6 +201,9 @@ internal struct HorizontalLineTo: PathCommand {
     }
 }
 
+/**
+ The `PathCommand` that corresponds to the SVG `V` or `v` command
+ */
 internal struct VerticalLineTo: PathCommand {
     
     var coordinateBuffer = [Double]()
@@ -191,6 +221,9 @@ internal struct VerticalLineTo: PathCommand {
     }
 }
 
+/**
+ The `PathCommand` that corresponds to the SVG `C` or `c` command
+ */
 internal struct CurveTo: PathCommand {
     
     var coordinateBuffer = [Double]()
@@ -209,6 +242,9 @@ internal struct CurveTo: PathCommand {
     }
 }
 
+/**
+ The `PathCommand` that corresponds to the SVG `S` or `s` command
+ */
 internal struct SmoothCurveTo: PathCommand {
     
     var coordinateBuffer = [Double]()
@@ -266,6 +302,9 @@ internal struct SmoothCurveTo: PathCommand {
     }
 }
 
+/**
+ The `PathCommand` that corresponds to the SVG `Q` or `q` command
+ */
 internal struct QuadraticCurveTo: PathCommand {
     
     var coordinateBuffer = [Double]()
@@ -283,6 +322,9 @@ internal struct QuadraticCurveTo: PathCommand {
     }
 }
 
+/**
+ The `PathCommand` that corresponds to the SVG `T` or `t` command
+ */
 internal struct SmoothQuadraticCurveTo: PathCommand {
     
     var coordinateBuffer = [Double]()
@@ -324,6 +366,10 @@ internal struct SmoothQuadraticCurveTo: PathCommand {
     }
 }
 
+/**
+ The `PathCommand` that corresponds to the SVG `A` or `a` command
+ - TODO: Still needs an implementation
+ */
 internal struct EllipticalArc: PathCommand {
     
     var coordinateBuffer = [Double]()

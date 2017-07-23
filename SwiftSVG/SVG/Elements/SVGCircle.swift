@@ -39,17 +39,19 @@
  Concrete implementation that creates a `CAShapeLayer` from a `<circle>` element and its attributes
  */
 
-class SVGCircle: SVGShapeElement {
+final class SVGCircle: SVGShapeElement {
     
-    static var elementName: String {
-        return "circle"
-    }
+    /// :nodoc:
+    static let elementName = "circle"
     
-    var circleCenter = CGPoint.zero
-    var circleRadius: CGFloat = 0
-    var svgLayer = CAShapeLayer()
-    var supportedAttributes: [String : ((String) -> ())?] = [:]
+    internal var circleCenter = CGPoint.zero
+    internal var circleRadius: CGFloat = 0
+    internal var svgLayer = CAShapeLayer()
+    internal var supportedAttributes: [String : ((String) -> ())?] = [:]
     
+    /**
+     Function that parses the number string and sets this instance's radius
+     */
     internal func radius(r: String) {
         guard let r = CGFloat(lengthString: r) else {
             return
@@ -57,6 +59,9 @@ class SVGCircle: SVGShapeElement {
         self.circleRadius = r
     }
     
+    /**
+     Function that parses the number string and sets this instance's x center
+     */
     internal func xCenter(x: String) {
         guard let x = CGFloat(lengthString: x) else {
             return
@@ -64,6 +69,9 @@ class SVGCircle: SVGShapeElement {
         self.circleCenter.x = x
     }
     
+    /**
+     Function that parses the number string and sets this instance's y center
+     */
     internal func yCenter(y: String) {
         guard let y = CGFloat(lengthString: y) else {
             return
@@ -71,6 +79,9 @@ class SVGCircle: SVGShapeElement {
         self.circleCenter.y = y
     }
     
+    /**
+     Function that is called after the circle's center and radius have been parsed and set. This function creates the path and sets the internal `SVGLayer`'s path.
+     */
     func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
             return

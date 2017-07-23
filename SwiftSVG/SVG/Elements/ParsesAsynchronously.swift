@@ -35,10 +35,16 @@
 #endif
 
 
-protocol CanManageAsychronousCallbacks {
+/**
+ A protocol describing an instance that can manage elements that can parse asynchronously. In the `NSXMLSVGParser` implementation, the parser maintains a simple count of pending asynchronous tasks and decrements the count when an element has finished parsing. When the count has reached zero, a completion block is called
+ */
+protocol CanManageAsychronousParsing {
     func finishedProcessing(_ shapeLayer: CAShapeLayer)
 }
 
+/**
+ A protocol describing an instance that parses asynchronously
+ */
 protocol ParsesAsynchronously {
-    var asyncParseManager: CanManageAsychronousCallbacks? { get set }
+    var asyncParseManager: CanManageAsychronousParsing? { get set }
 }

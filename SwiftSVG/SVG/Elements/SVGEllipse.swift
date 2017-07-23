@@ -38,18 +38,20 @@
  Concrete implementation that creates a `CAShapeLayer` from a `<ellipse>` element and its attributes
  */
 
-class SVGEllipse: SVGShapeElement {
+final class SVGEllipse: SVGShapeElement {
     
-    static var elementName: String {
-        return "ellipse"
-    }
+    /// :nodoc:
+    static let elementName = "ellipse"
     
-    var ellipseCenter = CGPoint.zero
-    var xRadius: CGFloat = 0
-    var yRadius: CGFloat = 0
-    var svgLayer = CAShapeLayer()
-    var supportedAttributes: [String : ((String) -> ())?] = [:]
+    internal var ellipseCenter = CGPoint.zero
+    internal var xRadius: CGFloat = 0
+    internal var yRadius: CGFloat = 0
+    internal var svgLayer = CAShapeLayer()
+    internal var supportedAttributes: [String : ((String) -> ())?] = [:]
     
+    /**
+     Function that parses the number string and sets this instance's x radius
+     */
     internal func xRadius(r: String) {
         guard let r = CGFloat(lengthString: r) else {
             return
@@ -57,6 +59,9 @@ class SVGEllipse: SVGShapeElement {
         self.xRadius = r
     }
     
+    /**
+     Function that parses the number string and sets this instance's y radius
+     */
     internal func yRadius(r: String) {
         guard let r = CGFloat(lengthString: r) else {
             return
@@ -64,6 +69,9 @@ class SVGEllipse: SVGShapeElement {
         self.yRadius = r
     }
     
+    /**
+     Function that parses the number string and sets this instance's x center
+     */
     internal func xCenter(x: String) {
         guard let x = CGFloat(lengthString: x) else {
             return
@@ -71,6 +79,9 @@ class SVGEllipse: SVGShapeElement {
         self.ellipseCenter.x = x
     }
     
+    /**
+     Function that parses the number string and sets this instance's y center
+     */
     internal func yCenter(y: String) {
         guard let y = CGFloat(lengthString: y) else {
             return
@@ -78,6 +89,9 @@ class SVGEllipse: SVGShapeElement {
         self.ellipseCenter.y = y
     }
     
+    /**
+     Function that is called after the ellipse's center and radius have been parsed and set. This function creates the path and sets the internal `SVGLayer`'s path.
+     */
     func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
             return

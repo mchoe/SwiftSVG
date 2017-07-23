@@ -1,5 +1,5 @@
 //
-//  CAShapeLayer+SVG.swift
+//  SVGView.swift
 //  SwiftSVG
 //
 //
@@ -29,24 +29,49 @@
 
 
 #if os(iOS) || os(tvOS)
-import UIKit
+    import UIKit
 #elseif os(OSX)
-import AppKit
+    import AppKit
 #endif
 
 
 
-extension CAShapeLayer {
+// TODO: Removing IBDesignable support for now seeing there
+// is a bug with using IBDesignables from a framework
+//
+// References:
+// https://openradar.appspot.com/23114017
+// https://github.com/Carthage/Carthage/issues/335
+// https://stackoverflow.com/questions/29933691/ibdesignable-from-external-framework
+
+//@IBDesignable
+
+/**
+ A `UIView` subclass that can be used in Interface Builder where you can set the @IBInspectable propert `SVGName` in the side panel. Use the UIView extensions if you want to creates SVG views programmatically.
+ */
+open class SVGView : UIView {
     
     /**
-     Convenience initalizer that can path a single path string and returns a `CAShapeLayer`
+     The name of the SVG file in the main bundle
      */
-    
-    public convenience init(pathString: String) {
-        self.init()
-        let singlePath = SVGPath(singlePathString: pathString)
-        self.path = singlePath.svgLayer.path
+    @IBInspectable open var SVGName: String? {
+        didSet {
+            guard let thisName = self.SVGName else {
+                return
+            }
+            
+            #if !TARGET_INTERFACE_BUILDER
+                let bundle = Bundle.main
+            #else
+                let bundle = Bundle(for: type(of: self))
+            #endif
+            
+            if let url = bundle.url(forResource: thisName, withExtension: "svg") {
+                CALayer(SVGURL: url) { [weak self] (svgLayer) in
+                    self?.nonOptionalLayer.addSublayer(svgLayer)
+                }
+            }
+        }
     }
-    
 }
 
