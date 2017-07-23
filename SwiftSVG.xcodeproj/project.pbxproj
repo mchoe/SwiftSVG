@@ -78,6 +78,8 @@
 		38048F431F24214400179C95 /* UIView+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38048F371F24210F00179C95 /* UIView+SVG.swift */; };
 		38048F471F24520200179C95 /* CALayer+Sublayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38048F461F24520200179C95 /* CALayer+Sublayers.swift */; };
 		38048F481F24527A00179C95 /* CALayer+Sublayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38048F461F24520200179C95 /* CALayer+Sublayers.swift */; };
+		38048F4E1F24710100179C95 /* ukulele.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38048F4A1F24705800179C95 /* ukulele.svg */; };
+		38048F4F1F24710100179C95 /* washington.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38048F4B1F24705800179C95 /* washington.svg */; };
 		380FECF81F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */; };
 		380FED101F002C0E00EDB255 /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FED0F1F002C0E00EDB255 /* Stylable.swift */; };
 		380FED331F00FEF000EDB255 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FED321F00FEF000EDB255 /* PerformanceTests.swift */; };
@@ -111,10 +113,8 @@
 		383CE5171F23B668003699E2 /* FillableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383CE5161F23B668003699E2 /* FillableTests.swift */; };
 		387090361F0C134400F72660 /* ParsesAsynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387090351F0C134400F72660 /* ParsesAsynchronously.swift */; };
 		387090381F0C15B400F72660 /* ParsesAsynchronously.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387090351F0C134400F72660 /* ParsesAsynchronously.swift */; };
-		387428471F1F20EE00B4CDA1 /* washington.svg in Resources */ = {isa = PBXBuildFile; fileRef = 387428461F1F20EE00B4CDA1 /* washington.svg */; };
 		3876E9611EFCBABB00F8C04E /* Fillable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3876E9601EFCBABB00F8C04E /* Fillable.swift */; };
 		3876E9631EFCBAC500F8C04E /* Strokable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3876E9621EFCBAC500F8C04E /* Strokable.swift */; };
-		387B0C571F0D38470085E51A /* ukulele.svg in Resources */ = {isa = PBXBuildFile; fileRef = 387B0C561F0D38470085E51A /* ukulele.svg */; };
 		3882158D1F131CC800C192A3 /* NSBezierPath+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */; };
 		3882158E1F131CC900C192A3 /* NSBezierPath+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */; };
 		3882158F1F13295200C192A3 /* SwiftSVGFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 39B8D8901B3C3283009DAF60 /* SwiftSVGFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -178,6 +178,8 @@
 		38048F361F24210F00179C95 /* UIBezierPath+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBezierPath+SVG.swift"; path = "SwiftSVG/SVGExtensions/UIBezierPath+SVG.swift"; sourceTree = SOURCE_ROOT; };
 		38048F371F24210F00179C95 /* UIView+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+SVG.swift"; path = "SwiftSVG/SVGExtensions/UIView+SVG.swift"; sourceTree = SOURCE_ROOT; };
 		38048F461F24520200179C95 /* CALayer+Sublayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Sublayers.swift"; sourceTree = "<group>"; };
+		38048F4A1F24705800179C95 /* ukulele.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ukulele.svg; path = svgs/ukulele.svg; sourceTree = "<group>"; };
+		38048F4B1F24705800179C95 /* washington.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = washington.svg; path = svgs/washington.svg; sourceTree = "<group>"; };
 		380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+DegreesRadians.swift"; sourceTree = "<group>"; };
 		380FED0F1F002C0E00EDB255 /* Stylable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
 		380FED321F00FEF000EDB255 /* PerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
@@ -200,10 +202,8 @@
 		38311C4C1F1738AB00E876EC /* SVGCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGCache.swift; path = SVG/Cache/SVGCache.swift; sourceTree = "<group>"; };
 		383CE5161F23B668003699E2 /* FillableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillableTests.swift; sourceTree = "<group>"; };
 		387090351F0C134400F72660 /* ParsesAsynchronously.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParsesAsynchronously.swift; path = ../Elements/ParsesAsynchronously.swift; sourceTree = "<group>"; };
-		387428461F1F20EE00B4CDA1 /* washington.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = washington.svg; sourceTree = "<group>"; };
 		3876E9601EFCBABB00F8C04E /* Fillable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fillable.swift; sourceTree = "<group>"; };
 		3876E9621EFCBAC500F8C04E /* Strokable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strokable.swift; sourceTree = "<group>"; };
-		387B0C561F0D38470085E51A /* ukulele.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ukulele.svg; sourceTree = "<group>"; };
 		39B8D88C1B3C3283009DAF60 /* SwiftSVG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B8D88F1B3C3283009DAF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../SwiftSVGFramework/Info.plist; sourceTree = "<group>"; };
 		39B8D8901B3C3283009DAF60 /* SwiftSVGFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSVGFramework.h; sourceTree = "<group>"; };
@@ -360,8 +360,8 @@
 		380FED341F00FF3A00EDB255 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				387428461F1F20EE00B4CDA1 /* washington.svg */,
-				387B0C561F0D38470085E51A /* ukulele.svg */,
+				38048F4A1F24705800179C95 /* ukulele.svg */,
+				38048F4B1F24705800179C95 /* washington.svg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -567,8 +567,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				387428471F1F20EE00B4CDA1 /* washington.svg in Resources */,
-				387B0C571F0D38470085E51A /* ukulele.svg in Resources */,
+				38048F4F1F24710100179C95 /* washington.svg in Resources */,
+				38048F4E1F24710100179C95 /* ukulele.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
