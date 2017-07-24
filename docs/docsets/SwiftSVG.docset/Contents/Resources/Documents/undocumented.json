@@ -765,21 +765,21 @@
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
-      "line": 196,
+      "line": 191,
       "symbol": "NSXMLSVGParser.parser(_:parseErrorOccurred:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
-      "line": 212,
+      "line": 207,
       "symbol": "NSXMLSVGParser.resizeContainerBoundingBox(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
-      "line": 226,
+      "line": 221,
       "symbol": "NSXMLSVGParser.finishedProcessing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

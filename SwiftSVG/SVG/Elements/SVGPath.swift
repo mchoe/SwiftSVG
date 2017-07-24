@@ -38,7 +38,7 @@
  Concrete implementation that creates a `CAShapeLayer` from a `<path>` element and its attributes
  */
 
-struct SVGPath: SVGShapeElement, ParsesAsynchronously {
+class SVGPath: SVGShapeElement, ParsesAsynchronously {
     
     /// :nodoc:
     static let elementName = "path"

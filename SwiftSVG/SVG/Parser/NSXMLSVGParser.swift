@@ -93,16 +93,10 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
      - parameter supportedElements: Optional `SVGParserSupportedElements` struct that restrict the elements and attributes that this parser can parse. If no value is provided, all supported attributes will be used.
      - parameter completion: Optional completion block that will be executed after all elements and attribites have been parsed.
      */
-    public required init(SVGData: Data, supportedElements: SVGParserSupportedElements? = nil, completion: ((SVGLayer) -> ())? = nil) {
+    public required init(SVGData: Data, supportedElements: SVGParserSupportedElements? = SVGParserSupportedElements.allSupportedElements, completion: ((SVGLayer) -> ())? = nil) {
         super.init(data: SVGData)
         self.delegate = self
-        
-        if let supportedElements = supportedElements {
-            self.supportedElements = supportedElements
-        } else {
-            self.supportedElements = SVGParserSupportedElements.allSupportedElements(for: self)
-        }
-        
+        self.supportedElements = supportedElements
         self.completionBlock = completion
     }
     
@@ -122,9 +116,10 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         
         let svgElement = elementType()
         
-        if svgElement is ParsesAsynchronously {
+        if var asyncElement = svgElement as? ParsesAsynchronously {
             self.asyncCountQueue.sync {
                 self.asyncParseCount += 1
+                asyncElement.asyncParseManager = self
             }
         }
         

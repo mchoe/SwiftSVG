@@ -35,6 +35,9 @@ import Foundation
  */
 public struct SVGParserSupportedElements {
     
+    /**
+     Typealias that serves as a placeholder for a closure that returns a new `SVGElement` instance
+     */
     typealias ElementGenerator = () -> SVGElement
     
     /**
@@ -51,7 +54,7 @@ public struct SVGParserSupportedElements {
         
         let supportedElements: [String : ElementGenerator] = [
             SVGPath.elementName: {
-                var returnElement = SVGPath()
+                let returnElement = SVGPath()
                 returnElement.supportedAttributes = [
                     "d": returnElement.parseD,
                     "fill": returnElement.fill
@@ -69,7 +72,7 @@ public struct SVGParserSupportedElements {
     /**
      A configuration that is the full set of elements and attributes that SwiftSVG supports. This is the default configuration for the NSXMLSVGParser.
      */
-    static func allSupportedElements(for parser: CanManageAsychronousParsing) -> SVGParserSupportedElements {
+    static var allSupportedElements: SVGParserSupportedElements {
         let supportedElements: [String : ElementGenerator] = [
             SVGCircle.elementName: {
                 let returnElement = SVGCircle()
@@ -135,8 +138,7 @@ public struct SVGParserSupportedElements {
                 return returnElement
             },
             SVGPath.elementName: {
-                var returnElement = SVGPath()
-                returnElement.asyncParseManager = parser
+                let returnElement = SVGPath()
                 returnElement.supportedAttributes = [
                     "d": returnElement.parseD,
                     "clip-rule": returnElement.clipRule
