@@ -35,10 +35,10 @@ import UIKit
 import AppKit
 #endif
 
+
 /**
  A set of convenience initializers that create new `UIView` instances from SVG data
  */
-
 extension UIView {
     
     /**

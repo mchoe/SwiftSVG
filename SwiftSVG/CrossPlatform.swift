@@ -44,14 +44,22 @@ extension UIView {
         #if os(iOS) || os(tvOS)
             return self.layer
         #elseif os(OSX)
-            if let l = self.layer {
-                return l
+            if let thisLayer = self.layer {
+                let transform = CGAffineTransform(
+                    a: 1.0, b: 0.0,
+                    c: 0.0, d: -1.0,
+                    tx: 0.0, ty: self.bounds.size.height
+                )
+                thisLayer.setAffineTransform(transform)
+                return thisLayer
             } else {
                 self.layer = CALayer()
-                self.layer?.frame = self.bounds
-                let flip = CATransform3DMakeScale(1.0, -1.0, 1.0)
-                let translate = CATransform3DMakeTranslation(0.0, self.bounds.size.height, 1.0)
-                self.layer?.sublayerTransform = CATransform3DConcat(flip, translate)
+                let transform = CGAffineTransform(
+                    a: 1.0, b: 0.0,
+                    c: 0.0, d: -1.0,
+                    tx: 0.0, ty: self.bounds.size.height
+                )
+                self.layer?.setAffineTransform(transform)
                 self.wantsLayer = true
                 return self.layer!
             }

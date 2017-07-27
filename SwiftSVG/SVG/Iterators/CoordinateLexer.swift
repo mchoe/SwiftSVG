@@ -36,25 +36,46 @@ import Foundation
  */
 internal struct CoordinateLexer: IteratorProtocol, Sequence {
     
+    /**
+     Generates a `CGPoint`
+     */
     typealias Element = CGPoint
     
+    /// :nodoc:
     var currentCharacter: CChar {
         return self.workingString[self.interatorIndex]
     }
+    
+    /// :nodoc:
     var coordinateString: String
+    
+    /// :nodoc:
     var workingString: ContiguousArray<CChar>
+    
+    /// :nodoc:
     var interatorIndex: Int = 0
+    
+    /// :nodoc:
     var numberArray = [CChar]()
     
+    /**
+     Creates a new `CoordinateLexer` from a comma or space separated number string
+     */
     init(coordinateString: String) {
         self.coordinateString = coordinateString.trimWhitespace()
         self.workingString = self.coordinateString.utf8CString
     }
     
+    /**
+     Required by Swift's `IteratorProtocol` that returns a new `CoordinateLexer`
+     */
     func makeIterator() -> CoordinateLexer {
         return CoordinateLexer(coordinateString: self.coordinateString)
     }
     
+    /**
+     Required by Swift's `IteratorProtocol` that returns the next `CGPoint` or nil if it's at the end of the sequence
+     */
     mutating func next() -> Element? {
         
         var didParseX = false

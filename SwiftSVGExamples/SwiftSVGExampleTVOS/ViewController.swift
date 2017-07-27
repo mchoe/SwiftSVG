@@ -35,7 +35,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let thisSVGView = UIView(SVGNamed: "hawaiiFlowers")
+        let thisSVGView = UIView(SVGNamed: "hawaiiFlowers") { (svgLayer) in
+            svgLayer.resizeToFit(self.svgView.bounds)
+        }
         self.svgView.addSubview(thisSVGView)
     }
 }

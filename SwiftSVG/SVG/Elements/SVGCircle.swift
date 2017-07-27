@@ -44,10 +44,21 @@ final class SVGCircle: SVGShapeElement {
     /// :nodoc:
     static let elementName = "circle"
     
+    /**
+     The circle's center point. Defaults to `CGRect.zero`
+     */
     internal var circleCenter = CGPoint.zero
+    
+    /**
+     The circle's radius. Defaults to `0`
+     */
     internal var circleRadius: CGFloat = 0
+    
+    /// :nodoc:
     internal var svgLayer = CAShapeLayer()
-    internal var supportedAttributes: [String : ((String) -> ())?] = [:]
+    
+    /// :nodoc:
+    internal var supportedAttributes: [String : (String) -> ()] = [:]
     
     /**
      Function that parses the number string and sets this instance's radius

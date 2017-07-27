@@ -36,7 +36,6 @@
 /**
  A minimal in-memory cache class for caching `SVGLayer`s. The `default` singleton is the default cache used and you can optionally create your own static singleton through an extension.
  */
-
 open class SVGCache {
     
     /// A singleton object that is the default store for `SVGlayer`s

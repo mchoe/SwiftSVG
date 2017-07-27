@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2104" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
@@ -675,10 +675,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="xh4-rW-eES" customClass="SVGView" customModule="SwiftSVG">
-                                <rect key="frame" x="115" y="133" width="250" height="250"/>
+                                <rect key="frame" x="90" y="108" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="8GM-JN-AQr"/>
-                                    <constraint firstAttribute="width" constant="250" id="Lti-uW-xIh"/>
+                                    <constraint firstAttribute="height" constant="300" id="8GM-JN-AQr"/>
+                                    <constraint firstAttribute="width" constant="300" id="Lti-uW-xIh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="SVGName" value="hawaiiFlowers"/>

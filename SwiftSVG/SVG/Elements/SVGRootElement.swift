@@ -43,26 +43,39 @@ struct SVGRootElement: SVGContainerElement {
     /// :nodoc:
     static let elementName = "svg"
     
+    // :nodoc:
     var attributesToApply = [String : String]()
-    var containerLayer = CALayer()
-    var supportedAttributes = [String : ((String) -> ())?]()
     
+    // :nodoc:
+    var containerLayer = CALayer()
+    
+    // :nodoc:
+    var supportedAttributes = [String : (String) -> ()]()
+    
+    /**
+     Function that parses a number string and sets the `containerLayer`'s width
+     */
     internal func parseWidth(lengthString: String) {
         if let width = CGFloat(lengthString: lengthString) {
             self.containerLayer.frame.size.width = width
         }
     }
     
+    /**
+     Function that parses a number string and sets the `containerLayer`'s height
+     */
     internal func parseHeight(lengthString: String) {
         if let height = CGFloat(lengthString: lengthString) {
             self.containerLayer.frame.size.height = height
         }
     }
     
+    /// :nodoc:
     func didProcessElement(in container: SVGContainerElement?) {
         return
     }
     
+    /// nodoc:
     func viewBox(coordinates: String) {
         let points = coordinates
             .components(separatedBy: CharacterSet(charactersIn: ", "))

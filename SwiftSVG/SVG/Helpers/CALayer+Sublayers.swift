@@ -35,6 +35,9 @@
 #endif
 
 
+/**
+ Helper functions that make it easier to find and work with sublayers
+ */
 extension CALayer {
     
     /**

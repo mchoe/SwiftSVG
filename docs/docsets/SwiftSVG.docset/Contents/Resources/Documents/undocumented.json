@@ -8,230 +8,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/ParsesAsynchronously.swift",
-      "line": 42,
-      "symbol": "CanManageAsychronousParsing.finishedProcessing(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/ParsesAsynchronously.swift",
-      "line": 49,
-      "symbol": "ParsesAsynchronously.asyncParseManager",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGCircle.swift",
-      "line": 47,
-      "symbol": "SVGCircle.circleCenter",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGCircle.swift",
-      "line": 48,
-      "symbol": "SVGCircle.circleRadius",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGEllipse.swift",
-      "line": 46,
-      "symbol": "SVGEllipse.ellipseCenter",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGEllipse.swift",
-      "line": 47,
-      "symbol": "SVGEllipse.xRadius",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGEllipse.swift",
-      "line": 48,
-      "symbol": "SVGEllipse.yRadius",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGGroup.swift",
-      "line": 43,
-      "symbol": "SVGGroup.groupAttributes",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGLine.swift",
-      "line": 47,
-      "symbol": "SVGLine.end",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGLine.swift",
-      "line": 48,
-      "symbol": "SVGLine.start",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGLine.swift",
-      "line": 53,
-      "symbol": "SVGLine.x1(x1:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGLine.swift",
-      "line": 60,
-      "symbol": "SVGLine.x2(x2:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGLine.swift",
-      "line": 67,
-      "symbol": "SVGLine.y1(y1:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGLine.swift",
-      "line": 74,
-      "symbol": "SVGLine.y2(y2:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGPath.swift",
-      "line": 46,
-      "symbol": "SVGPath.asyncParseManager",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGPath.swift",
-      "line": 47,
-      "symbol": "SVGPath.shouldParseAsynchronously",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGPath.swift",
-      "line": 55,
-      "symbol": "SVGPath.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGPath.swift",
-      "line": 105,
-      "symbol": "SVGPath.clipRule(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGPolygon.swift",
-      "line": 49,
-      "symbol": "SVGPolygon.points(points:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGPolyline.swift",
-      "line": 49,
-      "symbol": "SVGPolyline.points(points:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGRectangle.swift",
-      "line": 46,
-      "symbol": "SVGRectangle.rectangleRect",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGRectangle.swift",
-      "line": 49,
-      "symbol": "SVGRectangle.xCornerRadius",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGRectangle.swift",
-      "line": 50,
-      "symbol": "SVGRectangle.yCornerRadius",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGRectangle.swift",
-      "line": 52,
-      "symbol": "SVGRectangle.parseX(x:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGRectangle.swift",
-      "line": 59,
-      "symbol": "SVGRectangle.parseY(y:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGRectangle.swift",
-      "line": 66,
-      "symbol": "SVGRectangle.rectangleHeight(height:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGRectangle.swift",
-      "line": 73,
-      "symbol": "SVGRectangle.rectangleWidth(width:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGRectangle.swift",
-      "line": 80,
-      "symbol": "SVGRectangle.xCornerRadius(xCornerRadius:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGRectangle.swift",
-      "line": 87,
-      "symbol": "SVGRectangle.yCornerRadius(yCornerRadius:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGRootElement.swift",
-      "line": 50,
-      "symbol": "SVGRootElement.parseWidth(lengthString:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGRootElement.swift",
-      "line": 56,
-      "symbol": "SVGRootElement.parseHeight(lengthString:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Elements/SVGRootElement.swift",
-      "line": 66,
-      "symbol": "SVGRootElement.viewBox(coordinates:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Stack.swift",
       "line": 39,
       "symbol": "StackType.items",
@@ -274,48 +50,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/CoordinateLexer.swift",
-      "line": 41,
-      "symbol": "CoordinateLexer.currentCharacter",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/CoordinateLexer.swift",
-      "line": 44,
-      "symbol": "CoordinateLexer.coordinateString",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/CoordinateLexer.swift",
-      "line": 45,
-      "symbol": "CoordinateLexer.workingString",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/CoordinateLexer.swift",
-      "line": 46,
-      "symbol": "CoordinateLexer.interatorIndex",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/CoordinateLexer.swift",
-      "line": 47,
-      "symbol": "CoordinateLexer.numberArray",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/CoordinateLexer.swift",
-      "line": 49,
-      "symbol": "CoordinateLexer.init(coordinateString:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
       "line": 38,
       "symbol": "PathType",
@@ -323,612 +57,241 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 46,
-      "symbol": "PathCommand.coordinateBuffer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
       "line": 47,
-      "symbol": "PathCommand.numberOfRequiredParameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 48,
-      "symbol": "PathCommand.pathType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 50,
-      "symbol": "PathCommand.init(pathType:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 51,
-      "symbol": "PathCommand.execute(on:previousCommand:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 58,
-      "symbol": "PreviousCommand.coordinateBuffer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 59,
-      "symbol": "PreviousCommand.pathType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 119,
-      "symbol": "MoveTo.coordinateBuffer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 120,
-      "symbol": "MoveTo.numberOfRequiredParameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 121,
-      "symbol": "MoveTo.pathType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 123,
-      "symbol": "MoveTo.init(pathType:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 127,
-      "symbol": "MoveTo.execute(on:previousCommand:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 151,
-      "symbol": "ClosePath.coordinateBuffer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 152,
-      "symbol": "ClosePath.numberOfRequiredParameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 153,
-      "symbol": "ClosePath.pathType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 155,
-      "symbol": "ClosePath.init(pathType:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 159,
-      "symbol": "ClosePath.execute(on:previousCommand:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 170,
-      "symbol": "LineTo.coordinateBuffer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 171,
-      "symbol": "LineTo.numberOfRequiredParameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 172,
-      "symbol": "LineTo.pathType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 174,
-      "symbol": "LineTo.init(pathType:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 178,
-      "symbol": "LineTo.execute(on:previousCommand:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 189,
-      "symbol": "HorizontalLineTo.coordinateBuffer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 190,
-      "symbol": "HorizontalLineTo.numberOfRequiredParameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 191,
-      "symbol": "HorizontalLineTo.pathType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 193,
-      "symbol": "HorizontalLineTo.init(pathType:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 197,
-      "symbol": "HorizontalLineTo.execute(on:previousCommand:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 209,
-      "symbol": "VerticalLineTo.coordinateBuffer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 210,
-      "symbol": "VerticalLineTo.numberOfRequiredParameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 211,
-      "symbol": "VerticalLineTo.pathType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 213,
-      "symbol": "VerticalLineTo.init(pathType:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 217,
-      "symbol": "VerticalLineTo.execute(on:previousCommand:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 229,
-      "symbol": "CurveTo.coordinateBuffer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 230,
-      "symbol": "CurveTo.numberOfRequiredParameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 231,
-      "symbol": "CurveTo.pathType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 233,
-      "symbol": "CurveTo.init(pathType:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 237,
-      "symbol": "CurveTo.execute(on:previousCommand:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 250,
-      "symbol": "SmoothCurveTo.coordinateBuffer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 251,
-      "symbol": "SmoothCurveTo.numberOfRequiredParameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 252,
-      "symbol": "SmoothCurveTo.pathType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 254,
-      "symbol": "SmoothCurveTo.init(pathType:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 258,
-      "symbol": "SmoothCurveTo.execute(on:previousCommand:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 310,
-      "symbol": "QuadraticCurveTo.coordinateBuffer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 311,
-      "symbol": "QuadraticCurveTo.numberOfRequiredParameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 312,
-      "symbol": "QuadraticCurveTo.pathType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 314,
-      "symbol": "QuadraticCurveTo.init(pathType:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 318,
-      "symbol": "QuadraticCurveTo.execute(on:previousCommand:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 330,
-      "symbol": "SmoothQuadraticCurveTo.coordinateBuffer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 331,
-      "symbol": "SmoothQuadraticCurveTo.numberOfRequiredParameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 332,
-      "symbol": "SmoothQuadraticCurveTo.pathType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 333,
-      "symbol": "SmoothQuadraticCurveTo.previousControlPoint",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 335,
-      "symbol": "SmoothQuadraticCurveTo.init(pathType:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 339,
-      "symbol": "SmoothQuadraticCurveTo.execute(on:previousCommand:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 375,
-      "symbol": "EllipticalArc.coordinateBuffer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 376,
-      "symbol": "EllipticalArc.numberOfRequiredParameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 377,
-      "symbol": "EllipticalArc.pathType",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 379,
-      "symbol": "EllipticalArc.init(pathType:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
-      "line": 383,
-      "symbol": "EllipticalArc.execute(on:previousCommand:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "symbol": "PathDConstants.DCharacter.A",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
-      "line": 43,
-      "symbol": "PathDConstants.DCharacter",
-      "symbol_kind": "source.lang.swift.decl.enum",
+      "line": 48,
+      "symbol": "PathDConstants.DCharacter.a",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 49,
+      "symbol": "PathDConstants.DCharacter.C",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 50,
+      "symbol": "PathDConstants.DCharacter.c",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 51,
+      "symbol": "PathDConstants.DCharacter.H",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 52,
+      "symbol": "PathDConstants.DCharacter.h",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 53,
+      "symbol": "PathDConstants.DCharacter.L",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 54,
+      "symbol": "PathDConstants.DCharacter.l",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 55,
+      "symbol": "PathDConstants.DCharacter.M",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 56,
+      "symbol": "PathDConstants.DCharacter.m",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 57,
+      "symbol": "PathDConstants.DCharacter.Q",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 58,
+      "symbol": "PathDConstants.DCharacter.q",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 59,
+      "symbol": "PathDConstants.DCharacter.S",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 60,
+      "symbol": "PathDConstants.DCharacter.s",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 61,
+      "symbol": "PathDConstants.DCharacter.T",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 62,
+      "symbol": "PathDConstants.DCharacter.t",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 63,
+      "symbol": "PathDConstants.DCharacter.V",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 64,
+      "symbol": "PathDConstants.DCharacter.v",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 65,
+      "symbol": "PathDConstants.DCharacter.Z",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 66,
+      "symbol": "PathDConstants.DCharacter.z",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 67,
+      "symbol": "PathDConstants.DCharacter.comma",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 68,
+      "symbol": "PathDConstants.DCharacter.sign",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
       "line": 69,
-      "symbol": "PathDConstants.characterDictionary",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
-      "line": 176,
-      "symbol": "PathDLexer.pushCoordinateIfPossible(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "symbol": "PathDConstants.DCharacter.space",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
-      "line": 48,
-      "symbol": "NSXMLSVGParser.SVGParserError",
-      "symbol_kind": "source.lang.swift.decl.enum",
+      "line": 54,
+      "symbol": "NSXMLSVGParser.SVGParserError.invalidSVG",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
-      "line": 67,
-      "symbol": "NSXMLSVGParser.asyncCountQueue",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
-      "line": 191,
-      "symbol": "NSXMLSVGParser.parser(_:parseErrorOccurred:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
-      "line": 207,
-      "symbol": "NSXMLSVGParser.resizeContainerBoundingBox(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
-      "line": 221,
-      "symbol": "NSXMLSVGParser.finishedProcessing(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/SVGParser.swift",
-      "line": 39,
-      "symbol": "SVGParseOptions",
-      "symbol_kind": "source.lang.swift.decl.struct",
+      "line": 55,
+      "symbol": "NSXMLSVGParser.SVGParserError.invalidURL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 50,
+      "line": 49,
       "symbol": "LineJoin.bevel",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 50,
+      "line": 49,
       "symbol": "LineJoin.miter",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 50,
+      "line": 49,
       "symbol": "LineJoin.round",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 57,
+      "line": 56,
       "symbol": "LineCap.butt",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 57,
+      "line": 56,
       "symbol": "LineCap.round",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 57,
+      "line": 56,
       "symbol": "LineCap.square",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 141,
-      "symbol": "Strokable.strokeAttributes",
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Transformable.swift",
+      "line": 44,
+      "symbol": "Transform.affineTransform",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 151,
-      "symbol": "Strokable.strokeLineCap(lineCap:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 155,
-      "symbol": "Strokable.strokeColor(strokeColor:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 159,
-      "symbol": "Strokable.strokeLineJoin(lineJoin:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 163,
-      "symbol": "Strokable.strokeMiterLimit(miterLimit:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 167,
-      "symbol": "Strokable.strokeWidth(strokeWidth:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Stylable.swift",
-      "line": 45,
-      "symbol": "Stylable.styleAttributes",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Stylable.swift",
-      "line": 51,
-      "symbol": "Stylable.style(_:)",
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Transformable.swift",
+      "line": 46,
+      "symbol": "Transform.init(rawValue:coordinatesString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Transformable.swift",
-      "line": 40,
-      "symbol": "Transform",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Transformable.swift",
-      "line": 128,
+      "line": 129,
       "symbol": "Transformable.layerToTransform",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Transformable.swift",
-      "line": 132,
-      "symbol": "Transformable.layerToTransform",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Transformable.swift",
-      "line": 138,
-      "symbol": "Transformable.layerToTransform",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Transformable.swift",
-      "line": 145,
-      "symbol": "Transformable.transformAttributes",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Transformable.swift",
-      "line": 151,
-      "symbol": "Transformable.transform(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {

@@ -6,28 +6,13 @@ SwiftSVG
 
 A simple single pass SVG parser written in Swift.
 
-I also wanted to make it possible to use SwiftSVG without installing the full Breakfast Framework, so feel free to use only SwiftSVG in your next project. It was meant to be as lightweight and modular as possible.
-
-
-Development Priorities
-======================
-
-Developer Joy really encapsulates a few different concepts:
-	1. Clarity and an ability to easily reason about the code
-	2. Code length and DRY principles
-	3. Maintainability and tech debt
-	4. API Stability
-	4. Stability and Predicatability
-
-To me, code at its best seamlessly marries performance with Developer Joy where both goals are equally being advanced. The reality however, means that compromises may have to made to maximize another goal.
-
-
 Features
 ========
 
-- Multiple interface options (String, UIBezierPath, CAShapeLayer, UIView, and IBDesignable Interface Builder subclass)
-- Strives to be performant. Takes only one pass through path string. 
-- Low memory usage
+- Parsing performance that meets or beats other popular SVG Frameworks
+- Optimized for extension, flexibility and developer joy
+- Multiple interface options (UIBezierPath, CAShapeLayer, UIView, and IBDesignable Interface Builder subclass)
+- Tested and documented
 
 Table of Contents
 -----------------

@@ -43,54 +43,90 @@ final class SVGRectangle: SVGShapeElement {
     /// :nodoc:
     static let elementName = "rect"
     
+    /**
+     The CGRect for the rectangle
+     */
     var rectangleRect = CGRect()
+    
+    /// :nodoc:
     var svgLayer = CAShapeLayer()
-    var supportedAttributes: [String : ((String) -> ())?] = [:]
+    
+    /// :nodoc:
+    var supportedAttributes: [String : (String) -> ()] = [:]
+    
+    /**
+     The x radius of the corner oval. Defaults to `0`
+     */
     var xCornerRadius = CGFloat(0.0)
+    
+    /**
+     The y radius of the corner oval. Defaults to `0`
+     */
     var yCornerRadius = CGFloat(0.0)
     
+    /**
+     Function that parses the number string and sets this rectangle's origin x
+     */
     func parseX(x: String) {
-        guard let x = Double(x) else {
+        guard let x = CGFloat(x) else {
             return
         }
-        self.rectangleRect.origin.x = CGFloat(x)
+        self.rectangleRect.origin.x = x
     }
     
+    /**
+     Function that parses the number string and sets this rectangle's origin y
+     */
     func parseY(y: String) {
-        guard let y = Double(y) else {
+        guard let y = CGFloat(y) else {
             return
         }
-        self.rectangleRect.origin.y = CGFloat(y)
+        self.rectangleRect.origin.y = y
     }
     
+    /**
+     Function that parses the number string and sets this rectangle's height
+     */
     func rectangleHeight(height: String) {
-        guard let height = Double(height) else {
+        guard let height = CGFloat(height) else {
             return
         }
-        self.rectangleRect.size.height = CGFloat(height)
+        self.rectangleRect.size.height = height
     }
     
+    /**
+     Function that parses the number string and sets this rectangle's width
+     */
     func rectangleWidth(width: String) {
-        guard let width = Double(width) else {
+        guard let width = CGFloat(width) else {
             return
         }
-        self.rectangleRect.size.width = CGFloat(width)
+        self.rectangleRect.size.width = width
     }
     
+    /**
+     Function that parses the number string and sets this rectangle's x corner radius
+     */
     func xCornerRadius(xCornerRadius: String) {
-        guard let xCornerRadius = Double(xCornerRadius) else {
+        guard let xCornerRadius = CGFloat(xCornerRadius) else {
             return
         }
-        self.xCornerRadius = CGFloat(xCornerRadius)
+        self.xCornerRadius = xCornerRadius
     }
     
+    /**
+     Function that parses the number string and sets this rectangle's y corner radius
+     */
     func yCornerRadius(yCornerRadius: String) {
-        guard let yCornerRadius = Double(yCornerRadius) else {
+        guard let yCornerRadius = CGFloat(yCornerRadius) else {
             return
         }
-        self.yCornerRadius = CGFloat(yCornerRadius)
+        self.yCornerRadius = yCornerRadius
     }
     
+    /**
+     Creates a new rectangle path based on the set attributes.
+     */
     func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
             return

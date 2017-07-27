@@ -39,7 +39,7 @@ import AppKit
  */
 struct NamedColors {
     
-    /// :nodoc:
+    /// Dictionary of named colors
     private let colorDictionary = [
         "aliceblue": UIColor(red: 240.0 / 255.0, green: 248.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0).cgColor,
         "cyan": UIColor(red: 0.0, green: 1.0, blue: 1.0, alpha: 1.0).cgColor,

@@ -37,21 +37,31 @@
 /**
  Concrete implementation that creates a `CAShapeLayer` from a `<path>` element and its attributes
  */
-
-class SVGPath: SVGShapeElement, ParsesAsynchronously {
+final class SVGPath: SVGShapeElement, ParsesAsynchronously, DelaysApplyingAttributes {
     
     /// :nodoc:
     static let elementName = "path"
     
+    /**
+     Attributes that are applied after the path has been processed
+     */
+    var attributesToApply = [String : String]()
+    
+    /// :nodoc:
     var asyncParseManager: CanManageAsychronousParsing? = nil
+    
+    /**
+     Flag that sets whether the path should be parsed asynchronously or not
+     */
     var shouldParseAsynchronously = true
     
     /// :nodoc:
-    var supportedAttributes = [String : ((String) -> ())?]()
+    var supportedAttributes = [String : (String) -> ()]()
     
     /// :nodoc:
     var svgLayer = CAShapeLayer()
     
+    /// :nodoc:
     init() { }
     
     
@@ -67,7 +77,9 @@ class SVGPath: SVGShapeElement, ParsesAsynchronously {
         self.parseD(singlePathString)
     }
     
-    /// Function that takes a `d` path string attribute and sets the `svgLayer`'s `cgPath`
+    /**
+     Function that takes a `d` path string attribute and sets the `svgLayer`'s `cgPath`
+     */
     internal func parseD(_ pathString: String) {
         let workingString = pathString.trimWhitespace()
         assert(workingString.hasPrefix("M") || workingString.hasPrefix("m"), "Path d attribute must begin with MoveTo Command (\"M\")")
@@ -86,12 +98,13 @@ class SVGPath: SVGShapeElement, ParsesAsynchronously {
             
             if self.shouldParseAsynchronously {
                 
-                let concurrent = DispatchQueue(label: "concurrent", attributes: .concurrent)
+                let concurrent = DispatchQueue(label: "com.straussmade.swiftsvg.path.concurrent", attributes: .concurrent)
                 let dispatchGroup = DispatchGroup()
                 
                 concurrent.async(group: dispatchGroup, execute: parsePathClosure)
                 dispatchGroup.notify(queue: DispatchQueue.main) {
                     self.svgLayer.path = pathDPath.cgPath
+                    self.applyDelayedAttributes()
                     self.asyncParseManager?.finishedProcessing(self.svgLayer)
                 }
                 
@@ -102,18 +115,23 @@ class SVGPath: SVGShapeElement, ParsesAsynchronously {
         }
     }
     
+    /**
+     The clip rule for this path to be applied after the path has been parsed
+     */
     func clipRule(_ clipRule: String) {
-        if clipRule == "evenodd" {
-            guard let thisPath = self.svgLayer.path else {
-                print("Need to implement path evenodd")
-                return
-            }
-            #if os(iOS) || os(tvOS)
-            let bezierPath = UIBezierPath(cgPath: thisPath)
-            bezierPath.usesEvenOddFillRule = true
-            self.svgLayer.path = bezierPath.cgPath
-            #endif
+        guard let thisPath = self.svgLayer.path else {
+            self.attributesToApply["clip-rule"] = clipRule
+            return
         }
+        guard clipRule == "evenodd" else {
+            return
+        }
+        #if os(iOS) || os(tvOS)
+        let bezierPath = UIBezierPath(cgPath: thisPath)
+        bezierPath.usesEvenOddFillRule = true
+        self.svgLayer.path = bezierPath.cgPath
+        #endif
+        
     }
     
     /// :nodoc:

@@ -43,9 +43,15 @@ struct SVGPolyline: SVGShapeElement {
     /// :nodoc:
     static let elementName = "polyline"
     
-    var supportedAttributes: [String : ((String) -> ())?] = [:]
+    /// :nodoc:
+    var supportedAttributes: [String : (String) -> ()] = [:]
+    
+    /// :nodoc:
     var svgLayer = CAShapeLayer()
     
+    /**
+     Parses a coordinate string and creates a new polyline based on them
+     */
     internal func points(points: String) {
         let polylinePath = UIBezierPath()
         for (index, thisPoint) in CoordinateLexer(coordinateString: points).enumerated() {
@@ -58,6 +64,7 @@ struct SVGPolyline: SVGShapeElement {
         self.svgLayer.path = polylinePath.cgPath
     }
     
+    /// :nodoc:
     func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
             return
