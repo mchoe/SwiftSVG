@@ -36,7 +36,9 @@
 
 
 
-
+/**
+ A struct that represents a single transformation that can then be combined with other `Transform`s 
+ */
 struct Transform {
     
     let affineTransform: CGAffineTransform
@@ -123,18 +125,25 @@ private struct TransformableConstants {
 /**
  A protocol that describes an instance that can be transformed via an SVG element's `transform` attribute. Currently, `matrix`, `rotate`, `scale`, `skewX`, and `skewY` are supported. A default implementation is supplied for `SVGContainerElement`s that sets the `affineTransform` of the container layer itself, not on all of its subelements.
  */
-
 public protocol Transformable {
     var layerToTransform: CALayer { get }
 }
 
 extension Transformable where Self : SVGContainerElement {
+    
+    /**
+     Default implementation for a `SVGContainerElement` that transforms the `containerLayer`
+     */
     var layerToTransform: CALayer {
         return self.containerLayer
     }
 }
 
-extension Transformable where Self: SVGShapeElement {
+extension Transformable where Self : SVGShapeElement {
+    
+    /**
+     Default implementation for a `SVGShapeElement` that transforms the `svgLayer`
+     */
     var layerToTransform: CALayer {
         return self.svgLayer
     }
@@ -142,12 +151,20 @@ extension Transformable where Self: SVGShapeElement {
 
 extension Transformable {
     
+    /**
+     The curried function to be used for the `SVGElement`'s default implementation. This dictionary is meant to be used in the `SVGParserSupportedElements` instance
+     - parameter Key: The SVG string value of the attribute
+     - parameter Value: A curried function to use to implement the SVG attribute
+     */
     var transformAttributes: [String : (String) -> ()] {
         return [
             "transform": self.transform,
         ]
     }
     
+    /**
+     Parses and applies the SVG transform string to this `SVGElement`'s `SVGLayer`. Can parse multiple transforms separated by spaces
+     */
     func transform(_ transformString: String) {
         
         do {

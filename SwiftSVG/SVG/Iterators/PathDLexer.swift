@@ -40,6 +40,9 @@
  */
 internal struct PathDConstants {
     
+    /**
+     Valid path letters that can be used in the path d string
+     */
     enum DCharacter: CChar {
         case A = 65
         case a = 97
@@ -66,6 +69,9 @@ internal struct PathDConstants {
         case space = 32
     }
     
+    /**
+     A dictionary that generates a new `PathCommand` based on the `CChar` value of the SVG path letter
+     */
     static let characterDictionary: [CChar : PathCommand] = [
         DCharacter.M.rawValue: MoveTo(pathType: .absolute),
         DCharacter.m.rawValue: MoveTo(pathType: .relative),
@@ -94,16 +100,29 @@ internal struct PathDConstants {
  */
 internal struct PathDLexer: IteratorProtocol, Sequence {
     
+    /**
+     Generates a `PathCommand`
+     */
     typealias Element = PathCommand
     
+    /// :nodoc:
     private var currentCharacter: CChar {
         return self.workingString[self.iteratorIndex]
     }
     
+    /// :nodoc:
     private var currentCommand: PathCommand? = nil
+    
+    /// :nodoc:
     private var iteratorIndex: Int = 0
+    
+    /// :nodoc:
     private var numberArray = [CChar]()
+    
+    /// :nodoc:
     private let pathString: String
+    
+    /// :nodoc:
     private let workingString: ContiguousArray<CChar>
     
     /**
@@ -114,10 +133,16 @@ internal struct PathDLexer: IteratorProtocol, Sequence {
         self.workingString = self.pathString.utf8CString
     }
     
+    /**
+     Required by Swift's `IteratorProtocol` that returns a new `PathDLexer`
+     */
     func makeIterator() -> PathDLexer {
         return PathDLexer(pathString: self.pathString)
     }
     
+    /**
+     Required by Swift's `IteratorProtocol` that returns the next `PathCommand` or nil if it's at the end of the sequence
+     */
     mutating func next() -> Element? {
         
         self.currentCommand?.clearBuffer()
@@ -173,6 +198,9 @@ internal struct PathDLexer: IteratorProtocol, Sequence {
         return nil
     }
     
+    /**
+     Adds a valid `Double` to the current `PathCommand` if possible
+     */
     mutating func pushCoordinateIfPossible(_ byteArray: [CChar]) {
         if byteArray.count == 0 {
             return

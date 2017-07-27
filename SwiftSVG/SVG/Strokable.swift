@@ -40,7 +40,6 @@
     1. `SVGShapeElement` - Will set the underlying `SVGLayer`'s stroke color, width, line cap, line join, and miter limit. Note that `SVGLayer is a subclass of `CAShapeLayer`, so this default implementation wil;l set the `CAShapeLayer`'s line properties and not the `CALayer`'s border attributes.
     2. `SVGGroup` - The default implementation just saves the attributes and values to be applied after all the subelements have been processed.
  */
-
 public protocol Strokable { }
 
 /**
@@ -57,6 +56,9 @@ enum LineCap: String {
     case butt, round, square
 }
 
+/**
+ Default implementation for stroke attributes on `SVGShapeElement`s
+ */
 extension Strokable where Self : SVGShapeElement {
     
     /**
@@ -136,8 +138,16 @@ extension Strokable where Self : SVGShapeElement {
 }
 
 
+/**
+ Default implementation for fill attributes on `SVGGroup`s
+ */
 extension Strokable where Self : SVGGroup {
     
+    /**
+     The curried functions to be used for the `SVGGroup`'s default implementation. This dictionary is meant to be used in the `SVGParserSupportedElements` instance
+     - parameter Key: The SVG string value of the attribute
+     - parameter Value: A curried function to use to implement the SVG attribute
+     */
     var strokeAttributes: [String : (String) -> ()] {
         return [
             "stroke": self.strokeColor,
@@ -148,24 +158,44 @@ extension Strokable where Self : SVGGroup {
         ]
     }
     
+    /**
+     Sets the stroke line cap of all subelements
+     - SeeAlso: CAShapeLayer's [`lineCap`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1521905-linecap) for supported values.
+     */
     internal func strokeLineCap(lineCap: String) {
-        self.attributesToApply["stroke-linecap"] = lineCap
+        self.delayedAttributes["stroke-linecap"] = lineCap
     }
     
+    /**
+     Sets the stroke color of all subelements
+     - SeeAlso: CAShapeLayer's [`strokeColor`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1521897-strokecolor)
+     */
     internal func strokeColor(strokeColor: String) {
-        self.attributesToApply["stroke"] = strokeColor
+        self.delayedAttributes["stroke"] = strokeColor
     }
     
+    /**
+     Sets the stroke line join of all subelements
+     - SeeAlso: CAShapeLayer's [`lineJoin`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1522147-linejoin)
+     */
     internal func strokeLineJoin(lineJoin: String) {
-        self.attributesToApply["stroke-linejoin"] = lineJoin
+        self.delayedAttributes["stroke-linejoin"] = lineJoin
     }
     
+    /**
+     Sets the stroke miter limit of all subelements
+     - SeeAlso: CAShapeLayer's [`miterLimit`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1521870-miterlimit)
+     */
     internal func strokeMiterLimit(miterLimit: String) {
-        self.attributesToApply["stroke-miterlimit"] = miterLimit
+        self.delayedAttributes["stroke-miterlimit"] = miterLimit
     }
     
+    /**
+     Sets the stroke width of all subelements
+     - SeeAlso: CAShapeLayer's [`strokeWidth`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1521890-linewidth)
+     */
     internal func strokeWidth(strokeWidth: String) {
-        self.attributesToApply["stroke-width"] = strokeWidth
+        self.delayedAttributes["stroke-width"] = strokeWidth
     }
     
 }

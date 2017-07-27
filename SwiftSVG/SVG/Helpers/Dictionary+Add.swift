@@ -31,7 +31,9 @@
 import Foundation
 
 
-
+/**
+ An extension that add the elements of one dictionary to another
+ */
 extension Dictionary {
     
     /**

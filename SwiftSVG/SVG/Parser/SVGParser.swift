@@ -35,17 +35,19 @@
 #endif
 
 
-
+/*
 struct SVGParseOptions: OptionSet {
     let rawValue: Int
     
     static let shouldParseAsynchronously = SVGParseOptions(rawValue: 1 << 0)
 }
+ */
+
+
 
 /**
  A protocol describing an XML parser capable of parsing SVG data
  */
-
 public protocol SVGParser {
     
     /**

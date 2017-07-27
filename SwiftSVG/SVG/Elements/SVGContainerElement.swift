@@ -38,14 +38,11 @@
  A protocol that describes an instance that can store SVG sublayers and can apply a single attributes to all sublayers.
  */
 
-public protocol SVGContainerElement: SVGElement, Fillable, Strokable, Transformable, Stylable {
+public protocol SVGContainerElement: SVGElement, DelaysApplyingAttributes, Fillable, Strokable, Transformable, Stylable {
     
-    /// The layer that stores all the SVG sublayers
+    /**
+     The layer that stores all the SVG sublayers
+     */
     var containerLayer: CALayer { get set }
-    
-    /// The attributes to apply to all sublayers after all subelements have been processed.
-    /// - parameter Key: The name of an element's attribute such as `d`, `fill`, and `rx`.
-    /// - parameter Value: The string value of the attribute passed from the parser, such as `"#ff00ee"`
-    var attributesToApply: [String : String] { get set }
 }
 

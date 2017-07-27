@@ -39,9 +39,11 @@
     1. `SVGShapeElement` - Will set the fill color, fill opacity, and fill rule on the underlying `SVGLayer` which is a subclass of `CAShapeLayer`
     2. `SVGGroup` - Will set the fill color, fill opacity, and fill rule of all of a `SVGGroup`'s subelements
  */
-
 public protocol Fillable { }
 
+/**
+ Default implementation for fill attributes on `SVGShapeElement`s
+ */
 extension Fillable where Self : SVGShapeElement {
     
     /**
@@ -100,7 +102,9 @@ extension Fillable where Self : SVGShapeElement {
 }
 
 
-
+/**
+ Default implementation for fill attributes on `SVGGroup`s
+ */
 extension Fillable where Self : SVGGroup {
     
     ///The curried functions to be used for the `SVGGroup`'s default implementation. This dictionary is meant to be used in the `SVGParserSupportedElements` instance
@@ -114,9 +118,11 @@ extension Fillable where Self : SVGGroup {
         ]
     }
     
-    /// Sets the fill color for all subelements of the `SVGGroup`
+    /**
+     Sets the fill color for all subelements of the `SVGGroup`
+     */
     func fill(fillColor: String) {
-        self.attributesToApply["fill"] = fillColor
+        self.delayedAttributes["fill"] = fillColor
     }
     
     /**
@@ -124,14 +130,14 @@ extension Fillable where Self : SVGGroup {
      - SeeAlso: Core Animation's [Shape Fill Mode Value](https://developer.apple.com/documentation/quartzcore/cashapelayer/shape_fill_mode_values)
      */
     func fillRule(fillRule: String) {
-        self.attributesToApply["fill-rule"] = fillRule
+        self.delayedAttributes["fill-rule"] = fillRule
     }
     
     /**
      Sets the fill opacity for all subelements of the `SVGGroup` through its CGColor, not the CALayer's opacity property.
      */
     func fillOpacity(opacity: String) {
-        self.attributesToApply["opacity"] = opacity
+        self.delayedAttributes["opacity"] = opacity
     }
     
 }

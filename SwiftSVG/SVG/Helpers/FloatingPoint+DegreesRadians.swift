@@ -30,6 +30,9 @@
 
 import Foundation
 
+/**
+ Extension that converts a `FloatingPoint` to and from radians and degrees
+ */
 extension FloatingPoint {
     
     /**

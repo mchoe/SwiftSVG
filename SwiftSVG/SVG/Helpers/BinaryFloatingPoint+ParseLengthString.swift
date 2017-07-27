@@ -30,6 +30,9 @@
 
 import Foundation
 
+/**
+ Extension that takes a length string, e.g. `100px`, `20mm` and parses it into a `BinaryFloatingPoint` (e.g. `Float`, `Double`, `CGFloat`)
+ */
 extension BinaryFloatingPoint {
     
     /**

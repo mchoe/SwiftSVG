@@ -64,8 +64,10 @@ public protocol SVGElement {
      */
     static var elementName: String { get }
     
-    /// Dictionary of attributes of a given element that are supported by the `SVGParser`. Keys are the name of an element's attribute such as `d`, `fill`, and `rx`. Values are a closure that is used to process the given attribute.
-    var supportedAttributes: [String : ((String) -> ())?] { get set }
+    /**
+     Dictionary of attributes of a given element that are supported by the `SVGParser`. Keys are the name of an element's attribute such as `d`, `fill`, and `rx`. Values are a closure that is used to process the given attribute.
+     */
+    var supportedAttributes: [String : (String) -> ()] { get set }
     
     
     /**
