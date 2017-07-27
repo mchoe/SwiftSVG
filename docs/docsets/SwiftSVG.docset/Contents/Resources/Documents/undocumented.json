@@ -8,6 +8,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/DelaysApplyingAttributes.swift",
+      "line": 50,
+      "symbol": "DelaysApplyingAttributes.applyDelayedAttributes()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Stack.swift",
       "line": 39,
       "symbol": "StackType.items",

@@ -45,8 +45,14 @@ public protocol DelaysApplyingAttributes {
     var delayedAttributes: [String : String] { get set }
 }
 
+/**
+ An extension that applies and saved and supported attributes
+ */
 extension DelaysApplyingAttributes where Self : SVGElement {
     
+    /**
+     Applies any saved and supported attributes
+     */
     func applyDelayedAttributes() {
         for (attribute, value) in self.delayedAttributes {
             guard let closure = self.supportedAttributes[attribute] else {
