@@ -39,14 +39,16 @@
  */
 public protocol DelaysApplyingAttributes {
     
-    /// The attributes to apply to all sublayers after all subelements have been processed.
-    /// - parameter Key: The name of an element's attribute such as `d`, `fill`, and `rx`.
-    /// - parameter Value: The string value of the attribute passed from the parser, such as `"#ff00ee"`
+    /**
+     The attributes to apply to all sublayers after all subelements have been processed.
+     - parameter Key: The name of an element's attribute such as `d`, `fill`, and `rx`.
+     - parameter Value: The string value of the attribute passed from the parser, such as `"#ff00ee"`
+     */
     var delayedAttributes: [String : String] { get set }
 }
 
 /**
- An extension that applies and saved and supported attributes
+ An extension that applies any saved and supported attributes
  */
 extension DelaysApplyingAttributes where Self : SVGElement {
     

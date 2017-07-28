@@ -70,7 +70,7 @@ public struct SVGParserSupportedElements {
     }
     
     /**
-     A configuration that is the full set of elements and attributes that SwiftSVG supports. This is the default configuration for the NSXMLSVGParser.
+     A configuration that is the full set of elements and attributes that SwiftSVG supports. This is the default configuration for the `NSXMLSVGParser`.
      */
     static var allSupportedElements: SVGParserSupportedElements {
         let supportedElements: [String : ElementGenerator] = [

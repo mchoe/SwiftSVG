@@ -84,6 +84,10 @@
 		3807CCF11F29940A00E78314 /* Strokable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3807CCED1F29940A00E78314 /* Strokable.swift */; };
 		3807CCF21F29940A00E78314 /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3807CCEE1F29940A00E78314 /* Stylable.swift */; };
 		3807CCF31F29940A00E78314 /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3807CCEF1F29940A00E78314 /* Transformable.swift */; };
+		3807CCF41F29998E00E78314 /* Fillable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3807CCEC1F29940A00E78314 /* Fillable.swift */; };
+		3807CCF51F29998E00E78314 /* Strokable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3807CCED1F29940A00E78314 /* Strokable.swift */; };
+		3807CCF61F29998E00E78314 /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3807CCEE1F29940A00E78314 /* Stylable.swift */; };
+		3807CCF71F29998E00E78314 /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3807CCEF1F29940A00E78314 /* Transformable.swift */; };
 		380FECF81F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */; };
 		380FED331F00FEF000EDB255 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FED321F00FEF000EDB255 /* PerformanceTests.swift */; };
 		380FED401F0100C200EDB255 /* FloatingPoint+DegreesRadians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */; };
@@ -587,6 +591,7 @@
 				38048F2A1F23DDE700179C95 /* SVGRectangleTests.swift in Sources */,
 				176BC9F71EE6310300F7B54C /* CoordinateLexerTests.swift in Sources */,
 				38048F3E1F24214400179C95 /* CALayer+SVG.swift in Sources */,
+				3807CCF51F29998E00E78314 /* Strokable.swift in Sources */,
 				17CCE73F1EE66CE9007FA5AD /* SVGPolygon.swift in Sources */,
 				176BC99C1EE475EE00F7B54C /* FloatingPointParseLengthStringTests.swift in Sources */,
 				176BC9DC1EE51AA600F7B54C /* String+Subscript.swift in Sources */,
@@ -617,7 +622,9 @@
 				3807CCEB1F286B1B00E78314 /* DelaysApplyingAttributes.swift in Sources */,
 				38048F1E1F23DD1E00179C95 /* SVGEllipseTests.swift in Sources */,
 				38048F241F23DD7D00179C95 /* SVGPathTests.swift in Sources */,
+				3807CCF61F29998E00E78314 /* Stylable.swift in Sources */,
 				176BC9E11EE51AE500F7B54C /* Dictionary+Add.swift in Sources */,
+				3807CCF71F29998E00E78314 /* Transformable.swift in Sources */,
 				380FED7B1F07F5B900EDB255 /* DispatchQueue+Extensions.swift in Sources */,
 				176BC9AB1EE4872400F7B54C /* SVGElement.swift in Sources */,
 				38048F2E1F23E81700179C95 /* DictionaryAddTests.swift in Sources */,
@@ -640,6 +647,7 @@
 				176BC9E81EE51AF600F7B54C /* SVGShapeElement.swift in Sources */,
 				176BC9E01EE51ADA00F7B54C /* Stack.swift in Sources */,
 				38311C4E1F174CB800E876EC /* SVGCache.swift in Sources */,
+				3807CCF41F29998E00E78314 /* Fillable.swift in Sources */,
 				381E99AB1EF801DA00839918 /* PathDLexer.swift in Sources */,
 				176BC9A61EE484BE00F7B54C /* BinaryFloatingPoint+ParseLengthString.swift in Sources */,
 				381E99B61EF8CCCC00839918 /* PathDLexerTests.swift in Sources */,

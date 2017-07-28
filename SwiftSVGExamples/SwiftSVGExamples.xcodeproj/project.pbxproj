@@ -16,6 +16,8 @@
 		176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9CC1EE4C44E00F7B54C /* lines.svg */; };
 		176BC9CE1EE4C44E00F7B54C /* lines.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9CC1EE4C44E00F7B54C /* lines.svg */; };
 		176BC9FF1EE63FAB00F7B54C /* polylines.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9FE1EE63FAB00F7B54C /* polylines.svg */; };
+		3807CCFB1F2AEF3A00E78314 /* tea.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3807CCFA1F2AEF3A00E78314 /* tea.svg */; };
+		3807CCFD1F2AF26400E78314 /* fistBump.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3807CCFC1F2AF26400E78314 /* fistBump.svg */; };
 		380FECF61EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */; };
 		380FED041F00171B00EDB255 /* openclipart-1290111299.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */; };
 		380FED061F00171B00EDB255 /* openclipart-1332611679.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */; };
@@ -34,7 +36,6 @@
 		380FED6B1F06984900EDB255 /* decorativeblob.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED6A1F06984900EDB255 /* decorativeblob.svg */; };
 		3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */; };
 		3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */; };
-		3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3813ED551EFC6F1B0054ECBD /* fistBump.svg */; };
 		381E99C31EFA0DC400839918 /* polygons.svg in Resources */ = {isa = PBXBuildFile; fileRef = 381E99C21EFA0DC400839918 /* polygons.svg */; };
 		3870903C1F0C32AE00F72660 /* error.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3870903B1F0C32AE00F72660 /* error.svg */; };
 		3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */; };
@@ -62,7 +63,6 @@
 		388215991F133A5400C192A3 /* hawaiiFlowers.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED491F02064900EDB255 /* hawaiiFlowers.svg */; };
 		38A1CE101EF77A0F00D2E54E /* triangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38A1CE0F1EF77A0F00D2E54E /* triangle.svg */; };
 		8AC4DBC01CB37DB800137DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */; };
-		8AC4DBC21CB37DB800137DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBC11CB37DB800137DC9 /* ViewController.swift */; };
 		8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBC31CB37DB800137DC9 /* Main.storyboard */; };
 		8AC4DBC71CB37DB800137DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBC61CB37DB800137DC9 /* Assets.xcassets */; };
 		8AC4DBCA1CB37DB800137DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBC81CB37DB800137DC9 /* LaunchScreen.storyboard */; };
@@ -125,6 +125,8 @@
 		176BC9C61EE4C1AB00F7B54C /* ellipses.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ellipses.svg; sourceTree = "<group>"; };
 		176BC9CC1EE4C44E00F7B54C /* lines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lines.svg; sourceTree = "<group>"; };
 		176BC9FE1EE63FAB00F7B54C /* polylines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polylines.svg; sourceTree = "<group>"; };
+		3807CCFA1F2AEF3A00E78314 /* tea.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = tea.svg; sourceTree = "<group>"; };
+		3807CCFC1F2AF26400E78314 /* fistBump.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fistBump.svg; sourceTree = "<group>"; };
 		380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-motivo_geometrico_archit_01.svg"; sourceTree = "<group>"; };
 		380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1290111299.svg"; sourceTree = "<group>"; };
 		380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1332611679.svg"; sourceTree = "<group>"; };
@@ -143,7 +145,6 @@
 		380FED6A1F06984900EDB255 /* decorativeblob.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = decorativeblob.svg; sourceTree = "<group>"; };
 		3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-zanzara_architetto_fran_03r.svg"; sourceTree = "<group>"; };
 		3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-tux.svg"; sourceTree = "<group>"; };
-		3813ED551EFC6F1B0054ECBD /* fistBump.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fistBump.svg; sourceTree = "<group>"; };
 		381E99C21EFA0DC400839918 /* polygons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polygons.svg; sourceTree = "<group>"; };
 		3870903B1F0C32AE00F72660 /* error.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = error.svg; sourceTree = "<group>"; };
 		3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1346768588.svg"; sourceTree = "<group>"; };
@@ -167,7 +168,6 @@
 		38A1CE0F1EF77A0F00D2E54E /* triangle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = triangle.svg; sourceTree = "<group>"; };
 		8AC4DBBD1CB37DB800137DC9 /* SwiftSVGExampleiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSVGExampleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8AC4DBC11CB37DB800137DC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8AC4DBC41CB37DB800137DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AC4DBC61CB37DB800137DC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AC4DBC91CB37DB800137DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -285,7 +285,6 @@
 				38311C501F1BE36500E876EC /* Root VC */,
 				38311C511F1BE37900E876EC /* Various Renderings */,
 				8AC4DBBF1CB37DB800137DC9 /* AppDelegate.swift */,
-				8AC4DBC11CB37DB800137DC9 /* ViewController.swift */,
 				8AC4DBC31CB37DB800137DC9 /* Main.storyboard */,
 				8AC4DBC61CB37DB800137DC9 /* Assets.xcassets */,
 				8AC4DBC81CB37DB800137DC9 /* LaunchScreen.storyboard */,
@@ -309,6 +308,7 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3807CCFA1F2AEF3A00E78314 /* tea.svg */,
 				3882153C1F12DEB000C192A3 /* George_Kerr_Anderson_Patent_1885_1.svg */,
 				3870903B1F0C32AE00F72660 /* error.svg */,
 				380FED6A1F06984900EDB255 /* decorativeblob.svg */,
@@ -334,8 +334,8 @@
 				387B0C6A1F1155680085E51A /* sockPuppet.svg */,
 				176BC9AF1EE48D3C00F7B54C /* circles.svg */,
 				176BC9C61EE4C1AB00F7B54C /* ellipses.svg */,
-				3813ED551EFC6F1B0054ECBD /* fistBump.svg */,
 				176BC9FE1EE63FAB00F7B54C /* polylines.svg */,
+				3807CCFC1F2AF26400E78314 /* fistBump.svg */,
 				381E99C21EFA0DC400839918 /* polygons.svg */,
 				176BC9CC1EE4C44E00F7B54C /* lines.svg */,
 				176BC9B81EE49C7200F7B54C /* rectangles.svg */,
@@ -467,9 +467,9 @@
 				381E99C31EFA0DC400839918 /* polygons.svg in Resources */,
 				380FED671F06951100EDB255 /* tiger.svg in Resources */,
 				3876E9651EFCC16500F8C04E /* berlin.svg in Resources */,
+				3807CCFB1F2AEF3A00E78314 /* tea.svg in Resources */,
 				380FED221F0036F400EDB255 /* rabbitcowboy.svg in Resources */,
 				380FED651F06946500EDB255 /* Dulcimer.svg in Resources */,
-				3813ED561EFC6F1B0054ECBD /* fistBump.svg in Resources */,
 				3882153D1F12DEB000C192A3 /* George_Kerr_Anderson_Patent_1885_1.svg in Resources */,
 				380FED5B1F06907600EDB255 /* johnny-automatic-open-mouth.svg in Resources */,
 				380FECF61EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg in Resources */,
@@ -496,6 +496,7 @@
 				8AC4DBCA1CB37DB800137DC9 /* LaunchScreen.storyboard in Resources */,
 				380FED611F0692E500EDB255 /* Fyodor-Dostoevsky.svg in Resources */,
 				387B0C6B1F1155680085E51A /* sockPuppet.svg in Resources */,
+				3807CCFD1F2AF26400E78314 /* fistBump.svg in Resources */,
 				380FED081F00171B00EDB255 /* openclipart-angry-coder.svg in Resources */,
 				8AC4DBC71CB37DB800137DC9 /* Assets.xcassets in Resources */,
 				8AC4DBC51CB37DB800137DC9 /* Main.storyboard in Resources */,
@@ -534,7 +535,6 @@
 				387B0C5F1F107E5B0085E51A /* StartViewController.swift in Sources */,
 				387B0C671F109FA30085E51A /* VariousViewController.swift in Sources */,
 				176BC9BF1EE4BC6400F7B54C /* SingleSVGViewController.swift in Sources */,
-				8AC4DBC21CB37DB800137DC9 /* ViewController.swift in Sources */,
 				387B0C631F108ECD0085E51A /* GithubViewController.swift in Sources */,
 				8AC4DBC01CB37DB800137DC9 /* AppDelegate.swift in Sources */,
 				387B0C611F1083D70085E51A /* StartCell.swift in Sources */,
