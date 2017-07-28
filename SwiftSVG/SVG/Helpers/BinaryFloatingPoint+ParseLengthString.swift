@@ -38,7 +38,7 @@ extension BinaryFloatingPoint {
     /**
      Parses a number string with optional suffix, such as `px`, `mm`
      */
-    init?(lengthString: String) {
+    internal init?(lengthString: String) {
         
         let simpleNumberClosure: (String) -> Double? = { (string) -> Double? in
             return Double(string)

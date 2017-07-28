@@ -39,13 +39,14 @@ import AppKit
 /**
  A set of convenience initializers that create new `UIView` instances from SVG data
  */
-extension UIView {
+public extension UIView {
     
     /**
      Convenience initializer that instantiates a new `UIView` instance with a single path `d` string. The path will be parsed synchronously.
      ```
      let view = UIView(pathString: "M20 30 L30 10 l10 10")
      ```
+     - Parameter pathString: The path `d` string to parse.
      */
     public convenience init(pathString: String) {
         self.init()
@@ -64,6 +65,9 @@ extension UIView {
      ```
      let view = UIView(SVGNamed: "hawaiiFlowers")
      ```
+     - Parameter SVGNamed: The name of the SVG resource in the main bundle with an `.svg` extension.
+     - Parameter parser: The optional parser to use to parse the SVG file
+     - Parameter completion: A required completion block to execute once the SVG has completed parsing. The passed `SVGLayer` will be added to this view's sublayers before executing the completion block
      */
     public convenience init(SVGNamed: String, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
         guard let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") else {
@@ -87,6 +91,9 @@ extension UIView {
         // Do something with the passed svgLayer
      }
      ```
+     - Parameter SVGURL: The local or remote `URL` of the SVG resource
+     - Parameter parser: The optional parser to use to parse the SVG file
+     - Parameter completion: A required completion block to execute once the SVG has completed parsing. The passed `SVGLayer` will be added to this view's sublayers before executing the completion block
      */
     public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
         
@@ -106,6 +113,9 @@ extension UIView {
      ```
      let view = UIView(SVGData: svgData)
      ```
+     - Parameter SVGData: The SVG `Data` to be parsed
+     - Parameter parser: The optional parser to use to parse the SVG file
+     - Parameter completion: A required completion block to execute once the SVG has completed parsing. The passed `SVGLayer` will be added to this view's sublayers before executing the completion block
      */
 	public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
 		self.init()

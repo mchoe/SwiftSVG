@@ -37,7 +37,7 @@ extension CGFloat {
     /**
      Initializer that creates a new CGFloat from a String
      */
-    init?(_ string: String) {
+    internal init?(_ string: String) {
         guard let asDouble = Double(string) else {
             return nil
         }
@@ -47,7 +47,7 @@ extension CGFloat {
     /**
      Initializer that creates a new CGFloat from a Character byte array with the option to set the base.
      */
-    init?(byteArray: [CChar], base: Int32 = 10) {
+    internal init?(byteArray: [CChar], base: Int32 = 10) {
         var nullTerminated = byteArray
         nullTerminated.append(0)
         self.init(strtol(nullTerminated, nil, base))
@@ -61,7 +61,7 @@ extension Float {
     /**
      Initializer that creates a new Float from a Character byte array
      */
-    init?(byteArray: [CChar]) {
+    internal init?(byteArray: [CChar]) {
         
         guard byteArray.count > 0 else {
             return nil
@@ -83,7 +83,7 @@ extension Double {
     /**
      Initializer that creates a new Double from a Character byte array
      */
-    init?(byteArray: [CChar]) {
+    internal init?(byteArray: [CChar]) {
         
         guard byteArray.count > 0 else {
             return nil

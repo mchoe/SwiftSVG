@@ -41,13 +41,13 @@
 struct SVGPolygon: SVGShapeElement {
     
     /// :nodoc:
-    static let elementName = "polygon"
+    internal static let elementName = "polygon"
     
     /// :nodoc:
-    var supportedAttributes: [String : (String) -> ()] = [:]
+    internal var supportedAttributes: [String : (String) -> ()] = [:]
     
     /// :nodoc:
-    var svgLayer = CAShapeLayer()
+    internal var svgLayer = CAShapeLayer()
     
     /**
      Function that parses a coordinate string and creates a polygon path
@@ -66,7 +66,7 @@ struct SVGPolygon: SVGShapeElement {
     }
     
     /// :nodoc:
-    func didProcessElement(in container: SVGContainerElement?) {
+    internal func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
             return
         }

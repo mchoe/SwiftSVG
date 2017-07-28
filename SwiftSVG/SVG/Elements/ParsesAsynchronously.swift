@@ -41,6 +41,7 @@
 protocol CanManageAsychronousParsing {
     /**
      The callback called when an `ParsesAsynchronously` element has finished parsing
+     - Parameter shapeLayer: The completed layer
      */
     func finishedProcessing(_ shapeLayer: CAShapeLayer)
 }

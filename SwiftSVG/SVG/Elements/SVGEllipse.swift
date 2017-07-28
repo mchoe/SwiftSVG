@@ -40,7 +40,7 @@
 final class SVGEllipse: SVGShapeElement {
     
     /// :nodoc:
-    static let elementName = "ellipse"
+    internal static let elementName = "ellipse"
     
     /**
      The ellipse's center point. Defaults to `CGRect.zero`
@@ -106,7 +106,7 @@ final class SVGEllipse: SVGShapeElement {
     /**
      Function that is called after the ellipse's center and radius have been parsed and set. This function creates the path and sets the internal `SVGLayer`'s path.
      */
-    func didProcessElement(in container: SVGContainerElement?) {
+    internal func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
             return
         }

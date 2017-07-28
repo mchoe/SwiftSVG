@@ -8,10 +8,66 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/DelaysApplyingAttributes.swift",
-      "line": 50,
-      "symbol": "DelaysApplyingAttributes.applyDelayedAttributes()",
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
+      "line": 49,
+      "symbol": "LineJoin.bevel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
+      "line": 49,
+      "symbol": "LineJoin.miter",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
+      "line": 49,
+      "symbol": "LineJoin.round",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
+      "line": 56,
+      "symbol": "LineCap.butt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
+      "line": 56,
+      "symbol": "LineCap.round",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
+      "line": 56,
+      "symbol": "LineCap.square",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Transformable.swift",
+      "line": 44,
+      "symbol": "Transform.affineTransform",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Transformable.swift",
+      "line": 46,
+      "symbol": "Transform.init(rawValue:coordinatesString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Transformable.swift",
+      "line": 129,
+      "symbol": "Transformable.layerToTransform",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -236,69 +292,6 @@
       "line": 55,
       "symbol": "NSXMLSVGParser.SVGParserError.invalidURL",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 49,
-      "symbol": "LineJoin.bevel",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 49,
-      "symbol": "LineJoin.miter",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 49,
-      "symbol": "LineJoin.round",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 56,
-      "symbol": "LineCap.butt",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 56,
-      "symbol": "LineCap.round",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Strokable.swift",
-      "line": 56,
-      "symbol": "LineCap.square",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Transformable.swift",
-      "line": 44,
-      "symbol": "Transform.affineTransform",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Transformable.swift",
-      "line": 46,
-      "symbol": "Transform.init(rawValue:coordinatesString:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Transformable.swift",
-      "line": 129,
-      "symbol": "Transformable.layerToTransform",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {

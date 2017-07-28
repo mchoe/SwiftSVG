@@ -41,10 +41,11 @@ public protocol SVGLayerType {
     var boundingBox: CGRect { get }
 }
 
-extension SVGLayerType where Self: CALayer {
+public extension SVGLayerType where Self: CALayer {
     
     /**
      Scales a layer to aspect fit the given size.
+     - Parameter rect: The `CGRect` to fit into
      - TODO: Should eventually support different content modes
      */
     @discardableResult
@@ -80,12 +81,12 @@ open class SVGLayer: CAShapeLayer, SVGLayerType {
     public var boundingBox = CGRect.zero
 }
 
-extension SVGLayer {
+public extension SVGLayer {
     
     /**
      Returns a copy of the given SVGLayer
      */
-    var svgLayerCopy: SVGLayer {
+    public var svgLayerCopy: SVGLayer {
         let tmp = NSKeyedArchiver.archivedData(withRootObject: self)
         let copiedLayer = NSKeyedUnarchiver.unarchiveObject(with: tmp) as! SVGLayer
         copiedLayer.boundingBox = self.boundingBox

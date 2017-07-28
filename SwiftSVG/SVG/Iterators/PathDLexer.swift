@@ -136,14 +136,14 @@ internal struct PathDLexer: IteratorProtocol, Sequence {
     /**
      Required by Swift's `IteratorProtocol` that returns a new `PathDLexer`
      */
-    func makeIterator() -> PathDLexer {
+    internal func makeIterator() -> PathDLexer {
         return PathDLexer(pathString: self.pathString)
     }
     
     /**
      Required by Swift's `IteratorProtocol` that returns the next `PathCommand` or nil if it's at the end of the sequence
      */
-    mutating func next() -> Element? {
+    internal mutating func next() -> Element? {
         
         self.currentCommand?.clearBuffer()
         
@@ -201,7 +201,7 @@ internal struct PathDLexer: IteratorProtocol, Sequence {
     /**
      Adds a valid `Double` to the current `PathCommand` if possible
      */
-    mutating func pushCoordinateIfPossible(_ byteArray: [CChar]) {
+    private mutating func pushCoordinateIfPossible(_ byteArray: [CChar]) {
         if byteArray.count == 0 {
             return
         }

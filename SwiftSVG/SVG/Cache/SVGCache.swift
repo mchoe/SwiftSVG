@@ -39,13 +39,13 @@
 open class SVGCache {
     
     /// A singleton object that is the default store for `SVGlayer`s
-    static let `default` = SVGCache()
+    public static let `default` = SVGCache()
     
     /// :nodoc:
-    private let memoryCache = NSCache<NSString, SVGLayer>()
+    public let memoryCache = NSCache<NSString, SVGLayer>()
     
     /// Subscript to get or set the `SVGLayer` in this cache
-    subscript(key: String) -> SVGLayer? {
+    public subscript(key: String) -> SVGLayer? {
         get {
             return self.memoryCache.object(forKey: key as NSString)
         }

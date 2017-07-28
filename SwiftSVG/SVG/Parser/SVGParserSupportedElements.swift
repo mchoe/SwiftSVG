@@ -38,14 +38,14 @@ public struct SVGParserSupportedElements {
     /**
      Typealias that serves as a placeholder for a closure that returns a new `SVGElement` instance
      */
-    typealias ElementGenerator = () -> SVGElement
+    public typealias ElementGenerator = () -> SVGElement
     
     /**
      A dictionary of all the supported elements and attributes for a given parser.
      - Parameter Key: A string that matches the SVG attribute
      - Parameter Value: A curried function to use to handle the particular attribute
      */
-    let tags: [String : ElementGenerator]
+    public let tags: [String : ElementGenerator]
     
     /**
      A configuration that will only parse `<path>` elements and the `d` and `fill attributes`. Use this configuration if you know you will only be parsing `<path>` elements with fill colors
@@ -72,7 +72,7 @@ public struct SVGParserSupportedElements {
     /**
      A configuration that is the full set of elements and attributes that SwiftSVG supports. This is the default configuration for the `NSXMLSVGParser`.
      */
-    static var allSupportedElements: SVGParserSupportedElements {
+    public static var allSupportedElements: SVGParserSupportedElements {
         let supportedElements: [String : ElementGenerator] = [
             SVGCircle.elementName: {
                 let returnElement = SVGCircle()
@@ -111,12 +111,13 @@ public struct SVGParserSupportedElements {
                 //
                 // https://stackoverflow.com/questions/37488316/partial-application-of-mutating-method-is-not-allowed
                 
-                
+                /*
                 returnElement.supportedAttributes = [
                     "fill": returnElement.fill,
                     "fill-rule": returnElement.fillRule,
                     "opacity": returnElement.fillOpacity,
                 ]
+                */
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.styleAttributes)

@@ -38,10 +38,11 @@
  Convenience initializer that can parse a single path string and returns a `UIBezierPath`
  */
 
-extension UIBezierPath {
+public extension UIBezierPath {
     
     /**
-     Parses a single path string. Parses synchronously
+     Parses a single path string. Parses synchronously.
+     - Parameter pathString: The path `d` string to parse.
      */
     public convenience init(pathString: String) {
         let singlePath = SVGPath(singlePathString: pathString)

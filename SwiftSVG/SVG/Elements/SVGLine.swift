@@ -42,23 +42,23 @@
 final class SVGLine: SVGShapeElement {
     
     /// :nodoc:
-    static let elementName = "line"
+    internal static let elementName = "line"
     
     /**
      The line's end point. Defaults to `CGPoint.zero`
      */
-    var end = CGPoint.zero
+    internal var end = CGPoint.zero
     
     /**
      The line's end point. Defaults to `CGPoint.zero`
      */
-    var start = CGPoint.zero
+    internal var start = CGPoint.zero
     
     /// :nodoc:
-    var svgLayer = CAShapeLayer()
+    internal var svgLayer = CAShapeLayer()
     
     /// :nodoc:
-    var supportedAttributes: [String : (String) -> ()] = [:]
+    internal var supportedAttributes: [String : (String) -> ()] = [:]
     
     /**
      Function parses a number string and sets this line's start `x`
@@ -103,7 +103,7 @@ final class SVGLine: SVGShapeElement {
     /**
      Draws a line from the `startPoint` to the `endPoint`
      */
-    func didProcessElement(in container: SVGContainerElement?) {
+    internal func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
             return
         }

@@ -54,7 +54,8 @@ open class SVGView : UIView {
     /**
      The name of the SVG file in the main bundle
      */
-    @IBInspectable open var SVGName: String? {
+    @IBInspectable
+    open var SVGName: String? {
         didSet {
             guard let thisName = self.SVGName else {
                 return

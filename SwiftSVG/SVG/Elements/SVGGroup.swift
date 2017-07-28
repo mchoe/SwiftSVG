@@ -53,7 +53,7 @@ final class SVGGroup: SVGContainerElement {
     ]
     
     /// :nodoc:
-    static let elementName = "g"
+    internal static let elementName = "g"
     
     /// Store all attributes and values to be applied after all known sublayers have been added to this container
     internal var delayedAttributes = [String : String]()
@@ -67,7 +67,7 @@ final class SVGGroup: SVGContainerElement {
     /**
      The function that is called after all of this group's subelements have been processed. It will apply all stored `delayedAttributes` on all sublayers
      */
-    func didProcessElement(in container: SVGContainerElement?) {
+    internal func didProcessElement(in container: SVGContainerElement?) {
  
         guard let containerSublayers = self.containerLayer.sublayers else {
             return

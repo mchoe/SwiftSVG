@@ -40,29 +40,29 @@
 final class SVGPath: SVGShapeElement, ParsesAsynchronously, DelaysApplyingAttributes {
     
     /// :nodoc:
-    static let elementName = "path"
+    internal static let elementName = "path"
     
     /**
      Attributes that are applied after the path has been processed
      */
-    var delayedAttributes = [String : String]()
+    internal var delayedAttributes = [String : String]()
     
     /// :nodoc:
-    var asyncParseManager: CanManageAsychronousParsing? = nil
+    internal var asyncParseManager: CanManageAsychronousParsing? = nil
     
     /**
      Flag that sets whether the path should be parsed asynchronously or not
      */
-    var shouldParseAsynchronously = true
+    internal var shouldParseAsynchronously = true
     
     /// :nodoc:
-    var supportedAttributes = [String : (String) -> ()]()
+    internal var supportedAttributes = [String : (String) -> ()]()
     
     /// :nodoc:
-    var svgLayer = CAShapeLayer()
+    internal var svgLayer = CAShapeLayer()
     
     /// :nodoc:
-    init() { }
+    internal init() { }
     
     
     /**
@@ -72,7 +72,7 @@ final class SVGPath: SVGShapeElement, ParsesAsynchronously, DelaysApplyingAttrib
      ```
      - parameter singlePathString: The `d` attribute value of a `<path>` element
      */
-    init(singlePathString: String) {
+    internal init(singlePathString: String) {
         self.shouldParseAsynchronously = false
         self.parseD(singlePathString)
     }
@@ -99,10 +99,9 @@ final class SVGPath: SVGShapeElement, ParsesAsynchronously, DelaysApplyingAttrib
             if self.shouldParseAsynchronously {
                 
                 let concurrent = DispatchQueue(label: "com.straussmade.swiftsvg.path.concurrent", attributes: .concurrent)
-                let dispatchGroup = DispatchGroup()
                 
-                concurrent.async(group: dispatchGroup, execute: parsePathClosure)
-                dispatchGroup.notify(queue: DispatchQueue.main) {
+                concurrent.async(execute: parsePathClosure)
+                concurrent.async(flags: .barrier) {
                     self.svgLayer.path = pathDPath.cgPath
                     self.applyDelayedAttributes()
                     self.asyncParseManager?.finishedProcessing(self.svgLayer)
@@ -118,7 +117,7 @@ final class SVGPath: SVGShapeElement, ParsesAsynchronously, DelaysApplyingAttrib
     /**
      The clip rule for this path to be applied after the path has been parsed
      */
-    func clipRule(_ clipRule: String) {
+    internal func clipRule(_ clipRule: String) {
         guard let thisPath = self.svgLayer.path else {
             self.delayedAttributes["clip-rule"] = clipRule
             return
@@ -135,7 +134,7 @@ final class SVGPath: SVGShapeElement, ParsesAsynchronously, DelaysApplyingAttrib
     }
     
     /// :nodoc:
-    func didProcessElement(in container: SVGContainerElement?) {
+    internal func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
             return
         }

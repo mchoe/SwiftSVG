@@ -42,11 +42,13 @@
  
  If you choose to use these initializers, it is assumed that you would like to exercise a higher level of control. As such, you must provide a completion block and then add the passed `SVGLayer` to the layer of your choosing. Use the UIView extensions if you prefer the easier to use one-liner initializers.
  */
-
-extension CALayer {
+public extension CALayer {
     
     /**
      Convenience initializer that creates a new `CALayer` from a local or remote URL. You must provide a completion block and add the passed `SVGLayer to a sublayer`.
+     - Parameter SVGURL: The local or remote `URL` of the SVG resource
+     - Parameter parser: The optional parser to use to parse the SVG file
+     - Parameter completion: A required completion block to execute once the SVG has completed parsing. You must add the passed `SVGLayer` to a sublayer to display it.
      */
     @discardableResult
     public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: @escaping (SVGLayer) -> ()) {
@@ -60,6 +62,9 @@ extension CALayer {
     
     /**
      Convenience initializer that creates a new `CALayer` from SVG data. You must provide a completion block and add the passed `SVGLayer to a sublayer`.
+     - Parameter SVGData: The SVG `Data` to be parsed
+     - Parameter parser: The optional parser to use to parse the SVG file
+     - Parameter completion: A required completion block to execute once the SVG has completed parsing. You must add the passed `SVGLayer` to a sublayer to display it.
      */
     @discardableResult
     public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: @escaping (SVGLayer) -> ()) {

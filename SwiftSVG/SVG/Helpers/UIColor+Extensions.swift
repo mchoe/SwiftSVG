@@ -70,7 +70,7 @@ public extension UIColor {
      - Parameter svgString: A hex, integer functional, or named string
      - SeeAlso: See officially supported color formats: [https://www.w3.org/TR/SVGColor12/#sRGBcolor](https://www.w3.org/TR/SVGColor12/#sRGBcolor)
      */
-    convenience init?(svgString: String) {
+    internal convenience init?(svgString: String) {
         if svgString.hasPrefix("#") {
             self.init(hexString: svgString)
             return
@@ -94,7 +94,7 @@ public extension UIColor {
      - Parameter hexString: A 3 or 6 digit hex string
      - Parameter alpha: Optional alpha value
      */
-    convenience init?(hexString: String, alpha: CGFloat = 1.0) {
+    internal convenience init?(hexString: String, alpha: CGFloat = 1.0) {
         
         var workingString = hexString
         if workingString.hasPrefix("#") {
@@ -137,7 +137,7 @@ public extension UIColor {
     /**
      Convenience initializer that creates a new UIColor from a integer functional, taking the form `rgb(rrr, ggg, bbb)`
      */
-    convenience init(rgbString: String) {
+    internal convenience init(rgbString: String) {
         let valuesString = rgbString.characters.dropFirst(4).dropLast()
         self.init(colorValuesString: valuesString)
     }
@@ -145,7 +145,7 @@ public extension UIColor {
     /**
      Convenience initializer that creates a new UIColor from an integer functional, taking the form `rgba(rrr, ggg, bbb, <alphavalue>)`
      */
-    convenience init(rgbaString: String) {
+    internal convenience init(rgbaString: String) {
         let valuesString = rgbaString.characters.dropFirst(5).dropLast()
         self.init(colorValuesString: valuesString)
     }
@@ -164,7 +164,7 @@ public extension UIColor {
      Convenience initializer that creates a new UIColor from a CSS3 named color
      - SeeAlso: See here for all the colors: [https://www.w3.org/TR/css3-color/#svg-color](https://www.w3.org/TR/css3-color/#svg-color)
      */
-    convenience init?(named: String) {
+    public convenience init?(named: String) {
         guard let namedColor = CGColor.named[named] else {
             return nil
         }

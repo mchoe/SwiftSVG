@@ -303,7 +303,7 @@
     },
     {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVGExtensions/UIBezierPath+SVG.swift",
-      "line": 61,
+      "line": 62,
       "symbol": "UIBezierPath.pathWithSVGURL(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"

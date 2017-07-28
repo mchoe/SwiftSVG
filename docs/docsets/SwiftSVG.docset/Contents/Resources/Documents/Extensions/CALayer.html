@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           SwiftSVG Docs
         </a>
-         (85% documented)
+         (84% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -206,7 +206,7 @@
                 <a class="nav-group-task-link" href="../Structs/CurveTo.html">CurveTo</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/EllipticalArc.html">EllipticalArc</a>
+                <a class="nav-group-task-link" href="../Structs.html#/s:V8SwiftSVG13EllipticalArc">EllipticalArc</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/HorizontalLineTo.html">HorizontalLineTo</a>
@@ -309,6 +309,49 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>SVGURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The local or remote <code>URL</code> of the SVG resource</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The optional parser to use to parse the SVG file</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A required completion block to execute once the SVG has completed parsing. You must add the passed <code>SVGLayer</code> to a sublayer to display it.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -335,6 +378,49 @@
                           <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="kt">SVGData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">parser</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SVGParser.html">SVGParser</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/SVGLayer.html">SVGLayer</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>SVGData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The SVG <code>Data</code> to be parsed</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The optional parser to use to parse the SVG file</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A required completion block to execute once the SVG has completed parsing. You must add the passed <code>SVGLayer</code> to a sublayer to display it.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

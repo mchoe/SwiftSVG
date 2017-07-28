@@ -45,7 +45,7 @@ protocol StackType {
 /**
  A stack data structure
  */
-struct Stack<T>: StackType {
+internal struct Stack<T>: StackType {
     var items = [T]()
     init() { }
 }

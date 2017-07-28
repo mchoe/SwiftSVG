@@ -41,33 +41,33 @@
 final class SVGRectangle: SVGShapeElement {
     
     /// :nodoc:
-    static let elementName = "rect"
+    internal static let elementName = "rect"
     
     /**
      The CGRect for the rectangle
      */
-    var rectangleRect = CGRect()
+    internal var rectangleRect = CGRect()
     
     /// :nodoc:
-    var svgLayer = CAShapeLayer()
+    internal var svgLayer = CAShapeLayer()
     
     /// :nodoc:
-    var supportedAttributes: [String : (String) -> ()] = [:]
+    internal var supportedAttributes: [String : (String) -> ()] = [:]
     
     /**
      The x radius of the corner oval. Defaults to `0`
      */
-    var xCornerRadius = CGFloat(0.0)
+    internal var xCornerRadius = CGFloat(0.0)
     
     /**
      The y radius of the corner oval. Defaults to `0`
      */
-    var yCornerRadius = CGFloat(0.0)
+    internal var yCornerRadius = CGFloat(0.0)
     
     /**
      Function that parses the number string and sets this rectangle's origin x
      */
-    func parseX(x: String) {
+    internal func parseX(x: String) {
         guard let x = CGFloat(x) else {
             return
         }
@@ -77,7 +77,7 @@ final class SVGRectangle: SVGShapeElement {
     /**
      Function that parses the number string and sets this rectangle's origin y
      */
-    func parseY(y: String) {
+    internal func parseY(y: String) {
         guard let y = CGFloat(y) else {
             return
         }
@@ -87,7 +87,7 @@ final class SVGRectangle: SVGShapeElement {
     /**
      Function that parses the number string and sets this rectangle's height
      */
-    func rectangleHeight(height: String) {
+    internal func rectangleHeight(height: String) {
         guard let height = CGFloat(height) else {
             return
         }
@@ -97,7 +97,7 @@ final class SVGRectangle: SVGShapeElement {
     /**
      Function that parses the number string and sets this rectangle's width
      */
-    func rectangleWidth(width: String) {
+    internal func rectangleWidth(width: String) {
         guard let width = CGFloat(width) else {
             return
         }
@@ -107,7 +107,7 @@ final class SVGRectangle: SVGShapeElement {
     /**
      Function that parses the number string and sets this rectangle's x corner radius
      */
-    func xCornerRadius(xCornerRadius: String) {
+    internal func xCornerRadius(xCornerRadius: String) {
         guard let xCornerRadius = CGFloat(xCornerRadius) else {
             return
         }
@@ -117,7 +117,7 @@ final class SVGRectangle: SVGShapeElement {
     /**
      Function that parses the number string and sets this rectangle's y corner radius
      */
-    func yCornerRadius(yCornerRadius: String) {
+    internal func yCornerRadius(yCornerRadius: String) {
         guard let yCornerRadius = CGFloat(yCornerRadius) else {
             return
         }
@@ -127,7 +127,7 @@ final class SVGRectangle: SVGShapeElement {
     /**
      Creates a new rectangle path based on the set attributes.
      */
-    func didProcessElement(in container: SVGContainerElement?) {
+    internal func didProcessElement(in container: SVGContainerElement?) {
         guard let container = container else {
             return
         }

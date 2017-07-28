@@ -41,16 +41,16 @@
 struct SVGRootElement: SVGContainerElement {
     
     /// :nodoc:
-    static let elementName = "svg"
+    internal static let elementName = "svg"
     
     // :nodoc:
-    var delayedAttributes = [String : String]()
+    internal var delayedAttributes = [String : String]()
     
     // :nodoc:
-    var containerLayer = CALayer()
+    internal var containerLayer = CALayer()
     
     // :nodoc:
-    var supportedAttributes = [String : (String) -> ()]()
+    internal var supportedAttributes = [String : (String) -> ()]()
     
     /**
      Function that parses a number string and sets the `containerLayer`'s width
@@ -71,12 +71,12 @@ struct SVGRootElement: SVGContainerElement {
     }
     
     /// :nodoc:
-    func didProcessElement(in container: SVGContainerElement?) {
+    internal func didProcessElement(in container: SVGContainerElement?) {
         return
     }
     
     /// nodoc:
-    func viewBox(coordinates: String) {
+    internal func viewBox(coordinates: String) {
         let points = coordinates
             .components(separatedBy: CharacterSet(charactersIn: ", "))
             .flatMap { (thisString) -> Double? in
