@@ -14,7 +14,7 @@ Who Should Use SwiftSVG
 
 SwiftSVG is not meant to be a a full SVG parser. The library supports the most common use cases of flat, solid color SVG elements. It supports grouping and transformations and can parse all path and shape elements.
 
-If you need animation, text, or gradient support, you'll probably want to use a different framework. Having said that, gradients are high on the list of new features to come. Supporting animations and text are harder cases to make because there is already rich support in Cocoa.
+If you need animation, text, or gradient support, you'll probably want to use a different framework. Having said that, gradients are high on the list of new features to come. Supporting animations and text mayt or may never come seeing there is already rich support for those features in Cocoa.
 
 The best use case for SwiftSVG is for flat icons that you want to theme at runtime and have good control over. The library can handle complex paths though, and more importantly can handle them quickly. See the complex example in the examples app.
 

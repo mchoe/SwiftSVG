@@ -56,6 +56,11 @@ open class SVGCache {
             self.memoryCache.setObject(newValue, forKey: key as NSString)
         }
     }
+    
+    /// Removes the value from the cache
+    public func removeObject(key: String) {
+        self.memoryCache.removeObject(forKey: key as NSString)
+    }
 }
 
 

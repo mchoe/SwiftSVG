@@ -1,5 +1,5 @@
 //
-//  PerformanceTests.swift
+//  Data+CacheKey.swift
 //  SwiftSVG
 //
 //
@@ -28,32 +28,10 @@
 
 
 
-import XCTest
+import Foundation
 
-class PerformanceTests: XCTestCase {
-
-    func testSwiftSVG() {
-        
-        self.measureMetrics([XCTPerformanceMetric_WallClockTime], automaticallyStartMeasuring: true) {
-            
-            guard let resourceURL = Bundle(for: type(of: self)).url(forResource: "ukulele", withExtension: "svg") else {
-                XCTAssert(false, "Couldn't find resource")
-                return
-            }
-            
-            let asData = try! Data(contentsOf: resourceURL)
-            let expect = self.expectation(description: "SwiftSVG expectation")
-            _ = UIView(SVGData: asData) { (svgLayer) in
-                SVGCache.default.removeObject(key: asData.cacheKey)
-                expect.fulfill()
-            }
-            
-            self.waitForExpectations(timeout: 10) { error in
-                self.stopMeasuring()
-            }
-        }
-        
-        
+extension Data {
+    var cacheKey: String {
+        return "\(self.hashValue)-\(self.count)"
     }
-
 }

@@ -68,7 +68,7 @@ public protocol SVGParser {
     /// A `CALayer` that will house the finished sublayers of the SVG doc.
     var containerLayer: SVGLayer { get }
     
-    /// Starts parsing the SVG
+    /// Starts parsing the SVG. Allows you to separate initialization from parse start in case you want to set some things up first.
     func startParsing()
 }
 
