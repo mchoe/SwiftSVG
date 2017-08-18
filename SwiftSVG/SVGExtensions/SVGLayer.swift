@@ -86,10 +86,10 @@ public extension SVGLayer {
     /**
      Returns a copy of the given SVGLayer
      */
-    public var svgLayerCopy: SVGLayer {
+    public var svgLayerCopy: SVGLayer? {
         let tmp = NSKeyedArchiver.archivedData(withRootObject: self)
-        let copiedLayer = NSKeyedUnarchiver.unarchiveObject(with: tmp) as! SVGLayer
-        copiedLayer.boundingBox = self.boundingBox
+        let copiedLayer = NSKeyedUnarchiver.unarchiveObject(with: tmp) as? SVGLayer
+        copiedLayer?.boundingBox = self.boundingBox
         return copiedLayer
     }
 }

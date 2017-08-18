@@ -96,7 +96,6 @@ public extension UIView {
      - Parameter completion: A required completion block to execute once the SVG has completed parsing. The passed `SVGLayer` will be added to this view's sublayers before executing the completion block
      */
     public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
-        
         do {
             let svgData = try Data(contentsOf: SVGURL)
             self.init(SVGData: svgData, parser: parser, completion: completion)
@@ -117,10 +116,10 @@ public extension UIView {
      - Parameter parser: The optional parser to use to parse the SVG file
      - Parameter completion: A required completion block to execute once the SVG has completed parsing. The passed `SVGLayer` will be added to this view's sublayers before executing the completion block
      */
-	public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
+	public convenience init(SVGData svgData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
 		self.init()
         
-        CALayer(SVGData: SVGData, parser: parser) { [weak self] (svgLayer) in
+        CALayer(SVGData: svgData, parser: parser) { [weak self] (svgLayer) in
             DispatchQueue.main.safeAsync {
                 self?.nonOptionalLayer.addSublayer(svgLayer)
             }

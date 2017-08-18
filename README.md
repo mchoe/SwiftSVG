@@ -5,8 +5,8 @@ Key Features
 
 - Parsing performance that meets or beats other popular SVG Frameworks
 - Optimized for extension, flexibility and developer joy
-- A minimal cache for improved performance
 - Multiple interface options (UIBezierPath, CAShapeLayer, UIView, and IBDesignable Interface Builder subclass)
+- A minimal cache for improved performance
 - Tested and [documented](https://github.com/mchoe/SwiftSVG/blob/feature/2.0.0/docs/index.html)
 
 Who Should Use SwiftSVG
@@ -14,11 +14,11 @@ Who Should Use SwiftSVG
 
 SwiftSVG is not meant to be a a full SVG parser. The library supports the most common use cases of flat, solid color SVG elements. It supports grouping and transformations and can parse all path and shape elements.
 
-If you need animation, text, or gradient support, you'll probably want to use a different framework. Having said that, gradients are high on the list of new features to come. Supporting animations and text mayt or may never come seeing there is already rich support for those features in Cocoa.
+The best use case for SwiftSVG is for flat icons that you may want to theme at runtime and have good control over. Think icons for your app, especially if you offer light and dark themes. The library can handle complex paths, and more importantly can handle them quickly, so you can use it to display many SVGs, just not every single use case. See the complex example in the examples app.
 
-The best use case for SwiftSVG is for flat icons that you want to theme at runtime and have good control over. The library can handle complex paths though, and more importantly can handle them quickly. See the complex example in the examples app.
+At this time, gradients are not supported, but this is high on the list of features to support next. Furthermore, text is not supported at this time, but shouldn't be too difficult to support. Animations are the last major category that isn't supported, and they probably won't be in the near future seeing Cocoa already provides rich support.
 
-Finally, if you're looking to extend this project, that's another good reason to use SwiftSVG. A lot of work has been put into making the code as extensible and maintainable as possible and will continue to be a core feature of future updates.
+Finally, if you're looking to extend this project, that's another good reason to use SwiftSVG. A lot of work has been put into making the code as extensible and maintainable as possible and will continue to be a core feature of future updates. Fork the project and I hope you share your changes.
 
 Table of Contents
 -----------------

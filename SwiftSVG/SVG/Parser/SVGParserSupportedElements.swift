@@ -64,7 +64,6 @@ public struct SVGParserSupportedElements {
             SVGRootElement.elementName: {
                 return SVGRootElement()
             }
-            
         ]
         return SVGParserSupportedElements(tags: supportedElements)
     }
@@ -103,8 +102,8 @@ public struct SVGParserSupportedElements {
             },
             SVGGroup.elementName: {
                 let returnElement = SVGGroup()
-                returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
+                returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 returnElement.supportedAttributes.add(returnElement.styleAttributes)
                 returnElement.supportedAttributes.add(returnElement.transformAttributes)
                 return returnElement

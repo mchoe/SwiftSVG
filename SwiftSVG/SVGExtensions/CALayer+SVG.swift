@@ -89,7 +89,9 @@ public extension CALayer {
                 parserToUse = NSXMLSVGParser(SVGData: SVGData) { (svgLayer) in
                     
                     DispatchQueue.global(qos: .userInitiated).async {
-                        let layerCopy = svgLayer.svgLayerCopy
+                        guard let layerCopy = svgLayer.svgLayerCopy else {
+                            return
+                        }
                         SVGCache.default[SVGData.cacheKey] = layerCopy
                     }
                     
