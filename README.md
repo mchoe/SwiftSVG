@@ -7,7 +7,7 @@ Key Features
 - Optimized for extension, flexibility and developer joy
 - Multiple interface options (UIBezierPath, CAShapeLayer, UIView, and IBDesignable Interface Builder subclass)
 - A minimal cache for improved performance
-- Tested and [documented](https://github.com/mchoe/SwiftSVG/blob/feature/2.0.0/docs/index.html)
+- Tested and [documented](http://mchoe.github.io/SwiftSVG/)
 
 Who Should Use SwiftSVG
 =======================
