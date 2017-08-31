@@ -46,7 +46,7 @@ extension CALayer {
     open func applyOnSublayers<T: CALayer>(ofType: T.Type, closure: (T) -> ()) {
         _ = self.sublayers(in: self).map(closure)
     }
-    
+
     /**
      Helper function that returns an array of all sublayers of a given type
      */

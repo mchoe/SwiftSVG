@@ -1,12 +1,22 @@
 //
-//  SVGContainerElement.swift
-//  SwiftSVG
+//  Dictionary+KeyForValue.swift
+//  Breakfast
+//
+//  This file is from a dynamic framework I created called Breakfast. I included the
+//  files here so you didn't have to install another Cocoapod to use and test out 
+//  this library. As such, this file may not be maintained as well, so use it at
+//  your own risk.
+//  
+//  SwiftSVG is one of the many great tools that are a part of Breakfast. If you're
+//  looking for a great start to your next Swift project, check out Breakfast.
+//  It contains classes and helper functions that will get you started off right.
+//  https://github.com/mchoe/Breakfast
 //
 //
-//  Copyright (c) 2017 Michael Choe
-//  http://www.github.com/mchoe
+//  Copyright (c) 2015 Michael Choe
 //  http://www.straussmade.com/
 //  http://www.twitter.com/_mchoe
+//  http://www.github.com/mchoe
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -26,25 +36,17 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+import Foundation
 
-
-#if os(iOS) || os(tvOS)
-    import UIKit
-#elseif os(OSX)
-    import AppKit
-#endif
-
-
-/**
- A protocol that describes an instance that can store SVG sublayers and can apply a single attributes to all sublayers.
- */
-
-public protocol SVGContainerElement: SVGElement, DelaysApplyingAttributes, Fillable, Strokable, Transformable, Stylable {
+public func allKeysForValue<K, V: Equatable>(_ dict: [K: V], valueToMatch: V) -> [K]? {
     
-    /**
-     The layer that stores all the SVG sublayers
-     */
-    var containerLayer: CALayer { get set }
+    let possibleValues = dict.filter ({ (key, value) -> Bool in
+        return value == valueToMatch
+    }).map { (key, value) -> K in
+        return key
+    }
+    if possibleValues.count > 0 {
+        return possibleValues
+    }
+    return nil
 }
-
-
