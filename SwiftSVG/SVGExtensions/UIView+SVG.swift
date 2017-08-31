@@ -101,7 +101,7 @@ public extension UIView {
             self.init(SVGData: svgData, parser: parser, completion: completion)
         } catch {
             self.init()
-            print("No data at URL: \(SVGURL)")
+            Swift.print("No data at URL: \(SVGURL)")
         }
     }
 	
