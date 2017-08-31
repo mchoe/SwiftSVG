@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2">
+  <g id="layer1">
+    <g id="g5098" stroke="#000" transform="translate(-38.386 -161.62)">
+      <path id="path2162" stroke-width="1px" fill-rule="evenodd" d="m577.14 439.51s-70-61.43-232.85-64.29c-162.86-2.86-250 48.57-250 48.57-0.004 0 55.71 118.57 225.71 117.14 172.95-1.45 257.14-95.71 257.14-101.42z"/>
+      <path id="path3146" stroke-width="1px" fill-rule="evenodd" d="m341.43 532.36s5.71 5.72-1.43 60c-7.14 54.29-17.14 234.29 8.57 287.15 25.72 52.85 105.71 168.99 192 170.89 132.86 2.8 160.28-84.8 159.43-150.89-1.43-110-64.29-197.15-145.71-160-81.43 37.14-61.43 82.85-34.29 91.42 27.14 8.58 27.14-41.42 27.14-41.42s5.72-11.43 10-5.72c4.29 5.72 15.72 82.86-45.71 62.86s-55.72-108.57 51.43-131.43c107.14-22.86 160.31 100.65 161.43 184.29 1.42 107.09-44.29 151.39-44.29 151.39l-398.86 1.5-11.43-191.47-8.57 21.43 3.72 170.04-18.57 1.4s-13.72-255.72 24.85-334.29c38.57-78.58 54.57-185.72 54.57-185.72l15.72-1.43z"/>
+      <path id="path2164" stroke-width="1.0207px" fill-rule="evenodd" d="m525.93 408.07l29.77-135.7s-16.31 70.73-81.31 116.43c-31.53 22.18-79.07 37.37-133.05 37.84-59.5 0.51-105.7-13.13-141.14-32.21-78.98-42.53-104.48-112.06-104.48-112.06l43.17 128.56 387.04-2.86z"/>
+      <path id="path2170" stroke-width="1px" fill-rule="evenodd" fill="#fff" d="m328.57 502.36l17.14-27.14-34.28 1.43 17.14 25.71z"/>
+      <path id="path2172" stroke-linejoin="round" style="color:#000000" d="m332.86 518.08a9.2857 8.5714 0 1 1 -18.57 0 9.2857 8.5714 0 1 1 18.57 0z" transform="translate(12 6.2857)" stroke-width="3.7" fill="#fff"/>
+      <g id="g5090" transform="matrix(.99719 .074946 -.074946 .99719 41.252 -14.588)" fill-rule="evenodd">
+        <path id="path2168" stroke-width="1px" fill="#ff0" d="m126.43 427.96s34.28-10 87.14 2.86 82.86 37.14 82.86 37.14-53.41 8.45-97.14-1.43c-44.29-10-72.86-34.28-72.86-38.57z"/>
+        <path id="path3148" stroke-width=".24964px" d="m200.8 472.26s-1.53-10.52 1.93-26.11c3.47-15.59 8.94-24.05 8.94-24.05s0.92 16.23-1.79 29.14c-2.74 13.08-8.19 21.12-9.08 21.02z"/>
+      </g>
+      <g id="g5094" transform="matrix(.99811 -.061402 .061402 .99811 -36.612 29.947)" fill-rule="evenodd">
+        <path id="path2166" stroke-width="1px" fill="#ff0" d="m535.71 429.22s-34.28-10-87.14 2.86c-52.86 12.85-82.86 37.14-82.86 37.14s53.41 8.45 97.15-1.43c44.28-10 72.85-34.28 72.85-38.57z"/>
+        <path id="path3150" stroke-width=".24964px" d="m453.91 471.73s1.54-10.52-1.93-26.11c-3.46-15.59-8.94-24.06-8.94-24.06s-0.92 16.24 1.79 29.15c2.75 13.08 8.2 21.12 9.08 21.02z"/>
+      </g>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Gato</dc:title>
+        <dc:date>2010-11-18T20:14:59</dc:date>
+        <dc:description>Un gato estilizado</dc:description>
+        <dc:source>http://openclipart.org/detail/96499/gato-by-miutopia</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>miutopia</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>cat</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>gato</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

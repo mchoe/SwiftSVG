@@ -2,10 +2,11 @@
 //  CrossPlatform.swift
 //  SwiftSVG
 //
-//  Copyright (c) 2015 Michael Choe
+//
+//  Copyright (c) 2017 Michael Choe
+//  http://www.github.com/mchoe
 //  http://www.straussmade.com/
 //  http://www.twitter.com/_mchoe
-//  http://www.github.com/mchoe
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -25,9 +26,11 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+
+
 import Foundation
 
-#if os(iOS)
+#if os(iOS) || os(tvOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -38,17 +41,25 @@ import Foundation
 
 extension UIView {
     var nonOptionalLayer:CALayer {
-        #if os(iOS)
+        #if os(iOS) || os(tvOS)
             return self.layer
         #elseif os(OSX)
-            if let l = self.layer {
-                return l
+            if let thisLayer = self.layer {
+                let transform = CGAffineTransform(
+                    a: 1.0, b: 0.0,
+                    c: 0.0, d: -1.0,
+                    tx: 0.0, ty: self.bounds.size.height
+                )
+                thisLayer.setAffineTransform(transform)
+                return thisLayer
             } else {
                 self.layer = CALayer()
-                self.layer?.frame = self.bounds
-                let flip = CATransform3DMakeScale(1.0, -1.0, 1.0)
-                let translate = CATransform3DMakeTranslation(0.0, self.bounds.size.height, 1.0)
-                self.layer?.sublayerTransform = CATransform3DConcat(flip, translate)
+                let transform = CGAffineTransform(
+                    a: 1.0, b: 0.0,
+                    c: 0.0, d: -1.0,
+                    tx: 0.0, ty: self.bounds.size.height
+                )
+                self.layer?.setAffineTransform(transform)
                 self.wantsLayer = true
                 return self.layer!
             }

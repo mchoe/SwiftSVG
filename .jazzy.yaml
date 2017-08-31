@@ -1,0 +1,10 @@
+module: SwiftSVG
+author: Michael Choe
+github_url: https://github.com/mchoe/swiftsvg
+copyright: '© 2017 Michael Choe under [MIT](https://github.com/mchoe/SwiftSVG/blob/master/LICENSE).'
+theme: fullwidth
+min_acl: internal
+skip_undocumented: yes
+exclude:
+  - "SwiftSVG/NSBezierPath+CrossPlatform.swift"
+  - "CrossPlatform.swift"

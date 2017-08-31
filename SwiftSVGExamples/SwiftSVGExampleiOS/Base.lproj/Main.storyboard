@@ -1,47 +1,325 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eva-b1-UxK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Various View Controller-->
+        <scene sceneID="P0C-We-joy">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftSVGExampleiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0m9-AP-El0" customClass="VariousViewController" customModule="SwiftSVGExampleiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="oC1-vT-IAG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tfm-uf-r5K"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="j5a-ST-rxj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNH-7z-0P5" customClass="SVGView" customModule="SwiftSVGiOS">
-                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="Ek9-MG-xzd"/>
-                                    <constraint firstAttribute="height" constant="250" id="Ywl-af-GY1"/>
-                                </constraints>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SDR-SV-oh3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="m8l-rY-afy">
+                                    <size key="itemSize" width="152" height="163"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VariousCell" id="J1h-jN-fFG" customClass="VariousCell" customModule="SwiftSVGExampleiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="163"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="152" height="163"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aw2-mZ-dZq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="152" height="163"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="aw2-mZ-dZq" firstAttribute="top" secondItem="J1h-jN-fFG" secondAttribute="top" id="4t1-47-pdW"/>
+                                            <constraint firstAttribute="trailing" secondItem="aw2-mZ-dZq" secondAttribute="trailing" id="Ivs-XM-Jda"/>
+                                            <constraint firstItem="aw2-mZ-dZq" firstAttribute="leading" secondItem="J1h-jN-fFG" secondAttribute="leading" id="OxI-Mm-fwZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="aw2-mZ-dZq" secondAttribute="bottom" id="QnM-OF-R2M"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="svgView" destination="aw2-mZ-dZq" id="DcT-RV-guH"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="0m9-AP-El0" id="I6c-bQ-gGE"/>
+                                    <outlet property="delegate" destination="0m9-AP-El0" id="hvu-wO-fhx"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SDR-SV-oh3" secondAttribute="trailing" id="0jx-eI-RAw"/>
+                            <constraint firstItem="SDR-SV-oh3" firstAttribute="leading" secondItem="j5a-ST-rxj" secondAttribute="leading" id="8BK-oC-utN"/>
+                            <constraint firstItem="SDR-SV-oh3" firstAttribute="top" secondItem="oC1-vT-IAG" secondAttribute="bottom" id="TNP-In-qmC"/>
+                            <constraint firstItem="Tfm-uf-r5K" firstAttribute="top" secondItem="SDR-SV-oh3" secondAttribute="bottom" id="vUM-Sj-r7H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="SDR-SV-oh3" id="Jdb-PI-51L"/>
+                        <segue destination="nw3-Vo-jTo" kind="show" identifier="variousToDetailSegue" id="GoA-dL-Uie"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gs6-tw-AO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1329" y="933"/>
+        </scene>
+        <!--Github View Controller-->
+        <scene sceneID="hNI-kS-xea">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="jDO-9J-XNw" customClass="GithubViewController" customModule="SwiftSVGExampleiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FcV-q7-GYz"/>
+                        <viewControllerLayoutGuide type="bottom" id="uiR-xT-PO0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9o7-88-ZLd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KUf-pD-dtx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5pP-rY-Wlp">
+                                    <size key="itemSize" width="173" height="173"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GithubCell" id="MYW-0U-trr" customClass="GithubCell" customModule="SwiftSVGExampleiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="173"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="173" height="173"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tlS-HN-2zm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="173" height="173"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="svgView" destination="tlS-HN-2zm" id="9HT-Lv-XyN"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="jDO-9J-XNw" id="985-HM-8pA"/>
+                                    <outlet property="delegate" destination="jDO-9J-XNw" id="GGk-AO-gtn"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KUf-pD-dtx" secondAttribute="trailing" id="F0V-5G-98A"/>
+                            <constraint firstItem="KUf-pD-dtx" firstAttribute="top" secondItem="FcV-q7-GYz" secondAttribute="bottom" id="Lb7-2I-9Hz"/>
+                            <constraint firstItem="uiR-xT-PO0" firstAttribute="top" secondItem="KUf-pD-dtx" secondAttribute="bottom" id="gfG-Rq-5dC"/>
+                            <constraint firstItem="KUf-pD-dtx" firstAttribute="leading" secondItem="9o7-88-ZLd" secondAttribute="leading" id="m7S-Bg-Jid"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AaW-Uo-1ss" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328.8" y="-779.46026986506752"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MGz-Bu-bC4">
+            <objects>
+                <viewController id="UYC-DC-MNC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ShB-Zr-Tw3"/>
+                        <viewControllerLayoutGuide type="bottom" id="xz0-d0-yHu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2aY-Ds-k9V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wlx-7F-4Jd" customClass="SVGView" customModule="SwiftSVG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="SVGName" value="hawaiiFlowers"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WNH-7z-0P5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DM5-Yq-BSc"/>
-                            <constraint firstItem="WNH-7z-0P5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qyS-GP-wTI"/>
+                            <constraint firstItem="xz0-d0-yHu" firstAttribute="top" secondItem="Wlx-7F-4Jd" secondAttribute="bottom" id="2N9-fT-CAq"/>
+                            <constraint firstItem="Wlx-7F-4Jd" firstAttribute="top" secondItem="ShB-Zr-Tw3" secondAttribute="bottom" id="CKK-9p-eg5"/>
+                            <constraint firstItem="Wlx-7F-4Jd" firstAttribute="leading" secondItem="2aY-Ds-k9V" secondAttribute="leading" id="gcj-y4-SmN"/>
+                            <constraint firstAttribute="trailing" secondItem="Wlx-7F-4Jd" secondAttribute="trailing" id="rtV-ba-iPE"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Mg-R9-IWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1330" y="-134"/>
+        </scene>
+        <!--Try Zooming-->
+        <scene sceneID="2LU-Mh-8bs">
+            <objects>
+                <viewController title="Try Zooming" automaticallyAdjustsScrollViewInsets="NO" id="nw3-Vo-jTo" customClass="SingleSVGViewController" customModule="SwiftSVGExampleiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Roz-LR-5Tj"/>
+                        <viewControllerLayoutGuide type="bottom" id="VPT-nd-Og5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x3T-Iq-IZh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.5" maximumZoomScale="1000" translatesAutoresizingMaskIntoConstraints="NO" id="dnX-tb-g3r">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0W8-7F-UVX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0W8-7F-UVX" secondAttribute="bottom" id="ANV-DL-1Rq"/>
+                                    <constraint firstItem="0W8-7F-UVX" firstAttribute="leading" secondItem="dnX-tb-g3r" secondAttribute="leading" id="LFb-MU-pua"/>
+                                    <constraint firstItem="0W8-7F-UVX" firstAttribute="height" secondItem="dnX-tb-g3r" secondAttribute="height" id="LJI-Ie-sBn"/>
+                                    <constraint firstAttribute="trailing" secondItem="0W8-7F-UVX" secondAttribute="trailing" id="NeS-5X-sfg"/>
+                                    <constraint firstItem="0W8-7F-UVX" firstAttribute="top" secondItem="dnX-tb-g3r" secondAttribute="top" id="ZqK-Sw-hgA"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="nw3-Vo-jTo" id="DcG-O4-3Ij"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0W8-7F-UVX" firstAttribute="width" secondItem="x3T-Iq-IZh" secondAttribute="width" id="BFM-wL-8l3"/>
+                            <constraint firstItem="VPT-nd-Og5" firstAttribute="top" secondItem="dnX-tb-g3r" secondAttribute="bottom" id="CeG-Qa-37v"/>
+                            <constraint firstAttribute="trailing" secondItem="dnX-tb-g3r" secondAttribute="trailing" id="Npm-xw-Qv7"/>
+                            <constraint firstItem="dnX-tb-g3r" firstAttribute="leading" secondItem="x3T-Iq-IZh" secondAttribute="leading" id="PBc-1x-mS8"/>
+                            <constraint firstItem="dnX-tb-g3r" firstAttribute="top" secondItem="Roz-LR-5Tj" secondAttribute="bottom" id="YRW-cB-gYL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="canvasView" destination="0W8-7F-UVX" id="ZyH-6a-HbQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8vo-vA-Wyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2130" y="582"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rkb-qP-sQB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eva-b1-UxK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1c3-td-zn6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WQx-bl-ivi" kind="relationship" relationship="rootViewController" id="OCa-ss-qI1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X3t-UR-zId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500" y="38"/>
+        </scene>
+        <!--SwiftSVG-->
+        <scene sceneID="186-3l-bI6">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="WQx-bl-ivi" customClass="StartViewController" customModule="SwiftSVGExampleiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sew-yb-l70"/>
+                        <viewControllerLayoutGuide type="bottom" id="Avs-Bi-mcx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c3A-VS-au0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F6v-C1-dbz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StartCell" rowHeight="87" id="rtC-WK-OgH" customClass="StartCell" customModule="SwiftSVGExampleiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rtC-WK-OgH" id="qbn-Kk-r6p">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sof-Wr-gLA">
+                                                    <rect key="frame" x="21" y="16" width="333" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZX7-m7-o0R">
+                                                    <rect key="frame" x="21" y="53" width="333" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.53823267487046633" green="0.53823267487046633" blue="0.53823267487046633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZX7-m7-o0R" firstAttribute="leading" secondItem="qbn-Kk-r6p" secondAttribute="leading" constant="21" id="2zy-oA-4cQ"/>
+                                                <constraint firstItem="sof-Wr-gLA" firstAttribute="top" secondItem="qbn-Kk-r6p" secondAttribute="top" constant="16" id="3Kc-zY-GEP"/>
+                                                <constraint firstItem="sof-Wr-gLA" firstAttribute="leading" secondItem="qbn-Kk-r6p" secondAttribute="leading" constant="21" id="D0k-xL-yzX"/>
+                                                <constraint firstAttribute="trailing" secondItem="sof-Wr-gLA" secondAttribute="trailing" constant="21" id="PoJ-Om-rO8"/>
+                                                <constraint firstItem="ZX7-m7-o0R" firstAttribute="top" secondItem="sof-Wr-gLA" secondAttribute="bottom" constant="9.5" id="YLa-Pe-hYL"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZX7-m7-o0R" secondAttribute="bottom" constant="16" id="fSF-03-k7S"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZX7-m7-o0R" secondAttribute="trailing" constant="21" id="hof-8F-5HO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="subtitleLabel" destination="ZX7-m7-o0R" id="CKI-QN-mbi"/>
+                                            <outlet property="titleLabel" destination="sof-Wr-gLA" id="hDT-uK-KLR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WQx-bl-ivi" id="Soh-oJ-1Xp"/>
+                                    <outlet property="delegate" destination="WQx-bl-ivi" id="nMw-yd-QwC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F6v-C1-dbz" firstAttribute="leading" secondItem="c3A-VS-au0" secondAttribute="leading" id="8MP-e8-j3L"/>
+                            <constraint firstAttribute="trailing" secondItem="F6v-C1-dbz" secondAttribute="trailing" id="DqN-Vk-jaV"/>
+                            <constraint firstItem="Avs-Bi-mcx" firstAttribute="top" secondItem="F6v-C1-dbz" secondAttribute="bottom" id="cCl-aB-A1q"/>
+                            <constraint firstItem="F6v-C1-dbz" firstAttribute="top" secondItem="Sew-yb-l70" secondAttribute="bottom" id="gwH-x3-Yq3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SwiftSVG" id="ko9-El-4os"/>
+                    <connections>
+                        <outlet property="tableView" destination="F6v-C1-dbz" id="IX9-pR-Ulv"/>
+                        <segue destination="UYC-DC-MNC" kind="show" identifier="startToSVGViewSegue" id="wD2-N6-NdP"/>
+                        <segue destination="jDO-9J-XNw" kind="show" identifier="startToGithubSegue" id="X3K-Pc-bzI"/>
+                        <segue destination="0m9-AP-El0" kind="show" identifier="startToVariousSegue" id="RwU-R4-uz5"/>
+                        <segue destination="nw3-Vo-jTo" kind="show" identifier="startToSingleSegue" id="zed-fK-aUQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7g-Fi-fzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237.59999999999999" y="36.431784107946029"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zed-fK-aUQ"/>
+    </inferredMetricsTieBreakers>
 </document>
