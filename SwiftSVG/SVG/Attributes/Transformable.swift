@@ -173,8 +173,8 @@ extension Transformable {
             
             let combinedTransforms = matches
             .flatMap({ (thisMatch) -> Transform? in
-                let nameRange = thisMatch.rangeAt(1)
-                let coordinateRange = thisMatch.rangeAt(2)
+                let nameRange = thisMatch.range(at: 1)
+                let coordinateRange = thisMatch.range(at: 2)
                 let transformName = transformString[nameRange.location..<nameRange.location + nameRange.length]
                 let coordinateString = transformString[coordinateRange.location..<coordinateRange.location + coordinateRange.length]
                 return Transform(rawValue: transformName, coordinatesString: coordinateString)
