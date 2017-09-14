@@ -4,7 +4,7 @@ Key Features
 ============
 
 - Parsing performance that meets or beats other popular SVG Frameworks
-- Optimized for extension, flexibility and developer joy
+- A simple architecture, optimized for extension, flexibility and developer joy
 - Multiple interface options (UIBezierPath, CAShapeLayer, UIView, and IBDesignable Interface Builder subclass)
 - A minimal cache for improved performance
 - Tested and [documented](http://mchoe.github.io/SwiftSVG/)
