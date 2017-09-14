@@ -21,7 +21,7 @@ At this time, gradients are not supported, but this is high on the list of featu
 Finally, if you're looking to extend this project, that's another good reason to use SwiftSVG. A lot of work has been put into making the code as extensible and maintainable as possible and will continue to be a core feature of future updates. Fork the project and I hope you share your changes.
 
 Table of Contents
------------------
+=================
 
 - [Install](#Install)
 - [Usage](#Usage)
@@ -174,7 +174,7 @@ Finally, SwiftSVG provides a `UIView` subclass that is `IBInspectable`. Simply a
 ![Screenshot of SVGView in Interface Builder](https://raw.githubusercontent.com/mchoe/SwiftSVG/master/images/svgViewScreenshot.png)
 
 Credits
--------
+=======
 
 - [Fist](https://thenounproject.com/term/fist/303025/) - Francesco Cesqo Stefanini
 - [Pizza](http://thenounproject.com/term/pizza/7914/) - Justin Alexander
@@ -182,6 +182,6 @@ Credits
 - [Tea](https://thenounproject.com/term/tea/200133) - parkjisun
 
 License
--------
+=======
 
 SwiftSVG is released under the [MIT License](https://github.com/mchoe/SwiftSVG/blob/master/LICENSE).
