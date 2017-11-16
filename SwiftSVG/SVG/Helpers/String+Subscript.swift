@@ -38,30 +38,12 @@ import AppKit
 
 public extension String {
     
-    /// :nodoc: Will change with Swift 4
-    subscript(index: Int) -> Character {
-        get {
-            let index = self.characters.index(self.startIndex, offsetBy: index)
-            return self[index]
-        }
-    }
-    
-    /// :nodoc: Will change with Swift 4
+    /// Helper function that creates a new String from a given integer range
     subscript(integerRange: Range<Int>) -> String {
         get {
-            let start = self.characters.index(self.startIndex, offsetBy: integerRange.lowerBound)
-            let end = self.characters.index(self.startIndex, offsetBy: integerRange.upperBound)
-            let range = start..<end
-            return self[range]
-        }
-    }
-    
-    /// :nodoc: Will change with Swift 4
-    subscript (r: CountableClosedRange<Int>) -> String {
-        get {
-            let startIndex =  self.index(self.startIndex, offsetBy: r.lowerBound)
-            let endIndex = self.index(startIndex, offsetBy: r.upperBound - r.lowerBound)
-            return self[startIndex...endIndex]
+            let start = self.index(self.startIndex, offsetBy: integerRange.lowerBound)
+            let end = self.index(self.startIndex, offsetBy: integerRange.upperBound)
+            return String(self[start..<end])
         }
     }
 }

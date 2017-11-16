@@ -1,5 +1,5 @@
 //
-//  PerformanceTests.swift
+//  StringSubscriptTests.swift
 //  SwiftSVG
 //
 //
@@ -30,30 +30,15 @@
 
 import XCTest
 
-class PerformanceTests: XCTestCase {
-
-    func testSwiftSVG() {
+class StringSubscriptTests: XCTestCase {
+    
+    func testIntegerRange() {
         
-        self.measureMetrics([XCTPerformanceMetric.wallClockTime], automaticallyStartMeasuring: true) {
-            
-            guard let resourceURL = Bundle(for: type(of: self)).url(forResource: "ukulele", withExtension: "svg") else {
-                XCTAssert(false, "Couldn't find resource")
-                return
-            }
-            
-            let asData = try! Data(contentsOf: resourceURL)
-            let expect = self.expectation(description: "SwiftSVG expectation")
-            _ = UIView(SVGData: asData) { (svgLayer) in
-                SVGCache.default.removeObject(key: asData.cacheKey)
-                expect.fulfill()
-            }
-            
-            self.waitForExpectations(timeout: 10) { error in
-                self.stopMeasuring()
-            }
-        }
+        let testString = "1234567890"
         
+        XCTAssertTrue(testString[0..<3] == "123", "Expected \"123\", got \(testString[0..<2])")
+        XCTAssertTrue(testString[3..<7] == "4567", "Expected \"4567\", got \(testString[3..<7])")
         
     }
-
+    
 }
