@@ -66,8 +66,8 @@ extension Stylable where Self : SVGElement {
             let matches = regex.matches(in: styleString, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, styleString.utf8.count))
             
             matches.forEach({ (thisMatch) in
-                let nameRange = thisMatch.rangeAt(2)
-                let valueRange = thisMatch.rangeAt(5)
+                let nameRange = thisMatch.range(at: 2)
+                let valueRange = thisMatch.range(at: 5)
                 let styleName = styleString[nameRange.location..<nameRange.location + nameRange.length]
                 let valueString = styleString[valueRange.location..<valueRange.location + valueRange.length].trimWhitespace()
                 
