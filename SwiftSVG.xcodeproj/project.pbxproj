@@ -98,6 +98,8 @@
 		380FED7B1F07F5B900EDB255 /* DispatchQueue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FED781F07F48500EDB255 /* DispatchQueue+Extensions.swift */; };
 		380FED7F1F084FF100EDB255 /* NSXMLSVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FED7E1F084FF100EDB255 /* NSXMLSVGParser.swift */; };
 		380FED811F08580A00EDB255 /* NSXMLSVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FED7E1F084FF100EDB255 /* NSXMLSVGParser.swift */; };
+		3817D1B11FBD1ED30054F88E /* StringSubscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817D1B01FBD1ED30054F88E /* StringSubscriptTests.swift */; };
+		3817D1B21FBD1F710054F88E /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38511AB21F57B0BC007B7BB8 /* SVGParser.swift */; };
 		381E99AA1EF801BB00839918 /* LineToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99A91EF801BB00839918 /* LineToTests.swift */; };
 		381E99AB1EF801DA00839918 /* PathDLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FF06C1EF10691003F3DBE /* PathDLexer.swift */; };
 		381E99AD1EF8946E00839918 /* ScalarFromByteArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99AC1EF8946E00839918 /* ScalarFromByteArrayTests.swift */; };
@@ -192,6 +194,7 @@
 		380FED551F0491E200EDB255 /* SVGContainerElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGContainerElement.swift; path = SVG/Elements/SVGContainerElement.swift; sourceTree = "<group>"; };
 		380FED781F07F48500EDB255 /* DispatchQueue+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extensions.swift"; sourceTree = "<group>"; };
 		380FED7E1F084FF100EDB255 /* NSXMLSVGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSXMLSVGParser.swift; sourceTree = "<group>"; };
+		3817D1B01FBD1ED30054F88E /* StringSubscriptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSubscriptTests.swift; sourceTree = "<group>"; };
 		381E99A91EF801BB00839918 /* LineToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineToTests.swift; sourceTree = "<group>"; };
 		381E99AC1EF8946E00839918 /* ScalarFromByteArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalarFromByteArrayTests.swift; sourceTree = "<group>"; };
 		381E99AE1EF8A55000839918 /* MoveToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveToTests.swift; sourceTree = "<group>"; };
@@ -258,6 +261,7 @@
 				38048F2F1F241D1C00179C95 /* FloatingPointDegreesToRadiansTests.swift */,
 				381E99AC1EF8946E00839918 /* ScalarFromByteArrayTests.swift */,
 				38048F2B1F23E28B00179C95 /* StackTests.swift */,
+				3817D1B01FBD1ED30054F88E /* StringSubscriptTests.swift */,
 				176BC9D91EE5193D00F7B54C /* UIColorExtensionsTests.swift */,
 			);
 			name = "Helper Tests";
@@ -612,6 +616,7 @@
 				381E99AA1EF801BB00839918 /* LineToTests.swift in Sources */,
 				176BC9E31EE51AF600F7B54C /* SVGCircle.swift in Sources */,
 				38048F421F24214400179C95 /* UIBezierPath+SVG.swift in Sources */,
+				3817D1B21FBD1F710054F88E /* SVGParser.swift in Sources */,
 				176BC9D21EE513F400F7B54C /* SVGPolyline.swift in Sources */,
 				176BC9E91EE51B0700F7B54C /* CrossPlatform.swift in Sources */,
 				38048F481F24527A00179C95 /* CALayer+Sublayers.swift in Sources */,
@@ -637,6 +642,7 @@
 				380FED811F08580A00EDB255 /* NSXMLSVGParser.swift in Sources */,
 				17CCE73C1EE66CBE007FA5AD /* Scalar+FromByteArray.swift in Sources */,
 				380FED591F04936100EDB255 /* SVGContainerElement.swift in Sources */,
+				3817D1B11FBD1ED30054F88E /* StringSubscriptTests.swift in Sources */,
 				38048F281F23DDC300179C95 /* SVGPolylineTests.swift in Sources */,
 				381E99BB1EF9856B00839918 /* ClosePathTests.swift in Sources */,
 				38048F401F24214400179C95 /* SVGLayer.swift in Sources */,
