@@ -65,21 +65,46 @@ public extension UIView {
      ```
      let view = UIView(SVGNamed: "hawaiiFlowers")
      ```
-     - Parameter SVGNamed: The name of the SVG resource in the main bundle with an `.svg` extension.
+     - Parameter SVGNamed: The name of the SVG resource in the main bundle with an `.svg` extension or the name an asset in the main Asset Catalog as a Data Asset.
      - Parameter parser: The optional parser to use to parse the SVG file
      - Parameter completion: A required completion block to execute once the SVG has completed parsing. The passed `SVGLayer` will be added to this view's sublayers before executing the completion block
      */
     public convenience init(SVGNamed: String, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
-        guard let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") else {
+        
+        var data: Data?
+        if #available(iOS 9.0, *) {
+            if let asset = NSDataAsset(name: SVGNamed) {
+                data = asset.data
+            } else if let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") {
+                do {
+                    data = try Data(contentsOf: svgURL)
+                } catch {
+                    self.init()
+                    return
+                }
+            } else {
+                self.init()
+                return
+            }
+        } else {
+            guard let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") else {
+                self.init()
+                return
+            }
+            do {
+                data = try Data(contentsOf: svgURL)
+            } catch {
+                self.init()
+                return
+            }
+        }
+        
+        guard let unwrapped = data else {
             self.init()
             return
         }
-        do {
-            let data = try Data(contentsOf: svgURL)
-            self.init(SVGData: data, parser: parser, completion: completion)
-        } catch {
-            self.init()
-        }
+        
+        self.init(SVGData: unwrapped, parser: parser, completion: completion)
     }
     
     /**

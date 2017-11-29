@@ -48,6 +48,13 @@ class GithubViewController: UIViewController {
             }),
             CellItem(render: { (cellSize) -> UIView in
                 
+                // Simplest example of an SVG stored in the assets catalog as a Data Asset
+                
+                let svgView = UIView(SVGNamed: "cowboyHat")
+                return svgView
+            }),
+            CellItem(render: { (cellSize) -> UIView in
+                
                 // Parsing a single path string syncronously
                 
                 let triangle = UIView(pathString: "M75 0 l75 200 L0 200 Z")

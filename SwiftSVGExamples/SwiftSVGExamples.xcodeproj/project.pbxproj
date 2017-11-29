@@ -24,7 +24,6 @@
 		380FED081F00171B00EDB255 /* openclipart-angry-coder.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */; };
 		380FED091F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Bicicletta.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED001F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Bicicletta.svg */; };
 		380FED0A1F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED011F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg */; };
-		380FED221F0036F400EDB255 /* rabbitcowboy.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED211F0036F400EDB255 /* rabbitcowboy.svg */; };
 		380FED4A1F02064900EDB255 /* hawaiiFlowers.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED491F02064900EDB255 /* hawaiiFlowers.svg */; };
 		380FED4E1F036E1F00EDB255 /* DrawingBoard.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */; };
 		380FED5B1F06907600EDB255 /* johnny-automatic-open-mouth.svg in Resources */ = {isa = PBXBuildFile; fileRef = 380FED5A1F06907600EDB255 /* johnny-automatic-open-mouth.svg */; };
@@ -133,7 +132,6 @@
 		380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-angry-coder.svg"; sourceTree = "<group>"; };
 		380FED001F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Bicicletta.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-Anonymous_Architetto_--_Bicicletta.svg"; sourceTree = "<group>"; };
 		380FED011F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-Anonymous_Architetto_--_Camello.svg"; sourceTree = "<group>"; };
-		380FED211F0036F400EDB255 /* rabbitcowboy.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rabbitcowboy.svg; sourceTree = "<group>"; };
 		380FED491F02064900EDB255 /* hawaiiFlowers.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hawaiiFlowers.svg; sourceTree = "<group>"; };
 		380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DrawingBoard.svg; sourceTree = "<group>"; };
 		380FED5A1F06907600EDB255 /* johnny-automatic-open-mouth.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "johnny-automatic-open-mouth.svg"; sourceTree = "<group>"; };
@@ -146,6 +144,7 @@
 		3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-zanzara_architetto_fran_03r.svg"; sourceTree = "<group>"; };
 		3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-tux.svg"; sourceTree = "<group>"; };
 		381E99C21EFA0DC400839918 /* polygons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polygons.svg; sourceTree = "<group>"; };
+		3828E3601FCE1514009552DA /* rabbitcowboy.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = rabbitcowboy.svg; sourceTree = "<group>"; };
 		3870903B1F0C32AE00F72660 /* error.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = error.svg; sourceTree = "<group>"; };
 		3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1346768588.svg"; sourceTree = "<group>"; };
 		3876E95C1EFCB2E000F8C04E /* pizza.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pizza.svg; sourceTree = "<group>"; };
@@ -308,6 +307,7 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3828E3601FCE1514009552DA /* rabbitcowboy.svg */,
 				3807CCFA1F2AEF3A00E78314 /* tea.svg */,
 				3882153C1F12DEB000C192A3 /* George_Kerr_Anderson_Patent_1885_1.svg */,
 				3870903B1F0C32AE00F72660 /* error.svg */,
@@ -319,7 +319,6 @@
 				380FED5A1F06907600EDB255 /* johnny-automatic-open-mouth.svg */,
 				380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */,
 				380FED491F02064900EDB255 /* hawaiiFlowers.svg */,
-				380FED211F0036F400EDB255 /* rabbitcowboy.svg */,
 				3876E9641EFCC16500F8C04E /* berlin.svg */,
 				380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */,
 				380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */,
@@ -468,7 +467,6 @@
 				380FED671F06951100EDB255 /* tiger.svg in Resources */,
 				3876E9651EFCC16500F8C04E /* berlin.svg in Resources */,
 				3807CCFB1F2AEF3A00E78314 /* tea.svg in Resources */,
-				380FED221F0036F400EDB255 /* rabbitcowboy.svg in Resources */,
 				380FED651F06946500EDB255 /* Dulcimer.svg in Resources */,
 				3882153D1F12DEB000C192A3 /* George_Kerr_Anderson_Patent_1885_1.svg in Resources */,
 				380FED5B1F06907600EDB255 /* johnny-automatic-open-mouth.svg in Resources */,
