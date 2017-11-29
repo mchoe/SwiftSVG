@@ -194,6 +194,7 @@ Credits
 - [Pizza](http://thenounproject.com/term/pizza/7914/) - Justin Alexander
 - [Sock Puppet](http://thenounproject.com/term/sock-puppet/30622/) - Myles McCoy
 - [Tea](https://thenounproject.com/term/tea/200133) - parkjisun
+- [Cowboy Hat](https://thenounproject.com/term/cowboy-hat/1184115) - João Gabriel Mendes Corrêa
 
 License
 =======
