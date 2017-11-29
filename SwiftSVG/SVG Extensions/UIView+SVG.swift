@@ -72,7 +72,7 @@ public extension UIView {
     public convenience init(SVGNamed: String, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
         
         var data: Data?
-        if #available(iOS 9.0, *) {
+        if #available(iOS 9.0, OSX 10.11, *) {
             if let asset = NSDataAsset(name: SVGNamed) {
                 data = asset.data
             } else if let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") {
