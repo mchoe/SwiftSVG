@@ -66,6 +66,8 @@ Or you can add an SVG file to your Asset Catalog. You should add it as a Data As
 
 ![Add a new Data Asset in your Asset Catalog](https://raw.githubusercontent.com/mchoe/SwiftSVG/master/images/assetCatalog.png)
 
+Then use the same initializer as above:
+
 ```swift
 let cowboyHat = UIView(SVGNamed: "cowboyHat")     // In the asset catalog as a Data Asset
 self.addSubview(cowboyHat)
