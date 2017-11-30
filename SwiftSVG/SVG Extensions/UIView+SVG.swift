@@ -71,40 +71,49 @@ public extension UIView {
      */
     public convenience init(SVGNamed: String, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
         
-        var data: Data?
+        // TODO: This is too many guards to really make any sense. Also approaching on the
+        // pyramid of death Refactor this at some point to be able to work cross-platform.
         if #available(iOS 9.0, OSX 10.11, *) {
+            
+            var data: Data?
+            #if os(iOS)
             if let asset = NSDataAsset(name: SVGNamed) {
                 data = asset.data
-            } else if let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") {
+            }
+            #elseif os(OSX)
+            if let asset = NSDataAsset(name: NSDataAsset.Name(SVGNamed)) {
+                data = asset.data
+            }
+            #endif
+            
+            guard let unwrapped = data else {
+                guard let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") else {
+                    self.init()
+                    return
+                }
                 do {
-                    data = try Data(contentsOf: svgURL)
+                    let thisData = try Data(contentsOf: svgURL)
+                    self.init(SVGData: thisData)
                 } catch {
                     self.init()
                     return
                 }
-            } else {
-                self.init()
                 return
             }
+            self.init(SVGData: unwrapped)
         } else {
             guard let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") else {
                 self.init()
                 return
             }
             do {
-                data = try Data(contentsOf: svgURL)
+                let data = try Data(contentsOf: svgURL)
+                self.init(SVGData: data)
             } catch {
                 self.init()
                 return
             }
         }
-        
-        guard let unwrapped = data else {
-            self.init()
-            return
-        }
-        
-        self.init(SVGData: unwrapped, parser: parser, completion: completion)
     }
     
     /**
