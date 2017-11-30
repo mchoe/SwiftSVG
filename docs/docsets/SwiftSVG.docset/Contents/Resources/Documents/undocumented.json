@@ -302,14 +302,14 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVGExtensions/SVGLayer.swift",
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG Extensions/SVGLayer.swift",
       "line": 41,
       "symbol": "SVGLayerType.boundingBox",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVGExtensions/UIBezierPath+SVG.swift",
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG Extensions/UIBezierPath+SVG.swift",
       "line": 62,
       "symbol": "UIBezierPath.pathWithSVGURL(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",

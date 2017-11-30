@@ -327,12 +327,14 @@
 <p>Or you can add an SVG file to your Asset Catalog. You should add it as a Data Asset like this:</p>
 
 <p><img src="https://raw.githubusercontent.com/mchoe/SwiftSVG/master/images/assetCatalog.png" alt="Add a new Data Asset in your Asset Catalog"></p>
+
+<p>Then use the same initializer as above:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">cowboyHat</span> <span class="o">=</span> <span class="kt">UIView</span><span class="p">(</span><span class="kt">SVGNamed</span><span class="p">:</span> <span class="s">"cowboyHat"</span><span class="p">)</span>     <span class="c1">// In the asset catalog as a Data Asset</span>
 <span class="k">self</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">cowboyHat</span><span class="p">)</span>
 </code></pre>
 <h4 id='output' class='heading'>Output:</h4>
 
-<p><img src="https://raw.githubusercontent.com/mchoe/SwiftSVG/master/images/cowboyHat.png" alt="Put it here!"></p>
+<p><img src="https://raw.githubusercontent.com/mchoe/SwiftSVG/master/images/cowboyHat.png" alt="New York City."></p>
 
 <p>You can also create a new UIView from a remote <code>URL</code>:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">svgURL</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://openclipart.org/download/181651/manhammock.svg"</span><span class="p">)</span><span class="o">!</span>
@@ -431,6 +433,7 @@
 <li><a href="http://thenounproject.com/term/pizza/7914/">Pizza</a> - Justin Alexander</li>
 <li><a href="http://thenounproject.com/term/sock-puppet/30622/">Sock Puppet</a> - Myles McCoy</li>
 <li><a href="https://thenounproject.com/term/tea/200133">Tea</a> - parkjisun</li>
+<li><a href="https://thenounproject.com/term/cowboy-hat/1184115">Cowboy Hat</a> - João Gabriel Mendes Corrêa</li>
 </ul>
 <h1 id='license' class='heading'>License</h1>
 
