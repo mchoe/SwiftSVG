@@ -98,7 +98,7 @@ public extension UIColor {
         
         var workingString = hexString
         if workingString.hasPrefix("#") {
-            workingString = String(workingString.characters.dropFirst())
+            workingString = String(workingString.dropFirst())
         }
         
         var hexArray = [CChar]()
@@ -138,7 +138,7 @@ public extension UIColor {
      Convenience initializer that creates a new UIColor from a integer functional, taking the form `rgb(rrr, ggg, bbb)`
      */
     internal convenience init(rgbString: String) {
-        let valuesString = rgbString.characters.dropFirst(4).dropLast()
+        let valuesString = rgbString.dropFirst(4).dropLast()
         self.init(colorValuesString: valuesString)
     }
     
@@ -146,12 +146,12 @@ public extension UIColor {
      Convenience initializer that creates a new UIColor from an integer functional, taking the form `rgba(rrr, ggg, bbb, <alphavalue>)`
      */
     internal convenience init(rgbaString: String) {
-        let valuesString = rgbaString.characters.dropFirst(5).dropLast()
+        let valuesString = rgbaString.dropFirst(5).dropLast()
         self.init(colorValuesString: valuesString)
     }
     
     /// :nodoc:
-    private convenience init(colorValuesString: String.CharacterView.SubSequence) {
+    private convenience init(colorValuesString: Substring) {
         let colorsArray = colorValuesString
             .split(separator: ",")
             .map { (numberString) -> CGFloat in

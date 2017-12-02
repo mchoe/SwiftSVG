@@ -1,7 +1,6 @@
 //
-//  SVGShapeElement.swift
-//  SwiftSVG
-//
+//  TestShapeElement.swift
+//  SwiftSVGTests
 //
 //  Copyright (c) 2017 Michael Choe
 //  http://www.github.com/mchoe
@@ -26,33 +25,23 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+import UIKit
 
-
-#if os(iOS) || os(tvOS)
-    import UIKit
-#elseif os(OSX)
-    import AppKit
-#endif
-
-
-/**
- A protocol that describes an instance that stores the path as a `CAShapeLayer`
- */
-public protocol SVGShapeElement: SVGElement, Fillable, Strokable, Transformable, Stylable, Identifiable {
+struct TestShapeElement: SVGShapeElement {
+    static let elementName: String = "test"
+    var supportedAttributes: [String : (String) -> ()] = [:]
+    var svgLayer = CAShapeLayer()
     
-    /**
-     The `CAShapeLayer` that can draw the path data.
-     */
-    var svgLayer: CAShapeLayer { get set }
-}
-
-extension SVGShapeElement {
+    init() {
+        let rectPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 200, height: 200))
+        self.svgLayer.path = rectPath.cgPath
+    }
     
-    /**
-     The minimum rect that encompasses all of the subpaths
-     */
-    var boundingBox: CGRect? {
-        return self.svgLayer.path?.boundingBox
+    func notReal(string: String) {
+        return
+    }
+    
+    func didProcessElement(in container: SVGContainerElement?) {
+        return
     }
 }
-

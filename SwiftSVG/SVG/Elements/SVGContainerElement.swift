@@ -39,7 +39,7 @@
  A protocol that describes an instance that can store SVG sublayers and can apply a single attributes to all sublayers.
  */
 
-public protocol SVGContainerElement: SVGElement, DelaysApplyingAttributes, Fillable, Strokable, Transformable, Stylable {
+public protocol SVGContainerElement: SVGElement, DelaysApplyingAttributes, Fillable, Strokable, Transformable, Stylable, Identifiable {
     
     /**
      The layer that stores all the SVG sublayers

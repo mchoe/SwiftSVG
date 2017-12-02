@@ -51,7 +51,7 @@ extension BinaryFloatingPoint {
         
         let numberFromSupportedSuffix: (String, String) -> Double? = { (string, suffix) -> Double? in
             if string.hasSuffix(suffix) {
-                return simpleNumberClosure(string[0..<string.characters.count - suffix.characters.count])
+                return simpleNumberClosure(string[0..<string.count - suffix.count])
             }
             return nil
         }

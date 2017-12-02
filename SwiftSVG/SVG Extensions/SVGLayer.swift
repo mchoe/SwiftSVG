@@ -42,7 +42,7 @@ public protocol SVGLayerType {
 }
 
 public extension SVGLayerType where Self: CALayer {
-    
+
     /**
      Scales a layer to aspect fit the given size.
      - Parameter rect: The `CGRect` to fit into
