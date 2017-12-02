@@ -126,6 +126,7 @@
 		39B8D8A91B3C32DD009DAF60 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDA1AAE3FE000472F5A /* Stack.swift */; };
 		39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */; };
 		8AC4DBEA1CB37EA700137DC9 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBE91CB37EA700137DC9 /* CrossPlatform.swift */; };
+		A738B2921FD252A9001CF969 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738B2911FD252A9001CF969 /* Identifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +218,7 @@
 		9E245B691AAE383200472F5A /* String+Subscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Subscript.swift"; sourceTree = "<group>"; };
 		9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9E245BDA1AAE3FE000472F5A /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		A738B2911FD252A9001CF969 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Identifiable.swift; path = Attributes/Identifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +378,7 @@
 		3813ED571EFC6FCF0054ECBD /* Attributes */ = {
 			isa = PBXGroup;
 			children = (
+				A738B2911FD252A9001CF969 /* Identifiable.swift */,
 				3807CCE91F2866D900E78314 /* DelaysApplyingAttributes.swift */,
 				3807CCEC1F29940A00E78314 /* Fillable.swift */,
 				3807CCED1F29940A00E78314 /* Strokable.swift */,
@@ -695,6 +698,7 @@
 				380210241F3B881E007D236B /* Data+CacheKey.swift in Sources */,
 				380FED561F0491E200EDB255 /* SVGContainerElement.swift in Sources */,
 				38311C4D1F1738AB00E876EC /* SVGCache.swift in Sources */,
+				A738B2921FD252A9001CF969 /* Identifiable.swift in Sources */,
 				176BC9AD1EE48CE800F7B54C /* SVGCircle.swift in Sources */,
 				39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */,
 				176BC9F21EE62AF300F7B54C /* CoordinateLexer.swift in Sources */,

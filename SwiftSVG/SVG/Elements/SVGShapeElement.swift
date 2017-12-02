@@ -38,7 +38,7 @@
 /**
  A protocol that describes an instance that stores the path as a `CAShapeLayer`
  */
-public protocol SVGShapeElement: SVGElement, Fillable, Strokable, Transformable, Stylable {
+public protocol SVGShapeElement: SVGElement, Identifiable, Fillable, Strokable, Transformable, Stylable {
     
     /**
      The `CAShapeLayer` that can draw the path data.

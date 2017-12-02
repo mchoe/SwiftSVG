@@ -80,6 +80,7 @@ public struct SVGParserSupportedElements {
                     "cy": returnElement.yCenter,
                     "r": returnElement.radius,
                 ]
+                returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 returnElement.supportedAttributes.add(returnElement.styleAttributes)
@@ -94,6 +95,7 @@ public struct SVGParserSupportedElements {
                     "rx": returnElement.xRadius,
                     "ry": returnElement.yRadius,
                 ]
+                returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 returnElement.supportedAttributes.add(returnElement.styleAttributes)
@@ -116,6 +118,7 @@ public struct SVGParserSupportedElements {
                     "y1": returnElement.y1,
                     "y2": returnElement.y2,
                 ]
+                returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 returnElement.supportedAttributes.add(returnElement.styleAttributes)
@@ -128,6 +131,7 @@ public struct SVGParserSupportedElements {
                     "d": returnElement.parseD,
                     "clip-rule": returnElement.clipRule
                 ]
+                returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 returnElement.supportedAttributes.add(returnElement.styleAttributes)
@@ -139,6 +143,7 @@ public struct SVGParserSupportedElements {
                 returnElement.supportedAttributes = [
                     "points": returnElement.points
                 ]
+                returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 returnElement.supportedAttributes.add(returnElement.styleAttributes)
@@ -150,6 +155,7 @@ public struct SVGParserSupportedElements {
                 returnElement.supportedAttributes = [
                     "points": returnElement.points
                 ]
+                returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 returnElement.supportedAttributes.add(returnElement.styleAttributes)
@@ -166,6 +172,7 @@ public struct SVGParserSupportedElements {
                     "x": returnElement.parseX,
                     "y": returnElement.parseY,
                 ]
+                returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 returnElement.supportedAttributes.add(returnElement.styleAttributes)
