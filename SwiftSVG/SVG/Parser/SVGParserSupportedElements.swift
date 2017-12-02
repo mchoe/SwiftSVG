@@ -104,6 +104,7 @@ public struct SVGParserSupportedElements {
             },
             SVGGroup.elementName: {
                 let returnElement = SVGGroup()
+                returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
                 returnElement.supportedAttributes.add(returnElement.strokeAttributes)
                 returnElement.supportedAttributes.add(returnElement.styleAttributes)

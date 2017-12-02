@@ -45,7 +45,9 @@ public protocol SVGLayerType {
 public extension SVGLayerType where Self: CALayer {
 
     var identifier: String? {
-        get { return self.name }
+        get {
+            return self.name
+        }
     }
 
     /**

@@ -122,6 +122,7 @@
 		3882158D1F131CC800C192A3 /* NSBezierPath+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */; };
 		3882158E1F131CC900C192A3 /* NSBezierPath+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */; };
 		3882158F1F13295200C192A3 /* SwiftSVGFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 39B8D8901B3C3283009DAF60 /* SwiftSVGFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38E2A7A11FD33AA4003DEFBB /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738B2911FD252A9001CF969 /* Identifiable.swift */; };
 		39B8D8A71B3C32DD009DAF60 /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B691AAE383200472F5A /* String+Subscript.swift */; };
 		39B8D8A91B3C32DD009DAF60 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDA1AAE3FE000472F5A /* Stack.swift */; };
 		39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */; };
@@ -378,9 +379,9 @@
 		3813ED571EFC6FCF0054ECBD /* Attributes */ = {
 			isa = PBXGroup;
 			children = (
-				A738B2911FD252A9001CF969 /* Identifiable.swift */,
 				3807CCE91F2866D900E78314 /* DelaysApplyingAttributes.swift */,
 				3807CCEC1F29940A00E78314 /* Fillable.swift */,
+				A738B2911FD252A9001CF969 /* Identifiable.swift */,
 				3807CCED1F29940A00E78314 /* Strokable.swift */,
 				3807CCEE1F29940A00E78314 /* Stylable.swift */,
 				3807CCEF1F29940A00E78314 /* Transformable.swift */,
@@ -631,6 +632,7 @@
 				38048F431F24214400179C95 /* UIView+SVG.swift in Sources */,
 				381E99BD1EF9D05800839918 /* HorizontalLineToTests.swift in Sources */,
 				3807CCEB1F286B1B00E78314 /* DelaysApplyingAttributes.swift in Sources */,
+				38E2A7A11FD33AA4003DEFBB /* Identifiable.swift in Sources */,
 				38048F1E1F23DD1E00179C95 /* SVGEllipseTests.swift in Sources */,
 				38048F241F23DD7D00179C95 /* SVGPathTests.swift in Sources */,
 				3807CCF61F29998E00E78314 /* Stylable.swift in Sources */,
