@@ -1,6 +1,6 @@
 //
-//  FillableTests.swift
-//  SwiftSVG
+//  TestShapeElement.swift
+//  SwiftSVGTests
 //
 //  Copyright (c) 2017 Michael Choe
 //  http://www.github.com/mchoe
@@ -25,34 +25,23 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+import UIKit
 
-import XCTest
-
-class FillableTests: XCTestCase {
+struct TestShapeElement: SVGShapeElement {
+    static let elementName: String = "test"
+    var supportedAttributes: [String : (String) -> ()] = [:]
+    var svgLayer = CAShapeLayer()
     
-    func testFillOpacity() {
-        let testShapeElement = TestShapeElement()
-        testShapeElement.fill(fillColor: "#00FF33")
-        testShapeElement.fillOpacity(opacity: "0.5")
-        XCTAssert(testShapeElement.svgLayer.opacity == 1.0, "Fill opacity should be set on the CAShapelayer's fill color and not on the layer's overall opacity.")
-        
-        guard let fillComponents = testShapeElement.svgLayer.fillColor?.components else {
-            XCTFail("Fill opacity should set the fill color")
-            return
-        }
-        XCTAssert(fillComponents[3] == 0.5, "Expected 0.5, got \(fillComponents[3])")
+    init() {
+        let rectPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 200, height: 200))
+        self.svgLayer.path = rectPath.cgPath
     }
     
-    func testFillOpacityOrder() {
-        let testShapeElement = TestShapeElement()
-        testShapeElement.fillOpacity(opacity: "0.5")
-        testShapeElement.fill(fillColor: "#00FF00")
-        
-        guard let fillComponents = testShapeElement.svgLayer.fillColor?.components else {
-            XCTFail("Fill should return color components")
-            return
-        }
-        XCTAssert(fillComponents[3] == 0.5, "Fill color should preserve any existing fill opacity. Expected 0.5, got \(fillComponents[3])")
+    func notReal(string: String) {
+        return
     }
     
+    func didProcessElement(in container: SVGContainerElement?) {
+        return
+    }
 }

@@ -187,6 +187,7 @@ public struct SVGParserSupportedElements {
                     "height": returnElement.parseHeight,
                     "viewBox": returnElement.viewBox
                 ]
+                returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 return returnElement
             }
             

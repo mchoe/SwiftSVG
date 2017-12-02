@@ -47,7 +47,7 @@ extension Identifiable where Self : SVGShapeElement {
     }
 }
 
-extension Identifiable where Self : SVGGroup {
+extension Identifiable where Self : SVGContainerElement {
     var identityAttributes: [String : (String) -> ()] {
         return [
             "id": self.identify

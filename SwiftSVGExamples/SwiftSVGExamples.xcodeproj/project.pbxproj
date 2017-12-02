@@ -13,8 +13,8 @@
 		176BC9BF1EE4BC6400F7B54C /* SingleSVGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC9BE1EE4BC6400F7B54C /* SingleSVGViewController.swift */; };
 		176BC9C71EE4C1AB00F7B54C /* ellipses.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9C61EE4C1AB00F7B54C /* ellipses.svg */; };
 		176BC9C81EE4C1AB00F7B54C /* ellipses.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9C61EE4C1AB00F7B54C /* ellipses.svg */; };
-		176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9CC1EE4C44E00F7B54C /* lines.svg */; };
-		176BC9CE1EE4C44E00F7B54C /* lines.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9CC1EE4C44E00F7B54C /* lines.svg */; };
+		176BC9CD1EE4C44E00F7B54C /* simple-rectangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9CC1EE4C44E00F7B54C /* simple-rectangle.svg */; };
+		176BC9CE1EE4C44E00F7B54C /* simple-rectangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9CC1EE4C44E00F7B54C /* simple-rectangle.svg */; };
 		176BC9FF1EE63FAB00F7B54C /* polylines.svg in Resources */ = {isa = PBXBuildFile; fileRef = 176BC9FE1EE63FAB00F7B54C /* polylines.svg */; };
 		3807CCFB1F2AEF3A00E78314 /* tea.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3807CCFA1F2AEF3A00E78314 /* tea.svg */; };
 		3807CCFD1F2AF26400E78314 /* fistBump.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3807CCFC1F2AF26400E78314 /* fistBump.svg */; };
@@ -122,7 +122,7 @@
 		176BC9B81EE49C7200F7B54C /* rectangles.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rectangles.svg; sourceTree = "<group>"; };
 		176BC9BE1EE4BC6400F7B54C /* SingleSVGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleSVGViewController.swift; sourceTree = "<group>"; };
 		176BC9C61EE4C1AB00F7B54C /* ellipses.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ellipses.svg; sourceTree = "<group>"; };
-		176BC9CC1EE4C44E00F7B54C /* lines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lines.svg; sourceTree = "<group>"; };
+		176BC9CC1EE4C44E00F7B54C /* simple-rectangle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "simple-rectangle.svg"; sourceTree = "<group>"; };
 		176BC9FE1EE63FAB00F7B54C /* polylines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polylines.svg; sourceTree = "<group>"; };
 		3807CCFA1F2AEF3A00E78314 /* tea.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = tea.svg; sourceTree = "<group>"; };
 		3807CCFC1F2AF26400E78314 /* fistBump.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fistBump.svg; sourceTree = "<group>"; };
@@ -336,7 +336,7 @@
 				176BC9FE1EE63FAB00F7B54C /* polylines.svg */,
 				3807CCFC1F2AF26400E78314 /* fistBump.svg */,
 				381E99C21EFA0DC400839918 /* polygons.svg */,
-				176BC9CC1EE4C44E00F7B54C /* lines.svg */,
+				176BC9CC1EE4C44E00F7B54C /* simple-rectangle.svg */,
 				176BC9B81EE49C7200F7B54C /* rectangles.svg */,
 				38A1CE0F1EF77A0F00D2E54E /* triangle.svg */,
 				380FED661F06951100EDB255 /* tiger.svg */,
@@ -481,7 +481,7 @@
 				3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */,
 				380FED0A1F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg in Resources */,
 				380FED061F00171B00EDB255 /* openclipart-1332611679.svg in Resources */,
-				176BC9CD1EE4C44E00F7B54C /* lines.svg in Resources */,
+				176BC9CD1EE4C44E00F7B54C /* simple-rectangle.svg in Resources */,
 				380FED631F0692E500EDB255 /* MedievalBanners.svg in Resources */,
 				3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */,
 				380FED691F0697A800EDB255 /* Camel2.svg in Resources */,
@@ -508,7 +508,7 @@
 				176BC9BA1EE49C7200F7B54C /* rectangles.svg in Resources */,
 				176BC9C81EE4C1AB00F7B54C /* ellipses.svg in Resources */,
 				3882153B1F12C41800C192A3 /* hawaiiFlowers.svg in Resources */,
-				176BC9CE1EE4C44E00F7B54C /* lines.svg in Resources */,
+				176BC9CE1EE4C44E00F7B54C /* simple-rectangle.svg in Resources */,
 				8AC4DBDA1CB37DC600137DC9 /* Assets.xcassets in Resources */,
 				8AC4DBDD1CB37DC600137DC9 /* Main.storyboard in Resources */,
 			);

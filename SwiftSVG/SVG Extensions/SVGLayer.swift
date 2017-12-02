@@ -39,16 +39,9 @@
  */
 public protocol SVGLayerType {
     var boundingBox: CGRect { get }
-    var identifier: String? { get }
 }
 
 public extension SVGLayerType where Self: CALayer {
-
-    var identifier: String? {
-        get {
-            return self.name
-        }
-    }
 
     /**
      Scales a layer to aspect fit the given size.

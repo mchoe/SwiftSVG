@@ -1,5 +1,5 @@
 //
-//  TestHarness.swift
+//  CGPathPoints.swift
 //  SwiftSVG
 //
 //

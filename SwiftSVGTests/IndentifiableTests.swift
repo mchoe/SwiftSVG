@@ -1,6 +1,6 @@
 //
-//  FillableTests.swift
-//  SwiftSVG
+//  IndentifiableTests.swift
+//  SwiftSVGTests
 //
 //  Copyright (c) 2017 Michael Choe
 //  http://www.github.com/mchoe
@@ -25,34 +25,44 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-
 import XCTest
 
-class FillableTests: XCTestCase {
+class IndentifiableTests: XCTestCase {
     
-    func testFillOpacity() {
+    func testShapeElementSetsLayerName() {
         let testShapeElement = TestShapeElement()
-        testShapeElement.fill(fillColor: "#00FF33")
-        testShapeElement.fillOpacity(opacity: "0.5")
-        XCTAssert(testShapeElement.svgLayer.opacity == 1.0, "Fill opacity should be set on the CAShapelayer's fill color and not on the layer's overall opacity.")
-        
-        guard let fillComponents = testShapeElement.svgLayer.fillColor?.components else {
-            XCTFail("Fill opacity should set the fill color")
-            return
-        }
-        XCTAssert(fillComponents[3] == 0.5, "Expected 0.5, got \(fillComponents[3])")
+        testShapeElement.identify(identifier: "id-to-check")
+        XCTAssert(testShapeElement.svgLayer.name == "id-to-check", "Expected \"id-to-check\", got: \(String(describing: testShapeElement.svgLayer.name))")
     }
     
-    func testFillOpacityOrder() {
-        let testShapeElement = TestShapeElement()
-        testShapeElement.fillOpacity(opacity: "0.5")
-        testShapeElement.fill(fillColor: "#00FF00")
+    func testEndToEnd() {
         
-        guard let fillComponents = testShapeElement.svgLayer.fillColor?.components else {
-            XCTFail("Fill should return color components")
+        guard let resourceURL = Bundle(for: type(of: self)).url(forResource: "simple-rectangle", withExtension: "svg") else {
+            XCTAssert(false, "Couldn't find resource")
             return
         }
-        XCTAssert(fillComponents[3] == 0.5, "Fill color should preserve any existing fill opacity. Expected 0.5, got \(fillComponents[3])")
+        
+        let asData = try! Data(contentsOf: resourceURL)
+        let expectation = self.expectation(description: "Identifiable expectation")
+        _ = UIView(SVGData: asData) { (svgLayer) in
+            guard let rootLayerName = svgLayer.sublayers?[0].name else {
+                return
+            }
+            guard rootLayerName == "root-rectangle-id" else {
+                return
+            }
+            
+            guard let innerID = svgLayer.sublayers?[0].sublayers?[0].name else {
+                return
+            }
+            guard innerID == "inner-rectangle-id" else {
+                return
+            }
+            expectation.fulfill()
+        }
+        
+        self.waitForExpectations(timeout: 3, handler: nil)
+        
     }
     
 }

@@ -106,7 +106,7 @@
 		381E99AF1EF8A55000839918 /* MoveToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99AE1EF8A55000839918 /* MoveToTests.swift */; };
 		381E99B11EF8AFE500839918 /* PathCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B01EF8AFE500839918 /* PathCommand.swift */; };
 		381E99B21EF8B30F00839918 /* PathCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B01EF8AFE500839918 /* PathCommand.swift */; };
-		381E99B41EF8C72900839918 /* TestHarness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B31EF8C72900839918 /* TestHarness.swift */; };
+		381E99B41EF8C72900839918 /* CGPathPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B31EF8C72900839918 /* CGPathPoints.swift */; };
 		381E99B61EF8CCCC00839918 /* PathDLexerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B51EF8CCCC00839918 /* PathDLexerTests.swift */; };
 		381E99B81EF8D26E00839918 /* CurveToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B71EF8D26E00839918 /* CurveToTests.swift */; };
 		381E99BB1EF9856B00839918 /* ClosePathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99BA1EF9856B00839918 /* ClosePathTests.swift */; };
@@ -123,6 +123,9 @@
 		3882158E1F131CC900C192A3 /* NSBezierPath+CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5706F1E1F4285007CED68 /* NSBezierPath+CrossPlatform.swift */; };
 		3882158F1F13295200C192A3 /* SwiftSVGFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 39B8D8901B3C3283009DAF60 /* SwiftSVGFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38E2A7A11FD33AA4003DEFBB /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738B2911FD252A9001CF969 /* Identifiable.swift */; };
+		38E2A7A31FD33F94003DEFBB /* IndentifiableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E2A7A21FD33F94003DEFBB /* IndentifiableTests.swift */; };
+		38E2A7A61FD34029003DEFBB /* TestShapeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E2A7A51FD34029003DEFBB /* TestShapeElement.swift */; };
+		38E2A7A91FD34AA0003DEFBB /* simple-rectangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38E2A7A71FD3444B003DEFBB /* simple-rectangle.svg */; };
 		39B8D8A71B3C32DD009DAF60 /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B691AAE383200472F5A /* String+Subscript.swift */; };
 		39B8D8A91B3C32DD009DAF60 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDA1AAE3FE000472F5A /* Stack.swift */; };
 		39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */; };
@@ -201,7 +204,7 @@
 		381E99AC1EF8946E00839918 /* ScalarFromByteArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalarFromByteArrayTests.swift; sourceTree = "<group>"; };
 		381E99AE1EF8A55000839918 /* MoveToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveToTests.swift; sourceTree = "<group>"; };
 		381E99B01EF8AFE500839918 /* PathCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathCommand.swift; sourceTree = "<group>"; };
-		381E99B31EF8C72900839918 /* TestHarness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHarness.swift; sourceTree = "<group>"; };
+		381E99B31EF8C72900839918 /* CGPathPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPathPoints.swift; sourceTree = "<group>"; };
 		381E99B51EF8CCCC00839918 /* PathDLexerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathDLexerTests.swift; sourceTree = "<group>"; };
 		381E99B71EF8D26E00839918 /* CurveToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveToTests.swift; sourceTree = "<group>"; };
 		381E99BA1EF9856B00839918 /* ClosePathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosePathTests.swift; sourceTree = "<group>"; };
@@ -212,6 +215,9 @@
 		383CE5161F23B668003699E2 /* FillableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillableTests.swift; sourceTree = "<group>"; };
 		38511AB21F57B0BC007B7BB8 /* SVGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParser.swift; sourceTree = "<group>"; };
 		387090351F0C134400F72660 /* ParsesAsynchronously.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParsesAsynchronously.swift; path = ../Elements/ParsesAsynchronously.swift; sourceTree = "<group>"; };
+		38E2A7A21FD33F94003DEFBB /* IndentifiableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentifiableTests.swift; sourceTree = "<group>"; };
+		38E2A7A51FD34029003DEFBB /* TestShapeElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestShapeElement.swift; sourceTree = "<group>"; };
+		38E2A7A71FD3444B003DEFBB /* simple-rectangle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "simple-rectangle.svg"; path = "SwiftSVGExamples/simple-rectangle.svg"; sourceTree = "<group>"; };
 		39B8D88C1B3C3283009DAF60 /* SwiftSVG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSVG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B8D88F1B3C3283009DAF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../SwiftSVGFramework/Info.plist; sourceTree = "<group>"; };
 		39B8D8901B3C3283009DAF60 /* SwiftSVGFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSVGFramework.h; sourceTree = "<group>"; };
@@ -250,7 +256,7 @@
 				176BC9F51EE630E800F7B54C /* Iterator Tests */,
 				381E99B91EF8D27C00839918 /* Path Command Tests */,
 				387B0C551F0D37290085E51A /* Performance Tests */,
-				381E99B31EF8C72900839918 /* TestHarness.swift */,
+				38E2A7A41FD34015003DEFBB /* Test Harness */,
 				176BC9941EE474D200F7B54C /* Info.plist */,
 			);
 			path = SwiftSVGTests;
@@ -372,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				38048F4A1F24705800179C95 /* ukulele.svg */,
+				38E2A7A71FD3444B003DEFBB /* simple-rectangle.svg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -416,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				383CE5161F23B668003699E2 /* FillableTests.swift */,
+				38E2A7A21FD33F94003DEFBB /* IndentifiableTests.swift */,
 			);
 			name = "Attribute Tests";
 			sourceTree = "<group>";
@@ -436,6 +444,15 @@
 				176BC9B21EE4946B00F7B54C /* SVGShapeElement.swift */,
 			);
 			name = "Base Elements";
+			sourceTree = "<group>";
+		};
+		38E2A7A41FD34015003DEFBB /* Test Harness */ = {
+			isa = PBXGroup;
+			children = (
+				381E99B31EF8C72900839918 /* CGPathPoints.swift */,
+				38E2A7A51FD34029003DEFBB /* TestShapeElement.swift */,
+			);
+			name = "Test Harness";
 			sourceTree = "<group>";
 		};
 		39B8D88E1B3C3283009DAF60 /* Supporting Files */ = {
@@ -579,6 +596,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E2A7A91FD34AA0003DEFBB /* simple-rectangle.svg in Resources */,
 				38048F4E1F24710100179C95 /* ukulele.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +638,7 @@
 				381E99AA1EF801BB00839918 /* LineToTests.swift in Sources */,
 				176BC9E31EE51AF600F7B54C /* SVGCircle.swift in Sources */,
 				38048F421F24214400179C95 /* UIBezierPath+SVG.swift in Sources */,
+				38E2A7A61FD34029003DEFBB /* TestShapeElement.swift in Sources */,
 				3817D1B21FBD1F710054F88E /* SVGParser.swift in Sources */,
 				176BC9D21EE513F400F7B54C /* SVGPolyline.swift in Sources */,
 				176BC9E91EE51B0700F7B54C /* CrossPlatform.swift in Sources */,
@@ -629,6 +648,7 @@
 				38048F301F241D1C00179C95 /* FloatingPointDegreesToRadiansTests.swift in Sources */,
 				38048F261F23DDAA00179C95 /* SVGPolygonTests.swift in Sources */,
 				3882158E1F131CC900C192A3 /* NSBezierPath+CrossPlatform.swift in Sources */,
+				38E2A7A31FD33F94003DEFBB /* IndentifiableTests.swift in Sources */,
 				38048F431F24214400179C95 /* UIView+SVG.swift in Sources */,
 				381E99BD1EF9D05800839918 /* HorizontalLineToTests.swift in Sources */,
 				3807CCEB1F286B1B00E78314 /* DelaysApplyingAttributes.swift in Sources */,
@@ -655,7 +675,7 @@
 				176BC9E41EE51AF600F7B54C /* SVGEllipse.swift in Sources */,
 				176BC9DB1EE5198800F7B54C /* UIColor+Extensions.swift in Sources */,
 				176BC9F91EE6313900F7B54C /* CoordinateLexer.swift in Sources */,
-				381E99B41EF8C72900839918 /* TestHarness.swift in Sources */,
+				381E99B41EF8C72900839918 /* CGPathPoints.swift in Sources */,
 				381E99C11EF9D2DC00839918 /* SmoothCurveToTests.swift in Sources */,
 				387090381F0C15B400F72660 /* ParsesAsynchronously.swift in Sources */,
 				176BC9E81EE51AF600F7B54C /* SVGShapeElement.swift in Sources */,
