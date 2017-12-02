@@ -8,6 +8,27 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Identifiable.swift",
+      "line": null,
+      "symbol": "Identifiable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Identifiable.swift",
+      "line": null,
+      "symbol": "Identifiable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Identifiable.swift",
+      "line": 32,
+      "symbol": "Identifiable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/tarragon/Google Drive/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
       "line": 49,
       "symbol": "LineJoin.bevel",
