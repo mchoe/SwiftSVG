@@ -93,14 +93,14 @@ public extension UIView {
                 }
                 do {
                     let thisData = try Data(contentsOf: svgURL)
-                    self.init(SVGData: thisData)
+                    self.init(SVGData: thisData, parser: parser, completion: completion)
                 } catch {
                     self.init()
                     return
                 }
                 return
             }
-            self.init(SVGData: unwrapped)
+            self.init(SVGData: unwrapped, parser: parser, completion: completion)
         } else {
             guard let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") else {
                 self.init()
@@ -108,7 +108,7 @@ public extension UIView {
             }
             do {
                 let data = try Data(contentsOf: svgURL)
-                self.init(SVGData: data)
+                self.init(SVGData: data, parser: parser, completion: completion)
             } catch {
                 self.init()
                 return
