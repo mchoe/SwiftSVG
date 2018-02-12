@@ -72,6 +72,12 @@ open class SVGView : UIView {
                     self?.nonOptionalLayer.addSublayer(svgLayer)
                 }
             }
+            else if let asset = NSDataAsset(name: thisName) {
+                let data = asset.data
+                CALayer(SVGData: data) { [weak self] (svgLayer) in
+                    self.?nonOptionalLayer.addSublayer(svgLayer)
+                }
+            }
         }
     }
 }
