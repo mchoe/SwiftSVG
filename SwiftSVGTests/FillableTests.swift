@@ -55,17 +55,18 @@ class FillableTests: XCTestCase {
         XCTAssert(fillComponents[3] == 0.5, "Fill color should preserve any existing fill opacity. Expected 0.5, got \(fillComponents[3])")
     }
     
-    func testFillColorComponents() {
+    func testFillOpacityColorComponents() {
         let testShapeElement = TestShapeElement()
         testShapeElement.fill(fillColor: "#33FF66")
-        
+        testShapeElement.fillOpacity(opacity: "0.5")
         guard let fillComponents = testShapeElement.svgLayer.fillColor?.components else {
             XCTFail("Fill opacity should set the fill color")
             return
         }
-        XCTAssert(fillComponents[0] == 0.2, "Expected 0.0, got \(fillComponents[0])")
-        XCTAssert(fillComponents[1] == 1.0, "Expected 0.0, got \(fillComponents[1])")
-        XCTAssert(fillComponents[2] == 0.4, "Expected 0.0, got \(fillComponents[2])")
+        XCTAssert(testShapeElement.svgLayer.fillColor?.components![0] == 0.2, "Expected 0.0, got \(fillComponents[0])")
+        XCTAssert(testShapeElement.svgLayer.fillColor?.components![1] == 1.0, "Expected 0.0, got \(testShapeElement.svgLayer.fillColor!.components![1])")
+        XCTAssert(testShapeElement.svgLayer.fillColor?.components![2] == 0.4, "Expected 0.0, got \(testShapeElement.svgLayer.fillColor!.components![2])")
+        XCTAssert(testShapeElement.svgLayer.fillColor?.components![3] == 0.5, "Expected 0.0, got \(testShapeElement.svgLayer.fillColor!.components![3])")
     }
     
 }
