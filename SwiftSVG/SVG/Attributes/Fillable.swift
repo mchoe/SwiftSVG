@@ -96,7 +96,7 @@ extension Fillable where Self : SVGShapeElement {
         guard let colorComponents = self.svgLayer.fillColor?.components else {
             return
         }
-        self.svgLayer.fillColor = UIColor(red: colorComponents[0], green: colorComponents[0], blue: colorComponents[0], alpha: opacity).cgColor
+        self.svgLayer.fillColor = UIColor(red: colorComponents[0], green: colorComponents[1], blue: colorComponents[2], alpha: opacity).cgColor
     }
     
 }

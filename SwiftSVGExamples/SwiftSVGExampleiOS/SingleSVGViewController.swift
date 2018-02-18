@@ -42,6 +42,8 @@ class SingleSVGViewController: UIViewController {
         
         self.automaticallyAdjustsScrollViewInsets = false
         
+        
+        /*
         guard let url = self.svgURL else {
             return
         }
@@ -51,7 +53,14 @@ class SingleSVGViewController: UIViewController {
         }
         svgView.backgroundColor = UIColor.blue
         self.canvasView.addSubview(svgView)
+        */
         
+        let svgURL = URL(string: "https://jbdujardin.com/test.svg")!
+        let svgView = UIView(SVGURL: svgURL) { (svgLayer) in
+            svgLayer.resizeToFit(CGRect(x: 0.0, y: 0.0, width: 320.0, height: 180.0))
+        }
+        svgView.frame = CGRect(x: 0.0, y: 0.0, width: 320.0, height: 180.0)
+        self.canvasView.addSubview(svgView)
     }
 
 }
