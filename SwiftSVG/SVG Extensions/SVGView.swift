@@ -71,7 +71,7 @@ open class SVGView : UIView {
                 CALayer(SVGURL: url) { [weak self] (svgLayer) in
                     self?.nonOptionalLayer.addSublayer(svgLayer)
                 }
-            } else if #available(iOS 9.0, *), let asset = NSDataAsset(name: thisName) {
+            } else if #available(iOS 10.11, *), let asset = NSDataAsset(name: thisName) {
                 let data = asset.data
                 CALayer(SVGData: data) { [weak self] (svgLayer) in
                     self?.nonOptionalLayer.addSublayer(svgLayer)
