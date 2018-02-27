@@ -233,7 +233,12 @@ extension NSXMLSVGParser {
         guard let thisBoundingBox = boundingBox else {
             return
         }
-        self.containerLayer.boundingBox = self.containerLayer.boundingBox.union(thisBoundingBox)
+
+	if (self.containerLayer.boundingBox == CGRect.zero) {
+            self.containerLayer.boundingBox = thisBoundingBox
+        } else {
+            self.containerLayer.boundingBox = self.containerLayer.boundingBox.union(thisBoundingBox)
+        }
     }
 }
 
