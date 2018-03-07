@@ -100,7 +100,17 @@ class GithubViewController: UIViewController {
                 shapeLayer.path = teaPath.cgPath
                 returnView.layer.addSublayer(shapeLayer)
                 return returnView
-            })
+            }),
+            CellItem(render: { (cellSize) -> UIView in
+                
+                // Simplest example of an SVG stored in the assets catalog as a Data Asset
+                
+                let svgView = UIView(SVGNamed: "raphaelcruzeiro") { (l: SVGLayer) -> Void in
+                    l.fillColor = UIColor.blue.cgColor
+                    l.strokeColor = l.fillColor
+                }
+                return svgView
+            }),
         ]
         return returnData
     }()
