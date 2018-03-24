@@ -377,8 +377,8 @@
 		380FED341F00FF3A00EDB255 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				38048F4A1F24705800179C95 /* ukulele.svg */,
 				38E2A7A71FD3444B003DEFBB /* simple-rectangle.svg */,
+				38048F4A1F24705800179C95 /* ukulele.svg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
