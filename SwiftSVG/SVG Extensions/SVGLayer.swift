@@ -125,7 +125,7 @@ extension SVGLayer {
     override open var strokeColor: CGColor? {
         didSet {
             self.applyOnSublayers(ofType: CAShapeLayer.self) { (thisShapeLayer) in
-                thisShapeLayer.strokeColor = fillColor
+                thisShapeLayer.strokeColor = strokeColor
             }
         }
     }
