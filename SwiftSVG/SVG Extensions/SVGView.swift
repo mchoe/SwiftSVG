@@ -61,10 +61,10 @@ open class SVGView : UIView {
                 return
             }
             
-            #if !TARGET_INTERFACE_BUILDER
-                let bundle = Bundle.main
-            #else
+            #if TARGET_INTERFACE_BUILDER
                 let bundle = Bundle(for: type(of: self))
+            #else
+                let bundle = Bundle.main
             #endif
             
             if let url = bundle.url(forResource: thisName, withExtension: "svg") {
