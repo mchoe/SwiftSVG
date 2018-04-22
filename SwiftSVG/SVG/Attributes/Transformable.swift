@@ -51,7 +51,7 @@ struct Transform {
             return nil
         }
         
-        let coordinates = coordinatesArray.flatMap { (thisCoordinate) -> CGFloat? in
+        let coordinates = coordinatesArray.compactMap { (thisCoordinate) -> CGFloat? in
             return CGFloat(thisCoordinate.trimWhitespace())
         }
         
@@ -172,7 +172,7 @@ extension Transformable {
             let matches = regex.matches(in: transformString, options: [], range: NSMakeRange(0, transformString.utf8.count))
             
             let combinedTransforms = matches
-            .flatMap({ (thisMatch) -> Transform? in
+                .compactMap({ (thisMatch) -> Transform? in
                 let nameRange = thisMatch.range(at: 1)
                 let coordinateRange = thisMatch.range(at: 2)
                 let transformName = transformString[nameRange.location..<nameRange.location + nameRange.length]

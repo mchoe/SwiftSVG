@@ -79,7 +79,7 @@ struct SVGRootElement: SVGContainerElement {
     internal func viewBox(coordinates: String) {
         let points = coordinates
             .components(separatedBy: CharacterSet(charactersIn: ", "))
-            .flatMap { (thisString) -> Double? in
+            .compactMap { (thisString) -> Double? in
                return Double(thisString.trimWhitespace())
             }
         guard points.count == 4 else {
