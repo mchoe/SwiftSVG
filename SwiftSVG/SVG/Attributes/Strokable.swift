@@ -150,11 +150,11 @@ extension Strokable where Self : SVGGroup {
      */
     var strokeAttributes: [String : (String) -> ()] {
         return [
-            "stroke": self.strokeColor,
-            "stroke-linecap": self.strokeLineCap,
-            "stroke-linejoin": self.strokeLineJoin,
-            "stroke-miterlimit": self.strokeMiterLimit,
-            "stroke-width": self.strokeWidth
+            "stroke": unown(self, SVGGroup.strokeColor),
+            "stroke-linecap": unown(self, SVGGroup.strokeLineCap),
+            "stroke-linejoin": unown(self, SVGGroup.strokeLineJoin),
+            "stroke-miterlimit": unown(self, SVGGroup.strokeMiterLimit),
+            "stroke-width": unown(self, SVGGroup.strokeWidth)
         ]
     }
     

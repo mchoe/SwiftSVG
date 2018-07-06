@@ -53,6 +53,19 @@ extension Identifiable where Self : SVGShapeElement {
     }
 }
 
+extension Identifiable where Self : SVGGroup {
+  /**
+   The curried functions to be used for the `SVGShapeElement`'s default implementation. This dictionary is meant to be used in the `SVGParserSupportedElements` instance
+   - parameter Key: The SVG string value of the attribute
+   - parameter Value: A curried function to use to implement the SVG attribute
+   */
+  var identityAttributes: [String : (String) -> ()] {
+    return [
+      "id": unown(self, SVGGroup.identify)
+    ]
+  }
+}
+
 extension Identifiable where Self : SVGContainerElement {
     
     /**
