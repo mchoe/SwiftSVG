@@ -106,7 +106,6 @@
 		381E99AF1EF8A55000839918 /* MoveToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99AE1EF8A55000839918 /* MoveToTests.swift */; };
 		381E99B11EF8AFE500839918 /* PathCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B01EF8AFE500839918 /* PathCommand.swift */; };
 		381E99B21EF8B30F00839918 /* PathCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B01EF8AFE500839918 /* PathCommand.swift */; };
-		381E99B41EF8C72900839918 /* CGPathPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B31EF8C72900839918 /* CGPathPoints.swift */; };
 		381E99B61EF8CCCC00839918 /* PathDLexerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B51EF8CCCC00839918 /* PathDLexerTests.swift */; };
 		381E99B81EF8D26E00839918 /* CurveToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B71EF8D26E00839918 /* CurveToTests.swift */; };
 		381E99BB1EF9856B00839918 /* ClosePathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99BA1EF9856B00839918 /* ClosePathTests.swift */; };
@@ -130,6 +129,7 @@
 		39B8D8A91B3C32DD009DAF60 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245BDA1AAE3FE000472F5A /* Stack.swift */; };
 		39B8D8AA1B3C32DD009DAF60 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */; };
 		66F9844B20EF511F00A2CBEF /* Unown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9844A20EF511F00A2CBEF /* Unown.swift */; };
+		66F9844C20EF532600A2CBEF /* Unown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9844A20EF511F00A2CBEF /* Unown.swift */; };
 		8AC4DBEA1CB37EA700137DC9 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBE91CB37EA700137DC9 /* CrossPlatform.swift */; };
 		A738B2921FD252A9001CF969 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738B2911FD252A9001CF969 /* Identifiable.swift */; };
 /* End PBXBuildFile section */
@@ -655,6 +655,7 @@
 				38048F431F24214400179C95 /* UIView+SVG.swift in Sources */,
 				381E99BD1EF9D05800839918 /* HorizontalLineToTests.swift in Sources */,
 				3807CCEB1F286B1B00E78314 /* DelaysApplyingAttributes.swift in Sources */,
+				66F9844C20EF532600A2CBEF /* Unown.swift in Sources */,
 				38E2A7A11FD33AA4003DEFBB /* Identifiable.swift in Sources */,
 				38048F1E1F23DD1E00179C95 /* SVGEllipseTests.swift in Sources */,
 				38048F241F23DD7D00179C95 /* SVGPathTests.swift in Sources */,
