@@ -78,12 +78,7 @@ public extension SVGLayerType where Self: CALayer {
 open class SVGLayer: CAShapeLayer, SVGLayerType {
     
     /// The minimum CGRect that fits all subpaths
-    public var boundingBox = CGRect.null
-
-    deinit {
-        print(#function, self)
-    }
-    
+    public var boundingBox = CGRect.null    
 }
 
 public extension SVGLayer {

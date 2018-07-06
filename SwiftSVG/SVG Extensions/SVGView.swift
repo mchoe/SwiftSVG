@@ -90,9 +90,5 @@ open class SVGView : UIView {
         
         }
     }
-    
-    deinit {
-        print(#function, self)
-    }
 }
 
