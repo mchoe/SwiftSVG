@@ -80,7 +80,11 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     private init() {
         super.init(data: Data())
     }
-    
+
+    deinit {
+        print(#function, self)
+    }
+
     /**
      Convenience initializer that can initalize an `NSXMLSVGParser` using a local or remote `URL`
      - parameter SVGURL: The URL of the SVG.

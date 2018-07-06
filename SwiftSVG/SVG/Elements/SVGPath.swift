@@ -63,7 +63,10 @@ final class SVGPath: SVGShapeElement, ParsesAsynchronously, DelaysApplyingAttrib
     
     /// :nodoc:
     internal init() { }
-    
+
+    deinit {
+        print(#function, self)
+    }
     
     /**
      Initializer to to set the `svgLayer`'s cgPath. The path string does not have to be a single path for the whole element, but can include multiple subpaths in the `d` attribute. For instance, the following is a valid path string to pass:
