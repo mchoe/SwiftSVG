@@ -59,7 +59,7 @@ final class SVGPath: SVGShapeElement, ParsesAsynchronously, DelaysApplyingAttrib
     internal var supportedAttributes = [String : (String) -> ()]()
     
     /// :nodoc:
-    internal var svgLayer = CAShapeLayer()
+    internal var svgLayer = CAShapeLayerWithHitTest()
     
     /// :nodoc:
     internal init() { }

@@ -44,7 +44,7 @@ public protocol SVGContainerElement: SVGElement, DelaysApplyingAttributes, Filla
     /**
      The layer that stores all the SVG sublayers
      */
-    var containerLayer: CALayer { get set }
+    var containerLayer: CALayerWithChildHitTest { get set }
 }
 
 

@@ -47,7 +47,7 @@ struct SVGRootElement: SVGContainerElement {
     internal var delayedAttributes = [String : String]()
     
     // :nodoc:
-    internal var containerLayer = CALayer()
+    internal var containerLayer = CALayerWithChildHitTest()
     
     // :nodoc:
     internal var supportedAttributes = [String : (String) -> ()]()

@@ -1,5 +1,5 @@
 //
-//  SVGShapeElement.swift
+//  SVGLayer.swift
 //  SwiftSVG
 //
 //
@@ -28,31 +28,16 @@
 
 
 
-#if os(iOS) || os(tvOS)
-    import UIKit
-#elseif os(OSX)
-    import AppKit
-#endif
-
+import Foundation
+import QuartzCore
 
 /**
- A protocol that describes an instance that stores the path as a `CAShapeLayer`
+ A `CAShapeLayer` subclass that allows you to do perfect "containsPoint" calculations via Apple's API calls
  */
-public protocol SVGShapeElement: SVGElement, Fillable, Strokable, Transformable, Stylable, Identifiable {
-    
-    /**
-     The `CAShapeLayer` that can draw the path data.
-     */
-    var svgLayer: CAShapeLayerWithHitTest { get set }
-}
 
-extension SVGShapeElement {
+open class CAShapeLayerWithHitTest: CAShapeLayer {
     
-    /**
-     The minimum rect that encompasses all of the subpaths
-     */
-    var boundingBox: CGRect? {
-        return self.svgLayer.path?.boundingBox
+    override open func contains(_ p: CGPoint) -> Bool {
+        return path?.contains(p) == true
     }
 }
-

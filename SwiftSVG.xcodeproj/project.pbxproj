@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06B8771A214F03AA00CB0628 /* CAShapeLayerWithHitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B87718214F03AA00CB0628 /* CAShapeLayerWithHitTest.swift */; };
+		06B8771B214F03AA00CB0628 /* CALayerWithChildHitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B87719214F03AA00CB0628 /* CALayerWithChildHitTest.swift */; };
 		174FF06D1EF10691003F3DBE /* PathDLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FF06C1EF10691003F3DBE /* PathDLexer.swift */; };
 		175093C11E6C669F00EF1853 /* SVGParserSupportedElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C01E6C669F00EF1853 /* SVGParserSupportedElements.swift */; };
 		175093C31E6C6C2100EF1853 /* SVGElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175093C21E6C6C2100EF1853 /* SVGElement.swift */; };
@@ -144,6 +146,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06B87718214F03AA00CB0628 /* CAShapeLayerWithHitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAShapeLayerWithHitTest.swift; sourceTree = "<group>"; };
+		06B87719214F03AA00CB0628 /* CALayerWithChildHitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerWithChildHitTest.swift; sourceTree = "<group>"; };
 		174FF06C1EF10691003F3DBE /* PathDLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathDLexer.swift; sourceTree = "<group>"; };
 		175093C01E6C669F00EF1853 /* SVGParserSupportedElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGParserSupportedElements.swift; sourceTree = "<group>"; };
 		175093C21E6C6C2100EF1853 /* SVGElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGElement.swift; path = SVG/Elements/SVGElement.swift; sourceTree = "<group>"; };
@@ -366,6 +370,8 @@
 				38048F321F24210F00179C95 /* CALayer+SVG.swift */,
 				38048F331F24210F00179C95 /* CAShapeLayer+SVG.swift */,
 				38048F341F24210F00179C95 /* SVGLayer.swift */,
+				06B87719214F03AA00CB0628 /* CALayerWithChildHitTest.swift */,
+				06B87718214F03AA00CB0628 /* CAShapeLayerWithHitTest.swift */,
 				38048F351F24210F00179C95 /* SVGView.swift */,
 				38048F361F24210F00179C95 /* UIBezierPath+SVG.swift */,
 				38048F371F24210F00179C95 /* UIView+SVG.swift */,
@@ -702,10 +708,12 @@
 				39B8D8A71B3C32DD009DAF60 /* String+Subscript.swift in Sources */,
 				380FED791F07F48500EDB255 /* DispatchQueue+Extensions.swift in Sources */,
 				38048F381F24210F00179C95 /* CALayer+SVG.swift in Sources */,
+				06B8771B214F03AA00CB0628 /* CALayerWithChildHitTest.swift in Sources */,
 				17CCE7381EE666D6007FA5AD /* Scalar+FromByteArray.swift in Sources */,
 				39B8D8A91B3C32DD009DAF60 /* Stack.swift in Sources */,
 				38048F391F24210F00179C95 /* CAShapeLayer+SVG.swift in Sources */,
 				175093CC1E6C773600EF1853 /* SVGRootElement.swift in Sources */,
+				06B8771A214F03AA00CB0628 /* CAShapeLayerWithHitTest.swift in Sources */,
 				176BC9BC1EE4AE2700F7B54C /* Dictionary+Add.swift in Sources */,
 				38048F3D1F24210F00179C95 /* UIView+SVG.swift in Sources */,
 				176BC9B61EE498C700F7B54C /* SVGRectangle.swift in Sources */,

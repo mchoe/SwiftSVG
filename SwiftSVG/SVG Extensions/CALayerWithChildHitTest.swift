@@ -1,5 +1,5 @@
 //
-//  SVGShapeElement.swift
+//  SVGLayer.swift
 //  SwiftSVG
 //
 //
@@ -28,31 +28,25 @@
 
 
 
-#if os(iOS) || os(tvOS)
-    import UIKit
-#elseif os(OSX)
-    import AppKit
-#endif
+import Foundation
+import QuartzCore
 
-
-/**
- A protocol that describes an instance that stores the path as a `CAShapeLayer`
+/*!
+ * Overrides Apple's CALayer purely to change one method, so that hit-testing
+ * is done by checking whether the hit point lies:
+ *
+ *  "inside ANY of my child sub-layers (some of which have over-ridden hit-testing too)"
  */
-public protocol SVGShapeElement: SVGElement, Fillable, Strokable, Transformable, Stylable, Identifiable {
-    
-    /**
-     The `CAShapeLayer` that can draw the path data.
-     */
-    var svgLayer: CAShapeLayerWithHitTest { get set }
-}
 
-extension SVGShapeElement {
+open class CALayerWithChildHitTest: CALayer {
     
-    /**
-     The minimum rect that encompasses all of the subpaths
-     */
-    var boundingBox: CGRect? {
-        return self.svgLayer.path?.boundingBox
+    override open func contains(_ p: CGPoint) -> Bool {
+        for subLayer in sublayers ?? [] {
+            let pointInSubLayer = convert(p, to: subLayer)
+            if subLayer.contains(pointInSubLayer) {
+                return true
+            }
+        }
+        return false
     }
 }
-
