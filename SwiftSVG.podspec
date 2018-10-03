@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.source       = { :git => "https://github.com/mchoe/SwiftSVG.git", :tag => "v#{s.version}" }
   s.source_files  = "SwiftSVG", "SwiftSVG/**/*.{h,swift}"
-
+  s.swift_version = "4.0"
 end
