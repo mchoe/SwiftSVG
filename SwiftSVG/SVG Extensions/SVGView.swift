@@ -77,7 +77,7 @@ open class SVGView : UIView {
                     return
                 }
                 #elseif os(OSX)
-                guard let asset = NSDataAsset(name: NSDataAsset.Name(rawValue: thisName), bundle: bundle) else {
+                guard let asset = NSDataAsset(name: NSDataAsset.Name(thisName as NSString), bundle: bundle) else {
                     return
                 }
                 #endif

@@ -114,7 +114,7 @@ fileprivate extension SVGGroup {
         guard fillRule == "evenodd" else {
             return
         }
-        layer.fillRule = kCAFillRuleEvenOdd
+        layer.fillRule = CAShapeLayerFillRule.evenOdd
     }
     
     /**
@@ -135,12 +135,7 @@ fileprivate extension SVGGroup {
      Function that applies the stroke line cap on all of this group's subelements
      */
     fileprivate func strokeLineCapGroup(lineCap: String, on layer: CAShapeLayer) {
-        switch lineCap {
-        case kCALineCapButt, kCALineCapRound, kCALineCapSquare:
-            layer.lineCap = lineCap
-        default:
-            return
-        }
+        layer.lineCap = CAShapeLayerLineCap(rawValue: lineCap)
     }
     
     /**
@@ -157,12 +152,7 @@ fileprivate extension SVGGroup {
      Function that applies the stroke line join on all of this group's subelements
      */
     fileprivate func strokeLineJoinGroup(lineJoin: String, on layer: CAShapeLayer) {
-        switch lineJoin {
-        case kCALineJoinBevel, kCALineJoinMiter, kCALineJoinRound:
-            layer.lineJoin = lineJoin
-        default:
-            return
-        }
+        layer.lineJoin = CAShapeLayerLineJoin(rawValue: lineJoin)
     }
     
     /**

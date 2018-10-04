@@ -568,7 +568,7 @@
 					};
 					39B8D88B1B3C3283009DAF60 = {
 						CreatedOnToolsVersion = 6.3.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -675,7 +675,6 @@
 				176BC9E41EE51AF600F7B54C /* SVGEllipse.swift in Sources */,
 				176BC9DB1EE5198800F7B54C /* UIColor+Extensions.swift in Sources */,
 				176BC9F91EE6313900F7B54C /* CoordinateLexer.swift in Sources */,
-				381E99B41EF8C72900839918 /* CGPathPoints.swift in Sources */,
 				381E99C11EF9D2DC00839918 /* SmoothCurveToTests.swift in Sources */,
 				387090381F0C15B400F72660 /* ParsesAsynchronously.swift in Sources */,
 				176BC9E81EE51AF600F7B54C /* SVGShapeElement.swift in Sources */,
@@ -828,8 +827,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator appletvsimulator appletvos iphoneos macosx";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2,3";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -856,8 +855,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator appletvsimulator appletvos iphoneos macosx";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2,3";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
