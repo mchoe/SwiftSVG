@@ -80,7 +80,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     private init() {
         super.init(data: Data())
     }
-    
+
     /**
      Convenience initializer that can initalize an `NSXMLSVGParser` using a local or remote `URL`
      - parameter SVGURL: The URL of the SVG.
@@ -201,6 +201,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         if self.asyncParseCount <= 0 {
             DispatchQueue.main.safeAsync {
                 self.completionBlock?(self.containerLayer)
+                self.completionBlock = nil
             }
         }
     }
@@ -258,6 +259,7 @@ extension NSXMLSVGParser: CanManageAsychronousParsing {
         }
         DispatchQueue.main.safeAsync {
             self.completionBlock?(self.containerLayer)
+            self.completionBlock = nil
         }
     }
     

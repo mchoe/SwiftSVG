@@ -56,8 +56,8 @@ public struct SVGParserSupportedElements {
             SVGPath.elementName: {
                 let returnElement = SVGPath()
                 returnElement.supportedAttributes = [
-                    "d": returnElement.parseD,
-                    "fill": returnElement.fill
+                    "d": unown(returnElement, SVGPath.parseD),
+                    "fill": unown(returnElement, SVGPath.fill)
                 ]
                 return returnElement
             },
@@ -76,9 +76,9 @@ public struct SVGParserSupportedElements {
             SVGCircle.elementName: {
                 let returnElement = SVGCircle()
                 returnElement.supportedAttributes = [
-                    "cx": returnElement.xCenter,
-                    "cy": returnElement.yCenter,
-                    "r": returnElement.radius,
+                    "cx": unown(returnElement, SVGCircle.xCenter),
+                    "cy": unown(returnElement, SVGCircle.yCenter),
+                    "r": unown(returnElement, SVGCircle.radius),
                 ]
                 returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
@@ -90,10 +90,10 @@ public struct SVGParserSupportedElements {
             SVGEllipse.elementName: {
                 let returnElement = SVGEllipse()
                 returnElement.supportedAttributes = [
-                    "cx": returnElement.xCenter,
-                    "cy": returnElement.yCenter,
-                    "rx": returnElement.xRadius,
-                    "ry": returnElement.yRadius,
+                  "cx": unown(returnElement, SVGEllipse.xCenter),
+                  "cy": unown(returnElement, SVGEllipse.yCenter),
+                  "rx": unown(returnElement, SVGEllipse.xRadius),
+                  "ry": unown(returnElement, SVGEllipse.yRadius),
                 ]
                 returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
@@ -114,10 +114,10 @@ public struct SVGParserSupportedElements {
             SVGLine.elementName: {
                 let returnElement = SVGLine()
                 returnElement.supportedAttributes = [
-                    "x1": returnElement.x1,
-                    "x2": returnElement.x2,
-                    "y1": returnElement.y1,
-                    "y2": returnElement.y2,
+                    "x1": unown(returnElement, SVGLine.x1),
+                    "x2": unown(returnElement, SVGLine.x2),
+                    "y1": unown(returnElement, SVGLine.y1),
+                    "y2": unown(returnElement, SVGLine.y2),
                 ]
                 returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
@@ -129,8 +129,8 @@ public struct SVGParserSupportedElements {
             SVGPath.elementName: {
                 let returnElement = SVGPath()
                 returnElement.supportedAttributes = [
-                    "d": returnElement.parseD,
-                    "clip-rule": returnElement.clipRule
+                    "d": unown(returnElement, SVGPath.parseD),
+                    "clip-rule": unown(returnElement, SVGPath.clipRule),
                 ]
                 returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
@@ -142,7 +142,7 @@ public struct SVGParserSupportedElements {
             SVGPolygon.elementName: {
                 var returnElement = SVGPolygon()
                 returnElement.supportedAttributes = [
-                    "points": returnElement.points
+                    "points":  returnElement.points,
                 ]
                 returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
@@ -154,7 +154,7 @@ public struct SVGParserSupportedElements {
             SVGPolyline.elementName: {
                 var returnElement = SVGPolyline()
                 returnElement.supportedAttributes = [
-                    "points": returnElement.points
+                    "points":  returnElement.points,
                 ]
                 returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
@@ -166,12 +166,12 @@ public struct SVGParserSupportedElements {
             SVGRectangle.elementName: {
                 let returnElement = SVGRectangle()
                 returnElement.supportedAttributes = [
-                    "height": returnElement.rectangleHeight,
-                    "rx": returnElement.xCornerRadius,
-                    "ry": returnElement.yCornerRadius,
-                    "width": returnElement.rectangleWidth,
-                    "x": returnElement.parseX,
-                    "y": returnElement.parseY,
+                    "height": unown(returnElement, SVGRectangle.rectangleHeight),
+                    "rx": unown(returnElement, SVGRectangle.xCornerRadius),
+                    "ry": unown(returnElement, SVGRectangle.yCornerRadius),
+                    "width": unown(returnElement, SVGRectangle.rectangleWidth),
+                    "x": unown(returnElement, SVGRectangle.parseX),
+                    "y": unown(returnElement, SVGRectangle.parseY),
                 ]
                 returnElement.supportedAttributes.add(returnElement.identityAttributes)
                 returnElement.supportedAttributes.add(returnElement.fillAttributes)
