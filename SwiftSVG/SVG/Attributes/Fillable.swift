@@ -83,7 +83,7 @@ extension Fillable where Self : SVGShapeElement {
         guard fillRule == "evenodd" else {
             return
         }
-        self.svgLayer.fillRule = kCAFillRuleEvenOdd
+        self.svgLayer.fillRule = CAShapeLayerFillRule.evenOdd
     }
     
     /**

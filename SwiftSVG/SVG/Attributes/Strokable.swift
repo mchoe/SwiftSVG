@@ -81,12 +81,7 @@ extension Strokable where Self : SVGShapeElement {
      - SeeAlso: CAShapeLayer's [`lineCap`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1521905-linecap) for supported values.
      */
     internal func strokeLineCap(lineCap: String) {
-        switch lineCap {
-        case kCALineCapButt, kCALineCapRound, kCALineCapSquare:
-            self.svgLayer.lineCap = lineCap
-        default:
-            return
-        }
+        self.svgLayer.lineCap = CAShapeLayerLineCap(rawValue: lineCap)
     }
     
     /**
@@ -105,12 +100,7 @@ extension Strokable where Self : SVGShapeElement {
      - SeeAlso: CAShapeLayer's [`lineJoin`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1522147-linejoin)
      */
     internal func strokeLineJoin(lineJoin: String) {
-        switch lineJoin {
-        case kCALineJoinBevel, kCALineJoinMiter, kCALineJoinRound:
-            self.svgLayer.lineJoin = lineJoin
-        default:
-            return
-        }
+        self.svgLayer.lineJoin = CAShapeLayerLineJoin(rawValue: lineJoin)
     }
     
     /**

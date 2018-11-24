@@ -422,7 +422,7 @@
 					8AC4DBBC1CB37DB800137DC9 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = L2JNG48FS5;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					8AC4DBD21CB37DC600137DC9 = {
@@ -734,7 +734,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGExampleiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -749,7 +750,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.straussmade.SwiftSVGExampleiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

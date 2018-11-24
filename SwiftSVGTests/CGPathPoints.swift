@@ -77,7 +77,7 @@ extension CGPath {
         return arrayPoints
     }
     
-    private func forEach(body: @convention(block) (CGPathElement) -> ()) {
+    private func forEach(body: @escaping @convention(block) (CGPathElement) -> ()) {
         typealias Body = @convention(block) (CGPathElement) -> ()
         let callback: @convention(c) (UnsafeMutableRawPointer, UnsafePointer<CGPathElement>) -> () = { (info, element) in
             let body = unsafeBitCast(info, to: Body.self)
