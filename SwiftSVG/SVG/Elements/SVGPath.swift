@@ -86,7 +86,10 @@ final class SVGPath: SVGShapeElement, ParsesAsynchronously, DelaysApplyingAttrib
         autoreleasepool { () -> () in
             
             let pathDPath = UIBezierPath()
-            pathDPath.move(to: CGPoint.zero)
+            
+            if (!(workingString.hasPrefix("M") || workingString.hasPrefix("m"))) {
+                pathDPath.move(to: CGPoint.zero)
+            }
             
             let parsePathClosure = {
                 var previousCommand: PreviousCommand? = nil
