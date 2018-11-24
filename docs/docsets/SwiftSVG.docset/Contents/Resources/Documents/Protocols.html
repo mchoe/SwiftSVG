@@ -14,6 +14,7 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Protocols" class="dashAnchor"></a>
 
     <a title="Protocols  Reference"></a>
 
@@ -22,7 +23,7 @@
         <a class="header-link" href="index.html">
           SwiftSVG Docs
         </a>
-         (83% documented)
+         (81% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -130,15 +131,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/String.html">String</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Extensions/UIBezierPath.html">UIBezierPath</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Extensions/UIColor.html">UIColor</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Extensions/UIView.html">UIView</a>
               </li>
             </ul>
           </li>
@@ -279,75 +271,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftSVG9StrokableP"></a>
-                    <a name="//apple_ref/swift/Protocol/Strokable" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG9StrokableP">Strokable</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A protocol that described an instance that can be stroked. Two default implementations are provided for this protocol:</p>
-
-<ol>
-<li><code><a href="Protocols/SVGShapeElement.html">SVGShapeElement</a></code> - Will set the underlying <code><a href="Classes/SVGLayer.html">SVGLayer</a></code>&lsquo;s stroke color, width, line cap, line join, and miter limit. Note that <code>SVGLayer is a subclass of</code>CAShapeLayer<code>, so this default implementation wil;l set the</code>CAShapeLayer<code>&#39;s line properties and not the</code>CALayer`&rsquo;s border attributes.</li>
-<li><code><a href="Classes/SVGGroup.html">SVGGroup</a></code> - The default implementation just saves the attributes and values to be applied after all the subelements have been processed.</li>
-</ol>
-
-                        <a href="Protocols/Strokable.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Strokable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftSVG9StackTypeP"></a>
-                    <a name="//apple_ref/swift/Protocol/StackType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG9StackTypeP">StackType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A protocol that describes an instance that can act as a stack data structure</p>
-
-                        <a href="Protocols/StackType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">StackType</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:8SwiftSVG12SVGLayerTypeP"></a>
                     <a name="//apple_ref/swift/Protocol/SVGLayerType" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftSVG12SVGLayerTypeP">SVGLayerType</a>
@@ -366,136 +289,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SVGLayerType</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftSVG10SVGElementP"></a>
-                    <a name="//apple_ref/swift/Protocol/SVGElement" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG10SVGElementP">SVGElement</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A protocol describing an instance that can parse a single SVG element such as
-<code>&lt;path&gt;, &lt;svg&gt;, &lt;rect&gt;</code>.</p>
-
-                        <a href="Protocols/SVGElement.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SVGElement</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftSVG13TransformableP"></a>
-                    <a name="//apple_ref/swift/Protocol/Transformable" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG13TransformableP">Transformable</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A protocol that describes an instance that can be transformed via an SVG element&rsquo;s <code>transform</code> attribute. Currently, <code>matrix</code>, <code>rotate</code>, <code>scale</code>, <code>skewX</code>, and <code>skewY</code> are supported. A default implementation is supplied for <code><a href="Protocols/SVGContainerElement.html">SVGContainerElement</a></code>s that sets the <code>affineTransform</code> of the container layer itself, not on all of its subelements.</p>
-
-                        <a href="Protocols/Transformable.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Transformable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftSVG19SVGContainerElementP"></a>
-                    <a name="//apple_ref/swift/Protocol/SVGContainerElement" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG19SVGContainerElementP">SVGContainerElement</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A protocol that describes an instance that can store SVG sublayers and can apply a single attributes to all sublayers.</p>
-
-                        <a href="Protocols/SVGContainerElement.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SVGContainerElement</span><span class="p">:</span> <span class="kt"><a href="Protocols/SVGElement.html">SVGElement</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/DelaysApplyingAttributes.html">DelaysApplyingAttributes</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Fillable.html">Fillable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Strokable.html">Strokable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Transformable.html">Transformable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Stylable.html">Stylable</a></span><span class="p">,</span> <span class="kt">Identifiable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftSVG9SVGParserP"></a>
-                    <a name="//apple_ref/swift/Protocol/SVGParser" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG9SVGParserP">SVGParser</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A protocol describing an XML parser capable of parsing SVG data</p>
-
-                        <a href="Protocols/SVGParser.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SVGParser</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SVGLayerType</span></code></pre>
 
                         </div>
                       </div>
@@ -527,7 +321,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DelaysApplyingAttributes</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DelaysApplyingAttributes</span></code></pre>
 
                         </div>
                       </div>
@@ -564,7 +358,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Fillable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Fillable</span></code></pre>
 
                         </div>
                       </div>
@@ -578,9 +372,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftSVG27CanManageAsychronousParsingP"></a>
-                    <a name="//apple_ref/swift/Protocol/CanManageAsychronousParsing" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG27CanManageAsychronousParsingP">CanManageAsychronousParsing</a>
+                    <a name="/s:8SwiftSVG9StrokableP"></a>
+                    <a name="//apple_ref/swift/Protocol/Strokable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftSVG9StrokableP">Strokable</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -588,103 +382,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A protocol describing an instance that can manage elements that can parse asynchronously. In the <code><a href="Classes/NSXMLSVGParser.html">NSXMLSVGParser</a></code> implementation, the parser maintains a simple count of pending asynchronous tasks and decrements the count when an element has finished parsing. When the count has reached zero, a completion block is called</p>
+                        <p>A protocol that described an instance that can be stroked. Two default implementations are provided for this protocol:</p>
 
-                        <a href="Protocols/CanManageAsychronousParsing.html" class="slightly-smaller">See more</a>
+<ol>
+<li><code><a href="Protocols/SVGShapeElement.html">SVGShapeElement</a></code> - Will set the underlying <code><a href="Classes/SVGLayer.html">SVGLayer</a></code>&lsquo;s stroke color, width, line cap, line join, and miter limit. Note that <code>SVGLayer is a subclass of</code>CAShapeLayer<code>, so this default implementation wil;l set the</code>CAShapeLayer<code>&#39;s line properties and not the</code>CALayer`&rsquo;s border attributes.</li>
+<li><code><a href="Classes/SVGGroup.html">SVGGroup</a></code> - The default implementation just saves the attributes and values to be applied after all the subelements have been processed.</li>
+</ol>
+
+                        <a href="Protocols/Strokable.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">CanManageAsychronousParsing</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftSVG20ParsesAsynchronouslyP"></a>
-                    <a name="//apple_ref/swift/Protocol/ParsesAsynchronously" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG20ParsesAsynchronouslyP">ParsesAsynchronously</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A protocol describing an instance that parses asynchronously</p>
-
-                        <a href="Protocols/ParsesAsynchronously.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">ParsesAsynchronously</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftSVG11PathCommandP"></a>
-                    <a name="//apple_ref/swift/Protocol/PathCommand" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG11PathCommandP">PathCommand</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A protocol that describes an instance that can process an individual SVG Element</p>
-
-                        <a href="Protocols/PathCommand.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">internal</span> <span class="kd">protocol</span> <span class="kt">PathCommand</span><span class="p">:</span> <span class="kt"><a href="Protocols/PreviousCommand.html">PreviousCommand</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftSVG15PreviousCommandP"></a>
-                    <a name="//apple_ref/swift/Protocol/PreviousCommand" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG15PreviousCommandP">PreviousCommand</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A protocol that describes an instance that represents an SVGElement right before the current one</p>
-
-                        <a href="Protocols/PreviousCommand.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">internal</span> <span class="kd">protocol</span> <span class="kt">PreviousCommand</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Strokable</span></code></pre>
 
                         </div>
                       </div>
@@ -716,7 +427,164 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Stylable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Stylable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftSVG13TransformableP"></a>
+                    <a name="//apple_ref/swift/Protocol/Transformable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftSVG13TransformableP">Transformable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A protocol that describes an instance that can be transformed via an SVG element&rsquo;s <code>transform</code> attribute. Currently, <code>matrix</code>, <code>rotate</code>, <code>scale</code>, <code>skewX</code>, and <code>skewY</code> are supported. A default implementation is supplied for <code><a href="Protocols/SVGContainerElement.html">SVGContainerElement</a></code>s that sets the <code>affineTransform</code> of the container layer itself, not on all of its subelements.</p>
+
+                        <a href="Protocols/Transformable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Transformable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftSVG27CanManageAsychronousParsingP"></a>
+                    <a name="//apple_ref/swift/Protocol/CanManageAsychronousParsing" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftSVG27CanManageAsychronousParsingP">CanManageAsychronousParsing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A protocol describing an instance that can manage elements that can parse asynchronously. In the <code><a href="Classes/NSXMLSVGParser.html">NSXMLSVGParser</a></code> implementation, the parser maintains a simple count of pending asynchronous tasks and decrements the count when an element has finished parsing. When the count has reached zero, a completion block is called</p>
+
+                        <a href="Protocols/CanManageAsychronousParsing.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CanManageAsychronousParsing</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftSVG20ParsesAsynchronouslyP"></a>
+                    <a name="//apple_ref/swift/Protocol/ParsesAsynchronously" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftSVG20ParsesAsynchronouslyP">ParsesAsynchronously</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A protocol describing an instance that parses asynchronously</p>
+
+                        <a href="Protocols/ParsesAsynchronously.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ParsesAsynchronously</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftSVG19SVGContainerElementP"></a>
+                    <a name="//apple_ref/swift/Protocol/SVGContainerElement" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftSVG19SVGContainerElementP">SVGContainerElement</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A protocol that describes an instance that can store SVG sublayers and can apply a single attributes to all sublayers.</p>
+
+                        <a href="Protocols/SVGContainerElement.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SVGContainerElement</span> <span class="p">:</span> <span class="kt"><a href="Protocols/DelaysApplyingAttributes.html">DelaysApplyingAttributes</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Fillable.html">Fillable</a></span><span class="p">,</span> <span class="kt">Identifiable</span><span class="p">,</span> <span class="kt"><a href="Protocols/SVGElement.html">SVGElement</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Strokable.html">Strokable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Stylable.html">Stylable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Transformable.html">Transformable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftSVG10SVGElementP"></a>
+                    <a name="//apple_ref/swift/Protocol/SVGElement" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftSVG10SVGElementP">SVGElement</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A protocol describing an instance that can parse a single SVG element such as
+<code>&lt;path&gt;, &lt;svg&gt;, &lt;rect&gt;</code>.</p>
+
+                        <a href="Protocols/SVGElement.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SVGElement</span></code></pre>
 
                         </div>
                       </div>
@@ -748,7 +616,131 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SVGShapeElement</span><span class="p">:</span> <span class="kt"><a href="Protocols/SVGElement.html">SVGElement</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Fillable.html">Fillable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Strokable.html">Strokable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Transformable.html">Transformable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Stylable.html">Stylable</a></span><span class="p">,</span> <span class="kt">Identifiable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SVGShapeElement</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Fillable.html">Fillable</a></span><span class="p">,</span> <span class="kt">Identifiable</span><span class="p">,</span> <span class="kt"><a href="Protocols/SVGElement.html">SVGElement</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Strokable.html">Strokable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Stylable.html">Stylable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Transformable.html">Transformable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftSVG9StackTypeP"></a>
+                    <a name="//apple_ref/swift/Protocol/StackType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftSVG9StackTypeP">StackType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A protocol that describes an instance that can act as a stack data structure</p>
+
+                        <a href="Protocols/StackType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">StackType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftSVG11PathCommandP"></a>
+                    <a name="//apple_ref/swift/Protocol/PathCommand" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftSVG11PathCommandP">PathCommand</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A protocol that describes an instance that can process an individual SVG Element</p>
+
+                        <a href="Protocols/PathCommand.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">internal</span> <span class="kd">protocol</span> <span class="kt">PathCommand</span> <span class="p">:</span> <span class="kt"><a href="Protocols/PreviousCommand.html">PreviousCommand</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftSVG15PreviousCommandP"></a>
+                    <a name="//apple_ref/swift/Protocol/PreviousCommand" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftSVG15PreviousCommandP">PreviousCommand</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A protocol that describes an instance that represents an SVGElement right before the current one</p>
+
+                        <a href="Protocols/PreviousCommand.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">internal</span> <span class="kd">protocol</span> <span class="kt">PreviousCommand</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftSVG9SVGParserP"></a>
+                    <a name="//apple_ref/swift/Protocol/SVGParser" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftSVG9SVGParserP">SVGParser</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A protocol describing an XML parser capable of parsing SVG data</p>
+
+                        <a href="Protocols/SVGParser.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SVGParser</span></code></pre>
 
                         </div>
                       </div>
@@ -764,7 +756,7 @@
     </div>
     <section class="footer">
       <p>© 2017 Michael Choe under <a class="link" href="https://github.com/mchoe/SwiftSVG/blob/master/LICENSE" target="_blank" rel="external">MIT</a>.</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

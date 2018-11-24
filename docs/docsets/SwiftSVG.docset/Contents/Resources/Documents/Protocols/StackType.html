@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           SwiftSVG Docs
         </a>
-         (83% documented)
+         (81% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -131,15 +131,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/UIBezierPath.html">UIBezierPath</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/UIColor.html">UIColor</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/UIView.html">UIView</a>
               </li>
             </ul>
           </li>
@@ -270,7 +261,7 @@
             <h1>StackType</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">StackType</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">StackType</span></code></pre>
 
                 </div>
               </div>
@@ -306,7 +297,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">pop</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">StackItem</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="k">mutating</span> <span class="kd">func</span> <span class="nf">pop</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">StackItem</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -316,9 +308,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftSVG9StackTypePAAE4pushy0C4ItemQzF"></a>
+                    <a name="/s:8SwiftSVG9StackTypePAAE4pushyy0C4ItemQzF"></a>
                     <a name="//apple_ref/swift/Method/push(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG9StackTypePAAE4pushy0C4ItemQzF">push(_:)</a>
+                    <a class="token" href="#/s:8SwiftSVG9StackTypePAAE4pushyy0C4ItemQzF">push(_:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -336,7 +328,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">push</span><span class="p">(</span><span class="n">_</span> <span class="nv">itemToPush</span><span class="p">:</span> <span class="kt">StackItem</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">push</span><span class="p">(</span><span class="n">_</span> <span class="nv">itemToPush</span><span class="p">:</span> <span class="kt">StackItem</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -366,7 +358,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -376,9 +368,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftSVG9StackTypePAAE5countSiv"></a>
+                    <a name="/s:8SwiftSVG9StackTypePAAE5countSivp"></a>
                     <a name="//apple_ref/swift/Property/count" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG9StackTypePAAE5countSiv">count</a>
+                    <a class="token" href="#/s:8SwiftSVG9StackTypePAAE5countSivp">count</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -396,7 +388,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -406,9 +398,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftSVG9StackTypePAAE7isEmptySbv"></a>
+                    <a name="/s:8SwiftSVG9StackTypePAAE7isEmptySbvp"></a>
                     <a name="//apple_ref/swift/Property/isEmpty" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG9StackTypePAAE7isEmptySbv">isEmpty</a>
+                    <a class="token" href="#/s:8SwiftSVG9StackTypePAAE7isEmptySbvp">isEmpty</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -426,7 +418,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -436,9 +428,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftSVG9StackTypePAAE4last0C4ItemQzSgv"></a>
+                    <a name="/s:8SwiftSVG9StackTypePAAE4last0C4ItemQzSgvp"></a>
                     <a name="//apple_ref/swift/Property/last" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftSVG9StackTypePAAE4last0C4ItemQzSgv">last</a>
+                    <a class="token" href="#/s:8SwiftSVG9StackTypePAAE4last0C4ItemQzSgvp">last</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -456,7 +448,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">last</span><span class="p">:</span> <span class="kt">StackItem</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">last</span><span class="p">:</span> <span class="kt">StackItem</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -472,7 +464,7 @@
     </div>
     <section class="footer">
       <p>© 2017 Michael Choe under <a class="link" href="https://github.com/mchoe/SwiftSVG/blob/master/LICENSE" target="_blank" rel="external">MIT</a>.</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
