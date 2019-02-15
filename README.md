@@ -84,7 +84,7 @@ let hammock = UIView(SVGURL: svgURL) { (svgLayer) in
     svgLayer.fillColor = UIColor(red:0.52, green:0.16, blue:0.32, alpha:1.00).cgColor
     svgLayer.resizeToFit(self.view.bounds)
 }
-self.view.layer.addSublayer(hammock)
+self.view.addSubview(hammock)
 ```
 
 #### Output:
