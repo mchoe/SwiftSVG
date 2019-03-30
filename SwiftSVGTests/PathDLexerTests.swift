@@ -89,7 +89,16 @@ class PathDLexerTests: XCTestCase {
             thisCommand.execute(on: testPath, previousCommand: nil)
         }
     }
-
+    
+    func testLeadingPoint() {
+        let testString = "M1.5.5z"
+        let testPath = UIBezierPath()
+        for thisCommand in PathDLexer(pathString: testString) {
+            thisCommand.execute(on: testPath, previousCommand: nil)
+        }
+        XCTAssert(testPath.cgPath.pointsAndTypes[0].1 == .moveToPoint, "Expected MoveTo, got \(type(of: testPath.cgPath.pointsAndTypes[0].1))")
+        XCTAssert(testPath.currentPoint.x == 1.5 && testPath.currentPoint.y == 0.5, "Expected {1.5, 0.5}, got \(testPath.currentPoint)")
+    }
 }
 
 
