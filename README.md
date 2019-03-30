@@ -23,15 +23,15 @@ Finally, if you're looking to extend this project, that's another good reason to
 Table of Contents
 =================
 
-- [Install](#Install)
-- [Usage](#Usage)
-  - [UIView+SVG](#UIView+SVG)
-  - [CALayer+SVG](#CAShapeLayer+SVG)
-  - [SVGLayer](#SVGLayer)
-  - [Single Path Interfaces](#UIBezierPath+SVG)
-  - [SVGView](#SVGView)
-- [Credits](#Credits)
-- [License](#License)
+- [Install](#install)
+- [Usage](#usage)
+  - [UIView+SVG](#uiviewsvg)
+  - [CALayer+SVG](#calayersvg)
+  - [SVGLayer](#svglayer)
+  - [Single Path Interfaces](#cashapelayer--uibezierpath-single-paths)
+  - [SVGView](#svgview)
+- [Credits](#credits)
+- [License](#license)
 
 Install
 =======
