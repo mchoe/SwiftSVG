@@ -40,6 +40,7 @@
 		3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */; };
 		3876E95F1EFCB2E000F8C04E /* pizza.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E95C1EFCB2E000F8C04E /* pizza.svg */; };
 		3876E9651EFCC16500F8C04E /* berlin.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3876E9641EFCC16500F8C04E /* berlin.svg */; };
+		387A04B222500F6A000FA0CA /* baseball.svg in Resources */ = {isa = PBXBuildFile; fileRef = 387A04B122500F69000FA0CA /* baseball.svg */; };
 		387B0C5F1F107E5B0085E51A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C5E1F107E5B0085E51A /* StartViewController.swift */; };
 		387B0C611F1083D70085E51A /* StartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C601F1083D70085E51A /* StartCell.swift */; };
 		387B0C631F108ECD0085E51A /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B0C621F108ECD0085E51A /* GithubViewController.swift */; };
@@ -150,6 +151,7 @@
 		3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "openclipart-1346768588.svg"; sourceTree = "<group>"; };
 		3876E95C1EFCB2E000F8C04E /* pizza.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pizza.svg; sourceTree = "<group>"; };
 		3876E9641EFCC16500F8C04E /* berlin.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = berlin.svg; sourceTree = "<group>"; };
+		387A04B122500F69000FA0CA /* baseball.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = baseball.svg; sourceTree = "<group>"; };
 		387B0C5E1F107E5B0085E51A /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		387B0C601F1083D70085E51A /* StartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCell.swift; sourceTree = "<group>"; };
 		387B0C621F108ECD0085E51A /* GithubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				387A04B122500F69000FA0CA /* baseball.svg */,
 				3876E9641EFCC16500F8C04E /* berlin.svg */,
 				380FED681F0697A800EDB255 /* Camel2.svg */,
 				176BC9AF1EE48D3C00F7B54C /* circles.svg */,
@@ -436,6 +439,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -466,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387A04B222500F6A000FA0CA /* baseball.svg in Resources */,
 				381E99C31EFA0DC400839918 /* polygons.svg in Resources */,
 				380FED671F06951100EDB255 /* tiger.svg in Resources */,
 				3876E9651EFCC16500F8C04E /* berlin.svg in Resources */,
