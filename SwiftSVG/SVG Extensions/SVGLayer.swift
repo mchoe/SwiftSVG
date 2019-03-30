@@ -49,7 +49,7 @@ public extension SVGLayerType where Self: CALayer {
      - TODO: Should eventually support different content modes
      */
     @discardableResult
-    public func resizeToFit(_ rect: CGRect) -> Self {
+    func resizeToFit(_ rect: CGRect) -> Self {
         
         let boundingBoxAspectRatio = self.boundingBox.width / self.boundingBox.height
         let viewAspectRatio = rect.width / rect.height
@@ -86,7 +86,7 @@ public extension SVGLayer {
     /**
      Returns a copy of the given SVGLayer
      */
-    public var svgLayerCopy: SVGLayer? {
+    var svgLayerCopy: SVGLayer? {
         let tmp = NSKeyedArchiver.archivedData(withRootObject: self)
         let copiedLayer = NSKeyedUnarchiver.unarchiveObject(with: tmp) as? SVGLayer
         copiedLayer?.boundingBox = self.boundingBox
