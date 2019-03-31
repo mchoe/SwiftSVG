@@ -51,7 +51,7 @@ public extension CALayer {
      - Parameter completion: A required completion block to execute once the SVG has completed parsing. You must add the passed `SVGLayer` to a sublayer to display it.
      */
     @discardableResult
-    public convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: @escaping (SVGLayer) -> ()) {
+    convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: @escaping (SVGLayer) -> ()) {
         do {
             let svgData = try Data(contentsOf: SVGURL)
             self.init(SVGData: svgData, parser: parser, completion: completion)
@@ -67,7 +67,7 @@ public extension CALayer {
      - Parameter completion: A required completion block to execute once the SVG has completed parsing. You must add the passed `SVGLayer` to a sublayer to display it.
      */
     @discardableResult
-    public convenience init(SVGData: Data, parser: SVGParser? = nil, completion: @escaping (SVGLayer) -> ()) {
+    convenience init(SVGData: Data, parser: SVGParser? = nil, completion: @escaping (SVGLayer) -> ()) {
         self.init()
         
         if let cached = SVGCache.default[SVGData.cacheKey] {

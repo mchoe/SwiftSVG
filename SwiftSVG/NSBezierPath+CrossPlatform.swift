@@ -54,15 +54,15 @@ public extension NSBezierPath {
         }
     }
     
-    public func addLine(to point: NSPoint) {
+    func addLine(to point: NSPoint) {
         self.line(to: point)
     }
     
-    public func addCurve(to point: NSPoint, controlPoint1: NSPoint, controlPoint2: NSPoint) {
+    func addCurve(to point: NSPoint, controlPoint1: NSPoint, controlPoint2: NSPoint) {
         self.curve(to: point, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
     }
     
-    public func addQuadCurve(to point: NSPoint, controlPoint: NSPoint) {
+    func addQuadCurve(to point: NSPoint, controlPoint: NSPoint) {
         self.curve(to: point,
                    controlPoint1: NSPoint(
                     x: (controlPoint.x - self.currentPoint.x) * (2.0 / 3.0) + self.currentPoint.x,

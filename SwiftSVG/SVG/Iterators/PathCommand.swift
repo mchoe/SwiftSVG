@@ -93,7 +93,7 @@ internal extension PathCommand {
     /**
      Default implementation for any `PathCommand` indicating where there are enough coordinates stored to be able to process the `SVGElement`
      */
-    internal var canPushCommand: Bool {
+    var canPushCommand: Bool {
         if self.numberOfRequiredParameters == 0 {
             return true
         }
@@ -109,21 +109,21 @@ internal extension PathCommand {
     /**
      Function that clears the current number buffer
      */
-    internal mutating func clearBuffer() {
+    mutating func clearBuffer() {
         self.coordinateBuffer.removeAll()
     }
     
     /**
      Adds a new coordinate to the buffer
      */
-    internal mutating func pushCoordinate(_ coordinate: Double) {
+    mutating func pushCoordinate(_ coordinate: Double) {
         self.coordinateBuffer.append(coordinate)
     }
     
     /**
      Based on the `PathType` of this PathCommand, this function returns the relative or absolute point
      */
-    internal func pointForPathType(_ point: CGPoint, relativeTo: CGPoint) -> CGPoint {
+    func pointForPathType(_ point: CGPoint, relativeTo: CGPoint) -> CGPoint {
         switch self.pathType {
         case .absolute:
             return point
