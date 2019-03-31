@@ -23,15 +23,15 @@ Finally, if you're looking to extend this project, that's another good reason to
 Table of Contents
 =================
 
-- [Install](#Install)
-- [Usage](#Usage)
-  - [UIView+SVG](#UIView+SVG)
-  - [CALayer+SVG](#CAShapeLayer+SVG)
-  - [SVGLayer](#SVGLayer)
-  - [Single Path Interfaces](#UIBezierPath+SVG)
-  - [SVGView](#SVGView)
-- [Credits](#Credits)
-- [License](#License)
+- [Install](#install)
+- [Usage](#usage)
+  - [UIView+SVG](#uiviewsvg)
+  - [CALayer+SVG](#calayersvg)
+  - [SVGLayer](#svglayer)
+  - [Single Path Interfaces](#cashapelayer--uibezierpath-single-paths)
+  - [SVGView](#svgview)
+- [Credits](#credits)
+- [License](#license)
 
 Install
 =======
@@ -89,7 +89,7 @@ let hammock = UIView(SVGURL: svgURL) { (svgLayer) in
     svgLayer.fillColor = UIColor(red:0.52, green:0.16, blue:0.32, alpha:1.00).cgColor
     svgLayer.resizeToFit(self.view.bounds)
 }
-self.view.layer.addSublayer(hammock)
+self.view.addSubview(hammock)
 ```
 
 #### Output:

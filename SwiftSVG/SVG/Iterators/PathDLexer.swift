@@ -67,6 +67,7 @@ internal struct PathDConstants {
         case comma = 44
         case sign = 45
         case space = 32
+        case point = 46
     }
     
     /**
@@ -174,7 +175,8 @@ internal struct PathDLexer: IteratorProtocol, Sequence {
                     return self.currentCommand
                 }
                 
-            case PathDConstants.DCharacter.sign.rawValue:
+            case PathDConstants.DCharacter.sign.rawValue,
+                PathDConstants.DCharacter.point.rawValue where self.numberArray.contains(PathDConstants.DCharacter.point.rawValue):
                 self.pushCoordinateIfPossible(self.numberArray)
                 if self.currentCommand != nil && self.currentCommand!.canPushCommand {
                     self.numberArray.removeAll()
