@@ -36,6 +36,11 @@ Table of Contents
 Install
 =======
 
+| Swift version | SwiftSVG version                                                |
+| ------------- | ----------------------------------------------------------- |
+| Swift 5.0     | v2.3.0                                                      |
+| Swift 4.2     | v2.2.1                                                      |
+
 Cocoapods:
 
     pod 'SwiftSVG', '~> 2.0'
