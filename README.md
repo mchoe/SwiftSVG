@@ -12,7 +12,7 @@ Key Features
 Who Should Use SwiftSVG
 =======================
 
-SwiftSVG is not meant to be a a full SVG parser. The library supports the most common use cases of flat, solid color SVG elements. It supports grouping and transformations and can parse all path and shape elements.
+SwiftSVG is not meant to be a a full SVG parser. The library supports the most common use cases of flat, solid color SVG elements. It supports grouping and transformations and can parse all path and shape elements. It doesn's support these SVG elements: `defs`, `desc`, `style`, `symbol`, `text`, `title`, `tspan`, `use`. This list of not supported elements might be not full.
 
 The best use case for SwiftSVG is for flat icons that you may want to theme at runtime and have good control over. Think icons for your app, especially if you offer light and dark themes. The library can handle complex paths, and more importantly can handle them quickly, so you can use it to display many SVGs, just not every single use case. See the complex example in the examples app.
 
