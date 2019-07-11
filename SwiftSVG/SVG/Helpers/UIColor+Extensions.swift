@@ -86,7 +86,7 @@ public extension UIColor {
             return
         }
         
-        self.init(named: svgString)
+        self.init(namedCSS: svgString)
     }
     
     /**
@@ -164,8 +164,8 @@ public extension UIColor {
      Convenience initializer that creates a new UIColor from a CSS3 named color
      - SeeAlso: See here for all the colors: [https://www.w3.org/TR/css3-color/#svg-color](https://www.w3.org/TR/css3-color/#svg-color)
      */
-    convenience init?(named: String) {
-        guard let namedColor = CGColor.named[named] else {
+	convenience init?(namedCSS: String) {
+        guard let namedColor = CGColor.named[namedCSS] else {
             return nil
         }
         self.init(cgColor: namedColor)
