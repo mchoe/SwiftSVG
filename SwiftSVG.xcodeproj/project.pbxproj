@@ -133,6 +133,7 @@
 		8AC4DBEA1CB37EA700137DC9 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBE91CB37EA700137DC9 /* CrossPlatform.swift */; };
 		A738B2921FD252A9001CF969 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738B2911FD252A9001CF969 /* Identifiable.swift */; };
 		D9870F27216628A900B47813 /* CGPathPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B31EF8C72900839918 /* CGPathPoints.swift */; };
+		E8AFE31C22EBD6F600BD1672 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AFE31B22EBD6F600BD1672 /* Print.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +230,7 @@
 		9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9E245BDA1AAE3FE000472F5A /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		A738B2911FD252A9001CF969 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Identifiable.swift; path = Attributes/Identifiable.swift; sourceTree = "<group>"; };
+		E8AFE31B22EBD6F600BD1672 /* Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +332,7 @@
 				176BC9BB1EE4AE2700F7B54C /* Dictionary+Add.swift */,
 				380FED781F07F48500EDB255 /* DispatchQueue+Extensions.swift */,
 				380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */,
+				E8AFE31B22EBD6F600BD1672 /* Print.swift */,
 				17CCE7371EE666D6007FA5AD /* Scalar+FromByteArray.swift */,
 				9E245B691AAE383200472F5A /* String+Subscript.swift */,
 				9E245BDA1AAE3FE000472F5A /* Stack.swift */,
@@ -743,6 +746,7 @@
 				380FECF81F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift in Sources */,
 				176BC9B31EE4946B00F7B54C /* SVGShapeElement.swift in Sources */,
 				66F9844B20EF511F00A2CBEF /* Unown.swift in Sources */,
+				E8AFE31C22EBD6F600BD1672 /* Print.swift in Sources */,
 				38048F3B1F24210F00179C95 /* SVGView.swift in Sources */,
 				176BC9ED1EE5A1CD00F7B54C /* SVGGroup.swift in Sources */,
 				175093C61E6C720C00EF1853 /* SVGPath.swift in Sources */,
