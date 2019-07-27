@@ -134,6 +134,7 @@
 		A738B2921FD252A9001CF969 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738B2911FD252A9001CF969 /* Identifiable.swift */; };
 		D9870F27216628A900B47813 /* CGPathPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B31EF8C72900839918 /* CGPathPoints.swift */; };
 		E8AFE31722EBC69600BD1672 /* CSSNamedColors.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8AFE31622EBC69600BD1672 /* CSSNamedColors.plist */; };
+		E8AFE31A22EBD0C000BD1672 /* CSSNamedColors.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8AFE31622EBC69600BD1672 /* CSSNamedColors.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -605,6 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E2A7A91FD34AA0003DEFBB /* simple-rectangle.svg in Resources */,
+				E8AFE31A22EBD0C000BD1672 /* CSSNamedColors.plist in Resources */,
 				38048F4E1F24710100179C95 /* ukulele.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -46,14 +46,21 @@ struct NamedColors {
         "none": UIColor.clear.cgColor
     ]
     
-    private let fromPlist: [String : UIColor] = {
+    private let fromPlist: [String : CGColor] = {
         guard let path = Bundle.main.path(forResource: "CSSNamedColors", ofType: "plist") else {
             assert(false, "No plist found. if you plan on using named CSS colors, please make sure this file is in the main bundle")
             return [:]
         }
-        let returnDictionary = NSDictionary(contentsOfFile: path) as! [String : String]
-        return returnDictionary
-            .map
+        guard let valuesAsHex = NSDictionary(contentsOfFile: path) as? [String : String] else {
+            return [:]
+        }
+        return valuesAsHex
+            .compactMapValues({ (hexString) -> CGColor? in
+                guard let asColor = UIColor(hexString: hexString)?.cgColor else {
+                    return nil
+                }
+                return asColor
+            })
     }()
     
     /// Subscript to access the named color. Must be one of the officially supported values listed [here](https://www.w3.org/TR/SVGColor12/#icccolor)
