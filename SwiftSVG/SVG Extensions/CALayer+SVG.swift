@@ -70,12 +70,9 @@ public extension CALayer {
     convenience init(SVGData: Data, parser: SVGParser? = nil, completion: @escaping (SVGLayer) -> ()) {
         self.init()
         
-		if
-			let cached = SVGCache.default[SVGData.cacheKey],
-			let cachedCopy = cached.svgLayerCopy
-		{
+		if let cached = SVGCache.default[SVGData.cacheKey], let cachedCopy = cached.svgLayerCopy {
 			DispatchQueue.main.safeAsync {
-				self.addSublayer(cachedCopy)
+			    self.addSublayer(cachedCopy)
 			}
 			completion(cachedCopy)
 			return
