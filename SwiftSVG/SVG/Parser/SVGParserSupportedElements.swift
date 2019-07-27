@@ -48,6 +48,14 @@ public struct SVGParserSupportedElements {
     public let tags: [String : ElementGenerator]
     
     /**
+     Initializer to create your own set of supported tags
+     - Parameter tags: Dictionary of SVG tag name keys and a closure values return an `SVGElement`
+     */
+    public init(tags: [String : ElementGenerator]) {
+        self.tags = tags
+    }
+    
+    /**
      A configuration that will only parse `<path>` elements and the `d` and `fill attributes`. Use this configuration if you know you will only be parsing `<path>` elements with fill colors
      */
     public static var barebones: SVGParserSupportedElements {
