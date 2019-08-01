@@ -40,21 +40,11 @@ import AppKit
 struct NamedColors {
     
     /// Dictionary of named colors
-    private let colorDictionary = [
-        "aliceblue": UIColor(red: 240.0 / 255.0, green: 248.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0).cgColor,
-        "cyan": UIColor(red: 0.0, green: 1.0, blue: 1.0, alpha: 1.0).cgColor,
-        "none": UIColor.clear.cgColor
-    ]
-    
-    private let fromPlist: [String : CGColor] = {
-        guard let path = Bundle.main.path(forResource: "CSSNamedColors", ofType: "plist") else {
-            assert(false, "No plist found. if you plan on using named CSS colors, please make sure this file is in the main bundle")
+    private let fromJSON: [String : CGColor] = {
+        guard let colorDictionary: [String : String] = Dictionary(jsonFile: "cssColorNames") else {
             return [:]
         }
-        guard let valuesAsHex = NSDictionary(contentsOfFile: path) as? [String : String] else {
-            return [:]
-        }
-        return valuesAsHex
+        return colorDictionary
             .compactMapValues({ (hexString) -> CGColor? in
                 guard let asColor = UIColor(hexString: hexString)?.cgColor else {
                     return nil
@@ -65,7 +55,7 @@ struct NamedColors {
     
     /// Subscript to access the named color. Must be one of the officially supported values listed [here](https://www.w3.org/TR/SVGColor12/#icccolor)
     subscript(index: String) -> CGColor? {
-        return self.colorDictionary[index]
+        return self.fromJSON[index]
     }
 }
 

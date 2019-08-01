@@ -73,13 +73,6 @@ class UIColorExtensionsTests: XCTestCase {
         XCTAssertTrue(colorArray[2] == 0, "Expected 0, got \(colorArray[2])")
     }
     
-    func testNamedColorPlistExistence() {
-        let testBundle = Bundle(for: UIColorExtensionsTests.self)
-        let path = testBundle.path(forResource: "CSSNamedColors", ofType: "plist")
-        XCTAssert(path != nil, "CSSNamedColor.plist doesn't exist")
-    }
-    
-    /*
     func testNamedColor() {
         let testString = "cyan"
         guard let testColor = UIColor(cssName: testString) else {
@@ -91,7 +84,6 @@ class UIColorExtensionsTests: XCTestCase {
         XCTAssertTrue(colorArray[1] == 1, "Expected 1, got \(colorArray[1])")
         XCTAssertTrue(colorArray[2] == 1, "Expected 1, got \(colorArray[2])")
     }
-    */
     
     
 }

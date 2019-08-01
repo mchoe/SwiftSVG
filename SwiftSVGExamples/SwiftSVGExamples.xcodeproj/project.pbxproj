@@ -71,6 +71,7 @@
 		8AC4DBD81CB37DC600137DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBD71CB37DC600137DC9 /* ViewController.swift */; };
 		8AC4DBDA1CB37DC600137DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBD91CB37DC600137DC9 /* Assets.xcassets */; };
 		8AC4DBDD1CB37DC600137DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBDB1CB37DC600137DC9 /* Main.storyboard */; };
+		E8235A6522F26C6800E8F1B3 /* alohaShirt.svg in Resources */ = {isa = PBXBuildFile; fileRef = E8235A6422F26C6800E8F1B3 /* alohaShirt.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -181,6 +182,7 @@
 		8AC4DBD91CB37DC600137DC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AC4DBDC1CB37DC600137DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AC4DBDE1CB37DC600137DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8235A6422F26C6800E8F1B3 /* alohaShirt.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = alohaShirt.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E8235A6422F26C6800E8F1B3 /* alohaShirt.svg */,
 				387A04B122500F69000FA0CA /* baseball.svg */,
 				3876E9641EFCC16500F8C04E /* berlin.svg */,
 				380FED681F0697A800EDB255 /* Camel2.svg */,
@@ -500,6 +503,7 @@
 				3876E95E1EFCB2E000F8C04E /* openclipart-1346768588.svg in Resources */,
 				176BC9C71EE4C1AB00F7B54C /* ellipses.svg in Resources */,
 				8AC4DBCA1CB37DB800137DC9 /* LaunchScreen.storyboard in Resources */,
+				E8235A6522F26C6800E8F1B3 /* alohaShirt.svg in Resources */,
 				380FED611F0692E500EDB255 /* Fyodor-Dostoevsky.svg in Resources */,
 				387B0C6B1F1155680085E51A /* sockPuppet.svg in Resources */,
 				3807CCFD1F2AF26400E78314 /* fistBump.svg in Resources */,
