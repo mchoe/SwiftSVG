@@ -137,6 +137,7 @@
 		E8235A6122F2614000E8F1B3 /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8235A6022F2614000E8F1B3 /* Dictionary+JSON.swift */; };
 		E8235A6222F2686C00E8F1B3 /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8235A6022F2614000E8F1B3 /* Dictionary+JSON.swift */; };
 		E8235A6322F2687F00E8F1B3 /* cssColorNames.json in Resources */ = {isa = PBXBuildFile; fileRef = E8235A5E22F260E000E8F1B3 /* cssColorNames.json */; };
+		E8AFE31C22EBD6F600BD1672 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AFE31B22EBD6F600BD1672 /* Print.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,6 +236,7 @@
 		A738B2911FD252A9001CF969 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Identifiable.swift; path = Attributes/Identifiable.swift; sourceTree = "<group>"; };
 		E8235A5E22F260E000E8F1B3 /* cssColorNames.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cssColorNames.json; sourceTree = "<group>"; };
 		E8235A6022F2614000E8F1B3 /* Dictionary+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSON.swift"; sourceTree = "<group>"; };
+		E8AFE31B22EBD6F600BD1672 /* Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +339,7 @@
 				E8235A6022F2614000E8F1B3 /* Dictionary+JSON.swift */,
 				380FED781F07F48500EDB255 /* DispatchQueue+Extensions.swift */,
 				380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */,
+				E8AFE31B22EBD6F600BD1672 /* Print.swift */,
 				17CCE7371EE666D6007FA5AD /* Scalar+FromByteArray.swift */,
 				9E245B691AAE383200472F5A /* String+Subscript.swift */,
 				9E245BDA1AAE3FE000472F5A /* Stack.swift */,
@@ -755,6 +758,7 @@
 				380FECF81F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift in Sources */,
 				176BC9B31EE4946B00F7B54C /* SVGShapeElement.swift in Sources */,
 				66F9844B20EF511F00A2CBEF /* Unown.swift in Sources */,
+				E8AFE31C22EBD6F600BD1672 /* Print.swift in Sources */,
 				38048F3B1F24210F00179C95 /* SVGView.swift in Sources */,
 				176BC9ED1EE5A1CD00F7B54C /* SVGGroup.swift in Sources */,
 				175093C61E6C720C00EF1853 /* SVGPath.swift in Sources */,
