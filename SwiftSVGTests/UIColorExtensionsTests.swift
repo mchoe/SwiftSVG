@@ -76,7 +76,7 @@ class UIColorExtensionsTests: XCTestCase {
     func testNamedColor() {
         let testString = "cyan"
         guard let testColor = UIColor(cssName: testString) else {
-            XCTAssert(false, "Named color does not exist")
+            XCTAssert(false, "Named color [\(testString)] does not exist")
             return
         }
         var colorArray = self.colorArray(testColor)
