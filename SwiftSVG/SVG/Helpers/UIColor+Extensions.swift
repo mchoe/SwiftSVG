@@ -40,15 +40,22 @@ import AppKit
 struct NamedColors {
     
     /// Dictionary of named colors
-    private let colorDictionary = [
-        "aliceblue": UIColor(red: 240.0 / 255.0, green: 248.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0).cgColor,
-        "cyan": UIColor(red: 0.0, green: 1.0, blue: 1.0, alpha: 1.0).cgColor,
-        "none": UIColor.clear.cgColor
-    ]
+    private let fromJSON: [String : CGColor] = {
+        guard let colorDictionary: [String : String] = Dictionary(jsonFile: "cssColorNames") else {
+            return [:]
+        }
+        return colorDictionary
+            .compactMapValues({ (hexString) -> CGColor? in
+                guard let asColor = UIColor(hexString: hexString)?.cgColor else {
+                    return nil
+                }
+                return asColor
+            })
+    }()
     
     /// Subscript to access the named color. Must be one of the officially supported values listed [here](https://www.w3.org/TR/SVGColor12/#icccolor)
     subscript(index: String) -> CGColor? {
-        return self.colorDictionary[index]
+        return self.fromJSON[index]
     }
 }
 
@@ -58,9 +65,9 @@ public extension CGColor {
     /**
      Lazily loaded instance of `NamedColors`
      */
-    fileprivate static var named: NamedColors {
+    fileprivate static var named: NamedColors = {
         return NamedColors()
-    }
+    }()
 }
 
 public extension UIColor {
@@ -86,7 +93,7 @@ public extension UIColor {
             return
         }
         
-        self.init(namedCSS: svgString)
+        self.init(cssName: svgString)
     }
     
     /**
@@ -164,8 +171,8 @@ public extension UIColor {
      Convenience initializer that creates a new UIColor from a CSS3 named color
      - SeeAlso: See here for all the colors: [https://www.w3.org/TR/css3-color/#svg-color](https://www.w3.org/TR/css3-color/#svg-color)
      */
-	convenience init?(namedCSS: String) {
-        guard let namedColor = CGColor.named[namedCSS] else {
+	convenience init?(cssName: String) {
+        guard let namedColor = CGColor.named[cssName] else {
             return nil
         }
         self.init(cgColor: namedColor)

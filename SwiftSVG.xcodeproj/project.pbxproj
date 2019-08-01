@@ -133,6 +133,10 @@
 		8AC4DBEA1CB37EA700137DC9 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4DBE91CB37EA700137DC9 /* CrossPlatform.swift */; };
 		A738B2921FD252A9001CF969 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738B2911FD252A9001CF969 /* Identifiable.swift */; };
 		D9870F27216628A900B47813 /* CGPathPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E99B31EF8C72900839918 /* CGPathPoints.swift */; };
+		E8235A5F22F260E000E8F1B3 /* cssColorNames.json in Resources */ = {isa = PBXBuildFile; fileRef = E8235A5E22F260E000E8F1B3 /* cssColorNames.json */; };
+		E8235A6122F2614000E8F1B3 /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8235A6022F2614000E8F1B3 /* Dictionary+JSON.swift */; };
+		E8235A6222F2686C00E8F1B3 /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8235A6022F2614000E8F1B3 /* Dictionary+JSON.swift */; };
+		E8235A6322F2687F00E8F1B3 /* cssColorNames.json in Resources */ = {isa = PBXBuildFile; fileRef = E8235A5E22F260E000E8F1B3 /* cssColorNames.json */; };
 		E8AFE31C22EBD6F600BD1672 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AFE31B22EBD6F600BD1672 /* Print.swift */; };
 /* End PBXBuildFile section */
 
@@ -230,6 +234,8 @@
 		9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9E245BDA1AAE3FE000472F5A /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		A738B2911FD252A9001CF969 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Identifiable.swift; path = Attributes/Identifiable.swift; sourceTree = "<group>"; };
+		E8235A5E22F260E000E8F1B3 /* cssColorNames.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cssColorNames.json; sourceTree = "<group>"; };
+		E8235A6022F2614000E8F1B3 /* Dictionary+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSON.swift"; sourceTree = "<group>"; };
 		E8AFE31B22EBD6F600BD1672 /* Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -330,6 +336,7 @@
 				38048F461F24520200179C95 /* CALayer+Sublayers.swift */,
 				380210231F3B881E007D236B /* Data+CacheKey.swift */,
 				176BC9BB1EE4AE2700F7B54C /* Dictionary+Add.swift */,
+				E8235A6022F2614000E8F1B3 /* Dictionary+JSON.swift */,
 				380FED781F07F48500EDB255 /* DispatchQueue+Extensions.swift */,
 				380FECF71F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift */,
 				E8AFE31B22EBD6F600BD1672 /* Print.swift */,
@@ -339,6 +346,7 @@
 				176BC9F31EE62B6100F7B54C /* String+Trim.swift */,
 				9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */,
 				66F9844A20EF511F00A2CBEF /* Unown.swift */,
+				E8235A5E22F260E000E8F1B3 /* cssColorNames.json */,
 			);
 			name = Helpers;
 			path = SVG/Helpers;
@@ -606,6 +614,7 @@
 			files = (
 				38E2A7A91FD34AA0003DEFBB /* simple-rectangle.svg in Resources */,
 				38048F4E1F24710100179C95 /* ukulele.svg in Resources */,
+				E8235A6322F2687F00E8F1B3 /* cssColorNames.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +622,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8235A5F22F260E000E8F1B3 /* cssColorNames.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +709,7 @@
 				176BC9DA1EE5193D00F7B54C /* UIColorExtensionsTests.swift in Sources */,
 				38048F3F1F24214400179C95 /* CAShapeLayer+SVG.swift in Sources */,
 				381E99AD1EF8946E00839918 /* ScalarFromByteArrayTests.swift in Sources */,
+				E8235A6222F2686C00E8F1B3 /* Dictionary+JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +733,7 @@
 				38048F3A1F24210F00179C95 /* SVGLayer.swift in Sources */,
 				176BC9C41EE4C04100F7B54C /* SVGEllipse.swift in Sources */,
 				38048F3C1F24210F00179C95 /* UIBezierPath+SVG.swift in Sources */,
+				E8235A6122F2614000E8F1B3 /* Dictionary+JSON.swift in Sources */,
 				175093C31E6C6C2100EF1853 /* SVGElement.swift in Sources */,
 				380FED7F1F084FF100EDB255 /* NSXMLSVGParser.swift in Sources */,
 				3807CCF31F29940A00E78314 /* Transformable.swift in Sources */,
