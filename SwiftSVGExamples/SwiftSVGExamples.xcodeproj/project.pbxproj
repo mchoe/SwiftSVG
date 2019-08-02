@@ -72,7 +72,6 @@
 		8AC4DBDA1CB37DC600137DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBD91CB37DC600137DC9 /* Assets.xcassets */; };
 		8AC4DBDD1CB37DC600137DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4DBDB1CB37DC600137DC9 /* Main.storyboard */; };
 		E8235A6522F26C6800E8F1B3 /* alohaShirt.svg in Resources */ = {isa = PBXBuildFile; fileRef = E8235A6422F26C6800E8F1B3 /* alohaShirt.svg */; };
-		E8235A6722F396B500E8F1B3 /* github-134.svg in Resources */ = {isa = PBXBuildFile; fileRef = E8235A6622F396B500E8F1B3 /* github-134.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -184,7 +183,6 @@
 		8AC4DBDC1CB37DC600137DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AC4DBDE1CB37DC600137DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8235A6422F26C6800E8F1B3 /* alohaShirt.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = alohaShirt.svg; sourceTree = "<group>"; };
-		E8235A6622F396B500E8F1B3 /* github-134.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "github-134.svg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,7 +326,6 @@
 				3807CCFC1F2AF26400E78314 /* fistBump.svg */,
 				380FED5E1F0692E500EDB255 /* Fyodor-Dostoevsky.svg */,
 				3882153C1F12DEB000C192A3 /* George_Kerr_Anderson_Patent_1885_1.svg */,
-				E8235A6622F396B500E8F1B3 /* github-134.svg */,
 				380FED491F02064900EDB255 /* hawaiiFlowers.svg */,
 				380FED5A1F06907600EDB255 /* johnny-automatic-open-mouth.svg */,
 				380FED601F0692E500EDB255 /* MedievalBanners.svg */,
@@ -498,7 +495,6 @@
 				176BC9CD1EE4C44E00F7B54C /* simple-rectangle.svg in Resources */,
 				380FED631F0692E500EDB255 /* MedievalBanners.svg in Resources */,
 				3813ED4C1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg in Resources */,
-				E8235A6722F396B500E8F1B3 /* github-134.svg in Resources */,
 				380FED691F0697A800EDB255 /* Camel2.svg in Resources */,
 				380FED4A1F02064900EDB255 /* hawaiiFlowers.svg in Resources */,
 				3813ED4E1EFC284E0054ECBD /* openclipart-tux.svg in Resources */,
