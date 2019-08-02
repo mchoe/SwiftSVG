@@ -97,9 +97,8 @@ public extension UIColor {
     }
     
     /**
-     Convenience initializer that creates a new UIColor based on a 3 or 6 digit hex string. The leading `#` character is optional
-     - Parameter hexString: A 3 or 6 digit hex string
-     - Parameter alpha: Optional alpha value
+     Convenience initializer that creates a new UIColor based on a 3, 4, 6, or 8 digit hex string. The leading `#` character is optional
+     - Parameter hexString: A 3, 4, 6, or 8 digit hex string
      */
     internal convenience init?(hexString: String) {
         
