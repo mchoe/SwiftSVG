@@ -107,6 +107,7 @@ public extension UIColor {
             workingString = String(workingString.dropFirst())
         }
         workingString = workingString.lowercased()
+        let colorArray: [CGFloat]
         
         if workingString.count == 3 {
             guard let asInt = UInt16(workingString, radix: 16) else {
@@ -115,7 +116,7 @@ public extension UIColor {
             let red = CGFloat((asInt & 0xF00) >> 8) / 15
             let green = CGFloat((asInt & 0x0F0) >> 4) / 15
             let blue = CGFloat(asInt & 0x00F) / 15
-            self.init(red: red, green: green, blue: blue, alpha: 1.0)
+            colorArray = [red, green, blue, 1.0]
         } else if workingString.count == 4 {
             guard let asInt = UInt16(workingString, radix: 16) else {
                 return nil
@@ -124,7 +125,7 @@ public extension UIColor {
             let green = CGFloat((asInt & 0x0F00) >>  8) / 15
             let blue = CGFloat((asInt & 0x00F0) >>  4) / 15
             let alpha = CGFloat(asInt & 0x000F) / 15
-            self.init(red: red, green: green, blue: blue, alpha: alpha)
+            colorArray = [red, green, blue, alpha]
         } else if workingString.count == 6 {
             guard let asInt = UInt32(workingString, radix: 16) else {
                 return nil
@@ -132,7 +133,7 @@ public extension UIColor {
             let red = CGFloat((asInt & 0xFF0000) >> 16) / 255
             let green = CGFloat((asInt & 0x00FF00) >> 8) / 255
             let blue = CGFloat(asInt & 0x0000FF) / 255
-            self.init(red: red, green: green, blue: blue, alpha: 1.0)
+            colorArray = [red, green, blue, 1.0]
         } else if workingString.count == 8 {
             guard let asInt = UInt32(workingString, radix: 16) else {
                 return nil
@@ -141,10 +142,14 @@ public extension UIColor {
             let green = CGFloat((asInt & 0x00FF0000) >> 16) / 255
             let blue = CGFloat((asInt & 0x0000FF00) >> 8) / 255
             let alpha = CGFloat(asInt & 0x000000FF) / 255
-            self.init(red: red, green: green, blue: blue, alpha: alpha)
+            colorArray = [red, green, blue, alpha]
         } else {
             return nil
         }
+        guard colorArray.count == 4 else {
+            return nil
+        }
+        self.init(red: colorArray[0], green: colorArray[1], blue: colorArray[2], alpha: colorArray[3])
     }
     
     /**
