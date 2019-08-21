@@ -65,6 +65,9 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     fileprivate var elementStack = Stack<SVGElement>()
     
     /// :nodoc:
+    fileprivate var containerStack = Stack<SVGContainerElement>()
+    
+    /// :nodoc:
     public var completionBlock: ((SVGLayer) -> ())?
     
     /// :nodoc:
@@ -146,6 +149,10 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
             }
         }
         
+        if let containerElement = svgElement as? SVGContainerElement {
+            self.containerStack.push(containerElement)
+        }
+        
         self.elementStack.push(svgElement)
     }
     
@@ -169,6 +176,8 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         guard let lastElement = self.elementStack.pop() else {
             return
         }
+        
+        print("Finished: \(lastElement)")
         
         if let rootItem = lastElement as? SVGRootElement {
             DispatchQueue.main.safeAsync {

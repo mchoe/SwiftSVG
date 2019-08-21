@@ -58,6 +58,12 @@ class VariousViewController: UIViewController {
                 }
                 return false
             })
+            .filter({ (thisURL) -> Bool in
+                if thisURL.lastPathComponent.contains("hawaiiFlowers") {
+                    return true
+                }
+                return false
+            })
             .sorted(by: {
                 $0.lastPathComponent.lowercased() < $1.lastPathComponent.lowercased()
             })
