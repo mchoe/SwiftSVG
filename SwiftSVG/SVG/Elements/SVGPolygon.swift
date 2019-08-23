@@ -43,6 +43,9 @@ struct SVGPolygon: SVGShapeElement {
     /// :nodoc:
     internal static let elementName = "polygon"
     
+    // :nodoc:
+    internal var availableAttributes = [String : String]()
+    
     /// :nodoc:
     internal var supportedAttributes: [String : (String) -> ()] = [:]
     

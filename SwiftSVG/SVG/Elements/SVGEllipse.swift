@@ -42,6 +42,9 @@ final class SVGEllipse: SVGShapeElement {
     /// :nodoc:
     internal static let elementName = "ellipse"
     
+    // :nodoc:
+    internal var availableAttributes = [String : String]()
+    
     /**
      The ellipse's center point. Defaults to `CGRect.zero`
      */

@@ -57,6 +57,9 @@ final class SVGLine: SVGShapeElement {
     /// :nodoc:
     internal var svgLayer = CAShapeLayer()
     
+    // :nodoc:
+    internal var availableAttributes = [String : String]()
+    
     /// :nodoc:
     internal var supportedAttributes: [String : (String) -> ()] = [:]
     

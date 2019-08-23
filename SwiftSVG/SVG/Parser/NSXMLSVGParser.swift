@@ -65,7 +65,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     fileprivate var elementStack = Stack<SVGElement>()
     
     /// :nodoc:
-    fileprivate var containerStack = Stack<SVGContainerElement>()
+    fileprivate var containerStack = Stack<AnySVGContainerElement>()
     
     /// :nodoc:
     public var completionBlock: ((SVGLayer) -> ())?
@@ -143,14 +143,27 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
             }
         }
         
+        /*
         for (attributeName, attributeClosure) in svgElement.supportedAttributes {
             if let attributeValue = attributeDict[attributeName] {
                 attributeClosure(attributeValue)
             }
         }
+        */
+        
+        if var svgElement = svgElement as? SVGElement & StoresAttributes {
+            print("*****************************************")
+            print("Applying individual elements: \(elementName)")
+            svgElement.availableAttributes = attributeDict
+            svgElement.applyAttributes()
+        }
         
         if let containerElement = svgElement as? SVGContainerElement {
-            self.containerStack.push(containerElement)
+            guard svgElement is SVGRootElement == false else {
+                return
+            }
+            let typeErased = AnySVGContainerElement(containerElement)
+            self.containerStack.push(typeErased)
         }
         
         self.elementStack.push(svgElement)
@@ -177,7 +190,29 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
             return
         }
         
+        print("=========================================")
         print("Finished: \(lastElement)")
+        print("Containers [\(self.containerStack.count)]: \(self.containerStack)")
+        
+        if lastElement is SVGContainerElement {
+            guard lastElement is SVGRootElement == false else {
+                return
+            }
+            self.containerStack.pop()
+        } else if var lastElement = lastElement as? SVGShapeElement {
+            print("Previous group attributes [\(self.containerStack.combinedAttributes.count)]: \(self.containerStack.combinedAttributes)")
+            
+            lastElement.applyAttributes(self.containerStack.combinedAttributes)
+            self.resizeContainerBoundingBox(lastElement.boundingBox)
+            
+            /*
+            for (attributeName, attributeClosure) in lastElement.supportedAttributes {
+                if let attributeValue = self.containerStack.combinedAttributes[attributeName] {
+                    attributeClosure(attributeValue)
+                }
+            }
+            */
+        }
         
         if let rootItem = lastElement as? SVGRootElement {
             DispatchQueue.main.safeAsync {
@@ -186,6 +221,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
             return
         }
         
+        /*
         guard let containerElement = self.elementStack.last as? SVGContainerElement else {
             return
         }
@@ -195,6 +231,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         if let lastShapeElement = lastElement as? SVGShapeElement {
             self.resizeContainerBoundingBox(lastShapeElement.boundingBox)
         }
+        */
     }
     
     /**

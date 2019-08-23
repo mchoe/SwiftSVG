@@ -1,9 +1,9 @@
 //
-//  SVGShapeElement.swift
+//  StoresAttributes.swift
 //  SwiftSVG
 //
 //
-//  Copyright (c) 2017 Michael Choe
+//  Copyright (c) 2019 Michael Choe
 //  http://www.github.com/mchoe
 //  http://www.straussmade.com/
 //  http://www.twitter.com/_mchoe
@@ -28,31 +28,32 @@
 
 
 
-#if os(iOS) || os(tvOS)
-    import UIKit
-#elseif os(OSX)
-    import AppKit
-#endif
+import Foundation
 
 
 /**
- A protocol that describes an instance that stores the path as a `CAShapeLayer`
+ A protocol for conforming types to store the string keys and values of the attributes that an elements has
  */
-public protocol SVGShapeElement: SVGElement, StoresAttributes, Fillable, Strokable, Transformable, Stylable, Identifiable {
+public protocol StoresAttributes {
     
     /**
-     The `CAShapeLayer` that can draw the path data.
+     The attributes that an element has
+     - parameter Key: The `String` of an element's attribute such as `d`, `fill`, and `rx`.
+     - parameter Value: The `String` value of the attribute passed from the parser, such as `"#ff00ee"`
      */
-    var svgLayer: CAShapeLayer { get set }
+    var availableAttributes: [String : String] { get set }
 }
 
-extension SVGShapeElement {
+
+public extension SVGElement where Self: StoresAttributes {
     
-    /**
-     The minimum rect that encompasses all of the subpaths
-     */
-    var boundingBox: CGRect? {
-        return self.svgLayer.path?.boundingBox
+    mutating func applyAttributes(_ attributes: [String : String]? = nil) {
+        let attributesToApply = attributes ?? self.availableAttributes
+        for (attributeName, attributeClosure) in self.supportedAttributes {
+            if let attributeValue = attributesToApply[attributeName] {
+                attributeClosure(attributeValue)
+                print("Applied Attribute [\(attributeName)]: \(attributeValue)")
+            }
+        }
     }
 }
-

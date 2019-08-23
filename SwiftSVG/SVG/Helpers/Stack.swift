@@ -111,3 +111,11 @@ extension StackType {
     }
     
 }
+
+extension Stack: Sequence {
+    
+    func makeIterator() -> IndexingIterator<[T]> {
+        return self.items.reversed().makeIterator()
+    }
+    
+}

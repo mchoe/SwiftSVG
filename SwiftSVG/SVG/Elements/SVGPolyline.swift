@@ -43,6 +43,9 @@ struct SVGPolyline: SVGShapeElement {
     /// :nodoc:
     internal static let elementName = "polyline"
     
+    // :nodoc:
+    internal var availableAttributes = [String : String]()
+    
     /// :nodoc:
     internal var supportedAttributes: [String : (String) -> ()] = [:]
     

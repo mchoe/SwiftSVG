@@ -55,6 +55,9 @@ final class SVGPath: SVGShapeElement, ParsesAsynchronously, DelaysApplyingAttrib
      */
     internal var shouldParseAsynchronously = true
     
+    // :nodoc:
+    internal var availableAttributes = [String : String]()
+    
     /// :nodoc:
     internal var supportedAttributes = [String : (String) -> ()]()
     

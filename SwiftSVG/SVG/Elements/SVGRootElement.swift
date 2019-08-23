@@ -50,6 +50,9 @@ struct SVGRootElement: SVGContainerElement {
     internal var containerLayer = CALayer()
     
     // :nodoc:
+    internal var availableAttributes = [String : String]()
+    
+    // :nodoc:
     internal var supportedAttributes = [String : (String) -> ()]()
     
     /**

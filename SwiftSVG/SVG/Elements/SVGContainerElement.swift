@@ -39,7 +39,7 @@
  A protocol that describes an instance that can store SVG sublayers and can apply a single attributes to all sublayers.
  */
 
-public protocol SVGContainerElement: SVGElement, DelaysApplyingAttributes, Fillable, Strokable, Transformable, Stylable, Identifiable {
+public protocol SVGContainerElement: SVGElement, DelaysApplyingAttributes, StoresAttributes, Fillable, Strokable, Transformable, Stylable, Identifiable {
     
     /**
      The layer that stores all the SVG sublayers
@@ -47,4 +47,57 @@ public protocol SVGContainerElement: SVGElement, DelaysApplyingAttributes, Filla
     var containerLayer: CALayer { get set }
 }
 
-
+/**
+ A type-erased struct, to be used with generics
+ */
+internal struct AnySVGContainerElement: SVGContainerElement {
+    static var elementName: String {
+        fatalError()
+    }
+    
+    var supportedAttributes: [String : (String) -> ()] {
+        get {
+            return self.base.supportedAttributes
+        }
+        set {
+            self.base.supportedAttributes = newValue
+        }
+    }
+    
+    func didProcessElement(in container: SVGContainerElement?) {
+        self.base.didProcessElement(in: container)
+    }
+    
+    var delayedAttributes: [String : String] {
+        get {
+            return self.base.delayedAttributes
+        }
+        set {
+            self.base.delayedAttributes = newValue
+        }
+    }
+    
+    var containerLayer: CALayer {
+        get {
+            return self.base.containerLayer
+        }
+        set {
+            return self.base.containerLayer = newValue
+        }
+    }
+    
+    var availableAttributes: [String : String] {
+        get {
+            return self.base.availableAttributes
+        }
+        set {
+            self.base.availableAttributes = newValue
+        }
+    }
+    
+    private var base: SVGContainerElement
+    
+    init(_ base: SVGContainerElement) {
+        self.base = base
+    }
+}
