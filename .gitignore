@@ -19,6 +19,9 @@ DerivedData
 *.xcuserstate
 .DS_Store
 
+# SPM
+.swiftpm
+
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
