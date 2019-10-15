@@ -3,7 +3,7 @@
 Pod::Spec.new do |s| 
 
   s.name         = "SwiftSVG"
-  s.version      = "2.3.0"
+  s.version      = "2.3.2"
   s.summary      = "A simple, performant, single pass SVG parser"
   s.description  = "A simple, performant, single pass SVG parser. Optimized for extension and developer joy."
   s.homepage     = "https://github.com/mchoe/SwiftSVG"
