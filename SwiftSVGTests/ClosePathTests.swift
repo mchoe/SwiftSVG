@@ -38,7 +38,7 @@ class ClosePathTests: XCTestCase {
         _ = ClosePath(parameters: [], pathType: .absolute, path:testPath)
         let lastPointAndType = testPath.cgPath.pointsAndTypes.last!
         XCTAssert(lastPointAndType.1 == .closeSubpath, "Expected .closeSubpath, got \(lastPointAndType.1)")
-        XCTAssert(lastPointAndType.0.x == 20 && lastPointAndType.0.y == -30, "Expected 20, -30, got \(lastPointAndType.0)")
+        XCTAssert(lastPointAndType.0.x.isNaN == true && lastPointAndType.0.y.isNaN == true, "Expected NaN, NaN, got \(lastPointAndType.0)")
     }
 
 }
