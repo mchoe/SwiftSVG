@@ -55,9 +55,9 @@ open class SVGView : UIView {
      The name of the SVG file in the main bundle
      */
     @IBInspectable
-    open var SVGName: String? {
+    open var svgName: String? {
         didSet {
-            guard let thisName = self.SVGName else {
+            guard let thisName = self.svgName else {
                 return
             }
             
@@ -68,7 +68,7 @@ open class SVGView : UIView {
             #endif
             
             if let url = bundle.url(forResource: thisName, withExtension: "svg") {
-                CALayer(SVGURL: url) { [weak self] (svgLayer) in
+                CALayer(svgURL: url) { [weak self] (svgLayer) in
                     self?.nonOptionalLayer.addSublayer(svgLayer)
                 }
             } else if #available(iOS 9.0, tvOS 9.0, OSX 10.11, *) {
@@ -82,7 +82,7 @@ open class SVGView : UIView {
                 }
                 #endif
                 let data = asset.data
-                CALayer(SVGData: data) { [weak self] (svgLayer) in
+                CALayer(svgData: data) { [weak self] (svgLayer) in
                     self?.nonOptionalLayer.addSublayer(svgLayer)
                 }
             }
@@ -90,5 +90,9 @@ open class SVGView : UIView {
         
         }
     }
+    
+    /// :nodoc:
+    @available(*, deprecated, renamed: "svgName")
+    open var SVGName: String?
 }
 

@@ -83,32 +83,44 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
 
     /**
      Convenience initializer that can initalize an `NSXMLSVGParser` using a local or remote `URL`
-     - parameter SVGURL: The URL of the SVG.
+     - parameter svgURL: The URL of the SVG.
      - parameter supportedElements: Optional `SVGParserSupportedElements` struct that restrict the elements and attributes that this parser can parse.If no value is provided, all supported attributes will be used.
      - parameter completion: Optional completion block that will be executed after all elements and attribites have been parsed.
      */
-    public convenience init(SVGURL: URL, supportedElements: SVGParserSupportedElements? = nil, completion: ((SVGLayer) -> ())? = nil) {
+    public convenience init(svgURL: URL, supportedElements: SVGParserSupportedElements? = nil, completion: ((SVGLayer) -> ())? = nil) {
         
         do {
-            let urlData = try Data(contentsOf: SVGURL)
-            self.init(SVGData: urlData, supportedElements: supportedElements, completion: completion)
+            let urlData = try Data(contentsOf: svgURL)
+            self.init(svgData: urlData, supportedElements: supportedElements, completion: completion)
         } catch {
             self.init()
             print("Couldn't get data from URL")
         }
     }
     
+    /// :nodoc:
+    @available(*, deprecated, renamed: "init(svgURL:supportedElements:completion:)")
+    public convenience init(SVGURL: URL, supportedElements: SVGParserSupportedElements? = nil, completion: ((SVGLayer) -> ())? = nil) {
+        self.init(svgURL: SVGURL, supportedElements: supportedElements, completion: completion)
+    }
+    
     /**
      Initializer that can initalize an `NSXMLSVGParser` using SVG `Data`
-     - parameter SVGURL: The URL of the SVG.
+     - parameter svgURL: The URL of the SVG.
      - parameter supportedElements: Optional `SVGParserSupportedElements` struct that restricts the elements and attributes that this parser can parse. If no value is provided, all supported attributes will be used.
      - parameter completion: Optional completion block that will be executed after all elements and attribites have been parsed.
      */
-    public required init(SVGData: Data, supportedElements: SVGParserSupportedElements? = SVGParserSupportedElements.allSupportedElements, completion: ((SVGLayer) -> ())? = nil) {
-        super.init(data: SVGData)
+    public required init(svgData: Data, supportedElements: SVGParserSupportedElements? = SVGParserSupportedElements.allSupportedElements, completion: ((SVGLayer) -> ())? = nil) {
+        super.init(data: svgData)
         self.delegate = self
         self.supportedElements = supportedElements
         self.completionBlock = completion
+    }
+    
+    /// :nodoc:
+    @available(*, deprecated, renamed: "init(svgData:supportedElements:completion:)")
+    public convenience init(SVGData: Data, supportedElements: SVGParserSupportedElements? = SVGParserSupportedElements.allSupportedElements, completion: ((SVGLayer) -> ())? = nil) {
+        self.init(svgData: SVGData, supportedElements: supportedElements, completion: completion)
     }
     
     /**
@@ -127,7 +139,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     open func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         
         guard let elementType = self.supportedElements?.tags[elementName] else {
-            print("\(elementName) is unsupported. For a complete list of supported elements, see the `allSupportElements` variable in the `SVGParserSupportedElements` struct. Click through on the `elementName` variable name to see the SVG tag name.")
+            print("\(elementName) is unsupported. For a complete list of supported elements, see the `allSupportedElements` variable in the `SVGParserSupportedElements` struct. Click through on the `elementName` variable name to see the SVG tag name.")
             return
         }
         

@@ -43,7 +43,7 @@ class PerformanceTests: XCTestCase {
             
             let asData = try! Data(contentsOf: resourceURL)
             let expect = self.expectation(description: "SwiftSVG expectation")
-            _ = UIView(SVGData: asData) { (svgLayer) in
+            _ = UIView(svgData: asData) { (svgLayer) in
                 SVGCache.default.removeObject(key: asData.cacheKey)
                 expect.fulfill()
             }

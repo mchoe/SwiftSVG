@@ -46,7 +46,7 @@ class SingleSVGViewController: UIViewController {
             return
         }
         
-        let svgView = UIView(SVGURL: url) { (svgLayer) in
+        let svgView = UIView(svgURL: url) { (svgLayer) in
             svgLayer.resizeToFit(self.canvasView.bounds)
         }
         svgView.backgroundColor = UIColor.blue

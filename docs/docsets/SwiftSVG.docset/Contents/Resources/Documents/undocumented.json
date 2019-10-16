@@ -1,6 +1,453 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/CrossPlatform.swift",
+      "line": 37,
+      "symbol": "UIView",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/CrossPlatform.swift",
+      "line": 38,
+      "symbol": "UIBezierPath",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/CrossPlatform.swift",
+      "line": 39,
+      "symbol": "UIColor",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/CrossPlatform.swift",
+      "line": 41,
+      "symbol": "UIBezierPath",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/CrossPlatform.swift",
+      "line": 42,
+      "symbol": "UIView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/CrossPlatform.swift",
+      "line": 42,
+      "symbol": "UIView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/CrossPlatform.swift",
+      "line": 73,
+      "symbol": "UIColor",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Identifiable.swift",
+      "line": 32,
+      "symbol": "Identifiable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Identifiable.swift",
+      "line": 34,
+      "symbol": "Identifiable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Identifiable.swift",
+      "line": 56,
+      "symbol": "Identifiable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Identifiable.swift",
+      "line": 69,
+      "symbol": "Identifiable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
+      "line": 49,
+      "symbol": "LineJoin.bevel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
+      "line": 49,
+      "symbol": "LineJoin.miter",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
+      "line": 49,
+      "symbol": "LineJoin.round",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
+      "line": 56,
+      "symbol": "LineCap.butt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
+      "line": 56,
+      "symbol": "LineCap.round",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Strokable.swift",
+      "line": 56,
+      "symbol": "LineCap.square",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Transformable.swift",
+      "line": 44,
+      "symbol": "Transform.affineTransform",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Transformable.swift",
+      "line": 46,
+      "symbol": "Transform.init(rawValue:coordinatesString:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Attributes/Transformable.swift",
+      "line": 129,
+      "symbol": "Transformable.layerToTransform",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Data+CacheKey.swift",
+      "line": 34,
+      "symbol": "Data.cacheKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Dictionary+JSON.swift",
+      "line": 33,
+      "symbol": "Dictionary.init(jsonFile:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Print.swift",
+      "line": 31,
+      "symbol": "print(_:separator:terminator:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Stack.swift",
+      "line": 38,
+      "symbol": "StackType.StackItem",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Stack.swift",
+      "line": 39,
+      "symbol": "StackType.items",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Stack.swift",
+      "line": 40,
+      "symbol": "StackType.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Stack.swift",
+      "line": 41,
+      "symbol": "StackType.pop()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Stack.swift",
+      "line": 42,
+      "symbol": "StackType.push(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Stack.swift",
+      "line": 49,
+      "symbol": "Stack.items",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Stack.swift",
+      "line": 50,
+      "symbol": "Stack.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Helpers/Unown.swift",
+      "line": 11,
+      "symbol": "unown(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathCommand.swift",
+      "line": 38,
+      "symbol": "PathType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 47,
+      "symbol": "PathDConstants.DCharacter.A",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 48,
+      "symbol": "PathDConstants.DCharacter.a",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 49,
+      "symbol": "PathDConstants.DCharacter.C",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 50,
+      "symbol": "PathDConstants.DCharacter.c",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 51,
+      "symbol": "PathDConstants.DCharacter.H",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 52,
+      "symbol": "PathDConstants.DCharacter.h",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 53,
+      "symbol": "PathDConstants.DCharacter.L",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 54,
+      "symbol": "PathDConstants.DCharacter.l",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 55,
+      "symbol": "PathDConstants.DCharacter.M",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 56,
+      "symbol": "PathDConstants.DCharacter.m",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 57,
+      "symbol": "PathDConstants.DCharacter.Q",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 58,
+      "symbol": "PathDConstants.DCharacter.q",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 59,
+      "symbol": "PathDConstants.DCharacter.S",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 60,
+      "symbol": "PathDConstants.DCharacter.s",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 61,
+      "symbol": "PathDConstants.DCharacter.T",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 62,
+      "symbol": "PathDConstants.DCharacter.t",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 63,
+      "symbol": "PathDConstants.DCharacter.V",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 64,
+      "symbol": "PathDConstants.DCharacter.v",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 65,
+      "symbol": "PathDConstants.DCharacter.Z",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 66,
+      "symbol": "PathDConstants.DCharacter.z",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 67,
+      "symbol": "PathDConstants.DCharacter.comma",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 68,
+      "symbol": "PathDConstants.DCharacter.sign",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 69,
+      "symbol": "PathDConstants.DCharacter.space",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Iterators/PathDLexer.swift",
+      "line": 70,
+      "symbol": "PathDConstants.DCharacter.point",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
+      "line": 54,
+      "symbol": "NSXMLSVGParser.SVGParserError.invalidSVG",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
+      "line": 55,
+      "symbol": "NSXMLSVGParser.SVGParserError.invalidURL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
+      "line": 102,
+      "symbol": "NSXMLSVGParser.init(SVGURL:supportedElements:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
+      "line": 120,
+      "symbol": "NSXMLSVGParser.init(SVGData:supportedElements:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG Extensions/CALayer+SVG.swift",
+      "line": 65,
+      "symbol": "CALayer.init(SVGURL:parser:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG Extensions/CALayer+SVG.swift",
+      "line": 116,
+      "symbol": "CALayer.init(SVGData:parser:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG Extensions/SVGLayer.swift",
+      "line": 41,
+      "symbol": "SVGLayerType.boundingBox",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG Extensions/SVGView.swift",
+      "line": 95,
+      "symbol": "SVGView.SVGName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
   ],
-  "source_directory": "/Users/tarragon/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG"
+  "source_directory": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG"
 }
