@@ -261,10 +261,53 @@
 			path = SwiftSVGExampleTVOS;
 			sourceTree = "<group>";
 		};
+		47C6653A2356CB6A00AA0CA5 /* TestSVGs */ = {
+			isa = PBXGroup;
+			children = (
+				E8235A6422F26C6800E8F1B3 /* alohaShirt.svg */,
+				387A04B122500F69000FA0CA /* baseball.svg */,
+				3876E9641EFCC16500F8C04E /* berlin.svg */,
+				380FED681F0697A800EDB255 /* Camel2.svg */,
+				176BC9AF1EE48D3C00F7B54C /* circles.svg */,
+				380FED6A1F06984900EDB255 /* decorativeblob.svg */,
+				380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */,
+				380FED641F06946500EDB255 /* Dulcimer.svg */,
+				176BC9C61EE4C1AB00F7B54C /* ellipses.svg */,
+				3870903B1F0C32AE00F72660 /* error.svg */,
+				3807CCFC1F2AF26400E78314 /* fistBump.svg */,
+				380FED5E1F0692E500EDB255 /* Fyodor-Dostoevsky.svg */,
+				3882153C1F12DEB000C192A3 /* George_Kerr_Anderson_Patent_1885_1.svg */,
+				380FED491F02064900EDB255 /* hawaiiFlowers.svg */,
+				380FED5A1F06907600EDB255 /* johnny-automatic-open-mouth.svg */,
+				380FED601F0692E500EDB255 /* MedievalBanners.svg */,
+				380FED001F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Bicicletta.svg */,
+				380FED011F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg */,
+				380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */,
+				380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */,
+				3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */,
+				3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */,
+				380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */,
+				380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */,
+				3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */,
+				3876E95C1EFCB2E000F8C04E /* pizza.svg */,
+				176BC9FE1EE63FAB00F7B54C /* polylines.svg */,
+				381E99C21EFA0DC400839918 /* polygons.svg */,
+				3828E3601FCE1514009552DA /* rabbitcowboy.svg */,
+				38A634CB204F89E10023166E /* raphaelcruzeiro.svg */,
+				176BC9B81EE49C7200F7B54C /* rectangles.svg */,
+				176BC9CC1EE4C44E00F7B54C /* simple-rectangle.svg */,
+				387B0C6A1F1155680085E51A /* sockPuppet.svg */,
+				3807CCFA1F2AEF3A00E78314 /* tea.svg */,
+				380FED661F06951100EDB255 /* tiger.svg */,
+				38A1CE0F1EF77A0F00D2E54E /* triangle.svg */,
+			);
+			path = TestSVGs;
+			sourceTree = "<group>";
+		};
 		8AC4DB9B1CB37D9600137DC9 = {
 			isa = PBXGroup;
 			children = (
-				8AC4DBE61CB37E1C00137DC9 /* Resources */,
+				47C6653A2356CB6A00AA0CA5 /* TestSVGs */,
 				8AC4DBBE1CB37DB800137DC9 /* SwiftSVGExampleiOS */,
 				8AC4DBD41CB37DC600137DC9 /* SwiftSVGExampleMac */,
 				388215771F1309A800C192A3 /* SwiftSVGExampleTVOS */,
@@ -308,49 +351,6 @@
 				8AC4DBDE1CB37DC600137DC9 /* Info.plist */,
 			);
 			path = SwiftSVGExampleMac;
-			sourceTree = "<group>";
-		};
-		8AC4DBE61CB37E1C00137DC9 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E8235A6422F26C6800E8F1B3 /* alohaShirt.svg */,
-				387A04B122500F69000FA0CA /* baseball.svg */,
-				3876E9641EFCC16500F8C04E /* berlin.svg */,
-				380FED681F0697A800EDB255 /* Camel2.svg */,
-				176BC9AF1EE48D3C00F7B54C /* circles.svg */,
-				380FED6A1F06984900EDB255 /* decorativeblob.svg */,
-				380FED4B1F036E1F00EDB255 /* DrawingBoard.svg */,
-				380FED641F06946500EDB255 /* Dulcimer.svg */,
-				176BC9C61EE4C1AB00F7B54C /* ellipses.svg */,
-				3870903B1F0C32AE00F72660 /* error.svg */,
-				3807CCFC1F2AF26400E78314 /* fistBump.svg */,
-				380FED5E1F0692E500EDB255 /* Fyodor-Dostoevsky.svg */,
-				3882153C1F12DEB000C192A3 /* George_Kerr_Anderson_Patent_1885_1.svg */,
-				380FED491F02064900EDB255 /* hawaiiFlowers.svg */,
-				380FED5A1F06907600EDB255 /* johnny-automatic-open-mouth.svg */,
-				380FED601F0692E500EDB255 /* MedievalBanners.svg */,
-				380FED001F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Bicicletta.svg */,
-				380FED011F00171B00EDB255 /* openclipart-Anonymous_Architetto_--_Camello.svg */,
-				380FECFF1F00171B00EDB255 /* openclipart-angry-coder.svg */,
-				380FECF51EFEFAC900EDB255 /* openclipart-motivo_geometrico_archit_01.svg */,
-				3813ED4D1EFC284E0054ECBD /* openclipart-tux.svg */,
-				3813ED4B1EFC26F60054ECBD /* openclipart-zanzara_architetto_fran_03r.svg */,
-				380FECFB1F00171B00EDB255 /* openclipart-1290111299.svg */,
-				380FECFD1F00171B00EDB255 /* openclipart-1332611679.svg */,
-				3876E95B1EFCB2E000F8C04E /* openclipart-1346768588.svg */,
-				3876E95C1EFCB2E000F8C04E /* pizza.svg */,
-				176BC9FE1EE63FAB00F7B54C /* polylines.svg */,
-				381E99C21EFA0DC400839918 /* polygons.svg */,
-				3828E3601FCE1514009552DA /* rabbitcowboy.svg */,
-				38A634CB204F89E10023166E /* raphaelcruzeiro.svg */,
-				176BC9B81EE49C7200F7B54C /* rectangles.svg */,
-				176BC9CC1EE4C44E00F7B54C /* simple-rectangle.svg */,
-				387B0C6A1F1155680085E51A /* sockPuppet.svg */,
-				3807CCFA1F2AEF3A00E78314 /* tea.svg */,
-				380FED661F06951100EDB255 /* tiger.svg */,
-				38A1CE0F1EF77A0F00D2E54E /* triangle.svg */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
