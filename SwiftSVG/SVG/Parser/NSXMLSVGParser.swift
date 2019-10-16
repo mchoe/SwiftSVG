@@ -98,6 +98,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         }
     }
     
+    /// :nodoc:
     @available(*, deprecated, renamed: "init(svgURL:supportedElements:completion:)")
     public convenience init(SVGURL: URL, supportedElements: SVGParserSupportedElements? = nil, completion: ((SVGLayer) -> ())? = nil) {
         self.init(svgURL: SVGURL, supportedElements: supportedElements, completion: completion)
@@ -116,6 +117,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
         self.completionBlock = completion
     }
     
+    /// :nodoc:
     @available(*, deprecated, renamed: "init(svgData:supportedElements:completion:)")
     public convenience init(SVGData: Data, supportedElements: SVGParserSupportedElements? = SVGParserSupportedElements.allSupportedElements, completion: ((SVGLayer) -> ())? = nil) {
         self.init(svgData: SVGData, supportedElements: supportedElements, completion: completion)

@@ -116,6 +116,7 @@ public extension UIView {
         }
     }
     
+    /// :nodoc:
     @available(*, deprecated, renamed: "init(svgNamed:parser:completion:)")
     convenience init(SVGNamed: String, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
         self.init(svgNamed: SVGNamed, parser: parser, completion: completion)
@@ -144,6 +145,7 @@ public extension UIView {
         }
     }
     
+    /// :nodoc:
     @available(*, deprecated, renamed: "init(svgURL:parser:completion:)")
     convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
         self.init(svgURL: SVGURL, parser: parser, completion: completion)
@@ -171,6 +173,7 @@ public extension UIView {
         }
 	}
     
+    /// :nodoc:
     @available(*, deprecated, renamed: "init(svgData:parser:completion:)")
     convenience init(SVGData svgData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
         self.init(svgData: svgData, parser: parser, completion: completion)
