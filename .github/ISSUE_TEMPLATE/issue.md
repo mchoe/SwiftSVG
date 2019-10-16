@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Description of the Issue**
-A clear and concise description of what the bug is.
+A clear and concise description of what the issue is.
 
 **Sample SVG**
 IMPORTANT  - Include the SVG code here or link to a sample file.
