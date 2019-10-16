@@ -407,9 +407,44 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
+      "line": 102,
+      "symbol": "NSXMLSVGParser.init(SVGURL:supportedElements:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG/Parser/NSXMLSVGParser.swift",
+      "line": 120,
+      "symbol": "NSXMLSVGParser.init(SVGData:supportedElements:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG Extensions/CALayer+SVG.swift",
+      "line": 65,
+      "symbol": "CALayer.init(SVGURL:parser:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG Extensions/CALayer+SVG.swift",
+      "line": 116,
+      "symbol": "CALayer.init(SVGData:parser:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG Extensions/SVGLayer.swift",
       "line": 41,
       "symbol": "SVGLayerType.boundingBox",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kariage/Library/Mobile Documents/com~apple~CloudDocs/Backed/CODE/iOS/SwiftSVG/SwiftSVG/SVG Extensions/SVGView.swift",
+      "line": 95,
+      "symbol": "SVGView.SVGName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }
