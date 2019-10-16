@@ -44,7 +44,7 @@ class IndentifiableTests: XCTestCase {
         
         let asData = try! Data(contentsOf: resourceURL)
         let expectation = self.expectation(description: "Identifiable expectation")
-        _ = UIView(SVGData: asData) { (svgLayer) in
+        _ = UIView(svgData: asData) { (svgLayer) in
             guard let rootLayerName = svgLayer.sublayers?[0].name else {
                 return
             }

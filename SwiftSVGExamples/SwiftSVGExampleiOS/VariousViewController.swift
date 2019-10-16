@@ -86,7 +86,7 @@ extension VariousViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let returnCell = collectionView.dequeueReusableCell(withReuseIdentifier: "VariousCell", for: indexPath) as! VariousCell
         let thisItem = self.collectionViewData[indexPath.row]
-        let thisView = UIView(SVGURL: thisItem.url) { (svgLayer) in
+        let thisView = UIView(svgURL: thisItem.url) { (svgLayer) in
             svgLayer.resizeToFit(returnCell.bounds)
         }
         returnCell.svgView.addSubview(thisView)

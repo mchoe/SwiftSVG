@@ -43,14 +43,14 @@ class GithubViewController: UIViewController {
                 
                 // Simplest example of an SVG stored in the main bundle
                 
-                let svgView = UIView(SVGNamed: "fistBump")
+                let svgView = UIView(svgNamed: "fistBump")
                 return svgView
             }),
             CellItem(render: { (cellSize) -> UIView in
                 
                 // Simplest example of an SVG stored in the assets catalog as a Data Asset
                 
-                let svgView = UIView(SVGNamed: "cowboyHat")
+                let svgView = UIView(svgNamed: "cowboyHat")
                 return svgView
             }),
             CellItem(render: { (cellSize) -> UIView in
@@ -63,7 +63,7 @@ class GithubViewController: UIViewController {
             CellItem(render: { (cellSize) -> UIView in
                 
                 let svgURL = URL(string: "https://openclipart.org/download/181651/manhammock.svg")!
-                let hammock = UIView(SVGURL: svgURL) { (svgLayer) in
+                let hammock = UIView(svgURL: svgURL) { (svgLayer) in
                     svgLayer.fillColor = UIColor(red:0.52, green:0.16, blue:0.32, alpha:1.00).cgColor
                     svgLayer.resizeToFit(CGRect(x: 0, y: 0, width: cellSize.width, height: cellSize.height))
                 }
@@ -73,7 +73,7 @@ class GithubViewController: UIViewController {
                 
                 let returnView = UIView()
                 let svgURL = Bundle.main.url(forResource: "pizza", withExtension: "svg")!
-                let pizza = CALayer(SVGURL: svgURL) { (svgLayer) in
+                let pizza = CALayer(svgURL: svgURL) { (svgLayer) in
                     // Set the fill color
                     svgLayer.fillColor = UIColor(red:0.94, green:0.37, blue:0.00, alpha:1.00).cgColor
                     // Aspect fit the layer to self.view
@@ -105,7 +105,7 @@ class GithubViewController: UIViewController {
                 
                 // Simplest example of an SVG stored in the assets catalog as a Data Asset
                 
-                let svgView = UIView(SVGNamed: "raphaelcruzeiro") { (l: SVGLayer) -> Void in
+                let svgView = UIView(svgNamed: "raphaelcruzeiro") { (l: SVGLayer) -> Void in
                     l.fillColor = UIColor.blue.cgColor
                     l.strokeColor = l.fillColor
                 }

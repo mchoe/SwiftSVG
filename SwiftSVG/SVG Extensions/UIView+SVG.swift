@@ -63,13 +63,13 @@ public extension UIView {
     /**
      Convenience initializer that instantiates a new `UIView` for the given SVG file in the main bundle
      ```
-     let view = UIView(SVGNamed: "hawaiiFlowers")
+     let view = UIView(svgNamed: "hawaiiFlowers")
      ```
-     - Parameter SVGNamed: The name of the SVG resource in the main bundle with an `.svg` extension or the name an asset in the main Asset Catalog as a Data Asset.
+     - Parameter svgNamed: The name of the SVG resource in the main bundle with an `.svg` extension or the name an asset in the main Asset Catalog as a Data Asset.
      - Parameter parser: The optional parser to use to parse the SVG file
      - Parameter completion: A required completion block to execute once the SVG has completed parsing. The passed `SVGLayer` will be added to this view's sublayers before executing the completion block
      */
-    convenience init(SVGNamed: String, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
+    convenience init(svgNamed: String, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
         
         // TODO: This is too many guards to really make any sense. Also approaching on the
         // pyramid of death Refactor this at some point to be able to work cross-platform.
@@ -77,38 +77,38 @@ public extension UIView {
             
             var data: Data?
             #if os(iOS)
-            if let asset = NSDataAsset(name: SVGNamed) {
+            if let asset = NSDataAsset(name: svgNamed) {
                 data = asset.data
             }
             #elseif os(OSX)
-            if let asset = NSDataAsset(name: NSDataAsset.Name(SVGNamed)) {
+            if let asset = NSDataAsset(name: NSDataAsset.Name(svgNamed)) {
                 data = asset.data
             }
             #endif
             
             guard let unwrapped = data else {
-                guard let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") else {
+                guard let svgURL = Bundle.main.url(forResource: svgNamed, withExtension: "svg") else {
                     self.init()
                     return
                 }
                 do {
                     let thisData = try Data(contentsOf: svgURL)
-                    self.init(SVGData: thisData, parser: parser, completion: completion)
+                    self.init(svgData: thisData, parser: parser, completion: completion)
                 } catch {
                     self.init()
                     return
                 }
                 return
             }
-            self.init(SVGData: unwrapped, parser: parser, completion: completion)
+            self.init(svgData: unwrapped, parser: parser, completion: completion)
         } else {
-            guard let svgURL = Bundle.main.url(forResource: SVGNamed, withExtension: "svg") else {
+            guard let svgURL = Bundle.main.url(forResource: svgNamed, withExtension: "svg") else {
                 self.init()
                 return
             }
             do {
                 let data = try Data(contentsOf: svgURL)
-                self.init(SVGData: data, parser: parser, completion: completion)
+                self.init(svgData: data, parser: parser, completion: completion)
             } catch {
                 self.init()
                 return
@@ -116,27 +116,37 @@ public extension UIView {
         }
     }
     
+    @available(*, deprecated, renamed: "init(svgNamed:parser:completion:)")
+    convenience init(SVGNamed: String, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
+        self.init(svgNamed: SVGNamed, parser: parser, completion: completion)
+    }
+    
     /**
      Convenience initializer that instantiates a new `UIView` instance for the given SVG file at the given URL
      
      Upon completion, it will resize the layer to aspect fit this view's superview
      ```
-     let view = UIView(SVGURL: "hawaiiFlowers", parser: aParser) { (svgLayer) in
+     let view = UIView(svgURL: "hawaiiFlowers", parser: aParser) { (svgLayer) in
         // Do something with the passed svgLayer
      }
      ```
-     - Parameter SVGURL: The local or remote `URL` of the SVG resource
+     - Parameter svgURL: The local or remote `URL` of the SVG resource
      - Parameter parser: The optional parser to use to parse the SVG file
      - Parameter completion: A required completion block to execute once the SVG has completed parsing. The passed `SVGLayer` will be added to this view's sublayers before executing the completion block
      */
-    convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
+    convenience init(svgURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
         do {
-            let svgData = try Data(contentsOf: SVGURL)
-            self.init(SVGData: svgData, parser: parser, completion: completion)
+            let svgData = try Data(contentsOf: svgURL)
+            self.init(svgData: svgData, parser: parser, completion: completion)
         } catch {
             self.init()
-            Swift.print("No data at URL: \(SVGURL)")
+            Swift.print("No data at URL: \(svgURL)")
         }
+    }
+    
+    @available(*, deprecated, renamed: "init(svgURL:parser:completion:)")
+    convenience init(SVGURL: URL, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
+        self.init(svgURL: SVGURL, parser: parser, completion: completion)
     }
 	
     /**
@@ -144,21 +154,26 @@ public extension UIView {
      
      Upon completion, it will resize the layer to aspect fit this view's superview
      ```
-     let view = UIView(SVGData: svgData)
+     let view = UIView(svgData: svgData)
      ```
-     - Parameter SVGData: The SVG `Data` to be parsed
+     - Parameter svgData: The SVG `Data` to be parsed
      - Parameter parser: The optional parser to use to parse the SVG file
      - Parameter completion: A required completion block to execute once the SVG has completed parsing. The passed `SVGLayer` will be added to this view's sublayers before executing the completion block
      */
-    convenience init(SVGData svgData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
+    convenience init(svgData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
 		self.init()
         
-        CALayer(SVGData: svgData, parser: parser) { [weak self] (svgLayer) in
+        CALayer(svgData: svgData, parser: parser) { [weak self] (svgLayer) in
             DispatchQueue.main.safeAsync {
                 self?.nonOptionalLayer.addSublayer(svgLayer)
             }
             completion?(svgLayer)
         }
 	}
+    
+    @available(*, deprecated, renamed: "init(svgData:parser:completion:)")
+    convenience init(SVGData svgData: Data, parser: SVGParser? = nil, completion: ((SVGLayer) -> ())? = nil) {
+        self.init(svgData: svgData, parser: parser, completion: completion)
+    }
     
 }
