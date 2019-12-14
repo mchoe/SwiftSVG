@@ -15,5 +15,6 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
   s.source       = { :git => "https://github.com/mchoe/SwiftSVG.git", :tag => "v#{s.version}" }
   s.source_files  = "SwiftSVG", "SwiftSVG/**/*.{h,swift}"
+  s.resources = "SwiftSVG/SVG/Helpers/cssColorNames.json"
   s.swift_version = "5.0"
 end
