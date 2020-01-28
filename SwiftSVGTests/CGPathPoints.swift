@@ -93,7 +93,7 @@ extension PathCommand {
     init(parameters: [Double], pathType: PathType, path: UIBezierPath, previousCommand: PreviousCommand? = nil) {
         self.init(pathType: pathType)
         self.coordinateBuffer = parameters
-        self.execute(on: path, previousCommand: previousCommand)
+        _ = self.execute(on: path, previousCommand: previousCommand)
     }
     
 }
