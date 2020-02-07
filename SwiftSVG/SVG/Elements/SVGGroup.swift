@@ -59,7 +59,7 @@ final class SVGGroup: SVGContainerElement {
     internal var delayedAttributes = [String : String]()
     
     /// A `CALayer` that will hold all sublayers of the `SVGGroup`
-    internal var containerLayer = CALayer()
+    internal var containerLayer = CALayerWithChildHitTest()
     
     /// :nodoc:
     internal var supportedAttributes = [String : (String) -> ()]()

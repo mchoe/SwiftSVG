@@ -47,7 +47,7 @@ struct SVGPolygon: SVGShapeElement {
     internal var supportedAttributes: [String : (String) -> ()] = [:]
     
     /// :nodoc:
-    internal var svgLayer = CAShapeLayer()
+    internal var svgLayer = CAShapeLayerWithHitTest()
     
     /**
      Function that parses a coordinate string and creates a polygon path

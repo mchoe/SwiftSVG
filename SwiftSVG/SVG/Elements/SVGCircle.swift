@@ -55,7 +55,7 @@ final class SVGCircle: SVGShapeElement {
     internal var circleRadius: CGFloat = 0
     
     /// :nodoc:
-    internal var svgLayer = CAShapeLayer()
+    internal var svgLayer = CAShapeLayerWithHitTest()
     
     /// :nodoc:
     internal var supportedAttributes: [String : (String) -> ()] = [:]
