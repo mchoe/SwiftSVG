@@ -476,7 +476,6 @@ internal struct SmoothQuadraticCurveTo: PathCommand {
 
 /**
  The `PathCommand` that corresponds to the SVG `A` or `a` command
- - TODO: Still needs an implementation
  */
 internal struct EllipticalArc: PathCommand {
     
@@ -484,7 +483,7 @@ internal struct EllipticalArc: PathCommand {
     internal var coordinateBuffer = [Double]()
     
     /// :nodoc:
-    internal let numberOfRequiredParameters = 2
+    internal let numberOfRequiredParameters = 7
     
     /// :nodoc:
     internal let pathType: PathType
@@ -495,7 +494,126 @@ internal struct EllipticalArc: PathCommand {
     }
     
     /// :nodoc:
+    internal func convertEndpointToCenterParameterization(
+        x1: CGFloat,
+        y1: CGFloat,
+        x2: CGFloat,
+        y2: CGFloat,
+        fa: CGFloat,
+        fs: CGFloat,
+        rx: CGFloat,
+        ry: CGFloat,
+        psiDeg: CGFloat) -> CenterParametrizedEllipticalArc
+    {
+        var rx = rx
+        var ry = ry
+        let psi = psiDeg * (CGFloat.pi / 180.0)
+        let xp = (cos(psi) * ((x1 - x2) / 2.0)) + (sin(psi) * ((y1 - y2) / 2.0))
+        let yp = (-1 * sin(psi) * ((x1 - x2) / 2.0)) + (cos(psi) * ((y1 - y2) / 2.0))
+        let lambda = (xp * xp) / (rx * rx) + (yp * yp) / (ry * ry)
+        
+        if (lambda > 1) {
+            rx = rx * sqrt(lambda)
+            ry = ry * sqrt(lambda)
+        }
+        
+        var f = sqrt(
+            (rx * rx * (ry * ry) - rx * rx * (yp * yp) - ry * ry * (xp * xp)) /
+                (rx * rx * (yp * yp) + ry * ry * (xp * xp))
+        )
+        
+        if (fa == fs) {
+            f *= -1
+        }
+        
+        if (f.isNaN) {
+            f = 0
+        }
+        
+        let cxp = (f * rx * yp) / ry
+        let cyp = (f * -ry * xp) / rx
+        
+        let cx = (x1 + x2) / 2.0 + cos(psi) * cxp - sin(psi) * cyp
+        let cy = (y1 + y2) / 2.0 + sin(psi) * cxp + cos(psi) * cyp
+        
+        let vMag:(Array<CGFloat>) -> CGFloat = { v -> CGFloat in
+            return sqrt(v[0] * v[0] + v[1] * v[1])
+        }
+        let vRatio: (Array<CGFloat>,Array<CGFloat>) -> CGFloat = { u,v -> CGFloat in
+            return (u[0] * v[0] + u[1] * v[1]) / (vMag(u) * vMag(v));
+        };
+        let vAngle: (Array<CGFloat>,Array<CGFloat>) -> CGFloat = { u,v -> CGFloat in
+            return ((u[0] * v[1] < u[1] * v[0]) ? -1 : 1) * acos(vRatio(u, v))
+        };
+        let theta = vAngle([1, 0], [(xp - cxp) / rx, (yp - cyp) / ry])
+        let u = [(xp - cxp) / rx, (yp - cyp) / ry]
+        let v = [(-1 * xp - cxp) / rx, (-1 * yp - cyp) / ry]
+        var dTheta = vAngle(u, v)
+        
+        if (vRatio(u, v) <= -1) {
+            dTheta = CGFloat.pi
+        }
+        if (vRatio(u, v) >= 1) {
+            dTheta = 0
+        }
+        if (fs == 0 && dTheta > 0) {
+            dTheta = dTheta - 2 * CGFloat.pi
+        }
+        if (fs == 1 && dTheta < 0) {
+            dTheta = dTheta + 2 * CGFloat.pi
+        }
+        return CenterParametrizedEllipticalArc(cx: cx,
+                                               cy: cy,
+                                               rx: rx,
+                                               ry: ry,
+                                               theta: theta,
+                                               dTheta: dTheta,
+                                               psi: psi,
+                                               fs: fs)
+    }
+    
+    /// :nodoc:
+    internal func drawArc(parameters: CenterParametrizedEllipticalArc, to path: UIBezierPath)
+    {
+        let r = parameters.rx > parameters.ry ? parameters.rx : parameters.ry
+        let scaleX = parameters.rx > parameters.ry ? 1 : parameters.rx / parameters.ry
+        let scaleY = parameters.rx > parameters.ry ? parameters.ry / parameters.rx : 1
+        path.apply(CGAffineTransform(translationX: -parameters.cx, y: -parameters.cy))
+        path.apply(CGAffineTransform(rotationAngle: -parameters.psi))
+        path.apply(CGAffineTransform(scaleX: 1/scaleX, y: 1/scaleY))
+        let clockwise = (1 - parameters.fs) == 0
+        path.addArc(withCenter: .zero,
+                       radius: r,
+                       startAngle: parameters.theta,
+                       endAngle: parameters.theta + parameters.dTheta,
+                       clockwise: clockwise)
+        path.apply(CGAffineTransform(scaleX: scaleX, y: scaleY))
+        path.apply(CGAffineTransform(rotationAngle: parameters.psi))
+        path.apply(CGAffineTransform(translationX: parameters.cx, y: parameters.cy))
+    }
+    
+    /// :nodoc:
     internal func execute(on path: UIBezierPath, previousCommand: PreviousCommand? = nil) {
-        assert(false, "Needs Implementation")
+        
+        let rx = CGFloat(self.coordinateBuffer[0])
+        let ry = CGFloat(self.coordinateBuffer[1])
+        let psi = CGFloat(self.coordinateBuffer[2])
+        let fa = CGFloat(self.coordinateBuffer[3])
+        let fs = CGFloat(self.coordinateBuffer[4])
+        let x1 = CGFloat(path.currentPoint.x)
+        let y1 = CGFloat(path.currentPoint.y)
+        let ap = CGPoint(x: coordinateBuffer[5], y: coordinateBuffer[6])
+        let rp = self.pointForPathType(ap, relativeTo: path.currentPoint)
+        let a = self.convertEndpointToCenterParameterization(x1: x1,
+                                                             y1: y1,
+                                                             x2: rp.x,
+                                                             y2: rp.y,
+                                                             fa: fa,
+                                                             fs: fs,
+                                                             rx: rx,
+                                                             ry: ry,
+                                                             psiDeg: psi)
+        
+        drawArc(parameters: a, to: path)
     }
 }
