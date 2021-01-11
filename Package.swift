@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftSVG",
-    platforms: [.macOS(.v10_14), .iOS(.v8), .tvOS(.v9)],
+    platforms: [.macOS(.v10_14), .iOS(.v9), .tvOS(.v9)],
     products: [
         .library(
             name: "SwiftSVG",
