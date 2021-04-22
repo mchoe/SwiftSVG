@@ -92,6 +92,8 @@ internal struct PathDConstants {
         DCharacter.q.rawValue: QuadraticCurveTo(pathType: .relative),
         DCharacter.T.rawValue: SmoothQuadraticCurveTo(pathType: .absolute),
         DCharacter.t.rawValue: SmoothQuadraticCurveTo(pathType: .relative),
+        DCharacter.A.rawValue: EllipticalArc(pathType: .absolute),
+        DCharacter.a.rawValue: EllipticalArc(pathType: .relative),
     ]
     
 }

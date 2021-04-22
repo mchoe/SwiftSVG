@@ -138,6 +138,7 @@
 		E8235A6222F2686C00E8F1B3 /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8235A6022F2614000E8F1B3 /* Dictionary+JSON.swift */; };
 		E8235A6322F2687F00E8F1B3 /* cssColorNames.json in Resources */ = {isa = PBXBuildFile; fileRef = E8235A5E22F260E000E8F1B3 /* cssColorNames.json */; };
 		E8AFE31C22EBD6F600BD1672 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AFE31B22EBD6F600BD1672 /* Print.swift */; };
+		FAB19BF0253E0632001A2C01 /* CenterParametrizedEllipticalArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB19BEF253E0632001A2C01 /* CenterParametrizedEllipticalArc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +238,7 @@
 		E8235A5E22F260E000E8F1B3 /* cssColorNames.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cssColorNames.json; sourceTree = "<group>"; };
 		E8235A6022F2614000E8F1B3 /* Dictionary+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSON.swift"; sourceTree = "<group>"; };
 		E8AFE31B22EBD6F600BD1672 /* Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
+		FAB19BEF253E0632001A2C01 /* CenterParametrizedEllipticalArc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterParametrizedEllipticalArc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +349,7 @@
 				9E245B6A1AAE383200472F5A /* UIColor+Extensions.swift */,
 				66F9844A20EF511F00A2CBEF /* Unown.swift */,
 				E8235A5E22F260E000E8F1B3 /* cssColorNames.json */,
+				FAB19BEF253E0632001A2C01 /* CenterParametrizedEllipticalArc.swift */,
 			);
 			name = Helpers;
 			path = SVG/Helpers;
@@ -753,6 +756,7 @@
 				175093C11E6C669F00EF1853 /* SVGParserSupportedElements.swift in Sources */,
 				3807CCF01F29940A00E78314 /* Fillable.swift in Sources */,
 				387090361F0C134400F72660 /* ParsesAsynchronously.swift in Sources */,
+				FAB19BF0253E0632001A2C01 /* CenterParametrizedEllipticalArc.swift in Sources */,
 				381E99B11EF8AFE500839918 /* PathCommand.swift in Sources */,
 				3807CCF21F29940A00E78314 /* Stylable.swift in Sources */,
 				380FECF81F000AA000EDB255 /* FloatingPoint+DegreesRadians.swift in Sources */,
