@@ -139,7 +139,7 @@ open class NSXMLSVGParser: XMLParser, XMLParserDelegate {
     open func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         
         guard let elementType = self.supportedElements?.tags[elementName] else {
-            print("\(elementName) is unsupported. For a complete list of supported elements, see the `allSupportedElements` variable in the `SVGParserSupportedElements` struct. Click through on the `elementName` variable name to see the SVG tag name.")
+            // print("\(elementName) is unsupported. For a complete list of supported elements, see the `allSupportedElements` variable in the `SVGParserSupportedElements` struct. Click through on the `elementName` variable name to see the SVG tag name.")
             return
         }
         
