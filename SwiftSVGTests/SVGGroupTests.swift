@@ -29,6 +29,8 @@
 
 
 import XCTest
+@testable
+import SwiftSVG
 
 class SVGGroupTests: XCTestCase {
     

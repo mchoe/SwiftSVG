@@ -26,6 +26,8 @@
 //  THE SOFTWARE.
 
 import XCTest
+@testable
+import SwiftSVG
 
 class IndentifiableTests: XCTestCase {
     

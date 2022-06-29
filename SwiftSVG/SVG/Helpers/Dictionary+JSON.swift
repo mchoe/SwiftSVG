@@ -31,7 +31,7 @@ import Foundation
 extension Dictionary where Key: Decodable, Value: Decodable {
     
     init?(jsonFile name: String?) {
-        guard let jsonPath = Bundle(for: NSXMLSVGParser.self).url(forResource: name, withExtension: "json") else {
+        guard let jsonPath = Bundle.module.url(forResource: "cssColorNames", withExtension: "json") else {
             return nil
         }
         guard let jsonData = try? Data(contentsOf: jsonPath) else {

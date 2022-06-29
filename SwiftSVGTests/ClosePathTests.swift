@@ -29,14 +29,19 @@
 
 
 import XCTest
+@testable
+import SwiftSVG
 
 class ClosePathTests: XCTestCase {
 
     func testClosePath() {
         let testPath = UIBezierPath()
-        _ = MoveTo(parameters: [20, -30], pathType: .absolute, path:testPath)
-        _ = ClosePath(parameters: [], pathType: .absolute, path:testPath)
-        let lastPointAndType = testPath.cgPath.pointsAndTypes.last!
+        _ = MoveTo(pathType: .absolute)
+        _ = ClosePath(pathType: .absolute)
+        guard let lastPointAndType = testPath.cgPath.pointsAndTypes.last else {
+            XCTFail()
+            return
+        }
         XCTAssert(lastPointAndType.1 == .closeSubpath, "Expected .closeSubpath, got \(lastPointAndType.1)")
         XCTAssert(lastPointAndType.0.x.isNaN == true && lastPointAndType.0.y.isNaN == true, "Expected NaN, NaN, got \(lastPointAndType.0)")
     }
