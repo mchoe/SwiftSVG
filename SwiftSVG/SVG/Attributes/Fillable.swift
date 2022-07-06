@@ -66,7 +66,13 @@ extension Fillable where Self : SVGShapeElement {
      - SeeAlso: CAShapeLayer's [`fillColor`](https://developer.apple.com/documentation/quartzcore/cashapelayer/1522248-fillcolor)
      */
     func fill(fillColor: String) {
-        guard let colorComponents = self.svgLayer.fillColor?.components else {
+        // force if color is none
+        if fillColor == "none" {
+            self.svgLayer.fillColor = UIColor.clear.cgColor
+            return
+        }
+        // continue with the another color
+        guard let colorComponents = self.svgLayer.fillColor?.components, colorComponents.count == 4 else {
             return
         }
         guard let fillColor = UIColor(svgString: fillColor) else {
@@ -93,7 +99,7 @@ extension Fillable where Self : SVGShapeElement {
         guard let opacity = CGFloat(opacity) else {
             return
         }
-        guard let colorComponents = self.svgLayer.fillColor?.components else {
+        guard let colorComponents = self.svgLayer.fillColor?.components, colorComponents.count == 4 else {
             return
         }
         self.svgLayer.fillColor = UIColor(red: colorComponents[0], green: colorComponents[1], blue: colorComponents[2], alpha: opacity).cgColor

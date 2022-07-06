@@ -27,6 +27,8 @@
 
 
 import XCTest
+@testable
+import SwiftSVG
 
 class FillableTests: XCTestCase {
     

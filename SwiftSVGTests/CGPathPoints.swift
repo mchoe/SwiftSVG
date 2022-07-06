@@ -27,9 +27,12 @@
 //  THE SOFTWARE.
 
 
-
-import UIKit
-
+#if os(iOS) || os(tvOS)
+    import UIKit
+#elseif os(OSX)
+    import AppKit
+#endif
+import SwiftSVG
 
 extension CGPath {
     
@@ -50,6 +53,8 @@ extension CGPath {
                 arrayPoints.append(element.points[2])
             case .closeSubpath:
                 arrayPoints.append(element.points[0])
+            @unknown default:
+                fatalError("CGPath:points: no such element")
             }
         }
         return arrayPoints
@@ -72,6 +77,8 @@ extension CGPath {
                 arrayPoints.append((element.points[2], .addCurveToPoint))
             case .closeSubpath:
                 arrayPoints.append((element.points[0], .closeSubpath))
+            @unknown default:
+                fatalError("CGPath:points: no such element")
             }
         }
         return arrayPoints
@@ -97,7 +104,3 @@ extension PathCommand {
     }
     
 }
-
-
-
-

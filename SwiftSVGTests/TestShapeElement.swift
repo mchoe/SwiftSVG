@@ -25,7 +25,13 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import UIKit
+#if os(iOS) || os(tvOS)
+    import UIKit
+#elseif os(OSX)
+    import AppKit
+#endif
+@testable
+import SwiftSVG
 
 struct TestShapeElement: SVGShapeElement {
     static let elementName: String = "test"

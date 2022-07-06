@@ -35,14 +35,14 @@
 #endif
 
 
-internal enum PathType {
+public enum PathType {
     case absolute, relative
 }
 
 /**
  A protocol that describes an instance that can process an individual SVG Element
  */
-internal protocol PathCommand: PreviousCommand {
+public protocol PathCommand: PreviousCommand {
     
     /**
      An array that stores processed coordinates values
@@ -75,7 +75,7 @@ internal protocol PathCommand: PreviousCommand {
 /**
  A protocol that describes an instance that represents an SVGElement right before the current one
  */
-internal protocol PreviousCommand {
+public protocol PreviousCommand {
     
     /**
      An array that stores processed coordinates values
